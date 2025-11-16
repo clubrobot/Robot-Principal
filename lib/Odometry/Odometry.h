@@ -67,6 +67,103 @@ public:
  * \author Ulysse Darmet
  * Odometry est un PeriodicProcess qui calcule la position du robot à partir des roues codeuses ( AbstractCodewheel ) .
  */
+
+namespace Odometry_RTOS
+{
+	/**
+	 * @brief paramètres de l'odométrie
+	 * Contient toutes les variables relatives à l'odométrie.
+	 */
+	static struct odometry_params
+	{
+		Position m_pos; /*!< Structure de position de Odometry. */
+		float m_linVel; /*!< Vitesse lineaire en mm/s. */
+		float m_angVel; /*!< Vitesse angulaire en rad/s.*/
+		float m_axleTrack;/*!< Entraxe entre les deux roues codeuses. */
+		float m_slippage;/*!< Constante de dérivation othogonal. */
+
+		AbstractCodewheel* m_leftCodewheel;/*!< Pointeur de l'AbstractCodewheel gauche. */
+		AbstractCodewheel* m_rightCodewheel;/*!< Pointeur de l'AbstractCodewheel droite.  */
+	} params;
+	/**
+	 * @brief Calcule la nouvelle position et la nouvelle vitesse.
+	 * A partir de ses AbstractCodewheel, détermine la nouvelle vitesse instantanée et la nouvelle position.
+	 * @param timestep Temps depuis le dernier appel de cette méthode en secondes.
+	 */
+	void process(float timestep);
+
+	/**
+	 * @brief Attribut une nouvelle position.
+	 *
+	 * À partir des coordonnées passées en paramètre, attribut les nouvelles coordonnées à sa Position.
+	 *
+	 * @param x Nouvelle coordonnée en x.
+	 * @param y Nouvelle coordonnée en y.
+	 * @param theta Nouvel angle.
+	 */
+	void setPosition(float x, float y, float theta);
+	/**
+	 * @brief Defini une nouvelle entraxe pour les roues codeuses.
+	 *
+	 * Change l'entraxe actuel par celui indiqué en paramètre.
+	 *
+	 * @param axleTrack Nouvelle entraxe en mm.
+	 */
+	void setAxleTrack(float axleTrack);
+	/**
+	 * @brief Defini la nouvelle dérive orthogonal.
+	 *
+	 * Change la dérive orthogonal par celle indiquée en paramètre.
+	 *
+	 * @param slippage Nouvelle dérive orthogonal sans unité et signé.
+	 */
+	void setSlippage (float slippage);
+	/**
+	 * @brief Defini les roues codeuses de Odometry.
+	 *
+	 * Paramètre les pointeurs sur les deux AbstractCodewheel à utiliser pour le calcul d'odométrie.
+	 *
+	 * @param leftCodewheel AbstractCodewheel de la roue codeuse gauche.
+	 * @param rightCodewheel AbstractCodewheel de la roue codeuse droite.
+	 */
+	void setCodewheels(AbstractCodewheel& leftCodewheel, AbstractCodewheel& rightCodewheel);
+	/**
+	 * @brief Retourne la position
+	 *
+	 * Retourne sa struc Position avec les dernières positions calculés.
+	 *
+	 * @return La structure Position.
+	 */
+	const Position*	getPosition();
+	/**
+	 * @brief Retourne la vitesse linéaire.
+	 *
+	 * Rend la dernière vitesse linéaire calculé.
+	 *
+	 * @return Vitesse lineaire en mm/s.
+	 */
+	float getLinVel();
+	/**
+	 * @brief Retourne la vitesse angulaire.
+	 *
+	 * Rend la dernière vitesse angulaire calculé.
+	 *
+	 * @return Vitesse angulaire en rad/s.
+	 */
+	float getAngVel();
+	/**
+	 * @brief Retourne l'entraxe utilisée.
+	 * @return Entraxe en mm.
+	 */
+	float getAxleTrack();
+	/**
+	 * @brief Retourne la dérive utilisée.
+	 * @return Dérive sans unité.
+	 */
+	float getSlippage ();
+}
+
+
 class Odometry : public PeriodicProcess
 {
 public:

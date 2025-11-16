@@ -4,6 +4,7 @@
 
 #include <math.h>
 
+
 void Odometry::process(float timestep)
 {
 	const float dL = m_leftCodewheel ->restart();
@@ -32,3 +33,32 @@ void Odometry::setSlippage   (float slippage)   {
 	update();
 }
 
+namespace Odometry_RTOS
+{
+
+	void process(float timestep);
+
+	void init_odometry()
+	{
+		params.m_pos = Position();
+		params.m_linVel = 0.0;
+		params.m_angVel = 0.0;
+		params.m_axleTrack = 0.0;
+		params.m_slippage = 0.0;
+	}
+
+	void setPosition(float x, float y, float theta)
+	{
+		params.m_pos.x = x;
+		params.m_pos.y = y;
+		params.m_pos.theta = theta;
+	}
+	void setAxleTrack(float axleTrack);
+	void setSlippage (float slippage);
+	void setCodewheels(AbstractCodewheel& leftCodewheel, AbstractCodewheel& rightCodewheel);
+	const Position*	getPosition();
+	float getLinVel();
+	float getAngVel();
+	float getAxleTrack();
+	float getSlippage ();
+}
