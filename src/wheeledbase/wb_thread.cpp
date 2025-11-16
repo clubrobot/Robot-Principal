@@ -41,13 +41,14 @@ void write_default_params() {
     rightCodewheel.setCountsPerRev(wb_consts.RIGHTCODEWHEEL_COUNTSPERREV);
 
     odometry.setAxleTrack(wb_consts.ODOMETRY_AXLETRACK);
-    odometry.setSlippage(wb_consts.ODOMETRY_SPLIPPAGE);
+    odometry.setSlippage(wb_consts.ODOMETRY_SLIPPAGE);
 
     velocityControl.setAxleTrack(wb_consts.VELOCITYCONTROL_AXLETRACK);
     velocityControl.setMaxLinAcc(wb_consts.VELOCITYCONTROL_MAXLINACC);
     velocityControl.setMaxLinDec(wb_consts.VELOCITYCONTROL_MAXLINDEC);
     velocityControl.setMaxAngAcc(wb_consts.VELOCITYCONTROL_MAXANGACC);
     velocityControl.setMaxAngDec(wb_consts.VELOCITYCONTROL_MAXANGDEC);
+    
     velocityControl.setSpinShutdown(wb_consts.VELOCITYCONTROL_SPINSHUTDOWN);
     linVelPID.setTunings(wb_consts.LINVELPID_KP, wb_consts.LINVELPID_KI, wb_consts.LINVELPID_KD);
     linVelPID.setOutputLimits(wb_consts.LINVELPID_MINOUTPUT, wb_consts.LINVELPID_MAXOUTPUT);

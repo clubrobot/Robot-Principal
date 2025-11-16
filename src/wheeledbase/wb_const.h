@@ -20,7 +20,7 @@ inline struct constants
     const float RIGHTCODEWHEEL_RADIUS = 22.767;
 
     const float ODOMETRY_AXLETRACK = 209.7622878807068;
-    const float ODOMETRY_SPLIPPAGE = 0;
+    const float ODOMETRY_SLIPPAGE = 0;
 
     const float VELOCITYCONTROL_AXLETRACK = 125.0;//201.5
     const float VELOCITYCONTROL_MAXLINACC = 500;
