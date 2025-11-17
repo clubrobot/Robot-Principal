@@ -25,6 +25,9 @@ var hierarchy =
     [ "ObjectDetector::Detector", "d1/d34/structObjectDetector_1_1Detector.html", null ],
     [ "DynamixelClass", "df/dc5/classDynamixelClass.html", null ],
     [ "EndStop", "df/d5b/classEndStop.html", null ],
+    [ "MyLibrary::Example", "d7/d8e/classMyLibrary_1_1Example.html", [
+      [ "MyLibrary::SubclassExample< TemplatedClass >", "db/d5b/classMyLibrary_1_1SubclassExample.html", null ]
+    ] ],
     [ "Exception", null, [
       [ "geogebra.AlreadyExistsError", "d9/d19/classgeogebra_1_1AlreadyExistsError.html", null ]
     ] ],
@@ -57,6 +60,7 @@ var hierarchy =
     [ "PID", "d8/da9/classPID.html", null ],
     [ "Point", "d8/d43/structPoint.html", null ],
     [ "Position", "d0/df4/structPosition.html", null ],
+    [ "MyLibrary::SecondExample", "dd/dc4/classMyLibrary_1_1SecondExample.html", null ],
     [ "SensorArray", "de/d4b/classSensorArray.html", null ],
     [ "SensorArray::SensorConfig", "d8/de7/structSensorArray_1_1SensorConfig.html", null ],
     [ "SensorArray::SensorHandle", "de/d73/structSensorArray_1_1SensorHandle.html", null ],

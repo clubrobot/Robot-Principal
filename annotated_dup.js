@@ -5,6 +5,11 @@ var annotated_dup =
       [ "Geogebra", "dc/df0/classgeogebra_1_1Geogebra.html", "dc/df0/classgeogebra_1_1Geogebra" ],
       [ "LabelAlreadyUse", "d3/de3/classgeogebra_1_1LabelAlreadyUse.html", null ]
     ] ],
+    [ "MyLibrary", null, [
+      [ "Example", "d7/d8e/classMyLibrary_1_1Example.html", "d7/d8e/classMyLibrary_1_1Example" ],
+      [ "SecondExample", "dd/dc4/classMyLibrary_1_1SecondExample.html", null ],
+      [ "SubclassExample", "db/d5b/classMyLibrary_1_1SubclassExample.html", "db/d5b/classMyLibrary_1_1SubclassExample" ]
+    ] ],
     [ "AbstractCodewheel", "d1/d6f/classAbstractCodewheel.html", "d1/d6f/classAbstractCodewheel" ],
     [ "AbstractMotor", "d2/d61/classAbstractMotor.html", "d2/d61/classAbstractMotor" ],
     [ "AbstractMoveStrategy", "de/dc0/classAbstractMoveStrategy.html", "de/dc0/classAbstractMoveStrategy" ],

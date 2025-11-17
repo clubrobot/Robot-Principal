@@ -1,22 +1,14 @@
 var searchData=
 [
-  ['tache_0',['Tache',['../d0/d85/classTache.html',1,'']]],
-  ['tachebanderole_1',['TacheBanderole',['../dd/ddc/classTacheBanderole.html',1,'']]],
-  ['tachedescendrereculer_2',['TacheDescendreReculer',['../d9/d1e/classTacheDescendreReculer.html',1,'']]],
-  ['tacheempiler_3',['TacheEmpiler',['../d0/dda/classTacheEmpiler.html',1,'']]],
-  ['tacheexe_4',['TacheExe',['../de/d8f/classTacheExe.html',1,'']]],
-  ['tachegoto_5',['TacheGoto',['../dd/d5e/classTacheGoto.html',1,'']]],
-  ['tachegotowaypoints_6',['TacheGotoWaypoints',['../dc/dd3/classTacheGotoWaypoints.html',1,'']]],
-  ['tachegotowithfunct_7',['TacheGotoWithFunct',['../db/dc7/classTacheGotoWithFunct.html',1,'']]],
-  ['tachemovedelta_8',['TacheMoveDelta',['../d3/de7/classTacheMoveDelta.html',1,'']]],
-  ['tachestop_9',['TacheSTOP',['../d1/d5c/classTacheSTOP.html',1,'']]],
-  ['tacheswitch_10',['TacheSwitch',['../d0/db3/classTacheSwitch.html',1,'']]],
-  ['tachetransport_11',['TacheTransport',['../d8/d9f/classTacheTransport.html',1,'']]],
-  ['tacheturnonthespot_12',['TacheTurnOnTheSpot',['../d8/d8a/classTacheTurnOnTheSpot.html',1,'']]],
-  ['tachewait_13',['TacheWait',['../d3/d62/classTacheWait.html',1,'']]],
-  ['team2026_14',['team2026',['../d0/d30/md_README.html',1,'']]],
-  ['teleplot_15',['Teleplot',['../d8/d4b/classTeleplot.html',1,'']]],
-  ['theta_16',['theta',['../d0/df4/structPosition.html#a3e8a386e068bdd371587b5e299c321d3',1,'Position']]],
-  ['turn_17',['turn',['../d8/d27/classAX12.html#a037864a561b6d9db88021ff5d5d2d0c3',1,'AX12']]],
-  ['turnonthespot_18',['TurnOnTheSpot',['../d9/dee/classTurnOnTheSpot.html',1,'']]]
+  ['rdbyte_0',['RdByte',['../d9/d0e/classVL53L5CX.html#aff537fadd902a5ce54e196c7f4cd6bc3',1,'VL53L5CX']]],
+  ['rdmulti_1',['RdMulti',['../d9/d0e/classVL53L5CX.html#a343f89ce3dd6a030ec99f13ffb3ae20c',1,'VL53L5CX']]],
+  ['read_2',['read',['../d9/df7/classFullSpeedServo.html#a9877b6c705724403c10656116a6084c0',1,'FullSpeedServo']]],
+  ['readposition_3',['readPosition',['../d8/d27/classAX12.html#a0051ca6ed1b26619aef55ca5def61c94',1,'AX12']]],
+  ['readspeed_4',['readSpeed',['../d8/d27/classAX12.html#a8435f4c2c2c0b769afda199e608120e4',1,'AX12']]],
+  ['readtemperature_5',['readTemperature',['../d8/d27/classAX12.html#a9505d53fa861c549d0707160598be897',1,'AX12']]],
+  ['readtorque_6',['readTorque',['../d8/d27/classAX12.html#a3b6edc073ad24249b87d83cbd8109f00',1,'AX12']]],
+  ['readvoltage_7',['readVoltage',['../d8/d27/classAX12.html#a88f715439c6f50f3e6dca6c30f6f0897',1,'AX12']]],
+  ['relache_5ftemps_8',['relache_temps',['../d8/d4b/classTeleplot.html#a49dff3b57c4b8b1d92b969e6ecab707b',1,'Teleplot']]],
+  ['reset_9',['reset',['../dd/df3/classCodewheel.html#a9b1448233cb729d40d82ac8aafecddc5',1,'Codewheel::reset()'],['../d8/da9/classPID.html#af9677e76cb1beffbcf3f54cbc627c530',1,'PID::reset()'],['../de/d96/classPurePursuit.html#a7fbc8b6d8116a373a438f3795f255559',1,'PurePursuit::reset()']]],
+  ['restart_10',['restart',['../dd/df3/classCodewheel.html#a46d7e4b6a5873f986e2ad01c31668c40',1,'Codewheel::restart()'],['../df/d45/classClock.html#a52e5cc059c78fa8067d24d9d63070ca1',1,'Clock::restart()'],['../d1/d6f/classAbstractCodewheel.html#a6298fa396bc11c0d073426ff1469f180',1,'AbstractCodewheel::restart()']]]
 ];

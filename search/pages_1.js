@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['crinsa_202025_0',['Doc CRINSA 2025',['../index.html',1,'']]]
+  ['bogues_0',['Liste des bogues',['../de/da5/bug.html',1,'']]]
 ];
