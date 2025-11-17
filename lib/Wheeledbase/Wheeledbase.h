@@ -59,6 +59,72 @@
 #define SLOWDOWN_DISTANCE               0
 #define ALIGN_DISTANCE                  130
 
+struct WBConstants
+{
+    const float LEFTWHEEL_RADIUS;
+    const float LEFTWHEEL_CONSTANT;
+    const float LEFTWHEEL_MAXPWM;
+    const float RIGHTWHEEL_RADIUS;
+    const float RIGHTWHEEL_CONSTANT;
+    const float RIGHTWHEEL_MAXPWM;
+    const long LEFTCODEWHEEL_COUNTSPERREV;
+    const long RIGHTCODEWHEEL_COUNTSPERREV;
+    const float LEFTCODEWHEEL_RADIUS;
+    const float RIGHTCODEWHEEL_RADIUS;
+
+    const float ODOMETRY_AXLETRACK;
+    const float ODOMETRY_SLIPPAGE;
+
+    const float VELOCITYCONTROL_AXLETRACK;
+    const float VELOCITYCONTROL_MAXLINACC;
+    const float VELOCITYCONTROL_MAXLINDEC;
+    const float VELOCITYCONTROL_MAXANGACC;
+    const float VELOCITYCONTROL_MAXANGDEC;
+    const bool VELOCITYCONTROL_SPINSHUTDOWN;
+
+    /*---- LINEAR VELOCITIES PID  ----*/
+    const float LINVELPID_KP;
+    const float LINVELPID_KI;
+    const float LINVELPID_KD;
+
+    const float LINVELPID_MINOUTPUT;
+    const float LINVELPID_MAXOUTPUT;
+
+    /*---- ANGULAR VELOCITIES PID ----*/
+    const float ANGVELPID_KP;
+    const float ANGVELPID_KI;
+    const float ANGVELPID_KD;
+
+    const float ANGVELPID_MINOUTPUT;
+    const float ANGVELPID_MAXOUTPUT;
+
+    /*---- POSITION PID ----*/
+    const float POSITIONCONTROL_LINVELKP;
+    const float POSITIONCONTROL_ANGVELKP;
+
+    const float POSITIONCONTROL_LINVELMAX;
+    const float POSITIONCONTROL_ANGVELMAX;
+    const float POSITIONCONTROL_LINPOSTHRESHOLD;
+    const float POSITIONCONTROL_ANGPOSTHRESHOLD;
+    const float PUREPURSUIT_LOOKAHEAD;
+    const float PUREPURSUIT_LOOKAHEADBIS;
+
+    // Timesteps
+    const float ODOMETRY_TIMESTEP;
+    const float PID_CONTROLLERS_TIMESTEP;
+    const float POSITIONCONTROL_TIMESTEP;
+
+    // DC motors driver
+    const int LEFT_MOTOR_EN;
+    const int LEFT_MOTOR_PWM;
+    const int LEFT_MOTOR_DIR;
+    const int RIGHT_MOTOR_EN;
+    const int RIGHT_MOTOR_PWM;
+    const int RIGHT_MOTOR_DIR;
+    const int DRIVER_RESET;
+    const int DRIVER_FAULT;
+};
+
 // Global variables
 extern DCMotorsDriver driver;
 extern DCMotor leftWheel;
