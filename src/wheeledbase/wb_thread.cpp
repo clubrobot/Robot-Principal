@@ -28,38 +28,38 @@ PurePursuit purePursuit;
 TurnOnTheSpot turnOnTheSpot;
 
 void write_default_params() {
-    leftWheel.setWheelRadius(LEFTWHEEL_RADIUS_VALUE);
-    leftWheel.setConstant(LEFTWHEEL_CONSTANT_VALUE);
-    leftWheel.setMaxPWM(LEFTWHEEL_MAXPWM_VALUE);
-    rightWheel.setWheelRadius(RIGHTWHEEL_RADIUS_VALUE);
-    rightWheel.setConstant(RIGHTWHEEL_CONSTANT_VALUE);
-    rightWheel.setMaxPWM(RIGHTWHEEL_MAXPWM_VALUE);
+    leftWheel.setWheelRadius(wb_consts.LEFTWHEEL_RADIUS);
+    leftWheel.setConstant(wb_consts.LEFTWHEEL_CONSTANT);
+    leftWheel.setMaxPWM(wb_consts.LEFTWHEEL_MAXPWM);
+    rightWheel.setWheelRadius(wb_consts.RIGHTWHEEL_RADIUS);
+    rightWheel.setConstant(wb_consts.RIGHTWHEEL_CONSTANT);
+    rightWheel.setMaxPWM(wb_consts.RIGHTWHEEL_MAXPWM);
 
-    leftCodewheel.setWheelRadius(LEFTCODEWHEEL_RADIUS_VALUE);
-    leftCodewheel.setCountsPerRev(LEFTCODEWHEEL_COUNTSPERREV_VALUE);
-    rightCodewheel.setWheelRadius(RIGHTCODEWHEEL_RADIUS_VALUE);
-    rightCodewheel.setCountsPerRev(RIGHTCODEWHEEL_COUNTSPERREV_VALUE);
+    leftCodewheel.setWheelRadius(wb_consts.LEFTCODEWHEEL_RADIUS);
+    leftCodewheel.setCountsPerRev(wb_consts.LEFTCODEWHEEL_COUNTSPERREV);
+    rightCodewheel.setWheelRadius(wb_consts.RIGHTCODEWHEEL_RADIUS);
+    rightCodewheel.setCountsPerRev(wb_consts.RIGHTCODEWHEEL_COUNTSPERREV);
 
-    odometry.setAxleTrack(ODOMETRY_AXLETRACK_VALUE);
-    odometry.setSlippage(ODOMETRY_SPLIPPAGE_VALUE);
+    odometry.setAxleTrack(wb_consts.ODOMETRY_AXLETRACK);
+    odometry.setSlippage(wb_consts.ODOMETRY_SLIPPAGE);
 
-    velocityControl.setAxleTrack(VELOCITYCONTROL_AXLETRACK_VALUE);
-    velocityControl.setMaxLinAcc(VELOCITYCONTROL_MAXLINACC_VALUE);
-    velocityControl.setMaxLinDec(VELOCITYCONTROL_MAXLINDEC_VALUE);
-    velocityControl.setMaxAngAcc(VELOCITYCONTROL_MAXANGACC_VALUE);
-    velocityControl.setMaxAngDec(VELOCITYCONTROL_MAXANGDEC_VALUE);
-    velocityControl.setSpinShutdown(VELOCITYCONTROL_SPINSHUTDOWN_VALUE);
+    velocityControl.setAxleTrack(wb_consts.VELOCITYCONTROL_AXLETRACK);
+    velocityControl.setMaxLinAcc(wb_consts.VELOCITYCONTROL_MAXLINACC);
+    velocityControl.setMaxLinDec(wb_consts.VELOCITYCONTROL_MAXLINDEC);
+    velocityControl.setMaxAngAcc(wb_consts.VELOCITYCONTROL_MAXANGACC);
+    velocityControl.setMaxAngDec(wb_consts.VELOCITYCONTROL_MAXANGDEC);
+    
+    velocityControl.setSpinShutdown(wb_consts.VELOCITYCONTROL_SPINSHUTDOWN);
+    linVelPID.setTunings(wb_consts.LINVELPID_KP, wb_consts.LINVELPID_KI, wb_consts.LINVELPID_KD);
+    linVelPID.setOutputLimits(wb_consts.LINVELPID_MINOUTPUT, wb_consts.LINVELPID_MAXOUTPUT);
 
-    linVelPID.setTunings(LINVELPID_KP_VALUE, LINVELPID_KI_VALUE, LINVELPID_KD_VALUE);
-    linVelPID.setOutputLimits(LINVELPID_MINOUTPUT_VALUE, LINVELPID_MAXOUTPUT_VALUE);
+    angVelPID.setTunings(wb_consts.ANGVELPID_KP, wb_consts.ANGVELPID_KI, wb_consts.ANGVELPID_KD);
+    angVelPID.setOutputLimits(wb_consts.ANGVELPID_MINOUTPUT, wb_consts.ANGVELPID_MAXOUTPUT);
 
-    angVelPID.setTunings(ANGVELPID_KP_VALUE, ANGVELPID_KI_VALUE, ANGVELPID_KD_VALUE);
-    angVelPID.setOutputLimits(ANGVELPID_MINOUTPUT_VALUE, ANGVELPID_MAXOUTPUT_VALUE);
-
-    positionControl.setVelLimits(POSITIONCONTROL_LINVELMAX_VALUE, POSITIONCONTROL_ANGVELMAX_VALUE);
-    positionControl.setPosThresholds(POSITIONCONTROL_LINPOSTHRESHOLD_VALUE, POSITIONCONTROL_ANGPOSTHRESHOLD_VALUE);
-    purePursuit.setLookAhead(PUREPURSUIT_LOOKAHEAD_VALUE);
-    purePursuit.setLookAheadBis(PUREPURSUIT_LOOKAHEADBIS_VALUE);
+    positionControl.setVelLimits(wb_consts.POSITIONCONTROL_LINVELMAX, wb_consts.POSITIONCONTROL_ANGVELMAX);
+    positionControl.setPosThresholds(wb_consts.POSITIONCONTROL_LINPOSTHRESHOLD, wb_consts.POSITIONCONTROL_ANGPOSTHRESHOLD);
+    purePursuit.setLookAhead(wb_consts.PUREPURSUIT_LOOKAHEAD);
+    purePursuit.setLookAheadBis(wb_consts.PUREPURSUIT_LOOKAHEADBIS);
 }
 
 
@@ -163,11 +163,11 @@ void wb_setup(){
     //TODO once
     write_default_params();
     // DC motors wheels
-    driver.attach(DRIVER_RESET, DRIVER_FAULT);
+    driver.attach(wb_consts.DRIVER_RESET, wb_consts.DRIVER_FAULT);
     driver.reset();
 
-    leftWheel.attach(LEFT_MOTOR_EN, LEFT_MOTOR_PWM, LEFT_MOTOR_DIR);
-    rightWheel.attach(RIGHT_MOTOR_EN, RIGHT_MOTOR_PWM, RIGHT_MOTOR_DIR);
+    leftWheel.attach(wb_consts.LEFT_MOTOR_EN, wb_consts.LEFT_MOTOR_PWM, wb_consts.LEFT_MOTOR_DIR);
+    rightWheel.attach(wb_consts.RIGHT_MOTOR_EN, wb_consts.RIGHT_MOTOR_PWM, wb_consts.RIGHT_MOTOR_DIR);
 
     // Codewheels
     codewheels_setup();
@@ -177,7 +177,7 @@ void wb_setup(){
 
     // Odometry
     odometry.setCodewheels(leftCodewheel, rightCodewheel);
-    odometry.setTimestep(ODOMETRY_TIMESTEP);
+    odometry.setTimestep(wb_consts.ODOMETRY_TIMESTEP);
     odometry.enable();
 
     // Engineering control
@@ -198,7 +198,7 @@ void wb_setup(){
 #endif // VELOCITYENABLE_CONTROLLER_LOGS
 
     // Position control
-    positionControl.setTimestep(POSITIONCONTROL_TIMESTEP);
+    positionControl.setTimestep(wb_consts.POSITIONCONTROL_TIMESTEP);
     positionControl.disable();
 
     //purePursuit.load(PUREPURSUIT_ADDRESS);
