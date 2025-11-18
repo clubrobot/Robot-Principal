@@ -100,7 +100,7 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d9/d0e/classVL53L5CX.html#a75252a801ac4f4c03b49e12bf746dabc",
-"df/dd5/classCube.html#a7e090573bfe568d67a43981b0b5bc22a"
+"df/dd5/classCube.html#a4eef1cce98cc773e8a70d618fc5ac146"
 ];
 
 var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';

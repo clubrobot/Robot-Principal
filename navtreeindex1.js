@@ -20,6 +20,7 @@ var NAVTREEINDEX1 =
 "d9/d19/classgeogebra_1_1AlreadyExistsError.html":[8,0,0,0],
 "d9/d19/classgeogebra_1_1AlreadyExistsError.html":[9,0,0,0],
 "d9/d1e/classTacheDescendreReculer.html":[9,0,40],
+"d9/d49/structWBConstants.html":[9,0,59],
 "d9/da9/classDecisions.html":[9,0,16],
 "d9/dd4/classStepByStepMotor.html":[9,0,37],
 "d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html":[2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "df/dce/vl53l5cx__api_8h_source.html":[10,0,2,18,0,1,0,2],
 "df/dd5/classCube.html":[9,0,13],
 "df/dd5/classCube.html#a218d1132b5833cd2971f63e1672536fe":[9,0,13,9],
-"df/dd5/classCube.html#a4cc803f1152e2f3262d5e5080df1c39b":[9,0,13,4],
-"df/dd5/classCube.html#a4eef1cce98cc773e8a70d618fc5ac146":[9,0,13,2]
+"df/dd5/classCube.html#a4cc803f1152e2f3262d5e5080df1c39b":[9,0,13,4]
 };

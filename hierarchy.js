@@ -99,5 +99,6 @@ var hierarchy =
     [ "Warning", null, [
       [ "geogebra.LabelAlreadyUse", "d3/de3/classgeogebra_1_1LabelAlreadyUse.html", null ]
     ] ],
-    [ "PurePursuit::Waypoint", "d4/d9e/structPurePursuit_1_1Waypoint.html", null ]
+    [ "PurePursuit::Waypoint", "d4/d9e/structPurePursuit_1_1Waypoint.html", null ],
+    [ "WBConstants", "d9/d49/structWBConstants.html", null ]
 ];
