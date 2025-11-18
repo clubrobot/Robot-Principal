@@ -3,9 +3,68 @@
 
 #include "PeriodicProcess.h"
 #include "Odometry.h"
+#include "My_Clock.h"
 
 
 class AbstractMoveStrategy;
+
+namespace PositionController{
+
+    struct PositionController {
+        // IO
+        Position* m_posInput;/*!< Position du robot.*/
+        Position* m_posSetpoint;/*!< Position à atteindre.*/
+
+        float m_linVelSetpoint;/*!< Vitesse linéaire à atteindre*/
+        float m_angVelSetpoint;/*!< Vitesse angulaire à atteindre*/
+
+        // Engineering control tunings
+        float m_linVelKp; /*!< Coefficient proportionnel de vitesse linéaire. */
+        float m_angVelKp; /*!< Coefficient proportionnel de vitesse angulaire. */
+        float m_linVelMax;/*!< Vitesse linéaire max.*/
+        float m_angVelMax;/*!< Vitesse angulaire max.*/
+        float m_linPosThreshold;/*!< Précision cartésienne. */
+        float m_angPosThreshold;/*!< Précision angulaire.*/
+
+        AbstractMoveStrategy* m_moveStrategy;/*!< Stratégie de mouvement utilisée.*/
+
+        Clock* clock; /*!< Horloge pour le calcul du temps écoulé entre deux process.*/
+    };
+
+    void setPosInput(PositionController* positionController, Position* posInput){positionController->m_posInput = posInput;}
+    void setPosSetpoint(PositionController* positionController, Position* posSetpoint){positionController->m_posSetpoint = posSetpoint;}
+
+    void setThetaSetPoint(PositionController* positionController, float theta){positionController->m_posSetpoint->theta = theta;}
+    float getLinVelSetpoint(const PositionController* positionController){return positionController->m_linVelSetpoint;}
+    float getAngVelSetpoint(const PositionController* positionController){return positionController->m_angVelSetpoint;}
+    void setVelTunings(PositionController* positionController, float linVelKp, float angVelKp) {
+        positionController->m_linVelKp = linVelKp;
+        positionController->m_angVelKp = angVelKp;
+    }
+    void setVelLimits(PositionController* positionController, float linVelMax, float angVelMax){
+        positionController->m_linVelMax = linVelMax;
+        positionController->m_angVelMax = angVelMax;
+    }
+    void setPosThresholds(PositionController* positionController, float linPosThreshold, float angPosThreshold) {
+        positionController->m_linPosThreshold = linPosThreshold;
+        positionController->m_angPosThreshold = angPosThreshold;
+    }
+    void setMoveStrategy(PositionController* positionController, AbstractMoveStrategy* moveStrategy);
+
+    bool getPositionReached(const PositionController* positionController);
+
+    float getLinVelKp(const PositionController* positionController){return positionController->m_linVelKp;}
+    float getAngVelKp(const PositionController* positionController){return positionController->m_angVelKp;}
+    float getLinVelMax(const PositionController* positionController){return positionController->m_linVelMax;}
+    float getAngVelMax(const PositionController* positionController){return positionController->m_angVelMax;}
+    float getLinPosThreshold(const PositionController* positionController){return positionController->m_linPosThreshold;}
+    float getAngPosThreshold(const PositionController* positionController){return positionController->m_angPosThreshold;}
+
+    void process(PositionController* positionController);
+
+
+}
+
 /**
  * @brief Classe support des objets AbstractMoveStrategy.
  *
@@ -15,14 +74,14 @@ class AbstractMoveStrategy;
  * 
  * @return class PositionController : public PeriodicProcess { public: 
  */
-class PositionController : public PeriodicProcess
+class PositionControllerOld : public PeriodicProcess
 {
 public:
 	/**
 	 * @brief Constructeur de PositionController
 	 * Initialise les variables de PositionController à des valeurs neutre.
 	 */
-	PositionController() : m_linVelKp(1), m_angVelKp(1), m_linVelMax(1000), m_angVelMax(2 * M_PI){}
+	PositionControllerOld() : m_linVelKp(1), m_angVelKp(1), m_linVelMax(1000), m_angVelMax(2 * M_PI){}
 	/**
 	 * @brief Charge les nouvelles positions du robot.
 	 * Charge les nouvelles positions du robot pour les donner à une potentiel AbstractMoveStrategy chargée.
@@ -142,19 +201,6 @@ public:
 	 * @return Précision angulaire en rad.
 	 */
 	float getAngPosThreshold() const {return m_angPosThreshold;}
-	/**
-	 * @brief Charge les configs
-	 * 
-	 * Charge les configurations de la mémoire de l'Arduino avec l'adresse indiqué en paramètre.
-	 * 
-	 * @param address Adresse à utiliser.
-	 */
-	void load(int address);
-	/**
-	 * @brief Sauvegarde la configuration actuel.
-	 * @param address Adresse à utiliser.
-	 */
-	void save(int address) const;
 
 private:
 	/**
@@ -195,7 +241,7 @@ private:
  */
 class AbstractMoveStrategy
 {
-protected:
+public:
 	/**
 	 * @brief Calcul les nouvelles vitesses désirer.
 	 * 
@@ -221,12 +267,12 @@ protected:
 	 * 
 	 * @return La position du robot sous la struct Position.
 	 */
-	const Position& getPosInput()    const {return m_context->m_posInput;}
+	const Position* getPosInput()    const {return m_context->m_posInput;}
 	/**
 	 * @brief  Retourne la position à atteindre.
 	 * @return Position à atteindre.
 	 */
-	const Position& getPosSetpoint() const {return m_context->m_posSetpoint;}
+	const Position* getPosSetpoint() const {return m_context->m_posSetpoint;}
 	/**
 	 * @brief Charge une nouvelle vitesse pour le robot.
 	 * 
@@ -274,11 +320,8 @@ protected:
 	 */
 	float getAngPosThreshold() const {return m_context->m_angPosThreshold;}
 
-protected:
+	PositionController::PositionController* m_context;/*!< Pointeur du PositionControlleur associé.*/
 
-	PositionController* m_context;/*!< Pointeur du PositionControlleur associé.*/
-
-	friend class PositionController;
 };
 
 #endif // __POSITIONCONTROLLER_H__
