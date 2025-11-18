@@ -9,14 +9,14 @@
 
 void Wheeledbase::DISABLE() {
     velocityControl.disable();
-    positionControl.disable();
+    PositionController::disable(&positionControl);
     leftWheel.setVelocity(0);
     rightWheel.setVelocity(0);
 }
 
 void Wheeledbase::GOTO_DELTA(float dx, float dy,bool bloquant) {
     purePursuit.reset();
-    positionControl.disable();
+    PositionController::disable(&positionControl);
 
     Position initial_pos = *odometry.getPosition();
 
@@ -42,12 +42,12 @@ void Wheeledbase::GOTO_DELTA(float dx, float dy,bool bloquant) {
 
     purePursuit.setFinalAngle(target_pos.theta);
 
-    positionControl.setPosSetpoint(Position(target_pos.x, target_pos.y, target_pos.theta + direction * M_PI));
+    PositionController::setPosSetpoint(&positionControl,Position(target_pos.x, target_pos.y, target_pos.theta + direction * M_PI));
 
     // Enable PurePursuit controller
     velocityControl.enable();
-    positionControl.setMoveStrategy(purePursuit);
-    positionControl.enable();
+    PositionController::setMoveStrategy(&positionControl,&purePursuit);
+    PositionController::enable(&positionControl);
 
     while(!(Wheeledbase::POSITION_REACHED() & 0b01) && bloquant) {
         //Wait I guess
@@ -56,7 +56,7 @@ void Wheeledbase::GOTO_DELTA(float dx, float dy,bool bloquant) {
 
 void Wheeledbase::SET_OPENLOOP_VELOCITIES(float leftWheelVel, float rightWheelVel) {
     velocityControl.disable();
-    positionControl.disable();
+    PositionController::disable(&positionControl);
     leftWheel.setVelocity(leftWheelVel);
     rightWheel.setVelocity(rightWheelVel);
 }
@@ -67,14 +67,14 @@ void Wheeledbase::GET_CODEWHEELS_COUNTERS(float* leftCodewheelCounter, float* ri
 }
 
 void Wheeledbase::SET_VELOCITIES(float linVelSetpoint, float angVelSetpoint) {
-    positionControl.disable();
+    PositionController::disable(&positionControl);
     velocityControl.enable();
     velocityControl.setSetpoints(linVelSetpoint, angVelSetpoint);
 }
 
 void Wheeledbase::RESET_PUREPURSUIT() {
     purePursuit.reset();
-    positionControl.disable();
+    PositionController::disable(&positionControl);
 }
 
 void Wheeledbase::START_PUREPURSUIT(int8_t direction, float finalAngle) {
@@ -94,12 +94,12 @@ void Wheeledbase::START_PUREPURSUIT(int8_t direction, float finalAngle) {
     // Compute final setpoint
     const PurePursuit::Waypoint wp0 = purePursuit.getWaypoint(purePursuit.getNumWaypoints() - 2);
     const PurePursuit::Waypoint wp1 = purePursuit.getWaypoint(purePursuit.getNumWaypoints() - 1);
-    positionControl.setPosSetpoint(Position(wp1.x, wp1.y, atan2(wp1.y - wp0.y, wp1.x - wp0.x) + direction * M_PI));
+    PositionController::setPosSetpoint(&positionControl,Position(wp1.x, wp1.y, atan2(wp1.y - wp0.y, wp1.x - wp0.x) + direction * M_PI));
 
     // Enable PurePursuit controller
     velocityControl.enable();
-    positionControl.setMoveStrategy(purePursuit);
-    positionControl.enable();
+    PositionController::setMoveStrategy(&positionControl,&purePursuit);
+    PositionController::enable(&positionControl);
 }
 
 void Wheeledbase::ADD_PUREPURSUIT_WAYPOINT(float x, float y) {
@@ -113,7 +113,7 @@ void Wheeledbase::START_TURNONTHESPOT(bool dir, float theta) {
     posSetpoint.theta = theta;
     float angPosSetpoint = inrange((posSetpoint.theta - initTheta), -M_PI, M_PI);
     velocityControl.enable();
-    positionControl.setPosSetpoint(posSetpoint);
+    PositionController::setPosSetpoint(&positionControl,posSetpoint);
     if (dir) {
         if (angPosSetpoint > 0) turnOnTheSpot.setDirection(TurnOnTheSpot::CLOCK);
         else turnOnTheSpot.setDirection(TurnOnTheSpot::TRIG);
@@ -122,23 +122,23 @@ void Wheeledbase::START_TURNONTHESPOT(bool dir, float theta) {
         if (angPosSetpoint > 0) turnOnTheSpot.setDirection(TurnOnTheSpot::TRIG);
         else turnOnTheSpot.setDirection(TurnOnTheSpot::CLOCK);
     }
-    positionControl.setMoveStrategy(turnOnTheSpot);
-    positionControl.enable();
+    PositionController::setMoveStrategy(&positionControl,&turnOnTheSpot);
+    PositionController::enable(&positionControl);
 }
 
 void Wheeledbase::START_TURNONTHESPOT_DIR(bool dir, float theta) {
     Position posSetpoint = *odometry.getPosition();
     posSetpoint.theta = theta;
     velocityControl.enable();
-    positionControl.setPosSetpoint(posSetpoint);
+    PositionController::setPosSetpoint(&positionControl,posSetpoint);
     if (dir) {
         turnOnTheSpot.setDirection(TurnOnTheSpot::TRIG);
     }
     else {
         turnOnTheSpot.setDirection(TurnOnTheSpot::CLOCK);
     }
-    positionControl.setMoveStrategy(turnOnTheSpot);
-    positionControl.enable();
+    PositionController::setMoveStrategy(&positionControl,&turnOnTheSpot);
+    PositionController::enable(&positionControl);
 }
 
 /**
@@ -149,7 +149,7 @@ void Wheeledbase::START_TURNONTHESPOT_DIR(bool dir, float theta) {
 0b11 si les deux (3)
 */
 uint8_t Wheeledbase::POSITION_REACHED() {
-    bool positionReached = positionControl.getPositionReached() && positionControl.isEnabled();
+    bool positionReached = PositionController::getPositionReached(&positionControl) && positionControl.enabled;
     bool spinUrgency = false;//!velocityControl.isEnabled();
     uint8_t ret = 0;
     ret = ret | positionReached;
@@ -574,22 +574,22 @@ void Wheeledbase::SET_PARAMETER_VALUE(byte paramID, float value) {
         angVelPID.setOutputLimits(angVelPID.getMinOutput(), value);
         break;
     case POSITIONCONTROL_LINVELKP_ID:
-        positionControl.setVelTunings(value, positionControl.getAngVelKp());
+        PositionController::setVelTunings(&positionControl,value, PositionController::getAngVelKp(&positionControl));
         break;
     case POSITIONCONTROL_ANGVELKP_ID:
-        positionControl.setVelTunings(positionControl.getLinVelKp(), value);
+        PositionController::setVelTunings(&positionControl,PositionController::getLinVelKp(&positionControl), value);
         break;
     case POSITIONCONTROL_LINVELMAX_ID:
-        positionControl.setVelLimits(value, positionControl.getAngVelMax());
+        PositionController::setVelLimits(&positionControl,value, PositionController::getAngVelMax(&positionControl));
         break;
     case POSITIONCONTROL_ANGVELMAX_ID:
-        positionControl.setVelLimits(positionControl.getLinVelMax(), value);
+        PositionController::setVelLimits(&positionControl,PositionController::getLinVelMax(&positionControl), value);
         break;
     case POSITIONCONTROL_LINPOSTHRESHOLD_ID:
-        positionControl.setPosThresholds(value, positionControl.getAngPosThreshold());
+        PositionController::setPosThresholds(&positionControl,value, PositionController::getAngPosThreshold(&positionControl));
         break;
     case POSITIONCONTROL_ANGPOSTHRESHOLD_ID:
-        positionControl.setPosThresholds(positionControl.getLinPosThreshold(), value);
+        PositionController::setPosThresholds(&positionControl,PositionController::getLinPosThreshold(&positionControl), value);
         break;
     case PUREPURSUIT_LOOKAHED_ID:
         purePursuit.setLookAhead(value);
@@ -696,22 +696,22 @@ float Wheeledbase::GET_PARAMETER_VALUE(byte paramID) {
     }
 
     else if (paramID == POSITIONCONTROL_LINVELKP_ID) {
-        return positionControl.getLinVelKp();
+        return PositionController::getLinVelKp(&positionControl);
     }
     else if (paramID == POSITIONCONTROL_ANGVELKP_ID) {
-        return positionControl.getAngVelKp();
+        return PositionController::getAngVelKp(&positionControl);
     }
     else if (paramID == POSITIONCONTROL_LINVELMAX_ID) {
-        return positionControl.getLinVelMax();
+        return PositionController::getLinVelMax(&positionControl);
     }
     else if (paramID == POSITIONCONTROL_ANGVELMAX_ID) {
-        return positionControl.getAngVelMax();
+        return PositionController::getAngVelMax(&positionControl);
     }
     else if (paramID == POSITIONCONTROL_LINPOSTHRESHOLD_ID) {
-        return positionControl.getLinPosThreshold();
+        return PositionController::getLinPosThreshold(&positionControl);
     }
     else if (paramID == POSITIONCONTROL_ANGPOSTHRESHOLD_ID) {
-        return positionControl.getAngPosThreshold();
+        return PositionController::getAngPosThreshold(&positionControl);
     }
     else if (paramID == PUREPURSUIT_LOOKAHED_ID) {
         return purePursuit.getLookAhead();
@@ -751,12 +751,12 @@ void Wheeledbase::PRINT_PARAMS() {
     Serial.print(F(" ANGVELPID_KD_ID:")); Serial.println(angVelPID.getKd());
     Serial.print(F(" ANGVELPID_MINOUTPUT_ID:")); Serial.println(angVelPID.getMinOutput());
     Serial.print(F(" ANGVELPID_MAXOUTPUT_ID:")); Serial.println(angVelPID.getMaxOutput());
-    Serial.print(F(" POSITIONCONTROL_LINVELKP_ID:")); Serial.println(positionControl.getLinVelKp());
-    Serial.print(F(" POSITIONCONTROL_ANGVELKP_ID:")); Serial.println(positionControl.getAngVelKp());
-    Serial.print(F(" POSITIONCONTROL_LINVELMAX_ID:")); Serial.println(positionControl.getLinVelMax());
-    Serial.print(F(" POSITIONCONTROL_ANGVELMAX_ID:")); Serial.println(positionControl.getAngVelMax());
-    Serial.print(F(" POSITIONCONTROL_LINPOSTHRESHOLD_ID:")); Serial.println(positionControl.getLinPosThreshold());
-    Serial.print(F(" POSITIONCONTROL_ANGPOSTHRESHOLD_ID:")); Serial.println(positionControl.getAngPosThreshold());
+    Serial.print(F(" POSITIONCONTROL_LINVELKP_ID:")); Serial.println(PositionController::getLinVelKp(&positionControl));
+    Serial.print(F(" POSITIONCONTROL_ANGVELKP_ID:")); Serial.println(PositionController::getAngVelKp(&positionControl));
+    Serial.print(F(" POSITIONCONTROL_LINVELMAX_ID:")); Serial.println(PositionController::getLinVelMax(&positionControl));
+    Serial.print(F(" POSITIONCONTROL_ANGVELMAX_ID:")); Serial.println(PositionController::getAngVelMax(&positionControl));
+    Serial.print(F(" POSITIONCONTROL_LINPOSTHRESHOLD_ID:")); Serial.println(PositionController::getLinPosThreshold(&positionControl));
+    Serial.print(F(" POSITIONCONTROL_ANGPOSTHRESHOLD_ID:")); Serial.println(PositionController::getAngPosThreshold(&positionControl));
     Serial.print(F(" PUREPURSUIT_LOOKAHED_ID:")); Serial.println(purePursuit.getLookAhead());
     Serial.print(F(" PUREPURSUIT_LOOKAHEADBIS_ID:")); Serial.println(purePursuit.getLookAheadBis());
 }

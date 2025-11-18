@@ -1,6 +1,3 @@
-#include <Arduino.h>
-#include <EEPROM.h>
-
 #include "PositionController.h"
 
 namespace PositionController{
@@ -21,17 +18,6 @@ namespace PositionController{
             positionController->m_moveStrategy->computeVelSetpoints(timestep);
         positionController->clock->restart();
     }
-}
-
-void PositionControllerOld::process(float timestep)
-{
-	if (m_moveStrategy != 0)
-		m_moveStrategy->computeVelSetpoints(timestep);
-}
-
-void PositionControllerOld::onProcessEnabling()
-{
-	//m_posSetpoint = m_posInput;
 }
 
 

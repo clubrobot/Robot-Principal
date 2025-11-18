@@ -22,7 +22,7 @@ VelocityControllerLogs controllerLogs;
 PID linVelPID;
 PID angVelPID;
 
-PositionController positionControl;
+PositionController::PositionController positionControl;
 
 PurePursuit purePursuit;
 TurnOnTheSpot turnOnTheSpot;
@@ -56,8 +56,8 @@ void write_default_params() {
     angVelPID.setTunings(wb_consts.ANGVELPID_KP, wb_consts.ANGVELPID_KI, wb_consts.ANGVELPID_KD);
     angVelPID.setOutputLimits(wb_consts.ANGVELPID_MINOUTPUT, wb_consts.ANGVELPID_MAXOUTPUT);
 
-    positionControl.setVelLimits(wb_consts.POSITIONCONTROL_LINVELMAX, wb_consts.POSITIONCONTROL_ANGVELMAX);
-    positionControl.setPosThresholds(wb_consts.POSITIONCONTROL_LINPOSTHRESHOLD, wb_consts.POSITIONCONTROL_ANGPOSTHRESHOLD);
+    PositionController::setVelLimits(&positionControl, wb_consts.POSITIONCONTROL_LINVELMAX, wb_consts.POSITIONCONTROL_ANGVELMAX);
+    PositionController::setPosThresholds(&positionControl, wb_consts.POSITIONCONTROL_LINPOSTHRESHOLD, wb_consts.POSITIONCONTROL_ANGPOSTHRESHOLD);
     purePursuit.setLookAhead(wb_consts.PUREPURSUIT_LOOKAHEAD);
     purePursuit.setLookAheadBis(wb_consts.PUREPURSUIT_LOOKAHEADBIS);
 }
@@ -198,8 +198,8 @@ void wb_setup(){
 #endif // VELOCITYENABLE_CONTROLLER_LOGS
 
     // Position control
-    positionControl.setTimestep(wb_consts.POSITIONCONTROL_TIMESTEP);
-    positionControl.disable();
+    positionControl.m_timestep = wb_consts.POSITIONCONTROL_TIMESTEP;
+    PositionController::disable(&positionControl);
 
     //purePursuit.load(PUREPURSUIT_ADDRESS);
 }
@@ -208,14 +208,14 @@ void wb_loop(void *pvParameters){
 for(;;) {
     // Update odometry
     if (odometry.update()){
-        positionControl.setPosInput(*odometry.getPosition());
+        PositionController::setPosInput(&positionControl, *odometry.getPosition());
         velocityControl.setInputs(odometry.getLinVel(), odometry.getAngVel());
     }
     // Compute trajectory
     if (positionControl.update())
     {
-        float linVelSetpoint = positionControl.getLinVelSetpoint();
-        float angVelSetpoint = positionControl.getAngVelSetpoint();
+        float linVelSetpoint = PositionController::getLinVelSetpoint(&positionControl);
+        float angVelSetpoint = PositionController::getAngVelSetpoint(&positionControl);
         velocityControl.setSetpoints(linVelSetpoint, angVelSetpoint);
     }
         // Integrate engineering control
