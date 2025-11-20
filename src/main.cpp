@@ -27,7 +27,6 @@ Logger main_logs = Logger("MAIN");
 using namespace ihm;
 void procedure_demarrage(){
     main_logs.log(INFO_LEVEL, "Mise à zero des actionneurs\n");
-    //TODO
 
     main_logs.log(INFO_LEVEL, "Sélectionez une équipe\n");
     led_jaune(HIGH);
