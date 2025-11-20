@@ -10,8 +10,6 @@ var classPositionController =
     [ "getLinVelMax", "d2/d64/classPositionController.html#a203ca6f8cd1717aa2f8b83577104c806", null ],
     [ "getLinVelSetpoint", "d2/d64/classPositionController.html#abedcaf3db7e5be1b13f9b81431e7c88d", null ],
     [ "getPositionReached", "d2/d64/classPositionController.html#abae1f749777eafdb277fd6bf8e0c490b", null ],
-    [ "load", "d2/d64/classPositionController.html#add194236e2981067c0d3b77b7ec06d9d", null ],
-    [ "save", "d2/d64/classPositionController.html#aa0bb7468fae84614d2e21262da997338", null ],
     [ "setMoveStrategy", "d2/d64/classPositionController.html#aa2409e437ff4122f60ab91ab35e23fe9", null ],
     [ "setPosInput", "d2/d64/classPositionController.html#abab980696c93de1f8ed67c6d96724824", null ],
     [ "setPosSetpoint", "d2/d64/classPositionController.html#a5b0a91b65ea3793cc22be0ede70ba9db", null ],

@@ -11,7 +11,6 @@ var searchData=
   ['liste_20des_20bogues_8',['Liste des bogues',['../de/da5/bug.html',1,'']]],
   ['liste_20des_20choses_20à_20faire_9',['Liste des choses à faire',['../dd/da0/todo.html',1,'']]],
   ['lists_10',['Lists',['../d7/d8e/classMyLibrary_1_1Example.html#autotoc_md27',1,'']]],
-  ['load_11',['load',['../dd/df3/classCodewheel.html#a88723c9cbcb622a34e42aeab5bbcf63d',1,'Codewheel::load()'],['../d5/d9e/classDifferentialController.html#a55a6eefba969449152cc6e2e0efa9aaf',1,'DifferentialController::load()'],['../d6/dc3/classOdometry.html#a3d2a0cff9771cc82594ccce2f0e45bcf',1,'Odometry::load()'],['../d8/da9/classPID.html#a662fa93d4f16cd06142aecd54c2b0487',1,'PID::load()'],['../d2/d64/classPositionController.html#add194236e2981067c0d3b77b7ec06d9d',1,'PositionController::load()'],['../de/d96/classPurePursuit.html#a49e7628388bece06e169f9f8ff6e4841',1,'PurePursuit::load()'],['../de/d33/classVelocityController.html#acd38a7af98767000ef3dec6315fd74f8',1,'VelocityController::load()']]],
-  ['logger_12',['Logger',['../db/d67/classLogger.html',1,'']]],
-  ['long_5ffunction_5fwith_5fmany_5fparameters_13',['long_function_with_many_parameters',['../db/d5b/classMyLibrary_1_1SubclassExample.html#a92227fff4f72a11be0e21d88914ba63e',1,'MyLibrary::SubclassExample']]]
+  ['logger_11',['Logger',['../db/d67/classLogger.html',1,'']]],
+  ['long_5ffunction_5fwith_5fmany_5fparameters_12',['long_function_with_many_parameters',['../db/d5b/classMyLibrary_1_1SubclassExample.html#a92227fff4f72a11be0e21d88914ba63e',1,'MyLibrary::SubclassExample']]]
 ];
