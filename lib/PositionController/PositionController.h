@@ -142,19 +142,6 @@ public:
 	 * @return Précision angulaire en rad.
 	 */
 	float getAngPosThreshold() const {return m_angPosThreshold;}
-	/**
-	 * @brief Charge les configs
-	 * 
-	 * Charge les configurations de la mémoire de l'Arduino avec l'adresse indiqué en paramètre.
-	 * 
-	 * @param address Adresse à utiliser.
-	 */
-	void load(int address);
-	/**
-	 * @brief Sauvegarde la configuration actuel.
-	 * @param address Adresse à utiliser.
-	 */
-	void save(int address) const;
 
 private:
 	/**

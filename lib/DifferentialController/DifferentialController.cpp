@@ -1,5 +1,4 @@
 #include <Arduino.h>
-#include <EEPROM.h>
 
 #include "DifferentialController.h"
 
@@ -26,16 +25,6 @@ void DifferentialController::onProcessDisabling()
 {
 	m_linPID->reset();
 	m_angPID->reset();
-}
-
-void DifferentialController::load(int address)
-{
-	EEPROM.get(address, m_axleTrack); address += sizeof(m_axleTrack);
-}
-
-void DifferentialController::save(int address) const
-{
-	EEPROM.put(address, m_axleTrack); address += sizeof(m_axleTrack);
 }
 
 void DifferentialController::setAxleTrack   (float axleTrack)   {

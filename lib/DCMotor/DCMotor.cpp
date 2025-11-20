@@ -1,5 +1,4 @@
 #include <Arduino.h>
-#include <EEPROM.h>
 
 #include "DCMotor.h"
 #include "ShiftRegister.h"
@@ -35,24 +34,6 @@ float DCMotor::getMaxVelocity() const
 {
 	return fabs((2 * M_PI * m_wheelRadius) / m_constant) * m_maxPWM;
 }
-
-void DCMotor::load(int address)
-{
-	EEPROM.get(address, m_wheelRadius); address += sizeof(m_wheelRadius);
-	EEPROM.get(address, m_constant);    address += sizeof(m_constant);
-	EEPROM.get(address, m_maxPWM);      address += sizeof(m_maxPWM);
-}
-
-void DCMotor::save(int address) const
-{
-    EEPROM.put(address, m_wheelRadius);
-    address += sizeof(m_wheelRadius);
-    EEPROM.put(address, m_constant);
-    address += sizeof(m_constant);
-    EEPROM.put(address, m_maxPWM);
-    address += sizeof(m_maxPWM);
-}
-
 
 void DCMotor::setConstant   (float constant)   {
 	m_constant = constant;

@@ -1,5 +1,4 @@
 #include <Arduino.h>
-#include <EEPROM.h>
 
 #include "VelocityController.h"
 #include "mathutils.h"
@@ -96,34 +95,6 @@ void VelocityController::onProcessEnabling()
 	m_rampLinVelSetpoint = 0;
 	m_rampAngVelSetpoint = 0;
 }
-
-void VelocityController::load(int address)
-{
-	EEPROM.get(address, m_axleTrack);    address += sizeof(m_axleTrack);
-	EEPROM.get(address, m_maxLinAcc);    address += sizeof(m_maxLinAcc);
-	EEPROM.get(address, m_maxLinDec);    address += sizeof(m_maxLinDec);
-	EEPROM.get(address, m_maxAngAcc);    address += sizeof(m_maxAngAcc);
-	EEPROM.get(address, m_maxAngDec);    address += sizeof(m_maxAngDec);
-	EEPROM.get(address, m_spinShutdown); address += sizeof(m_spinShutdown);
-}
-
-void VelocityController::save(int address) const
-{
-	EEPROM.put(address, m_axleTrack);
-	address += sizeof(m_axleTrack);
-	EEPROM.put(address, m_maxLinAcc);
-	address += sizeof(m_maxLinAcc);
-	EEPROM.put(address, m_maxLinDec);
-	address += sizeof(m_maxLinDec);
-	EEPROM.put(address, m_maxAngAcc);
-	address += sizeof(m_maxAngAcc);
-	EEPROM.put(address, m_maxAngDec);
-	address += sizeof(m_maxAngDec);
-	EEPROM.put(address, m_spinShutdown);
-	address += sizeof(m_spinShutdown);
-}
-
-
 
 void VelocityController::setMaxLinAcc   (float maxLinAcc)   {
 	m_maxLinAcc = maxLinAcc;

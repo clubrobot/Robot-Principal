@@ -1,5 +1,4 @@
 #include <Arduino.h>
-#include <EEPROM.h>
 
 #include "PositionController.h"
 
@@ -27,32 +26,6 @@ bool PositionController::getPositionReached()
 	if (m_moveStrategy != 0)
 		return m_moveStrategy->getPositionReached();
 	return false;
-}
-
-void PositionController::load(int address)
-{
-	EEPROM.get(address, m_linVelKp); address += sizeof(m_linVelKp);
-	EEPROM.get(address, m_angVelKp); address += sizeof(m_angVelKp);
-	EEPROM.get(address, m_linVelMax); address += sizeof(m_linVelMax);
-	EEPROM.get(address, m_angVelMax); address += sizeof(m_angVelMax);
-	EEPROM.get(address, m_linPosThreshold); address += sizeof(m_linPosThreshold);
-	EEPROM.get(address, m_angPosThreshold); address += sizeof(m_angPosThreshold);
-}
-
-void PositionController::save(int address) const
-{
-	EEPROM.put(address, m_linVelKp);
-	address += sizeof(m_linVelKp);
-	EEPROM.put(address, m_angVelKp);
-	address += sizeof(m_angVelKp);
-	EEPROM.put(address, m_linVelMax);
-	address += sizeof(m_linVelMax);
-	EEPROM.put(address, m_angVelMax);
-	address += sizeof(m_angVelMax);
-	EEPROM.put(address, m_linPosThreshold);
-	address += sizeof(m_linPosThreshold);
-	EEPROM.put(address, m_angPosThreshold);
-	address += sizeof(m_angPosThreshold);
 }
 
 void PositionController::setVelTunings(float linVelKp, float angVelKp) {

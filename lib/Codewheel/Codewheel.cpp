@@ -1,5 +1,4 @@
 #include <Arduino.h>
-#include <EEPROM.h>
 
 #include "Codewheel.h"
 
@@ -50,21 +49,6 @@ float Codewheel::restart()
 	float distance = getTraveledDistance();
 	m_startCounter = m_currentCounter;
 	return distance;
-}
-
-
-void Codewheel::load(int address)
-{
-	EEPROM.get(address, m_wheelRadius);  address += sizeof(m_wheelRadius);
-	EEPROM.get(address, m_countsPerRev); address += sizeof(m_countsPerRev);
-}
-
-void Codewheel::save(int address)
-{
-	EEPROM.put(address, m_wheelRadius);
-	address += sizeof(m_wheelRadius);
-	EEPROM.put(address, m_countsPerRev);
-	address += sizeof(m_countsPerRev);
 }
 
 /**
