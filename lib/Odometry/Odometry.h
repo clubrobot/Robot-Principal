@@ -139,22 +139,6 @@ public:
 	 * @return Dérive sans unité.
 	 */
 	float getSlippage () const {return m_slippage;}
-	/**
-	 * @brief Charge les paramètres.
-	 * 
-	 * Charge les paramètres depuis la mémoire de l'arduino.
-	 * 
-	 * @param address Adresse à utilisé pour charger les données.
-	 */
-	void load(int address);
-	/**
-	 * @brief Sauvegarde les paramètres
-	 * 
-	 * Sauvegarde les paramètres actuelement utilisés.
-	 * 
-	 * @param address Adresse à utilisé pour la sauvegarde.
-	 */
-	void save(int address) const;
 
 protected:
 	/**

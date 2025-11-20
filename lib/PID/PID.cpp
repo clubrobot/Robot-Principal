@@ -1,5 +1,4 @@
 #include <Arduino.h>
-#include <EEPROM.h>
 
 #include "PID.h"
 #include "mathutils.h"
@@ -27,24 +26,6 @@ void PID::reset()
 {
 	m_errorIntegral = 0;
 	m_previousError = 0;
-}
-
-void PID::load(int address)
-{
-	EEPROM.get(address, m_Kp); address += sizeof(m_Kp);
-	EEPROM.get(address, m_Ki); address += sizeof(m_Ki);
-	EEPROM.get(address, m_Kd); address += sizeof(m_Kd);
-	EEPROM.get(address, m_minOutput); address += sizeof(m_minOutput);
-	EEPROM.get(address, m_maxOutput); address += sizeof(m_maxOutput);
-}
-
-void PID::save(int address) const
-{
-	EEPROM.put(address, m_Kp); address += sizeof(m_Kp);
-	EEPROM.put(address, m_Ki); address += sizeof(m_Ki);
-	EEPROM.put(address, m_Kd); address += sizeof(m_Kd);
-	EEPROM.put(address, m_minOutput); address += sizeof(m_minOutput);
-	EEPROM.put(address, m_maxOutput); address += sizeof(m_maxOutput);
 }
 
 void PID::setTunings(float Kp, float Ki, float Kd){

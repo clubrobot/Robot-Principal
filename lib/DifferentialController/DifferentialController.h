@@ -133,22 +133,6 @@ public:
 	 * @return Entraxe en mm.
 	 */
 	float getAxleTrack() const {return m_axleTrack;}
-	/**
-	 * @brief Charge les paramètres
-	 * 
-	 * Charge les paramètres depuis la mémoire de l'Arduino.
-	 *  
-	 * @param address Adresse à utiliser.
-	 */
-	void load(int address);
-	/**
-	 * @brief Sauvegarde les paramètres
-	 * 
-	 * Sauvegarde les paramètres dans la mémoire de l'Arduino.
-	 *  
-	 * @param address Adresse à utiliser.
-	 */
-	void save(int address) const;
 
 protected:
 	/**

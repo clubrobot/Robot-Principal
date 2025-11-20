@@ -86,22 +86,6 @@ public:
 	 * @return false Si le robot n'est pas bloqué.
 	 */
     bool getSpinShutdown() const { return m_spinShutdown; }
-    /**
-	 * @brief Charge les paramètres.
-	 * 
-	 * Charge les derniers paramètres sauvegarder (les acc et dec) dans l'Arduino.
-	 * 
-	 * @param address Adresse à utiliser.
-	 */
-    void load(int address);
-    /**
-	 * @brief Sauvegarde les paramètres.
-	 * 
-	 * Sauvegarde les paramètres actuellement chargés.
-	 * 
-	 * @param address Adresse à utiliser.
-	 */
-    void save(int address) const;
 
 	void set_stop(bool stop);
 

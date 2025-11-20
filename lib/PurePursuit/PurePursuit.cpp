@@ -1,5 +1,4 @@
 #include <Arduino.h>
-#include <EEPROM.h>
 
 #include "PurePursuit.h"
 
@@ -239,20 +238,6 @@ void PurePursuit::computeVelSetpoints(float timestep)
 bool PurePursuit::getPositionReached()
 {
 	return m_goalReached;
-}
-
-void PurePursuit::load(int address)
-{
-	EEPROM.get(address, m_lookAhead);    address += sizeof(m_lookAhead);
-	EEPROM.get(address, m_lookAheadBis); address += sizeof(m_lookAheadBis);
-}
-
-void PurePursuit::save(int address) const
-{
-	EEPROM.put(address, m_lookAhead);
-	address += sizeof(m_lookAhead);
-	EEPROM.put(address, m_lookAheadBis);
-	address += sizeof(m_lookAheadBis);
 }
 
 void PurePursuit::setLookAheadBis(float lookAheadBis)
