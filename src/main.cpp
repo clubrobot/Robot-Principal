@@ -23,6 +23,58 @@
 #define DEBUG 1
 #define TEST_NO_FREERTOS false //Ignore le FreeRTOS et se comporte comme un arduino classique
 
+TIM_HandleTypeDef htim16;
+TIM_HandleTypeDef htim17;
+
+TaskHandle_t hl_wb = nullptr;
+TaskHandle_t hl_sens = nullptr;
+TaskHandle_t  hl_robot = nullptr;
+
+
+//timer initialisation
+static void MX_TIM16_Init()
+{
+
+    htim16.Instance = TIM16;
+    htim16.Init.Prescaler = 550 - 1;
+    htim16.Init.CounterMode = TIM_COUNTERMODE_UP;
+    htim16.Init.Period = 65535;
+    htim16.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+    htim16.Init.RepetitionCounter = 0;
+    htim16.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+    if (HAL_TIM_Base_Init(&htim16) != HAL_OK)
+    {
+        Error_Handler();
+    }
+}
+
+static void MX_TIM17_Init()
+{
+    htim17.Instance = TIM17;
+    htim17.Init.Prescaler = 550 - 1;
+    htim17.Init.CounterMode = TIM_COUNTERMODE_UP;
+    htim17.Init.Period = 65535;
+    htim17.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+    htim17.Init.RepetitionCounter = 0;
+    htim17.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+    if (HAL_TIM_Base_Init(&htim17) != HAL_OK)
+    {
+        Error_Handler();
+    }
+}
+
+//ISR
+void wbTimer16IRSHandler(){
+    BaseType_t taskWoken = pdFALSE;
+    //prvClearInterruptSource(); is in doc but doesn't exists here ? maybe should clear timer directly
+
+    // send notification to the weeeledbase
+    vTaskNotifyGiveFromISR(hl_wb,&taskWoken);
+
+    // triggers the scheduler
+    portYIELD_FROM_ISR(taskWoken);
+}
+
 Logger main_logs = Logger("MAIN");
 using namespace ihm;
 void procedure_demarrage(){
@@ -99,14 +151,18 @@ Tache banderole OK
 check reset if vl53 are flshed !!!!!!!!!!!!!!
 */
 
-TaskHandle_t hl_wb = nullptr;
-TaskHandle_t hl_sens = nullptr;
-TaskHandle_t  hl_robot = nullptr;
+
 //Setup de base
 
 
 void setup(){
+    if (HAL_Init()!= HAL_OK){
+        Error_Handler();
+    }
+
     DWT_Init(); //Très important
+    MX_TIM16_Init();
+    MX_TIM17_Init();
 
 #if DEBUG
     PrintfSupport::begin(PRINTF_BAUD);

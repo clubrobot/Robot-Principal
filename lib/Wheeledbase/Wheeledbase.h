@@ -140,7 +140,7 @@ extern VelocityController velocityControl;
 extern PID linVelPID;
 extern PID angVelPID;
 
-extern PositionController positionControl;
+extern PositionController::PositionController positionControl;
 
 extern PurePursuit   purePursuit;
 extern TurnOnTheSpot turnOnTheSpot;

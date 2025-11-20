@@ -11,6 +11,7 @@
 #include "PositionController.h"
 #include "PurePursuit.h"
 #include "TurnOnTheSpot.h"
+#include "timers.h"
 
 #include "mathutils.h"
 
@@ -36,12 +37,13 @@ extern VelocityControllerLogs controllerLogs;
 extern PID linVelPID;
 extern PID angVelPID;
 
-extern PositionController positionControl;
+extern PositionController::PositionController positionControl;
 
 extern PurePursuit purePursuit;
 extern TurnOnTheSpot turnOnTheSpot;
 
 void wb_setup();
 void wb_loop(void *pvParameters);
+void update_position_controller(TimerHandle_t _);
 
 #endif //WB_THREAD_H

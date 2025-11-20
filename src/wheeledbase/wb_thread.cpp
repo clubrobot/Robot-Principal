@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include "wb_thread.h"
+#include "timers.h"
 
 //Declare all modules
 DCMotorsDriver driver;
@@ -18,6 +19,8 @@ VelocityController velocityControl;
 #if ENABLE_VELOCITYCONTROLLER_LOGS
 VelocityControllerLogs controllerLogs;
 #endif // ENABLE_VELOCITYCONTROLLER_LOGS
+
+TimerHandle_t timer;
 
 PID linVelPID;
 PID angVelPID;
@@ -202,6 +205,14 @@ void wb_setup(){
     PositionController::disable(&positionControl);
 
     //purePursuit.load(PUREPURSUIT_ADDRESS);
+    timer = xTimerCreate("positionController", pdMS_TO_TICKS(20), pdTRUE, (void*)0, update_position_controller);
+}
+
+void update_position_controller(TimerHandle_t _){
+    PositionController::process(&positionControl);
+    float linVelSetpoint = PositionController::getLinVelSetpoint(&positionControl);
+    float angVelSetpoint = PositionController::getAngVelSetpoint(&positionControl);
+    velocityControl.setSetpoints(linVelSetpoint, angVelSetpoint);
 }
 
 void wb_loop(void *pvParameters){
@@ -210,13 +221,6 @@ for(;;) {
     if (odometry.update()){
         PositionController::setPosInput(&positionControl, *odometry.getPosition());
         velocityControl.setInputs(odometry.getLinVel(), odometry.getAngVel());
-    }
-    // Compute trajectory
-    if (positionControl.update())
-    {
-        float linVelSetpoint = PositionController::getLinVelSetpoint(&positionControl);
-        float angVelSetpoint = PositionController::getAngVelSetpoint(&positionControl);
-        velocityControl.setSetpoints(linVelSetpoint, angVelSetpoint);
     }
         // Integrate engineering control
 #if ENABLE_VELOCITYCONTROLLER_LOGS
