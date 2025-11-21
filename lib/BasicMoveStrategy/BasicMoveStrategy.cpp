@@ -13,8 +13,8 @@ void BasicMoveStrategy::computeVelSetpoints(float timestep) {
         obj = -x_max_speed;
     }
     if (fabs(dx) < slowing_distance){
-        obj /= obj;
-        obj *= 20;
+        obj = x_max_speed * fabs(dx) / slowing_distance;
+        obj = (dx > 0) ? obj : -obj;
     } else if (fabs(dx) < x_goal) {
         obj = 0;
     }
