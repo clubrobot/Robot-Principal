@@ -15,6 +15,7 @@ class BasicMoveStrategy : public AbstractMoveStrategy {
      * Stratégie développée afin de déplacer le robot en ligne droite selon l'axe x pour régler le PID.
      */
 public:
+    int x_goal;
     int x_precision;
     int x_max_speed;
     int x_slowing_distance;

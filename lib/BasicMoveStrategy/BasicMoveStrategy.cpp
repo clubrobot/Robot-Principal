@@ -10,7 +10,7 @@ void BasicMoveStrategy::computeVelSetpoints(float timestep) {
     float dx = getPosSetpoint().x - getPosInput().x;
     float obj;
     if (dx > 0 && dx > x_slowing_distance) {
-        obj = x_max_speed;  // 
+        obj = x_max_speed;  //
     } else if (dx < 0 && fabs(dx) > x_slowing_distance) {
         obj = -x_max_speed;
     } else {
