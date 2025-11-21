@@ -53,13 +53,13 @@ namespace PositionController{
      * Active le PositionController pour qu'il commence à exécuter la stratégie de mouvement chargée.
      * @param positionController Pointeur vers l'objet PositionController à activer.
      */
-    void enable(PositionController* positionController){positionController->enabled = true; positionController->clock->restart();}
+    void enable(PositionController* positionController);
     /**
      * @brief Désactive le PositionController.
      * Désactive le PositionController pour qu'il arrête d'exécuter la stratégie de mouvement chargée.
      * @param positionController Pointeur vers l'objet PositionController à désactiver.
      */
-    void disable(PositionController* positionController){positionController->enabled = false;}
+    void disable(PositionController* positionController);
 
     /**
      * @brief Charge les nouvelles positions du robot.
@@ -67,7 +67,7 @@ namespace PositionController{
      * @param positionController Pointeur vers l'objet PositionController à modifier.
      * @param posInput Nouvelle objet Position représentant la position du robot.
      */
-    void setPosInput(PositionController* positionController, Position posInput){positionController->m_posInput = posInput;}
+    void setPosInput(PositionController* positionController, Position posInput);
     /**
      * @brief Charge la position à atteindre.
      *
@@ -77,7 +77,7 @@ namespace PositionController{
      * @param positionController Pointeur vers l'objet PositionController à modifier.
      * @param posSetpoint Position à atteindre
      */
-    void setPosSetpoint(PositionController* positionController, Position posSetpoint){positionController->m_posSetpoint = posSetpoint;}
+    void setPosSetpoint(PositionController* positionController, Position posSetpoint);
 
     /**
      * @brief Charge l'angle à atteindre.
@@ -87,7 +87,7 @@ namespace PositionController{
      *
      * @param theta Nouvelle angle objectif.
      */
-    void setThetaSetPoint(PositionController* positionController, float theta){positionController->m_posSetpoint.theta = theta;}
+    void setThetaSetPoint(PositionController* positionController, float theta);
     /**
      * @brief Retourne la vitesse linéaire à atteindre.
      *
@@ -96,7 +96,7 @@ namespace PositionController{
      * @param positionController Pointeur vers l'objet PositionController à interroger.
      * @return Vitesse à atteindre en mm/s.
      */
-    float getLinVelSetpoint(const PositionController* positionController){return positionController->m_linVelSetpoint;}
+    float getLinVelSetpoint(const PositionController* positionController);
     /**
      * @brief Retourne la vitesse angulaire à atteindre.
      *
@@ -105,7 +105,7 @@ namespace PositionController{
      * @param positionController Pointeur vers l'objet PositionController à interroger.
      * @return Vitesse angulaire à atteindre en rad/s.
      */
-    float getAngVelSetpoint(const PositionController* positionController){return positionController->m_angVelSetpoint;}
+    float getAngVelSetpoint(const PositionController* positionController);
     /**
      * @brief Paramètre les coéfficients linéaire.
      *
@@ -116,10 +116,7 @@ namespace PositionController{
      * @param linVelKp Coefficient proportionnel de vitesse linéaire.
      * @param angVelKp Coefficient proportionnel de vitesse angulaire.
      */
-    void setVelTunings(PositionController* positionController, float linVelKp, float angVelKp) {
-        positionController->m_linVelKp = linVelKp;
-        positionController->m_angVelKp = angVelKp;
-    }
+    void setVelTunings(PositionController* positionController, float linVelKp, float angVelKp);
     /**
      * @brief Paramètre les vitesses max.
      *
@@ -129,10 +126,7 @@ namespace PositionController{
      * @param linVelMax Vitesse linéaire max.
      * @param angVelMax Vitesse angulaire max.
      */
-    void setVelLimits(PositionController* positionController, float linVelMax, float angVelMax){
-        positionController->m_linVelMax = linVelMax;
-        positionController->m_angVelMax = angVelMax;
-    }
+    void setVelLimits(PositionController* positionController, float linVelMax, float angVelMax);
     /**
      * @brief Paramètre les précisions en position.
      *
@@ -142,10 +136,7 @@ namespace PositionController{
      * @param linPosThreshold Précision en coordonnés cartésiens (en mm).
      * @param angPosThreshold Précision d'angle (en rad).
      */
-    void setPosThresholds(PositionController* positionController, float linPosThreshold, float angPosThreshold) {
-        positionController->m_linPosThreshold = linPosThreshold;
-        positionController->m_angPosThreshold = angPosThreshold;
-    }
+    void setPosThresholds(PositionController* positionController, float linPosThreshold, float angPosThreshold);
     /**
      * @brief Charge une stratégie de mouvement.
      *
@@ -173,38 +164,38 @@ namespace PositionController{
      * @param positionController Pointeur vers l'objet PositionController à interroger.
      * @return Coefficient proportionnel (sans unité).
      */
-    float getLinVelKp(const PositionController* positionController){return positionController->m_linVelKp;}
+    float getLinVelKp(const PositionController* positionController);
     /**
      * @brief Retourne le coef proportionnel de vitesse angulaire.
      * @param positionController Pointeur vers l'objet PositionController à interroger.
      * @return Coefficient proportionnel (sans unité).
      */
-    float getAngVelKp(const PositionController* positionController){return positionController->m_angVelKp;}
+    float getAngVelKp(const PositionController* positionController);
     /**
      * @brief Retourne la vitesse max linéaire.
      * @param positionController Pointeur vers l'objet PositionController à interroger.
      * @return Vitesse max en mm/s.
      */
-    float getLinVelMax(const PositionController* positionController){return positionController->m_linVelMax;}
+    float getLinVelMax(const PositionController* positionController);
     /**
      * @brief Retourne la vitesse max angulaire.
      * @return Vitesse  angulaire max en rad/s.
      */
-    float getAngVelMax(const PositionController* positionController){return positionController->m_angVelMax;}
+    float getAngVelMax(const PositionController* positionController);
     /**
      * @brief Retourne la précision cartésienne.
      *
      * @param positionController Pointeur vers l'objet PositionController à interroger.
      * @return Précision cartésienne en mm.
      */
-    float getLinPosThreshold(const PositionController* positionController){return positionController->m_linPosThreshold;}
+    float getLinPosThreshold(const PositionController* positionController);
     /**
      * @brief Retourne la précision angulaire.
      *
      * @param positionController Pointeur vers l'objet PositionController à interroger.
      * @return Précision angulaire en rad.
      */
-    float getAngPosThreshold(const PositionController* positionController){return positionController->m_angPosThreshold;}
+    float getAngPosThreshold(const PositionController* positionController);
 
     /**
      * @brief Exécute la stratégie de mouvement.
