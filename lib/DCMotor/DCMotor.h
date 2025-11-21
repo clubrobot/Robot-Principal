@@ -83,9 +83,6 @@ public:
 	*/
 	float getMaxVelocity() const;
 
-	void load(int address);
-	void save(int address) const;
-	
 protected:
 
 	void update();

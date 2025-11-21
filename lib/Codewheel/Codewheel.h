@@ -3,7 +3,6 @@
 
 #include "NonCopyable.h"
 #include "Odometry.h"
-#include "EEPROM.h"
 
 #include <math.h>
 
@@ -76,20 +75,6 @@ public:
 	 * @return float 
 	 */
 	float restart();
-
-	/**
-	 * @brief Charge les données de l'EEPROM avec l'offset.
-	 * 
-	 * @param address Offset à utiliser pour lire dans l'EEPROM.
-	 */
-	void load(int address);
-	
-	/**
-	 * @brief Sauvegarde les constantes actuelles dans l'EEPROM
-	 * 
-	 * @param address Offset à utiliser pour ecrire dans l'EEPROM.
-	 */
-	void save(int address);
 
 	TIM_HandleTypeDef *m_htim;
 	TIM_TypeDef *m_tim;

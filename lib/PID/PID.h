@@ -75,16 +75,6 @@ public:
 	 * @return Sortie maximal.
 	 */
 	float getMaxOutput() const {return m_maxOutput;}
-	/**
-	 * @brief Charge les paramètres de la mémoire.
-	 * @param address Adresse à utiliser.
-	 */
-	void load(int address);
-	/**
-	 * @brief Sauvegarde les paramètres dans la mémoire.
-	 * @param address Adresse à utiliser.
-	 */
-	 void save(int address) const;
 
 private:
 

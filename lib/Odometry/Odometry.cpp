@@ -1,5 +1,4 @@
 #include <Arduino.h>
-#include <EEPROM.h>
 
 #include "Odometry.h"
 
@@ -22,19 +21,6 @@ void Odometry::process(float timestep)
 	m_linVel = deltaLinPos / timestep;
 	m_angVel = deltaAngPos / timestep;
 }
-
-void Odometry::load(int address)
-{
-	EEPROM.get(address, m_axleTrack); address += sizeof(m_axleTrack);
-	EEPROM.get(address, m_slippage);  address += sizeof(m_slippage);
-}
-
-void Odometry::save(int address) const
-{
-    EEPROM.put(address, m_axleTrack); address += sizeof(m_axleTrack);
-    EEPROM.put(address, m_slippage);  address += sizeof(m_slippage);
-}
-
 
 void Odometry::setAxleTrack   (float axleTrack)   {
 	m_axleTrack = axleTrack;

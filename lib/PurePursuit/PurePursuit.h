@@ -122,18 +122,6 @@ public:
 	 * @return float LookaHeadbis en mm.
 	 */
 	float getLookAheadBis() const {return m_lookAheadBis;}
-	/**
-	 * @brief Charge les paramètres sauvegardés.
-	 * 
-	 * @param address Adresse à utiliser.
-	 */
-	void load(int address);
-	/**
-	 * @brief Sauvegarde les paramètres actuels.
-	 * 
-	 * @param address Adresse à utiliser.
-	 */
-	void save(int address) const;
 
 protected:
 
