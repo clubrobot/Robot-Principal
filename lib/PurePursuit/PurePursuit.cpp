@@ -173,9 +173,9 @@ float PurePursuit::getDistAfterGoal()
 void PurePursuit::computeVelSetpoints(float timestep)
 {
 	// Aliases
-	const float x = getPosInput()->x;
-	const float y = getPosInput()->y;
-	const float theta = getPosInput()->theta;
+	const float x = getPosInput().x;
+	const float y = getPosInput().y;
+	const float theta = getPosInput().theta;
 	const float linVelKp = getLinVelKp();
 	const float angVelKp = getLinVelKp();
 	const float linVelMax = getLinVelMax();
