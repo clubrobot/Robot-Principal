@@ -87,7 +87,7 @@ void Teleplot::add_variable_2d(const char * nom_variable, const float x, const f
 /// @param message Le message à ajouter au tampon
 void Teleplot::add_log(const char *message) {
     char buf[INTERNAL_BUFFER_SIZE];
-    snprintf(buf, INTERNAL_BUFFER_SIZE, "%lu:%s\n", this->get_temps(), message);
+    snprintf(buf, INTERNAL_BUFFER_SIZE, ">%lu:%s\n", this->get_temps(), message);
     this->ajout_ou_envoie_tampon(buf);
 }
 
