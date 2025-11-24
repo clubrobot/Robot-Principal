@@ -58,28 +58,28 @@ void Teleplot::ajout_ou_envoie_tampon(const char * message){
 /// @brief Ajoute une variable flottante au tampon de téléplot
 void Teleplot::add_variable_float_2decimal(const char * nom_variable, const float valeur){
     char buf[INTERNAL_BUFFER_SIZE];
-    snprintf(buf, INTERNAL_BUFFER_SIZE, ">%s:%lu:%.2f\n", nom_variable, this->get_temps(), valeur);
+    snprintf(buf, INTERNAL_BUFFER_SIZE, "%s:%lu:%.2f\n", nom_variable, this->get_temps(), valeur);
     this->ajout_ou_envoie_tampon(buf);
 }
 
 /// @brief Ajoute une variable entière au tampon de téléplot
 void Teleplot::add_variable_int(const char * nom_variable, const int valeur){
     char buf[INTERNAL_BUFFER_SIZE];
-    snprintf(buf, INTERNAL_BUFFER_SIZE, ">%s:%lu:%d\n", nom_variable, this->get_temps(), valeur);
+    snprintf(buf, INTERNAL_BUFFER_SIZE, "%s:%lu:%d\n", nom_variable, this->get_temps(), valeur);
     this->ajout_ou_envoie_tampon(buf);
 }
 
 /// @brief Ajoute une variable 2D au tampon de téléplot
 void Teleplot::add_variable_2d(const char * nom_variable, const float x, const float y){
     char buf[INTERNAL_BUFFER_SIZE];
-    snprintf(buf, INTERNAL_BUFFER_SIZE, ">%s:%.2f:%.2f:%lu|xy\n", nom_variable, x, y, this->get_temps());
+    snprintf(buf, INTERNAL_BUFFER_SIZE, "%s:%.2f:%.2f:%lu|xy\n", nom_variable, x, y, this->get_temps());
     this->ajout_ou_envoie_tampon(buf);
 }
 
 /// @brief Ajoute un status au tampon de téléplot
  void Teleplot::add_status(const char* nom_variable, const char* status) {
     char buf[INTERNAL_BUFFER_SIZE];
-    snprintf(buf,INTERNAL_BUFFER_SIZE, ">%s:%lu:%s|t\n", nom_variable, this->get_temps(), status);
+    snprintf(buf,INTERNAL_BUFFER_SIZE, "%s:%lu:%s|t\n", nom_variable, this->get_temps(), status);
     this->ajout_ou_envoie_tampon(buf);
 }
 
