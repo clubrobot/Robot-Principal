@@ -14,7 +14,11 @@ build:
 
 check:
 	@echo "Running static checks"
-	pio check
+	pio check --skip-packages
+
+verbose-check:
+	@echo "Running static checks with verbose output"
+	pio check -v --skip-packages
 
 build-upload:
 	@echo "Televersing the program"
