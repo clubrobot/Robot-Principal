@@ -22,9 +22,7 @@
 
 #define DEBUG 1
 
-#if DEBUG
-#include "trcRecorder.h"
-#endif
+
 
 
 #define TEST_NO_FREERTOS false //Ignore le FreeRTOS et se comporte comme un arduino classique
