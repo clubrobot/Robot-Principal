@@ -15,6 +15,12 @@
 #include "team2025/ListeActionneurs.h"
 
 #define DEBUG 1
+
+#if DEBUG
+#include "trcRecorder.h"
+#endif
+
+
 #define TEST_NO_FREERTOS false //Ignore le FreeRTOS et se comporte comme un arduino classique
 
 Logger main_logs = Logger("MAIN");
@@ -137,9 +143,9 @@ void setup(){
 #if DEBUG
     PrintfSupport::begin(PRINTF_BAUD);
     main_logs.log(WARNING_LEVEL, "Debug enabled at %d baud\n", PRINTF_BAUD);
-
-    main_logs.log(INFO_LEVEL, "Printing WheeledBase Params\n");
-    Wheeledbase::PRINT_PARAMS();
+    xTraceEnable(TRC_START);
+    //main_logs.log(INFO_LEVEL, "Printing WheeledBase Params\n");
+    //Wheeledbase::PRINT_PARAMS();
 #endif
     match_started= true;
     wb_setup();
