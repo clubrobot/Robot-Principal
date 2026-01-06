@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include <list>
 #include <STM32FreeRTOS.h>
 #include <Wheeledbase.h>
 
@@ -6,46 +7,90 @@
 #include <PrintfSupport.h>
 #include <variables_globales.h>
 #include <Logger.h>
+#include <Musique.h>
+#include <Teleplot.h>
+#include <team2025/TacheBanderole.h>
 
-#include "BournsACEncoder.h"
-#include "DCMotor.h"
-#include "DRV8876.h"
-#include "Elevator.h"
-#include "HazelnutGripper.h"
 #include "ihm/ihm.h"
 #include "wheeledbase/wb_thread.h"
 #include "sensors/SensorsThread.h"
 #include "decisions/Automate.h"
+#include "include/SensorArray.h"
+#include "yeux/yeuxThread.h"
 
 #include "team2025/ListeActionneurs.h"
 
 #define DEBUG 1
 
-#if DEBUG && configUSE_TRACE_FACILITY
+#if DEBUG
 #include "trcRecorder.h"
 #endif
 
-#if not configUSE_TRACE_FACILITY && DEBUG
-#ifndef ALREADY_WARNED
-#define ALREADY_WARNED
-#warning FreeRTOS config does not allow Trace Recording
-#endif
-#endif
 
 #define TEST_NO_FREERTOS false //Ignore le FreeRTOS et se comporte comme un arduino classique
 
 Logger main_logs = Logger("MAIN");
 using namespace ihm;
 void procedure_demarrage(){
+    main_logs.log(INFO_LEVEL, "Mise à zero des actionneurs\n");
+    //TODO
 
+    main_logs.log(INFO_LEVEL, "Sélectionez une équipe\n");
+    led_jaune(HIGH);
+    led_bleu(HIGH);
+    while (true){
+        if (etat_jaune()){
+            main_logs.log(GOOD_LEVEL,"Equipe Jaune !\n");
+            yeuxThread::yeux.println("Smerci Aisprid  *75$robo jaune 54");
+            led_bleu(LOW);
+            my_team = TEAM_JAUNE;
+            break;
+        }
+        if (etat_bleu()){
+            main_logs.log(GOOD_LEVEL,"Equipe Bleu!\n");
+            led_jaune(LOW);
+            my_team=TEAM_BLEU;yeuxThread::yeux.println("Smerci Aisprid  *75$robo bleu 54");
+            break;
+        }
+    }
+
+    main_logs.log(INFO_LEVEL,"Veuillez mettre le robot en place et appuyer sur vert; rouge pour mettre la banderole!\n");
+
+    unsigned int prev_vert = millis();
+    unsigned int prev_rouge = millis();
+    bool last_state_rouge=etat_rouge();
+
+    while (!etat_vert()){
+        unsigned int curr_time = millis();
+        if (curr_time-prev_vert > 500){
+            prev_vert = curr_time;
+            led_vert();
+        }
+        if(curr_time-prev_rouge>100){
+            prev_rouge = curr_time;
+            led_rouge();
+        }
+        bool state_rouge = etat_rouge();
+        if (state_rouge!=last_state_rouge){
+            printf("ENTRE\n");
+            if(state_rouge){
+                listeActionneur::mise_banderole();
+            }else{
+                listeActionneur::haut_banderole();
+            }
+        }
+        last_state_rouge=state_rouge;
+    }
+    led_vert(LOW);
     Automate::init(my_team);
     main_logs.log(WARNING_LEVEL,"Le robot est armé!\n");
 
     //Detect tirette
     while(etat_tirette()==1){}
-    main_logs.log(WARNING_LEVEL,"tirette mise !\n");
+    main_logs.log(WARNING_LEVEL,"tirette mise (dans le trou de Boris) !\n");
     while (etat_tirette()==0){}
-    main_logs.log(WARNING_LEVEL,"tirette enlevée !\n");
+    main_logs.log(WARNING_LEVEL,"tirette enlevée (du trou de Boris) !\n");
+    yeuxThread::yeux.println("Smerci Aisprid  *75$robo arme 54");
 
 }
 
@@ -65,250 +110,87 @@ TaskHandle_t hl_sens = nullptr;
 TaskHandle_t  hl_robot = nullptr;
 //Setup de base
 
-// Fonction d'initialisation des horloges
-void SystemClock_Config(void)
-{
-  RCC_OscInitTypeDef RCC_OscInitStruct = {};
-  RCC_ClkInitTypeDef RCC_ClkInitStruct = {};
-  RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {};
-
-  /** Supply configuration update enable
-  */
-  HAL_PWREx_ConfigSupply(PWR_LDO_SUPPLY);
-  /** Configure the main internal regulator output voltage
-  */
-  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE0);
-
-  while (!__HAL_PWR_GET_FLAG(PWR_FLAG_VOSRDY)) {}
-  /** Initializes the RCC Oscillators according to the specified parameters
-  * in the RCC_OscInitTypeDef structure.
-  */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI48 | RCC_OSCILLATORTYPE_HSI;
-  RCC_OscInitStruct.HSIState = RCC_HSI_DIV1;
-  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-  RCC_OscInitStruct.HSI48State = RCC_HSI48_ON;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
-  RCC_OscInitStruct.PLL.PLLM = 4;
-  RCC_OscInitStruct.PLL.PLLN = 60;
-  RCC_OscInitStruct.PLL.PLLP = 2;
-  RCC_OscInitStruct.PLL.PLLQ = 5;
-  RCC_OscInitStruct.PLL.PLLR = 2;
-  RCC_OscInitStruct.PLL.PLLRGE = RCC_PLL1VCIRANGE_3;
-  RCC_OscInitStruct.PLL.PLLVCOSEL = RCC_PLL1VCOWIDE;
-  RCC_OscInitStruct.PLL.PLLFRACN = 0;
-  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK) {
-    Error_Handler();
-  }
-  /** Initializes the CPU, AHB and APB buses clocks
-  */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
-                                | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2
-                                | RCC_CLOCKTYPE_D3PCLK1 | RCC_CLOCKTYPE_D1PCLK1;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
-  RCC_ClkInitStruct.SYSCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.AHBCLKDivider = RCC_HCLK_DIV2;
-  RCC_ClkInitStruct.APB3CLKDivider = RCC_APB3_DIV2;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_APB1_DIV2;
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_APB2_DIV2;
-  RCC_ClkInitStruct.APB4CLKDivider = RCC_APB4_DIV2;
-
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK) {
-    Error_Handler();
-  }
-  /** Initializes the peripherals clock
-  */
-  PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_USB | RCC_PERIPHCLK_SDMMC | RCC_PERIPHCLK_ADC
-                                             | RCC_PERIPHCLK_LPUART1 | RCC_PERIPHCLK_USART16
-                                             | RCC_PERIPHCLK_USART234578 | RCC_PERIPHCLK_I2C123
-                                             | RCC_PERIPHCLK_SPI123 | RCC_PERIPHCLK_SPI45
-                                             | RCC_PERIPHCLK_SPI6;
-  PeriphClkInitStruct.PLL2.PLL2M = 4;
-  PeriphClkInitStruct.PLL2.PLL2N = 10;
-  PeriphClkInitStruct.PLL2.PLL2P = 2;
-  PeriphClkInitStruct.PLL2.PLL2Q = 2;
-  PeriphClkInitStruct.PLL2.PLL2R = 2;
-  PeriphClkInitStruct.PLL2.PLL2RGE = RCC_PLL2VCIRANGE_3;
-  PeriphClkInitStruct.PLL2.PLL2VCOSEL = RCC_PLL2VCOMEDIUM;
-  PeriphClkInitStruct.PLL2.PLL2FRACN = 0.0;
-  PeriphClkInitStruct.UsbClockSelection = RCC_USBCLKSOURCE_HSI48;
-  PeriphClkInitStruct.SdmmcClockSelection = RCC_SDMMCCLKSOURCE_PLL;
-  PeriphClkInitStruct.Lpuart1ClockSelection = RCC_LPUART1CLKSOURCE_D3PCLK1;
-  PeriphClkInitStruct.Usart16ClockSelection = RCC_USART16CLKSOURCE_D2PCLK2;
-  PeriphClkInitStruct.Usart234578ClockSelection = RCC_USART234578CLKSOURCE_D2PCLK1;
-  PeriphClkInitStruct.I2c123ClockSelection = RCC_I2C123CLKSOURCE_D2PCLK1;
-  PeriphClkInitStruct.Spi123ClockSelection = RCC_SPI123CLKSOURCE_PLL;
-  PeriphClkInitStruct.Spi45ClockSelection = RCC_SPI45CLKSOURCE_D2PCLK1;
-  PeriphClkInitStruct.Spi6ClockSelection = RCC_SPI6CLKSOURCE_D3PCLK1;
-  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK) {
-    Error_Handler();
-  }
-}
-
-
-static HazelnutGripper::BournsACEncoder encoder(PA4, PB13, PB12, PE12, PC4, PA7, PA6, PA5);
-static DRV8876 drv8876(PA9,PC8);
-static DCMotor motor;
-static PID pid;
 
 void setup(){
-
-
-    SystemClock_Config();  // Configuration de l'horloge
-
     DWT_Init(); //Très important
 
-#if configUSE_TRACE_FACILITY
-    xTraceEnable(TRC_START);
-#endif
 #if DEBUG
     PrintfSupport::begin(PRINTF_BAUD);
     main_logs.log(WARNING_LEVEL, "Debug enabled at %d baud\n", PRINTF_BAUD);
-
-    main_logs.log(INFO_LEVEL, "Printing WheeledBase Params\n");
-    Wheeledbase::PRINT_PARAMS();
+    xTraceEnable(TRC_START);
+    //main_logs.log(INFO_LEVEL, "Printing WheeledBase Params\n");
+    //Wheeledbase::PRINT_PARAMS();
 #endif
-    match_started= true;
+    //Musique myBeeper = Musique(PA6, 10);
+    //myBeeper.playSheetMusic(cantina);
+    match_started= false;
+    yeuxThread::yeux_setup();
+    SensorsThread::Init();
+    yeuxThread::yeux.println("$A3*100$SENSORS OK");
+    listeActionneur::Init();
+    yeuxThread::yeux.println("SA3*100$ACTIO OK");
     wb_setup();
+    yeuxThread::yeux.println("SA3*100$WB OK");
+    ServosPCA9685::Init();
+    yeuxThread::yeux.println("Smerci Aisprid  *75$score 54");
+    match_started= false;
+    main_logs.log(GOOD_LEVEL,"Wheeledbase & Actionneurs & Sensors & IHM initied\n");
+    //procedure_demarrage();
+    //listeActionneur::ascenseur.setEndlessMode(true);
 
 #if TEST_NO_FREERTOS
     main_logs.log(WARNING_LEVEL,"Not using FreeRTOS\n");
     return;
 #endif
-
-
-  drv8876.init();
-  drv8876.attach(&motor);
-
-
-  HazelnutGripper::Gripper::init();
-
-  HazelnutGripper::GripperWire.begin();
-
-  HazelnutGripper::Gripper::closeAll();
-
-  HazelnutGripper::Gripper::setRotationAll(0);
-
-  HazelnutGripper::Gripper::spreadFingers(0);
-
-  /*
-  delay(5000);
-
-  HazelnutGripper::Gripper::closeAll();
-
-  delay(5000);*/
-
-
-  //pid a vide pid.setTunings(0.022,0.016,0.001);
-  pid.setTunings(0.022,0.0,0.0);
-  pid.setOutputLimits(-0.90,0.90);
-
-  HazelnutGripper::Elevator::setPID(pid);
-
-  encoder.init();
-
-  HazelnutGripper::Elevator::init(&motor,&encoder);
-
-  HazelnutGripper::Elevator::setAngle(55.437500);
-
-
-
-  TaskHandle_t  gripper_handle = nullptr;
-
-  /*
-
-  BaseType_t ret_gripper = xTaskCreate(
-              &HazelnutGripper::Elevator::task,
-              "Elevator",
-              10000,
-              nullptr,
-              5,//Prio max
-              &gripper_handle );
-  if(ret_gripper!=pdPASS) {Error_Handler()}*/
-
-
-/*
-
-  HazelnutGripper::Gripper::init();
-
-  HazelnutGripper::GripperWire.begin();
-
-  HazelnutGripper::Gripper::closeAll();
-
-  HazelnutGripper::Gripper::setRotationAll(0);
-  delay(2000);
-
-
-  HazelnutGripper::Gripper::openAll();
-
-  delay(5000);
-
-  HazelnutGripper::Gripper::closeAll();
-
-  delay(5000);
-
-  HazelnutGripper::Gripper::spreadFingers(180);
-
-  delay(1000);
-
-  HazelnutGripper::Gripper::setRotationAll(180);
-  delay(2000);
-
-
-  HazelnutGripper::Gripper::spreadFingers(0);
-
-  delay(5000);
-
-  HazelnutGripper::Gripper::openAll();
-
-
-  encoder.init();
-
-  printf("annngle :: %f\n",encoder.getAngle());
-
-  HazelnutGripper::Elevator::init(&d,&encoder);
-
-
-*/
-
-
-
     main_logs.log(GOOD_LEVEL,"Using FreeRTOS\n");
     //Setup FreeRTOS
 
-    TaskHandle_t  hl_wb = nullptr;
+    //TaskHandle_t  hl_wb = nullptr;
 
     BaseType_t ret_wb = xTaskCreate(
-                wb_loop,
-                "Wheeledbase loop",
-                10000,
-                nullptr,
+                wb_loop,       /* Function that implements the task. */
+                "Wheeledbase loop",          /* Text name for the task. */
+                10000,      /* Stack size in words, not bytes. */
+                nullptr,    /* Parameter passed into the task. */
                 5,//Prio max
-                &hl_wb );
+                &hl_wb );      /* Used to pass out the created task's handle. */
+
     if(ret_wb!=pdPASS) {Error_Handler()}
 
     //TaskHandle_t  hl_sens = nullptr;
-    //BaseType_t ret_sens= xTaskCreate(
-    //             SensorsThread::Thread,
-    //            "Sensors loop",
-    //             10000,
-    //             nullptr,
-    //             5,
-    //             &hl_sens );
-    //
-    // if(ret_sens!=pdPASS) {Error_Handler()}
+    BaseType_t ret_sens= xTaskCreate(
+                 SensorsThread::Thread,       /* Function that implements the task. */
+                "Sensors loop",          /* Text name for thedi task. */
+                 10000,      /* Stack size in words, not bytes. */
+                nullptr,    /* Parameter passed into the task. */
+                 5,//Prio nulle à chier
+                 &hl_sens );      /* Used to pass out the created task's handle. */
 
-    TaskHandle_t  hl_robot = nullptr;
+     if(ret_sens!=pdPASS) {Error_Handler()}
+
+    //TaskHandle_t  hl_robot = nullptr;
 
     BaseType_t ret_robot = xTaskCreate(
-                Automate::play_match,
-                "Robot loop",
-                10000,
-                (void *) procedure_demarrage,
-                5,
-                &hl_robot);
+                Automate::play_match,       /* Function that implements the task. */
+                "Robot loop",          /* Text name for the task. */
+                10000,      /* Stack size in words, not bytes. */
+                (void *) procedure_demarrage,    /* Parameter passed into the task. */
+                5,//Prio un peu mieux
+                &hl_robot );      /* Used to pass out the created task's handle. */
 
     if(ret_robot!=pdPASS) {Error_Handler()}
+
+    TaskHandle_t  hl_yeux= nullptr;
+
+    // BaseType_t ret_yeux = xTaskCreate(
+    //         yeuxThread::yeux_loop,       /* Function that implements the task. */
+    //         "UwU",          /* Text name for the task. */
+    //         10000,      /* Stack size in words, not bytes. */
+    //         NULL,    /* Parameter passed into the task. */
+    //         5,//Prio un peu mieux
+    //         &hl_yeux );      /* Used to pass out the created task's handle. */
+    //
+    // if(ret_yeux!=pdPASS) {Error_Handler()}
 
     main_logs.log(GOOD_LEVEL,"Starting tasks\n");
     vTaskStartScheduler();//On commence FreeRTOS
@@ -318,5 +200,10 @@ void setup(){
 }
 float i=0;
 void loop(){
+    return;
+    i=i+0.01;
+    teleplot.add_variable_float_2decimal("sin", sin(i));
+    if (i>=2*PI) i=0;
+    //printf("Pince Droite %f\tPince Gauche %f\t Banderole %f\t\n", listeActionneur::pince_droite.readPosition(), listeActionneur::pince_gauche.readPosition(), listeActionneur::banderole.readPosition());
 }
 

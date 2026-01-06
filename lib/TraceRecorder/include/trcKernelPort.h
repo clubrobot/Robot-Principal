@@ -870,7 +870,7 @@ TraceHeapHandle_t xTraceKernelPortGetSystemHeapHandle(void);
 
 #endif
 
-#if false
+#if defined(queueQUEUE_TYPE_SET) && (queueQUEUE_TYPE_BASE != queueQUEUE_TYPE_SET)
 /* Queue and QueueSet are different, so we add a case for them */
 #define traceQUEUE_SET_CASE_HELPER() case queueQUEUE_TYPE_SET:
 #else
