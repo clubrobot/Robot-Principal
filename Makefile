@@ -1,9 +1,11 @@
-@PHONY: help build check build-upload upload-and-teleplot
+@PHONY: help build debug check verbose-check build-upload upload-and-teleplot
 
 help:
 	@echo "Makefile commands:"
 	@echo "  build               - Build the project"
+	@echo "  debug               - Build the project and open debugger"
 	@echo "  check               - Run code checks"
+	@echo "  verbose-check       - Run code checks but with verbose output"
 	@echo "  build-upload        - Build and upload the project"
 	@echo "  upload-and-monitor  - Build, upload and watch serial port"
 	@echo "  upload-and-teleplot - Build, upload and start the teleplot redirect script"
@@ -15,6 +17,10 @@ build:
 check:
 	@echo "Running static checks"
 	pio check --skip-packages
+
+debug:
+	@echo "Enter debugging"
+	pio debug --interface gdb
 
 verbose-check:
 	@echo "Running static checks with verbose output"
