@@ -11,14 +11,16 @@
 
 inline WBConstants wb_consts = {
     .LEFTWHEEL_RADIUS = 23.8125,
-    .LEFTWHEEL_CONSTANT = 0.209380534,
+    .LEFTWHEEL_CONSTANT = 0.209380534, //cst to convert mm/s to PWM. If max speed is 1m/s => 0.209 PWM
     .LEFTWHEEL_MAXPWM = 1.0,
+
     .RIGHTWHEEL_RADIUS = 23.8125,
     .RIGHTWHEEL_CONSTANT = 0.209380534,
     .RIGHTWHEEL_MAXPWM = 1.0,
-    .LEFTCODEWHEEL_COUNTSPERREV = -(10000/2), //TODO: Fix/source problem this /2
-    .RIGHTCODEWHEEL_COUNTSPERREV = (10000/2),
-    .LEFTCODEWHEEL_RADIUS = 22.78,
+
+    .LEFTCODEWHEEL_COUNTSPERREV = -(10000/2), //TODO: Fix/source problem this /2 pr rappel, un tick=un front motant
+    .RIGHTCODEWHEEL_COUNTSPERREV = (10000/2), //Par exemple: resolution_encoder*nbr_voies*rap_red = 2^6*2*43.7=2786.4
+    .LEFTCODEWHEEL_RADIUS = 22.78, //pour moi, c completement inutile et c source de problemes profonds
     .RIGHTCODEWHEEL_RADIUS = 22.767,
 
     .ODOMETRY_AXLETRACK = 209.7622878807068,
