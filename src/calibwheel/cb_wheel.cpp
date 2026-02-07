@@ -3,48 +3,56 @@
 
 #include "Codewheel.h"
 #include "ihm/ihm.h"
+#include "BasicMoveStrategy.h"
 
+extern Codewheel leftCodewheel;
+extern Codewheel leftWheel;
+extern void addWaypoint(float x, float y);
 
-Logger main_logs = Logger("MAIN"); //Cf /lib, fonction pratique => normalise le format des logs
-using namespace ihm; //Simplifie l'ecriture des fonctions ihm (without préfixe)
+float distanceLeftWheel;
+float NewLeftWheelRadius;
+float m_startCounter;
 
 float CountTicksCodeurs(){
-    return (float)(Codewheel::getCounter() - m_startCounter);
+    return (float)(leftCodewheel.getCounter() - m_startCounter);
 }    
     
 float getAngleLeftWheel(){
-    return (float) 360*CountTicksCodeurs()/m_countsPerRev;
+    return (float) 360*CountTicksCodeurs()/leftCodewheel.getCountsPerRev();
 }
 
 void loop(){
     while (true){
-        if (etat_jaune()){
-            main_logs.log(INFO_LEVEL, "Veuillez position le robot, puis appyer sur jaune. Il va avancer d'environ 50cm\n");
-            main_logs.log(GOOD_LEVEL,"Départ\n");
+        Serial.println("Veuillez appyer sur jaune ou bleu. Le robot va avancer d'environ 50cm\n");
+        if (ihm::etat_jaune()){
+            m_startCounter = leftCodewheel.getCounter();
             
-            //Il avance d'environ 50cm, jsp comment faire
-            
-            main_logs.log(GOOD_LEVEL,"Veuillez rentrer exactement la distance parcourue (en cm):\n");
+            Serial.println("Départ\n");
+            addWaypoint(50, 0);
+            while (!BasicMoveStrategy::getPositionReached()){
+                BasicMoveStrategy::computeVelSetpoints(); //Il y a un argument float timestep  ms j'ai pas bien capté
+            } //It's way to simple, it may miss some lines of code there, the robot must move forward for 50cm, then we can get the distance parcourue and calculate the new radius of the wheel with the angle parcourue (from codewheel) and the distance parcourue (from user input)
+            Serial.println("Arrivé\n");
+
+            Serial.println("Veuillez rentrer exactement la distance parcourue (en cm):\n");
             if(Serial.available()>0){
-                float distanceLeftWheel = Serial.parseFloat();
+                distanceLeftWheel = Serial.parseFloat();
                 Serial.println(distanceLeftWheel);
             }
-            //Fonction similaire à getTravelDistance definie dans codewhelle et utilisé dans odométrie
-            //Mais je ne comprends pas "depuis le dernier Codewheel::reset ou Codewheel::restart", donc je l'ai réecrite
-            NewWheelRadius = distanceLeftWheel/getAngleLeftWheel();
-            
-            leftWheel.setWheelRadius(NewWheelRadius);
+
+            NewLeftWheelRadius = distanceLeftWheel/getAngleLeftWheel(); //Calcul
+            leftWheel.setWheelRadius(NewLeftWheelRadius);
             break;
         }
     }
         
     
         /*if (etat_bleu()){
-            write_default_params();
-            break;
+            break();
         }
 
-void write_default_params() {
+void setup() { //In all the case we start with an approximation of the constantes
+//then we can pass with the bleu or activatre the calibration phase with the yellow button
     leftWheel.setWheelRadius(wb_consts.LEFTWHEEL_RADIUS);
     leftWheel.setConstant(wb_consts.LEFTWHEEL_CONSTANT);
     leftWheel.setMaxPWM(wb_consts.LEFTWHEEL_MAXPWM);

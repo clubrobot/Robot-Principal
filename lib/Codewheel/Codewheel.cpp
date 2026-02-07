@@ -37,7 +37,7 @@ void Codewheel::update(){
  */
 float Codewheel::getTraveledDistance()
 {
-	return (float)(getCounter() - m_startCounter) / m_countsPerRev * (2.0 * M_PI * m_wheelRadius);
+	return (float)(getCounter() - m_startCounter) / m_countsPerRev * (2.0 * M_PI * m_wheelRadius); //rapport entre nbr tics parcourus et tics/tour, * péri un peu maladroit, il existe plus simple
 }
 
 /**

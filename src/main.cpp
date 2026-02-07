@@ -23,8 +23,8 @@
 #define DEBUG 1
 #define TEST_NO_FREERTOS false //Ignore le FreeRTOS et se comporte comme un arduino classique
 
-Logger main_logs = Logger("MAIN");
-using namespace ihm;
+Logger main_logs = Logger("MAIN"); //Cf /lib, fonction pratique => normalise le format des logs
+using namespace ihm; //Simplifie l'ecriture des fonctions ihm (without préfixe)
 void procedure_demarrage(){
     main_logs.log(INFO_LEVEL, "Mise à zero des actionneurs\n");
     //TODO

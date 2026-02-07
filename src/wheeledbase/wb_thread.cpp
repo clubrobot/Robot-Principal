@@ -31,6 +31,7 @@ void write_default_params() {
     leftWheel.setWheelRadius(wb_consts.LEFTWHEEL_RADIUS);
     leftWheel.setConstant(wb_consts.LEFTWHEEL_CONSTANT);
     leftWheel.setMaxPWM(wb_consts.LEFTWHEEL_MAXPWM);
+    
     rightWheel.setWheelRadius(wb_consts.RIGHTWHEEL_RADIUS);
     rightWheel.setConstant(wb_consts.RIGHTWHEEL_CONSTANT);
     rightWheel.setMaxPWM(wb_consts.RIGHTWHEEL_MAXPWM);
