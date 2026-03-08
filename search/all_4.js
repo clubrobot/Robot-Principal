@@ -13,7 +13,7 @@ var searchData=
   ['codewheel_10',['Codewheel',['../dd/df3/classCodewheel.html',1,'Codewheel'],['../dd/df3/classCodewheel.html#a7f82eae9fb5c8016e3ae023c6392cc0e',1,'Codewheel::Codewheel()']]],
   ['color_11',['Color',['../d0/da2/structColor.html',1,'']]],
   ['compute_12',['compute',['../d8/da9/classPID.html#a9982ecaf693e2b3b3873f749983814dd',1,'PID']]],
-  ['computevelsetpoints_13',['computeVelSetpoints',['../de/dc0/classAbstractMoveStrategy.html#a8bed0fd2cf5af27a7804d1be57823a24',1,'AbstractMoveStrategy::computeVelSetpoints()'],['../de/d96/classPurePursuit.html#a657a00d409067352855aa685b57c6f45',1,'PurePursuit::computeVelSetpoints()'],['../d9/dee/classTurnOnTheSpot.html#a520b49b8739d9568b4dc9496b338b680',1,'TurnOnTheSpot::computeVelSetpoints()']]],
+  ['computevelsetpoints_13',['computeVelSetpoints',['../de/d22/classBasicMoveStrategy.html#abcc7f77b6fa786fa202352c4efa3b960',1,'BasicMoveStrategy::computeVelSetpoints()'],['../de/dc0/classAbstractMoveStrategy.html#a8bed0fd2cf5af27a7804d1be57823a24',1,'AbstractMoveStrategy::computeVelSetpoints()'],['../de/d96/classPurePursuit.html#a657a00d409067352855aa685b57c6f45',1,'PurePursuit::computeVelSetpoints()'],['../d9/dee/classTurnOnTheSpot.html#a520b49b8739d9568b4dc9496b338b680',1,'TurnOnTheSpot::computeVelSetpoints()']]],
   ['copy_20button_14',['Fragment Copy Button',['../d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#extension-copy-button',1,'']]],
   ['crc16_15',['CRC16',['../db/d6d/classCRC16.html',1,'']]],
   ['credits_16',['Credits',['..//github/workspace/doc/doxygen-awesome-css/README.md#autotoc_md43',1,'']]],

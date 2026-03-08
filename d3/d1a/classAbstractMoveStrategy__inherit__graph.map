@@ -1,7 +1,9 @@
 <map id="AbstractMoveStrategy" name="AbstractMoveStrategy">
-<area shape="rect" id="Node000001" title="Interface de Stratégie de mouvement." alt="" coords="38,5,188,31"/>
-<area shape="rect" id="Node000002" href="$de/d96/classPurePursuit.html" title="Trajectoire courbe le long d&#39;une ligne brisée." alt="" coords="5,79,95,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,44,63,80,59,77,90,41"/>
-<area shape="rect" id="Node000003" href="$d9/dee/classTurnOnTheSpot.html" title="Rotation du robot sans translations." alt="" coords="119,79,232,105"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="135,41,167,77,163,80,131,44"/>
+<area shape="rect" id="Node000001" title="Interface de Stratégie de mouvement." alt="" coords="133,5,284,31"/>
+<area shape="rect" id="Node000002" href="$de/d22/classBasicMoveStrategy.html" title=" " alt="" coords="5,79,140,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,41,97,81,94,76,171,36"/>
+<area shape="rect" id="Node000003" href="$de/d96/classPurePursuit.html" title="Trajectoire courbe le long d&#39;une ligne brisée." alt="" coords="164,79,253,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="211,46,211,79,206,79,206,46"/>
+<area shape="rect" id="Node000004" href="$d9/dee/classTurnOnTheSpot.html" title="Rotation du robot sans translations." alt="" coords="277,79,390,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="244,37,314,76,311,81,241,41"/>
 </map>

@@ -7,6 +7,7 @@ var hierarchy =
       [ "DCMotor", "dd/d4c/classDCMotor.html", null ]
     ] ],
     [ "AbstractMoveStrategy", "de/dc0/classAbstractMoveStrategy.html", [
+      [ "BasicMoveStrategy", "de/d22/classBasicMoveStrategy.html", null ],
       [ "PurePursuit", "de/d96/classPurePursuit.html", null ],
       [ "TurnOnTheSpot", "d9/dee/classTurnOnTheSpot.html", null ]
     ] ],

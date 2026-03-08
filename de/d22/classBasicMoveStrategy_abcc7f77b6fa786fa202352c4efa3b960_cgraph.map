@@ -1,0 +1,9 @@
+<map id="BasicMoveStrategy::computeVelSetpoints" name="BasicMoveStrategy::computeVelSetpoints">
+<area shape="rect" id="Node000001" title="Calcul les nouvelles vitesses désirer." alt="" coords="5,71,151,111"/>
+<area shape="rect" id="Node000002" href="$de/dc0/classAbstractMoveStrategy.html#ac833928eb8dbfd75e119f7bd0c0ba636" title="Retourne la position du robot." alt="" coords="199,5,349,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,68,195,49,197,54,142,73"/>
+<area shape="rect" id="Node000003" href="$de/dc0/classAbstractMoveStrategy.html#aa6d458c1d2c57cf049945927ddc5ca52" title="Retourne la position à atteindre." alt="" coords="199,71,349,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="151,88,183,88,183,94,151,94"/>
+<area shape="rect" id="Node000004" href="$de/dc0/classAbstractMoveStrategy.html#a9be3e48b174c6f084e84af1e903c78a4" title="Charge une nouvelle vitesse pour le robot." alt="" coords="199,136,349,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="142,109,197,128,195,133,140,114"/>
+</map>

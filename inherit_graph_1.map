@@ -1,7 +1,9 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="Node000000" href="$de/dc0/classAbstractMoveStrategy.html" title="Interface de Stratégie de mouvement." alt="" coords="5,31,156,56"/>
-<area shape="rect" id="Node000001" href="$de/d96/classPurePursuit.html" title="Trajectoire courbe le long d&#39;une ligne brisée." alt="" coords="216,5,305,31"/>
-<area shape="poly" id="edge5_Node000000_Node000001" title=" " alt="" coords="170,28,215,22,215,27,171,33"/>
-<area shape="rect" id="Node000002" href="$d9/dee/classTurnOnTheSpot.html" title="Rotation du robot sans translations." alt="" coords="204,55,317,80"/>
-<area shape="poly" id="edge6_Node000000_Node000002" title=" " alt="" coords="171,53,204,57,203,63,171,58"/>
+<area shape="rect" id="Node000000" href="$de/dc0/classAbstractMoveStrategy.html" title="Interface de Stratégie de mouvement." alt="" coords="5,55,156,80"/>
+<area shape="rect" id="Node000001" href="$de/d22/classBasicMoveStrategy.html" title=" " alt="" coords="204,5,338,31"/>
+<area shape="poly" id="edge5_Node000000_Node000001" title=" " alt="" coords="147,48,218,29,219,34,149,53"/>
+<area shape="rect" id="Node000002" href="$de/d96/classPurePursuit.html" title="Trajectoire courbe le long d&#39;une ligne brisée." alt="" coords="226,55,316,80"/>
+<area shape="poly" id="edge6_Node000000_Node000002" title=" " alt="" coords="171,65,226,65,226,70,171,70"/>
+<area shape="rect" id="Node000003" href="$d9/dee/classTurnOnTheSpot.html" title="Rotation du robot sans translations." alt="" coords="214,104,328,130"/>
+<area shape="poly" id="edge7_Node000000_Node000003" title=" " alt="" coords="149,82,219,101,218,106,147,87"/>
 </map>

@@ -5,6 +5,6 @@ var searchData=
   ['clock_2',['Clock',['../df/d45/classClock.html#adbc370eb6b5f8d01645cf440188160a8',1,'Clock']]],
   ['codewheel_3',['Codewheel',['../dd/df3/classCodewheel.html#a7f82eae9fb5c8016e3ae023c6392cc0e',1,'Codewheel']]],
   ['compute_4',['compute',['../d8/da9/classPID.html#a9982ecaf693e2b3b3873f749983814dd',1,'PID']]],
-  ['computevelsetpoints_5',['computeVelSetpoints',['../de/dc0/classAbstractMoveStrategy.html#a8bed0fd2cf5af27a7804d1be57823a24',1,'AbstractMoveStrategy::computeVelSetpoints()'],['../de/d96/classPurePursuit.html#a657a00d409067352855aa685b57c6f45',1,'PurePursuit::computeVelSetpoints()'],['../d9/dee/classTurnOnTheSpot.html#a520b49b8739d9568b4dc9496b338b680',1,'TurnOnTheSpot::computeVelSetpoints()']]],
+  ['computevelsetpoints_5',['computeVelSetpoints',['../de/d22/classBasicMoveStrategy.html#abcc7f77b6fa786fa202352c4efa3b960',1,'BasicMoveStrategy::computeVelSetpoints()'],['../de/dc0/classAbstractMoveStrategy.html#a8bed0fd2cf5af27a7804d1be57823a24',1,'AbstractMoveStrategy::computeVelSetpoints()'],['../de/d96/classPurePursuit.html#a657a00d409067352855aa685b57c6f45',1,'PurePursuit::computeVelSetpoints()'],['../d9/dee/classTurnOnTheSpot.html#a520b49b8739d9568b4dc9496b338b680',1,'TurnOnTheSpot::computeVelSetpoints()']]],
   ['cube_6',['Cube',['../df/dd5/classCube.html#a86ba8a98729329216bc476c15bbc5fbc',1,'Cube']]]
 ];
