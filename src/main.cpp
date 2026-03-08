@@ -141,6 +141,9 @@ void setup(){
 #if DEBUG
     PrintfSupport::begin(PRINTF_BAUD);
     main_logs.log(WARNING_LEVEL, "Debug enabled at %d baud\n", PRINTF_BAUD);
+
+    main_logs.log(INFO_LEVEL, "Printing WheeledBase Params\n");
+    Wheeledbase::PRINT_PARAMS();
     xTraceEnable(TRC_START);
     //main_logs.log(INFO_LEVEL, "Printing WheeledBase Params\n");
     //Wheeledbase::PRINT_PARAMS();
