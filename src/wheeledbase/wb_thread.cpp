@@ -70,16 +70,20 @@ void codewheels_setup(){
     GPIO_InitTypeDef GPIO_InitStruct23 = {0};
     __HAL_RCC_TIM23_CLK_ENABLE();
     __HAL_RCC_GPIOF_CLK_ENABLE();
-    /**TIM23 GPIO Configuration
-    PF6     ------> TIM23_CH1
-    PF7     ------> TIM23_CH2
-    */
-    GPIO_InitStruct23.Pin = GPIO_PIN_6|GPIO_PIN_7;
+
+    GPIO_InitStruct23.Pin = GPIO_PIN_6;
     GPIO_InitStruct23.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct23.Pull = GPIO_NOPULL;
     GPIO_InitStruct23.Speed = GPIO_SPEED_FREQ_LOW;
     GPIO_InitStruct23.Alternate = GPIO_AF13_TIM23;
     HAL_GPIO_Init(GPIOF, &GPIO_InitStruct23);
+
+    GPIO_InitStruct23.Pin = GPIO_PIN_13;
+    GPIO_InitStruct23.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct23.Pull = GPIO_NOPULL;
+    GPIO_InitStruct23.Speed = GPIO_SPEED_FREQ_LOW;
+    GPIO_InitStruct23.Alternate = GPIO_AF13_TIM23;
+    HAL_GPIO_Init(GPIOG, &GPIO_InitStruct23);
 
     htim23.Instance = TIM23;
     htim23.Init.Prescaler = 0;
@@ -113,11 +117,7 @@ void codewheels_setup(){
     TIM_MasterConfigTypeDef sMasterConfig24 = {0};
     GPIO_InitTypeDef GPIO_InitStruct24 = {0};
     __HAL_RCC_TIM24_CLK_ENABLE();
-    //__HAL_RCC_GPIOF_CLK_ENABLE(); Already enabled
-    /**TIM24 GPIO Configuration
-    PF11     ------> TIM24_CH1
-    PF12     ------> TIM24_CH2
-    */
+
     GPIO_InitStruct24.Pin = GPIO_PIN_11|GPIO_PIN_12;
     GPIO_InitStruct24.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct24.Pull = GPIO_NOPULL;
@@ -152,10 +152,10 @@ void codewheels_setup(){
 
     HAL_TIM_Encoder_Start_IT(&htim24, TIM_CHANNEL_ALL);
 
-    rightCodewheel.m_htim = &htim23;
-    rightCodewheel.m_tim = TIM23;
-    leftCodewheel.m_htim = &htim24;
-    leftCodewheel.m_tim = TIM24;
+    leftCodewheel.m_htim = &htim23;
+    leftCodewheel.m_tim = TIM23;
+    rightCodewheel.m_htim = &htim24;
+    rightCodewheel.m_tim = TIM24;
 }
 
 // Setup
