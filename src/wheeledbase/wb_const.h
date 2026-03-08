@@ -32,16 +32,16 @@ inline WBConstants wb_consts = {
     .VELOCITYCONTROL_SPINSHUTDOWN = false,
 
     /*---- LINEAR VELOCITIES PID  ----*/
-    .LINVELPID_KP = 1.85,
-    .LINVELPID_KI = 35.0,
+    .LINVELPID_KP = 1.7,
+    .LINVELPID_KI = 0,
     .LINVELPID_KD = 0.0,
 
     .LINVELPID_MINOUTPUT = -1000,
     .LINVELPID_MAXOUTPUT = 1000,
 
     /*---- ANGULAR VELOCITIES PID ----*/
-    .ANGVELPID_KP = 3,
-    .ANGVELPID_KI = 15.0,
+    .ANGVELPID_KP = 1,
+    .ANGVELPID_KI = 0.0,
     .ANGVELPID_KD = 0.0,
 
     .ANGVELPID_MINOUTPUT = -18.0278/2,
@@ -64,14 +64,14 @@ inline WBConstants wb_consts = {
     .POSITIONCONTROL_TIMESTEP = 20e-3,
 
     // DC motors driver
-    .LEFT_MOTOR_EN = PB13,
-    .LEFT_MOTOR_PWM = PE11,
-    .LEFT_MOTOR_DIR = PF4,
-    .RIGHT_MOTOR_EN = PB15,
-    .RIGHT_MOTOR_PWM = PE9,
-    .RIGHT_MOTOR_DIR = PF5,
-    .DRIVER_RESET = PA15,
-    .DRIVER_FAULT = PB12,
+    .LEFT_MOTOR_EN = PD1,
+    .LEFT_MOTOR_PWM = PC6,
+    .LEFT_MOTOR_DIR = PD3,
+    .RIGHT_MOTOR_EN = PD0,
+    .RIGHT_MOTOR_PWM = PC7,
+    .RIGHT_MOTOR_DIR = PD2,
+    .DRIVER_RESET = PC11,
+    .DRIVER_FAULT = PC12,
 };
 
 #endif // __WB_CONST_H__
