@@ -1,12 +1,12 @@
+//
 // Created by boris on 28/10/2024.
 //
 
 #include "Wheeledbase.h"
-#include "BasicTurnStrategy.h"
 #include "BasicMoveStrategy.h"
+
 // Instructions
 
-TraceStringHandle_t channel = xTraceRegisterString("Wheeledbase");
 
 void Wheeledbase::DISABLE() {
     velocityControl.disable();
@@ -15,31 +15,43 @@ void Wheeledbase::DISABLE() {
     rightWheel.setVelocity(0);
 }
 
-Logger WbLogger = Logger("Wheeledbase lib");
-BasicMoveStrategy basicMove;
-
 void Wheeledbase::GOTO_DELTA(float dx, float dy, bool bloquant) {
+    //purePursuit.reset();
     positionControl.disable();
 
     Position initial_pos = *odometry.getPosition();
 
     Position target_pos;
-    target_pos.x = initial_pos.x + dx ; //* cos(initial_pos.theta) + dy * -1 * sin(initial_pos.theta)) * -1
-    target_pos.y = initial_pos.y + dy ; //* sin(initial_pos.theta) + dy * cos(initial_pos.theta);
+    target_pos.x = initial_pos.x + dx * cos(initial_pos.theta) + dy * -1 * sin(initial_pos.theta);
+    target_pos.y = initial_pos.y + dx * sin(initial_pos.theta) + dy * cos(initial_pos.theta);
 
     target_pos.theta = atan2(target_pos.y - initial_pos.y, target_pos.x - initial_pos.x);
     int direction;
 
-    WbLogger.log(INFO_LEVEL, "initial_pos: %f %f %f\n", initial_pos.x, initial_pos.y, initial_pos.theta);
-    WbLogger.log(INFO_LEVEL, "target_pos: %f %f %f\n", target_pos.x, target_pos.y, target_pos.theta);
-    
     initial_pos.theta = inrange(initial_pos.theta, -M_PI,M_PI);
 
-    positionControl.setMoveStrategy(basicMove);
-    basicMove.x_precision = 10;
-    basicMove.x_max_speed = 150;
-    basicMove.x_slowing_distance = 30;
+    /*if (fabs(inrange(target_pos.theta - initial_pos.theta, -M_PI,M_PI)) < (M_PI / 2)) {
+        direction = PurePursuit::FORWARD;
+    }
+    else {
+        direction = PurePursuit::BACKWARD;
+    }
 
+    purePursuit.setDirection((PurePursuit::Direction)direction);
+    purePursuit.addWaypoint(PurePursuit::Waypoint(initial_pos.x, initial_pos.y));
+    purePursuit.addWaypoint(PurePursuit::Waypoint(target_pos.x, target_pos.y));
+
+    purePursuit.setFinalAngle(target_pos.theta);
+
+    positionControl.setPosSetpoint(Position(target_pos.x, target_pos.y, target_pos.theta + direction * M_PI));
+
+    // Enable PurePursuit controller
+    velocityControl.enable();
+    positionControl.setMoveStrategy(purePursuit);
+    positionControl.enable();*/
+
+    BasicMoveStrategy basicMove;
+    positionControl.setMoveStrategy(basicMove);
     positionControl.setPosSetpoint(Position(target_pos.x, target_pos.y, target_pos.theta + direction * M_PI));
     velocityControl.enable();
     positionControl.enable();
@@ -47,69 +59,7 @@ void Wheeledbase::GOTO_DELTA(float dx, float dy, bool bloquant) {
     while(!(Wheeledbase::POSITION_REACHED() & 0b01) && bloquant) {
         //Wait I guess
     }
-    WbLogger.log(INFO_LEVEL, "GOTO_DELTA ended");
 }
-
-void Wheeledbase::TURNTO_DELTA(float dtheta, bool bloquant){   
-    velocityControl.disable();
-
-    Position initial_pos = *odometry.getPosition();
-    
-    Position target_pos;
-    target_pos.x = initial_pos.x;
-    target_pos.y = initial_pos.y;
-    target_pos.theta = initial_pos.theta + dtheta;
-    
-    BasicTurnStrategy basicTurn;
-    positionControl.setMoveStrategy(basicTurn);
-    basicTurn.ang_precision = 0.1;
-    basicTurn.ang_max_speed = 1.7;
-    basicTurn.ang_slowing_distance = 0.3;
-
-    positionControl.setPosSetpoint(target_pos);
-    velocityControl.enable();
-    positionControl.enable();
-
-    while(!(Wheeledbase::POSITION_REACHED() & 0b01) && bloquant) {
-        //Wait I guess
-    }
-    wb_logger.log(INFO_LEVEL, "initial_pos: %f %f %f\n", initial_pos.x, initial_pos.y, initial_pos.theta);
-    wb_logger.log(INFO_LEVEL, "target_pos: %f %f %f\n", target_pos.x, target_pos.y, target_pos.theta);
-    wb_logger.log(INFO_LEVEL, "L'objectif a été atteint, WheeledBase::TURNTO_DELTA est ok\n");
-}
-
-/*void Wheeledbase::TENTATIVE_POUR_PLUSTARD() {
-    velocityControl.disable();
-    positionControl.disable();
-    
-    Position posSetpoint = *odometry.getPosition();
-    
-    Position target_pos;
-    target_pos.x = posSetpoint.x;
-    target_pos.y = posSetpoint.y;
-    target_pos.theta = posSetpoint.theta + dtheta;
-
-    ang_precision = 0.0;
-    ang_max_speed = 2;
-    ang_slowing_distance = 0.5;
-
-    float dang = getPosSetpoint().theta - getPosInput().theta;
-    float obj;
-    if (dang > 0 && dang > ang_slowing_distance) {
-        obj = ang_max_speed; 
-        printf("++++\n"); 
-    } else if (dang < 0 && fabs(dang) > ang_slowing_distance) {
-        obj = -ang_max_speed;
-        printf("----\n"); 
-    } else { 
-        obj = ang_max_speed * fabs(dang) / ang_slowing_distance;
-        obj = (dang > 0) ? obj : -obj;
-        printf("OKKKKKKKKKKKKEY\n"); 
-    }
-    leftWheel.setVelocity(obj/2);
-    rightWheel.setVelocity(-obj/2);
-}*/
-
 
 void Wheeledbase::SET_OPENLOOP_VELOCITIES(float leftWheelVel, float rightWheelVel) {
     velocityControl.disable();
@@ -206,7 +156,6 @@ void Wheeledbase::START_TURNONTHESPOT_DIR(bool dir, float theta) {
 0b11 si les deux (3)
 */
 uint8_t Wheeledbase::POSITION_REACHED() {
-    xTracePrint(channel, "testing if pos reached");
     bool positionReached = positionControl.getPositionReached() && positionControl.isEnabled();
     bool spinUrgency = false;//!velocityControl.isEnabled();
     uint8_t ret = 0;
