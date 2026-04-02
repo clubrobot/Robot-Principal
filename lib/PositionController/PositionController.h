@@ -100,7 +100,6 @@ public:
 	 * @param moveStrategy AbstractMoveStrategy à utiliser.
 	 */
 	void setMoveStrategy(AbstractMoveStrategy& moveStrategy);
-
 	/**
 	 * @brief Indique si la position est atteinte.
 	 * 
