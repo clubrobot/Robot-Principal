@@ -22,9 +22,6 @@
 #include <team2025/Strategies.h>
 #include <team2025/TacheTransport.h>
 #include "yeux/yeuxThread.h"
-
-#include "BasicMoveStrategy.h"
-
 namespace Automate {
     Logger auto_logs = Logger("AUTOMATE");
     Tache** taches;//endroit de stockage des taches
@@ -63,7 +60,7 @@ void Automate::play_match(void *pvParameters){
     printf("Deuxieme etape\n");
     Wheeledbase::TURNTO_DELTA(M_PI/2);
     printf("L'objectif TURNTO_DELTA 2 a ete atteint, Automate est ok\n");
-    
+
     printf("Troisieme etape\n");
     Wheeledbase::GOTO_DELTA(-300, 0);
     printf("L'objectif GOTO_DELTA 3 a ete atteint, Automate est ok\n");
@@ -88,7 +85,7 @@ void Automate::play_match(void *pvParameters){
 
     for (;;){
     }
-}    
+}
     /*auto *procedure_demarrage = (void (*)()) pvParameters;
     //cette fonction remplit le vecteur taches avec des tâches. Elles seront executée dans l'ordre ou elles ont été ajoutée.
     //Seulement la fonction execute  et get_necessary_time doivent être implémentée.
