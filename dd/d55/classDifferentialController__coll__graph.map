@@ -1,9 +1,12 @@
 <map id="DifferentialController" name="DifferentialController">
-<area shape="rect" id="Node000001" title="Controle les moteurs." alt="" coords="128,109,266,135"/>
+<area shape="rect" id="Node000001" title="Controle les moteurs." alt="" coords="99,109,236,135"/>
 <area shape="rect" id="Node000002" href="$d2/dfa/classPeriodicProcess.html" title="Classe à implémenter pour gérer les appels dans la loop." alt="" coords="5,5,122,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,39,183,106,179,111,90,43"/>
-<area shape="rect" id="Node000003" href="$d2/d61/classAbstractMotor.html" title="Instance de moteur." alt="" coords="145,5,248,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="200,47,200,109,194,109,194,47"/>
-<area shape="rect" id="Node000004" href="$d8/da9/classPID.html" title="Classe d&#39;asservissement." alt="" coords="284,5,328,31"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="302,47,293,68,279,87,260,101,240,111,238,106,258,96,275,83,288,65,297,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,40,157,107,153,110,85,44"/>
+<area shape="rect" id="Node000003" href="$d2/d61/classAbstractMotor.html" title=" " alt="" coords="320,5,423,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="321,39,279,57,257,72,234,87,192,111,189,106,231,83,254,67,277,53,319,34"/>
+<area shape="rect" id="Node000004" href="$d4/de2/classAbstractDriver.html" title=" " alt="" coords="365,109,469,135"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="367,46,366,65,370,84,380,96,393,106,390,111,376,100,365,86,360,66,361,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="430,95,435,75,432,56,421,43,406,34,409,29,424,39,437,54,441,75,435,96"/>
+<area shape="rect" id="Node000005" href="$d8/da9/classPID.html" title="Classe d&#39;asservissement." alt="" coords="146,5,189,31"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="170,47,170,109,165,109,165,47"/>
 </map>

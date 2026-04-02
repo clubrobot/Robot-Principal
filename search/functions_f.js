@@ -50,7 +50,7 @@ var searchData=
   ['settransparency_47',['setTransparency',['../df/dd5/classCube.html#adff32cb2be2da4ef3ade9451fddb56b7',1,'Cube::setTransparency()'],['../de/d9d/classSphere.html#a9a6b92e63d6c37dece249659eb696b57',1,'Sphere::setTransparency()']]],
   ['settunings_48',['setTunings',['../d8/da9/classPID.html#a11d8c4753029f8cc187d2751cb00c4e9',1,'PID']]],
   ['setvellimits_49',['setVelLimits',['../d2/d64/classPositionController.html#a5305fb6ae0859709966ad38b0f74c04b',1,'PositionController']]],
-  ['setvelocity_50',['setVelocity',['../dd/d4c/classDCMotor.html#afb8905c3bc527a8e08667ec596385bcb',1,'DCMotor::setVelocity()'],['../d2/d61/classAbstractMotor.html#ac5c1960c11e5cfe2c4c1e206e79e5bf9',1,'AbstractMotor::setVelocity()']]],
+  ['setvelocity_50',['setVelocity',['../d4/de2/classAbstractDriver.html#af97888703548f107418461207e252a0b',1,'AbstractDriver::setVelocity()'],['../d2/d61/classAbstractMotor.html#a82f76644fc8ea1b0b5346191022dd0ae',1,'AbstractMotor::setVelocity()'],['../dd/d4c/classDCMotor.html#afb8905c3bc527a8e08667ec596385bcb',1,'DCMotor::setVelocity()']]],
   ['setvelsetpoints_51',['setVelSetpoints',['../de/dc0/classAbstractMoveStrategy.html#a9be3e48b174c6f084e84af1e903c78a4',1,'AbstractMoveStrategy']]],
   ['setveltunings_52',['setVelTunings',['../d2/d64/classPositionController.html#afb42dcd96814596d1c542e0746b476da',1,'PositionController']]],
   ['setvoltagelimit_53',['setVoltageLimit',['../d8/d27/classAX12.html#a5c1f3d158312b424129e91628e15b19c',1,'AX12']]],

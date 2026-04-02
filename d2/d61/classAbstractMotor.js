@@ -1,6 +1,6 @@
 var classAbstractMotor =
 [
-    [ "~AbstractMotor", "d2/d61/classAbstractMotor.html#ad63b013a8df5e57f8ab6aee3eb1a7381", null ],
+    [ "~AbstractMotor", "d2/d61/classAbstractMotor.html#a990f28ae82c2a7015ef160f781c0d6ca", null ],
     [ "getMaxVelocity", "d2/d61/classAbstractMotor.html#acaed879fcb45e6abef565a03fd6f227d", null ],
-    [ "setVelocity", "d2/d61/classAbstractMotor.html#ac5c1960c11e5cfe2c4c1e206e79e5bf9", null ]
+    [ "setVelocity", "d2/d61/classAbstractMotor.html#a82f76644fc8ea1b0b5346191022dd0ae", null ]
 ];

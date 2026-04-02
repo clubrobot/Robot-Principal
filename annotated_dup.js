@@ -11,6 +11,7 @@ var annotated_dup =
       [ "SubclassExample", "db/d5b/classMyLibrary_1_1SubclassExample.html", "db/d5b/classMyLibrary_1_1SubclassExample" ]
     ] ],
     [ "AbstractCodewheel", "d1/d6f/classAbstractCodewheel.html", "d1/d6f/classAbstractCodewheel" ],
+    [ "AbstractDriver", "d4/de2/classAbstractDriver.html", "d4/de2/classAbstractDriver" ],
     [ "AbstractMotor", "d2/d61/classAbstractMotor.html", "d2/d61/classAbstractMotor" ],
     [ "AbstractMoveStrategy", "de/dc0/classAbstractMoveStrategy.html", "de/dc0/classAbstractMoveStrategy" ],
     [ "AX12", "d8/d27/classAX12.html", "d8/d27/classAX12" ],

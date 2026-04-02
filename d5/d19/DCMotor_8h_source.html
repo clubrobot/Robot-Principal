@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CRINSA-team2025:  Fichier source de lib/DCMotor/DCMotor.h</title>
+<title>CRINSA-team2025:  Fichier source de lib/motors/include/DCMotor.h</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -111,7 +111,7 @@ $(function(){initNavTree('d5/d19/DCMotor_8h_source.html','../../'); initResizabl
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __DCMOTOR_H__</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;NonCopyable.h&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;DifferentialController.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;AbstractMotors.h&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;math.h&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span></div>
@@ -191,7 +191,7 @@ $(function(){initNavTree('d5/d19/DCMotor_8h_source.html','../../'); initResizabl
 </div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="preprocessor">#endif </span><span class="comment">// __DCMOTOR_H__</span></div>
-<div class="ttc" id="aclassAbstractMotor_html"><div class="ttname"><a href="../../d2/d61/classAbstractMotor.html">AbstractMotor</a></div><div class="ttdoc">Instance de moteur.</div><div class="ttdef"><b>Definition</b> DifferentialController.h:14</div></div>
+<div class="ttc" id="aclassAbstractMotor_html"><div class="ttname"><a href="../../d2/d61/classAbstractMotor.html">AbstractMotor</a></div><div class="ttdef"><b>Definition</b> AbstractMotors.h:12</div></div>
 <div class="ttc" id="aclassDCMotor_html_a09e0b46ab4d55aea59bc7760c6f75123"><div class="ttname"><a href="../../dd/d4c/classDCMotor.html#a09e0b46ab4d55aea59bc7760c6f75123">DCMotor::attach</a></div><div class="ttdeci">void attach(int EN, int PWM, int DIR)</div><div class="ttdoc">Indique quels pins de l&#39;arduino son utilisé pour ce moteur (actuellement correspond à moteur 1 ou 2)</div><div class="ttdef"><b>Definition</b> DCMotor.cpp:9</div></div>
 <div class="ttc" id="aclassDCMotor_html_a0a3cdfc30060d65f3a561c155aaafe67"><div class="ttname"><a href="../../dd/d4c/classDCMotor.html#a0a3cdfc30060d65f3a561c155aaafe67">DCMotor::m_maxPWM</a></div><div class="ttdeci">float m_maxPWM</div><div class="ttdoc">in range ]0, 1]</div><div class="ttdef"><b>Definition</b> DCMotor.h:94</div></div>
 <div class="ttc" id="aclassDCMotor_html_a0f4e6700183b53618a7021dceaaedaa2"><div class="ttname"><a href="../../dd/d4c/classDCMotor.html#a0f4e6700183b53618a7021dceaaedaa2">DCMotor::setWheelRadius</a></div><div class="ttdeci">void setWheelRadius(float wheelRadius)</div><div class="ttdoc">Paramètre le rayon de la roue liée au moteur.</div><div class="ttdef"><b>Definition</b> DCMotor.cpp:43</div></div>
@@ -213,7 +213,7 @@ $(function(){initNavTree('d5/d19/DCMotor_8h_source.html','../../'); initResizabl
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_e72b50d379c74c768636013ae66260bc.html">DCMotor</a></li><li class="navelem"><b>DCMotor.h</b></li>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_31347930a9db39eb68b78fb3141a6385.html">motors</a></li><li class="navelem"><a class="el" href="../../dir_1b1ccd7db2cfdbd7e2e7b54f97f3ad19.html">include</a></li><li class="navelem"><b>DCMotor.h</b></li>
     <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

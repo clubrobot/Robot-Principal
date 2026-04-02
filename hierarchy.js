@@ -3,6 +3,7 @@ var hierarchy =
     [ "AbstractCodewheel", "d1/d6f/classAbstractCodewheel.html", [
       [ "Codewheel", "dd/df3/classCodewheel.html", null ]
     ] ],
+    [ "AbstractDriver", "d4/de2/classAbstractDriver.html", null ],
     [ "AbstractMotor", "d2/d61/classAbstractMotor.html", [
       [ "DCMotor", "dd/d4c/classDCMotor.html", null ]
     ] ],
