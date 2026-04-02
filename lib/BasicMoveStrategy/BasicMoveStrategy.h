@@ -3,6 +3,7 @@
 //
 
 #include "PositionController.h"
+#include <Arduino.h>
 
 #ifndef TEAM2026_BASICMOVESTRATEGY_H
 #define TEAM2026_BASICMOVESTRATEGY_H
@@ -21,7 +22,7 @@ public:
 protected:
     void computeVelSetpoints(float timestep) override;
     bool getPositionReached() override;
-
+    float anglToVitAngl(float angle_init, float timestep);
 };
 
 

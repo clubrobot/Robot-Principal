@@ -3,6 +3,7 @@
 //
 
 #include "Wheeledbase.h"
+#include "BasicMoveStrategy.h"
 
 // Instructions
 
@@ -14,8 +15,8 @@ void Wheeledbase::DISABLE() {
     rightWheel.setVelocity(0);
 }
 
-void Wheeledbase::GOTO_DELTA(float dx, float dy,bool bloquant) {
-    purePursuit.reset();
+void Wheeledbase::GOTO_DELTA(float dx, float dy, bool bloquant) {
+    //purePursuit.reset();
     positionControl.disable();
 
     Position initial_pos = *odometry.getPosition();
@@ -29,7 +30,7 @@ void Wheeledbase::GOTO_DELTA(float dx, float dy,bool bloquant) {
 
     initial_pos.theta = inrange(initial_pos.theta, -M_PI,M_PI);
 
-    if (fabs(inrange(target_pos.theta - initial_pos.theta, -M_PI,M_PI)) < (M_PI / 2)) {
+    /*if (fabs(inrange(target_pos.theta - initial_pos.theta, -M_PI,M_PI)) < (M_PI / 2)) {
         direction = PurePursuit::FORWARD;
     }
     else {
@@ -47,6 +48,12 @@ void Wheeledbase::GOTO_DELTA(float dx, float dy,bool bloquant) {
     // Enable PurePursuit controller
     velocityControl.enable();
     positionControl.setMoveStrategy(purePursuit);
+    positionControl.enable();*/
+
+    BasicMoveStrategy basicMove;
+    positionControl.setMoveStrategy(basicMove);
+    positionControl.setPosSetpoint(Position(target_pos.x, target_pos.y, target_pos.theta + direction * M_PI));
+    velocityControl.enable();
     positionControl.enable();
 
     while(!(Wheeledbase::POSITION_REACHED() & 0b01) && bloquant) {
