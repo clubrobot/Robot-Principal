@@ -1,9 +1,10 @@
+//
 // Created by boris on 28/10/2024.
 //
 
 #include "Wheeledbase.h"
-#include "BasicTurnStrategy.h"
 #include "BasicMoveStrategy.h"
+
 // Instructions
 
 
@@ -14,102 +15,51 @@ void Wheeledbase::DISABLE() {
     rightWheel.setVelocity(0);
 }
 
-BasicMoveStrategy basicMove;
-
 void Wheeledbase::GOTO_DELTA(float dx, float dy, bool bloquant) {
+    //purePursuit.reset();
     positionControl.disable();
-    positionControl.setPosThresholds(1, 0.05);
-    positionControl.setVelTunings(.8, 1);
-    positionControl.setVelLimits(300, PI/2);
 
     Position initial_pos = *odometry.getPosition();
 
     Position target_pos;
-    target_pos.x = initial_pos.x + dx ; //* cos(initial_pos.theta) + dy * -1 * sin(initial_pos.theta)) * -1
-    target_pos.y = initial_pos.y + dy ; //* sin(initial_pos.theta) + dy * cos(initial_pos.theta);
-    basicMove.theta_init = initial_pos.theta;
+    target_pos.x = initial_pos.x + dx * cos(initial_pos.theta) + dy * -1 * sin(initial_pos.theta);
+    target_pos.y = initial_pos.y + dx * sin(initial_pos.theta) + dy * cos(initial_pos.theta);
 
-    //TODO fix the angle calculation
-    //target_pos.theta = atan2(target_pos.y - initial_pos.y, target_pos.x - initial_pos.x);
-
-    printf("initial_pos: %f %f %f\n", initial_pos.x, initial_pos.y, initial_pos.theta);
-    printf("target_pos: %f %f %f\n", target_pos.x, target_pos.y, target_pos.theta);
+    target_pos.theta = atan2(target_pos.y - initial_pos.y, target_pos.x - initial_pos.x);
+    int direction;
 
     initial_pos.theta = inrange(initial_pos.theta, -M_PI,M_PI);
 
+    /*if (fabs(inrange(target_pos.theta - initial_pos.theta, -M_PI,M_PI)) < (M_PI / 2)) {
+        direction = PurePursuit::FORWARD;
+    }
+    else {
+        direction = PurePursuit::BACKWARD;
+    }
+
+    purePursuit.setDirection((PurePursuit::Direction)direction);
+    purePursuit.addWaypoint(PurePursuit::Waypoint(initial_pos.x, initial_pos.y));
+    purePursuit.addWaypoint(PurePursuit::Waypoint(target_pos.x, target_pos.y));
+
+    purePursuit.setFinalAngle(target_pos.theta);
+
+    positionControl.setPosSetpoint(Position(target_pos.x, target_pos.y, target_pos.theta + direction * M_PI));
+
+    // Enable PurePursuit controller
+    velocityControl.enable();
+    positionControl.setMoveStrategy(purePursuit);
+    positionControl.enable();*/
+
+    BasicMoveStrategy basicMove;
     positionControl.setMoveStrategy(basicMove);
-
-    positionControl.setPosSetpoint(Position(target_pos.x, target_pos.y, target_pos.theta));
+    positionControl.setPosSetpoint(Position(target_pos.x, target_pos.y, target_pos.theta + direction * M_PI));
     velocityControl.enable();
     positionControl.enable();
 
     while(!(Wheeledbase::POSITION_REACHED() & 0b01) && bloquant) {
         //Wait I guess
     }
-    //printf("L'objectif a été atteint, WheeledBase::GOTO_DELTA est ok\n");
 }
-
-BasicTurnStrategy basicTurn;
-void Wheeledbase::TURNTO_DELTA(float dtheta, bool bloquant){
-    velocityControl.disable();
-    positionControl.setPosThresholds(3, 1e-3); //> 1°
-    basicTurn.ang_pid.setTunings(.45, 0.0, 0.2); // 0.45 0 0.5
-    basicTurn.lin_pid.setTunings(.0, 0, 0);
-    positionControl.setVelLimits(40, PI/2);
-
-    Position initial_pos = *odometry.getPosition();
-    
-    Position target_pos;
-    target_pos.x = initial_pos.x;
-    target_pos.y = initial_pos.y;
-    target_pos.theta = initial_pos.theta + dtheta;
-    
-    positionControl.setMoveStrategy(basicTurn);
-
-    positionControl.setPosSetpoint(target_pos);
-    velocityControl.enable();
-    positionControl.enable();
-
-    while(!(Wheeledbase::POSITION_REACHED() & 0b01) && bloquant) {
-        //Wait I guess
-    }
-    //printf("initial_pos: %f %f %f\n", initial_pos.x, initial_pos.y, initial_pos.theta);
-    //printf("target_pos: %f %f %f\n", target_pos.x, target_pos.y, target_pos.theta);
-    //printf("L'objectif a été atteint, WheeledBase::TURNTO_DELTA est ok\n");
-}
-
-/*void Wheeledbase::TENTATIVE_POUR_PLUSTARD() {
-    velocityControl.disable();
-    positionControl.disable();
-    
-    Position posSetpoint = *odometry.getPosition();
-    
-    Position target_pos;
-    target_pos.x = posSetpoint.x;
-    target_pos.y = posSetpoint.y;
-    target_pos.theta = posSetpoint.theta + dtheta;
-
-    ang_precision = 0.0;
-    ang_max_speed = 2;
-    ang_slowing_distance = 0.5;
-
-    float dang = getPosSetpoint().theta - getPosInput().theta;
-    float obj;
-    if (dang > 0 && dang > ang_slowing_distance) {
-        obj = ang_max_speed; 
-        printf("++++\n"); 
-    } else if (dang < 0 && fabs(dang) > ang_slowing_distance) {
-        obj = -ang_max_speed;
-        printf("----\n"); 
-    } else { 
-        obj = ang_max_speed * fabs(dang) / ang_slowing_distance;
-        obj = (dang > 0) ? obj : -obj;
-        printf("OKKKKKKKKKKKKEY\n"); 
-    }
-    leftWheel.setVelocity(obj/2);
-    rightWheel.setVelocity(-obj/2);
-}*/
-
 
 void Wheeledbase::SET_OPENLOOP_VELOCITIES(float leftWheelVel, float rightWheelVel) {
     velocityControl.disable();
@@ -552,6 +502,8 @@ void Wheeledbase::SET_PARAMETER_VALUE(byte paramID, float value) {
     case LEFTWHEEL_CONSTANT_ID:
         leftWheel.setConstant(value);
         break;
+    case LEFTWHEEL_MAXPWM_ID:
+        leftWheel.setMaxPWM(value);
         break;
     case RIGHTWHEEL_RADIUS_ID:
         rightWheel.setWheelRadius(value);
@@ -559,6 +511,8 @@ void Wheeledbase::SET_PARAMETER_VALUE(byte paramID, float value) {
     case RIGHTWHEEL_CONSTANT_ID:
         rightWheel.setConstant(value);
         break;
+    case RIGHTWHEEL_MAXPWM_ID:
+        rightWheel.setMaxPWM(value);
         break;
     case LEFTCODEWHEEL_RADIUS_ID:
         leftCodewheel.setWheelRadius(value);
@@ -662,12 +616,20 @@ float Wheeledbase::GET_PARAMETER_VALUE(byte paramID) {
     else if (paramID == LEFTWHEEL_CONSTANT_ID) {
         return leftWheel.getConstant();
     }
-    else  if (paramID == RIGHTWHEEL_RADIUS_ID) {
+    else if (paramID == LEFTWHEEL_MAXPWM_ID) {
+        return leftWheel.getMaxPWM();
+    }
+
+    else if (paramID == RIGHTWHEEL_RADIUS_ID) {
         return rightWheel.getWheelRadius();
     }
     else if (paramID == RIGHTWHEEL_CONSTANT_ID) {
         return rightWheel.getConstant();
     }
+    else if (paramID == RIGHTWHEEL_MAXPWM_ID) {
+        return rightWheel.getMaxPWM();
+    }
+
     else if (paramID == LEFTCODEWHEEL_RADIUS_ID) {
         return leftCodewheel.getWheelRadius();
     }
@@ -770,8 +732,10 @@ float Wheeledbase::GET_PARAMETER_VALUE(byte paramID) {
 void Wheeledbase::PRINT_PARAMS() {
     Serial.print(F(" LEFTWHEEL_RADIUS_ID:")); Serial.println(leftWheel.getWheelRadius());
     Serial.print(F(" LEFTWHEEL_CONSTANT_ID:")); Serial.println(leftWheel.getConstant());
+    Serial.print(F(" LEFTWHEEL_MAXPWM_ID:")); Serial.println(leftWheel.getMaxPWM());
     Serial.print(F(" RIGHTWHEEL_RADIUS_ID:")); Serial.println(rightWheel.getWheelRadius());
     Serial.print(F(" RIGHTWHEEL_CONSTANT_ID:")); Serial.println(rightWheel.getConstant());
+    Serial.print(F(" RIGHTWHEEL_MAXPWM_ID:")); Serial.println(rightWheel.getMaxPWM());
     Serial.print(F(" LEFTCODEWHEEL_RADIUS_ID:")); Serial.println(leftCodewheel.getWheelRadius());
     Serial.print(F(" LEFTCODEWHEEL_COUNTSPERREV_ID:")); Serial.println(leftCodewheel.getCountsPerRev());
     Serial.print(F(" RIGHTCODEWHEEL_RADIUS_ID:")); Serial.println(rightCodewheel.getWheelRadius());

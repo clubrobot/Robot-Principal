@@ -24,8 +24,6 @@
 #include "yeux/yeuxThread.h"
 
 #include "BasicMoveStrategy.h"
-#include "Elevator.h"
-#include "HazelnutGripper.h"
 
 namespace Automate {
     Logger auto_logs = Logger("AUTOMATE");
@@ -57,86 +55,13 @@ Position start = Position(1700,300,-1.57);
 Position test = Position(1500,1250,-1.57);
 Position test2 = Position(1300,300,-1.57);
 
-
 void Automate::play_match(void *pvParameters){
-
-    Wheeledbase::TURNTO_DELTA(PI, true);
-    //Wheeledbase::TURNTO_DELTA(PI, true);
-
-
-   // Wheeledbase::GOTO_DELTA(300,true);
-
-    //Wheeledbase::TURNTO_DELTA(PI,true);
-    velocityControl.enable();
-    positionControl.enable();
-    //Wheeledbase::SET_VELOCITIES(0,0);
-    while(true)
-    {
-
-
-        //Wheeledbase::SET_OPENLOOP_VELOCITIES(100,100);
-
-
-        //Wheeledbase::GOTO_DELTA(-300, 0, false);
-
-        /*
-        long t = millis() % 10000;
-
-
-        if (t < 5000)
-        {
-
-            velocityControl.setSetpoints(100,0);
-        }else
-        {
-            velocityControl.setSetpoints(-100,0);
-        }
-*/
-
-        vTaskDelay(pdMS_TO_TICKS(1));
-
-
-
-        //teleplot.add_variable_int("elapsed_ms",t);
-    }
-
-
-
-    /*
-    printf("Premiere etape\n");
-    Wheeledbase::GOTO_DELTA(300, 0, false);
-    ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
-    printf("L'objectif GOTO_DELTA 1 a ete atteint, Automate est ok\n");
-
-    printf("Deuxieme etape\n");
-    Wheeledbase::TURNTO_DELTA(M_PI/2);
-    printf("L'objectif TURNTO_DELTA 2 a ete atteint, Automate est ok\n");
+    Serial.println("Grand IV");
+    Wheeledbase::GOTO_DELTA(-800, 0);
     
-    printf("Troisieme etape\n");
-    Wheeledbase::GOTO_DELTA(-300, 0);
-    printf("L'objectif GOTO_DELTA 3 a ete atteint, Automate est ok\n");
-*/
-    /*printf("Quatrieme etape\n");
-    Wheeledbase::TURNTO_DELTA(M_PI/2);
-    printf("L'objectif TURNTO_DELTA 4 a ete atteint, Automate est ok\n");
-
-    printf("%f %f %f\n", Wheeledbase::GET_POSITION()->x, Wheeledbase::GET_POSITION()->y, Wheeledbase::GET_POSITION()->theta);
-
-    printf("Cinquieme etape\n");
-    Wheeledbase::GOTO_DELTA(-300, 0);
-    printf("L'objectif GOTO_DELTA 5 a ete atteint, Automate est ok\n");
-
-    printf("%f %f %f\n", Wheeledbase::GET_POSITION()->x, Wheeledbase::GET_POSITION()->y, Wheeledbase::GET_POSITION()->theta);
-
-    printf("Sixieme etape\n");
-    Wheeledbase::TURNTO_DELTA(M_PI);
-    printf("L'objectif TURNTO_DELTA 6 a ete atteint, Automate est ok\n");
-
-    printf("%f %f %f\n", Wheeledbase::GET_POSITION()->x, Wheeledbase::GET_POSITION()->y, Wheeledbase::GET_POSITION()->theta);*/
-
     for (;;){
     }
-}
+}    
     /*auto *procedure_demarrage = (void (*)()) pvParameters;
     //cette fonction remplit le vecteur taches avec des tâches. Elles seront executée dans l'ordre ou elles ont été ajoutée.
     //Seulement la fonction execute  et get_necessary_time doivent être implémentée.
