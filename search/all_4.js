@@ -14,13 +14,14 @@ var searchData=
   ['color_11',['Color',['../d0/da2/structColor.html',1,'']]],
   ['compute_12',['compute',['../d8/da9/classPID.html#a9982ecaf693e2b3b3873f749983814dd',1,'PID']]],
   ['computevelsetpoints_13',['computeVelSetpoints',['../de/d22/classBasicMoveStrategy.html#abcc7f77b6fa786fa202352c4efa3b960',1,'BasicMoveStrategy::computeVelSetpoints()'],['../de/dc0/classAbstractMoveStrategy.html#a8bed0fd2cf5af27a7804d1be57823a24',1,'AbstractMoveStrategy::computeVelSetpoints()'],['../de/d96/classPurePursuit.html#a657a00d409067352855aa685b57c6f45',1,'PurePursuit::computeVelSetpoints()'],['../d9/dee/classTurnOnTheSpot.html#a520b49b8739d9568b4dc9496b338b680',1,'TurnOnTheSpot::computeVelSetpoints()']]],
-  ['copy_20button_14',['Fragment Copy Button',['../d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#extension-copy-button',1,'']]],
-  ['crc16_15',['CRC16',['../db/d6d/classCRC16.html',1,'']]],
-  ['credits_16',['Credits',['..//github/workspace/doc/doxygen-awesome-css/README.md#autotoc_md43',1,'']]],
-  ['crinsa_202025_17',['Doc CRINSA 2025',['../index.html',1,'']]],
-  ['css_20variables_18',['CSS-Variables',['../d1/d47/md_doc_2doxygen-awesome-css_2docs_2customization.html#autotoc_md1',1,'']]],
-  ['cube_19',['Cube',['../df/dd5/classCube.html',1,'Cube'],['../df/dd5/classCube.html#a86ba8a98729329216bc476c15bbc5fbc',1,'Cube::Cube()']]],
-  ['customization_20',['Customization',['../d1/d47/md_doc_2doxygen-awesome-css_2docs_2customization.html',1,'']]],
-  ['customizations_21',['Share your customizations',['../d1/d47/md_doc_2doxygen-awesome-css_2docs_2customization.html#autotoc_md5',1,'']]],
-  ['customizing_22',['Customizing',['../d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#autotoc_md8',1,'Customizing'],['../d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#autotoc_md10',1,'Customizing'],['../d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#autotoc_md12',1,'Customizing'],['../d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#autotoc_md14',1,'Customizing']]]
+  ['conversion_5ftable_14',['conversion_table',['../d0/d04/classBournsACEncoder.html#af63ae4a975748f4095a6e00a2cac4e46',1,'BournsACEncoder']]],
+  ['copy_20button_15',['Fragment Copy Button',['../d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#extension-copy-button',1,'']]],
+  ['crc16_16',['CRC16',['../db/d6d/classCRC16.html',1,'']]],
+  ['credits_17',['Credits',['..//github/workspace/doc/doxygen-awesome-css/README.md#autotoc_md43',1,'']]],
+  ['crinsa_202025_18',['Doc CRINSA 2025',['../index.html',1,'']]],
+  ['css_20variables_19',['CSS-Variables',['../d1/d47/md_doc_2doxygen-awesome-css_2docs_2customization.html#autotoc_md1',1,'']]],
+  ['cube_20',['Cube',['../df/dd5/classCube.html',1,'Cube'],['../df/dd5/classCube.html#a86ba8a98729329216bc476c15bbc5fbc',1,'Cube::Cube()']]],
+  ['customization_21',['Customization',['../d1/d47/md_doc_2doxygen-awesome-css_2docs_2customization.html',1,'']]],
+  ['customizations_22',['Share your customizations',['../d1/d47/md_doc_2doxygen-awesome-css_2docs_2customization.html#autotoc_md5',1,'']]],
+  ['customizing_23',['Customizing',['../d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#autotoc_md8',1,'Customizing'],['../d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#autotoc_md10',1,'Customizing'],['../d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#autotoc_md12',1,'Customizing'],['../d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#autotoc_md14',1,'Customizing']]]
 ];

@@ -99,8 +99,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d9/d0e/classVL53L5CX.html#a6c6f8541fd900c22e965281a19fae0d3",
-"df/dd5/classCube.html#a218d1132b5833cd2971f63e1672536fe"
+"d9/d0e/classVL53L5CX.html#a4e2bede5ba78f81d84547581de70d623",
+"df/d45/SpeedPowerProfiling_8h_source.html"
 ];
 
 var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';

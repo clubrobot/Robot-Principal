@@ -10,6 +10,7 @@ var annotated_dup =
       [ "SecondExample", "dd/dc4/classMyLibrary_1_1SecondExample.html", null ],
       [ "SubclassExample", "db/d5b/classMyLibrary_1_1SubclassExample.html", "db/d5b/classMyLibrary_1_1SubclassExample" ]
     ] ],
+    [ "AbstractAbsoluteEncoder", "d4/ddc/classAbstractAbsoluteEncoder.html", "d4/ddc/classAbstractAbsoluteEncoder" ],
     [ "AbstractCodewheel", "d1/d6f/classAbstractCodewheel.html", "d1/d6f/classAbstractCodewheel" ],
     [ "AbstractDriver", "d4/de2/classAbstractDriver.html", "d4/de2/classAbstractDriver" ],
     [ "AbstractMotor", "d2/d61/classAbstractMotor.html", "d2/d61/classAbstractMotor" ],
@@ -17,6 +18,7 @@ var annotated_dup =
     [ "AX12", "d8/d27/classAX12.html", "d8/d27/classAX12" ],
     [ "BasicMoveStrategy", "de/d22/classBasicMoveStrategy.html", "de/d22/classBasicMoveStrategy" ],
     [ "Block_header", "dc/da5/unionBlock__header.html", null ],
+    [ "BournsACEncoder", "d0/d04/classBournsACEncoder.html", "d0/d04/classBournsACEncoder" ],
     [ "BrushlessMotor", "d7/d82/classBrushlessMotor.html", "d7/d82/classBrushlessMotor" ],
     [ "Buttons", "dc/d2e/classButtons.html", null ],
     [ "Clock", "df/d45/classClock.html", "df/d45/classClock" ],
@@ -29,6 +31,7 @@ var annotated_dup =
     [ "Decisions", "d9/da9/classDecisions.html", null ],
     [ "DifferentialController", "d5/d9e/classDifferentialController.html", "d5/d9e/classDifferentialController" ],
     [ "DynamixelClass", "df/dc5/classDynamixelClass.html", null ],
+    [ "Elevator", "d9/db0/classElevator.html", "d9/db0/classElevator" ],
     [ "EndStop", "df/d5b/classEndStop.html", "df/d5b/classEndStop" ],
     [ "FullSpeedServo", "d9/df7/classFullSpeedServo.html", "d9/df7/classFullSpeedServo" ],
     [ "LedButton", "d8/d45/classLedButton.html", null ],

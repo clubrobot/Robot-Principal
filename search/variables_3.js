@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y_0',['y',['../d0/df4/structPosition.html#a54a6182b5f7539295b32255808897d3f',1,'Position']]]
+  ['theta_0',['theta',['../d0/df4/structPosition.html#a3e8a386e068bdd371587b5e299c321d3',1,'Position']]]
 ];

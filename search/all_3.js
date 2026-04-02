@@ -8,8 +8,9 @@ var searchData=
   ['bogues_5',['Liste des bogues',['../de/da5/bug.html',1,'']]],
   ['bonjour_6',['Bonjour',['../index.html#autotoc_md44',1,'']]],
   ['bordered_20images_7',['Bordered Images',['../dc/d95/md_doc_2doxygen-awesome-css_2docs_2tricks.html#autotoc_md23',1,'']]],
-  ['browser_20support_8',['Browser support',['..//github/workspace/doc/doxygen-awesome-css/README.md#autotoc_md42',1,'']]],
-  ['brushlessmotor_9',['BrushlessMotor',['../d7/d82/classBrushlessMotor.html',1,'']]],
-  ['button_10',['Fragment Copy Button',['../d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#extension-copy-button',1,'']]],
-  ['buttons_11',['Buttons',['../dc/d2e/classButtons.html',1,'Buttons'],['../dc/d95/md_doc_2doxygen-awesome-css_2docs_2tricks.html#autotoc_md22',1,'Buttons']]]
+  ['bournsacencoder_8',['BournsACEncoder',['../d0/d04/classBournsACEncoder.html',1,'']]],
+  ['browser_20support_9',['Browser support',['..//github/workspace/doc/doxygen-awesome-css/README.md#autotoc_md42',1,'']]],
+  ['brushlessmotor_10',['BrushlessMotor',['../d7/d82/classBrushlessMotor.html',1,'']]],
+  ['button_11',['Fragment Copy Button',['../d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#extension-copy-button',1,'']]],
+  ['buttons_12',['Buttons',['../dc/d2e/classButtons.html',1,'Buttons'],['../dc/d95/md_doc_2doxygen-awesome-css_2docs_2tricks.html#autotoc_md22',1,'Buttons']]]
 ];

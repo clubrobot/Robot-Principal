@@ -1,5 +1,8 @@
 var hierarchy =
 [
+    [ "AbstractAbsoluteEncoder", "d4/ddc/classAbstractAbsoluteEncoder.html", [
+      [ "BournsACEncoder", "d0/d04/classBournsACEncoder.html", null ]
+    ] ],
     [ "AbstractCodewheel", "d1/d6f/classAbstractCodewheel.html", [
       [ "Codewheel", "dd/df3/classCodewheel.html", null ]
     ] ],
@@ -26,6 +29,7 @@ var hierarchy =
     [ "Decisions", "d9/da9/classDecisions.html", null ],
     [ "ObjectDetector::Detector", "d1/d34/structObjectDetector_1_1Detector.html", null ],
     [ "DynamixelClass", "df/dc5/classDynamixelClass.html", null ],
+    [ "Elevator", "d9/db0/classElevator.html", null ],
     [ "EndStop", "df/d5b/classEndStop.html", null ],
     [ "MyLibrary::Example", "d7/d8e/classMyLibrary_1_1Example.html", [
       [ "MyLibrary::SubclassExample< TemplatedClass >", "db/d5b/classMyLibrary_1_1SubclassExample.html", null ]
