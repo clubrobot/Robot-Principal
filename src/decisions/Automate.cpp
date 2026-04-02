@@ -22,6 +22,9 @@
 #include <team2025/Strategies.h>
 #include <team2025/TacheTransport.h>
 #include "yeux/yeuxThread.h"
+
+#include "BasicMoveStrategy.h"
+
 namespace Automate {
     Logger auto_logs = Logger("AUTOMATE");
     Tache** taches;//endroit de stockage des taches
@@ -53,7 +56,13 @@ Position test = Position(1500,1250,-1.57);
 Position test2 = Position(1300,300,-1.57);
 
 void Automate::play_match(void *pvParameters){
-    auto *procedure_demarrage = (void (*)()) pvParameters;
+    Serial.println("Grand IV");
+    Wheeledbase::GOTO_DELTA(-800, 0);
+    
+    for (;;){
+    }
+}    
+    /*auto *procedure_demarrage = (void (*)()) pvParameters;
     //cette fonction remplit le vecteur taches avec des tâches. Elles seront executée dans l'ordre ou elles ont été ajoutée.
     //Seulement la fonction execute  et get_necessary_time doivent être implémentée.
     //auto start_time = std::chrono::high_resolution_clock::now();
@@ -80,9 +89,7 @@ void Automate::play_match(void *pvParameters){
             yeuxThread::yeux.println(phrase);
         }
     }
-    Wheeledbase::SET_PARAMETER_VALUE(RIGHTWHEEL_MAXPWM_ID, 0);
-    Wheeledbase::SET_PARAMETER_VALUE(LEFTWHEEL_MAXPWM_ID, 0);
-    for (;;){
-
-    }
-}
+    Wheeledbase::SET_PARAMETER_VALUE(RIGHTWHEEL_MAXPWM_ID, 150);
+    Wheeledbase::SET_PARAMETER_VALUE(LEFTWHEEL_MAXPWM_ID, 150);
+    for (;;){}
+}*/
