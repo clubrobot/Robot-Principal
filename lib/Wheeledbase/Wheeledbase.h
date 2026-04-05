@@ -5,7 +5,7 @@
 #ifndef WHEELEDBASE_H
 #define WHEELEDBASE_H
 
-#include "WheelMotor.h"
+#include "DCMotor.h"
 #include "Codewheel.h"
 #include "Odometry.h"
 #include "PID.h"
@@ -15,9 +15,6 @@
 #include "TurnOnTheSpot.h"
 #include "mathutils.h"
 #include <math.h>
-
-#include "DRV8844.h"
-#include "Logger.h"
 
 // Parameters identifiers
 
@@ -62,7 +59,6 @@
 #define SLOWDOWN_FACTOR                 0.5
 #define SLOWDOWN_DISTANCE               0
 #define ALIGN_DISTANCE                  130
-
 
 struct WBConstants
 {
@@ -131,9 +127,9 @@ struct WBConstants
 };
 
 // Global variables
-extern DRV8844 driver;
-extern WheelMotor leftWheel;
-extern WheelMotor rightWheel;
+extern DCMotorsDriver driver;
+extern DCMotor leftWheel;
+extern DCMotor rightWheel;
 
 extern Codewheel leftCodewheel;
 extern Codewheel rightCodewheel;
@@ -149,8 +145,6 @@ extern PositionController positionControl;
 
 extern PurePursuit   purePursuit;
 extern TurnOnTheSpot turnOnTheSpot;
-
-inline Logger wb_logger = Logger("WHEELEDBASE");
 
 namespace  Wheeledbase {
     // Instructions prototypes

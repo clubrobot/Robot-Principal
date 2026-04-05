@@ -56,9 +56,36 @@ Position test = Position(1500,1250,-1.57);
 Position test2 = Position(1300,300,-1.57);
 
 void Automate::play_match(void *pvParameters){
-    Serial.println("Grand IV");
-    Wheeledbase::GOTO_DELTA(-800, 0);
+    printf("Premiere etape\n");
+    Wheeledbase::GOTO_DELTA(-300, 0);
+    printf("L'objectif GOTO_DELTA 1 a ete atteint, Automate est ok\n");
+
+    printf("Deuxieme etape\n");
+    Wheeledbase::TURNTO_DELTA(M_PI/2);
+    printf("L'objectif TURNTO_DELTA 2 a ete atteint, Automate est ok\n");
     
+    printf("Troisieme etape\n");
+    Wheeledbase::GOTO_DELTA(-300, 0);
+    printf("L'objectif GOTO_DELTA 3 a ete atteint, Automate est ok\n");
+
+    /*printf("Quatrieme etape\n");
+    Wheeledbase::TURNTO_DELTA(M_PI/2);
+    printf("L'objectif TURNTO_DELTA 4 a ete atteint, Automate est ok\n");
+
+    printf("%f %f %f\n", Wheeledbase::GET_POSITION()->x, Wheeledbase::GET_POSITION()->y, Wheeledbase::GET_POSITION()->theta);
+
+    printf("Cinquieme etape\n");
+    Wheeledbase::GOTO_DELTA(-300, 0);
+    printf("L'objectif GOTO_DELTA 5 a ete atteint, Automate est ok\n");
+
+    printf("%f %f %f\n", Wheeledbase::GET_POSITION()->x, Wheeledbase::GET_POSITION()->y, Wheeledbase::GET_POSITION()->theta);
+
+    printf("Sixieme etape\n");
+    Wheeledbase::TURNTO_DELTA(M_PI);
+    printf("L'objectif TURNTO_DELTA 6 a ete atteint, Automate est ok\n");
+
+    printf("%f %f %f\n", Wheeledbase::GET_POSITION()->x, Wheeledbase::GET_POSITION()->y, Wheeledbase::GET_POSITION()->theta);*/
+
     for (;;){
     }
 }    

@@ -3,7 +3,6 @@
 //
 
 #include "PositionController.h"
-#include <Arduino.h>
 
 #ifndef TEAM2026_BASICMOVESTRATEGY_H
 #define TEAM2026_BASICMOVESTRATEGY_H
@@ -19,7 +18,8 @@ public:
     int x_goal;
     int x_precision;
     int x_max_speed;
-    int slowing_distance;
+    int x_slowing_distance;
+    bool x_goalReached;
 protected:
     void computeVelSetpoints(float timestep) override;
     bool getPositionReached() override;

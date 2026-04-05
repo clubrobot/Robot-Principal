@@ -23,9 +23,10 @@ class BasicTurnStrategy : public AbstractMoveStrategy {
      * Stratégie développée afin de faire tourner le robot pour régler le PID.
      */
 public:
-    virtual ~BasicTurnStrategy() = default;
-    PID ang_pid = {};
-    PID lin_pid = {};
+    float ang_precision;
+    float ang_max_speed;
+    float ang_slowing_distance;
+    bool ang_goalReached;
 protected:
     void computeVelSetpoints(float timestep) override;
     bool getPositionReached() override;
