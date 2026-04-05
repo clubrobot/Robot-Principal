@@ -15,7 +15,6 @@
 #include "TurnOnTheSpot.h"
 #include "mathutils.h"
 #include <math.h>
-#include "Logger.h"
 
 // Parameters identifiers
 
@@ -146,8 +145,6 @@ extern PositionController positionControl;
 
 extern PurePursuit   purePursuit;
 extern TurnOnTheSpot turnOnTheSpot;
-
-inline Logger wb_logger = Logger("WHEELEDBASE");
 
 namespace  Wheeledbase {
     // Instructions prototypes
