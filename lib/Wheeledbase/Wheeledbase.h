@@ -15,6 +15,7 @@
 #include "TurnOnTheSpot.h"
 #include "mathutils.h"
 #include <math.h>
+
 // Parameters identifiers
 
 #define LEFTWHEEL_RADIUS_ID             0x10
@@ -149,7 +150,11 @@ namespace  Wheeledbase {
     // Instructions prototypes
     void DISABLE();
 
-    void GOTO_DELTA(float dx, float dy,bool bloquant=true);
+    void GOTO_DELTA(float dx, float dy, bool bloquant=true); //bloquant: do we pass at the next step after ?
+
+    void TURNTO_DELTA(float dtheta, bool bloquant=true);
+
+    //void TENTATIVE_POUR_PLUSTARD();
 
     void SET_OPENLOOP_VELOCITIES(float leftWheelVel, float rightWheelVel);
 
