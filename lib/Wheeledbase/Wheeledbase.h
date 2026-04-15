@@ -5,7 +5,7 @@
 #ifndef WHEELEDBASE_H
 #define WHEELEDBASE_H
 
-#include "DCMotor.h"
+#include "WheelMotor.h"
 #include "Codewheel.h"
 #include "Odometry.h"
 #include "PID.h"
@@ -128,8 +128,8 @@ struct WBConstants
 
 // Global variables
 extern DCMotorsDriver driver;
-extern DCMotor leftWheel;
-extern DCMotor rightWheel;
+extern WheelMotor leftWheel;
+extern WheelMotor rightWheel;
 
 extern Codewheel leftCodewheel;
 extern Codewheel rightCodewheel;

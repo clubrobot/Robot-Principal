@@ -3,7 +3,7 @@
 
 #include "wb_const.h"
 
-#include "DCMotor.h"
+#include "WheelMotor.h"
 #include "Codewheel.h"
 #include "Odometry.h"
 #include "PID.h"
@@ -17,8 +17,8 @@
 // Load the different modules
 
 extern DCMotorsDriver driver;
-extern DCMotor leftWheel;
-extern DCMotor rightWheel;
+extern WheelMotor leftWheel;
+extern WheelMotor rightWheel;
 
 extern TIM_HandleTypeDef htim23;//Right
 extern TIM_HandleTypeDef htim24;//Left
