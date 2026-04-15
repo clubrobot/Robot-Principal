@@ -6,7 +6,24 @@
 
 namespace HazelnutGripper
 {
-    void Elevator::task(void *pvParameters) const
+
+    AbstractMotor* Elevator::m_motor = nullptr;
+    AbstractAbsoluteEncoder* Elevator::m_encoder = nullptr;
+    float Elevator::m_angle = 0.0f;
+    PID* Elevator::m_pid = nullptr;
+
+    void Elevator::init(AbstractMotor* motor, AbstractAbsoluteEncoder* encoder)
+    {
+        m_motor = motor;
+        m_encoder = encoder;
+        m_encoder->init();
+
+        // Sécurité : on initialise la cible sur la position actuelle
+        m_angle = m_encoder->getAngle();
+    }
+
+
+    void Elevator::task(void *pvParameters)
     {
         // Initialisation du temps pour le calcul du timestep
         uint32_t lastTime = millis();
@@ -21,7 +38,7 @@ namespace HazelnutGripper
             }
 
             // Lecture de la position actuelle via l'encodeur
-            float currentAngle = m_encoder.getAngle();
+            float currentAngle = m_encoder->getAngle();
 
             // Calcul de la commande via le PID
             float command = 0.0f;
@@ -30,7 +47,9 @@ namespace HazelnutGripper
                 command = m_pid->compute(m_angle, currentAngle, timestep);
             }
 
-            m_motor.setVelocity(command);
+            m_motor->setVelocity(command);
+
+            printf("Balblalalal : %f\n",currentAngle);
 
             // Mise à jour du temps pour la prochaine itération
             lastTime = currentTime;
