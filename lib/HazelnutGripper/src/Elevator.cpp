@@ -49,12 +49,10 @@ namespace HazelnutGripper
 
             m_motor->setVelocity(command);
 
-            printf("Balblalalal : %f\n",currentAngle);
-
             // Mise à jour du temps pour la prochaine itération
             lastTime = currentTime;
 
-            vTaskDelay(pdMS_TO_TICKS(10));
+            vTaskDelay(pdMS_TO_TICKS(40));
         }
     }
 }

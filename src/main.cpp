@@ -8,6 +8,8 @@
 #include <Logger.h>
 
 #include "BournsACEncoder.h"
+#include "DCMotor.h"
+#include "DRV8876.h"
 #include "Elevator.h"
 #include "HazelnutGripper.h"
 #include "ihm/ihm.h"
@@ -145,7 +147,9 @@ void SystemClock_Config(void)
 
 
 static HazelnutGripper::BournsACEncoder encoder(PA4, PB13, PB12, PE12, PC4, PA7, PA6, PA5);
-static DCMotor d;
+static DRV8876 drv8876(PA9,PC8);
+static DCMotor motor;
+static PID pid;
 
 void setup(){
 
@@ -172,6 +176,56 @@ void setup(){
     return;
 #endif
 
+
+  drv8876.init();
+  drv8876.attach(&motor);
+
+
+  HazelnutGripper::Gripper::init();
+
+  HazelnutGripper::GripperWire.begin();
+
+  HazelnutGripper::Gripper::closeAll();
+
+  HazelnutGripper::Gripper::setRotationAll(0);
+
+  HazelnutGripper::Gripper::spreadFingers(0);
+
+  /*
+  delay(5000);
+
+  HazelnutGripper::Gripper::closeAll();
+
+  delay(5000);*/
+
+
+  //pid a vide pid.setTunings(0.022,0.016,0.001);
+  pid.setTunings(0.022,0.0,0.0);
+  pid.setOutputLimits(-0.90,0.90);
+
+  HazelnutGripper::Elevator::setPID(pid);
+
+  encoder.init();
+
+  HazelnutGripper::Elevator::init(&motor,&encoder);
+
+  HazelnutGripper::Elevator::setAngle(55.437500);
+
+
+
+  TaskHandle_t  gripper_handle = nullptr;
+
+  BaseType_t ret_gripper = xTaskCreate(
+              &HazelnutGripper::Elevator::task,
+              "Elevator",
+              10000,
+              nullptr,
+              5,//Prio max
+              &gripper_handle );
+  if(ret_gripper!=pdPASS) {Error_Handler()}
+
+
+/*
 
   HazelnutGripper::Gripper::init();
 
@@ -205,7 +259,6 @@ void setup(){
 
   HazelnutGripper::Gripper::openAll();
 
-  TaskHandle_t  gripper_handle = nullptr;
 
   encoder.init();
 
@@ -213,15 +266,8 @@ void setup(){
 
   HazelnutGripper::Elevator::init(&d,&encoder);
 
-  BaseType_t ret_gripper = xTaskCreate(
-              &HazelnutGripper::Elevator::task,
-              "Elevator",
-              10000,
-              nullptr,
-              5,//Prio max
-              &gripper_handle );
-  if(ret_gripper!=pdPASS) {Error_Handler()}
 
+*/
 
 
 
