@@ -46,7 +46,7 @@ namespace HazelnutGripper
          * @brief Écarte la pince en utilisant le servo 2 du doigt n°1.
          * @param degrees Angle d'écartement.
          */
-        static void spreadFinger1(uint8_t degrees);
+        static void spreadFingers(uint8_t degrees);
 
         /**
          * @brief Accès direct à un doigt spécifique si besoin.

@@ -46,6 +46,8 @@ namespace HazelnutGripper
             bits[i] = digitalRead(this->m_pins[i]);
         }
 
+        printf("%d, %d, %d, %d, %d, %d, %d, %d\n",bits[0], bits[1], bits[2], bits[3], bits[4], bits[5], bits[6], bits[7]);
+
         if (conversion_table[binToDec(bits)] == -1)
         {
             return -1;

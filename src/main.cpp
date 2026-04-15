@@ -7,6 +7,9 @@
 #include <variables_globales.h>
 #include <Logger.h>
 
+#include "BournsACEncoder.h"
+#include "Elevator.h"
+#include "HazelnutGripper.h"
 #include "ihm/ihm.h"
 #include "wheeledbase/wb_thread.h"
 #include "sensors/SensorsThread.h"
@@ -140,6 +143,10 @@ void SystemClock_Config(void)
   }
 }
 
+
+static HazelnutGripper::BournsACEncoder encoder(PA4, PB13, PB12, PE12, PC4, PA7, PA6, PA5);
+static DCMotor d;
+
 void setup(){
 
 
@@ -164,6 +171,60 @@ void setup(){
     main_logs.log(WARNING_LEVEL,"Not using FreeRTOS\n");
     return;
 #endif
+
+
+  HazelnutGripper::Gripper::init();
+
+  HazelnutGripper::GripperWire.begin();
+
+  HazelnutGripper::Gripper::closeAll();
+
+  HazelnutGripper::Gripper::setRotationAll(0);
+  delay(2000);
+
+
+  HazelnutGripper::Gripper::openAll();
+
+  delay(5000);
+
+  HazelnutGripper::Gripper::closeAll();
+
+  delay(5000);
+
+  HazelnutGripper::Gripper::spreadFingers(180);
+
+  delay(1000);
+
+  HazelnutGripper::Gripper::setRotationAll(180);
+  delay(2000);
+
+
+  HazelnutGripper::Gripper::spreadFingers(0);
+
+  delay(5000);
+
+  HazelnutGripper::Gripper::openAll();
+
+  TaskHandle_t  gripper_handle = nullptr;
+
+  encoder.init();
+
+  printf("annngle :: %f\n",encoder.getAngle());
+
+  HazelnutGripper::Elevator::init(&d,&encoder);
+
+  BaseType_t ret_gripper = xTaskCreate(
+              &HazelnutGripper::Elevator::task,
+              "Elevator",
+              10000,
+              nullptr,
+              5,//Prio max
+              &gripper_handle );
+  if(ret_gripper!=pdPASS) {Error_Handler()}
+
+
+
+
     main_logs.log(GOOD_LEVEL,"Using FreeRTOS\n");
     //Setup FreeRTOS
 

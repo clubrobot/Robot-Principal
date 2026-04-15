@@ -7,6 +7,7 @@
 namespace HazelnutGripper
 {
 
+
     GripperFinger Gripper::_fingers[4] = {
         GripperFinger(&GripperWire,0x24),
         GripperFinger(&GripperWire,0x25),
@@ -46,7 +47,7 @@ namespace HazelnutGripper
         }
     }
 
-    void Gripper::spreadFinger1(uint8_t degrees)
+    void Gripper::spreadFingers(uint8_t degrees)
     {
         _fingers[0].setAngle(2, degrees);
     }
