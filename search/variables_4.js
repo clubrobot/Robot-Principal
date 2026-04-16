@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['x_0',['x',['../d0/df4/structPosition.html#af684446cbf0f6d53386686283da6dcc6',1,'Position']]],
-  ['x_5fprecision_1',['x_precision',['../de/d22/classBasicMoveStrategy.html#a2cfdfa7579ffe7204a102c2a96c63623',1,'BasicMoveStrategy']]]
+  ['theta_0',['theta',['../d0/df4/structPosition.html#a3e8a386e068bdd371587b5e299c321d3',1,'Position']]]
 ];

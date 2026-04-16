@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['theta_0',['theta',['../d0/df4/structPosition.html#a3e8a386e068bdd371587b5e299c321d3',1,'Position']]]
+  ['step_5fangle_0',['step_angle',['../d0/d04/classBournsACEncoder.html#a899f37716a3a6a9b5fa880c38fcc3359',1,'BournsACEncoder']]]
 ];

@@ -2,6 +2,7 @@ var dir_97aefd0d527b934f1d99a682da8fe6a9 =
 [
     [ "AX12", "dir_103998d7f9c5d14615117f41e630626c.html", "dir_103998d7f9c5d14615117f41e630626c" ],
     [ "BasicMoveStrategy", "dir_be20edcda3233fa70b390a9faf8e0958.html", "dir_be20edcda3233fa70b390a9faf8e0958" ],
+    [ "BasicTurnStrategy", "dir_6bd58a75e2f805e44139e14637e8d981.html", "dir_6bd58a75e2f805e44139e14637e8d981" ],
     [ "BrushlessMotor", "dir_3522318f5efd998986c3da2f66439296.html", "dir_3522318f5efd998986c3da2f66439296" ],
     [ "Buttons", "dir_bac35ba42bbe03d850f5668c4042821b.html", "dir_bac35ba42bbe03d850f5668c4042821b" ],
     [ "Codewheel", "dir_939910cb0df0093f82d9ec40e421e25c.html", "dir_939910cb0df0093f82d9ec40e421e25c" ],

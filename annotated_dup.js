@@ -17,6 +17,7 @@ var annotated_dup =
     [ "AbstractMoveStrategy", "de/dc0/classAbstractMoveStrategy.html", "de/dc0/classAbstractMoveStrategy" ],
     [ "AX12", "d8/d27/classAX12.html", "d8/d27/classAX12" ],
     [ "BasicMoveStrategy", "de/d22/classBasicMoveStrategy.html", "de/d22/classBasicMoveStrategy" ],
+    [ "BasicTurnStrategy", "db/d2b/classBasicTurnStrategy.html", "db/d2b/classBasicTurnStrategy" ],
     [ "Block_header", "dc/da5/unionBlock__header.html", null ],
     [ "BournsACEncoder", "d0/d04/classBournsACEncoder.html", "d0/d04/classBournsACEncoder" ],
     [ "BrushlessMotor", "d7/d82/classBrushlessMotor.html", "d7/d82/classBrushlessMotor" ],

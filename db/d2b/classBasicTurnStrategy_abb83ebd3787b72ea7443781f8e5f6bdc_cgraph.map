@@ -1,0 +1,7 @@
+<map id="BasicTurnStrategy::getPositionReached" name="BasicTurnStrategy::getPositionReached">
+<area shape="rect" id="Node000001" title="Indique si la position désirée est atteinte." alt="" coords="5,39,143,79"/>
+<area shape="rect" id="Node000002" href="$de/dc0/classAbstractMoveStrategy.html#ac833928eb8dbfd75e119f7bd0c0ba636" title="Retourne la position du robot." alt="" coords="191,5,341,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,44,175,39,176,44,144,50"/>
+<area shape="rect" id="Node000003" href="$de/dc0/classAbstractMoveStrategy.html#aa6d458c1d2c57cf049945927ddc5ca52" title="Retourne la position à atteindre." alt="" coords="191,71,341,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="144,68,176,73,175,79,143,73"/>
+</map>

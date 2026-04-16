@@ -16,9 +16,10 @@ var searchData=
   ['ajout_5fou_5fenvoie_5ftampon_13',['ajout_ou_envoie_tampon',['../d8/d4b/classTeleplot.html#ab679c1945656e6f901490d580a42c46a',1,'Teleplot']]],
   ['alreadyexistserror_14',['AlreadyExistsError',['../d9/d19/classgeogebra_1_1AlreadyExistsError.html',1,'geogebra']]],
   ['anchorbox_15',['AnchorBox',['../d1/d34/structObjectDetector_1_1AnchorBox.html',1,'ObjectDetector']]],
-  ['angle_16',['Angle',['../d7/ddc/classgeogebra_1_1Geogebra_1_1Angle.html',1,'geogebra::Geogebra']]],
-  ['attach_17',['attach',['../d8/d27/classAX12.html#a9e8ecee54bf85d3f07b5af9a727b805c',1,'AX12::attach()'],['../df/d5b/classEndStop.html#a5c5e28db13554902d7d5d13c7a10a6dc',1,'EndStop::attach()'],['../d9/df7/classFullSpeedServo.html#ab5af708a2e612228faa6bed800d79ea2',1,'FullSpeedServo::attach()'],['../d4/de2/classAbstractDriver.html#ae6f9eef26284909628b23c3bdf7751cd',1,'AbstractDriver::attach(AbstractMotor *motor)=0'],['../d4/de2/classAbstractDriver.html#a12c43e48dfcab872fe5c531ea192fb0e',1,'AbstractDriver::attach(AbstractMotor *motor, uint8_t id)=0'],['../dd/d4c/classDCMotor.html#a09e0b46ab4d55aea59bc7760c6f75123',1,'DCMotor::attach()'],['../d8/de4/classDCMotorsDriver.html#adada31cbf92efa244b55292e84be5747',1,'DCMotorsDriver::attach()']]],
-  ['attached_18',['attached',['../d9/df7/classFullSpeedServo.html#abd9583b7b5f6e918f295918eeb79a777',1,'FullSpeedServo']]],
-  ['available_20variables_19',['Available variables',['../d1/d47/md_doc_2doxygen-awesome-css_2docs_2customization.html#autotoc_md3',1,'']]],
-  ['ax12_20',['AX12',['../d8/d27/classAX12.html',1,'']]]
+  ['ang_5fprecision_16',['ang_precision',['../db/d2b/classBasicTurnStrategy.html#ab219173ce6147f0e9ad1ae73955f90ad',1,'BasicTurnStrategy']]],
+  ['angle_17',['Angle',['../d7/ddc/classgeogebra_1_1Geogebra_1_1Angle.html',1,'geogebra::Geogebra']]],
+  ['attach_18',['attach',['../d8/d27/classAX12.html#a9e8ecee54bf85d3f07b5af9a727b805c',1,'AX12::attach()'],['../df/d5b/classEndStop.html#a5c5e28db13554902d7d5d13c7a10a6dc',1,'EndStop::attach()'],['../d9/df7/classFullSpeedServo.html#ab5af708a2e612228faa6bed800d79ea2',1,'FullSpeedServo::attach()'],['../d4/de2/classAbstractDriver.html#ae6f9eef26284909628b23c3bdf7751cd',1,'AbstractDriver::attach(AbstractMotor *motor)=0'],['../d4/de2/classAbstractDriver.html#a12c43e48dfcab872fe5c531ea192fb0e',1,'AbstractDriver::attach(AbstractMotor *motor, uint8_t id)=0'],['../dd/d4c/classDCMotor.html#a09e0b46ab4d55aea59bc7760c6f75123',1,'DCMotor::attach()'],['../d8/de4/classDCMotorsDriver.html#adada31cbf92efa244b55292e84be5747',1,'DCMotorsDriver::attach()']]],
+  ['attached_19',['attached',['../d9/df7/classFullSpeedServo.html#abd9583b7b5f6e918f295918eeb79a777',1,'FullSpeedServo']]],
+  ['available_20variables_20',['Available variables',['../d1/d47/md_doc_2doxygen-awesome-css_2docs_2customization.html#autotoc_md3',1,'']]],
+  ['ax12_21',['AX12',['../d8/d27/classAX12.html',1,'']]]
 ];

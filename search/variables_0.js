@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['conversion_5ftable_0',['conversion_table',['../d0/d04/classBournsACEncoder.html#af63ae4a975748f4095a6e00a2cac4e46',1,'BournsACEncoder']]]
+  ['ang_5fprecision_0',['ang_precision',['../db/d2b/classBasicTurnStrategy.html#ab219173ce6147f0e9ad1ae73955f90ad',1,'BasicTurnStrategy']]]
 ];
