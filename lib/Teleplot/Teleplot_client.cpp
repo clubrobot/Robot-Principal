@@ -4,6 +4,8 @@
 
 #include "Teleplot_client.h"
 
+#include "FreeRTOS/Source/include/semphr.h"
+
 Teleplot teleplot;
 
 /// @brief Envoie le contenu du tampon de téléplot
@@ -48,38 +50,48 @@ void Teleplot::envoie_tampon(){
 void Teleplot::ajout_ou_envoie_tampon(const char * message){
     // Si le tampon ne peut pas accueillir le prochain message
     // On envoie et on vide le tampon
+    xSemaphoreTake(this->mutex, MUTEX_TIMEOUT);
     if(strlen(message) + strlen(this->tampon) >= BEACON_MSG_LEN_MAX){
         this->envoie_tampon();
     }
     // On ajoute le message au tampon
     strcat(this->tampon, message);
+    xSemaphoreGive(this->mutex);
 }
 
 /// @brief Ajoute une variable flottante au tampon de téléplot
 void Teleplot::add_variable_float_2decimal(const char * nom_variable, const float valeur){
     char buf[INTERNAL_BUFFER_SIZE];
+    xSemaphoreTake(this->mutex, MUTEX_TIMEOUT);
     snprintf(buf, INTERNAL_BUFFER_SIZE, "%s:%lu:%.2f\n", nom_variable, this->get_temps(), valeur);
+    xSemaphoreGive(this->mutex);
     this->ajout_ou_envoie_tampon(buf);
 }
 
 /// @brief Ajoute une variable entière au tampon de téléplot
 void Teleplot::add_variable_int(const char * nom_variable, const int valeur){
     char buf[INTERNAL_BUFFER_SIZE];
+    xSemaphoreTake(this->mutex, MUTEX_TIMEOUT);
     snprintf(buf, INTERNAL_BUFFER_SIZE, "%s:%lu:%d\n", nom_variable, this->get_temps(), valeur);
+    xSemaphoreGive(this->mutex);
     this->ajout_ou_envoie_tampon(buf);
 }
 
 /// @brief Ajoute une variable 2D au tampon de téléplot
 void Teleplot::add_variable_2d(const char * nom_variable, const float x, const float y){
     char buf[INTERNAL_BUFFER_SIZE];
+    xSemaphoreTake(this->mutex, MUTEX_TIMEOUT);
     snprintf(buf, INTERNAL_BUFFER_SIZE, "%s:%.2f:%.2f:%lu|xy\n", nom_variable, x, y, this->get_temps());
+    xSemaphoreGive(this->mutex);
     this->ajout_ou_envoie_tampon(buf);
 }
 
 /// @brief Ajoute un status au tampon de téléplot
  void Teleplot::add_status(const char* nom_variable, const char* status) {
     char buf[INTERNAL_BUFFER_SIZE];
+    xSemaphoreTake(this->mutex, MUTEX_TIMEOUT);
     snprintf(buf,INTERNAL_BUFFER_SIZE, "%s:%lu:%s|t\n", nom_variable, this->get_temps(), status);
+    xSemaphoreGive(this->mutex);
     this->ajout_ou_envoie_tampon(buf);
 }
 
@@ -87,7 +99,9 @@ void Teleplot::add_variable_2d(const char * nom_variable, const float x, const f
 /// @param message Le message à ajouter au tampon
 void Teleplot::add_log(const char *message) {
     char buf[INTERNAL_BUFFER_SIZE];
+    xSemaphoreTake(this->mutex, MUTEX_TIMEOUT);
     snprintf(buf, INTERNAL_BUFFER_SIZE, ">%lu:%s\n", this->get_temps(), message);
+    xSemaphoreGive(this->mutex);
     this->ajout_ou_envoie_tampon(buf);
 }
 
