@@ -1,7 +1,6 @@
 [submodule "doc/doxygen-awesome-css"]
 	path = doc/doxygen-awesome-css
 	url = git@github.com:jothepro/doxygen-awesome-css.git
-
 [submodule "lib/motors"]
 	path = lib/motors
 	url = git@github.com:clubrobot/motors.git
