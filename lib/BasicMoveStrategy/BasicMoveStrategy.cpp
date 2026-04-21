@@ -26,7 +26,7 @@ bool BasicMoveStrategy::getPositionReached() {
     x_goalReached = fabs(getPosSetpoint().x - getPosInput().x) < x_precision;
     if (x_goalReached) {
         //printf("%f %f %f\n", getPosInput().x, getPosInput().y, getPosInput().theta);
-        printf("L'objectif a été atteint, BasicMove::getPositionReached est ok\n");
+        //printf("L'objectif a été atteint, BasicMove::getPositionReached est ok\n");
     }
     return x_goalReached;
 }

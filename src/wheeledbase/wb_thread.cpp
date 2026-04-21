@@ -204,7 +204,11 @@ void wb_setup(){
     //purePursuit.load(PUREPURSUIT_ADDRESS);
 }
 
+Logger wb_thread_log = Logger("wb_thread");
+
 void wb_loop(void *pvParameters){
+    TaskHandle_t automate = xTaskGetHandle("Robot loop");
+    bool t = true;
 for(;;) {
     // Update odometry
     if (odometry.update()){
@@ -225,5 +229,19 @@ for(;;) {
 #else
         velocityControl.update();
 #endif // ENABLE_VELOCITYCONTROLLER_LOGS
+    if (positionControl.getPositionReached()) {
+        xTaskNotifyGive(automate);
+        //if (t) {
+        //    teleplot.add_log("Position reached");
+        //    t = false;
+        //}
+        //wb_thread_log.log(INFO_LEVEL, "Position reached");
+        //wb_thread_log.log(INFO_LEVEL, "velocity : %f, %f", velocityControl.getLinOutput(), velocityControl.getAngOutput());
+        //wb_thread_log.log(INFO_LEVEL, "targetVelocity : %f, %f", velocityControl.getLinSetpoint(), velocityControl.getAngSetpoint());
+        //teleplot.add_variable_float_2decimal("wb_velOutput", velocityControl.getLinOutput());
+        //teleplot.add_variable_float_2decimal("wb_angVelOutput", velocityControl.getAngOutput());
+        //teleplot.add_variable_float_2decimal("wb_linSetpoint", velocityControl.getLinSetpoint());
+        //teleplot.add_variable_float_2decimal("wb_angSetpoint", velocityControl.getAngSetpoint());
+    }
 }
 }

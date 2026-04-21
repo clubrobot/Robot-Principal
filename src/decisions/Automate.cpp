@@ -57,7 +57,8 @@ Position test2 = Position(1300,300,-1.57);
 
 void Automate::play_match(void *pvParameters){
     printf("Premiere etape\n");
-    Wheeledbase::GOTO_DELTA(-300, 0);
+    Wheeledbase::GOTO_DELTA(-300, 0, false);
+    ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
     printf("L'objectif GOTO_DELTA 1 a ete atteint, Automate est ok\n");
 
     printf("Deuxieme etape\n");
