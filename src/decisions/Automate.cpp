@@ -56,21 +56,18 @@ Position test = Position(1500,1250,-1.57);
 Position test2 = Position(1300,300,-1.57);
 
 void Automate::play_match(void *pvParameters){
-    TraceStringHandle_t channel = xTraceRegisterString("Automate");
-    auto_logs.log(INFO_LEVEL, "Premiere etape\n");
+    printf("Premiere etape\n");
     Wheeledbase::GOTO_DELTA(-300, 0, false);
     ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
-    xTracePrint(channel, "Goto delta ended");
-    auto_logs.log(INFO_LEVEL, "L'objectif GOTO_DELTA 1 a ete atteint, Automate est ok\n");
+    printf("L'objectif GOTO_DELTA 1 a ete atteint, Automate est ok\n");
 
-    auto_logs.log(INFO_LEVEL, "Deuxieme etape\n");
-    xTracePrint(channel, "turning");
-    //Wheeledbase::TURNTO_DELTA(M_PI/2, true);
-    auto_logs.log(INFO_LEVEL, "L'objectif TURNTO_DELTA 2 a ete atteint, Automate est ok\n");
+    printf("Deuxieme etape\n");
+    Wheeledbase::TURNTO_DELTA(M_PI/2);
+    printf("L'objectif TURNTO_DELTA 2 a ete atteint, Automate est ok\n");
     
-    //printf("Troisieme etape\n");
-    //Wheeledbase::GOTO_DELTA(-300, 0);
-    //printf("L'objectif GOTO_DELTA 3 a ete atteint, Automate est ok\n");
+    printf("Troisieme etape\n");
+    Wheeledbase::GOTO_DELTA(-300, 0);
+    printf("L'objectif GOTO_DELTA 3 a ete atteint, Automate est ok\n");
 
     /*printf("Quatrieme etape\n");
     Wheeledbase::TURNTO_DELTA(M_PI/2);
@@ -91,7 +88,6 @@ void Automate::play_match(void *pvParameters){
     printf("%f %f %f\n", Wheeledbase::GET_POSITION()->x, Wheeledbase::GET_POSITION()->y, Wheeledbase::GET_POSITION()->theta);*/
 
     for (;;){
-        xTracePrint(channel, "Fin de la partie");
     }
 }    
     /*auto *procedure_demarrage = (void (*)()) pvParameters;
