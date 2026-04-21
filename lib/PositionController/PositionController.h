@@ -142,6 +142,13 @@ public:
 	 */
 	float getAngPosThreshold() const {return m_angPosThreshold;}
 
+	/**
+	 * @brief Retourne la position cible du robot.
+	 *
+	 * @return Position cible
+	 */
+	Position getPosSetpoint() const {return m_posSetpoint;}
+
 private:
 	/**
 	 * @brief Execute la AbstractMoveStrategy chargé. 
