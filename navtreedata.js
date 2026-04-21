@@ -75,6 +75,7 @@ var NAVTREE =
     [ "Liste des bogues", "de/da5/bug.html", null ],
     [ "Liste des éléments obsolètes", "da/d58/deprecated.html", null ],
     [ "Liste des choses à faire", "dd/da0/todo.html", null ],
+    [ "Topics", "topics.html", "topics" ],
     [ "Espaces de nommage", "namespaces.html", [
       [ "Liste des espaces de nommage", "namespaces.html", "namespaces_dup" ]
     ] ],
@@ -91,7 +92,11 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Fichiers", "files.html", [
-      [ "Liste des fichiers", "files.html", "files_dup" ]
+      [ "Liste des fichiers", "files.html", "files_dup" ],
+      [ "Membres de fichier", "globals.html", [
+        [ "Tout", "globals.html", null ],
+        [ "Macros", "globals_defs.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
@@ -99,8 +104,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d9/d0e/classVL53L5CX.html#a4c787e6f7ba9c1d33c08091ec8bf3cb5",
-"de/dc0/classAbstractMoveStrategy.html#aeb5f02ec6bc18993066712b728d901c5"
+"d8/d4b/classTeleplot.html#a9813f256750c894e87c4f59533758ace",
+"de/d35/structlimites__actionneurs.html"
 ];
 
 var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';

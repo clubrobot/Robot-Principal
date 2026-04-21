@@ -1,0 +1,699 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CRINSA-team2025: Référence du fichier lib/TraceRecorder/include/trcRecorder.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript" src="../../darkmode_toggle.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../custom.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="../../theme-round.css" rel="stylesheet" type="text/css"/>
+<link href="../../theme-robot.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">CRINSA-team2025<span id="projectnumber">&#160;V1</span>
+   </div>
+   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2025</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('de/dec/trcRecorder_8h.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Définitions de type</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier trcRecorder.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>The public API of the Percepio trace recorder.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;trcDefines.h&gt;</code><br />
+<code>#include &lt;trcConfig.h&gt;</code><br />
+<code>#include &lt;trcKernelPortConfig.h&gt;</code><br />
+<code>#include &lt;trcTypes.h&gt;</code><br />
+<code>#include &lt;trcHardwarePort.h&gt;</code><br />
+<code>#include &lt;trcKernelPort.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d4/dec/trcString_8h_source.html">trcString.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../dc/dd0/trcStaticBuffer_8h_source.html">trcStaticBuffer.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../dd/d80/trcError_8h_source.html">trcError.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../dd/d61/trcEvent_8h_source.html">trcEvent.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../dd/dee/trcEventBuffer_8h_source.html">trcEventBuffer.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d7/dac/trcMultiCoreEventBuffer_8h_source.html">trcMultiCoreEventBuffer.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d8/d83/trcTimestamp_8h_source.html">trcTimestamp.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../dc/dc8/trcEntryTable_8h_source.html">trcEntryTable.h</a>&gt;</code><br />
+<code>#include &lt;trcStreamPort.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d4/d72/trcISR_8h_source.html">trcISR.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d1/d88/trcTask_8h_source.html">trcTask.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../df/d17/trcObject_8h_source.html">trcObject.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../dd/df9/trcPrint_8h_source.html">trcPrint.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d3/d59/trcHeap_8h_source.html">trcHeap.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d9/d92/trcExtension_8h_source.html">trcExtension.h</a>&gt;</code><br />
+<code>#include &lt;trcUtility.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../da/db3/trcStackMonitor_8h_source.html">trcStackMonitor.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d5/db1/trcInternalEventBuffer_8h_source.html">trcInternalEventBuffer.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../db/d9d/trcDiagnostics_8h_source.html">trcDiagnostics.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d5/dc4/trcAssert_8h_source.html">trcAssert.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d9/dd3/trcRunnable_8h_source.html">trcRunnable.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d7/d2f/trcDependency_8h_source.html">trcDependency.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../da/d03/trcProcess_8h_source.html">trcProcess.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../dd/dc6/trcThread_8h_source.html">trcThread.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d2/d9d/trcInterval_8h_source.html">trcInterval.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d5/d30/trcStateMachine_8h_source.html">trcStateMachine.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d0/d4b/trcCounter_8h_source.html">trcCounter.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d2/de1/trcTaskMonitor_8h_source.html">trcTaskMonitor.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de trcRecorder.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/dd2/trcRecorder_8h__incl.png" border="0" usemap="#alib_2TraceRecorder_2include_2trcRecorder_8h" alt=""/></div>
+<map name="alib_2TraceRecorder_2include_2trcRecorder_8h" id="alib_2TraceRecorder_2include_2trcRecorder_8h">
+<area shape="rect" title="The public API of the Percepio trace recorder." alt="" coords="1847,5,2016,46"/>
+<area shape="rect" href="../../db/d5a/trcDefines_8h_source.html" title=" " alt="" coords="5,315,95,341"/>
+<area shape="poly" title=" " alt="" coords="1847,30,1427,32,846,40,562,49,319,60,143,76,90,86,64,96,46,117,35,143,29,170,28,199,33,254,44,300,39,301,28,255,22,199,24,169,30,141,42,115,60,92,88,81,143,71,319,55,562,43,846,35,1427,26,1847,24"/>
+<area shape="rect" href="../../df/df9/include_2trcConfig_8h_source.html" title=" " alt="" coords="418,241,500,267"/>
+<area shape="poly" title=" " alt="" coords="1847,31,1516,37,1077,49,685,69,555,81,515,89,495,96,483,109,474,124,463,159,458,195,459,226,454,226,453,194,457,158,469,122,479,106,493,92,514,84,554,76,685,63,1077,44,1516,31,1847,25"/>
+<area shape="rect" href="../../d1/de3/include_2trcKernelPortConfig_8h_source.html" title=" " alt="" coords="506,94,650,120"/>
+<area shape="poly" title=" " alt="" coords="1847,32,1351,50,1013,69,665,96,665,91,1013,64,1350,45,1847,26"/>
+<area shape="rect" href="../../d1/d17/trcTypes_8h_source.html" title=" " alt="" coords="312,168,393,193"/>
+<area shape="poly" title=" " alt="" coords="1847,30,1473,33,968,43,723,51,514,63,363,78,318,87,296,96,290,110,295,125,307,141,324,156,320,160,303,145,290,128,285,110,292,92,316,81,362,72,513,57,722,46,967,37,1473,28,1846,25"/>
+<area shape="rect" href="../../dd/dde/trcHardwarePort_8h_source.html" title=" " alt="" coords="155,241,281,267"/>
+<area shape="poly" title=" " alt="" coords="1847,31,1473,36,966,48,719,57,508,68,355,81,307,88,283,96,257,124,239,159,228,195,223,226,218,226,223,194,234,157,253,121,281,92,306,83,354,76,507,62,719,51,966,43,1473,31,1847,25"/>
+<area shape="rect" href="../../da/d3b/trcKernelPort_8h_source.html" title=" " alt="" coords="74,94,181,120"/>
+<area shape="poly" title=" " alt="" coords="1847,29,1572,31,1165,40,688,60,441,76,200,97,197,97,196,92,199,91,441,71,687,54,1165,34,1572,26,1847,24"/>
+<area shape="rect" href="../../d4/dec/trcString_8h.html" title="Public trace string APIs." alt="" coords="674,94,754,120"/>
+<area shape="poly" title=" " alt="" coords="1847,30,1656,33,1391,43,1085,63,926,78,770,96,770,91,926,72,1084,57,1391,38,1656,28,1847,25"/>
+<area shape="rect" href="../../dc/dd0/trcStaticBuffer_8h.html" title="Public trace static buffer APIs." alt="" coords="778,94,892,120"/>
+<area shape="poly" title=" " alt="" coords="1847,32,1446,52,1181,70,908,96,908,91,1180,65,1446,46,1846,27"/>
+<area shape="rect" href="../../dd/d80/trcError_8h.html" title="Public trace error APIs." alt="" coords="916,94,989,120"/>
+<area shape="poly" title=" " alt="" coords="1847,31,1692,36,1484,47,1248,66,1005,96,1004,91,1247,61,1484,42,1691,31,1847,26"/>
+<area shape="rect" href="../../dd/d61/trcEvent_8h.html" title="Public trace event APIs." alt="" coords="1013,94,1092,120"/>
+<area shape="poly" title=" " alt="" coords="1847,33,1526,52,1320,70,1108,96,1107,91,1319,65,1526,46,1847,27"/>
+<area shape="rect" href="../../dd/dee/trcEventBuffer_8h.html" title="Public trace event buffer APIs." alt="" coords="1116,94,1229,120"/>
+<area shape="poly" title=" " alt="" coords="1847,36,1583,59,1245,96,1245,91,1582,54,1847,31"/>
+<area shape="rect" href="../../d7/dac/trcMultiCoreEventBuffer_8h.html" title=" " alt="" coords="1254,94,1422,120"/>
+<area shape="poly" title=" " alt="" coords="1847,41,1438,95,1437,90,1847,36"/>
+<area shape="rect" href="../../d8/d83/trcTimestamp_8h.html" title="Public trace timestamp APIs." alt="" coords="1446,94,1558,120"/>
+<area shape="poly" title=" " alt="" coords="1847,45,1573,95,1572,90,1846,40"/>
+<area shape="rect" href="../../dc/dc8/trcEntryTable_8h.html" title="Public trace entry table APIs." alt="" coords="1582,94,1689,120"/>
+<area shape="poly" title=" " alt="" coords="1858,49,1696,92,1695,87,1857,44"/>
+<area shape="rect" href="../../d6/d96/include_2trcStreamPort_8h_source.html" title=" " alt="" coords="1712,94,1825,120"/>
+<area shape="poly" title=" " alt="" coords="1892,49,1809,89,1806,84,1890,44"/>
+<area shape="rect" href="../../d4/d72/trcISR_8h.html" title="Public trace ISR APIs." alt="" coords="1849,94,1918,120"/>
+<area shape="poly" title=" " alt="" coords="1922,48,1901,82,1896,79,1917,45"/>
+<area shape="rect" href="../../d1/d88/trcTask_8h.html" title="Public trace task APIs." alt="" coords="1942,94,2017,120"/>
+<area shape="poly" title=" " alt="" coords="1945,45,1966,79,1962,82,1941,48"/>
+<area shape="rect" href="../../df/d17/trcObject_8h.html" title="Public trace object APIs." alt="" coords="2041,94,2126,120"/>
+<area shape="poly" title=" " alt="" coords="1971,44,2048,84,2045,89,1968,49"/>
+<area shape="rect" href="../../dd/df9/trcPrint_8h.html" title="Public trace print APIs." alt="" coords="2149,94,2223,120"/>
+<area shape="poly" title=" " alt="" coords="1996,44,2135,87,2133,92,1994,49"/>
+<area shape="rect" href="../../d3/d59/trcHeap_8h.html" title="Public trace heap APIs." alt="" coords="2247,94,2325,120"/>
+<area shape="poly" title=" " alt="" coords="2016,43,2233,91,2232,96,2015,48"/>
+<area shape="rect" href="../../d9/d92/trcExtension_8h.html" title="Public trace extension APIs." alt="" coords="2348,94,2450,120"/>
+<area shape="poly" title=" " alt="" coords="2016,38,2333,91,2332,96,2016,43"/>
+<area shape="rect" href="../../de/d0a/trcUtility_8h_source.html" title=" " alt="" coords="2474,94,2554,120"/>
+<area shape="poly" title=" " alt="" coords="2016,33,2214,55,2459,91,2459,96,2214,61,2015,38"/>
+<area shape="rect" href="../../da/db3/trcStackMonitor_8h.html" title="Public trace stack monitor APIs." alt="" coords="2578,94,2701,120"/>
+<area shape="poly" title=" " alt="" coords="2016,32,2257,56,2563,91,2562,96,2257,61,2015,37"/>
+<area shape="rect" href="../../d5/db1/trcInternalEventBuffer_8h.html" title="Public internal event buffer APIs." alt="" coords="2725,94,2882,120"/>
+<area shape="poly" title=" " alt="" coords="2016,30,2318,54,2710,91,2709,96,2317,60,2016,36"/>
+<area shape="rect" href="../../db/d9d/trcDiagnostics_8h.html" title="Public trace diagnostic APIs." alt="" coords="2906,94,3020,120"/>
+<area shape="poly" title=" " alt="" coords="2016,28,2391,48,2637,66,2891,91,2890,96,2637,71,2391,53,2016,33"/>
+<area shape="rect" href="../../d5/dc4/trcAssert_8h.html" title="Public trace assert APIs." alt="" coords="3045,94,3130,120"/>
+<area shape="poly" title=" " alt="" coords="2016,25,2197,30,2447,40,2735,60,3030,91,3030,97,2734,65,2447,46,2197,35,2016,31"/>
+<area shape="rect" href="../../d9/dd3/trcRunnable_8h.html" title="Public trace runnable APIs." alt="" coords="3153,94,3254,120"/>
+<area shape="poly" title=" " alt="" coords="2016,25,2214,30,2490,40,2809,60,3138,91,3137,96,2809,65,2489,45,2214,35,2016,31"/>
+<area shape="rect" href="../../d7/d2f/trcDependency_8h.html" title="Public trace dependency APIs." alt="" coords="3278,94,3395,120"/>
+<area shape="poly" title=" " alt="" coords="2016,25,2232,30,2538,41,2895,60,3262,91,3262,96,2895,65,2538,46,2231,35,2016,31"/>
+<area shape="rect" href="../../da/d03/trcProcess_8h.html" title="Public trace process APIs." alt="" coords="3419,94,3513,120"/>
+<area shape="poly" title=" " alt="" coords="2016,24,2253,25,2594,34,2993,54,3200,70,3404,91,3403,96,3200,75,2993,59,2594,39,2252,31,2016,29"/>
+<area shape="rect" href="../../dd/dc6/trcThread_8h.html" title="Public trace thread APIs." alt="" coords="3538,94,3624,120"/>
+<area shape="poly" title=" " alt="" coords="2016,26,2754,47,3191,66,3377,78,3523,91,3522,97,3376,84,3190,72,2754,52,2016,31"/>
+<area shape="rect" href="../../d2/d9d/trcInterval_8h.html" title="Public trace interval APIs." alt="" coords="3648,94,3737,120"/>
+<area shape="poly" title=" " alt="" coords="2016,26,2805,46,3276,66,3476,78,3633,91,3632,97,3476,83,3275,71,2805,52,2016,31"/>
+<area shape="rect" href="../../d5/d30/trcStateMachine_8h.html" title="Public trace state machine APIs." alt="" coords="306,94,432,120"/>
+<area shape="poly" title=" " alt="" coords="1847,31,1608,35,1262,46,860,66,450,97,448,97,447,92,450,91,860,61,1262,41,1607,30,1847,25"/>
+<area shape="rect" href="../../d0/d4b/trcCounter_8h.html" title="Public trace counter APIs." alt="" coords="3762,94,3853,120"/>
+<area shape="poly" title=" " alt="" coords="2016,26,2858,45,3364,64,3579,77,3746,91,3746,97,3579,82,3364,70,2858,50,2016,31"/>
+<area shape="rect" href="../../d2/de1/trcTaskMonitor_8h.html" title="Public trace task monitor APIs." alt="" coords="3878,94,3996,120"/>
+<area shape="poly" title=" " alt="" coords="2016,24,2316,24,2769,31,3307,51,3587,69,3862,91,3862,97,3586,74,3307,57,2769,36,2316,29,2016,29"/>
+<area shape="rect" title=" " alt="" coords="406,315,513,341"/>
+<area shape="poly" title=" " alt="" coords="462,267,462,299,457,299,457,267"/>
+<area shape="poly" title=" " alt="" coords="372,192,430,230,427,235,369,196"/>
+<area shape="rect" title=" " alt="" coords="321,241,384,267"/>
+<area shape="poly" title=" " alt="" coords="355,194,355,226,350,226,350,194"/>
+<area shape="poly" title=" " alt="" coords="331,196,255,236,253,231,329,192"/>
+<area shape="poly" title=" " alt="" coords="191,270,94,311,92,306,188,265"/>
+<area shape="poly" title=" " alt="" coords="115,122,95,143,78,169,66,203,58,238,52,300,47,299,53,237,60,201,73,166,91,139,111,118"/>
+<area shape="rect" title=" " alt="" coords="87,168,181,193"/>
+<area shape="poly" title=" " alt="" coords="131,120,134,152,129,152,126,120"/>
+<area shape="poly" title=" " alt="" coords="369,120,361,153,356,152,363,119"/>
+</map>
+</div>
+</div>
+<p><a href="../../de/dec/trcRecorder_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd5/structTraceHeaderBuffer.html">TraceHeaderBuffer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ac7aa2d64d5291e3787e285ff4fa2129b" id="r_ac7aa2d64d5291e3787e285ff4fa2129b"><td class="memItemLeft" align="right" valign="top"><a id="ac7aa2d64d5291e3787e285ff4fa2129b" name="ac7aa2d64d5291e3787e285ff4fa2129b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TRC_ACKNOWLEDGED</b>&#160;&#160;&#160;(0xABC99123)</td></tr>
+<tr class="separator:ac7aa2d64d5291e3787e285ff4fa2129b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8594d4edcb0e78b20a29cad73d046bcb" id="r_a8594d4edcb0e78b20a29cad73d046bcb"><td class="memItemLeft" align="right" valign="top"><a id="a8594d4edcb0e78b20a29cad73d046bcb" name="a8594d4edcb0e78b20a29cad73d046bcb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TRC_CFG_TEST_MODE</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a8594d4edcb0e78b20a29cad73d046bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e6f4d19d4c5afee9d35a4dcf5f5726a" id="r_a9e6f4d19d4c5afee9d35a4dcf5f5726a"><td class="memItemLeft" align="right" valign="top"><a id="a9e6f4d19d4c5afee9d35a4dcf5f5726a" name="a9e6f4d19d4c5afee9d35a4dcf5f5726a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TRC_CFG_CORE_COUNT</b>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a9e6f4d19d4c5afee9d35a4dcf5f5726a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e6b6d06771000c21ab5aa76acc674b2" id="r_a6e6b6d06771000c21ab5aa76acc674b2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e6b6d06771000c21ab5aa76acc674b2">TRC_CFG_GET_CURRENT_CORE</a>()</td></tr>
+<tr class="separator:a6e6b6d06771000c21ab5aa76acc674b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a083fa23c3526c91b469351397ccc0540" id="r_a083fa23c3526c91b469351397ccc0540"><td class="memItemLeft" align="right" valign="top"><a id="a083fa23c3526c91b469351397ccc0540" name="a083fa23c3526c91b469351397ccc0540"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TRC_CFG_USE_GCC_STATEMENT_EXPR</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a083fa23c3526c91b469351397ccc0540"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaf8fd4355b25fe15548af2317433201" id="r_abaf8fd4355b25fe15548af2317433201"><td class="memItemLeft" align="right" valign="top"><a id="abaf8fd4355b25fe15548af2317433201" name="abaf8fd4355b25fe15548af2317433201"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>traceHandle</b>&#160;&#160;&#160;TraceISRHandle_t</td></tr>
+<tr class="separator:abaf8fd4355b25fe15548af2317433201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe46b0b58f9d26b8742059d4304641ea" id="r_afe46b0b58f9d26b8742059d4304641ea"><td class="memItemLeft" align="right" valign="top"><a id="afe46b0b58f9d26b8742059d4304641ea" name="afe46b0b58f9d26b8742059d4304641ea"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TRC_MAX_BLOB_SIZE</b>&#160;&#160;&#160;(16UL * sizeof(TraceUnsignedBaseType_t))</td></tr>
+<tr class="separator:afe46b0b58f9d26b8742059d4304641ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa88748ed353390bf86dbc733d6683f16" id="r_aa88748ed353390bf86dbc733d6683f16"><td class="memItemLeft" align="right" valign="top"><a id="aa88748ed353390bf86dbc733d6683f16" name="aa88748ed353390bf86dbc733d6683f16"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TRC_PLATFORM_CFG_LENGTH</b>&#160;&#160;&#160;8UL</td></tr>
+<tr class="separator:aa88748ed353390bf86dbc733d6683f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c8949f9204704166fe6ec43c0d935ce" id="r_a7c8949f9204704166fe6ec43c0d935ce"><td class="memItemLeft" align="right" valign="top"><a id="a7c8949f9204704166fe6ec43c0d935ce" name="a7c8949f9204704166fe6ec43c0d935ce"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TRC_HEADER_BUFFER_SIZE</b>&#160;&#160;&#160;(sizeof(uint32_t) + sizeof(uint16_t) + sizeof(uint16_t) + sizeof(uint32_t) + sizeof(uint32_t) + sizeof(uint32_t) + sizeof(uint16_t) + sizeof(uint8_t) + sizeof(uint8_t) + (sizeof(char) * (TRC_PLATFORM_CFG_LENGTH)))</td></tr>
+<tr class="separator:a7c8949f9204704166fe6ec43c0d935ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a613053185834a9295b959f33f8254d2f" id="r_a613053185834a9295b959f33f8254d2f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a613053185834a9295b959f33f8254d2f">xTraceInitialize</a>()</td></tr>
+<tr class="separator:a613053185834a9295b959f33f8254d2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab11a36f527d45cc40a7afa750ca1425e" id="r_ab11a36f527d45cc40a7afa750ca1425e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab11a36f527d45cc40a7afa750ca1425e">xTraceEnable</a>(x)</td></tr>
+<tr class="separator:ab11a36f527d45cc40a7afa750ca1425e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5762d5413b19f95f6724dea526f5418" id="r_ae5762d5413b19f95f6724dea526f5418"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5762d5413b19f95f6724dea526f5418">xTraceDisable</a>()</td></tr>
+<tr class="separator:ae5762d5413b19f95f6724dea526f5418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5139264653ec9aca008d1ed309c058d6" id="r_a5139264653ec9aca008d1ed309c058d6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5139264653ec9aca008d1ed309c058d6">prvTraceSetReadyEventsEnabled</a>(status)</td></tr>
+<tr class="separator:a5139264653ec9aca008d1ed309c058d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbf1bbd540b629f3e45c17ed0b5a8e73" id="r_abbf1bbd540b629f3e45c17ed0b5a8e73"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbf1bbd540b629f3e45c17ed0b5a8e73">vTraceExcludeTask</a>(handle)</td></tr>
+<tr class="separator:abbf1bbd540b629f3e45c17ed0b5a8e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a128f3d7a219ba427202d1800e9ec916d" id="r_a128f3d7a219ba427202d1800e9ec916d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a128f3d7a219ba427202d1800e9ec916d">vTraceConsoleChannelPrintF</a>(fmt, ...)</td></tr>
+<tr class="separator:a128f3d7a219ba427202d1800e9ec916d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab68b161bfad77f401dc274a38119d707" id="r_ab68b161bfad77f401dc274a38119d707"><td class="memItemLeft" align="right" valign="top"><a id="ab68b161bfad77f401dc274a38119d707" name="ab68b161bfad77f401dc274a38119d707"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TRC_ALLOC_CUSTOM_BUFFER</b>(bufname)</td></tr>
+<tr class="separator:ab68b161bfad77f401dc274a38119d707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80475714dcc01d60207a32bcf9eef170" id="r_a80475714dcc01d60207a32bcf9eef170"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80475714dcc01d60207a32bcf9eef170">xTraceIsRecorderEnabled</a>()</td></tr>
+<tr class="separator:a80475714dcc01d60207a32bcf9eef170"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4125a6b2693f86df4c93e43869a11489" id="r_a4125a6b2693f86df4c93e43869a11489"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4125a6b2693f86df4c93e43869a11489">xTraceIsRecorderInitialized</a>()</td></tr>
+<tr class="separator:a4125a6b2693f86df4c93e43869a11489"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfe6bb57e9553c5d3a5bff1f27b9879d" id="r_abfe6bb57e9553c5d3a5bff1f27b9879d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfe6bb57e9553c5d3a5bff1f27b9879d">xTraceSetBuffer</a>(p)</td></tr>
+<tr class="separator:abfe6bb57e9553c5d3a5bff1f27b9879d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8904f28d14cb20e6bd53483bc91901a3" id="r_a8904f28d14cb20e6bd53483bc91901a3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8904f28d14cb20e6bd53483bc91901a3">xTraceGetEventBuffer</a>(p)</td></tr>
+<tr class="separator:a8904f28d14cb20e6bd53483bc91901a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a595c6523320f46204bdac038591f9bdb" id="r_a595c6523320f46204bdac038591f9bdb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a595c6523320f46204bdac038591f9bdb">vTraceSetStopHook</a>(x)</td></tr>
+<tr class="separator:a595c6523320f46204bdac038591f9bdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4bff229e067c1beab70d7029ac41b25" id="r_ad4bff229e067c1beab70d7029ac41b25"><td class="memItemLeft" align="right" valign="top"><a id="ad4bff229e067c1beab70d7029ac41b25" name="ad4bff229e067c1beab70d7029ac41b25"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TraceRecorderData_t</b>&#160;&#160;&#160;uint32_t</td></tr>
+<tr class="separator:ad4bff229e067c1beab70d7029ac41b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4433d7c94ad4000866306078790197fe" id="r_a4433d7c94ad4000866306078790197fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4433d7c94ad4000866306078790197fe">vTraceInitialize</a>&#160;&#160;&#160;(void)xTraceInitialize</td></tr>
+<tr class="separator:a4433d7c94ad4000866306078790197fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad81a6a12b34c4761097d25c6c9036887" id="r_ad81a6a12b34c4761097d25c6c9036887"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad81a6a12b34c4761097d25c6c9036887">vTraceEnable</a>&#160;&#160;&#160;(void)xTraceEnable</td></tr>
+<tr class="separator:ad81a6a12b34c4761097d25c6c9036887"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54344b66a74433f50feee5cfdb726f91" id="r_a54344b66a74433f50feee5cfdb726f91"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54344b66a74433f50feee5cfdb726f91">vTraceStop</a>&#160;&#160;&#160;(void)xTraceDisable</td></tr>
+<tr class="separator:a54344b66a74433f50feee5cfdb726f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4441d3b4dd03eb69d335307d3650dae" id="r_ac4441d3b4dd03eb69d335307d3650dae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4441d3b4dd03eb69d335307d3650dae">vTraceInstanceFinishedNow</a>&#160;&#160;&#160;(void)xTraceTaskInstanceFinishedNow</td></tr>
+<tr class="separator:ac4441d3b4dd03eb69d335307d3650dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a017e80004dee99fbe357c86c77940819" id="r_a017e80004dee99fbe357c86c77940819"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a017e80004dee99fbe357c86c77940819">vTraceInstanceFinishedNext</a>&#160;&#160;&#160;(void)xTraceTaskInstanceFinishedNext</td></tr>
+<tr class="separator:a017e80004dee99fbe357c86c77940819"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56704be14a68b7e59a378fac22ff42c7" id="r_a56704be14a68b7e59a378fac22ff42c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56704be14a68b7e59a378fac22ff42c7">vTracePrintF</a>&#160;&#160;&#160;(void)xTracePrintF</td></tr>
+<tr class="separator:a56704be14a68b7e59a378fac22ff42c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a548dc97141d6e4d3049da174c5b23e16" id="r_a548dc97141d6e4d3049da174c5b23e16"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a548dc97141d6e4d3049da174c5b23e16">vTraceVPrintF</a>&#160;&#160;&#160;(void)xTraceVPrintF</td></tr>
+<tr class="separator:a548dc97141d6e4d3049da174c5b23e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00d742ca47f84add37a93a8a0f3fb6c5" id="r_a00d742ca47f84add37a93a8a0f3fb6c5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00d742ca47f84add37a93a8a0f3fb6c5">vTracePrint</a>&#160;&#160;&#160;(void)xTracePrint</td></tr>
+<tr class="separator:a00d742ca47f84add37a93a8a0f3fb6c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab484288bbf50e8844cd63530c06808ab" id="r_ab484288bbf50e8844cd63530c06808ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab484288bbf50e8844cd63530c06808ab">vTraceSetRecorderDataBuffer</a>(pxBuffer)</td></tr>
+<tr class="separator:ab484288bbf50e8844cd63530c06808ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:afe40d893d9be2306897d05744e67dbae" id="r_afe40d893d9be2306897d05744e67dbae"><td class="memItemLeft" align="right" valign="top"><a id="afe40d893d9be2306897d05744e67dbae" name="afe40d893d9be2306897d05744e67dbae"></a>
+typedef struct <a class="el" href="../../d5/dd5/structTraceHeaderBuffer.html">TraceHeaderBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>TraceHeaderBuffer_t</b></td></tr>
+<tr class="separator:afe40d893d9be2306897d05744e67dbae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>The public API of the Percepio trace recorder. </p>
+</div><h2 class="groupheader">Documentation des macros</h2>
+<a id="a5139264653ec9aca008d1ed309c058d6" name="a5139264653ec9aca008d1ed309c058d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5139264653ec9aca008d1ed309c058d6">&#9670;&#160;</a></span>prvTraceSetReadyEventsEnabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define prvTraceSetReadyEventsEnabled</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>status</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(void)(status)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6e6b6d06771000c21ab5aa76acc674b2" name="a6e6b6d06771000c21ab5aa76acc674b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e6b6d06771000c21ab5aa76acc674b2">&#9670;&#160;</a></span>TRC_CFG_GET_CURRENT_CORE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRC_CFG_GET_CURRENT_CORE</td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">0</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a128f3d7a219ba427202d1800e9ec916d" name="a128f3d7a219ba427202d1800e9ec916d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a128f3d7a219ba427202d1800e9ec916d">&#9670;&#160;</a></span>vTraceConsoleChannelPrintF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define vTraceConsoleChannelPrintF</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>fmt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(void)(fmt)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad81a6a12b34c4761097d25c6c9036887" name="ad81a6a12b34c4761097d25c6c9036887"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad81a6a12b34c4761097d25c6c9036887">&#9670;&#160;</a></span>vTraceEnable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define vTraceEnable&#160;&#160;&#160;(void)xTraceEnable</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000003">Obsolète</a></b></dt><dd>Backwards compatibility. Use xTraceEnable instead. </dd></dl>
+
+</div>
+</div>
+<a id="abbf1bbd540b629f3e45c17ed0b5a8e73" name="abbf1bbd540b629f3e45c17ed0b5a8e73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbf1bbd540b629f3e45c17ed0b5a8e73">&#9670;&#160;</a></span>vTraceExcludeTask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define vTraceExcludeTask</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>handle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(void)(handle)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4433d7c94ad4000866306078790197fe" name="a4433d7c94ad4000866306078790197fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4433d7c94ad4000866306078790197fe">&#9670;&#160;</a></span>vTraceInitialize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define vTraceInitialize&#160;&#160;&#160;(void)xTraceInitialize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000002">Obsolète</a></b></dt><dd>Backwards compatibility. Use xTraceInitialize instead. </dd></dl>
+
+</div>
+</div>
+<a id="a017e80004dee99fbe357c86c77940819" name="a017e80004dee99fbe357c86c77940819"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a017e80004dee99fbe357c86c77940819">&#9670;&#160;</a></span>vTraceInstanceFinishedNext</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define vTraceInstanceFinishedNext&#160;&#160;&#160;(void)xTraceTaskInstanceFinishedNext</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000006">Obsolète</a></b></dt><dd>Backwards compatibility. Use xTraceTaskInstanceFinishedNext instead. </dd></dl>
+
+</div>
+</div>
+<a id="ac4441d3b4dd03eb69d335307d3650dae" name="ac4441d3b4dd03eb69d335307d3650dae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4441d3b4dd03eb69d335307d3650dae">&#9670;&#160;</a></span>vTraceInstanceFinishedNow</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define vTraceInstanceFinishedNow&#160;&#160;&#160;(void)xTraceTaskInstanceFinishedNow</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000005">Obsolète</a></b></dt><dd>Backwards compatibility. Use xTraceTaskInstanceFinishedNow instead. </dd></dl>
+
+</div>
+</div>
+<a id="a00d742ca47f84add37a93a8a0f3fb6c5" name="a00d742ca47f84add37a93a8a0f3fb6c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00d742ca47f84add37a93a8a0f3fb6c5">&#9670;&#160;</a></span>vTracePrint</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define vTracePrint&#160;&#160;&#160;(void)xTracePrint</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000009">Obsolète</a></b></dt><dd>Backwards compatibility. Use xTracePrint instead. </dd></dl>
+
+</div>
+</div>
+<a id="a56704be14a68b7e59a378fac22ff42c7" name="a56704be14a68b7e59a378fac22ff42c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56704be14a68b7e59a378fac22ff42c7">&#9670;&#160;</a></span>vTracePrintF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define vTracePrintF&#160;&#160;&#160;(void)xTracePrintF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000007">Obsolète</a></b></dt><dd>Backwards compatibility. Use xTracePrintF instead. </dd></dl>
+
+</div>
+</div>
+<a id="ab484288bbf50e8844cd63530c06808ab" name="ab484288bbf50e8844cd63530c06808ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab484288bbf50e8844cd63530c06808ab">&#9670;&#160;</a></span>vTraceSetRecorderDataBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define vTraceSetRecorderDataBuffer</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>pxBuffer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">xTraceSetBuffer((TraceRecorderData_t*)(pxBuffer))</div>
+</div><!-- fragment --><dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000010">Obsolète</a></b></dt><dd>Backwards compatibility. Use xTraceSetBuffer instead. </dd></dl>
+
+</div>
+</div>
+<a id="a595c6523320f46204bdac038591f9bdb" name="a595c6523320f46204bdac038591f9bdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a595c6523320f46204bdac038591f9bdb">&#9670;&#160;</a></span>vTraceSetStopHook</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define vTraceSetStopHook</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(void)(x)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a54344b66a74433f50feee5cfdb726f91" name="a54344b66a74433f50feee5cfdb726f91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54344b66a74433f50feee5cfdb726f91">&#9670;&#160;</a></span>vTraceStop</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define vTraceStop&#160;&#160;&#160;(void)xTraceDisable</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000004">Obsolète</a></b></dt><dd>Backwards compatibility. Use xTraceDisable instead. </dd></dl>
+
+</div>
+</div>
+<a id="a548dc97141d6e4d3049da174c5b23e16" name="a548dc97141d6e4d3049da174c5b23e16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a548dc97141d6e4d3049da174c5b23e16">&#9670;&#160;</a></span>vTraceVPrintF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define vTraceVPrintF&#160;&#160;&#160;(void)xTraceVPrintF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000008">Obsolète</a></b></dt><dd>Backwards compatibility. Use xTraceVPrintF instead. </dd></dl>
+
+</div>
+</div>
+<a id="ae5762d5413b19f95f6724dea526f5418" name="ae5762d5413b19f95f6724dea526f5418"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5762d5413b19f95f6724dea526f5418">&#9670;&#160;</a></span>xTraceDisable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xTraceDisable</td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(TRC_SUCCESS)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab11a36f527d45cc40a7afa750ca1425e" name="ab11a36f527d45cc40a7afa750ca1425e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab11a36f527d45cc40a7afa750ca1425e">&#9670;&#160;</a></span>xTraceEnable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xTraceEnable</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">((void)(x), TRC_SUCCESS)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8904f28d14cb20e6bd53483bc91901a3" name="a8904f28d14cb20e6bd53483bc91901a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8904f28d14cb20e6bd53483bc91901a3">&#9670;&#160;</a></span>xTraceGetEventBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xTraceGetEventBuffer</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(TRC_FAIL)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a613053185834a9295b959f33f8254d2f" name="a613053185834a9295b959f33f8254d2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a613053185834a9295b959f33f8254d2f">&#9670;&#160;</a></span>xTraceInitialize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xTraceInitialize</td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(TRC_SUCCESS)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a80475714dcc01d60207a32bcf9eef170" name="a80475714dcc01d60207a32bcf9eef170"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80475714dcc01d60207a32bcf9eef170">&#9670;&#160;</a></span>xTraceIsRecorderEnabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xTraceIsRecorderEnabled</td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(0)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4125a6b2693f86df4c93e43869a11489" name="a4125a6b2693f86df4c93e43869a11489"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4125a6b2693f86df4c93e43869a11489">&#9670;&#160;</a></span>xTraceIsRecorderInitialized</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xTraceIsRecorderInitialized</td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(0)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abfe6bb57e9553c5d3a5bff1f27b9879d" name="abfe6bb57e9553c5d3a5bff1f27b9879d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfe6bb57e9553c5d3a5bff1f27b9879d">&#9670;&#160;</a></span>xTraceSetBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xTraceSetBuffer</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(TRC_SUCCESS)</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_364068cac840ea2f55acd2e21b2efa5a.html">TraceRecorder</a></li><li class="navelem"><a class="el" href="../../dir_71b6e2e7ee2682cc79104e6f8346e9ec.html">include</a></li><li class="navelem"><a class="el" href="../../de/dec/trcRecorder_8h.html">trcRecorder.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

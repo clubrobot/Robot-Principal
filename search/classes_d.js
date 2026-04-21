@@ -15,5 +15,10 @@ var searchData=
   ['tacheturnonthespot_12',['TacheTurnOnTheSpot',['../d8/d8a/classTacheTurnOnTheSpot.html',1,'']]],
   ['tachewait_13',['TacheWait',['../d3/d62/classTacheWait.html',1,'']]],
   ['teleplot_14',['Teleplot',['../d8/d4b/classTeleplot.html',1,'']]],
-  ['turnonthespot_15',['TurnOnTheSpot',['../d9/dee/classTurnOnTheSpot.html',1,'']]]
+  ['traceheaderbuffer_15',['TraceHeaderBuffer',['../d5/dd5/structTraceHeaderBuffer.html',1,'']]],
+  ['traceprintdata_16',['TracePrintData',['../d2/def/structTracePrintData.html',1,'']]],
+  ['tracestackmonitordata_17',['TraceStackMonitorData',['../df/d5e/structTraceStackMonitorData.html',1,'']]],
+  ['tracetaskmonitorcallbackdata_18',['TraceTaskMonitorCallbackData',['../d4/db7/structTraceTaskMonitorCallbackData.html',1,'']]],
+  ['tracetaskmonitordata_19',['TraceTaskMonitorData',['../d2/d2b/structTraceTaskMonitorData.html',1,'']]],
+  ['turnonthespot_20',['TurnOnTheSpot',['../d9/dee/classTurnOnTheSpot.html',1,'']]]
 ];

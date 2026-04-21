@@ -91,6 +91,11 @@ var hierarchy =
       [ "TacheWait", "d3/d62/classTacheWait.html", null ]
     ] ],
     [ "Teleplot", "d8/d4b/classTeleplot.html", null ],
+    [ "TraceHeaderBuffer", "d5/dd5/structTraceHeaderBuffer.html", null ],
+    [ "TracePrintData", "d2/def/structTracePrintData.html", null ],
+    [ "TraceStackMonitorData", "df/d5e/structTraceStackMonitorData.html", null ],
+    [ "TraceTaskMonitorCallbackData", "d4/db7/structTraceTaskMonitorCallbackData.html", null ],
+    [ "TraceTaskMonitorData", "d2/d2b/structTraceTaskMonitorData.html", null ],
     [ "tuple", null, [
       [ "geogebra.Geogebra.Circle", "db/d05/classgeogebra_1_1Geogebra_1_1Circle.html", null ],
       [ "geogebra.Geogebra.Ellipse", "d2/d1d/classgeogebra_1_1Geogebra_1_1Ellipse.html", null ],

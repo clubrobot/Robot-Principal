@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CRINSA-team2025: Référence du fichier lib/TraceRecorder/include/trcTimestamp.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript" src="../../darkmode_toggle.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../custom.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="../../theme-round.css" rel="stylesheet" type="text/css"/>
+<link href="../../theme-robot.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">CRINSA-team2025<span id="projectnumber">&#160;V1</span>
+   </div>
+   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2025</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('d8/d83/trcTimestamp_8h.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier trcTimestamp.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Public trace timestamp APIs.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/db8/trcTimestamp_8h__dep__incl.png" border="0" usemap="#alib_2TraceRecorder_2include_2trcTimestamp_8hdep" alt=""/></div>
+<map name="alib_2TraceRecorder_2include_2trcTimestamp_8hdep" id="alib_2TraceRecorder_2include_2trcTimestamp_8hdep">
+<area shape="rect" title="Public trace timestamp APIs." alt="" coords="5,5,174,46"/>
+<area shape="rect" href="../../de/dec/trcRecorder_8h.html" title="The public API of the Percepio trace recorder." alt="" coords="5,94,174,135"/>
+<area shape="poly" title=" " alt="" coords="92,62,92,94,87,94,87,62"/>
+</map>
+</div>
+</div>
+<p><a href="../../d8/d83/trcTimestamp_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:af1df1208059acfa9ed418a70d50be4e5" id="r_af1df1208059acfa9ed418a70d50be4e5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1df1208059acfa9ed418a70d50be4e5">xTraceTimestampGet</a>(puiTimestamp)</td></tr>
+<tr class="separator:af1df1208059acfa9ed418a70d50be4e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb2d292f0b068d6653eed16bdfa64540" id="r_acb2d292f0b068d6653eed16bdfa64540"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb2d292f0b068d6653eed16bdfa64540">xTraceTimestampGetWraparounds</a>(puiTimerWraparounds)</td></tr>
+<tr class="separator:acb2d292f0b068d6653eed16bdfa64540"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e582d9f384f366f5d44dd9033e160c8" id="r_a7e582d9f384f366f5d44dd9033e160c8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e582d9f384f366f5d44dd9033e160c8">xTraceTimestampSetFrequency</a>(uxFrequency)</td></tr>
+<tr class="separator:a7e582d9f384f366f5d44dd9033e160c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaebd43421b8dd4fbc59e57ef8faf1969" id="r_aaebd43421b8dd4fbc59e57ef8faf1969"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaebd43421b8dd4fbc59e57ef8faf1969">xTraceTimestampSetPeriod</a>(uiPeriod)</td></tr>
+<tr class="separator:aaebd43421b8dd4fbc59e57ef8faf1969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c8f56e6cfdc4c041c25dfc8e9c53a12" id="r_a4c8f56e6cfdc4c041c25dfc8e9c53a12"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c8f56e6cfdc4c041c25dfc8e9c53a12">xTraceTimestampSetOsTickCount</a>(uiOsTickCount)</td></tr>
+<tr class="separator:a4c8f56e6cfdc4c041c25dfc8e9c53a12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2305ef12c3f6c996a56ba3f2fe7120c" id="r_aa2305ef12c3f6c996a56ba3f2fe7120c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2305ef12c3f6c996a56ba3f2fe7120c">xTraceTimestampGetFrequency</a>(puxFrequency)</td></tr>
+<tr class="separator:aa2305ef12c3f6c996a56ba3f2fe7120c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa2ab98ff676a9aab177721d921fee84" id="r_aaa2ab98ff676a9aab177721d921fee84"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa2ab98ff676a9aab177721d921fee84">xTraceTimestampGetPeriod</a>(puiPeriod)</td></tr>
+<tr class="separator:aaa2ab98ff676a9aab177721d921fee84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cd3d2acef0691b00a18ca7b9f0eb827" id="r_a5cd3d2acef0691b00a18ca7b9f0eb827"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cd3d2acef0691b00a18ca7b9f0eb827">xTraceTimestampGetOsTickCount</a>(puiOsTickCount)</td></tr>
+<tr class="separator:a5cd3d2acef0691b00a18ca7b9f0eb827"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Public trace timestamp APIs. </p>
+</div><h2 class="groupheader">Documentation des macros</h2>
+<a id="af1df1208059acfa9ed418a70d50be4e5" name="af1df1208059acfa9ed418a70d50be4e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1df1208059acfa9ed418a70d50be4e5">&#9670;&#160;</a></span>xTraceTimestampGet</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xTraceTimestampGet</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>puiTimestamp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">TRC_COMMA_EXPR_TO_STATEMENT_EXPR_2((<span class="keywordtype">void</span>)(puiTimestamp), TRC_SUCCESS)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa2305ef12c3f6c996a56ba3f2fe7120c" name="aa2305ef12c3f6c996a56ba3f2fe7120c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2305ef12c3f6c996a56ba3f2fe7120c">&#9670;&#160;</a></span>xTraceTimestampGetFrequency</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xTraceTimestampGetFrequency</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>puxFrequency</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">TRC_COMMA_EXPR_TO_STATEMENT_EXPR_2((<span class="keywordtype">void</span>)(puxFrequency), TRC_SUCCESS)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5cd3d2acef0691b00a18ca7b9f0eb827" name="a5cd3d2acef0691b00a18ca7b9f0eb827"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cd3d2acef0691b00a18ca7b9f0eb827">&#9670;&#160;</a></span>xTraceTimestampGetOsTickCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xTraceTimestampGetOsTickCount</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>puiOsTickCount</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">TRC_COMMA_EXPR_TO_STATEMENT_EXPR_2((<span class="keywordtype">void</span>)(puiOsTickCount), TRC_SUCCESS)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aaa2ab98ff676a9aab177721d921fee84" name="aaa2ab98ff676a9aab177721d921fee84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa2ab98ff676a9aab177721d921fee84">&#9670;&#160;</a></span>xTraceTimestampGetPeriod</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xTraceTimestampGetPeriod</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>puiPeriod</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">TRC_COMMA_EXPR_TO_STATEMENT_EXPR_2((<span class="keywordtype">void</span>)(puiPeriod), TRC_SUCCESS)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acb2d292f0b068d6653eed16bdfa64540" name="acb2d292f0b068d6653eed16bdfa64540"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb2d292f0b068d6653eed16bdfa64540">&#9670;&#160;</a></span>xTraceTimestampGetWraparounds</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xTraceTimestampGetWraparounds</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>puiTimerWraparounds</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">TRC_COMMA_EXPR_TO_STATEMENT_EXPR_2((<span class="keywordtype">void</span>)(puiTimerWraparounds), TRC_SUCCESS)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7e582d9f384f366f5d44dd9033e160c8" name="a7e582d9f384f366f5d44dd9033e160c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e582d9f384f366f5d44dd9033e160c8">&#9670;&#160;</a></span>xTraceTimestampSetFrequency</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xTraceTimestampSetFrequency</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>uxFrequency</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">TRC_COMMA_EXPR_TO_STATEMENT_EXPR_2((<span class="keywordtype">void</span>)(uxFrequency), TRC_SUCCESS)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4c8f56e6cfdc4c041c25dfc8e9c53a12" name="a4c8f56e6cfdc4c041c25dfc8e9c53a12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c8f56e6cfdc4c041c25dfc8e9c53a12">&#9670;&#160;</a></span>xTraceTimestampSetOsTickCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xTraceTimestampSetOsTickCount</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>uiOsTickCount</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">TRC_COMMA_EXPR_TO_STATEMENT_EXPR_2((<span class="keywordtype">void</span>)(uiOsTickCount), TRC_SUCCESS)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aaebd43421b8dd4fbc59e57ef8faf1969" name="aaebd43421b8dd4fbc59e57ef8faf1969"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaebd43421b8dd4fbc59e57ef8faf1969">&#9670;&#160;</a></span>xTraceTimestampSetPeriod</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xTraceTimestampSetPeriod</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>uiPeriod</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">TRC_COMMA_EXPR_TO_STATEMENT_EXPR_2((<span class="keywordtype">void</span>)(uiPeriod), TRC_SUCCESS)</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_364068cac840ea2f55acd2e21b2efa5a.html">TraceRecorder</a></li><li class="navelem"><a class="el" href="../../dir_71b6e2e7ee2682cc79104e6f8346e9ec.html">include</a></li><li class="navelem"><a class="el" href="../../d8/d83/trcTimestamp_8h.html">trcTimestamp.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

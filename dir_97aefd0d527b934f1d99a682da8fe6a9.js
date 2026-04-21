@@ -27,6 +27,7 @@ var dir_97aefd0d527b934f1d99a682da8fe6a9 =
     [ "SpeedPowerProfiling", "dir_62756cf3385797f1f0292ab4650276f4.html", "dir_62756cf3385797f1f0292ab4650276f4" ],
     [ "StepByStepMotor", "dir_a4d559ad0ac4ee650a73f6ad65608c77.html", "dir_a4d559ad0ac4ee650a73f6ad65608c77" ],
     [ "Teleplot", "dir_4136405d84fc7ff658638f03b4ac248a.html", "dir_4136405d84fc7ff658638f03b4ac248a" ],
+    [ "TraceRecorder", "dir_364068cac840ea2f55acd2e21b2efa5a.html", "dir_364068cac840ea2f55acd2e21b2efa5a" ],
     [ "TurnOnTheSpot", "dir_782ce0eb56afffab93ccdf5291c272c9.html", "dir_782ce0eb56afffab93ccdf5291c272c9" ],
     [ "VelocityController", "dir_b0d67969ad9c4f1f7b6a734a349f1bb3.html", "dir_b0d67969ad9c4f1f7b6a734a349f1bb3" ],
     [ "Wheeledbase", "dir_d5c75ca7dbd2fef93c2f2d67c31ab7ba.html", "dir_d5c75ca7dbd2fef93c2f2d67c31ab7ba" ]

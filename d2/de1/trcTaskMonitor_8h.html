@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CRINSA-team2025: Référence du fichier lib/TraceRecorder/include/trcTaskMonitor.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript" src="../../darkmode_toggle.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../custom.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="../../theme-round.css" rel="stylesheet" type="text/css"/>
+<link href="../../theme-robot.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">CRINSA-team2025<span id="projectnumber">&#160;V1</span>
+   </div>
+   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2025</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('d2/de1/trcTaskMonitor_8h.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Définitions de type</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier trcTaskMonitor.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Public trace task monitor APIs.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/dde/trcTaskMonitor_8h__dep__incl.png" border="0" usemap="#alib_2TraceRecorder_2include_2trcTaskMonitor_8hdep" alt=""/></div>
+<map name="alib_2TraceRecorder_2include_2trcTaskMonitor_8hdep" id="alib_2TraceRecorder_2include_2trcTaskMonitor_8hdep">
+<area shape="rect" title="Public trace task monitor APIs." alt="" coords="5,5,174,46"/>
+<area shape="rect" href="../../de/dec/trcRecorder_8h.html" title="The public API of the Percepio trace recorder." alt="" coords="5,94,174,135"/>
+<area shape="poly" title=" " alt="" coords="92,62,92,94,87,94,87,62"/>
+</map>
+</div>
+</div>
+<p><a href="../../d2/de1/trcTaskMonitor_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db7/structTraceTaskMonitorCallbackData.html">TraceTaskMonitorCallbackData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d2b/structTraceTaskMonitorData.html">TraceTaskMonitorData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a020542437630a7eec26d9e8739b466a4" id="r_a020542437630a7eec26d9e8739b466a4"><td class="memItemLeft" align="right" valign="top"><a id="a020542437630a7eec26d9e8739b466a4" name="a020542437630a7eec26d9e8739b466a4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TRC_CFG_ENABLE_TASK_MONITOR</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a020542437630a7eec26d9e8739b466a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01bb815464c2a13a32bf8164e1df783d" id="r_a01bb815464c2a13a32bf8164e1df783d"><td class="memItemLeft" align="right" valign="top"><a id="a01bb815464c2a13a32bf8164e1df783d" name="a01bb815464c2a13a32bf8164e1df783d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TRC_KERNEL_PORT_SUPPORTS_TLS</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a01bb815464c2a13a32bf8164e1df783d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cd9f4c207002024f94d852dcded0061" id="r_a1cd9f4c207002024f94d852dcded0061"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1cd9f4c207002024f94d852dcded0061">xTraceTaskMonitorInitialize</a>(_pxBuffer)</td></tr>
+<tr class="separator:a1cd9f4c207002024f94d852dcded0061"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76862eb5aac00c31c666eb19b1926d05" id="r_a76862eb5aac00c31c666eb19b1926d05"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76862eb5aac00c31c666eb19b1926d05">xTraceTaskMonitorSetCallback</a>(_xCallback)</td></tr>
+<tr class="separator:a76862eb5aac00c31c666eb19b1926d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e3db7cd4ef366e1ce5900edd16f6e78" id="r_a1e3db7cd4ef366e1ce5900edd16f6e78"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e3db7cd4ef366e1ce5900edd16f6e78">xTraceTaskMonitorRegister</a>(_pvTask,  _uxLow,  _uxHigh)</td></tr>
+<tr class="separator:a1e3db7cd4ef366e1ce5900edd16f6e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0be5f5a30c68c431f9c81f6f270d56da" id="r_a0be5f5a30c68c431f9c81f6f270d56da"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0be5f5a30c68c431f9c81f6f270d56da">xTraceTaskMonitorUnregister</a>(_pvTask)</td></tr>
+<tr class="separator:a0be5f5a30c68c431f9c81f6f270d56da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad29fc2b31ea1b3307b50f2d0e9a0a0ff" id="r_ad29fc2b31ea1b3307b50f2d0e9a0a0ff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad29fc2b31ea1b3307b50f2d0e9a0a0ff">xTraceTaskMonitorGetData</a>(_pvTask,  _ppxData)</td></tr>
+<tr class="separator:ad29fc2b31ea1b3307b50f2d0e9a0a0ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4582e86853d810153de4a623311ac26" id="r_ac4582e86853d810153de4a623311ac26"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4582e86853d810153de4a623311ac26">xTraceTaskMonitorSwitchOut</a>(_pvTask)</td></tr>
+<tr class="separator:ac4582e86853d810153de4a623311ac26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66422fa01e9e0b6b8d3c71b54db6fe4e" id="r_a66422fa01e9e0b6b8d3c71b54db6fe4e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66422fa01e9e0b6b8d3c71b54db6fe4e">xTraceTaskMonitorPoll</a>()</td></tr>
+<tr class="separator:a66422fa01e9e0b6b8d3c71b54db6fe4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad80d63579ab8cabe3ce89b9444d1fae8" id="r_ad80d63579ab8cabe3ce89b9444d1fae8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad80d63579ab8cabe3ce89b9444d1fae8">xTraceTaskMonitorPrint</a>()</td></tr>
+<tr class="separator:ad80d63579ab8cabe3ce89b9444d1fae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:ad2bdd109636c50dfe5b6a3225cbb3c09" id="r_ad2bdd109636c50dfe5b6a3225cbb3c09"><td class="memItemLeft" align="right" valign="top"><a id="ad2bdd109636c50dfe5b6a3225cbb3c09" name="ad2bdd109636c50dfe5b6a3225cbb3c09"></a>
+typedef struct <a class="el" href="../../d4/db7/structTraceTaskMonitorCallbackData.html">TraceTaskMonitorCallbackData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>TraceTaskMonitorCallbackData_t</b></td></tr>
+<tr class="separator:ad2bdd109636c50dfe5b6a3225cbb3c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb3131698cd1f56b20aa184693b6ee3b" id="r_afb3131698cd1f56b20aa184693b6ee3b"><td class="memItemLeft" align="right" valign="top"><a id="afb3131698cd1f56b20aa184693b6ee3b" name="afb3131698cd1f56b20aa184693b6ee3b"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>TraceTaskMonitorCallback_t</b>) (<a class="el" href="../../d4/db7/structTraceTaskMonitorCallbackData.html">TraceTaskMonitorCallbackData_t</a> *pxData)</td></tr>
+<tr class="separator:afb3131698cd1f56b20aa184693b6ee3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bf41e88512eaffd5bd0c3241d90f40b" id="r_a3bf41e88512eaffd5bd0c3241d90f40b"><td class="memItemLeft" align="right" valign="top"><a id="a3bf41e88512eaffd5bd0c3241d90f40b" name="a3bf41e88512eaffd5bd0c3241d90f40b"></a>
+typedef struct <a class="el" href="../../d2/d2b/structTraceTaskMonitorData.html">TraceTaskMonitorData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>TraceTaskMonitorData_t</b></td></tr>
+<tr class="separator:a3bf41e88512eaffd5bd0c3241d90f40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Public trace task monitor APIs. </p>
+</div><h2 class="groupheader">Documentation des macros</h2>
+<a id="ad29fc2b31ea1b3307b50f2d0e9a0a0ff" name="ad29fc2b31ea1b3307b50f2d0e9a0a0ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad29fc2b31ea1b3307b50f2d0e9a0a0ff">&#9670;&#160;</a></span>xTraceTaskMonitorGetData</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xTraceTaskMonitorGetData</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_pvTask</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_ppxData</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">TRC_COMMA_EXPR_TO_STATEMENT_EXPR_3((<span class="keywordtype">void</span>)(_pvTask), (<span class="keywordtype">void</span>)(_ppxData), TRC_FAIL)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1cd9f4c207002024f94d852dcded0061" name="a1cd9f4c207002024f94d852dcded0061"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cd9f4c207002024f94d852dcded0061">&#9670;&#160;</a></span>xTraceTaskMonitorInitialize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xTraceTaskMonitorInitialize</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_pxBuffer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">TRC_COMMA_EXPR_TO_STATEMENT_EXPR_2((<span class="keywordtype">void</span>)(_pxBuffer), TRC_SUCCESS)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a66422fa01e9e0b6b8d3c71b54db6fe4e" name="a66422fa01e9e0b6b8d3c71b54db6fe4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66422fa01e9e0b6b8d3c71b54db6fe4e">&#9670;&#160;</a></span>xTraceTaskMonitorPoll</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xTraceTaskMonitorPoll</td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(TRC_FAIL)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad80d63579ab8cabe3ce89b9444d1fae8" name="ad80d63579ab8cabe3ce89b9444d1fae8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad80d63579ab8cabe3ce89b9444d1fae8">&#9670;&#160;</a></span>xTraceTaskMonitorPrint</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xTraceTaskMonitorPrint</td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(TRC_FAIL)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1e3db7cd4ef366e1ce5900edd16f6e78" name="a1e3db7cd4ef366e1ce5900edd16f6e78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e3db7cd4ef366e1ce5900edd16f6e78">&#9670;&#160;</a></span>xTraceTaskMonitorRegister</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xTraceTaskMonitorRegister</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_pvTask</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_uxLow</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_uxHigh</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">TRC_COMMA_EXPR_TO_STATEMENT_EXPR_4((<span class="keywordtype">void</span>)(_pvTask), (<span class="keywordtype">void</span>)(_uxLow), (<span class="keywordtype">void</span>)(_uxHigh), TRC_FAIL)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a76862eb5aac00c31c666eb19b1926d05" name="a76862eb5aac00c31c666eb19b1926d05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76862eb5aac00c31c666eb19b1926d05">&#9670;&#160;</a></span>xTraceTaskMonitorSetCallback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xTraceTaskMonitorSetCallback</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_xCallback</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(TRC_FAIL)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac4582e86853d810153de4a623311ac26" name="ac4582e86853d810153de4a623311ac26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4582e86853d810153de4a623311ac26">&#9670;&#160;</a></span>xTraceTaskMonitorSwitchOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xTraceTaskMonitorSwitchOut</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_pvTask</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">TRC_COMMA_EXPR_TO_STATEMENT_EXPR_2((<span class="keywordtype">void</span>)(_pvTask), TRC_FAIL)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0be5f5a30c68c431f9c81f6f270d56da" name="a0be5f5a30c68c431f9c81f6f270d56da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0be5f5a30c68c431f9c81f6f270d56da">&#9670;&#160;</a></span>xTraceTaskMonitorUnregister</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xTraceTaskMonitorUnregister</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_pvTask</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">TRC_COMMA_EXPR_TO_STATEMENT_EXPR_2((<span class="keywordtype">void</span>)(_pvTask), TRC_FAIL)</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_364068cac840ea2f55acd2e21b2efa5a.html">TraceRecorder</a></li><li class="navelem"><a class="el" href="../../dir_71b6e2e7ee2682cc79104e6f8346e9ec.html">include</a></li><li class="navelem"><a class="el" href="../../d2/de1/trcTaskMonitor_8h.html">trcTaskMonitor.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>
