@@ -20,6 +20,9 @@
 #include "trcRecorder.h"
 #endif
 
+#if not configUSE_TRACE_FACILITY && DEBUG
+#warning FreeRTOS config does not allow Trace Recording
+#endif
 
 #define TEST_NO_FREERTOS false //Ignore le FreeRTOS et se comporte comme un arduino classique
 
@@ -136,10 +139,12 @@ void SystemClock_Config(void)
 
 void setup(){
 
+
     SystemClock_Config();  // Configuration de l'horloge
 
     DWT_Init(); //Très important
 
+    xTraceEnable(TRC_START);
 #if DEBUG
     PrintfSupport::begin(PRINTF_BAUD);
     main_logs.log(WARNING_LEVEL, "Debug enabled at %d baud\n", PRINTF_BAUD);
