@@ -20,7 +20,7 @@ inline void PrintfSupport::begin(uint baud) {
 }
 
 
-int __io_putchar(int ch){
+extern "C" int __io_putchar(int ch){
     /* Place your implementation of fputc here */
     /* e.g. write a character to the USART1 and Loop until the end of transmission */
     PRINTF_SERIAL.write(ch);
