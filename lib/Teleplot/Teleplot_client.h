@@ -4,8 +4,12 @@
 #ifndef TELEPLOT_H
 #define TELEPLOT_H
 
+#include <FreeRTOS.h>
+#include <FreeRTOS/Source/include/semphr.h>
 #include <Arduino.h>
 #include <Logger.h>
+
+#define MUTEX_TIMEOUT 1
 
 #define BEACON_MSG_LEN_MAX 2556
 #define INTERNAL_BUFFER_SIZE 200
@@ -14,6 +18,7 @@
 class Teleplot {
 private:
     char tampon[BEACON_MSG_LEN_MAX]="";
+    SemaphoreHandle_t mutex = xSemaphoreCreateMutex();
 
     unsigned long temps_ms = 0;
     bool temps_fige = false;

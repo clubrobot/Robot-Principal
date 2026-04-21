@@ -204,7 +204,10 @@ void wb_setup(){
     //purePursuit.load(PUREPURSUIT_ADDRESS);
 }
 
+Logger wb_thread_log = Logger("WB_THREAD");
+
 void wb_loop(void *pvParameters){
+    TaskHandle_t automate = xTaskGetHandle("Robot loop");
 for(;;) {
     // Update odometry
     if (odometry.update()){
@@ -225,5 +228,11 @@ for(;;) {
 #else
         velocityControl.update();
 #endif // ENABLE_VELOCITYCONTROLLER_LOGS
+    if (positionControl.getPositionReached()) {
+        xTaskNotifyGive(automate);
+        wb_thread_log.log(INFO_LEVEL, "Position reached");
+        wb_thread_log.log(INFO_LEVEL, "velocity : %d, %d", velocityControl.getLinOutput(), velocityControl.getAngOutput());
+        wb_thread_log.log(INFO_LEVEL, "targetVelocity : %d, %d", velocityControl.getLinSetpoint(), velocityControl.getAngSetpoint());
+    }
 }
 }

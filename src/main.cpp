@@ -139,16 +139,18 @@ void SystemClock_Config(void)
 
 void setup(){
 
+
     SystemClock_Config();  // Configuration de l'horloge
 
     DWT_Init(); //Très important
 
+    xTraceEnable(TRC_START);
 #if DEBUG
     PrintfSupport::begin(PRINTF_BAUD);
     main_logs.log(WARNING_LEVEL, "Debug enabled at %d baud\n", PRINTF_BAUD);
 
     main_logs.log(INFO_LEVEL, "Printing WheeledBase Params\n");
-    Wheeledbase::PRINT_PARAMS();
+    //Wheeledbase::PRINT_PARAMS();
 #endif
     match_started= true;
     wb_setup();
