@@ -70,9 +70,9 @@ void Wheeledbase::TURNTO_DELTA(float dtheta, bool bloquant){
     while(!(Wheeledbase::POSITION_REACHED() & 0b01) && bloquant) {
         //Wait I guess
     }
-    printf("initial_pos: %f %f %f\n", initial_pos.x, initial_pos.y, initial_pos.theta);
-    printf("target_pos: %f %f %f\n", target_pos.x, target_pos.y, target_pos.theta);
-    printf("L'objectif a été atteint, WheeledBase::TURNTO_DELTA est ok\n");
+    wb_logger.log(INFO_LEVEL, "initial_pos: %f %f %f\n", initial_pos.x, initial_pos.y, initial_pos.theta);
+    wb_logger.log(INFO_LEVEL, "target_pos: %f %f %f\n", target_pos.x, target_pos.y, target_pos.theta);
+    wb_logger.log(INFO_LEVEL, "L'objectif a été atteint, WheeledBase::TURNTO_DELTA est ok\n");
 }
 
 /*void Wheeledbase::TENTATIVE_POUR_PLUSTARD() {
