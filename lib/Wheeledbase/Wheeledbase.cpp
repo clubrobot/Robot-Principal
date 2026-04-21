@@ -24,6 +24,7 @@ void Wheeledbase::GOTO_DELTA(float dx, float dy, bool bloquant) {
     Position target_pos;
     target_pos.x = initial_pos.x + dx ; //* cos(initial_pos.theta) + dy * -1 * sin(initial_pos.theta)) * -1
     target_pos.y = initial_pos.y + dy ; //* sin(initial_pos.theta) + dy * cos(initial_pos.theta);
+    basicMove.theta_init = initial_pos.theta;
 
     target_pos.theta = atan2(target_pos.y - initial_pos.y, target_pos.x - initial_pos.x);
     int direction;
@@ -62,7 +63,7 @@ void Wheeledbase::TURNTO_DELTA(float dtheta, bool bloquant){
     
     positionControl.setMoveStrategy(basicTurn);
     basicTurn.ang_precision = 0.1;
-    basicTurn.ang_max_speed = 1.7;
+    basicTurn.ang_max_speed = 2;
     basicTurn.ang_slowing_distance = 0.3;
 
     positionControl.setPosSetpoint(target_pos);

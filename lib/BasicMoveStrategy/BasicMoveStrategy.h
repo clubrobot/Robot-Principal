@@ -15,6 +15,7 @@ class BasicMoveStrategy : public AbstractMoveStrategy {
      * Stratégie développée afin de déplacer le robot en ligne droite selon l'axe x pour régler le PID.
      */
 public:
+    float theta_init = 0;
     int x_precision;
     int x_max_speed;
     int x_slowing_distance;
@@ -22,7 +23,7 @@ public:
 protected:
     void computeVelSetpoints(float timestep) override;
     bool getPositionReached() override;
-    float anglToVitAngl(float angle_init, float timestep);
+    float anglToVitAngl(float timestep);
 };
 
 

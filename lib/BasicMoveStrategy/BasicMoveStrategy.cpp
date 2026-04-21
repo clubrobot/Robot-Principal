@@ -17,9 +17,8 @@ void BasicMoveStrategy::computeVelSetpoints(float timestep) {
         obj = x_max_speed * fabs(dx) / x_slowing_distance;
         obj = (dx > 0) ? obj : -obj;
     }
-    float correction_angle = -anglToVitAngl(angle_init, timestep);
+    float correction_angle = -anglToVitAngl(timestep);
     setVelSetpoints(obj, correction_angle); //vitesse roue, et vitesse angulaire
-    float angle_init = getPosInput().theta;
 }
 
 bool BasicMoveStrategy::getPositionReached() {
@@ -31,7 +30,7 @@ bool BasicMoveStrategy::getPositionReached() {
     return x_goalReached;
 }
 
-float BasicMoveStrategy::anglToVitAngl(float angle_init, float timestep) {
+float BasicMoveStrategy::anglToVitAngl(float timestep) {
     float angle_now = getPosInput().theta;
-    return (angle_now - angle_init) / timestep;
+    return (angle_now - this->theta_init) / timestep;
 }
