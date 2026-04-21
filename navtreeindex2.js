@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"de/d33/classVelocityController.html#ae2691871fd8b5a3522dfb671cfdb6716":[10,0,65,2],
 "de/d35/structlimites__actionneurs.html":[10,0,28],
 "de/d46/CRC16_8h_source.html":[11,0,2,6,0],
 "de/d4b/classSensorArray.html":[10,0,40],
