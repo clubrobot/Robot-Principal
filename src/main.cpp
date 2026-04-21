@@ -150,7 +150,7 @@ void setup(){
     main_logs.log(WARNING_LEVEL, "Debug enabled at %d baud\n", PRINTF_BAUD);
 
     main_logs.log(INFO_LEVEL, "Printing WheeledBase Params\n");
-    Wheeledbase::PRINT_PARAMS();
+    //Wheeledbase::PRINT_PARAMS();
 #endif
     match_started= true;
     wb_setup();
