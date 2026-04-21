@@ -19,8 +19,8 @@ float VelocityController::genRampSetpoint(float stepSetpoint, float input, float
 {
 	// If we are above the desired setpoint (i.e. the ramp), we no longer try to follow it.
 	// Instead we generate a new ramp starting from our current position.
-	if ((input - rampSetpoint) * (stepSetpoint - rampSetpoint) > 0)
-		rampSetpoint = input;
+	// if ((input - rampSetpoint) * (stepSetpoint - rampSetpoint) > 0)
+	//	rampSetpoint = input;
 
 	// Do we have to accelerate or deccelerate to reach the desired setpoint?
 	if (input * (stepSetpoint - input) >= 0)

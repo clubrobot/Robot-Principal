@@ -6,7 +6,6 @@
 #include "BasicMoveStrategy.h"
 // Instructions
 
-TraceStringHandle_t channel = xTraceRegisterString("Wheeledbase");
 
 void Wheeledbase::DISABLE() {
     velocityControl.disable();
@@ -15,7 +14,6 @@ void Wheeledbase::DISABLE() {
     rightWheel.setVelocity(0);
 }
 
-Logger WbLogger = Logger("Wheeledbase lib");
 BasicMoveStrategy basicMove;
 
 void Wheeledbase::GOTO_DELTA(float dx, float dy, bool bloquant) {
@@ -30,8 +28,8 @@ void Wheeledbase::GOTO_DELTA(float dx, float dy, bool bloquant) {
     target_pos.theta = atan2(target_pos.y - initial_pos.y, target_pos.x - initial_pos.x);
     int direction;
 
-    WbLogger.log(INFO_LEVEL, "initial_pos: %f %f %f\n", initial_pos.x, initial_pos.y, initial_pos.theta);
-    WbLogger.log(INFO_LEVEL, "target_pos: %f %f %f\n", target_pos.x, target_pos.y, target_pos.theta);
+    printf("initial_pos: %f %f %f\n", initial_pos.x, initial_pos.y, initial_pos.theta);
+    printf("target_pos: %f %f %f\n", target_pos.x, target_pos.y, target_pos.theta);
     
     initial_pos.theta = inrange(initial_pos.theta, -M_PI,M_PI);
 
@@ -47,10 +45,12 @@ void Wheeledbase::GOTO_DELTA(float dx, float dy, bool bloquant) {
     while(!(Wheeledbase::POSITION_REACHED() & 0b01) && bloquant) {
         //Wait I guess
     }
-    WbLogger.log(INFO_LEVEL, "GOTO_DELTA ended");
+    //printf("L'objectif a été atteint, WheeledBase::GOTO_DELTA est ok\n");
 }
 
-void Wheeledbase::TURNTO_DELTA(float dtheta, bool bloquant){   
+BasicTurnStrategy basicTurn;
+void Wheeledbase::TURNTO_DELTA(float dtheta, bool bloquant){
+    printf("initiating turn");
     velocityControl.disable();
 
     Position initial_pos = *odometry.getPosition();
@@ -60,7 +60,6 @@ void Wheeledbase::TURNTO_DELTA(float dtheta, bool bloquant){
     target_pos.y = initial_pos.y;
     target_pos.theta = initial_pos.theta + dtheta;
     
-    BasicTurnStrategy basicTurn;
     positionControl.setMoveStrategy(basicTurn);
     basicTurn.ang_precision = 0.1;
     basicTurn.ang_max_speed = 1.7;
@@ -73,9 +72,9 @@ void Wheeledbase::TURNTO_DELTA(float dtheta, bool bloquant){
     while(!(Wheeledbase::POSITION_REACHED() & 0b01) && bloquant) {
         //Wait I guess
     }
-    wb_logger.log(INFO_LEVEL, "initial_pos: %f %f %f\n", initial_pos.x, initial_pos.y, initial_pos.theta);
-    wb_logger.log(INFO_LEVEL, "target_pos: %f %f %f\n", target_pos.x, target_pos.y, target_pos.theta);
-    wb_logger.log(INFO_LEVEL, "L'objectif a été atteint, WheeledBase::TURNTO_DELTA est ok\n");
+    printf("initial_pos: %f %f %f\n", initial_pos.x, initial_pos.y, initial_pos.theta);
+    printf("target_pos: %f %f %f\n", target_pos.x, target_pos.y, target_pos.theta);
+    printf("L'objectif a été atteint, WheeledBase::TURNTO_DELTA est ok\n");
 }
 
 /*void Wheeledbase::TENTATIVE_POUR_PLUSTARD() {
@@ -206,7 +205,6 @@ void Wheeledbase::START_TURNONTHESPOT_DIR(bool dir, float theta) {
 0b11 si les deux (3)
 */
 uint8_t Wheeledbase::POSITION_REACHED() {
-    xTracePrint(channel, "testing if pos reached");
     bool positionReached = positionControl.getPositionReached() && positionControl.isEnabled();
     bool spinUrgency = false;//!velocityControl.isEnabled();
     uint8_t ret = 0;
