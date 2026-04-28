@@ -25,7 +25,7 @@ bool PositionController::getPositionReached()
 	if (m_moveStrategy != 0)
 		return m_moveStrategy->getPositionReached();
 	return false;
-}
+	}
 
 void PositionController::setVelTunings(float linVelKp, float angVelKp) {
 	m_linVelKp = linVelKp;

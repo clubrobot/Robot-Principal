@@ -228,6 +228,8 @@ for(;;) {
     {
         float linVelSetpoint = positionControl.getLinVelSetpoint();
         float angVelSetpoint = positionControl.getAngVelSetpoint();
+        //float linVelSetpoint = 0;
+        //float angVelSetpoint = PI/4;
         velocityControl.setSetpoints(linVelSetpoint, angVelSetpoint);
     }
         // Integrate engineering control

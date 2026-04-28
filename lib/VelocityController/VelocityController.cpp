@@ -127,6 +127,7 @@ void VelocityControllerLogs::process(float timestep){
 	teleplot.add_variable_float_2decimal("m_rampLinVelSetpoint", m_controller->m_rampLinVelSetpoint);
 	teleplot.add_variable_float_2decimal("m_linInput", m_controller->m_linInput);
 	teleplot.add_variable_float_2decimal("m_linVelOutput", m_controller->m_linVelOutput);
+	teleplot.add_variable_float_2decimal("m_angSetpoint", m_controller->m_angSetpoint);
 	teleplot.add_variable_float_2decimal("m_rampAngVelSetpoint", m_controller->m_rampAngVelSetpoint);
 	teleplot.add_variable_float_2decimal("m_angInput", m_controller->m_angInput);
 	teleplot.add_variable_float_2decimal("m_angVelOutput", m_controller->m_angVelOutput);

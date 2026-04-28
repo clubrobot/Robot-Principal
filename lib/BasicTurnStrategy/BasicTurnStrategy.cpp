@@ -4,17 +4,19 @@
 
 #include "BasicTurnStrategy.h"
 
+#include "mathutils.h"
+#include "Teleplot.h"
+
 void BasicTurnStrategy::computeVelSetpoints(float timestep) {
     float dang = getPosSetpoint().theta - getPosInput().theta;
+    teleplot.add_variable_float_2decimal("dang", dang);
     float obj;
-    if (dang > 0 && dang > ang_slowing_distance) {
-        obj = ang_max_speed; 
-    } else if (dang < 0 && fabs(dang) > ang_slowing_distance) {
-        obj = -ang_max_speed;
-    } else { 
-        obj = ang_max_speed * fabs(dang) / ang_slowing_distance;
-        obj = (dang > 0) ? obj : -obj;
-    } 
+    float kp = 1;
+    if (fabs(dang) > ang_precision) {
+        obj = saturate(kp * dang, -ang_max_speed, ang_max_speed);
+    } else {
+        obj = 0;
+    }
     setVelSetpoints(0, -obj);
 }
 

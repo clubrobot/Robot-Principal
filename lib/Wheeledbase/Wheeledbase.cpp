@@ -62,9 +62,9 @@ void Wheeledbase::TURNTO_DELTA(float dtheta, bool bloquant){
     target_pos.theta = initial_pos.theta + dtheta;
     
     positionControl.setMoveStrategy(basicTurn);
-    basicTurn.ang_precision = 0.1;
-    basicTurn.ang_max_speed = 2;
-    basicTurn.ang_slowing_distance = 0.3;
+    basicTurn.ang_precision = 0.3;
+    basicTurn.ang_max_speed = PI/4;
+    basicTurn.ang_slowing_distance = 0.5;
 
     positionControl.setPosSetpoint(target_pos);
     velocityControl.enable();
@@ -73,9 +73,9 @@ void Wheeledbase::TURNTO_DELTA(float dtheta, bool bloquant){
     while(!(Wheeledbase::POSITION_REACHED() & 0b01) && bloquant) {
         //Wait I guess
     }
-    printf("initial_pos: %f %f %f\n", initial_pos.x, initial_pos.y, initial_pos.theta);
-    printf("target_pos: %f %f %f\n", target_pos.x, target_pos.y, target_pos.theta);
-    printf("L'objectif a été atteint, WheeledBase::TURNTO_DELTA est ok\n");
+    //printf("initial_pos: %f %f %f\n", initial_pos.x, initial_pos.y, initial_pos.theta);
+    //printf("target_pos: %f %f %f\n", target_pos.x, target_pos.y, target_pos.theta);
+    //printf("L'objectif a été atteint, WheeledBase::TURNTO_DELTA est ok\n");
 }
 
 /*void Wheeledbase::TENTATIVE_POUR_PLUSTARD() {

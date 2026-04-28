@@ -1,6 +1,7 @@
 #include <Arduino.h>
 
 #include "Odometry.h"
+#include "../Teleplot/Teleplot.h"
 
 #include <math.h>
 
@@ -20,6 +21,13 @@ void Odometry::process(float timestep)
 
 	m_linVel = deltaLinPos / timestep;
 	m_angVel = deltaAngPos / timestep;
+
+
+	teleplot.add_variable_float_2decimal("posX", m_pos.x);
+	teleplot.add_variable_float_2decimal("posY", m_pos.y);
+	teleplot.add_variable_float_2decimal("posTheta", m_pos.theta);
+	teleplot.add_variable_float_2decimal("linVel", m_linVel);
+	teleplot.add_variable_float_2decimal("angVel", m_angVel);
 }
 
 void Odometry::setAxleTrack   (float axleTrack)   {
