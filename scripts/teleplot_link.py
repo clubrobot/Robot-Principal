@@ -9,6 +9,8 @@ def get_serial(baud: int=9600) -> serial.Serial:
     :return: the serial port object
     """
     usbPort = input("Port du robot (/dev/ttyUSB0, COM1, ...): ")
+    if usbPort == "":
+        usbPort = "/dev/ttyACM0"
     ser = serial.Serial(usbPort, baud, timeout=1)
     return ser
 
@@ -27,7 +29,7 @@ def send_data(socket : socket.socket, data : str, ip : str="127.0.0.1", port : i
     :param ip: the ip of the server
     :param port: the port of the server
     """
-    socket.sendto(data.encode("utf-8"), (ip, port))
+    socket.sendto(data.encode("utf-8", errors="ignore"), (ip, port))
 
 def get_line(ser : serial.Serial) -> str:
     """
@@ -35,7 +37,7 @@ def get_line(ser : serial.Serial) -> str:
     :param ser: the serial port object
     :return: the line read
     """
-    return ser.readline().decode("utf-8")
+    return ser.readline().decode("utf-8", errors="ignore")
 
 def main(baud : int, ip : str, port : int) -> None:
     """
@@ -50,7 +52,7 @@ def main(baud : int, ip : str, port : int) -> None:
     while(1):
         line = get_line(ser)
         if re.compile(r".+:.+").search(line):
-            send_data(socket, line)
+            send_data(socket, line, ip, port)
 
 if __name__ == "__main__":
     baud = 115200
