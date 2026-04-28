@@ -16,12 +16,15 @@
 
 #define DEBUG 1
 
-#if DEBUG
+#if DEBUG && configUSE_TRACE_FACILITY
 #include "trcRecorder.h"
 #endif
 
 #if not configUSE_TRACE_FACILITY && DEBUG
+#ifndef ALREADY_WARNED
+#define ALREADY_WARNED
 #warning FreeRTOS config does not allow Trace Recording
+#endif
 #endif
 
 #define TEST_NO_FREERTOS false //Ignore le FreeRTOS et se comporte comme un arduino classique
@@ -144,7 +147,9 @@ void setup(){
 
     DWT_Init(); //Très important
 
+#if configUSE_TRACE_FACILITY
     xTraceEnable(TRC_START);
+#endif
 #if DEBUG
     PrintfSupport::begin(PRINTF_BAUD);
     main_logs.log(WARNING_LEVEL, "Debug enabled at %d baud\n", PRINTF_BAUD);
