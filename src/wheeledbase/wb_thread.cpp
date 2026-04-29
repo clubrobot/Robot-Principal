@@ -3,8 +3,8 @@
 
 //Declare all modules
 DCMotorsDriver driver;
-DCMotor leftWheel;
-DCMotor rightWheel;
+WheelMotor leftWheel;
+WheelMotor rightWheel;
 
 TIM_HandleTypeDef htim23;//Right
 TIM_HandleTypeDef htim24;//Left

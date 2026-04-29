@@ -24,6 +24,8 @@
 #include "yeux/yeuxThread.h"
 
 #include "BasicMoveStrategy.h"
+#include "Elevator.h"
+#include "HazelnutGripper.h"
 
 namespace Automate {
     Logger auto_logs = Logger("AUTOMATE");

@@ -7,6 +7,11 @@
 #include <variables_globales.h>
 #include <Logger.h>
 
+#include "BournsACEncoder.h"
+#include "DCMotor.h"
+#include "DRV8876.h"
+#include "Elevator.h"
+#include "HazelnutGripper.h"
 #include "ihm/ihm.h"
 #include "wheeledbase/wb_thread.h"
 #include "sensors/SensorsThread.h"
@@ -140,6 +145,12 @@ void SystemClock_Config(void)
   }
 }
 
+
+static HazelnutGripper::BournsACEncoder encoder(PA4, PB13, PB12, PE12, PC4, PA7, PA6, PA5);
+static DRV8876 drv8876(PA9,PC8);
+static DCMotor motor;
+static PID pid;
+
 void setup(){
 
 
@@ -164,6 +175,102 @@ void setup(){
     main_logs.log(WARNING_LEVEL,"Not using FreeRTOS\n");
     return;
 #endif
+
+
+  drv8876.init();
+  drv8876.attach(&motor);
+
+
+  HazelnutGripper::Gripper::init();
+
+  HazelnutGripper::GripperWire.begin();
+
+  HazelnutGripper::Gripper::closeAll();
+
+  HazelnutGripper::Gripper::setRotationAll(0);
+
+  HazelnutGripper::Gripper::spreadFingers(0);
+
+  /*
+  delay(5000);
+
+  HazelnutGripper::Gripper::closeAll();
+
+  delay(5000);*/
+
+
+  //pid a vide pid.setTunings(0.022,0.016,0.001);
+  pid.setTunings(0.022,0.0,0.0);
+  pid.setOutputLimits(-0.90,0.90);
+
+  HazelnutGripper::Elevator::setPID(pid);
+
+  encoder.init();
+
+  HazelnutGripper::Elevator::init(&motor,&encoder);
+
+  HazelnutGripper::Elevator::setAngle(55.437500);
+
+
+
+  TaskHandle_t  gripper_handle = nullptr;
+
+  BaseType_t ret_gripper = xTaskCreate(
+              &HazelnutGripper::Elevator::task,
+              "Elevator",
+              10000,
+              nullptr,
+              5,//Prio max
+              &gripper_handle );
+  if(ret_gripper!=pdPASS) {Error_Handler()}
+
+
+/*
+
+  HazelnutGripper::Gripper::init();
+
+  HazelnutGripper::GripperWire.begin();
+
+  HazelnutGripper::Gripper::closeAll();
+
+  HazelnutGripper::Gripper::setRotationAll(0);
+  delay(2000);
+
+
+  HazelnutGripper::Gripper::openAll();
+
+  delay(5000);
+
+  HazelnutGripper::Gripper::closeAll();
+
+  delay(5000);
+
+  HazelnutGripper::Gripper::spreadFingers(180);
+
+  delay(1000);
+
+  HazelnutGripper::Gripper::setRotationAll(180);
+  delay(2000);
+
+
+  HazelnutGripper::Gripper::spreadFingers(0);
+
+  delay(5000);
+
+  HazelnutGripper::Gripper::openAll();
+
+
+  encoder.init();
+
+  printf("annngle :: %f\n",encoder.getAngle());
+
+  HazelnutGripper::Elevator::init(&d,&encoder);
+
+
+*/
+
+
+
     main_logs.log(GOOD_LEVEL,"Using FreeRTOS\n");
     //Setup FreeRTOS
 
