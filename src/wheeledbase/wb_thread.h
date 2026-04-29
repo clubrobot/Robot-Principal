@@ -16,7 +16,7 @@
 
 // Load the different modules
 
-extern DCMotorsDriver driver;
+extern DRV8844 driver;
 extern WheelMotor leftWheel;
 extern WheelMotor rightWheel;
 
