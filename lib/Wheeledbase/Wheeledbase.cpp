@@ -551,8 +551,6 @@ void Wheeledbase::SET_PARAMETER_VALUE(byte paramID, float value) {
     case LEFTWHEEL_CONSTANT_ID:
         leftWheel.setConstant(value);
         break;
-    case LEFTWHEEL_MAXPWM_ID:
-        leftWheel.setMaxPWM(value);
         break;
     case RIGHTWHEEL_RADIUS_ID:
         rightWheel.setWheelRadius(value);
@@ -560,8 +558,6 @@ void Wheeledbase::SET_PARAMETER_VALUE(byte paramID, float value) {
     case RIGHTWHEEL_CONSTANT_ID:
         rightWheel.setConstant(value);
         break;
-    case RIGHTWHEEL_MAXPWM_ID:
-        rightWheel.setMaxPWM(value);
         break;
     case LEFTCODEWHEEL_RADIUS_ID:
         leftCodewheel.setWheelRadius(value);
@@ -665,20 +661,12 @@ float Wheeledbase::GET_PARAMETER_VALUE(byte paramID) {
     else if (paramID == LEFTWHEEL_CONSTANT_ID) {
         return leftWheel.getConstant();
     }
-    else if (paramID == LEFTWHEEL_MAXPWM_ID) {
-        return leftWheel.getMaxPWM();
-    }
-
-    else if (paramID == RIGHTWHEEL_RADIUS_ID) {
+    else  if (paramID == RIGHTWHEEL_RADIUS_ID) {
         return rightWheel.getWheelRadius();
     }
     else if (paramID == RIGHTWHEEL_CONSTANT_ID) {
         return rightWheel.getConstant();
     }
-    else if (paramID == RIGHTWHEEL_MAXPWM_ID) {
-        return rightWheel.getMaxPWM();
-    }
-
     else if (paramID == LEFTCODEWHEEL_RADIUS_ID) {
         return leftCodewheel.getWheelRadius();
     }
@@ -781,10 +769,8 @@ float Wheeledbase::GET_PARAMETER_VALUE(byte paramID) {
 void Wheeledbase::PRINT_PARAMS() {
     Serial.print(F(" LEFTWHEEL_RADIUS_ID:")); Serial.println(leftWheel.getWheelRadius());
     Serial.print(F(" LEFTWHEEL_CONSTANT_ID:")); Serial.println(leftWheel.getConstant());
-    Serial.print(F(" LEFTWHEEL_MAXPWM_ID:")); Serial.println(leftWheel.getMaxPWM());
     Serial.print(F(" RIGHTWHEEL_RADIUS_ID:")); Serial.println(rightWheel.getWheelRadius());
     Serial.print(F(" RIGHTWHEEL_CONSTANT_ID:")); Serial.println(rightWheel.getConstant());
-    Serial.print(F(" RIGHTWHEEL_MAXPWM_ID:")); Serial.println(rightWheel.getMaxPWM());
     Serial.print(F(" LEFTCODEWHEEL_RADIUS_ID:")); Serial.println(leftCodewheel.getWheelRadius());
     Serial.print(F(" LEFTCODEWHEEL_COUNTSPERREV_ID:")); Serial.println(leftCodewheel.getCountsPerRev());
     Serial.print(F(" RIGHTCODEWHEEL_RADIUS_ID:")); Serial.println(rightCodewheel.getWheelRadius());

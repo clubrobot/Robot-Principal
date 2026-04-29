@@ -1,16 +1,19 @@
 #include <Arduino.h>
 #include "wb_thread.h"
 
+#include "DRV8844.h"
+
 //Declare all modules
-DCMotorsDriver driver;
+DRV8844 driver(wb_consts.LEFT_MOTOR_EN, wb_consts.LEFT_MOTOR_DIR, wb_consts.LEFT_MOTOR_PWM, wb_consts.RIGHT_MOTOR_EN,
+               wb_consts.RIGHT_MOTOR_DIR, wb_consts.RIGHT_MOTOR_PWM, wb_consts.DRIVER_FAULT, wb_consts.DRIVER_RESET);
 WheelMotor leftWheel;
 WheelMotor rightWheel;
 
-TIM_HandleTypeDef htim23;//Right
-TIM_HandleTypeDef htim24;//Left
+TIM_HandleTypeDef htim23; //Right
+TIM_HandleTypeDef htim24; //Left
 
-Codewheel leftCodewheel(&htim23);
-Codewheel rightCodewheel(&htim24);
+Codewheel leftCodewheel(&htim24);
+Codewheel rightCodewheel(&htim23);
 
 Odometry odometry;
 
@@ -27,13 +30,12 @@ PositionController positionControl;
 PurePursuit purePursuit;
 TurnOnTheSpot turnOnTheSpot;
 
-void write_default_params() {
+void write_default_params()
+{
     leftWheel.setWheelRadius(wb_consts.LEFTWHEEL_RADIUS);
     leftWheel.setConstant(wb_consts.LEFTWHEEL_CONSTANT);
-    leftWheel.setMaxPWM(wb_consts.LEFTWHEEL_MAXPWM);
     rightWheel.setWheelRadius(wb_consts.RIGHTWHEEL_RADIUS);
     rightWheel.setConstant(wb_consts.RIGHTWHEEL_CONSTANT);
-    rightWheel.setMaxPWM(wb_consts.RIGHTWHEEL_MAXPWM);
 
     leftCodewheel.setWheelRadius(wb_consts.LEFTCODEWHEEL_RADIUS);
     leftCodewheel.setCountsPerRev(wb_consts.LEFTCODEWHEEL_COUNTSPERREV);
@@ -48,7 +50,7 @@ void write_default_params() {
     velocityControl.setMaxLinDec(wb_consts.VELOCITYCONTROL_MAXLINDEC);
     velocityControl.setMaxAngAcc(wb_consts.VELOCITYCONTROL_MAXANGACC);
     velocityControl.setMaxAngDec(wb_consts.VELOCITYCONTROL_MAXANGDEC);
-    
+
     velocityControl.setSpinShutdown(wb_consts.VELOCITYCONTROL_SPINSHUTDOWN);
     linVelPID.setTunings(wb_consts.LINVELPID_KP, wb_consts.LINVELPID_KI, wb_consts.LINVELPID_KD);
     linVelPID.setOutputLimits(wb_consts.LINVELPID_MINOUTPUT, wb_consts.LINVELPID_MAXOUTPUT);
@@ -57,13 +59,15 @@ void write_default_params() {
     angVelPID.setOutputLimits(wb_consts.ANGVELPID_MINOUTPUT, wb_consts.ANGVELPID_MAXOUTPUT);
 
     positionControl.setVelLimits(wb_consts.POSITIONCONTROL_LINVELMAX, wb_consts.POSITIONCONTROL_ANGVELMAX);
-    positionControl.setPosThresholds(wb_consts.POSITIONCONTROL_LINPOSTHRESHOLD, wb_consts.POSITIONCONTROL_ANGPOSTHRESHOLD);
+    positionControl.setPosThresholds(wb_consts.POSITIONCONTROL_LINPOSTHRESHOLD,
+                                     wb_consts.POSITIONCONTROL_ANGPOSTHRESHOLD);
     purePursuit.setLookAhead(wb_consts.PUREPURSUIT_LOOKAHEAD);
     purePursuit.setLookAheadBis(wb_consts.PUREPURSUIT_LOOKAHEADBIS);
 }
 
 
-void codewheels_setup(){
+void codewheels_setup()
+{
     //--------TIM23
     TIM_Encoder_InitTypeDef sConfig23 = {0};
     TIM_MasterConfigTypeDef sMasterConfig23 = {0};
@@ -101,13 +105,15 @@ void codewheels_setup(){
     sConfig23.IC2Prescaler = TIM_ICPSC_DIV1;
     sConfig23.IC2Filter = 0;
 
-    if (HAL_TIM_Encoder_Init(&htim23, &sConfig23) != HAL_OK){
-        Error_Handler();//Not good
+    if (HAL_TIM_Encoder_Init(&htim23, &sConfig23) != HAL_OK)
+    {
+        Error_Handler(); //Not good
     }
     sMasterConfig23.MasterOutputTrigger = TIM_TRGO_RESET;
     sMasterConfig23.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-    if (HAL_TIMEx_MasterConfigSynchronization(&htim23, &sMasterConfig23) != HAL_OK){
-        Error_Handler();//Not good
+    if (HAL_TIMEx_MasterConfigSynchronization(&htim23, &sMasterConfig23) != HAL_OK)
+    {
+        Error_Handler(); //Not good
     }
 
     HAL_TIM_Encoder_Start_IT(&htim23, TIM_CHANNEL_ALL);
@@ -118,7 +124,7 @@ void codewheels_setup(){
     GPIO_InitTypeDef GPIO_InitStruct24 = {0};
     __HAL_RCC_TIM24_CLK_ENABLE();
 
-    GPIO_InitStruct24.Pin = GPIO_PIN_11|GPIO_PIN_12;
+    GPIO_InitStruct24.Pin = GPIO_PIN_11 | GPIO_PIN_12;
     GPIO_InitStruct24.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct24.Pull = GPIO_NOPULL;
     GPIO_InitStruct24.Speed = GPIO_SPEED_FREQ_LOW;
@@ -132,7 +138,7 @@ void codewheels_setup(){
     htim24.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
     htim24.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
     sConfig24.EncoderMode = TIM_ENCODERMODE_TI1;
-    sConfig24.IC1Polarity = TIM_ICPOLARITY_RISING;
+    sConfig24.IC1Polarity = TIM_ICPOLARITY_FALLING;
     sConfig24.IC1Selection = TIM_ICSELECTION_DIRECTTI;
     sConfig24.IC1Prescaler = TIM_ICPSC_DIV1;
     sConfig24.IC1Filter = 0;
@@ -141,33 +147,36 @@ void codewheels_setup(){
     sConfig24.IC2Prescaler = TIM_ICPSC_DIV1;
     sConfig24.IC2Filter = 0;
 
-    if (HAL_TIM_Encoder_Init(&htim24, &sConfig24) != HAL_OK){
-        Error_Handler();//Not good
+    if (HAL_TIM_Encoder_Init(&htim24, &sConfig24) != HAL_OK)
+    {
+        Error_Handler(); //Not good
     }
     sMasterConfig24.MasterOutputTrigger = TIM_TRGO_RESET;
     sMasterConfig24.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-    if (HAL_TIMEx_MasterConfigSynchronization(&htim24, &sMasterConfig24) != HAL_OK){
-        Error_Handler();//Not good
+    if (HAL_TIMEx_MasterConfigSynchronization(&htim24, &sMasterConfig24) != HAL_OK)
+    {
+        Error_Handler(); //Not good
     }
 
     HAL_TIM_Encoder_Start_IT(&htim24, TIM_CHANNEL_ALL);
 
-    leftCodewheel.m_htim = &htim23;
-    leftCodewheel.m_tim = TIM23;
-    rightCodewheel.m_htim = &htim24;
-    rightCodewheel.m_tim = TIM24;
+    leftCodewheel.m_htim = &htim24;
+    leftCodewheel.m_tim = TIM24;
+    rightCodewheel.m_htim = &htim23;
+    rightCodewheel.m_tim = TIM23;
 }
 
 // Setup
-void wb_setup(){
+void wb_setup()
+{
     //TODO once
     write_default_params();
-    // DC motors wheels
-    driver.attach(wb_consts.DRIVER_RESET, wb_consts.DRIVER_FAULT);
-    driver.reset();
 
-    leftWheel.attach(wb_consts.LEFT_MOTOR_EN, wb_consts.LEFT_MOTOR_PWM, wb_consts.LEFT_MOTOR_DIR);
-    rightWheel.attach(wb_consts.RIGHT_MOTOR_EN, wb_consts.RIGHT_MOTOR_PWM, wb_consts.RIGHT_MOTOR_DIR);
+    driver.init();
+
+    driver.attach(&leftWheel,0);
+    driver.attach(&rightWheel,1);
+
 
     // Codewheels
     codewheels_setup();
@@ -185,7 +194,7 @@ void wb_setup(){
     velocityControl.setPID(linVelPID, angVelPID);
     velocityControl.disable();
 
-    //const float maxLinVel = min(leftWheel.getMaxVelocity(), rightWheel.getMaxVelocity());
+    // const float maxLinVel = min(leftWheel.getMaxVelocity(), rightWheel.getMaxVelocity());
     //const float maxAngVel = min(leftWheel.getMaxVelocity(), rightWheel.getMaxVelocity()) * 2 / VELOCITYCONTROL_AXLETRACK_VALUE;
 
     //linVelPID.setOutputLimits(-maxLinVel, maxLinVel);
@@ -204,11 +213,7 @@ void wb_setup(){
     //purePursuit.load(PUREPURSUIT_ADDRESS);
 }
 
-Logger wb_thread_log = Logger("wb_thread");
-
 void wb_loop(void *pvParameters){
-    TaskHandle_t automate = xTaskGetHandle("Robot loop");
-    bool t = true;
 for(;;) {
     // Update odometry
     if (odometry.update()){
@@ -229,19 +234,5 @@ for(;;) {
 #else
         velocityControl.update();
 #endif // ENABLE_VELOCITYCONTROLLER_LOGS
-    if (positionControl.getPositionReached()) {
-        xTaskNotifyGive(automate);
-        //if (t) {
-        //    teleplot.add_log("Position reached");
-        //    t = false;
-        //}
-        //wb_thread_log.log(INFO_LEVEL, "Position reached");
-        //wb_thread_log.log(INFO_LEVEL, "velocity : %f, %f", velocityControl.getLinOutput(), velocityControl.getAngOutput());
-        //wb_thread_log.log(INFO_LEVEL, "targetVelocity : %f, %f", velocityControl.getLinSetpoint(), velocityControl.getAngSetpoint());
-        //teleplot.add_variable_float_2decimal("wb_velOutput", velocityControl.getLinOutput());
-        //teleplot.add_variable_float_2decimal("wb_angVelOutput", velocityControl.getAngOutput());
-        //teleplot.add_variable_float_2decimal("wb_linSetpoint", velocityControl.getLinSetpoint());
-        //teleplot.add_variable_float_2decimal("wb_angSetpoint", velocityControl.getAngSetpoint());
-    }
 }
 }
