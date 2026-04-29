@@ -7,13 +7,15 @@
 
 #include "cerveau/Tache.h"
 
-inline static Tache::Tache tachesBleu = {
+
+constexpr inline static Tache::Tache tachesBleu[] = {
     Tache::Tache{
         .wb_x = {Tache::DELTA, -300},
-    }
+    },
+    Tache::Tache{}
 };
 
-inline static Tache::Tache tachesJaune = {
+constexpr inline static Tache::Tache tachesJaune[] = {
     Tache::Tache{
         .wb_x = {Tache::DELTA, -300},
     }

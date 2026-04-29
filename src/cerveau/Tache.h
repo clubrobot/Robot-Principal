@@ -51,11 +51,14 @@ namespace Tache {
         Variable<float> wb_maxAngVel;
 
         /// Variables liées à la pince et à l'ascenseur.
-        Variable<float> elevator_height;
+        Variable<float> elevator_height; ///en degré
         Variable<bool> clamp_open;
         Variable<bool> clamp_spread;
         Variable<bool> clamp_getColor;
-        Variable<bool*> clamp_rotate;
+        Variable<bool[]> clamp_rotate;
+
+        /// Specific actions
+        Variable<bool> clamp_conditionalRotate;
     };
     typedef Tache Tache;
 }

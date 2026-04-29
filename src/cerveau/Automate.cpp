@@ -7,9 +7,9 @@ namespace Automate {
 
     void init(teamColor team) {
         color = team;
-        taches = &(team == JAUNE ? tachesJaune : tachesBleu);
+        taches = team == JAUNE ? tachesJaune : tachesBleu;
         current_points = 0;
-        numberTaches = sizeof(team == JAUNE ? tachesJaune : tachesBleu) / sizeof(Tache::Tache);
+        numberTaches = sizeof(team == JAUNE ? tachesJaune : tachesBleu) / sizeof(tachesBleu[0]);
     }
 
     void playMatch(void *pvParameters) {
@@ -17,12 +17,79 @@ namespace Automate {
         procedure_demarrage();
 
         for (int i = 0; i < numberTaches; i++) {
-            Tache::Tache* tache = &taches[i];
-
+            const Tache::Tache* tache = &taches[i];
             if (isClampValid(*tache)) {
+                switch (tache->elevator_height.mode) {
+                    case Tache::DELTA:
+                        Error_Handler(); // On ne gère pas les deltas pour l'ascenseur, seulement les positions absolues
+                        break;
+                    case Tache::ABSOLUTE:
+                        HazelnutGripper::Elevator::setAngle(tache->elevator_height.value);
+                        break;
+                    default:
+                        break;
+                } switch (tache->clamp_open.mode) {
+                    case Tache::ABSOLUTE:
+                        if (tache->clamp_open.value) {
+                            HazelnutGripper::Gripper::openAll();
+                        } else {
+                            HazelnutGripper::Gripper::closeAll();
+                        }
+                        break;
+                    case Tache::DELTA:
+                        Error_Handler(); // Comment ca le delta d'un bool
+                        break;
+                    default:
+                        break;
+                } switch (tache->clamp_spread.mode) {
+                    case Tache::ABSOLUTE:
+                        if (tache->clamp_spread.value) {
+                            HazelnutGripper::Gripper::spreadFingers(0);
+                        } else {
+                            HazelnutGripper::Gripper::spreadFingers(180);
+                        }
+                        break;
+                    case Tache::DELTA:
+                        Error_Handler(); // Comment ca le delta d'un bool
+                        break;
+                    default:
+                        break;
+                } if (tache->clamp_conditionalRotate.mode != Tache::IGNORE) {
+                    for (int j = 0; i <= 4; i++) {
+                        teamColor c = convertColor(lastColor[j]);
+                        if (color != c) {
+                            HazelnutGripper::Gripper::getFinger(j).setAngle(1, 180);
+                        }
+                    }
+                } switch (tache->clamp_rotate.mode) {
+                    case Tache::DELTA:
+                        Error_Handler(); //nuh huh
+                        break;
+                    case Tache::ABSOLUTE:
+                        for (int j = 0; i <= 4; i++) {
+                            HazelnutGripper::Gripper::getFinger(j).setAngle(1, 180 * tache->clamp_rotate.value[j]);
+                        }
+                        break;
+                    default:
+                        break;
+                } switch (tache->clamp_getColor.mode) {
+                    case Tache::ABSOLUTE:
+                        if (tache->clamp_getColor.value) {
+                            for (int j = 0; i <= 4; i++) {
+                                HazelnutGripper::ColorData colorData = HazelnutGripper::Gripper::getFinger(j).getColor();
+                                lastColor[j] = colorData;
+                            }
+                        }
+                        break;
+                    case Tache::DELTA:
+                        Error_Handler(); //nuh huh
+                        break;
+                    default:
+                        break;
+                }
+
                 errorHandler();
             }
-
             if (isMovementValid(*tache)) {
                 if (tache->wb_theta.mode == Tache::DELTA) {
                     Wheeledbase::TURNTO_DELTA(tache->wb_theta.value);
@@ -63,8 +130,14 @@ namespace Automate {
 
     }
 
+    teamColor convertColorData(HazelnutGripper::ColorData const &colorData) {
+        if (colorData.red > colorData.green && colorData.red > colorData.blue) return JAUNE;
+        if (colorData.blue > colorData.red  && colorData.blue > colorData.green) return BLEU;
+        errorHandler();
+    }
+
     void errorHandler() {
-        automateLogger.log(ERROR_LEVEL, "Tache invalide détectée !\n");
+        automateLogger.log(ERROR_LEVEL, "État invalide (tâche non valide ou couleur ambiguë)!\n");
         while (true) {
             // Boucle infinie pour indiquer une erreur
         }
