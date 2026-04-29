@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['update_0',['update',['../dd/df3/classCodewheel.html#a481b69520445ed19be3ead3af9a777f7',1,'Codewheel::update()'],['../d2/dfa/classPeriodicProcess.html#a910daacfe12010947ec541d3ac565867',1,'PeriodicProcess::update()']]],
-  ['usage_1',['Usage',['../d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#autotoc_md16',1,'Usage'],['../d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#autotoc_md18',1,'Usage']]],
-  ['utilisation_2',['Utilisation',['..//github/workspace/lib/Teleplot/README.md#autotoc_md46',1,'']]]
+  ['queue_5fsz_0',['queue_sz',['../d4/df8/structos__messageQ__def.html#afc8e51d4d45e959fab77977baf8eb970',1,'os_messageQ_def::queue_sz'],['../df/d87/structos__mailQ__def.html#a2614df3d7904500621666abc01808f22',1,'os_mailQ_def::queue_sz']]],
+  ['queuedefinition_1',['QueueDefinition',['../de/d95/structQueueDefinition.html',1,'']]],
+  ['queuepointers_2',['QueuePointers',['../d4/dac/structQueuePointers.html',1,'']]],
+  ['quotes_3',['Quotes',['../d7/d8e/classMyLibrary_1_1Example.html#autotoc_md28',1,'']]]
 ];

@@ -26,6 +26,7 @@ var dir_97aefd0d527b934f1d99a682da8fe6a9 =
     [ "ShiftRegister", "dir_e4b407f2d2a0aae366ca5909d7096897.html", "dir_e4b407f2d2a0aae366ca5909d7096897" ],
     [ "SpeedPowerProfiling", "dir_62756cf3385797f1f0292ab4650276f4.html", "dir_62756cf3385797f1f0292ab4650276f4" ],
     [ "StepByStepMotor", "dir_a4d559ad0ac4ee650a73f6ad65608c77.html", "dir_a4d559ad0ac4ee650a73f6ad65608c77" ],
+    [ "STM32duino FreeRTOS", "dir_e63db30fdf8cb3590da7d143a9c688c6.html", "dir_e63db30fdf8cb3590da7d143a9c688c6" ],
     [ "Teleplot", "dir_4136405d84fc7ff658638f03b4ac248a.html", "dir_4136405d84fc7ff658638f03b4ac248a" ],
     [ "TraceRecorder", "dir_364068cac840ea2f55acd2e21b2efa5a.html", "dir_364068cac840ea2f55acd2e21b2efa5a" ],
     [ "TurnOnTheSpot", "dir_782ce0eb56afffab93ccdf5291c272c9.html", "dir_782ce0eb56afffab93ccdf5291c272c9" ],

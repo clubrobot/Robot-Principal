@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['trace_20recorder_20apis_0',['Trace Recorder APIs',['../da/db6/group__trace__recorder__apis.html',1,'']]]
+  ['eventgroup_0',['EventGroup',['../dc/d84/group__EventGroup.html',1,'']]],
+  ['eventgrouphandle_5ft_1',['EventGroupHandle_t',['../dc/d43/group__EventGroupHandle__t.html',1,'']]]
 ];

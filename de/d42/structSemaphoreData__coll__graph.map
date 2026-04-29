@@ -1,0 +1,14 @@
+<map id="SemaphoreData" name="SemaphoreData">
+<area shape="rect" id="Node000001" title=" " alt="" coords="19,202,134,228"/>
+<area shape="rect" id="Node000002" href="$d3/d7e/structtskTaskControlBlock.html" title=" " alt="" coords="5,113,148,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,155,79,202,74,202,74,155"/>
+<area shape="rect" id="Node000003" href="$d1/d58/structxLIST__ITEM.html" title=" " alt="" coords="193,8,288,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="178,32,124,44,102,52,88,61,81,73,78,87,77,113,72,113,72,86,76,71,85,57,100,47,122,39,177,27"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="305,11,314,20,306,30,289,33,288,28,304,25,309,20,301,14"/>
+<area shape="rect" id="Node000004" href="$d3/d26/structxLIST.html" title=" " alt="" coords="303,202,359,228"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="225,47,214,68,205,91,203,115,209,138,228,161,252,180,304,203,301,208,250,184,224,165,204,140,197,116,200,90,209,66,221,45"/>
+<area shape="rect" id="Node000005" href="$da/d58/structxMINI__LIST__ITEM.html" title=" " alt="" coords="266,113,396,139"/>
+<area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="263,43,323,111,319,115,259,46"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="369,192,388,176,400,161,408,147,410,132,406,114,392,84,367,62,328,42,287,31,289,26,330,37,370,57,396,81,411,113,415,132,413,149,405,164,392,180,373,196"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="334,155,334,202,328,202,328,155"/>
+</map>

@@ -1,14 +1,10 @@
 var searchData=
 [
-  ['rdbyte_0',['RdByte',['../d9/d0e/classVL53L5CX.html#aff537fadd902a5ce54e196c7f4cd6bc3',1,'VL53L5CX']]],
-  ['rdmulti_1',['RdMulti',['../d9/d0e/classVL53L5CX.html#a343f89ce3dd6a030ec99f13ffb3ae20c',1,'VL53L5CX']]],
-  ['read_2',['read',['../d9/df7/classFullSpeedServo.html#a9877b6c705724403c10656116a6084c0',1,'FullSpeedServo']]],
-  ['readposition_3',['readPosition',['../d8/d27/classAX12.html#a0051ca6ed1b26619aef55ca5def61c94',1,'AX12']]],
-  ['readspeed_4',['readSpeed',['../d8/d27/classAX12.html#a8435f4c2c2c0b769afda199e608120e4',1,'AX12']]],
-  ['readtemperature_5',['readTemperature',['../d8/d27/classAX12.html#a9505d53fa861c549d0707160598be897',1,'AX12']]],
-  ['readtorque_6',['readTorque',['../d8/d27/classAX12.html#a3b6edc073ad24249b87d83cbd8109f00',1,'AX12']]],
-  ['readvoltage_7',['readVoltage',['../d8/d27/classAX12.html#a88f715439c6f50f3e6dca6c30f6f0897',1,'AX12']]],
-  ['relache_5ftemps_8',['relache_temps',['../d8/d4b/classTeleplot.html#a49dff3b57c4b8b1d92b969e6ecab707b',1,'Teleplot']]],
-  ['reset_9',['reset',['../dd/df3/classCodewheel.html#a9b1448233cb729d40d82ac8aafecddc5',1,'Codewheel::reset()'],['../d8/da9/classPID.html#af9677e76cb1beffbcf3f54cbc627c530',1,'PID::reset()'],['../de/d96/classPurePursuit.html#a7fbc8b6d8116a373a438f3795f255559',1,'PurePursuit::reset()']]],
-  ['restart_10',['restart',['../dd/df3/classCodewheel.html#a46d7e4b6a5873f986e2ad01c31668c40',1,'Codewheel::restart()'],['../df/d45/classClock.html#a52e5cc059c78fa8067d24d9d63070ca1',1,'Clock::restart()'],['../d1/d6f/classAbstractCodewheel.html#a6298fa396bc11c0d073426ff1469f180',1,'AbstractCodewheel::restart()']]]
+  ['pid_0',['PID',['../d8/da9/classPID.html#a0311b6f7de348499ce24e53ba353514a',1,'PID']]],
+  ['ping_1',['ping',['../d8/d27/classAX12.html#abe51b9336e079929ce28ec72e72811fb',1,'AX12']]],
+  ['playsheetmusic_2',['playSheetMusic',['../d6/da1/classMusique.html#a7ef86a7455fabe702da26335b7624b84',1,'Musique']]],
+  ['position_3',['Position',['../d0/df4/structPosition.html#a369a577425f8ba02e8750d04b6a088db',1,'Position::Position()'],['../d0/df4/structPosition.html#a00f1dbd8ae7764317f31b525c5aa8222',1,'Position::Position(float x, float y, float theta)']]],
+  ['positioncontroller_4',['PositionController',['../d2/d64/classPositionController.html#ab49c2052df85bbd469374bde7b664e99',1,'PositionController']]],
+  ['process_5',['process',['../d7/d82/classBrushlessMotor.html#a98354b392f6cb937e2961df5e2a1f038',1,'BrushlessMotor::process()'],['../d5/d9e/classDifferentialController.html#a8597663d4601cd0f2d413311e85e2ccc',1,'DifferentialController::process()'],['../d9/df7/classFullSpeedServo.html#a219f6a6330241256242c6c77c5fa045e',1,'FullSpeedServo::process()'],['../d6/dc3/classOdometry.html#a145a976de8716c7be011503a2483ceb3',1,'Odometry::process()'],['../d2/dfa/classPeriodicProcess.html#a397cd93780d753f5f06335cfe9f2a7f3',1,'PeriodicProcess::process()'],['../de/d33/classVelocityController.html#ad9d7a68904dfe039957aea75e48a88a8',1,'VelocityController::process()']]],
+  ['pvportmalloc_6',['pvPortMalloc',['../d6/dd2/heap__useNewlib__ST_8c.html#a7aaf584d8f548d7f03d6a46280c9e877',1,'heap_useNewlib_ST.c']]]
 ];

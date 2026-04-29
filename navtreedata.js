@@ -71,6 +71,7 @@ var NAVTREE =
         [ "Bordered Images", "dc/d95/md_doc_2doxygen-awesome-css_2docs_2tricks.html#autotoc_md23", null ]
       ] ]
     ] ],
+    [ "Header File Template: cmsis_os.h", "d8/dd7/cmsis_os_h.html", null ],
     [ "team2026", "d0/d30/md_README.html", null ],
     [ "Liste des bogues", "de/da5/bug.html", null ],
     [ "Liste des éléments obsolètes", "da/d58/deprecated.html", null ],
@@ -95,6 +96,8 @@ var NAVTREE =
       [ "Liste des fichiers", "files.html", "files_dup" ],
       [ "Membres de fichier", "globals.html", [
         [ "Tout", "globals.html", null ],
+        [ "Fonctions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -104,8 +107,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d8/d4b/classTeleplot.html#a96a82071ae6056a4634917892b663956",
-"de/d33/classVelocityController.html#ae2691871fd8b5a3522dfb671cfdb6716"
+"d5/d48/FreeRTOS_2Source_2include_2stream__buffer_8h_source.html",
+"d9/d0e/classVL53L5CX.html#a6c6f8541fd900c22e965281a19fae0d3",
+"dd/df3/classCodewheel.html#a40d3e371e0ce17391135469dfacb3dea",
+"dir_6c86ab93944bdcdac80307f2543a8466.html"
 ];
 
 var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';

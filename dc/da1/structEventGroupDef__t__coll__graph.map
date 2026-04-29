@@ -1,0 +1,12 @@
+<map id="EventGroupDef_t" name="EventGroupDef_t">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,96,126,122"/>
+<area shape="rect" id="Node000002" href="$d3/d26/structxLIST.html" title=" " alt="" coords="249,5,306,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="234,25,149,36,110,45,85,57,73,76,69,96,64,95,68,74,82,53,108,40,148,31,233,20"/>
+<area shape="rect" id="Node000003" href="$d1/d58/structxLIST__ITEM.html" title=" " alt="" coords="180,96,274,122"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="238,41,225,56,221,76,225,95,220,96,216,76,220,54,234,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="278,87,297,69,299,60,297,51,287,33,291,30,302,49,304,60,301,71,282,90"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="291,100,301,109,292,118,275,120,274,115,290,113,295,109,288,104"/>
+<area shape="rect" id="Node000004" href="$da/d58/structxMINI__LIST__ITEM.html" title=" " alt="" coords="252,202,383,228"/>
+<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="249,132,309,200,305,204,245,135"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="342,189,353,176,365,155,373,137,375,118,371,95,365,74,352,57,329,41,305,30,307,25,332,36,355,53,369,71,376,93,380,118,378,139,370,158,357,180,346,193"/>
+</map>

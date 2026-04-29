@@ -1,13 +1,19 @@
 var searchData=
 [
-  ['elements_0',['Supported elements',['../d7/d8e/classMyLibrary_1_1Example.html#autotoc_md24',1,'']]],
-  ['elevator_1',['Elevator',['../d9/db0/classElevator.html',1,'']]],
-  ['ellipse_2',['Ellipse',['../d2/d1d/classgeogebra_1_1Geogebra_1_1Ellipse.html',1,'geogebra::Geogebra']]],
-  ['enable_3',['enable',['../d2/dfa/classPeriodicProcess.html#ae49aad8572f5b60fede0a13f0cd95d36',1,'PeriodicProcess']]],
-  ['end_4',['end',['../d8/d27/classAX12.html#a1309023dbc262ce6b3c1ff40641caa25',1,'AX12']]],
-  ['endstop_5',['EndStop',['../df/d5b/classEndStop.html',1,'']]],
-  ['envoie_5ftampon_6',['envoie_tampon',['../d8/d4b/classTeleplot.html#afa0b6c909165c8013f8555ecdfcfd65a',1,'Teleplot']]],
-  ['example_7',['Example',['../d7/d8e/classMyLibrary_1_1Example.html',1,'MyLibrary']]],
-  ['examples_8',['Examples',['..//github/workspace/doc/doxygen-awesome-css/README.md#autotoc_md34',1,'']]],
-  ['extensions_9',['Extensions',['../d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html',1,'']]]
+  ['backward_0',['BACKWARD',['../de/d96/classPurePursuit.html#a584048cfe1c7e025425011986b410019a008e94f456df613c2c9cd7f328fa483f',1,'PurePursuit']]],
+  ['basicmovestrategy_1',['BasicMoveStrategy',['../de/d22/classBasicMoveStrategy.html',1,'']]],
+  ['basicturnstrategy_2',['BasicTurnStrategy',['../db/d2b/classBasicTurnStrategy.html',1,'']]],
+  ['beep_3',['beep',['../d6/da1/classMusique.html#abe350862b4722e9df02a37a437ea4240',1,'Musique']]],
+  ['block_4',['Code block',['../d7/d8e/classMyLibrary_1_1Example.html#autotoc_md29',1,'']]],
+  ['block_5fheader_5',['Block_header',['../dc/da5/unionBlock__header.html',1,'']]],
+  ['bogues_6',['Liste des bogues',['../de/da5/bug.html',1,'']]],
+  ['bonjour_7',['Bonjour',['../index.html#autotoc_md44',1,'']]],
+  ['bordered_20images_8',['Bordered Images',['../dc/d95/md_doc_2doxygen-awesome-css_2docs_2tricks.html#autotoc_md23',1,'']]],
+  ['bournsacencoder_9',['BournsACEncoder',['../d0/d04/classBournsACEncoder.html',1,'']]],
+  ['browser_20support_10',['Browser support',['..//github/workspace/doc/doxygen-awesome-css/README.md#autotoc_md42',1,'']]],
+  ['brushlessmotor_11',['BrushlessMotor',['../d7/d82/classBrushlessMotor.html',1,'']]],
+  ['bus_5ffault_5fisr_12',['bus_fault_isr',['../db/df1/STM32FreeRTOS_8c.html#ae2d60774bb61a4f46e670ea245570f95',1,'STM32FreeRTOS.c']]],
+  ['busfault_5fhandler_13',['BusFault_Handler',['../db/df1/STM32FreeRTOS_8c.html#a12baaa0dec32c007fbc333df880025c9',1,'STM32FreeRTOS.c']]],
+  ['button_14',['Fragment Copy Button',['../d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#extension-copy-button',1,'']]],
+  ['buttons_15',['Buttons',['../dc/d2e/classButtons.html',1,'Buttons'],['../dc/d95/md_doc_2doxygen-awesome-css_2docs_2tricks.html#autotoc_md22',1,'Buttons']]]
 ];

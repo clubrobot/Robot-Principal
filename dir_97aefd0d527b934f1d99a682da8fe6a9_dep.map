@@ -25,10 +25,11 @@
 <area shape="rect" id="node25" href="dir_e4b407f2d2a0aae366ca5909d7096897.html" title="ShiftRegister" alt="" coords="2662,27,2759,52"/>
 <area shape="rect" id="node26" href="dir_62756cf3385797f1f0292ab4650276f4.html" title="SpeedPowerProfiling" alt="" coords="2783,27,2924,52"/>
 <area shape="rect" id="node27" href="dir_a4d559ad0ac4ee650a73f6ad65608c77.html" title="StepByStepMotor" alt="" coords="2948,27,3071,52"/>
-<area shape="rect" id="node28" href="dir_4136405d84fc7ff658638f03b4ac248a.html" title="Teleplot" alt="" coords="3096,27,3163,52"/>
-<area shape="rect" id="node29" href="dir_364068cac840ea2f55acd2e21b2efa5a.html" title="TraceRecorder" alt="" coords="3187,27,3293,52"/>
-<area shape="rect" id="node30" href="dir_782ce0eb56afffab93ccdf5291c272c9.html" title="TurnOnTheSpot" alt="" coords="3317,27,3430,52"/>
-<area shape="rect" id="node31" href="dir_b0d67969ad9c4f1f7b6a734a349f1bb3.html" title="VelocityController" alt="" coords="3454,27,3576,52"/>
-<area shape="rect" id="node32" href="dir_d5c75ca7dbd2fef93c2f2d67c31ab7ba.html" title="Wheeledbase" alt="" coords="3600,27,3699,52"/>
-<area shape="rect" id="clust1" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html" alt="" coords="16,16,3709,63"/>
+<area shape="rect" id="node28" href="dir_e63db30fdf8cb3590da7d143a9c688c6.html" title="STM32duino FreeRTOS" alt="" coords="3095,27,3254,52"/>
+<area shape="rect" id="node29" href="dir_4136405d84fc7ff658638f03b4ac248a.html" title="Teleplot" alt="" coords="3278,27,3346,52"/>
+<area shape="rect" id="node30" href="dir_364068cac840ea2f55acd2e21b2efa5a.html" title="TraceRecorder" alt="" coords="3370,27,3476,52"/>
+<area shape="rect" id="node31" href="dir_782ce0eb56afffab93ccdf5291c272c9.html" title="TurnOnTheSpot" alt="" coords="3499,27,3613,52"/>
+<area shape="rect" id="node32" href="dir_b0d67969ad9c4f1f7b6a734a349f1bb3.html" title="VelocityController" alt="" coords="3636,27,3758,52"/>
+<area shape="rect" id="node33" href="dir_d5c75ca7dbd2fef93c2f2d67c31ab7ba.html" title="Wheeledbase" alt="" coords="3782,27,3882,52"/>
+<area shape="rect" id="clust1" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html" alt="" coords="16,16,3892,63"/>
 </map>

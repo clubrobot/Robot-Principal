@@ -1,0 +1,676 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CRINSA-team2025:  Fichier source de lib/STM32duino FreeRTOS/src/FreeRTOS/Source/include/task.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript" src="../../darkmode_toggle.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../custom.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="../../theme-round.css" rel="stylesheet" type="text/css"/>
+<link href="../../theme-robot.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">CRINSA-team2025<span id="projectnumber">&#160;V1</span>
+   </div>
+   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2025</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('df/d1f/FreeRTOS_2Source_2include_2task_8h_source.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">task.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * FreeRTOS Kernel V10.3.1</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Copyright (C) 2020 Amazon.com, Inc. or its affiliates.  All Rights Reserved.</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Permission is hereby granted, free of charge, to any person obtaining a copy of</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * this software and associated documentation files (the &quot;Software&quot;), to deal in</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * the Software without restriction, including without limitation the rights to</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * the Software, and to permit persons to whom the Software is furnished to do so,</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * subject to the following conditions:</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * The above copyright notice and this permission notice shall be included in all</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * copies or substantial portions of the Software.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> * http://www.FreeRTOS.org</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> * http://aws.amazon.com/freertos</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> * 1 tab == 4 spaces!</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#ifndef INC_TASK_H</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#define INC_TASK_H</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#ifndef INC_FREERTOS_H</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">    #error &quot;include FreeRTOS.h must appear in source files before include task.h&quot;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &quot;list.h&quot;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">/*-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment"> * MACROS AND DEFINITIONS</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment"> *----------------------------------------------------------*/</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#define tskKERNEL_VERSION_NUMBER &quot;V10.3.1&quot;</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#define tskKERNEL_VERSION_MAJOR 10</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#define tskKERNEL_VERSION_MINOR 3</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#define tskKERNEL_VERSION_BUILD 1</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">/* MPU region parameters passed in ulParameters</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment"> * of MemoryRegion_t struct. */</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#define tskMPU_REGION_READ_ONLY         ( 1UL &lt;&lt; 0UL )</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#define tskMPU_REGION_READ_WRITE        ( 1UL &lt;&lt; 1UL )</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#define tskMPU_REGION_EXECUTE_NEVER     ( 1UL &lt;&lt; 2UL )</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#define tskMPU_REGION_NORMAL_MEMORY     ( 1UL &lt;&lt; 3UL )</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#define tskMPU_REGION_DEVICE_MEMORY     ( 1UL &lt;&lt; 4UL )</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">struct </span><a class="code hl_struct" href="../../d3/d7e/structtskTaskControlBlock.html">tskTaskControlBlock</a>; <span class="comment">/* The old naming convention is used to prevent breaking kernel aware debuggers. */</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="../../d3/d7e/structtskTaskControlBlock.html">tskTaskControlBlock</a>* TaskHandle_t;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment"> * Defines the prototype to which the application task hook function must</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment"> * conform.</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keyword">typedef</span> BaseType_t (*TaskHookFunction_t)( <span class="keywordtype">void</span> * );</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">/* Task states returned by eTaskGetState. */</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>{</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    eRunning = 0,   <span class="comment">/* A task is querying the state of itself, so must be running. */</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    eReady,         <span class="comment">/* The task being queried is in a read or pending ready list. */</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    eBlocked,       <span class="comment">/* The task being queried is in the Blocked state. */</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    eSuspended,     <span class="comment">/* The task being queried is in the Suspended state, or is in the Blocked state with an infinite time out. */</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    eDeleted,       <span class="comment">/* The task being queried has been deleted, but its TCB has not yet been freed. */</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    eInvalid        <span class="comment">/* Used as an &#39;invalid state&#39; value. */</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>} eTaskState;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment">/* Actions that can be performed when vTaskNotify() is called. */</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>{</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    eNoAction = 0,              <span class="comment">/* Notify the task without updating its notify value. */</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    eSetBits,                   <span class="comment">/* Set bits in the task&#39;s notification value. */</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    eIncrement,                 <span class="comment">/* Increment the task&#39;s notification value. */</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    eSetValueWithOverwrite,     <span class="comment">/* Set the task&#39;s notification value to a specific value even if the previous value has not yet been read by the task. */</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    eSetValueWithoutOverwrite   <span class="comment">/* Set the task&#39;s notification value if the previous value has been read by the task. */</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>} eNotifyAction;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment"> * Used internally only.</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment"> */</span></div>
+<div class="foldopen" id="foldopen00102" data-start="{" data-end="};">
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="../../db/dec/structxTIME__OUT.html">  102</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="../../db/dec/structxTIME__OUT.html">xTIME_OUT</a></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>{</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    BaseType_t xOverflowCount;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    TickType_t xTimeOnEntering;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>} TimeOut_t;</div>
+</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment"> * Defines the memory ranges allocated to the task when an MPU is used.</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment"> */</span></div>
+<div class="foldopen" id="foldopen00111" data-start="{" data-end="};">
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="../../da/d7e/structxMEMORY__REGION.html">  111</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="../../da/d7e/structxMEMORY__REGION.html">xMEMORY_REGION</a></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>{</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordtype">void</span> *pvBaseAddress;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    uint32_t ulLengthInBytes;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    uint32_t ulParameters;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>} MemoryRegion_t;</div>
+</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="comment"> * Parameters required to create an MPU protected task.</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment"> */</span></div>
+<div class="foldopen" id="foldopen00121" data-start="{" data-end="};">
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="../../dd/d9e/structxTASK__PARAMETERS.html">  121</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="../../dd/d9e/structxTASK__PARAMETERS.html">xTASK_PARAMETERS</a></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>{</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    TaskFunction_t pvTaskCode;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> * <span class="keyword">const</span> pcName;  <span class="comment">/*lint !e971 Unqualified char types are allowed for strings and single characters only. */</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    configSTACK_DEPTH_TYPE usStackDepth;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordtype">void</span> *pvParameters;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    UBaseType_t uxPriority;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    StackType_t *puxStackBuffer;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    MemoryRegion_t xRegions[ portNUM_CONFIGURABLE_REGIONS ];</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">    #if ( ( portUSING_MPU_WRAPPERS == 1 ) &amp;&amp; ( configSUPPORT_STATIC_ALLOCATION == 1 ) )</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        StaticTask_t * <span class="keyword">const</span> pxTaskBuffer;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>} TaskParameters_t;</div>
+</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="comment">/* Used with the uxTaskGetSystemState() function to return the state of each task</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="comment">in the system. */</span></div>
+<div class="foldopen" id="foldopen00137" data-start="{" data-end="};">
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="../../d1/d79/structxTASK__STATUS.html">  137</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="../../d1/d79/structxTASK__STATUS.html">xTASK_STATUS</a></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>{</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    TaskHandle_t xHandle;           <span class="comment">/* The handle of the task to which the rest of the information in the structure relates. */</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *pcTaskName;         <span class="comment">/* A pointer to the task&#39;s name.  This value will be invalid if the task was deleted since the structure was populated! */</span> <span class="comment">/*lint !e971 Unqualified char types are allowed for strings and single characters only. */</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    UBaseType_t xTaskNumber;        <span class="comment">/* A number unique to the task. */</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    eTaskState eCurrentState;       <span class="comment">/* The state in which the task existed when the structure was populated. */</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    UBaseType_t uxCurrentPriority;  <span class="comment">/* The priority at which the task was running (may be inherited) when the structure was populated. */</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    UBaseType_t uxBasePriority;     <span class="comment">/* The priority to which the task will return if the task&#39;s current priority has been inherited to avoid unbounded priority inversion when obtaining a mutex.  Only valid if configUSE_MUTEXES is defined as 1 in FreeRTOSConfig.h. */</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    uint32_t ulRunTimeCounter;      <span class="comment">/* The total run time allocated to the task so far, as defined by the run time stats clock.  See http://www.freertos.org/rtos-run-time-stats.html.  Only valid when configGENERATE_RUN_TIME_STATS is defined as 1 in FreeRTOSConfig.h. */</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    StackType_t *pxStackBase;       <span class="comment">/* Points to the lowest address of the task&#39;s stack area. */</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    configSTACK_DEPTH_TYPE usStackHighWaterMark;    <span class="comment">/* The minimum amount of stack space that has remained for the task since the task was created.  The closer this value is to zero the closer the task has come to overflowing its stack. */</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>} TaskStatus_t;</div>
+</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="comment">/* Possible return values for eTaskConfirmSleepModeStatus(). */</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>{</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    eAbortSleep = 0,        <span class="comment">/* A task has been made ready or a context switch pended since portSUPPORESS_TICKS_AND_SLEEP() was called - abort entering a sleep mode. */</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    eStandardSleep,         <span class="comment">/* Enter a sleep mode that will not last any longer than the expected idle time. */</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    eNoTasksWaitingTimeout  <span class="comment">/* No tasks are waiting for a timeout so it is safe to enter a sleep mode that can only be exited by an external interrupt. */</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>} eSleepModeStatus;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="preprocessor">#define tskIDLE_PRIORITY            ( ( UBaseType_t ) 0U )</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="preprocessor">#define taskYIELD()                 portYIELD()</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="preprocessor">#define taskENTER_CRITICAL()        portENTER_CRITICAL()</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="preprocessor">#define taskENTER_CRITICAL_FROM_ISR() portSET_INTERRUPT_MASK_FROM_ISR()</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="preprocessor">#define taskEXIT_CRITICAL()         portEXIT_CRITICAL()</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="preprocessor">#define taskEXIT_CRITICAL_FROM_ISR( x ) portCLEAR_INTERRUPT_MASK_FROM_ISR( x )</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="preprocessor">#define taskDISABLE_INTERRUPTS()    portDISABLE_INTERRUPTS()</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="preprocessor">#define taskENABLE_INTERRUPTS()     portENABLE_INTERRUPTS()</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="comment">/* Definitions returned by xTaskGetSchedulerState().  taskSCHEDULER_SUSPENDED is</span></div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="comment">0 to generate more optimal code when configASSERT() is defined as the constant</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="comment">is used in assert() statements. */</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="preprocessor">#define taskSCHEDULER_SUSPENDED     ( ( BaseType_t ) 0 )</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="preprocessor">#define taskSCHEDULER_NOT_STARTED   ( ( BaseType_t ) 1 )</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="preprocessor">#define taskSCHEDULER_RUNNING       ( ( BaseType_t ) 2 )</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="comment">/*-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="comment"> * TASK CREATION API</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="comment"> *----------------------------------------------------------*/</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span></div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span><span class="preprocessor">#if( configSUPPORT_DYNAMIC_ALLOCATION == 1 )</span></div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>                            <span class="keyword">const</span> <span class="keywordtype">char</span> * <span class="keyword">const</span> pcName,  <span class="comment">/*lint !e971 Unqualified char types are allowed for strings and single characters only. */</span></div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                            <span class="keyword">const</span> configSTACK_DEPTH_TYPE usStackDepth,</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>                            <span class="keywordtype">void</span> * <span class="keyword">const</span> pvParameters,</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>                            UBaseType_t uxPriority,</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>                            TaskHandle_t * <span class="keyword">const</span> pxCreatedTask ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span></div>
+<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span><span class="preprocessor">#if( configSUPPORT_STATIC_ALLOCATION == 1 )</span></div>
+<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>    TaskHandle_t xTaskCreateStatic( TaskFunction_t pxTaskCode,</div>
+<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>                                    <span class="keyword">const</span> <span class="keywordtype">char</span> * <span class="keyword">const</span> pcName, <span class="comment">/*lint !e971 Unqualified char types are allowed for strings and single characters only. */</span></div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>                                    <span class="keyword">const</span> uint32_t ulStackDepth,</div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>                                    <span class="keywordtype">void</span> * <span class="keyword">const</span> pvParameters,</div>
+<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>                                    UBaseType_t uxPriority,</div>
+<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>                                    StackType_t * <span class="keyword">const</span> puxStackBuffer,</div>
+<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span>                                    StaticTask_t * <span class="keyword">const</span> pxTaskBuffer ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span><span class="preprocessor">#endif </span><span class="comment">/* configSUPPORT_STATIC_ALLOCATION */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span></div>
+<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span><span class="preprocessor">#if( portUSING_MPU_WRAPPERS == 1 )</span></div>
+<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>    BaseType_t xTaskCreateRestricted( <span class="keyword">const</span> TaskParameters_t * <span class="keyword">const</span> pxTaskDefinition, TaskHandle_t *pxCreatedTask ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span></div>
+<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span><span class="preprocessor">#if( ( portUSING_MPU_WRAPPERS == 1 ) &amp;&amp; ( configSUPPORT_STATIC_ALLOCATION == 1 ) )</span></div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>    BaseType_t xTaskCreateRestrictedStatic( <span class="keyword">const</span> TaskParameters_t * <span class="keyword">const</span> pxTaskDefinition, TaskHandle_t *pxCreatedTask ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span></div>
+<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span><span class="keywordtype">void</span> vTaskAllocateMPURegions( TaskHandle_t xTask, <span class="keyword">const</span> MemoryRegion_t * <span class="keyword">const</span> pxRegions ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span></div>
+<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span><span class="keywordtype">void</span> vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span> </div>
+<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span><span class="comment">/*-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span><span class="comment"> * TASK CONTROL API</span></div>
+<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span><span class="comment"> *----------------------------------------------------------*/</span></div>
+<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span></div>
+<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span><span class="keywordtype">void</span> vTaskDelay( <span class="keyword">const</span> TickType_t xTicksToDelay ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span></div>
+<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span><span class="keywordtype">void</span> vTaskDelayUntil( TickType_t * <span class="keyword">const</span> pxPreviousWakeTime, <span class="keyword">const</span> TickType_t xTimeIncrement ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span></div>
+<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>BaseType_t xTaskAbortDelay( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span></div>
+<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span>UBaseType_t uxTaskPriorityGet( <span class="keyword">const</span> TaskHandle_t xTask ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span></div>
+<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>UBaseType_t uxTaskPriorityGetFromISR( <span class="keyword">const</span> TaskHandle_t xTask ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span></div>
+<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>eTaskState eTaskGetState( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span></div>
+<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span><span class="keywordtype">void</span> vTaskGetInfo( TaskHandle_t xTask, TaskStatus_t *pxTaskStatus, BaseType_t xGetFreeStackSpace, eTaskState eState ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span></div>
+<div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span><span class="keywordtype">void</span> vTaskPrioritySet( TaskHandle_t xTask, UBaseType_t uxNewPriority ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span></div>
+<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span><span class="keywordtype">void</span> vTaskSuspend( TaskHandle_t xTaskToSuspend ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span></div>
+<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span><span class="keywordtype">void</span> vTaskResume( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span></div>
+<div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span>BaseType_t xTaskResumeFromISR( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span> </div>
+<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span><span class="comment">/*-----------------------------------------------------------</span></div>
+<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span><span class="comment"> * SCHEDULER CONTROL</span></div>
+<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span><span class="comment"> *----------------------------------------------------------*/</span></div>
+<div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span></div>
+<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span><span class="keywordtype">void</span> vTaskStartScheduler( <span class="keywordtype">void</span> ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span></div>
+<div class="line"><a id="l01236" name="l01236"></a><span class="lineno"> 1236</span><span class="keywordtype">void</span> vTaskEndScheduler( <span class="keywordtype">void</span> ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l01237" name="l01237"></a><span class="lineno"> 1237</span></div>
+<div class="line"><a id="l01287" name="l01287"></a><span class="lineno"> 1287</span><span class="keywordtype">void</span> vTaskSuspendAll( <span class="keywordtype">void</span> ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l01288" name="l01288"></a><span class="lineno"> 1288</span></div>
+<div class="line"><a id="l01341" name="l01341"></a><span class="lineno"> 1341</span>BaseType_t xTaskResumeAll( <span class="keywordtype">void</span> ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l01342" name="l01342"></a><span class="lineno"> 1342</span> </div>
+<div class="line"><a id="l01343" name="l01343"></a><span class="lineno"> 1343</span><span class="comment">/*-----------------------------------------------------------</span></div>
+<div class="line"><a id="l01344" name="l01344"></a><span class="lineno"> 1344</span><span class="comment"> * TASK UTILITIES</span></div>
+<div class="line"><a id="l01345" name="l01345"></a><span class="lineno"> 1345</span><span class="comment"> *----------------------------------------------------------*/</span></div>
+<div class="line"><a id="l01346" name="l01346"></a><span class="lineno"> 1346</span></div>
+<div class="line"><a id="l01356" name="l01356"></a><span class="lineno"> 1356</span>TickType_t xTaskGetTickCount( <span class="keywordtype">void</span> ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l01357" name="l01357"></a><span class="lineno"> 1357</span></div>
+<div class="line"><a id="l01372" name="l01372"></a><span class="lineno"> 1372</span>TickType_t xTaskGetTickCountFromISR( <span class="keywordtype">void</span> ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l01373" name="l01373"></a><span class="lineno"> 1373</span></div>
+<div class="line"><a id="l01386" name="l01386"></a><span class="lineno"> 1386</span>UBaseType_t uxTaskGetNumberOfTasks( <span class="keywordtype">void</span> ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l01387" name="l01387"></a><span class="lineno"> 1387</span></div>
+<div class="line"><a id="l01399" name="l01399"></a><span class="lineno"> 1399</span><span class="keywordtype">char</span> *pcTaskGetName( TaskHandle_t xTaskToQuery ) PRIVILEGED_FUNCTION; <span class="comment">/*lint !e971 Unqualified char types are allowed for strings and single characters only. */</span></div>
+<div class="line"><a id="l01400" name="l01400"></a><span class="lineno"> 1400</span></div>
+<div class="line"><a id="l01415" name="l01415"></a><span class="lineno"> 1415</span>TaskHandle_t xTaskGetHandle( <span class="keyword">const</span> <span class="keywordtype">char</span> *pcNameToQuery ) PRIVILEGED_FUNCTION; <span class="comment">/*lint !e971 Unqualified char types are allowed for strings and single characters only. */</span></div>
+<div class="line"><a id="l01416" name="l01416"></a><span class="lineno"> 1416</span></div>
+<div class="line"><a id="l01442" name="l01442"></a><span class="lineno"> 1442</span>UBaseType_t uxTaskGetStackHighWaterMark( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l01443" name="l01443"></a><span class="lineno"> 1443</span></div>
+<div class="line"><a id="l01469" name="l01469"></a><span class="lineno"> 1469</span>configSTACK_DEPTH_TYPE uxTaskGetStackHighWaterMark2( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l01470" name="l01470"></a><span class="lineno"> 1470</span> </div>
+<div class="line"><a id="l01471" name="l01471"></a><span class="lineno"> 1471</span><span class="comment">/* When using trace macros it is sometimes necessary to include task.h before</span></div>
+<div class="line"><a id="l01472" name="l01472"></a><span class="lineno"> 1472</span><span class="comment">FreeRTOS.h.  When this is done TaskHookFunction_t will not yet have been defined,</span></div>
+<div class="line"><a id="l01473" name="l01473"></a><span class="lineno"> 1473</span><span class="comment">so the following two prototypes will cause a compilation error.  This can be</span></div>
+<div class="line"><a id="l01474" name="l01474"></a><span class="lineno"> 1474</span><span class="comment">fixed by simply guarding against the inclusion of these two prototypes unless</span></div>
+<div class="line"><a id="l01475" name="l01475"></a><span class="lineno"> 1475</span><span class="comment">they are explicitly required by the configUSE_APPLICATION_TASK_TAG configuration</span></div>
+<div class="line"><a id="l01476" name="l01476"></a><span class="lineno"> 1476</span><span class="comment">constant. */</span></div>
+<div class="line"><a id="l01477" name="l01477"></a><span class="lineno"> 1477</span><span class="preprocessor">#ifdef configUSE_APPLICATION_TASK_TAG</span></div>
+<div class="line"><a id="l01478" name="l01478"></a><span class="lineno"> 1478</span><span class="preprocessor">    #if configUSE_APPLICATION_TASK_TAG == 1</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l01487" name="l01487"></a><span class="lineno"> 1487</span>        <span class="keywordtype">void</span> vTaskSetApplicationTaskTag( TaskHandle_t xTask, TaskHookFunction_t pxHookFunction ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l01488" name="l01488"></a><span class="lineno"> 1488</span></div>
+<div class="line"><a id="l01497" name="l01497"></a><span class="lineno"> 1497</span>        TaskHookFunction_t xTaskGetApplicationTaskTag( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l01498" name="l01498"></a><span class="lineno"> 1498</span></div>
+<div class="line"><a id="l01506" name="l01506"></a><span class="lineno"> 1506</span>        TaskHookFunction_t xTaskGetApplicationTaskTagFromISR( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l01507" name="l01507"></a><span class="lineno"> 1507</span><span class="preprocessor">    #endif </span><span class="comment">/* configUSE_APPLICATION_TASK_TAG ==1 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l01508" name="l01508"></a><span class="lineno"> 1508</span><span class="preprocessor">#endif </span><span class="comment">/* ifdef configUSE_APPLICATION_TASK_TAG */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l01509" name="l01509"></a><span class="lineno"> 1509</span> </div>
+<div class="line"><a id="l01510" name="l01510"></a><span class="lineno"> 1510</span><span class="preprocessor">#if( configNUM_THREAD_LOCAL_STORAGE_POINTERS &gt; 0 )</span></div>
+<div class="line"><a id="l01511" name="l01511"></a><span class="lineno"> 1511</span> </div>
+<div class="line"><a id="l01512" name="l01512"></a><span class="lineno"> 1512</span>    <span class="comment">/* Each task contains an array of pointers that is dimensioned by the</span></div>
+<div class="line"><a id="l01513" name="l01513"></a><span class="lineno"> 1513</span><span class="comment">    configNUM_THREAD_LOCAL_STORAGE_POINTERS setting in FreeRTOSConfig.h.  The</span></div>
+<div class="line"><a id="l01514" name="l01514"></a><span class="lineno"> 1514</span><span class="comment">    kernel does not use the pointers itself, so the application writer can use</span></div>
+<div class="line"><a id="l01515" name="l01515"></a><span class="lineno"> 1515</span><span class="comment">    the pointers for any purpose they wish.  The following two functions are</span></div>
+<div class="line"><a id="l01516" name="l01516"></a><span class="lineno"> 1516</span><span class="comment">    used to set and query a pointer respectively. */</span></div>
+<div class="line"><a id="l01517" name="l01517"></a><span class="lineno"> 1517</span>    <span class="keywordtype">void</span> vTaskSetThreadLocalStoragePointer( TaskHandle_t xTaskToSet, BaseType_t xIndex, <span class="keywordtype">void</span> *pvValue ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l01518" name="l01518"></a><span class="lineno"> 1518</span>    <span class="keywordtype">void</span> *pvTaskGetThreadLocalStoragePointer( TaskHandle_t xTaskToQuery, BaseType_t xIndex ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l01519" name="l01519"></a><span class="lineno"> 1519</span> </div>
+<div class="line"><a id="l01520" name="l01520"></a><span class="lineno"> 1520</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01521" name="l01521"></a><span class="lineno"> 1521</span></div>
+<div class="line"><a id="l01533" name="l01533"></a><span class="lineno"> 1533</span>BaseType_t xTaskCallApplicationTaskHook( TaskHandle_t xTask, <span class="keywordtype">void</span> *pvParameter ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l01534" name="l01534"></a><span class="lineno"> 1534</span></div>
+<div class="line"><a id="l01542" name="l01542"></a><span class="lineno"> 1542</span>TaskHandle_t xTaskGetIdleTaskHandle( <span class="keywordtype">void</span> ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l01543" name="l01543"></a><span class="lineno"> 1543</span></div>
+<div class="line"><a id="l01641" name="l01641"></a><span class="lineno"> 1641</span>UBaseType_t uxTaskGetSystemState( TaskStatus_t * <span class="keyword">const</span> pxTaskStatusArray, <span class="keyword">const</span> UBaseType_t uxArraySize, uint32_t * <span class="keyword">const</span> pulTotalRunTime ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l01642" name="l01642"></a><span class="lineno"> 1642</span></div>
+<div class="line"><a id="l01688" name="l01688"></a><span class="lineno"> 1688</span><span class="keywordtype">void</span> vTaskList( <span class="keywordtype">char</span> * pcWriteBuffer ) PRIVILEGED_FUNCTION; <span class="comment">/*lint !e971 Unqualified char types are allowed for strings and single characters only. */</span></div>
+<div class="line"><a id="l01689" name="l01689"></a><span class="lineno"> 1689</span></div>
+<div class="line"><a id="l01742" name="l01742"></a><span class="lineno"> 1742</span><span class="keywordtype">void</span> vTaskGetRunTimeStats( <span class="keywordtype">char</span> *pcWriteBuffer ) PRIVILEGED_FUNCTION; <span class="comment">/*lint !e971 Unqualified char types are allowed for strings and single characters only. */</span></div>
+<div class="line"><a id="l01743" name="l01743"></a><span class="lineno"> 1743</span></div>
+<div class="line"><a id="l01772" name="l01772"></a><span class="lineno"> 1772</span>uint32_t ulTaskGetIdleRunTimeCounter( <span class="keywordtype">void</span> ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l01773" name="l01773"></a><span class="lineno"> 1773</span></div>
+<div class="line"><a id="l01853" name="l01853"></a><span class="lineno"> 1853</span>BaseType_t xTaskGenericNotify( TaskHandle_t xTaskToNotify, uint32_t ulValue, eNotifyAction eAction, uint32_t *pulPreviousNotificationValue ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l01854" name="l01854"></a><span class="lineno"> 1854</span><span class="preprocessor">#define xTaskNotify( xTaskToNotify, ulValue, eAction ) xTaskGenericNotify( ( xTaskToNotify ), ( ulValue ), ( eAction ), NULL )</span></div>
+<div class="line"><a id="l01855" name="l01855"></a><span class="lineno"> 1855</span><span class="preprocessor">#define xTaskNotifyAndQuery( xTaskToNotify, ulValue, eAction, pulPreviousNotifyValue ) xTaskGenericNotify( ( xTaskToNotify ), ( ulValue ), ( eAction ), ( pulPreviousNotifyValue ) )</span></div>
+<div class="line"><a id="l01856" name="l01856"></a><span class="lineno"> 1856</span></div>
+<div class="line"><a id="l01944" name="l01944"></a><span class="lineno"> 1944</span>BaseType_t xTaskGenericNotifyFromISR( TaskHandle_t xTaskToNotify, uint32_t ulValue, eNotifyAction eAction, uint32_t *pulPreviousNotificationValue, BaseType_t *pxHigherPriorityTaskWoken ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l01945" name="l01945"></a><span class="lineno"> 1945</span><span class="preprocessor">#define xTaskNotifyFromISR( xTaskToNotify, ulValue, eAction, pxHigherPriorityTaskWoken ) xTaskGenericNotifyFromISR( ( xTaskToNotify ), ( ulValue ), ( eAction ), NULL, ( pxHigherPriorityTaskWoken ) )</span></div>
+<div class="line"><a id="l01946" name="l01946"></a><span class="lineno"> 1946</span><span class="preprocessor">#define xTaskNotifyAndQueryFromISR( xTaskToNotify, ulValue, eAction, pulPreviousNotificationValue, pxHigherPriorityTaskWoken ) xTaskGenericNotifyFromISR( ( xTaskToNotify ), ( ulValue ), ( eAction ), ( pulPreviousNotificationValue ), ( pxHigherPriorityTaskWoken ) )</span></div>
+<div class="line"><a id="l01947" name="l01947"></a><span class="lineno"> 1947</span></div>
+<div class="line"><a id="l02021" name="l02021"></a><span class="lineno"> 2021</span>BaseType_t xTaskNotifyWait( uint32_t ulBitsToClearOnEntry, uint32_t ulBitsToClearOnExit, uint32_t *pulNotificationValue, TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02022" name="l02022"></a><span class="lineno"> 2022</span></div>
+<div class="line"><a id="l02067" name="l02067"></a><span class="lineno"> 2067</span><span class="preprocessor">#define xTaskNotifyGive( xTaskToNotify ) xTaskGenericNotify( ( xTaskToNotify ), ( 0 ), eIncrement, NULL )</span></div>
+<div class="line"><a id="l02068" name="l02068"></a><span class="lineno"> 2068</span></div>
+<div class="line"><a id="l02122" name="l02122"></a><span class="lineno"> 2122</span><span class="keywordtype">void</span> vTaskNotifyGiveFromISR( TaskHandle_t xTaskToNotify, BaseType_t *pxHigherPriorityTaskWoken ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02123" name="l02123"></a><span class="lineno"> 2123</span></div>
+<div class="line"><a id="l02191" name="l02191"></a><span class="lineno"> 2191</span>uint32_t ulTaskNotifyTake( BaseType_t xClearCountOnExit, TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02192" name="l02192"></a><span class="lineno"> 2192</span></div>
+<div class="line"><a id="l02207" name="l02207"></a><span class="lineno"> 2207</span>BaseType_t xTaskNotifyStateClear( TaskHandle_t xTask );</div>
+<div class="line"><a id="l02208" name="l02208"></a><span class="lineno"> 2208</span></div>
+<div class="line"><a id="l02225" name="l02225"></a><span class="lineno"> 2225</span>uint32_t ulTaskNotifyValueClear( TaskHandle_t xTask, uint32_t ulBitsToClear ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02226" name="l02226"></a><span class="lineno"> 2226</span></div>
+<div class="line"><a id="l02239" name="l02239"></a><span class="lineno"> 2239</span><span class="keywordtype">void</span> vTaskSetTimeOutState( TimeOut_t * <span class="keyword">const</span> pxTimeOut ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02240" name="l02240"></a><span class="lineno"> 2240</span></div>
+<div class="line"><a id="l02322" name="l02322"></a><span class="lineno"> 2322</span>BaseType_t xTaskCheckForTimeOut( TimeOut_t * <span class="keyword">const</span> pxTimeOut, TickType_t * <span class="keyword">const</span> pxTicksToWait ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02323" name="l02323"></a><span class="lineno"> 2323</span> </div>
+<div class="line"><a id="l02324" name="l02324"></a><span class="lineno"> 2324</span><span class="comment">/*-----------------------------------------------------------</span></div>
+<div class="line"><a id="l02325" name="l02325"></a><span class="lineno"> 2325</span><span class="comment"> * SCHEDULER INTERNALS AVAILABLE FOR PORTING PURPOSES</span></div>
+<div class="line"><a id="l02326" name="l02326"></a><span class="lineno"> 2326</span><span class="comment"> *----------------------------------------------------------*/</span></div>
+<div class="line"><a id="l02327" name="l02327"></a><span class="lineno"> 2327</span> </div>
+<div class="line"><a id="l02328" name="l02328"></a><span class="lineno"> 2328</span><span class="comment">/*</span></div>
+<div class="line"><a id="l02329" name="l02329"></a><span class="lineno"> 2329</span><span class="comment"> * THIS FUNCTION MUST NOT BE USED FROM APPLICATION CODE.  IT IS ONLY</span></div>
+<div class="line"><a id="l02330" name="l02330"></a><span class="lineno"> 2330</span><span class="comment"> * INTENDED FOR USE WHEN IMPLEMENTING A PORT OF THE SCHEDULER AND IS</span></div>
+<div class="line"><a id="l02331" name="l02331"></a><span class="lineno"> 2331</span><span class="comment"> * AN INTERFACE WHICH IS FOR THE EXCLUSIVE USE OF THE SCHEDULER.</span></div>
+<div class="line"><a id="l02332" name="l02332"></a><span class="lineno"> 2332</span><span class="comment"> *</span></div>
+<div class="line"><a id="l02333" name="l02333"></a><span class="lineno"> 2333</span><span class="comment"> * Called from the real time kernel tick (either preemptive or cooperative),</span></div>
+<div class="line"><a id="l02334" name="l02334"></a><span class="lineno"> 2334</span><span class="comment"> * this increments the tick count and checks if any tasks that are blocked</span></div>
+<div class="line"><a id="l02335" name="l02335"></a><span class="lineno"> 2335</span><span class="comment"> * for a finite period required removing from a blocked list and placing on</span></div>
+<div class="line"><a id="l02336" name="l02336"></a><span class="lineno"> 2336</span><span class="comment"> * a ready list.  If a non-zero value is returned then a context switch is</span></div>
+<div class="line"><a id="l02337" name="l02337"></a><span class="lineno"> 2337</span><span class="comment"> * required because either:</span></div>
+<div class="line"><a id="l02338" name="l02338"></a><span class="lineno"> 2338</span><span class="comment"> *   + A task was removed from a blocked list because its timeout had expired,</span></div>
+<div class="line"><a id="l02339" name="l02339"></a><span class="lineno"> 2339</span><span class="comment"> *     or</span></div>
+<div class="line"><a id="l02340" name="l02340"></a><span class="lineno"> 2340</span><span class="comment"> *   + Time slicing is in use and there is a task of equal priority to the</span></div>
+<div class="line"><a id="l02341" name="l02341"></a><span class="lineno"> 2341</span><span class="comment"> *     currently running task.</span></div>
+<div class="line"><a id="l02342" name="l02342"></a><span class="lineno"> 2342</span><span class="comment"> */</span></div>
+<div class="line"><a id="l02343" name="l02343"></a><span class="lineno"> 2343</span>BaseType_t xTaskIncrementTick( <span class="keywordtype">void</span> ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02344" name="l02344"></a><span class="lineno"> 2344</span> </div>
+<div class="line"><a id="l02345" name="l02345"></a><span class="lineno"> 2345</span><span class="comment">/*</span></div>
+<div class="line"><a id="l02346" name="l02346"></a><span class="lineno"> 2346</span><span class="comment"> * THIS FUNCTION MUST NOT BE USED FROM APPLICATION CODE.  IT IS AN</span></div>
+<div class="line"><a id="l02347" name="l02347"></a><span class="lineno"> 2347</span><span class="comment"> * INTERFACE WHICH IS FOR THE EXCLUSIVE USE OF THE SCHEDULER.</span></div>
+<div class="line"><a id="l02348" name="l02348"></a><span class="lineno"> 2348</span><span class="comment"> *</span></div>
+<div class="line"><a id="l02349" name="l02349"></a><span class="lineno"> 2349</span><span class="comment"> * THIS FUNCTION MUST BE CALLED WITH INTERRUPTS DISABLED.</span></div>
+<div class="line"><a id="l02350" name="l02350"></a><span class="lineno"> 2350</span><span class="comment"> *</span></div>
+<div class="line"><a id="l02351" name="l02351"></a><span class="lineno"> 2351</span><span class="comment"> * Removes the calling task from the ready list and places it both</span></div>
+<div class="line"><a id="l02352" name="l02352"></a><span class="lineno"> 2352</span><span class="comment"> * on the list of tasks waiting for a particular event, and the</span></div>
+<div class="line"><a id="l02353" name="l02353"></a><span class="lineno"> 2353</span><span class="comment"> * list of delayed tasks.  The task will be removed from both lists</span></div>
+<div class="line"><a id="l02354" name="l02354"></a><span class="lineno"> 2354</span><span class="comment"> * and replaced on the ready list should either the event occur (and</span></div>
+<div class="line"><a id="l02355" name="l02355"></a><span class="lineno"> 2355</span><span class="comment"> * there be no higher priority tasks waiting on the same event) or</span></div>
+<div class="line"><a id="l02356" name="l02356"></a><span class="lineno"> 2356</span><span class="comment"> * the delay period expires.</span></div>
+<div class="line"><a id="l02357" name="l02357"></a><span class="lineno"> 2357</span><span class="comment"> *</span></div>
+<div class="line"><a id="l02358" name="l02358"></a><span class="lineno"> 2358</span><span class="comment"> * The &#39;unordered&#39; version replaces the event list item value with the</span></div>
+<div class="line"><a id="l02359" name="l02359"></a><span class="lineno"> 2359</span><span class="comment"> * xItemValue value, and inserts the list item at the end of the list.</span></div>
+<div class="line"><a id="l02360" name="l02360"></a><span class="lineno"> 2360</span><span class="comment"> *</span></div>
+<div class="line"><a id="l02361" name="l02361"></a><span class="lineno"> 2361</span><span class="comment"> * The &#39;ordered&#39; version uses the existing event list item value (which is the</span></div>
+<div class="line"><a id="l02362" name="l02362"></a><span class="lineno"> 2362</span><span class="comment"> * owning tasks priority) to insert the list item into the event list is task</span></div>
+<div class="line"><a id="l02363" name="l02363"></a><span class="lineno"> 2363</span><span class="comment"> * priority order.</span></div>
+<div class="line"><a id="l02364" name="l02364"></a><span class="lineno"> 2364</span><span class="comment"> *</span></div>
+<div class="line"><a id="l02365" name="l02365"></a><span class="lineno"> 2365</span><span class="comment"> * @param pxEventList The list containing tasks that are blocked waiting</span></div>
+<div class="line"><a id="l02366" name="l02366"></a><span class="lineno"> 2366</span><span class="comment"> * for the event to occur.</span></div>
+<div class="line"><a id="l02367" name="l02367"></a><span class="lineno"> 2367</span><span class="comment"> *</span></div>
+<div class="line"><a id="l02368" name="l02368"></a><span class="lineno"> 2368</span><span class="comment"> * @param xItemValue The item value to use for the event list item when the</span></div>
+<div class="line"><a id="l02369" name="l02369"></a><span class="lineno"> 2369</span><span class="comment"> * event list is not ordered by task priority.</span></div>
+<div class="line"><a id="l02370" name="l02370"></a><span class="lineno"> 2370</span><span class="comment"> *</span></div>
+<div class="line"><a id="l02371" name="l02371"></a><span class="lineno"> 2371</span><span class="comment"> * @param xTicksToWait The maximum amount of time that the task should wait</span></div>
+<div class="line"><a id="l02372" name="l02372"></a><span class="lineno"> 2372</span><span class="comment"> * for the event to occur.  This is specified in kernel ticks,the constant</span></div>
+<div class="line"><a id="l02373" name="l02373"></a><span class="lineno"> 2373</span><span class="comment"> * portTICK_PERIOD_MS can be used to convert kernel ticks into a real time</span></div>
+<div class="line"><a id="l02374" name="l02374"></a><span class="lineno"> 2374</span><span class="comment"> * period.</span></div>
+<div class="line"><a id="l02375" name="l02375"></a><span class="lineno"> 2375</span><span class="comment"> */</span></div>
+<div class="line"><a id="l02376" name="l02376"></a><span class="lineno"> 2376</span><span class="keywordtype">void</span> vTaskPlaceOnEventList( List_t * <span class="keyword">const</span> pxEventList, <span class="keyword">const</span> TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02377" name="l02377"></a><span class="lineno"> 2377</span><span class="keywordtype">void</span> vTaskPlaceOnUnorderedEventList( List_t * pxEventList, <span class="keyword">const</span> TickType_t xItemValue, <span class="keyword">const</span> TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02378" name="l02378"></a><span class="lineno"> 2378</span> </div>
+<div class="line"><a id="l02379" name="l02379"></a><span class="lineno"> 2379</span><span class="comment">/*</span></div>
+<div class="line"><a id="l02380" name="l02380"></a><span class="lineno"> 2380</span><span class="comment"> * THIS FUNCTION MUST NOT BE USED FROM APPLICATION CODE.  IT IS AN</span></div>
+<div class="line"><a id="l02381" name="l02381"></a><span class="lineno"> 2381</span><span class="comment"> * INTERFACE WHICH IS FOR THE EXCLUSIVE USE OF THE SCHEDULER.</span></div>
+<div class="line"><a id="l02382" name="l02382"></a><span class="lineno"> 2382</span><span class="comment"> *</span></div>
+<div class="line"><a id="l02383" name="l02383"></a><span class="lineno"> 2383</span><span class="comment"> * THIS FUNCTION MUST BE CALLED WITH INTERRUPTS DISABLED.</span></div>
+<div class="line"><a id="l02384" name="l02384"></a><span class="lineno"> 2384</span><span class="comment"> *</span></div>
+<div class="line"><a id="l02385" name="l02385"></a><span class="lineno"> 2385</span><span class="comment"> * This function performs nearly the same function as vTaskPlaceOnEventList().</span></div>
+<div class="line"><a id="l02386" name="l02386"></a><span class="lineno"> 2386</span><span class="comment"> * The difference being that this function does not permit tasks to block</span></div>
+<div class="line"><a id="l02387" name="l02387"></a><span class="lineno"> 2387</span><span class="comment"> * indefinitely, whereas vTaskPlaceOnEventList() does.</span></div>
+<div class="line"><a id="l02388" name="l02388"></a><span class="lineno"> 2388</span><span class="comment"> *</span></div>
+<div class="line"><a id="l02389" name="l02389"></a><span class="lineno"> 2389</span><span class="comment"> */</span></div>
+<div class="line"><a id="l02390" name="l02390"></a><span class="lineno"> 2390</span><span class="keywordtype">void</span> vTaskPlaceOnEventListRestricted( List_t * <span class="keyword">const</span> pxEventList, TickType_t xTicksToWait, <span class="keyword">const</span> BaseType_t xWaitIndefinitely ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02391" name="l02391"></a><span class="lineno"> 2391</span> </div>
+<div class="line"><a id="l02392" name="l02392"></a><span class="lineno"> 2392</span><span class="comment">/*</span></div>
+<div class="line"><a id="l02393" name="l02393"></a><span class="lineno"> 2393</span><span class="comment"> * THIS FUNCTION MUST NOT BE USED FROM APPLICATION CODE.  IT IS AN</span></div>
+<div class="line"><a id="l02394" name="l02394"></a><span class="lineno"> 2394</span><span class="comment"> * INTERFACE WHICH IS FOR THE EXCLUSIVE USE OF THE SCHEDULER.</span></div>
+<div class="line"><a id="l02395" name="l02395"></a><span class="lineno"> 2395</span><span class="comment"> *</span></div>
+<div class="line"><a id="l02396" name="l02396"></a><span class="lineno"> 2396</span><span class="comment"> * THIS FUNCTION MUST BE CALLED WITH INTERRUPTS DISABLED.</span></div>
+<div class="line"><a id="l02397" name="l02397"></a><span class="lineno"> 2397</span><span class="comment"> *</span></div>
+<div class="line"><a id="l02398" name="l02398"></a><span class="lineno"> 2398</span><span class="comment"> * Removes a task from both the specified event list and the list of blocked</span></div>
+<div class="line"><a id="l02399" name="l02399"></a><span class="lineno"> 2399</span><span class="comment"> * tasks, and places it on a ready queue.</span></div>
+<div class="line"><a id="l02400" name="l02400"></a><span class="lineno"> 2400</span><span class="comment"> *</span></div>
+<div class="line"><a id="l02401" name="l02401"></a><span class="lineno"> 2401</span><span class="comment"> * xTaskRemoveFromEventList()/vTaskRemoveFromUnorderedEventList() will be called</span></div>
+<div class="line"><a id="l02402" name="l02402"></a><span class="lineno"> 2402</span><span class="comment"> * if either an event occurs to unblock a task, or the block timeout period</span></div>
+<div class="line"><a id="l02403" name="l02403"></a><span class="lineno"> 2403</span><span class="comment"> * expires.</span></div>
+<div class="line"><a id="l02404" name="l02404"></a><span class="lineno"> 2404</span><span class="comment"> *</span></div>
+<div class="line"><a id="l02405" name="l02405"></a><span class="lineno"> 2405</span><span class="comment"> * xTaskRemoveFromEventList() is used when the event list is in task priority</span></div>
+<div class="line"><a id="l02406" name="l02406"></a><span class="lineno"> 2406</span><span class="comment"> * order.  It removes the list item from the head of the event list as that will</span></div>
+<div class="line"><a id="l02407" name="l02407"></a><span class="lineno"> 2407</span><span class="comment"> * have the highest priority owning task of all the tasks on the event list.</span></div>
+<div class="line"><a id="l02408" name="l02408"></a><span class="lineno"> 2408</span><span class="comment"> * vTaskRemoveFromUnorderedEventList() is used when the event list is not</span></div>
+<div class="line"><a id="l02409" name="l02409"></a><span class="lineno"> 2409</span><span class="comment"> * ordered and the event list items hold something other than the owning tasks</span></div>
+<div class="line"><a id="l02410" name="l02410"></a><span class="lineno"> 2410</span><span class="comment"> * priority.  In this case the event list item value is updated to the value</span></div>
+<div class="line"><a id="l02411" name="l02411"></a><span class="lineno"> 2411</span><span class="comment"> * passed in the xItemValue parameter.</span></div>
+<div class="line"><a id="l02412" name="l02412"></a><span class="lineno"> 2412</span><span class="comment"> *</span></div>
+<div class="line"><a id="l02413" name="l02413"></a><span class="lineno"> 2413</span><span class="comment"> * @return pdTRUE if the task being removed has a higher priority than the task</span></div>
+<div class="line"><a id="l02414" name="l02414"></a><span class="lineno"> 2414</span><span class="comment"> * making the call, otherwise pdFALSE.</span></div>
+<div class="line"><a id="l02415" name="l02415"></a><span class="lineno"> 2415</span><span class="comment"> */</span></div>
+<div class="line"><a id="l02416" name="l02416"></a><span class="lineno"> 2416</span>BaseType_t xTaskRemoveFromEventList( <span class="keyword">const</span> List_t * <span class="keyword">const</span> pxEventList ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02417" name="l02417"></a><span class="lineno"> 2417</span><span class="keywordtype">void</span> vTaskRemoveFromUnorderedEventList( ListItem_t * pxEventListItem, <span class="keyword">const</span> TickType_t xItemValue ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02418" name="l02418"></a><span class="lineno"> 2418</span> </div>
+<div class="line"><a id="l02419" name="l02419"></a><span class="lineno"> 2419</span><span class="comment">/*</span></div>
+<div class="line"><a id="l02420" name="l02420"></a><span class="lineno"> 2420</span><span class="comment"> * THIS FUNCTION MUST NOT BE USED FROM APPLICATION CODE.  IT IS ONLY</span></div>
+<div class="line"><a id="l02421" name="l02421"></a><span class="lineno"> 2421</span><span class="comment"> * INTENDED FOR USE WHEN IMPLEMENTING A PORT OF THE SCHEDULER AND IS</span></div>
+<div class="line"><a id="l02422" name="l02422"></a><span class="lineno"> 2422</span><span class="comment"> * AN INTERFACE WHICH IS FOR THE EXCLUSIVE USE OF THE SCHEDULER.</span></div>
+<div class="line"><a id="l02423" name="l02423"></a><span class="lineno"> 2423</span><span class="comment"> *</span></div>
+<div class="line"><a id="l02424" name="l02424"></a><span class="lineno"> 2424</span><span class="comment"> * Sets the pointer to the current TCB to the TCB of the highest priority task</span></div>
+<div class="line"><a id="l02425" name="l02425"></a><span class="lineno"> 2425</span><span class="comment"> * that is ready to run.</span></div>
+<div class="line"><a id="l02426" name="l02426"></a><span class="lineno"> 2426</span><span class="comment"> */</span></div>
+<div class="line"><a id="l02427" name="l02427"></a><span class="lineno"> 2427</span>portDONT_DISCARD <span class="keywordtype">void</span> vTaskSwitchContext( <span class="keywordtype">void</span> ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02428" name="l02428"></a><span class="lineno"> 2428</span> </div>
+<div class="line"><a id="l02429" name="l02429"></a><span class="lineno"> 2429</span><span class="comment">/*</span></div>
+<div class="line"><a id="l02430" name="l02430"></a><span class="lineno"> 2430</span><span class="comment"> * THESE FUNCTIONS MUST NOT BE USED FROM APPLICATION CODE.  THEY ARE USED BY</span></div>
+<div class="line"><a id="l02431" name="l02431"></a><span class="lineno"> 2431</span><span class="comment"> * THE EVENT BITS MODULE.</span></div>
+<div class="line"><a id="l02432" name="l02432"></a><span class="lineno"> 2432</span><span class="comment"> */</span></div>
+<div class="line"><a id="l02433" name="l02433"></a><span class="lineno"> 2433</span>TickType_t uxTaskResetEventItemValue( <span class="keywordtype">void</span> ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02434" name="l02434"></a><span class="lineno"> 2434</span> </div>
+<div class="line"><a id="l02435" name="l02435"></a><span class="lineno"> 2435</span><span class="comment">/*</span></div>
+<div class="line"><a id="l02436" name="l02436"></a><span class="lineno"> 2436</span><span class="comment"> * Return the handle of the calling task.</span></div>
+<div class="line"><a id="l02437" name="l02437"></a><span class="lineno"> 2437</span><span class="comment"> */</span></div>
+<div class="line"><a id="l02438" name="l02438"></a><span class="lineno"> 2438</span>TaskHandle_t xTaskGetCurrentTaskHandle( <span class="keywordtype">void</span> ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02439" name="l02439"></a><span class="lineno"> 2439</span> </div>
+<div class="line"><a id="l02440" name="l02440"></a><span class="lineno"> 2440</span><span class="comment">/*</span></div>
+<div class="line"><a id="l02441" name="l02441"></a><span class="lineno"> 2441</span><span class="comment"> * Shortcut used by the queue implementation to prevent unnecessary call to</span></div>
+<div class="line"><a id="l02442" name="l02442"></a><span class="lineno"> 2442</span><span class="comment"> * taskYIELD();</span></div>
+<div class="line"><a id="l02443" name="l02443"></a><span class="lineno"> 2443</span><span class="comment"> */</span></div>
+<div class="line"><a id="l02444" name="l02444"></a><span class="lineno"> 2444</span><span class="keywordtype">void</span> vTaskMissedYield( <span class="keywordtype">void</span> ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02445" name="l02445"></a><span class="lineno"> 2445</span> </div>
+<div class="line"><a id="l02446" name="l02446"></a><span class="lineno"> 2446</span><span class="comment">/*</span></div>
+<div class="line"><a id="l02447" name="l02447"></a><span class="lineno"> 2447</span><span class="comment"> * Returns the scheduler state as taskSCHEDULER_RUNNING,</span></div>
+<div class="line"><a id="l02448" name="l02448"></a><span class="lineno"> 2448</span><span class="comment"> * taskSCHEDULER_NOT_STARTED or taskSCHEDULER_SUSPENDED.</span></div>
+<div class="line"><a id="l02449" name="l02449"></a><span class="lineno"> 2449</span><span class="comment"> */</span></div>
+<div class="line"><a id="l02450" name="l02450"></a><span class="lineno"> 2450</span>BaseType_t xTaskGetSchedulerState( <span class="keywordtype">void</span> ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02451" name="l02451"></a><span class="lineno"> 2451</span> </div>
+<div class="line"><a id="l02452" name="l02452"></a><span class="lineno"> 2452</span><span class="comment">/*</span></div>
+<div class="line"><a id="l02453" name="l02453"></a><span class="lineno"> 2453</span><span class="comment"> * Raises the priority of the mutex holder to that of the calling task should</span></div>
+<div class="line"><a id="l02454" name="l02454"></a><span class="lineno"> 2454</span><span class="comment"> * the mutex holder have a priority less than the calling task.</span></div>
+<div class="line"><a id="l02455" name="l02455"></a><span class="lineno"> 2455</span><span class="comment"> */</span></div>
+<div class="line"><a id="l02456" name="l02456"></a><span class="lineno"> 2456</span>BaseType_t xTaskPriorityInherit( TaskHandle_t <span class="keyword">const</span> pxMutexHolder ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02457" name="l02457"></a><span class="lineno"> 2457</span> </div>
+<div class="line"><a id="l02458" name="l02458"></a><span class="lineno"> 2458</span><span class="comment">/*</span></div>
+<div class="line"><a id="l02459" name="l02459"></a><span class="lineno"> 2459</span><span class="comment"> * Set the priority of a task back to its proper priority in the case that it</span></div>
+<div class="line"><a id="l02460" name="l02460"></a><span class="lineno"> 2460</span><span class="comment"> * inherited a higher priority while it was holding a semaphore.</span></div>
+<div class="line"><a id="l02461" name="l02461"></a><span class="lineno"> 2461</span><span class="comment"> */</span></div>
+<div class="line"><a id="l02462" name="l02462"></a><span class="lineno"> 2462</span>BaseType_t xTaskPriorityDisinherit( TaskHandle_t <span class="keyword">const</span> pxMutexHolder ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02463" name="l02463"></a><span class="lineno"> 2463</span> </div>
+<div class="line"><a id="l02464" name="l02464"></a><span class="lineno"> 2464</span><span class="comment">/*</span></div>
+<div class="line"><a id="l02465" name="l02465"></a><span class="lineno"> 2465</span><span class="comment"> * If a higher priority task attempting to obtain a mutex caused a lower</span></div>
+<div class="line"><a id="l02466" name="l02466"></a><span class="lineno"> 2466</span><span class="comment"> * priority task to inherit the higher priority task&#39;s priority - but the higher</span></div>
+<div class="line"><a id="l02467" name="l02467"></a><span class="lineno"> 2467</span><span class="comment"> * priority task then timed out without obtaining the mutex, then the lower</span></div>
+<div class="line"><a id="l02468" name="l02468"></a><span class="lineno"> 2468</span><span class="comment"> * priority task will disinherit the priority again - but only down as far as</span></div>
+<div class="line"><a id="l02469" name="l02469"></a><span class="lineno"> 2469</span><span class="comment"> * the highest priority task that is still waiting for the mutex (if there were</span></div>
+<div class="line"><a id="l02470" name="l02470"></a><span class="lineno"> 2470</span><span class="comment"> * more than one task waiting for the mutex).</span></div>
+<div class="line"><a id="l02471" name="l02471"></a><span class="lineno"> 2471</span><span class="comment"> */</span></div>
+<div class="line"><a id="l02472" name="l02472"></a><span class="lineno"> 2472</span><span class="keywordtype">void</span> vTaskPriorityDisinheritAfterTimeout( TaskHandle_t <span class="keyword">const</span> pxMutexHolder, UBaseType_t uxHighestPriorityWaitingTask ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02473" name="l02473"></a><span class="lineno"> 2473</span> </div>
+<div class="line"><a id="l02474" name="l02474"></a><span class="lineno"> 2474</span><span class="comment">/*</span></div>
+<div class="line"><a id="l02475" name="l02475"></a><span class="lineno"> 2475</span><span class="comment"> * Get the uxTCBNumber assigned to the task referenced by the xTask parameter.</span></div>
+<div class="line"><a id="l02476" name="l02476"></a><span class="lineno"> 2476</span><span class="comment"> */</span></div>
+<div class="line"><a id="l02477" name="l02477"></a><span class="lineno"> 2477</span>UBaseType_t uxTaskGetTaskNumber( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02478" name="l02478"></a><span class="lineno"> 2478</span> </div>
+<div class="line"><a id="l02479" name="l02479"></a><span class="lineno"> 2479</span><span class="comment">/*</span></div>
+<div class="line"><a id="l02480" name="l02480"></a><span class="lineno"> 2480</span><span class="comment"> * Set the uxTaskNumber of the task referenced by the xTask parameter to</span></div>
+<div class="line"><a id="l02481" name="l02481"></a><span class="lineno"> 2481</span><span class="comment"> * uxHandle.</span></div>
+<div class="line"><a id="l02482" name="l02482"></a><span class="lineno"> 2482</span><span class="comment"> */</span></div>
+<div class="line"><a id="l02483" name="l02483"></a><span class="lineno"> 2483</span><span class="keywordtype">void</span> vTaskSetTaskNumber( TaskHandle_t xTask, <span class="keyword">const</span> UBaseType_t uxHandle ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02484" name="l02484"></a><span class="lineno"> 2484</span> </div>
+<div class="line"><a id="l02485" name="l02485"></a><span class="lineno"> 2485</span><span class="comment">/*</span></div>
+<div class="line"><a id="l02486" name="l02486"></a><span class="lineno"> 2486</span><span class="comment"> * Only available when configUSE_TICKLESS_IDLE is set to 1.</span></div>
+<div class="line"><a id="l02487" name="l02487"></a><span class="lineno"> 2487</span><span class="comment"> * If tickless mode is being used, or a low power mode is implemented, then</span></div>
+<div class="line"><a id="l02488" name="l02488"></a><span class="lineno"> 2488</span><span class="comment"> * the tick interrupt will not execute during idle periods.  When this is the</span></div>
+<div class="line"><a id="l02489" name="l02489"></a><span class="lineno"> 2489</span><span class="comment"> * case, the tick count value maintained by the scheduler needs to be kept up</span></div>
+<div class="line"><a id="l02490" name="l02490"></a><span class="lineno"> 2490</span><span class="comment"> * to date with the actual execution time by being skipped forward by a time</span></div>
+<div class="line"><a id="l02491" name="l02491"></a><span class="lineno"> 2491</span><span class="comment"> * equal to the idle period.</span></div>
+<div class="line"><a id="l02492" name="l02492"></a><span class="lineno"> 2492</span><span class="comment"> */</span></div>
+<div class="line"><a id="l02493" name="l02493"></a><span class="lineno"> 2493</span><span class="keywordtype">void</span> vTaskStepTick( <span class="keyword">const</span> TickType_t xTicksToJump ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02494" name="l02494"></a><span class="lineno"> 2494</span> </div>
+<div class="line"><a id="l02495" name="l02495"></a><span class="lineno"> 2495</span><span class="comment">/* Correct the tick count value after the application code has held</span></div>
+<div class="line"><a id="l02496" name="l02496"></a><span class="lineno"> 2496</span><span class="comment">interrupts disabled for an extended period.  xTicksToCatchUp is the number</span></div>
+<div class="line"><a id="l02497" name="l02497"></a><span class="lineno"> 2497</span><span class="comment">of tick interrupts that have been missed due to interrupts being disabled.</span></div>
+<div class="line"><a id="l02498" name="l02498"></a><span class="lineno"> 2498</span><span class="comment">Its value is not computed automatically, so must be computed by the</span></div>
+<div class="line"><a id="l02499" name="l02499"></a><span class="lineno"> 2499</span><span class="comment">application writer.</span></div>
+<div class="line"><a id="l02500" name="l02500"></a><span class="lineno"> 2500</span><span class="comment"></span> </div>
+<div class="line"><a id="l02501" name="l02501"></a><span class="lineno"> 2501</span><span class="comment">This function is similar to vTaskStepTick(), however, unlike</span></div>
+<div class="line"><a id="l02502" name="l02502"></a><span class="lineno"> 2502</span><span class="comment">vTaskStepTick(), xTaskCatchUpTicks() may move the tick count forward past a</span></div>
+<div class="line"><a id="l02503" name="l02503"></a><span class="lineno"> 2503</span><span class="comment">time at which a task should be removed from the blocked state.  That means</span></div>
+<div class="line"><a id="l02504" name="l02504"></a><span class="lineno"> 2504</span><span class="comment">tasks may have to be removed from the blocked state as the tick count is</span></div>
+<div class="line"><a id="l02505" name="l02505"></a><span class="lineno"> 2505</span><span class="comment">moved. */</span></div>
+<div class="line"><a id="l02506" name="l02506"></a><span class="lineno"> 2506</span>BaseType_t xTaskCatchUpTicks( TickType_t xTicksToCatchUp ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02507" name="l02507"></a><span class="lineno"> 2507</span> </div>
+<div class="line"><a id="l02508" name="l02508"></a><span class="lineno"> 2508</span><span class="comment">/*</span></div>
+<div class="line"><a id="l02509" name="l02509"></a><span class="lineno"> 2509</span><span class="comment"> * Only available when configUSE_TICKLESS_IDLE is set to 1.</span></div>
+<div class="line"><a id="l02510" name="l02510"></a><span class="lineno"> 2510</span><span class="comment"> * Provided for use within portSUPPRESS_TICKS_AND_SLEEP() to allow the port</span></div>
+<div class="line"><a id="l02511" name="l02511"></a><span class="lineno"> 2511</span><span class="comment"> * specific sleep function to determine if it is ok to proceed with the sleep,</span></div>
+<div class="line"><a id="l02512" name="l02512"></a><span class="lineno"> 2512</span><span class="comment"> * and if it is ok to proceed, if it is ok to sleep indefinitely.</span></div>
+<div class="line"><a id="l02513" name="l02513"></a><span class="lineno"> 2513</span><span class="comment"> *</span></div>
+<div class="line"><a id="l02514" name="l02514"></a><span class="lineno"> 2514</span><span class="comment"> * This function is necessary because portSUPPRESS_TICKS_AND_SLEEP() is only</span></div>
+<div class="line"><a id="l02515" name="l02515"></a><span class="lineno"> 2515</span><span class="comment"> * called with the scheduler suspended, not from within a critical section.  It</span></div>
+<div class="line"><a id="l02516" name="l02516"></a><span class="lineno"> 2516</span><span class="comment"> * is therefore possible for an interrupt to request a context switch between</span></div>
+<div class="line"><a id="l02517" name="l02517"></a><span class="lineno"> 2517</span><span class="comment"> * portSUPPRESS_TICKS_AND_SLEEP() and the low power mode actually being</span></div>
+<div class="line"><a id="l02518" name="l02518"></a><span class="lineno"> 2518</span><span class="comment"> * entered.  eTaskConfirmSleepModeStatus() should be called from a short</span></div>
+<div class="line"><a id="l02519" name="l02519"></a><span class="lineno"> 2519</span><span class="comment"> * critical section between the timer being stopped and the sleep mode being</span></div>
+<div class="line"><a id="l02520" name="l02520"></a><span class="lineno"> 2520</span><span class="comment"> * entered to ensure it is ok to proceed into the sleep mode.</span></div>
+<div class="line"><a id="l02521" name="l02521"></a><span class="lineno"> 2521</span><span class="comment"> */</span></div>
+<div class="line"><a id="l02522" name="l02522"></a><span class="lineno"> 2522</span>eSleepModeStatus eTaskConfirmSleepModeStatus( <span class="keywordtype">void</span> ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02523" name="l02523"></a><span class="lineno"> 2523</span> </div>
+<div class="line"><a id="l02524" name="l02524"></a><span class="lineno"> 2524</span><span class="comment">/*</span></div>
+<div class="line"><a id="l02525" name="l02525"></a><span class="lineno"> 2525</span><span class="comment"> * For internal use only.  Increment the mutex held count when a mutex is</span></div>
+<div class="line"><a id="l02526" name="l02526"></a><span class="lineno"> 2526</span><span class="comment"> * taken and return the handle of the task that has taken the mutex.</span></div>
+<div class="line"><a id="l02527" name="l02527"></a><span class="lineno"> 2527</span><span class="comment"> */</span></div>
+<div class="line"><a id="l02528" name="l02528"></a><span class="lineno"> 2528</span>TaskHandle_t pvTaskIncrementMutexHeldCount( <span class="keywordtype">void</span> ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02529" name="l02529"></a><span class="lineno"> 2529</span> </div>
+<div class="line"><a id="l02530" name="l02530"></a><span class="lineno"> 2530</span><span class="comment">/*</span></div>
+<div class="line"><a id="l02531" name="l02531"></a><span class="lineno"> 2531</span><span class="comment"> * For internal use only.  Same as vTaskSetTimeOutState(), but without a critial</span></div>
+<div class="line"><a id="l02532" name="l02532"></a><span class="lineno"> 2532</span><span class="comment"> * section.</span></div>
+<div class="line"><a id="l02533" name="l02533"></a><span class="lineno"> 2533</span><span class="comment"> */</span></div>
+<div class="line"><a id="l02534" name="l02534"></a><span class="lineno"> 2534</span><span class="keywordtype">void</span> vTaskInternalSetTimeOutState( TimeOut_t * <span class="keyword">const</span> pxTimeOut ) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a id="l02535" name="l02535"></a><span class="lineno"> 2535</span> </div>
+<div class="line"><a id="l02536" name="l02536"></a><span class="lineno"> 2536</span> </div>
+<div class="line"><a id="l02537" name="l02537"></a><span class="lineno"> 2537</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l02538" name="l02538"></a><span class="lineno"> 2538</span>}</div>
+<div class="line"><a id="l02539" name="l02539"></a><span class="lineno"> 2539</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l02540" name="l02540"></a><span class="lineno"> 2540</span><span class="preprocessor">#endif </span><span class="comment">/* INC_TASK_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l02541" name="l02541"></a><span class="lineno"> 2541</span> </div>
+<div class="line"><a id="l02542" name="l02542"></a><span class="lineno"> 2542</span> </div>
+<div class="line"><a id="l02543" name="l02543"></a><span class="lineno"> 2543</span> </div>
+<div class="ttc" id="astructtskTaskControlBlock_html"><div class="ttname"><a href="../../d3/d7e/structtskTaskControlBlock.html">tskTaskControlBlock</a></div><div class="ttdef"><b>Definition</b> tasks.c:252</div></div>
+<div class="ttc" id="astructxMEMORY__REGION_html"><div class="ttname"><a href="../../da/d7e/structxMEMORY__REGION.html">xMEMORY_REGION</a></div><div class="ttdef"><b>Definition</b> task.h:112</div></div>
+<div class="ttc" id="astructxTASK__PARAMETERS_html"><div class="ttname"><a href="../../dd/d9e/structxTASK__PARAMETERS.html">xTASK_PARAMETERS</a></div><div class="ttdef"><b>Definition</b> task.h:122</div></div>
+<div class="ttc" id="astructxTASK__STATUS_html"><div class="ttname"><a href="../../d1/d79/structxTASK__STATUS.html">xTASK_STATUS</a></div><div class="ttdef"><b>Definition</b> task.h:138</div></div>
+<div class="ttc" id="astructxTIME__OUT_html"><div class="ttname"><a href="../../db/dec/structxTIME__OUT.html">xTIME_OUT</a></div><div class="ttdef"><b>Definition</b> task.h:103</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_e63db30fdf8cb3590da7d143a9c688c6.html">STM32duino FreeRTOS</a></li><li class="navelem"><a class="el" href="../../dir_d380e3a7b6f7219b856d01e4a28cff0e.html">src</a></li><li class="navelem"><a class="el" href="../../dir_38555fd8e9dad5b4c0f92ed950a0b23d.html">FreeRTOS</a></li><li class="navelem"><a class="el" href="../../dir_22fdc100023c90f693b2c002ee8fb904.html">Source</a></li><li class="navelem"><a class="el" href="../../dir_ce9f149042a342a402cad729ddd7b4fb.html">include</a></li><li class="navelem"><b>task.h</b></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

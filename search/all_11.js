@@ -1,15 +1,10 @@
 var searchData=
 [
-  ['rdbyte_0',['RdByte',['../d9/d0e/classVL53L5CX.html#aff537fadd902a5ce54e196c7f4cd6bc3',1,'VL53L5CX']]],
-  ['rdmulti_1',['RdMulti',['../d9/d0e/classVL53L5CX.html#a343f89ce3dd6a030ec99f13ffb3ae20c',1,'VL53L5CX']]],
-  ['read_2',['read',['../d9/df7/classFullSpeedServo.html#a9877b6c705724403c10656116a6084c0',1,'FullSpeedServo']]],
-  ['readposition_3',['readPosition',['../d8/d27/classAX12.html#a0051ca6ed1b26619aef55ca5def61c94',1,'AX12']]],
-  ['readspeed_4',['readSpeed',['../d8/d27/classAX12.html#a8435f4c2c2c0b769afda199e608120e4',1,'AX12']]],
-  ['readtemperature_5',['readTemperature',['../d8/d27/classAX12.html#a9505d53fa861c549d0707160598be897',1,'AX12']]],
-  ['readtorque_6',['readTorque',['../d8/d27/classAX12.html#a3b6edc073ad24249b87d83cbd8109f00',1,'AX12']]],
-  ['readvoltage_7',['readVoltage',['../d8/d27/classAX12.html#a88f715439c6f50f3e6dca6c30f6f0897',1,'AX12']]],
-  ['recorder_20apis_8',['Trace Recorder APIs',['../da/db6/group__trace__recorder__apis.html',1,'']]],
-  ['relache_5ftemps_9',['relache_temps',['../d8/d4b/classTeleplot.html#a49dff3b57c4b8b1d92b969e6ecab707b',1,'Teleplot']]],
-  ['reset_10',['reset',['../dd/df3/classCodewheel.html#a9b1448233cb729d40d82ac8aafecddc5',1,'Codewheel::reset()'],['../d8/da9/classPID.html#af9677e76cb1beffbcf3f54cbc627c530',1,'PID::reset()'],['../de/d96/classPurePursuit.html#a7fbc8b6d8116a373a438f3795f255559',1,'PurePursuit::reset()']]],
-  ['restart_11',['restart',['../dd/df3/classCodewheel.html#a46d7e4b6a5873f986e2ad01c31668c40',1,'Codewheel::restart()'],['../df/d45/classClock.html#a52e5cc059c78fa8067d24d9d63070ca1',1,'Clock::restart()'],['../d1/d6f/classAbstractCodewheel.html#a6298fa396bc11c0d073426ff1469f180',1,'AbstractCodewheel::restart()']]]
+  ['name_0',['name',['../d7/d65/structos__thread__def.html#a4d5b1b8556ab113f3b891f93d3d8c409',1,'os_thread_def::name'],['../d8/d7d/structosThreadAttr__t.html#aed20d9f112c97dcb4fc6374290ab7446',1,'osThreadAttr_t::name'],['../df/df9/structosTimerAttr__t.html#a2b432a32e222f51f5c3ed37db14a2db5',1,'osTimerAttr_t::name'],['../d0/d30/structosEventFlagsAttr__t.html#ac3d95d16f3eed79d9e068567acb2b0d4',1,'osEventFlagsAttr_t::name'],['../d3/d73/structosMutexAttr__t.html#af3997dba664ce0e0f788a35e8f473a4d',1,'osMutexAttr_t::name'],['../dd/de9/structosSemaphoreAttr__t.html#a0151928f02ecbbc0a22793a63892af66',1,'osSemaphoreAttr_t::name'],['../d2/d91/structosMemoryPoolAttr__t.html#a1a14604293f5327ce10f33f67f718679',1,'osMemoryPoolAttr_t::name'],['../d1/d21/structosMessageQueueAttr__t.html#a7a0ddc31f97f8d8e5d9f880f5d03768b',1,'osMessageQueueAttr_t::name']]],
+  ['navigation_1',['Page Navigation',['../d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#extension-page-navigation',1,'']]],
+  ['nextmove_2',['Nextmove',['../d8/d27/classAX12.html#ab390ad86381f9dc2cbc944354ba11bdf',1,'AX12']]],
+  ['nextmovespeed_3',['NextmoveSpeed',['../d8/d27/classAX12.html#ad9f6efa05581f7e30f9f090a502c94fb',1,'AX12']]],
+  ['noncopyable_4',['NonCopyable',['../dc/d3c/classNonCopyable.html',1,'']]],
+  ['npm_20xpm_20dependency_5',['npm/xpm dependency',['..//github/workspace/doc/doxygen-awesome-css/README.md#autotoc_md38',1,'']]],
+  ['numeric_6',['Numeric',['../de/d09/classgeogebra_1_1Geogebra_1_1Numeric.html',1,'geogebra::Geogebra']]]
 ];
