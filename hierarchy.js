@@ -1,8 +1,8 @@
 var hierarchy =
 [
     [ "A_BLOCK_LINK", "d1/d67/structA__BLOCK__LINK.html", null ],
-    [ "AbstractAbsoluteEncoder", "d4/ddc/classAbstractAbsoluteEncoder.html", [
-      [ "BournsACEncoder", "d0/d04/classBournsACEncoder.html", null ]
+    [ "HazelnutGripper::AbstractAbsoluteEncoder", "d1/de1/classHazelnutGripper_1_1AbstractAbsoluteEncoder.html", [
+      [ "HazelnutGripper::BournsACEncoder", "d8/d86/classHazelnutGripper_1_1BournsACEncoder.html", null ]
     ] ],
     [ "AbstractCodewheel", "d1/d6f/classAbstractCodewheel.html", [
       [ "Codewheel", "dd/df3/classCodewheel.html", null ]
@@ -25,6 +25,7 @@ var hierarchy =
     ] ],
     [ "Clock", "df/d45/classClock.html", null ],
     [ "Color", "d0/da2/structColor.html", null ],
+    [ "HazelnutGripper::ColorData", "d6/d6e/structHazelnutGripper_1_1ColorData.html", null ],
     [ "corCoRoutineControlBlock", "da/d35/structcorCoRoutineControlBlock.html", null ],
     [ "CRC16", "db/d6d/classCRC16.html", null ],
     [ "Cube", "df/dd5/classCube.html", null ],
@@ -32,7 +33,6 @@ var hierarchy =
     [ "Decisions", "d9/da9/classDecisions.html", null ],
     [ "ObjectDetector::Detector", "d1/d34/structObjectDetector_1_1Detector.html", null ],
     [ "DynamixelClass", "df/dc5/classDynamixelClass.html", null ],
-    [ "Elevator", "d9/db0/classElevator.html", null ],
     [ "EndStop", "df/d5b/classEndStop.html", null ],
     [ "EventGroupDef_t", "d7/d15/structEventGroupDef__t.html", null ],
     [ "MyLibrary::Example", "d7/d8e/classMyLibrary_1_1Example.html", [
@@ -46,6 +46,8 @@ var hierarchy =
       [ "geogebra.Geogebra.Numeric", "de/d09/classgeogebra_1_1Geogebra_1_1Numeric.html", null ]
     ] ],
     [ "geogebra.Geogebra", "dc/df0/classgeogebra_1_1Geogebra.html", null ],
+    [ "HazelnutGripper::Gripper", "d4/dcb/classHazelnutGripper_1_1Gripper.html", null ],
+    [ "HazelnutGripper::GripperFinger", "d6/d59/classHazelnutGripper_1_1GripperFinger.html", null ],
     [ "HeapRegion", "d1/dfa/structHeapRegion.html", null ],
     [ "limites_actionneurs", "de/d35/structlimites__actionneurs.html", null ],
     [ "list", null, [

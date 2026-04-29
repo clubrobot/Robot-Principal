@@ -4,7 +4,7 @@ var searchData=
   ['a_20href_20https_3a_20github_20com_20stm32duino_20arduino_5fcore_5fstm32_20arduino_5fcore_5fstm32_20a_1',['Test results (using &lt;a href=&quot;https://github.com/stm32duino/Arduino_Core_STM32&quot; &gt;Arduino_Core_STM32&lt;/a&gt;)',['..//github/workspace/lib/STM32duino FreeRTOS/README.md#autotoc_md49',1,'']]],
   ['a_20layout_2',['Choosing a layout',['..//github/workspace/doc/doxygen-awesome-css/README.md#autotoc_md40',1,'']]],
   ['a_5fblock_5flink_3',['A_BLOCK_LINK',['../d1/d67/structA__BLOCK__LINK.html',1,'']]],
-  ['abstractabsoluteencoder_4',['AbstractAbsoluteEncoder',['../d4/ddc/classAbstractAbsoluteEncoder.html',1,'']]],
+  ['abstractabsoluteencoder_4',['AbstractAbsoluteEncoder',['../d1/de1/classHazelnutGripper_1_1AbstractAbsoluteEncoder.html',1,'HazelnutGripper']]],
   ['abstractcodewheel_5',['AbstractCodewheel',['../d1/d6f/classAbstractCodewheel.html',1,'']]],
   ['abstractdriver_6',['AbstractDriver',['../d4/de2/classAbstractDriver.html',1,'']]],
   ['abstractmotor_7',['AbstractMotor',['../d2/d61/classAbstractMotor.html',1,'']]],

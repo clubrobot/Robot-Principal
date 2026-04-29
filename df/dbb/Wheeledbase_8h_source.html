@@ -114,7 +114,7 @@ $(function(){initNavTree('df/dbb/Wheeledbase_8h_source.html','../../'); initResi
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef WHEELEDBASE_H</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define WHEELEDBASE_H</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;DCMotor.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;WheelMotor.h&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;Codewheel.h&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;Odometry.h&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;PID.h&quot;</span></div>
@@ -240,8 +240,8 @@ $(function(){initNavTree('df/dbb/Wheeledbase_8h_source.html','../../'); initResi
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="comment">// Global variables</span></div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="keyword">extern</span> <a class="code hl_class" href="../../d8/de4/classDCMotorsDriver.html">DCMotorsDriver</a> driver;</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="keyword">extern</span> <a class="code hl_class" href="../../dd/d4c/classDCMotor.html">DCMotor</a> leftWheel;</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="keyword">extern</span> <a class="code hl_class" href="../../dd/d4c/classDCMotor.html">DCMotor</a> rightWheel;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="keyword">extern</span> WheelMotor leftWheel;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="keyword">extern</span> WheelMotor rightWheel;</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="keyword">extern</span> <a class="code hl_class" href="../../dd/df3/classCodewheel.html">Codewheel</a> leftCodewheel;</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="keyword">extern</span> <a class="code hl_class" href="../../dd/df3/classCodewheel.html">Codewheel</a> rightCodewheel;</div>
@@ -317,7 +317,6 @@ $(function(){initNavTree('df/dbb/Wheeledbase_8h_source.html','../../'); initResi
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="preprocessor">#endif </span><span class="comment">//WHEELEDBASE_H</span></div>
 <div class="ttc" id="aclassCodewheel_html"><div class="ttname"><a href="../../dd/df3/classCodewheel.html">Codewheel</a></div><div class="ttdoc">Fait la passerelle entre les roues codeuses et le stm32.</div><div class="ttdef"><b>Definition</b> Codewheel.h:16</div></div>
-<div class="ttc" id="aclassDCMotor_html"><div class="ttname"><a href="../../dd/d4c/classDCMotor.html">DCMotor</a></div><div class="ttdoc">Pilotage de moteur continu.</div><div class="ttdef"><b>Definition</b> DCMotor.h:21</div></div>
 <div class="ttc" id="aclassDCMotorsDriver_html"><div class="ttname"><a href="../../d8/de4/classDCMotorsDriver.html">DCMotorsDriver</a></div><div class="ttdoc">Utilisation des drivers moteurs.</div><div class="ttdef"><b>Definition</b> DCMotor.h:108</div></div>
 <div class="ttc" id="aclassLogger_html"><div class="ttname"><a href="../../db/d67/classLogger.html">Logger</a></div><div class="ttdef"><b>Definition</b> Logger.h:27</div></div>
 <div class="ttc" id="aclassOdometry_html"><div class="ttname"><a href="../../d6/dc3/classOdometry.html">Odometry</a></div><div class="ttdoc">Calcule la position en temps réel du robot.</div><div class="ttdef"><b>Definition</b> Odometry.h:71</div></div>

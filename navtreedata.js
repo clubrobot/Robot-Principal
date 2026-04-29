@@ -78,7 +78,11 @@ var NAVTREE =
     [ "Liste des choses à faire", "dd/da0/todo.html", null ],
     [ "Topics", "topics.html", "topics" ],
     [ "Espaces de nommage", "namespaces.html", [
-      [ "Liste des espaces de nommage", "namespaces.html", "namespaces_dup" ]
+      [ "Liste des espaces de nommage", "namespaces.html", "namespaces_dup" ],
+      [ "Membres de l'espace de nommage", "namespacemembers.html", [
+        [ "Tout", "namespacemembers.html", null ],
+        [ "Énumérations", "namespacemembers_enum.html", null ]
+      ] ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Liste des classes", "annotated.html", "annotated_dup" ],
@@ -107,10 +111,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d5/d48/FreeRTOS_2Source_2include_2stream__buffer_8h_source.html",
-"d9/d0e/classVL53L5CX.html#a6c6f8541fd900c22e965281a19fae0d3",
-"dd/df3/classCodewheel.html#a40d3e371e0ce17391135469dfacb3dea",
-"dir_6c86ab93944bdcdac80307f2543a8466.html"
+"d5/d09/FreeRTOS_2Source_2include_2timers_8h_source.html",
+"d8/d86/classHazelnutGripper_1_1BournsACEncoder.html#a63a6fbc1cda1e17156a6b1b52951123a",
+"dd/d08/group__xEventGroupSetBits.html",
+"df/df4/group__xStreamBufferSendFromISR.html"
 ];
 
 var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';

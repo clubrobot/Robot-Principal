@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kernel_0',['kernel',['../d0/d65/structosVersion__t.html#a3a589e0cc665071abb720afda12e9a15',1,'osVersion_t']]]
+  ['green_0',['green',['../d6/d6e/structHazelnutGripper_1_1ColorData.html#a2e21beec53ecf65c14658947d69f705a',1,'HazelnutGripper::ColorData']]]
 ];

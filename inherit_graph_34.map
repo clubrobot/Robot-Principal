@@ -1,3 +1,5 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="Node000000" href="$d6/dd4/classObjectDetector.html" title=" " alt="" coords="5,5,114,31"/>
+<area shape="rect" id="Node000000" href="$d7/d8e/classMyLibrary_1_1Example.html" title="Example class to demonstrate the features of the custom CSS." alt="" coords="5,13,138,38"/>
+<area shape="rect" id="Node000001" href="$db/d5b/classMyLibrary_1_1SubclassExample.html" title="some subclass" alt="" coords="186,5,372,46"/>
+<area shape="poly" id="edge16_Node000000_Node000001" title=" " alt="" coords="153,23,185,23,185,28,153,28"/>
 </map>
