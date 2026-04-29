@@ -16,6 +16,9 @@
 #include "mathutils.h"
 #include <math.h>
 
+#include "DRV8844.h"
+#include "Logger.h"
+
 // Parameters identifiers
 
 #define LEFTWHEEL_RADIUS_ID             0x10
@@ -127,7 +130,7 @@ struct WBConstants
 };
 
 // Global variables
-extern DCMotorsDriver driver;
+extern DRV8844 driver;
 extern WheelMotor leftWheel;
 extern WheelMotor rightWheel;
 
@@ -145,6 +148,8 @@ extern PositionController positionControl;
 
 extern PurePursuit   purePursuit;
 extern TurnOnTheSpot turnOnTheSpot;
+
+inline Logger wb_logger = Logger("WHEELEDBASE");
 
 namespace  Wheeledbase {
     // Instructions prototypes
