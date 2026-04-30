@@ -55,7 +55,7 @@ namespace Tache {
         Variable<bool> clamp_open;
         Variable<bool> clamp_spread;
         Variable<bool> clamp_getColor;
-        Variable<bool[]> clamp_rotate;
+        Variable<bool[4]> clamp_rotate;
 
         /// Specific actions
         Variable<bool> clamp_conditionalRotate;

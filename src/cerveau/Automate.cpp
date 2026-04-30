@@ -9,7 +9,7 @@ namespace Automate {
         color = team;
         taches = team == JAUNE ? tachesJaune : tachesBleu;
         current_points = 0;
-        numberTaches = sizeof(team == JAUNE ? tachesJaune : tachesBleu) / sizeof(tachesBleu[0]);
+        numberTaches = team == JAUNE ? sizeof(tachesJaune) / sizeof(Tache::Tache): sizeof(tachesBleu) / sizeof(Tache::Tache);
     }
 
     void playMatch(void *pvParameters) {
@@ -92,7 +92,7 @@ namespace Automate {
             }
             if (isMovementValid(*tache)) {
                 if (tache->wb_theta.mode == Tache::DELTA) {
-                    Wheeledbase::TURNTO_DELTA(tache->wb_theta.value);
+                    Wheeledbase::TURNTO_DELTA(tache->wb_theta.value, false);
                 } else if (tache->wb_x.mode == Tache::DELTA) {
                     Wheeledbase::GOTO_DELTA(tache->wb_x.value, 0, false);
                 } else {
@@ -100,7 +100,18 @@ namespace Automate {
                 }
             }
             ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+            while (
+                (tache->clamp_open.mode != Tache::IGNORE && allFingerInPos())
+            ){}
         }
+    }
+
+    bool allFingerInPos() {
+        return
+            HazelnutGripper::Gripper::getFinger(0).isTargetReached() &&
+            HazelnutGripper::Gripper::getFinger(1).isTargetReached() &&
+            HazelnutGripper::Gripper::getFinger(2).isTargetReached() &&
+            HazelnutGripper::Gripper::getFinger(3).isTargetReached();
     }
 
     bool isMovementValid(Tache::Tache const &tache) {

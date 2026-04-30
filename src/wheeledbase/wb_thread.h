@@ -11,6 +11,7 @@
 #include "PositionController.h"
 #include "PurePursuit.h"
 #include "TurnOnTheSpot.h"
+#include "DRV8844.h"
 
 #include "mathutils.h"
 
