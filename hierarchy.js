@@ -7,9 +7,14 @@ var hierarchy =
     [ "AbstractCodewheel", "d1/d6f/classAbstractCodewheel.html", [
       [ "Codewheel", "dd/df3/classCodewheel.html", null ]
     ] ],
-    [ "AbstractDriver", "d4/de2/classAbstractDriver.html", null ],
+    [ "AbstractDriver", "d4/de2/classAbstractDriver.html", [
+      [ "DRV8844", "d9/de4/classDRV8844.html", null ],
+      [ "DRV8876", "d1/d5b/classDRV8876.html", null ],
+      [ "I2CDCDriver", "d5/dd0/classI2CDCDriver.html", null ]
+    ] ],
     [ "AbstractMotor", "d2/d61/classAbstractMotor.html", [
-      [ "DCMotor", "dd/d4c/classDCMotor.html", null ]
+      [ "DCMotor", "dd/d4c/classDCMotor.html", null ],
+      [ "WheelMotor", "db/dab/classWheelMotor.html", null ]
     ] ],
     [ "AbstractMoveStrategy", "de/dc0/classAbstractMoveStrategy.html", [
       [ "BasicMoveStrategy", "de/d22/classBasicMoveStrategy.html", null ],
@@ -29,7 +34,6 @@ var hierarchy =
     [ "corCoRoutineControlBlock", "da/d35/structcorCoRoutineControlBlock.html", null ],
     [ "CRC16", "db/d6d/classCRC16.html", null ],
     [ "Cube", "df/dd5/classCube.html", null ],
-    [ "DCMotorsDriver", "d8/de4/classDCMotorsDriver.html", null ],
     [ "Decisions", "d9/da9/classDecisions.html", null ],
     [ "ObjectDetector::Detector", "d1/d34/structObjectDetector_1_1Detector.html", null ],
     [ "DynamixelClass", "df/dc5/classDynamixelClass.html", null ],
@@ -62,8 +66,7 @@ var hierarchy =
     [ "MPURegionSettings", "da/d6a/structMPURegionSettings.html", null ],
     [ "Musique", "d6/da1/classMusique.html", null ],
     [ "NonCopyable", "dc/d3c/classNonCopyable.html", [
-      [ "Codewheel", "dd/df3/classCodewheel.html", null ],
-      [ "DCMotor", "dd/d4c/classDCMotor.html", null ]
+      [ "Codewheel", "dd/df3/classCodewheel.html", null ]
     ] ],
     [ "ObjectDetector", "d6/dd4/classObjectDetector.html", null ],
     [ "os_mailQ_cb", "d4/d12/structos__mailQ__cb.html", null ],

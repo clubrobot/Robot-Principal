@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CRINSA-team2025:  Fichier source de lib/motors/include/I2CDCDriver.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript" src="../../darkmode_toggle.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../custom.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="../../theme-round.css" rel="stylesheet" type="text/css"/>
+<link href="../../theme-robot.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">CRINSA-team2025<span id="projectnumber">&#160;V1</span>
+   </div>
+   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2025</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('d1/d1c/I2CDCDriver_8h_source.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">I2CDCDriver.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by romain on 23/04/2026.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef PAMIS_I2CDCDRIVER_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define PAMIS_I2CDCDRIVER_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifdef ARDUINO</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//#error &quot;Not implemented&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#elif ESP_PLATFORM</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;i2cdev.h&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;pca9685.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;mathutils.h&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;AbstractDriver.h&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#define PCA9685_HIGH 4096</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define PCA9685_LOW 0</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../d5/dd0/classI2CDCDriver.html">   26</a></span><span class="keyword">class </span><a class="code hl_function" href="../../d5/dd0/classI2CDCDriver.html#a089fbc3a12d448c35a8785779d789c3a">I2CDCDriver</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d4/de2/classAbstractDriver.html">AbstractDriver</a></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_function" href="../../d5/dd0/classI2CDCDriver.html#a089fbc3a12d448c35a8785779d789c3a">I2CDCDriver</a>(<span class="keywordtype">int</span> sda, <span class="keywordtype">int</span> scl, <span class="keywordtype">int</span> addr, <span class="keywordtype">int</span> m1_fwd_port, <span class="keywordtype">int</span> m1_bck_port, <span class="keywordtype">int</span> m1_pwm, <span class="keywordtype">int</span> m2_fwd_port, <span class="keywordtype">int</span> m2_bck_port, <span class="keywordtype">int</span> m2_pwm, <span class="keywordtype">int</span> stdby_port);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/dd0/classI2CDCDriver.html#adb63657cbb5517d275e76d7b448591d3">init</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d5/dd0/classI2CDCDriver.html#a2902e58817e3ffa56ab0595251bae3e8">attach</a>(<a class="code hl_class" href="../../d2/d61/classAbstractMotor.html">AbstractMotor</a>* motor) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d5/dd0/classI2CDCDriver.html#a2902e58817e3ffa56ab0595251bae3e8">attach</a>(<a class="code hl_class" href="../../d2/d61/classAbstractMotor.html">AbstractMotor</a>* motor, uint8_t <span class="keywordtype">id</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/dd0/classI2CDCDriver.html#a61177f119304dc900402caecd510e697">setVelocity</a>(<span class="keywordtype">float</span> velocity, uint8_t <span class="keywordtype">id</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="../../d5/dd0/classI2CDCDriver.html#a6b6dbff1e97550775159617f737aaebf">getVelocity</a>(uint8_t <span class="keywordtype">id</span>) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d5/dd0/classI2CDCDriver.html#a9b99ae4545bae090e24abbfddce3ec5b">isFaulty</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/dd0/classI2CDCDriver.html#a3ce92b104724e7458336b09a67c4046a">setSleep</a>(<span class="keywordtype">bool</span> active);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">int</span> m_sda; </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">int</span> m_scl; </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">int</span> m_addr;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">int</span> m_m1_fwd_port;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordtype">int</span> m_m1_bck_port;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">int</span> m_m1_pwm;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">int</span> m_m2_fwd_port;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordtype">int</span> m_m2_bck_port;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">int</span> m_m2_pwm;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordtype">int</span> m_stdby_port;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#if ESP_PLATFORM</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    i2c_dev_t m_dev = {};</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordtype">float</span> m_currentVelocity[2]{};</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>};</div>
+</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#endif </span><span class="comment">//PAMIS_I2CDCDRIVER_H</span></div>
+<div class="ttc" id="aclassAbstractDriver_html"><div class="ttname"><a href="../../d4/de2/classAbstractDriver.html">AbstractDriver</a></div><div class="ttdef"><b>Definition</b> AbstractDriver.h:18</div></div>
+<div class="ttc" id="aclassAbstractMotor_html"><div class="ttname"><a href="../../d2/d61/classAbstractMotor.html">AbstractMotor</a></div><div class="ttdef"><b>Definition</b> AbstractMotors.h:12</div></div>
+<div class="ttc" id="aclassI2CDCDriver_html_a089fbc3a12d448c35a8785779d789c3a"><div class="ttname"><a href="../../d5/dd0/classI2CDCDriver.html#a089fbc3a12d448c35a8785779d789c3a">I2CDCDriver::I2CDCDriver</a></div><div class="ttdeci">I2CDCDriver(int sda, int scl, int addr, int m1_fwd_port, int m1_bck_port, int m1_pwm, int m2_fwd_port, int m2_bck_port, int m2_pwm, int stdby_port)</div><div class="ttdoc">Constructeur du driver.</div><div class="ttdef"><b>Definition</b> I2CDCDriver.cpp:10</div></div>
+<div class="ttc" id="aclassI2CDCDriver_html_a2902e58817e3ffa56ab0595251bae3e8"><div class="ttname"><a href="../../d5/dd0/classI2CDCDriver.html#a2902e58817e3ffa56ab0595251bae3e8">I2CDCDriver::attach</a></div><div class="ttdeci">int attach(AbstractMotor *motor) override</div><div class="ttdoc">Attache un moteur au canal disponible.</div><div class="ttdef"><b>Definition</b> I2CDCDriver.cpp:51</div></div>
+<div class="ttc" id="aclassI2CDCDriver_html_a3ce92b104724e7458336b09a67c4046a"><div class="ttname"><a href="../../d5/dd0/classI2CDCDriver.html#a3ce92b104724e7458336b09a67c4046a">I2CDCDriver::setSleep</a></div><div class="ttdeci">void setSleep(bool active)</div><div class="ttdoc">Contrôle le mode basse consommation.</div><div class="ttdef"><b>Definition</b> I2CDCDriver.cpp:118</div></div>
+<div class="ttc" id="aclassI2CDCDriver_html_a61177f119304dc900402caecd510e697"><div class="ttname"><a href="../../d5/dd0/classI2CDCDriver.html#a61177f119304dc900402caecd510e697">I2CDCDriver::setVelocity</a></div><div class="ttdeci">void setVelocity(float velocity, uint8_t id) override</div><div class="ttdoc">Définit la vitesse de sortie pour le moteur spécifié.</div><div class="ttdef"><b>Definition</b> I2CDCDriver.cpp:73</div></div>
+<div class="ttc" id="aclassI2CDCDriver_html_a6b6dbff1e97550775159617f737aaebf"><div class="ttname"><a href="../../d5/dd0/classI2CDCDriver.html#a6b6dbff1e97550775159617f737aaebf">I2CDCDriver::getVelocity</a></div><div class="ttdeci">float getVelocity(uint8_t id) const override</div><div class="ttdoc">Récupère la dernière vitesse appliquée.</div><div class="ttdef"><b>Definition</b> I2CDCDriver.cpp:108</div></div>
+<div class="ttc" id="aclassI2CDCDriver_html_a9b99ae4545bae090e24abbfddce3ec5b"><div class="ttname"><a href="../../d5/dd0/classI2CDCDriver.html#a9b99ae4545bae090e24abbfddce3ec5b">I2CDCDriver::isFaulty</a></div><div class="ttdeci">bool isFaulty() const</div><div class="ttdoc">Vérifie l&#39;état de santé du driver.</div><div class="ttdef"><b>Definition</b> I2CDCDriver.cpp:113</div></div>
+<div class="ttc" id="aclassI2CDCDriver_html_adb63657cbb5517d275e76d7b448591d3"><div class="ttname"><a href="../../d5/dd0/classI2CDCDriver.html#adb63657cbb5517d275e76d7b448591d3">I2CDCDriver::init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">Initialise les broches matérielles. Configure les entrées/sorties et réveille le driver si sleepPin e...</div><div class="ttdef"><b>Definition</b> I2CDCDriver.cpp:30</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_31347930a9db39eb68b78fb3141a6385.html">motors</a></li><li class="navelem"><a class="el" href="../../dir_1b1ccd7db2cfdbd7e2e7b54f97f3ad19.html">include</a></li><li class="navelem"><b>I2CDCDriver.h</b></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

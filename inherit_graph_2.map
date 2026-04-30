@@ -1,3 +1,9 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="Node000000" href="$d4/de2/classAbstractDriver.html" title=" " alt="" coords="5,5,110,31"/>
+<area shape="rect" id="Node000000" href="$d4/de2/classAbstractDriver.html" title=" " alt="" coords="5,55,110,80"/>
+<area shape="rect" id="Node000001" href="$d9/de4/classDRV8844.html" title=" " alt="" coords="166,5,242,31"/>
+<area shape="poly" id="edge3_Node000000_Node000001" title=" " alt="" coords="112,47,165,28,167,33,113,52"/>
+<area shape="rect" id="Node000002" href="$d1/d5b/classDRV8876.html" title="Implémentation du driver pour le circuit intégré DRV8876." alt="" coords="166,55,242,80"/>
+<area shape="poly" id="edge4_Node000000_Node000002" title=" " alt="" coords="125,65,166,65,166,70,125,70"/>
+<area shape="rect" id="Node000003" href="$d5/dd0/classI2CDCDriver.html" title=" " alt="" coords="158,104,251,130"/>
+<area shape="poly" id="edge5_Node000000_Node000003" title=" " alt="" coords="113,83,165,101,163,106,112,88"/>
 </map>

@@ -106,7 +106,7 @@ $(function(){initNavTree('d2/d61/classAbstractMotor.html','../../'); initResizab
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
-<a href="#pro-attribs">Attributs protégés</a> &#124;
+<a href="#pub-attribs">Attributs publics</a> &#124;
 <a href="../../d5/d8b/classAbstractMotor-members.html">Liste de tous les membres</a>  </div>
   <div class="headertitle"><div class="title">Référence de la classe AbstractMotor<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
 </div><!--header-->
@@ -116,9 +116,11 @@ Graphe d'héritage de AbstractMotor:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/d2f/classAbstractMotor__inherit__graph.png" border="0" usemap="#aAbstractMotor_inherit__map" alt="Inheritance graph"/></div>
 <map name="aAbstractMotor_inherit__map" id="aAbstractMotor_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,5,109,31"/>
-<area shape="rect" href="../../dd/d4c/classDCMotor.html" title="Pilotage de moteur continu." alt="" coords="21,79,93,105"/>
-<area shape="poly" title=" " alt="" coords="60,46,60,79,54,79,54,46"/>
+<area shape="rect" title=" " alt="" coords="42,5,145,31"/>
+<area shape="rect" href="../../dd/d4c/classDCMotor.html" title="Implémentation concrète d&#39;un moteur DC standard." alt="" coords="5,79,78,105"/>
+<area shape="poly" title=" " alt="" coords="78,45,52,80,48,77,74,42"/>
+<area shape="rect" href="../../db/dab/classWheelMotor.html" title="Implémentation concrète d&#39;un moteur DC standard." alt="" coords="102,79,192,105"/>
+<area shape="poly" title=" " alt="" coords="114,42,140,77,136,80,109,45"/>
 </map>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">légende</a>]</span></center></div>
 <div class="dynheader">
@@ -145,8 +147,8 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memdesc:acaed879fcb45e6abef565a03fd6f227d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne vitesse max.  <br /></td></tr>
 <tr class="separator:acaed879fcb45e6abef565a03fd6f227d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
-Attributs protégés</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Attributs publics</h2></td></tr>
 <tr class="memitem:aa5e5f74cd8908a848955b2ac3da9c578" id="r_aa5e5f74cd8908a848955b2ac3da9c578"><td class="memItemLeft" align="right" valign="top"><a id="aa5e5f74cd8908a848955b2ac3da9c578" name="aa5e5f74cd8908a848955b2ac3da9c578"></a>
 <a class="el" href="../../d4/de2/classAbstractDriver.html">AbstractDriver</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_driver</b> = nullptr</td></tr>
 <tr class="separator:aa5e5f74cd8908a848955b2ac3da9c578"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,7 +213,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_driverId</b> = 2
 <p>Retourne la vitesse max du moteur pour son intégration dans les calculs de <a class="el" href="../../d5/d9e/classDifferentialController.html" title="Controle les moteurs.">DifferentialController</a>.</p>
 <dl class="section return"><dt>Renvoie</dt><dd>virtual float </dd></dl>
 
-<p>Implémenté dans <a class="el" href="../../dd/d4c/classDCMotor.html#aa9a3abd456d666211447a81e9f6f4a51">DCMotor</a>.</p>
+<p>Implémenté dans <a class="el" href="../../dd/d4c/classDCMotor.html#ad799652539e6f9864d4f7abcc6415ebd">DCMotor</a>, et <a class="el" href="../../db/dab/classWheelMotor.html#a4a45d9e2045cf39502cbd42652576d16">WheelMotor</a>.</p>
 
 </div>
 </div>
@@ -247,7 +249,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_driverId</b> = 2
   </dd>
 </dl>
 
-<p>Réimplémentée dans <a class="el" href="../../dd/d4c/classDCMotor.html#afb8905c3bc527a8e08667ec596385bcb">DCMotor</a>.</p>
+<p>Réimplémentée dans <a class="el" href="../../db/dab/classWheelMotor.html#a2116b35ba209918957a2926a67f1897f">WheelMotor</a>.</p>
 
 </div>
 </div>

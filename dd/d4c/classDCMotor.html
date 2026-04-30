@@ -106,14 +106,12 @@ $(function(){initNavTree('dd/d4c/classDCMotor.html','../../'); initResizable(tru
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
-<a href="#pro-methods">Fonctions membres protégées</a> &#124;
-<a href="#pro-attribs">Attributs protégés</a> &#124;
 <a href="../../d0/d9a/classDCMotor-members.html">Liste de tous les membres</a>  </div>
   <div class="headertitle"><div class="title">Référence de la classe DCMotor</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Pilotage de moteur continu.  
+<p>Implémentation concrète d'un moteur DC standard.  
  <a href="#details">Plus de détails...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d5/d19/DCMotor_8h_source.html">DCMotor.h</a>&gt;</code></p>
@@ -122,11 +120,9 @@ Graphe d'héritage de DCMotor:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d8/df7/classDCMotor__inherit__graph.png" border="0" usemap="#aDCMotor_inherit__map" alt="Inheritance graph"/></div>
 <map name="aDCMotor_inherit__map" id="aDCMotor_inherit__map">
-<area shape="rect" title="Pilotage de moteur continu." alt="" coords="81,79,153,105"/>
-<area shape="rect" href="../../dc/d3c/classNonCopyable.html" title="Classe a hériter pour empécher la copie de cette dernière." alt="" coords="5,5,104,31"/>
-<area shape="poly" title=" " alt="" coords="77,41,109,77,105,80,73,44"/>
-<area shape="rect" href="../../d2/d61/classAbstractMotor.html" title=" " alt="" coords="128,5,232,31"/>
-<area shape="poly" title=" " alt="" coords="161,44,130,80,126,77,157,41"/>
+<area shape="rect" title="Implémentation concrète d&#39;un moteur DC standard." alt="" coords="21,79,93,105"/>
+<area shape="rect" href="../../d2/d61/classAbstractMotor.html" title=" " alt="" coords="5,5,109,31"/>
+<area shape="poly" title=" " alt="" coords="60,46,60,79,54,79,54,46"/>
 </map>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">légende</a>]</span></center></div>
 <div class="dynheader">
@@ -134,116 +130,52 @@ Graphe de collaboration de DCMotor:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/df7/classDCMotor__coll__graph.png" border="0" usemap="#aDCMotor_coll__map" alt="Collaboration graph"/></div>
 <map name="aDCMotor_coll__map" id="aDCMotor_coll__map">
-<area shape="rect" title="Pilotage de moteur continu." alt="" coords="34,94,107,120"/>
-<area shape="rect" href="../../dc/d3c/classNonCopyable.html" title="Classe a hériter pour empécher la copie de cette dernière." alt="" coords="5,5,104,31"/>
-<area shape="poly" title=" " alt="" coords="62,46,71,93,66,94,57,47"/>
-<area shape="rect" href="../../d2/d61/classAbstractMotor.html" title=" " alt="" coords="128,5,232,31"/>
-<area shape="poly" title=" " alt="" coords="154,43,88,95,84,91,151,39"/>
-<area shape="rect" href="../../d4/de2/classAbstractDriver.html" title=" " alt="" coords="169,94,273,120"/>
-<area shape="poly" title=" " alt="" coords="167,45,164,58,167,69,177,81,191,91,188,96,174,85,162,71,159,58,162,44"/>
-<area shape="poly" title=" " alt="" coords="230,79,231,67,228,56,218,43,205,34,208,29,222,40,233,54,236,67,235,80"/>
+<area shape="rect" title="Implémentation concrète d&#39;un moteur DC standard." alt="" coords="5,94,78,120"/>
+<area shape="rect" href="../../d2/d61/classAbstractMotor.html" title=" " alt="" coords="34,5,137,31"/>
+<area shape="poly" title=" " alt="" coords="69,45,63,56,47,94,42,93,58,54,65,42"/>
+<area shape="rect" href="../../d4/de2/classAbstractDriver.html" title=" " alt="" coords="113,94,218,120"/>
+<area shape="poly" title=" " alt="" coords="80,46,80,58,84,69,97,82,114,92,112,96,94,86,80,71,75,59,75,46"/>
+<area shape="poly" title=" " alt="" coords="158,80,146,57,132,44,115,34,118,29,135,40,150,53,163,78"/>
 </map>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a09e0b46ab4d55aea59bc7760c6f75123" id="r_a09e0b46ab4d55aea59bc7760c6f75123"><td class="memItemLeft" align="right" valign="top"><a id="a09e0b46ab4d55aea59bc7760c6f75123" name="a09e0b46ab4d55aea59bc7760c6f75123"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>attach</b> (int EN, int PWM, int DIR)</td></tr>
-<tr class="memdesc:a09e0b46ab4d55aea59bc7760c6f75123"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indique quels pins de l'arduino son utilisé pour ce moteur (actuellement correspond à moteur 1 ou 2) <br /></td></tr>
-<tr class="separator:a09e0b46ab4d55aea59bc7760c6f75123"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb8905c3bc527a8e08667ec596385bcb" id="r_afb8905c3bc527a8e08667ec596385bcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb8905c3bc527a8e08667ec596385bcb">setVelocity</a> (float velocity)</td></tr>
-<tr class="memdesc:afb8905c3bc527a8e08667ec596385bcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envoie une commande de vitesse au moteur.  <br /></td></tr>
-<tr class="separator:afb8905c3bc527a8e08667ec596385bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cba76efb2369f482665581adcca45ce" id="r_a3cba76efb2369f482665581adcca45ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3cba76efb2369f482665581adcca45ce">setConstant</a> (float constant)</td></tr>
-<tr class="memdesc:a3cba76efb2369f482665581adcca45ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paramètre la constante du moteur.  <br /></td></tr>
-<tr class="separator:a3cba76efb2369f482665581adcca45ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f4e6700183b53618a7021dceaaedaa2" id="r_a0f4e6700183b53618a7021dceaaedaa2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f4e6700183b53618a7021dceaaedaa2">setWheelRadius</a> (float wheelRadius)</td></tr>
-<tr class="memdesc:a0f4e6700183b53618a7021dceaaedaa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paramètre le rayon de la roue liée au moteur.  <br /></td></tr>
-<tr class="separator:a0f4e6700183b53618a7021dceaaedaa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade804661b6e4a6e5f9b9354208cacb26" id="r_ade804661b6e4a6e5f9b9354208cacb26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade804661b6e4a6e5f9b9354208cacb26">setMaxPWM</a> (float maxPWM)</td></tr>
-<tr class="memdesc:ade804661b6e4a6e5f9b9354208cacb26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paramètre une valeur limite de PWN à ne pas dépasser.  <br /></td></tr>
-<tr class="separator:ade804661b6e4a6e5f9b9354208cacb26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c9263f5db0ae12ae53b53ae75e9fa10" id="r_a3c9263f5db0ae12ae53b53ae75e9fa10"><td class="memItemLeft" align="right" valign="top"><a id="a3c9263f5db0ae12ae53b53ae75e9fa10" name="a3c9263f5db0ae12ae53b53ae75e9fa10"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>enable</b> ()</td></tr>
-<tr class="separator:a3c9263f5db0ae12ae53b53ae75e9fa10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefa1b011de46f0a4b70c5e794c653851" id="r_aefa1b011de46f0a4b70c5e794c653851"><td class="memItemLeft" align="right" valign="top"><a id="aefa1b011de46f0a4b70c5e794c653851" name="aefa1b011de46f0a4b70c5e794c653851"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>disable</b> ()</td></tr>
-<tr class="separator:aefa1b011de46f0a4b70c5e794c653851"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1407f87d60fcf74a2dd0b77a79392bfb" id="r_a1407f87d60fcf74a2dd0b77a79392bfb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1407f87d60fcf74a2dd0b77a79392bfb">getVelocity</a> () const</td></tr>
-<tr class="memdesc:a1407f87d60fcf74a2dd0b77a79392bfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie la vitesse de commande actuelle du moteur.  <br /></td></tr>
-<tr class="separator:a1407f87d60fcf74a2dd0b77a79392bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73d0d26c3b9faa8a595f1ec270678265" id="r_a73d0d26c3b9faa8a595f1ec270678265"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73d0d26c3b9faa8a595f1ec270678265">getConstant</a> () const</td></tr>
-<tr class="memdesc:a73d0d26c3b9faa8a595f1ec270678265"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie la constante du moteur paramétrée.  <br /></td></tr>
-<tr class="separator:a73d0d26c3b9faa8a595f1ec270678265"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ca44fbd11037bc80a8900e4b3204dc1" id="r_a4ca44fbd11037bc80a8900e4b3204dc1"><td class="memItemLeft" align="right" valign="top"><a id="a4ca44fbd11037bc80a8900e4b3204dc1" name="a4ca44fbd11037bc80a8900e4b3204dc1"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getWheelRadius</b> () const</td></tr>
-<tr class="memdesc:a4ca44fbd11037bc80a8900e4b3204dc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie rayon de la roue du moteur. <br /></td></tr>
-<tr class="separator:a4ca44fbd11037bc80a8900e4b3204dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d8a228ea5f8301fbb2f4b1ed61e3a1f" id="r_a3d8a228ea5f8301fbb2f4b1ed61e3a1f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d8a228ea5f8301fbb2f4b1ed61e3a1f">getMaxPWM</a> () const</td></tr>
-<tr class="memdesc:a3d8a228ea5f8301fbb2f4b1ed61e3a1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie la valeur max de PWM.  <br /></td></tr>
-<tr class="separator:a3d8a228ea5f8301fbb2f4b1ed61e3a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a3d014e7dc0830dc26739d23247f40b" id="r_a2a3d014e7dc0830dc26739d23247f40b"><td class="memItemLeft" align="right" valign="top"><a id="a2a3d014e7dc0830dc26739d23247f40b" name="a2a3d014e7dc0830dc26739d23247f40b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEnabled</b> () const</td></tr>
-<tr class="separator:a2a3d014e7dc0830dc26739d23247f40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9a3abd456d666211447a81e9f6f4a51" id="r_aa9a3abd456d666211447a81e9f6f4a51"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9a3abd456d666211447a81e9f6f4a51">getMaxVelocity</a> () const</td></tr>
-<tr class="memdesc:aa9a3abd456d666211447a81e9f6f4a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie la vitesse maximale avec les constantes actuelles.  <br /></td></tr>
-<tr class="separator:aa9a3abd456d666211447a81e9f6f4a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07545edd79fb6f5ab5b9898f02f1d011" id="r_a07545edd79fb6f5ab5b9898f02f1d011"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07545edd79fb6f5ab5b9898f02f1d011">DCMotor</a> (float maxVelocity=1.0f)</td></tr>
+<tr class="memdesc:a07545edd79fb6f5ab5b9898f02f1d011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par défaut.  <br /></td></tr>
+<tr class="separator:a07545edd79fb6f5ab5b9898f02f1d011"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad799652539e6f9864d4f7abcc6415ebd" id="r_ad799652539e6f9864d4f7abcc6415ebd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad799652539e6f9864d4f7abcc6415ebd">getMaxVelocity</a> () const override</td></tr>
+<tr class="memdesc:ad799652539e6f9864d4f7abcc6415ebd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne la vitesse maximale configurée.  <br /></td></tr>
+<tr class="separator:ad799652539e6f9864d4f7abcc6415ebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa58801d7add2869109d8c1c9b5c537a9" id="r_aa58801d7add2869109d8c1c9b5c537a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa58801d7add2869109d8c1c9b5c537a9">setMaxVelocity</a> (float maxVelocity)</td></tr>
+<tr class="memdesc:aa58801d7add2869109d8c1c9b5c537a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifie la vitesse maximale (limitation logicielle).  <br /></td></tr>
+<tr class="separator:aa58801d7add2869109d8c1c9b5c537a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAbstractMotor"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classAbstractMotor')"><img src="../../closed.png" alt="-"/>&#160;Fonctions membres publiques hérités de <a class="el" href="../../d2/d61/classAbstractMotor.html">AbstractMotor</a></td></tr>
 <tr class="memitem:a990f28ae82c2a7015ef160f781c0d6ca inherit pub_methods_classAbstractMotor" id="r_a990f28ae82c2a7015ef160f781c0d6ca"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d61/classAbstractMotor.html#a990f28ae82c2a7015ef160f781c0d6ca">~AbstractMotor</a> ()=default</td></tr>
 <tr class="memdesc:a990f28ae82c2a7015ef160f781c0d6ca inherit pub_methods_classAbstractMotor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur d'<a class="el" href="../../d2/d61/classAbstractMotor.html">AbstractMotor</a>.  <br /></td></tr>
 <tr class="separator:a990f28ae82c2a7015ef160f781c0d6ca inherit pub_methods_classAbstractMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82f76644fc8ea1b0b5346191022dd0ae inherit pub_methods_classAbstractMotor" id="r_a82f76644fc8ea1b0b5346191022dd0ae"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d61/classAbstractMotor.html#a82f76644fc8ea1b0b5346191022dd0ae">setVelocity</a> (float velocity)</td></tr>
+<tr class="memdesc:a82f76644fc8ea1b0b5346191022dd0ae inherit pub_methods_classAbstractMotor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Charge une nouvelle vitesse.  <br /></td></tr>
+<tr class="separator:a82f76644fc8ea1b0b5346191022dd0ae inherit pub_methods_classAbstractMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
-Fonctions membres protégées</h2></td></tr>
-<tr class="memitem:aca9efb256ee689e46fbec372fbc95859" id="r_aca9efb256ee689e46fbec372fbc95859"><td class="memItemLeft" align="right" valign="top"><a id="aca9efb256ee689e46fbec372fbc95859" name="aca9efb256ee689e46fbec372fbc95859"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></tr>
-<tr class="separator:aca9efb256ee689e46fbec372fbc95859"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
-Attributs protégés</h2></td></tr>
-<tr class="memitem:a60deea58d114092d5f21580d1143e662" id="r_a60deea58d114092d5f21580d1143e662"><td class="memItemLeft" align="right" valign="top"><a id="a60deea58d114092d5f21580d1143e662" name="a60deea58d114092d5f21580d1143e662"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_enabled</b></td></tr>
-<tr class="separator:a60deea58d114092d5f21580d1143e662"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9106d1d0eacc3421f6407b030a7d9bbd" id="r_a9106d1d0eacc3421f6407b030a7d9bbd"><td class="memItemLeft" align="right" valign="top"><a id="a9106d1d0eacc3421f6407b030a7d9bbd" name="a9106d1d0eacc3421f6407b030a7d9bbd"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>m_velocity</b></td></tr>
-<tr class="memdesc:a9106d1d0eacc3421f6407b030a7d9bbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">in mm/s (millimeters per second) <br /></td></tr>
-<tr class="separator:a9106d1d0eacc3421f6407b030a7d9bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a70bd2bdc1a0db1aeb0157f9bf1e911" id="r_a4a70bd2bdc1a0db1aeb0157f9bf1e911"><td class="memItemLeft" align="right" valign="top"><a id="a4a70bd2bdc1a0db1aeb0157f9bf1e911" name="a4a70bd2bdc1a0db1aeb0157f9bf1e911"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>m_wheelRadius</b></td></tr>
-<tr class="memdesc:a4a70bd2bdc1a0db1aeb0157f9bf1e911"><td class="mdescLeft">&#160;</td><td class="mdescRight">in mm <br /></td></tr>
-<tr class="separator:a4a70bd2bdc1a0db1aeb0157f9bf1e911"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50bf5cd3d20ff775dd476a79cf48dbc5" id="r_a50bf5cd3d20ff775dd476a79cf48dbc5"><td class="memItemLeft" align="right" valign="top"><a id="a50bf5cd3d20ff775dd476a79cf48dbc5" name="a50bf5cd3d20ff775dd476a79cf48dbc5"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>m_constant</b></td></tr>
-<tr class="memdesc:a50bf5cd3d20ff775dd476a79cf48dbc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">(60 * reduction_ratio / velocity_constant_in_RPM) / supplied_voltage_in_V <br /></td></tr>
-<tr class="separator:a50bf5cd3d20ff775dd476a79cf48dbc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a3cdfc30060d65f3a561c155aaafe67" id="r_a0a3cdfc30060d65f3a561c155aaafe67"><td class="memItemLeft" align="right" valign="top"><a id="a0a3cdfc30060d65f3a561c155aaafe67" name="a0a3cdfc30060d65f3a561c155aaafe67"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>m_maxPWM</b></td></tr>
-<tr class="memdesc:a0a3cdfc30060d65f3a561c155aaafe67"><td class="mdescLeft">&#160;</td><td class="mdescRight">in range ]0, 1] <br /></td></tr>
-<tr class="separator:a0a3cdfc30060d65f3a561c155aaafe67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac521c056898275ad012129336851daa6" id="r_ac521c056898275ad012129336851daa6"><td class="memItemLeft" align="right" valign="top"><a id="ac521c056898275ad012129336851daa6" name="ac521c056898275ad012129336851daa6"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>m_EN</b></td></tr>
-<tr class="separator:ac521c056898275ad012129336851daa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa32b0c9e16bf3e6f1731de1fbc984a3a" id="r_aa32b0c9e16bf3e6f1731de1fbc984a3a"><td class="memItemLeft" align="right" valign="top"><a id="aa32b0c9e16bf3e6f1731de1fbc984a3a" name="aa32b0c9e16bf3e6f1731de1fbc984a3a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>m_PWM</b></td></tr>
-<tr class="separator:aa32b0c9e16bf3e6f1731de1fbc984a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ae5944cc23773eb57d8497363be8596" id="r_a6ae5944cc23773eb57d8497363be8596"><td class="memItemLeft" align="right" valign="top"><a id="a6ae5944cc23773eb57d8497363be8596" name="a6ae5944cc23773eb57d8497363be8596"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>m_DIR</b></td></tr>
-<tr class="separator:a6ae5944cc23773eb57d8497363be8596"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_classAbstractMotor"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classAbstractMotor')"><img src="../../closed.png" alt="-"/>&#160;Attributs protégés hérités de <a class="el" href="../../d2/d61/classAbstractMotor.html">AbstractMotor</a></td></tr>
-<tr class="memitem:aa5e5f74cd8908a848955b2ac3da9c578 inherit pro_attribs_classAbstractMotor" id="r_aa5e5f74cd8908a848955b2ac3da9c578"><td class="memItemLeft" align="right" valign="top">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Membres hérités additionnels</h2></td></tr>
+<tr class="inherit_header pub_attribs_classAbstractMotor"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_classAbstractMotor')"><img src="../../closed.png" alt="-"/>&#160;Attributs publics hérités de <a class="el" href="../../d2/d61/classAbstractMotor.html">AbstractMotor</a></td></tr>
+<tr class="memitem:aa5e5f74cd8908a848955b2ac3da9c578 inherit pub_attribs_classAbstractMotor" id="r_aa5e5f74cd8908a848955b2ac3da9c578"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="../../d4/de2/classAbstractDriver.html">AbstractDriver</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_driver</b> = nullptr</td></tr>
-<tr class="separator:aa5e5f74cd8908a848955b2ac3da9c578 inherit pro_attribs_classAbstractMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a7b48059266061a79186b9ffcefc241 inherit pro_attribs_classAbstractMotor" id="r_a0a7b48059266061a79186b9ffcefc241"><td class="memItemLeft" align="right" valign="top">
+<tr class="separator:aa5e5f74cd8908a848955b2ac3da9c578 inherit pub_attribs_classAbstractMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a7b48059266061a79186b9ffcefc241 inherit pub_attribs_classAbstractMotor" id="r_a0a7b48059266061a79186b9ffcefc241"><td class="memItemLeft" align="right" valign="top">
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_driverId</b> = 255</td></tr>
-<tr class="separator:a0a7b48059266061a79186b9ffcefc241 inherit pro_attribs_classAbstractMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a0a7b48059266061a79186b9ffcefc241 inherit pub_attribs_classAbstractMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock"><p>Pilotage de moteur continu. </p>
-<p>class <a class="el" href="../../dd/d4c/classDCMotor.html" title="Pilotage de moteur continu.">DCMotor</a> </p><dl class="section author"><dt>Auteur</dt><dd>Ulysse Darmet Cette classe permet de contrôler un moteur à courant continu par PWM via un driver Moteur</dd></dl>
-<p>Remarque : Pour les moteurs qui ne sont reliées à des roues seulement régler la constante du moteur à 1/tension_PWM. Ainsi, on peut simplement controler le moteur via <a class="el" href="#afb8905c3bc527a8e08667ec596385bcb" title="Envoie une commande de vitesse au moteur.">setVelocity()</a> en envoyant comme commande la tension de PWM souhaitée. </p>
-</div><h2 class="groupheader">Documentation des fonctions membres</h2>
-<a id="a73d0d26c3b9faa8a595f1ec270678265" name="a73d0d26c3b9faa8a595f1ec270678265"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73d0d26c3b9faa8a595f1ec270678265">&#9670;&#160;</a></span>getConstant()</h2>
+<div class="textblock"><p>Implémentation concrète d'un moteur DC standard. </p>
+<ul>
+<li>Cette classe permet de définir les limites physiques d'un moteur et de le lier à un canal spécifique d'un <a class="el" href="../../d4/de2/classAbstractDriver.html">AbstractDriver</a>. </li>
+</ul>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a id="a07545edd79fb6f5ab5b9898f02f1d011" name="a07545edd79fb6f5ab5b9898f02f1d011"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07545edd79fb6f5ab5b9898f02f1d011">&#9670;&#160;</a></span>DCMotor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -252,54 +184,32 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_driverId</b> = 2
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float DCMotor::getConstant </td>
+          <td class="memname">DCMotor::DCMotor </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>maxVelocity</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Renvoie la constante du moteur paramétrée. </p>
-<dl class="section return"><dt>Renvoie</dt><dd>constante : (60 * reduction_ratio / velocity_constant_in_RPM) / supplied_voltage_in_V </dd></dl>
+<p>Constructeur par défaut. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">maxVelocity</td><td>Vitesse maximale autorisée (généralement 1.0f pour 100%). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="a3d8a228ea5f8301fbb2f4b1ed61e3a1f" name="a3d8a228ea5f8301fbb2f4b1ed61e3a1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d8a228ea5f8301fbb2f4b1ed61e3a1f">&#9670;&#160;</a></span>getMaxPWM()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float DCMotor::getMaxPWM </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Renvoie la valeur max de PWM. </p>
-<dl class="section return"><dt>Renvoie</dt><dd>valeur entre 0 et 1 </dd></dl>
-
-</div>
-</div>
-<a id="aa9a3abd456d666211447a81e9f6f4a51" name="aa9a3abd456d666211447a81e9f6f4a51"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9a3abd456d666211447a81e9f6f4a51">&#9670;&#160;</a></span>getMaxVelocity()</h2>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="ad799652539e6f9864d4f7abcc6415ebd" name="ad799652539e6f9864d4f7abcc6415ebd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad799652539e6f9864d4f7abcc6415ebd">&#9670;&#160;</a></span>getMaxVelocity()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -316,150 +226,37 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_driverId</b> = 2
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Renvoie la vitesse maximale avec les constantes actuelles. </p>
-<dl class="section return"><dt>Renvoie</dt><dd>vitesse max en mm/s </dd></dl>
+<p>Retourne la vitesse maximale configurée. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>float Vitesse max. </dd></dl>
 
 <p>Implémente <a class="el" href="../../d2/d61/classAbstractMotor.html#acaed879fcb45e6abef565a03fd6f227d">AbstractMotor</a>.</p>
 
 </div>
 </div>
-<a id="a1407f87d60fcf74a2dd0b77a79392bfb" name="a1407f87d60fcf74a2dd0b77a79392bfb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1407f87d60fcf74a2dd0b77a79392bfb">&#9670;&#160;</a></span>getVelocity()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float DCMotor::getVelocity </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Renvoie la vitesse de commande actuelle du moteur. </p>
-<dl class="section return"><dt>Renvoie</dt><dd>vitesse en mm/s </dd></dl>
-
-</div>
-</div>
-<a id="a3cba76efb2369f482665581adcca45ce" name="a3cba76efb2369f482665581adcca45ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3cba76efb2369f482665581adcca45ce">&#9670;&#160;</a></span>setConstant()</h2>
+<a id="aa58801d7add2869109d8c1c9b5c537a9" name="aa58801d7add2869109d8c1c9b5c537a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa58801d7add2869109d8c1c9b5c537a9">&#9670;&#160;</a></span>setMaxVelocity()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void DCMotor::setConstant </td>
+          <td class="memname">void DCMotor::setMaxVelocity </td>
           <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>constant</em></span></td><td>)</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>maxVelocity</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Paramètre la constante du moteur. </p>
+<p>Modifie la vitesse maximale (limitation logicielle). </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">constant</td><td>constante en rad/s/Volt </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ade804661b6e4a6e5f9b9354208cacb26" name="ade804661b6e4a6e5f9b9354208cacb26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade804661b6e4a6e5f9b9354208cacb26">&#9670;&#160;</a></span>setMaxPWM()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void DCMotor::setMaxPWM </td>
-          <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>maxPWM</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Paramètre une valeur limite de PWN à ne pas dépasser. </p>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">maxPWM</td><td>valeur limite entre 0 et 1 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="afb8905c3bc527a8e08667ec596385bcb" name="afb8905c3bc527a8e08667ec596385bcb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb8905c3bc527a8e08667ec596385bcb">&#9670;&#160;</a></span>setVelocity()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void DCMotor::setVelocity </td>
-          <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>velocity</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Envoie une commande de vitesse au moteur. </p>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">velocity</td><td>vitesse de commande en mm/s </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Réimplémentée à partir de <a class="el" href="../../d2/d61/classAbstractMotor.html#a82f76644fc8ea1b0b5346191022dd0ae">AbstractMotor</a>.</p>
-
-</div>
-</div>
-<a id="a0f4e6700183b53618a7021dceaaedaa2" name="a0f4e6700183b53618a7021dceaaedaa2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f4e6700183b53618a7021dceaaedaa2">&#9670;&#160;</a></span>setWheelRadius()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void DCMotor::setWheelRadius </td>
-          <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>wheelRadius</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Paramètre le rayon de la roue liée au moteur. </p>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">wheelRadius</td><td>rayon en mm </td></tr>
+    <tr><td class="paramname">maxVelocity</td><td>Nouvelle vitesse max. </td></tr>
   </table>
   </dd>
 </dl>

@@ -78,7 +78,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('d8/de4/classDCMotorsDriver.html','../../'); initResizable(true); });
+$(function(){initNavTree('d1/d5b/classDRV8876.html','../../'); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -104,15 +104,24 @@ $(function(){initNavTree('d8/de4/classDCMotorsDriver.html','../../'); initResiza
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">DCMotorsDriver Liste des membres</div></div>
+  <div class="headertitle"><div class="title">DRV8876 Liste des membres</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Liste complète des membres de <a class="el" href="../../d8/de4/classDCMotorsDriver.html">DCMotorsDriver</a>, y compris les membres hérités :</p>
+<p>Liste complète des membres de <a class="el" href="../../d1/d5b/classDRV8876.html">DRV8876</a>, y compris les membres hérités :</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../d8/de4/classDCMotorsDriver.html#adada31cbf92efa244b55292e84be5747">attach</a>(int RESET, int FAULT)</td><td class="entry"><a class="el" href="../../d8/de4/classDCMotorsDriver.html">DCMotorsDriver</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>isFaulty</b>() (défini dans <a class="el" href="../../d8/de4/classDCMotorsDriver.html">DCMotorsDriver</a>)</td><td class="entry"><a class="el" href="../../d8/de4/classDCMotorsDriver.html">DCMotorsDriver</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>reset</b>() (défini dans <a class="el" href="../../d8/de4/classDCMotorsDriver.html">DCMotorsDriver</a>)</td><td class="entry"><a class="el" href="../../d8/de4/classDCMotorsDriver.html">DCMotorsDriver</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d1/d5b/classDRV8876.html#a48c0b5cfa579909a86191fe2d99ac360">attach</a>(AbstractMotor *motor) override</td><td class="entry"><a class="el" href="../../d1/d5b/classDRV8876.html">DRV8876</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="../../d1/d5b/classDRV8876.html#ae1250bdfde9b0fab6f024f63b1c4afc0">attach</a>(AbstractMotor *motor, uint8_t id) override</td><td class="entry"><a class="el" href="../../d1/d5b/classDRV8876.html">DRV8876</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d4/de2/classAbstractDriver.html#ad8f7e33a3aca5899958fc7eadd7a8c2e">detach</a>(const int id)</td><td class="entry"><a class="el" href="../../d4/de2/classAbstractDriver.html">AbstractDriver</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="../../d1/d5b/classDRV8876.html#a43e2605a467abf070444e838fb8a617a">DRV8876</a>(int enPin, int phPin, int sleepPin=-1, int faultPin=-1)</td><td class="entry"><a class="el" href="../../d1/d5b/classDRV8876.html">DRV8876</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d4/de2/classAbstractDriver.html#a91f0112441cc034dbf4f27f91b91c04a">getMotor</a>(const int id) const</td><td class="entry"><a class="el" href="../../d4/de2/classAbstractDriver.html">AbstractDriver</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="../../d1/d5b/classDRV8876.html#a9e98b2e4e6bbe1c4873e1b269fc5e666">getVelocity</a>(uint8_t id) const override</td><td class="entry"><a class="el" href="../../d1/d5b/classDRV8876.html">DRV8876</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d1/d5b/classDRV8876.html#a556bf39ddef3efd44bc2f7cb6265d416">init</a>()</td><td class="entry"><a class="el" href="../../d1/d5b/classDRV8876.html">DRV8876</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="../../d1/d5b/classDRV8876.html#afb636ac492dd4c9bf1a14d6ce76f1b75">isFaulty</a>() const</td><td class="entry"><a class="el" href="../../d1/d5b/classDRV8876.html">DRV8876</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>m_motors</b> (défini dans <a class="el" href="../../d4/de2/classAbstractDriver.html">AbstractDriver</a>)</td><td class="entry"><a class="el" href="../../d4/de2/classAbstractDriver.html">AbstractDriver</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="../../d1/d5b/classDRV8876.html#a3fd85a49ffa52ecbfbcbbd2aff99a5a6">setSleep</a>(bool active)</td><td class="entry"><a class="el" href="../../d1/d5b/classDRV8876.html">DRV8876</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d1/d5b/classDRV8876.html#a0deaba1ab0798db000357dc8b8c583fb">setVelocity</a>(float velocity, uint8_t id) override</td><td class="entry"><a class="el" href="../../d1/d5b/classDRV8876.html">DRV8876</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>~AbstractDriver</b>()=default (défini dans <a class="el" href="../../d4/de2/classAbstractDriver.html">AbstractDriver</a>)</td><td class="entry"><a class="el" href="../../d4/de2/classAbstractDriver.html">AbstractDriver</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
