@@ -15,6 +15,8 @@
 #include "TurnOnTheSpot.h"
 #include "mathutils.h"
 #include <math.h>
+
+#include "DRV8844.h"
 #include "Logger.h"
 
 // Parameters identifiers
@@ -128,7 +130,7 @@ struct WBConstants
 };
 
 // Global variables
-extern DCMotorsDriver driver;
+extern DRV8844 driver;
 extern WheelMotor leftWheel;
 extern WheelMotor rightWheel;
 
