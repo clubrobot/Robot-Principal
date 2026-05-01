@@ -99,9 +99,12 @@ namespace Automate {
                     errorHandler();
                 }
             }
-            ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+            if (tache->wb_blocking.mode != Tache::IGNORE && tache->wb_blocking.value && !Wheeledbase::POSITION_REACHED()) {
+                ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+            }
             while (
-                (tache->clamp_open.mode != Tache::IGNORE && allFingerInPos())
+                (tache->clamp_open.mode != Tache::IGNORE && allFingerInPos()) ||
+                (tache->elevator_height.mode != Tache::IGNORE && elevatorInPos())
             ){}
         }
     }
@@ -112,6 +115,10 @@ namespace Automate {
             HazelnutGripper::Gripper::getFinger(1).isTargetReached() &&
             HazelnutGripper::Gripper::getFinger(2).isTargetReached() &&
             HazelnutGripper::Gripper::getFinger(3).isTargetReached();
+    }
+
+    bool elevatorInPos() {
+        return fabs(HazelnutGripper::Elevator::m_angle - HazelnutGripper::Elevator::getAngle()) < elevator_precision;
     }
 
     bool isMovementValid(Tache::Tache const &tache) {

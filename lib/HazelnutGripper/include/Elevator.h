@@ -77,6 +77,10 @@ namespace HazelnutGripper
          */
         inline void setPID(PID& pid) { m_pid = &pid; }
 
+        inline float getAngle() {
+            return m_encoder->getAngle();
+        }
+
     };
 }
 

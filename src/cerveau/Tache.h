@@ -47,6 +47,7 @@ namespace Tache {
         Variable<int> wb_x;
         Variable<int> wb_y;
         Variable<float> wb_theta;
+        Variable<bool> wb_blocking;
         Variable<float> wb_maxLinVel;
         Variable<float> wb_maxAngVel;
 

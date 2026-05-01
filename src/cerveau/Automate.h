@@ -38,6 +38,8 @@ namespace Automate {
     inline static int numberTaches = 0; // Nombre de tâches
     /// La dernière couleur relevée par le robot
     inline static HazelnutGripper::ColorData lastColor[4] = {}; // Dernières données de couleur lues par les doigts
+    /// Précision de l'élevateur en °
+    inline static float elevator_precision = 2;
 
     void init(teamColor team);
     void playMatch(void *pvParameters);
@@ -45,6 +47,7 @@ namespace Automate {
     bool isClampValid(Tache::Tache const &tache);
     bool isMovementValid(Tache::Tache const &tache);
     bool allFingerInPos();
+    bool elevatorInPos ();
     teamColor convertColor(HazelnutGripper::ColorData const &colorData);
 }
 
