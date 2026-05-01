@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include "wb_thread.h"
+#include "variables_globales.h"
 
 #include "DRV8844.h"
 
@@ -214,7 +215,6 @@ void wb_setup()
 }
 
 void wb_loop(void *pvParameters){
-    TaskHandle_t automate = xTaskGetHandle("Robot loop");
 for(;;) {
     // Update odometry
     if (odometry.update()){
@@ -235,7 +235,7 @@ for(;;) {
 #else
         velocityControl.update();
     if (positionControl.getPositionReached()) {
-        xTaskNotifyGive(automate);
+        xTaskNotifyGive(hl_robot);
         //if (t) {
         //    teleplot.add_log("Position reached");
         //    t = false;

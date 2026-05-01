@@ -15,7 +15,7 @@
 #include "ihm/ihm.h"
 #include "wheeledbase/wb_thread.h"
 #include "sensors/SensorsThread.h"
-#include "decisions/Automate.h"
+#include "cerveau/Automate.h"
 
 #include "team2025/ListeActionneurs.h"
 
@@ -38,7 +38,7 @@ Logger main_logs = Logger("MAIN");
 using namespace ihm;
 void procedure_demarrage(){
 
-    Automate::init(my_team);
+    //Automate::init(my_team);
     main_logs.log(WARNING_LEVEL,"Le robot est armé!\n");
 
     //Detect tirette
@@ -60,9 +60,6 @@ Tache banderole OK
 check reset if vl53 are flshed !!!!!!!!!!!!!!
 */
 
-TaskHandle_t hl_wb = nullptr;
-TaskHandle_t hl_sens = nullptr;
-TaskHandle_t  hl_robot = nullptr;
 //Setup de base
 
 // Fonction d'initialisation des horloges
@@ -299,7 +296,7 @@ void setup(){
     TaskHandle_t  hl_robot = nullptr;
 
     BaseType_t ret_robot = xTaskCreate(
-                Automate::play_match,
+                Automate::playMatch,
                 "Robot loop",
                 10000,
                 (void *) procedure_demarrage,

@@ -9,18 +9,12 @@
 #include <FreeRTOSConfig_Default.h>
 #include <Wheeledbase.h>
 #include <FreeRTOS/Source/include/task.h>
-#include <team2025/ListeActionneurs.h>
 
 #include "variables_globales.h"
-#include "sensors/SensorsThread.h"
-
-#include "team2025/TacheEmpiler.h"
-#include "team2025/TacheBanderole.h"
 
 
 #include <Teleplot.h>
 #include <team2025/Strategies.h>
-#include <team2025/TacheTransport.h>
 #include "yeux/yeuxThread.h"
 
 #include "BasicMoveStrategy.h"
@@ -44,12 +38,12 @@ void Automate::init(int team) {
     }
     //Load strat
     //Strategies::stratDeBase(team) ;
-    Strategies::strat1(team) ;
+    //Strategies::strat1(team) ;
     //Strategies::stratTestEmpilement(team);
     //Load taches
-    Wheeledbase::SET_POSITION(Strategies::start);//&positions_match[start2]);
-    numberTaches=Strategies::nb_taches;
-    taches = Strategies::strat;
+    //Wheeledbase::SET_POSITION(Strategies::start);//&positions_match[start2]);
+    //numberTaches=Strategies::nb_taches;
+    //taches = Strategies::strat;
     current_points=0;
 }
 
@@ -63,13 +57,13 @@ void Automate::play_match(void *pvParameters){
     ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
     printf("L'objectif GOTO_DELTA 1 a ete atteint, Automate est ok\n");
 
-    printf("Deuxieme etape\n");
-    Wheeledbase::TURNTO_DELTA(M_PI/2);
-    printf("L'objectif TURNTO_DELTA 2 a ete atteint, Automate est ok\n");
-    
-    printf("Troisieme etape\n");
-    Wheeledbase::GOTO_DELTA(-300, 0);
-    printf("L'objectif GOTO_DELTA 3 a ete atteint, Automate est ok\n");
+   // printf("Deuxieme etape\n");
+   // Wheeledbase::TURNTO_DELTA(M_PI/2);
+   // printf("L'objectif TURNTO_DELTA 2 a ete atteint, Automate est ok\n");
+   //
+   // printf("Troisieme etape\n");
+   // Wheeledbase::GOTO_DELTA(-300, 0);
+   // printf("L'objectif GOTO_DELTA 3 a ete atteint, Automate est ok\n");
 
     /*printf("Quatrieme etape\n");
     Wheeledbase::TURNTO_DELTA(M_PI/2);
