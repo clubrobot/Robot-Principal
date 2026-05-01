@@ -141,7 +141,7 @@ namespace Automate {
 
     }
 
-    teamColor convertColorData(HazelnutGripper::ColorData const &colorData) {
+    teamColor convertColor(HazelnutGripper::ColorData const &colorData) {
         if (colorData.red > colorData.green && colorData.red > colorData.blue) return JAUNE;
         if (colorData.blue > colorData.red  && colorData.blue > colorData.green) return BLEU;
         errorHandler();

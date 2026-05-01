@@ -45,7 +45,7 @@ namespace Automate {
     bool isClampValid(Tache::Tache const &tache);
     bool isMovementValid(Tache::Tache const &tache);
     bool allFingerInPos();
-    teamColor convertColor(HazelnutGripper::ColorData colorData);
+    teamColor convertColor(HazelnutGripper::ColorData const &colorData);
 }
 
 #endif //TEAM2026_AUTOMATE_H

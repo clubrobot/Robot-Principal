@@ -10,7 +10,6 @@
 #include "include/SensorArray.h"
 #include "Constant.h"
 #include "Wire.h"
-#include "decisions/Tache.h"
 #include "variables_globales.h"
 Logger sensors_logs = Logger("SENSORS");
 
@@ -63,13 +62,6 @@ void SensorsThread::Thread(void *pvParameters){
             }
             sensors_logs.log(GOOD_LEVEL, "REPRISE\n");
             velocityControl.set_stop(false);
-        }
-        printf("TEmps: %d\n",millis()-start_millis);
-        if(millis()-start_millis>100*1000 && match_started){
-            printf("FINI\n");
-            for(;;){
-                velocityControl.set_stop(true);
-            }
         }
     }
 }

@@ -17,8 +17,6 @@
 #include "sensors/SensorsThread.h"
 #include "cerveau/Automate.h"
 
-#include "team2025/ListeActionneurs.h"
-
 #define DEBUG 1
 
 #if DEBUG && configUSE_TRACE_FACILITY
