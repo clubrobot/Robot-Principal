@@ -25,16 +25,16 @@ inline WBConstants wb_consts = {
     .ODOMETRY_SLIPPAGE = 0,
 
     .VELOCITYCONTROL_AXLETRACK = 125.0,//201.5
-    .VELOCITYCONTROL_MAXLINACC = 200/2,
-    .VELOCITYCONTROL_MAXLINDEC = 200,
+    .VELOCITYCONTROL_MAXLINACC = 200,
+    .VELOCITYCONTROL_MAXLINDEC = 250,
     .VELOCITYCONTROL_MAXANGACC = PI/3,
     .VELOCITYCONTROL_MAXANGDEC = PI/3,
     .VELOCITYCONTROL_SPINSHUTDOWN = false,
 
     /*---- LINEAR VELOCITIES PID  ----*/
 
-    .LINVELPID_KP = .1,
-    .LINVELPID_KI = 0,
+    .LINVELPID_KP = 1.65,
+    .LINVELPID_KI = 2,
     .LINVELPID_KD = 0,
 
     /*
@@ -46,8 +46,8 @@ inline WBConstants wb_consts = {
     .LINVELPID_MAXOUTPUT = 300,
 
     /*---- ANGULAR VELOCITIES PID ----*/
-    .ANGVELPID_KP = 3, //.5 3  0.8,
-    .ANGVELPID_KI = .5,//.1 1.5   0.5,
+    .ANGVELPID_KP = .9, //.5 3  0.8,
+    .ANGVELPID_KI = .1,//.1 1.5   0.5,
     .ANGVELPID_KD = 0,
 
     .ANGVELPID_MINOUTPUT = -2*PI/3,
@@ -71,10 +71,10 @@ inline WBConstants wb_consts = {
 
     // DC motors driver
     .LEFT_MOTOR_EN = PD1,
-    .LEFT_MOTOR_PWM = PC6,
+    .LEFT_MOTOR_PWM = PC7,
     .LEFT_MOTOR_DIR = PD3,
     .RIGHT_MOTOR_EN = PD0,
-    .RIGHT_MOTOR_PWM = PC7,
+    .RIGHT_MOTOR_PWM = PC6,
     .RIGHT_MOTOR_DIR = PD2,
     .DRIVER_RESET = PC11,
     .DRIVER_FAULT = PC12,
