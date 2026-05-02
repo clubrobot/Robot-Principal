@@ -18,6 +18,9 @@ BasicMoveStrategy basicMove;
 
 void Wheeledbase::GOTO_DELTA(float dx, float dy, bool bloquant) {
     positionControl.disable();
+    positionControl.setPosThresholds(10, 0.1);
+    positionControl.setVelTunings(1, 0.1);
+    positionControl.setVelLimits(300, PI/2);
 
     Position initial_pos = *odometry.getPosition();
 
@@ -27,7 +30,6 @@ void Wheeledbase::GOTO_DELTA(float dx, float dy, bool bloquant) {
     basicMove.theta_init = initial_pos.theta;
 
     target_pos.theta = atan2(target_pos.y - initial_pos.y, target_pos.x - initial_pos.x);
-    int direction;
 
     printf("initial_pos: %f %f %f\n", initial_pos.x, initial_pos.y, initial_pos.theta);
     printf("target_pos: %f %f %f\n", target_pos.x, target_pos.y, target_pos.theta);
@@ -35,11 +37,8 @@ void Wheeledbase::GOTO_DELTA(float dx, float dy, bool bloquant) {
     initial_pos.theta = inrange(initial_pos.theta, -M_PI,M_PI);
 
     positionControl.setMoveStrategy(basicMove);
-    basicMove.x_precision = 10;
-    basicMove.x_max_speed = 150;
-    basicMove.x_slowing_distance = 30;
 
-    positionControl.setPosSetpoint(Position(target_pos.x, target_pos.y, target_pos.theta + direction * M_PI));
+    positionControl.setPosSetpoint(Position(target_pos.x, target_pos.y, target_pos.theta));
     velocityControl.enable();
     positionControl.enable();
 
@@ -51,8 +50,10 @@ void Wheeledbase::GOTO_DELTA(float dx, float dy, bool bloquant) {
 
 BasicTurnStrategy basicTurn;
 void Wheeledbase::TURNTO_DELTA(float dtheta, bool bloquant){
-    printf("initiating turn");
     velocityControl.disable();
+    positionControl.setPosThresholds(10, 0.1);
+    positionControl.setVelTunings(1, 0.1);
+    positionControl.setVelLimits(10, PI/2);
 
     Position initial_pos = *odometry.getPosition();
     
@@ -62,9 +63,6 @@ void Wheeledbase::TURNTO_DELTA(float dtheta, bool bloquant){
     target_pos.theta = initial_pos.theta + dtheta;
     
     positionControl.setMoveStrategy(basicTurn);
-    basicTurn.ang_precision = 0.3;
-    basicTurn.ang_max_speed = PI/4;
-    basicTurn.ang_slowing_distance = 0.5;
 
     positionControl.setPosSetpoint(target_pos);
     velocityControl.enable();
