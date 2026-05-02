@@ -254,7 +254,7 @@ for(;;) {
     }
 #endif // ENABLE_VELOCITYCONTROLLER_LOGS
     if (positionControl.getPositionReached()) {
-        xTaskNotifyGive(automate);
+        xTaskNotifyGive(hl_robot);
         vTaskDelay(50); //We don't need the wheelbase until further instruction, so delay and pray that the scheduler
                         //let the automate run before resuming
         //if (t) {
