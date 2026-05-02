@@ -4,18 +4,18 @@
 
 #include "BasicTurnStrategy.h"
 
+#include "mathutils.h"
+
 void BasicTurnStrategy::computeVelSetpoints(float timestep) {
     float dang = getPosSetpoint().theta - getPosInput().theta;
     float obj;
-    if (dang > 0 && dang > ang_slowing_distance) {
-        obj = ang_max_speed; 
-    } else if (dang < 0 && fabs(dang) > ang_slowing_distance) {
-        obj = -ang_max_speed;
-    } else { 
-        obj = ang_max_speed * fabs(dang) / ang_slowing_distance;
-        obj = (dang > 0) ? obj : -obj;
-    } 
-    setVelSetpoints(0, -obj);
+    float kp = 3;
+    if (fabs(dang) > ang_precision) {
+        obj = saturate(kp * dang, -ang_max_speed, ang_max_speed);
+    } else {
+        obj = 0;
+    }
+    setVelSetpoints(0, obj);
 }
 
 bool BasicTurnStrategy::getPositionReached() {
