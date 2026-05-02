@@ -25,7 +25,7 @@ inline WBConstants wb_consts = {
     .ODOMETRY_SLIPPAGE = 0,
 
     .VELOCITYCONTROL_AXLETRACK = 125.0,//201.5
-    .VELOCITYCONTROL_MAXLINACC = 200,
+    .VELOCITYCONTROL_MAXLINACC = 250,
     .VELOCITYCONTROL_MAXLINDEC = 250,
     .VELOCITYCONTROL_MAXANGACC = PI/3,
     .VELOCITYCONTROL_MAXANGDEC = PI/3,
@@ -34,8 +34,8 @@ inline WBConstants wb_consts = {
     /*---- LINEAR VELOCITIES PID  ----*/
 
     .LINVELPID_KP = 1.65,
-    .LINVELPID_KI = 2,
-    .LINVELPID_KD = 0,
+    .LINVELPID_KI = 2.3,
+    .LINVELPID_KD = 2e-3,
 
     /*
     .LINVELPID_KP = 1.4,
@@ -46,9 +46,9 @@ inline WBConstants wb_consts = {
     .LINVELPID_MAXOUTPUT = 300,
 
     /*---- ANGULAR VELOCITIES PID ----*/
-    .ANGVELPID_KP = .9, //.5 3  0.8,
-    .ANGVELPID_KI = .1,//.1 1.5   0.5,
-    .ANGVELPID_KD = 0,
+    .ANGVELPID_KP = 2, //.5 3  0.8,
+    .ANGVELPID_KI = 1.2,//.1 1.5   0.5,
+    .ANGVELPID_KD = 0.05,
 
     .ANGVELPID_MINOUTPUT = -2*PI/3,
     .ANGVELPID_MAXOUTPUT = 2*PI/3,
