@@ -194,6 +194,8 @@ void wb_setup()
     velocityControl.setPID(linVelPID, angVelPID);
     velocityControl.disable();
 
+    velocityControl.setTimestep(10e-3);
+
     // const float maxLinVel = min(leftWheel.getMaxVelocity(), rightWheel.getMaxVelocity());
     //const float maxAngVel = min(leftWheel.getMaxVelocity(), rightWheel.getMaxVelocity()) * 2 / VELOCITYCONTROL_AXLETRACK_VALUE;
 
@@ -234,5 +236,9 @@ for(;;) {
 #else
         velocityControl.update();
 #endif // ENABLE_VELOCITYCONTROLLER_LOGS
+
+    vTaskDelay(pdMS_TO_TICKS(1));
+
+    printf("%s:%lu:%d\n", "nom_variable", millis(), millis()%10000);
 }
 }

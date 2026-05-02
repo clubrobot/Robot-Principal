@@ -35,8 +35,8 @@ void Wheeledbase::GOTO_DELTA(float dx, float dy, bool bloquant) {
 
     positionControl.setMoveStrategy(basicMove);
     basicMove.x_precision = 10;
-    basicMove.x_max_speed = 150;
-    basicMove.x_slowing_distance = 30;
+    basicMove.x_max_speed = 300;
+    basicMove.x_slowing_distance = 120;
 
     positionControl.setPosSetpoint(Position(target_pos.x, target_pos.y, target_pos.theta + direction * M_PI));
     velocityControl.enable();
@@ -62,8 +62,7 @@ void Wheeledbase::TURNTO_DELTA(float dtheta, bool bloquant){
     
     positionControl.setMoveStrategy(basicTurn);
     basicTurn.ang_precision = 0.1;
-    basicTurn.ang_max_speed = 1.7;
-    basicTurn.ang_slowing_distance = 0.3;
+    basicTurn.ang_max_speed = 2*PI/3;
 
     positionControl.setPosSetpoint(target_pos);
     velocityControl.enable();
