@@ -61,8 +61,8 @@ Position test2 = Position(1300,300,-1.57);
 void Automate::play_match(void *pvParameters){
 
     velocityControl.enable();
-    Wheeledbase::GOTO_DELTA(300, 0, true);
-
+    Wheeledbase::GOTO_DELTA(300, 200, true);
+    //Wheeledbase::TURNTO_DELTA(PI, true);
 
 
    // Wheeledbase::GOTO_DELTA(300,true);
