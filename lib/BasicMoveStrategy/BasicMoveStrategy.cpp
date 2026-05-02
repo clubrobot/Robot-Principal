@@ -4,21 +4,33 @@
 
 #include "BasicMoveStrategy.h"
 
+#include "../mathutils/mathutils.h"
+#include "../Teleplot/Teleplot_client.h"
+
 float angle_init = 0;
 
 void BasicMoveStrategy::computeVelSetpoints(float timestep) {
-    float dx = getPosSetpoint().x - getPosInput().x;
-    float obj;
-    if (dx > 0 && dx > x_slowing_distance) {
-        obj = x_max_speed;  // 
-    } else if (dx < 0 && fabs(dx) > x_slowing_distance) {
-        obj = -x_max_speed;
+
+
+    float dang = -getPosInput().theta;
+    teleplot.add_variable_float_2decimal("dang", dang);
+    float obja;
+    float akp = 1;
+    if (fabs(dang) > 0.3) {
+        obja = saturate(akp * dang, -PI/3, PI/3);
     } else {
-        obj = x_max_speed * fabs(dx) / x_slowing_distance;
-        obj = (dx > 0) ? obj : -obj;
+        obja = 0;
     }
-    float correction_angle = -anglToVitAngl(angle_init, timestep);
-    setVelSetpoints(obj, correction_angle); //vitesse roue, et vitesse angulaire
+
+
+
+    float dx = getPosSetpoint().x - getPosInput().x;
+    float kp = 1;
+    float obj = fabs(dx) > x_precision ? saturate(dx * kp, -x_max_speed, x_max_speed) : 0;
+    teleplot.add_variable_float_2decimal("diff", getPosInput().theta - angle_init);
+    teleplot.add_variable_float_2decimal("angl",anglToVitAngl(angle_init, timestep));
+    float correction_angle = saturate( 0.2 *  anglToVitAngl(angle_init, timestep), -PI/3, PI/3 );
+    setVelSetpoints(obj, obja); //vitesse roue, et vitesse angulaire
     float angle_init = getPosInput().theta;
 }
 
