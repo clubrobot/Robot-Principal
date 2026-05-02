@@ -16,6 +16,7 @@ class BasicMoveStrategy : public AbstractMoveStrategy {
      */
 public:
     int x_goal;
+    float theta_init = 0;
     int x_precision;
     int x_max_speed;
     int x_slowing_distance;
@@ -23,7 +24,7 @@ public:
 protected:
     void computeVelSetpoints(float timestep) override;
     bool getPositionReached() override;
-    float anglToVitAngl(float angle_init, float timestep);
+    float anglToVitAngl(float timestep);
 };
 
 

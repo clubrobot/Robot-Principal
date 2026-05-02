@@ -239,6 +239,6 @@ for(;;) {
 
     vTaskDelay(pdMS_TO_TICKS(1));
 
-    printf("%s:%lu:%d\n", "nom_variable", millis(), millis()%10000);
+    //printf("%s:%lu:%d\n", "nom_variable", millis(), millis()%10000);
 }
 }
