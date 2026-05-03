@@ -14,13 +14,15 @@ void BasicTurnStrategy::computeVelSetpoints(float timestep) {
   const float dx = SetPoint.x - pos.x;
   const float dy = SetPoint.y - pos.y;
   const float drho = dx * cos(pos.theta) + dy * sin(pos.theta);
+  const float angOut = ang_pid.compute(SetPoint.theta, pos.theta, timestep);
+  const float linOut = lin_pid.compute(0, drho, timestep);
   const float angObj =
       fabs(dang) > getAngPosThreshold()
-          ? saturate(getAngVelKp() * dang, -getAngVelMax(), getAngVelMax())
+          ? saturate( angOut, -getAngVelMax(), getAngVelMax())
           : 0;
   const float linObj =
       fabs(drho) > getLinPosThreshold()
-          ? saturate(getLinVelKp() * drho, -getLinVelMax(), getLinVelMax())
+          ? saturate(linOut, -getLinVelMax(), getLinVelMax())
           : 0;
   setVelSetpoints(linObj, angObj);
 }
