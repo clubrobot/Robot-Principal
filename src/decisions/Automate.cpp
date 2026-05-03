@@ -61,8 +61,116 @@ Position test2 = Position(1300,300,-1.57);
 void Automate::play_match(void *pvParameters){
 
     velocityControl.enable();
-    Wheeledbase::GOTO_DELTA(300, 200, true);
-    //Wheeledbase::TURNTO_DELTA(PI, true);
+
+    HazelnutGripper::Gripper::setRotationAll(0);
+
+    while (!HazelnutGripper::Gripper::getFinger(0).isTargetReached())
+    {
+        printf("%d %d %d %d\n",HazelnutGripper::Gripper::getFinger(0).isTargetReached(), HazelnutGripper::Gripper::getFinger(1).isTargetReached(), HazelnutGripper::Gripper::getFinger(2).isTargetReached(), HazelnutGripper::Gripper::getFinger(3).isTargetReached());
+        vTaskDelay(pdMS_TO_TICKS(1));
+    }
+
+    Wheeledbase::GOTO_DELTA(1300, 0, true);
+    HazelnutGripper::Elevator::setAngle(126.562500);
+    while (abs(HazelnutGripper::Elevator::getAngle() - 126.562500) > 3)
+    {
+        vTaskDelay(pdMS_TO_TICKS(1));
+    }
+    printf("Reading colors\n");
+    vTaskDelay(pdMS_TO_TICKS(2000));
+
+    printf("Reading color ends\n");
+    HazelnutGripper::Elevator::setAngle(110);
+    HazelnutGripper::Gripper::openAll();
+    Wheeledbase::GOTO_DELTA(50, 0, true);
+
+    printf("Waiting for fingers\n");
+    while (!HazelnutGripper::Gripper::getFinger(0).isTargetReached() || abs(HazelnutGripper::Elevator::getAngle() - 110) > 3)
+    {
+        printf("%d %d %d %d\n",HazelnutGripper::Gripper::getFinger(0).isTargetReached(), HazelnutGripper::Gripper::getFinger(1).isTargetReached(), HazelnutGripper::Gripper::getFinger(2).isTargetReached(), HazelnutGripper::Gripper::getFinger(3).isTargetReached());
+        vTaskDelay(pdMS_TO_TICKS(1));
+    }
+
+
+    printf("New angle\n");
+    HazelnutGripper::Elevator::setAngle(132.187500);
+    while (abs(HazelnutGripper::Elevator::getAngle() - 132.187500) > 3)
+    {
+        vTaskDelay(pdMS_TO_TICKS(1));
+    }
+    vTaskDelay(pdMS_TO_TICKS(1000));
+    HazelnutGripper::Gripper::closeAll();
+
+    vTaskDelay(pdMS_TO_TICKS(1000));
+    while (!HazelnutGripper::Gripper::getFinger(0).isTargetReached())
+    {
+        vTaskDelay(pdMS_TO_TICKS(1));
+    }
+    HazelnutGripper::Elevator::setAngle(61.875000);
+
+    while (abs(HazelnutGripper::Elevator::getAngle() - 61.875000) > 3)
+    {
+        vTaskDelay(pdMS_TO_TICKS(1));
+    }
+
+    Wheeledbase::TURNTO_DELTA(PI/2);
+
+    HazelnutGripper::Gripper::spreadFingers(180);
+
+    vTaskDelay(pdMS_TO_TICKS(1000));
+
+    HazelnutGripper::Gripper::getFinger(1).setAngle(1,180);
+    HazelnutGripper::Gripper::getFinger(3).setAngle(1,180);
+
+
+    vTaskDelay(pdMS_TO_TICKS(2000));
+
+
+    HazelnutGripper::Gripper::spreadFingers(0);
+
+    HazelnutGripper::Elevator::setAngle(132.187500);
+    while (abs(HazelnutGripper::Elevator::getAngle() - 132.187500) > 3)
+    {
+        vTaskDelay(pdMS_TO_TICKS(1));
+    }
+    vTaskDelay(pdMS_TO_TICKS(1000));
+    HazelnutGripper::Gripper::openAll();
+
+    while (!HazelnutGripper::Gripper::getFinger(0).isTargetReached())
+    {
+        printf("%d %d %d %d\n",HazelnutGripper::Gripper::getFinger(0).isTargetReached(), HazelnutGripper::Gripper::getFinger(1).isTargetReached(), HazelnutGripper::Gripper::getFinger(2).isTargetReached(), HazelnutGripper::Gripper::getFinger(3).isTargetReached());
+        vTaskDelay(pdMS_TO_TICKS(1));
+    }
+
+    HazelnutGripper::Elevator::setAngle(61.875000);
+
+    while (abs(HazelnutGripper::Elevator::getAngle() - 61.875000) > 3)
+    {
+        vTaskDelay(pdMS_TO_TICKS(1));
+    }
+
+    HazelnutGripper::Gripper::closeAll();
+
+
+
+
+
+
+
+
+
+    /*
+
+    poly_delay(1000);
+    Wheeledbase::TURNTO_DELTA(PI, true);
+
+    poly_delay(1000);
+    Wheeledbase::GOTO_DELTA(-1000, 0, true);
+
+    poly_delay(1000);
+    Wheeledbase::TURNTO_DELTA(PI/2, true);
+    poly_delay(1000);
+    Wheeledbase::GOTO_DELTA(0, -500, true);*/
 
 
    // Wheeledbase::GOTO_DELTA(300,true);

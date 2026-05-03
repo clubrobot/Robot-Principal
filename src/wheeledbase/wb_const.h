@@ -33,9 +33,9 @@ inline WBConstants wb_consts = {
 
     /*---- LINEAR VELOCITIES PID  ----*/
 
-    .LINVELPID_KP = 1.65,
+    .LINVELPID_KP = 1.3,
     .LINVELPID_KI = 2.3,
-    .LINVELPID_KD = 2e-3,
+    .LINVELPID_KD = 0,
 
     /*
     .LINVELPID_KP = 1.4,
@@ -46,9 +46,9 @@ inline WBConstants wb_consts = {
     .LINVELPID_MAXOUTPUT = 300,
 
     /*---- ANGULAR VELOCITIES PID ----*/
-    .ANGVELPID_KP = 2, //.5 3  0.8,
-    .ANGVELPID_KI = 1.2,//.1 1.5   0.5,
-    .ANGVELPID_KD = 0.05,
+    .ANGVELPID_KP = 3, //.5 3  0.8,
+    .ANGVELPID_KI = 3,//.1 1.5   0.5,
+    .ANGVELPID_KD = 0,
 
     .ANGVELPID_MINOUTPUT = -2*PI/3,
     .ANGVELPID_MAXOUTPUT = 2*PI/3,

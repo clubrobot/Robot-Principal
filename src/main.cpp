@@ -146,10 +146,10 @@ void SystemClock_Config(void)
 }
 
 
-static HazelnutGripper::BournsACEncoder encoder(PA4, PB13, PB12, PE12, PC4, PA7, PA6, PA5);
-static DRV8876 drv8876(PA9,PC8);
-static DCMotor motor;
-static PID pid;
+HazelnutGripper::BournsACEncoder encoder(PA4, PB13, PB12, PE12, PC4, PA7, PA6, PA5);
+DRV8876 drv8876(PA9,PC8);
+DCMotor motor;
+PID pid;
 
 void setup(){
 
@@ -209,13 +209,18 @@ void setup(){
 
   HazelnutGripper::Elevator::init(&motor,&encoder);
 
-  HazelnutGripper::Elevator::setAngle(55.437500);
+  HazelnutGripper::Elevator::setAngle(61.875000);
 
 
 
+  // up  61.875000
+
+  // on the planks : 126.562500
+
+  //down 132.187500
   TaskHandle_t  gripper_handle = nullptr;
 
-  /*
+
 
   BaseType_t ret_gripper = xTaskCreate(
               &HazelnutGripper::Elevator::task,
@@ -224,7 +229,7 @@ void setup(){
               nullptr,
               5,//Prio max
               &gripper_handle );
-  if(ret_gripper!=pdPASS) {Error_Handler()}*/
+  if(ret_gripper!=pdPASS) {Error_Handler()}
 
 
 /*

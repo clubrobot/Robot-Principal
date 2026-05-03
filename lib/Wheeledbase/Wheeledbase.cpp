@@ -18,8 +18,8 @@ BasicMoveStrategy basicMove;
 
 void Wheeledbase::GOTO_DELTA(float dx, float dy, bool bloquant) {
     positionControl.disable();
-    positionControl.setPosThresholds(1, 0.05);
-    positionControl.setVelTunings(1.9, 1.2);
+    positionControl.setPosThresholds(0.7, 0.01);
+    positionControl.setVelTunings(1.7, 1.2);
     positionControl.setVelLimits(300, PI/2);
 
     Position initial_pos = *odometry.getPosition();
