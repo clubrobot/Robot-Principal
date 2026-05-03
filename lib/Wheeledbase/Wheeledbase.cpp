@@ -51,9 +51,10 @@ void Wheeledbase::GOTO_DELTA(float dx, float dy, bool bloquant) {
 BasicTurnStrategy basicTurn;
 void Wheeledbase::TURNTO_DELTA(float dtheta, bool bloquant){
     velocityControl.disable();
-    positionControl.setPosThresholds(3, 1e-2); //environ 1°
-    positionControl.setVelTunings(1, 2);
-    positionControl.setVelLimits(300, 2 * PI/3);
+    positionControl.setPosThresholds(3, 5e-3); //environ 1°
+    basicTurn.ang_pid.setTunings(.85, 0.01, 1e-3);
+    basicTurn.lin_pid.setTunings(.0, 0, 0);
+    positionControl.setVelLimits(40, PI/2);
 
     Position initial_pos = *odometry.getPosition();
     

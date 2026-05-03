@@ -4,7 +4,7 @@
 
 #include <future>
 
-#include "../Teleplot/Teleplot_client.h"
+#include "Teleplot.h"
 
 void DifferentialController::process(float timestep)
 {
