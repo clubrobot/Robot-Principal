@@ -215,12 +215,21 @@ void wb_setup()
     //purePursuit.load(PUREPURSUIT_ADDRESS);
 }
 
+#define SMOOTHING_FACTOR 0.2
+
+float smoothLinVel = 0;
+float smoothAngVel = 0;
+
 void wb_loop(void *pvParameters){
 for(;;) {
     // Update odometry
     if (odometry.update()){
+
+        smoothLinVel = SMOOTHING_FACTOR * odometry.getLinVel() + (1 - SMOOTHING_FACTOR) * smoothLinVel;
+        smoothAngVel = SMOOTHING_FACTOR * odometry.getAngVel() + (1 - SMOOTHING_FACTOR) * smoothAngVel;
+
         positionControl.setPosInput(*odometry.getPosition());
-        velocityControl.setInputs(odometry.getLinVel(), odometry.getAngVel());
+        velocityControl.setInputs(smoothLinVel, smoothAngVel);
     }
     // Compute trajectory
     if (positionControl.update())
