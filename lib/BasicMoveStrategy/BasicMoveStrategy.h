@@ -2,11 +2,10 @@
 // Created by awing on 21/11/25.
 //
 
-#include "PositionController.h"
-
 #ifndef TEAM2026_BASICMOVESTRATEGY_H
 #define TEAM2026_BASICMOVESTRATEGY_H
-
+#include "PositionController.h"
+#include "PID.h"
 
 class BasicMoveStrategy : public AbstractMoveStrategy {
     /**
@@ -15,14 +14,13 @@ class BasicMoveStrategy : public AbstractMoveStrategy {
      * Stratégie développée afin de déplacer le robot en ligne droite selon l'axe x pour régler le PID.
      */
 public:
-    int x_precision;
-    int x_max_speed;
-    int x_slowing_distance;
-    bool x_goalReached;
+    virtual ~BasicMoveStrategy() = default;
+    float theta_init = 0;
+    PID ang_pid = {};
+    PID lin_pid = {};
 protected:
     void computeVelSetpoints(float timestep) override;
     bool getPositionReached() override;
-    float anglToVitAngl(float angle_init, float timestep);
 };
 
 

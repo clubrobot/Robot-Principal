@@ -4,6 +4,8 @@
 
 #include <future>
 
+#include "Teleplot.h"
+
 void DifferentialController::process(float timestep)
 {
 	// Compute linear and angular velocities outputs

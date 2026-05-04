@@ -8,9 +8,9 @@ def get_serial(baud: int=9600) -> serial.Serial:
     :param baud: baudrate of the serial port
     :return: the serial port object
     """
-    usbPort = input("Port du robot (/dev/ttyUSB0, COM1, ...): ")
-    if usbPort == "":
-        usbPort = "/dev/ttyACM0"
+    #usbPort = input("Port du robot (/dev/ttyUSB0, COM1, ...): ")
+    #if usbPort == "":
+    usbPort = "/dev/ttyACM0"
     ser = serial.Serial(usbPort, baud, timeout=1)
     return ser
 
@@ -55,16 +55,16 @@ def main(baud : int, ip : str, port : int) -> None:
             send_data(socket, line, ip, port)
 
 if __name__ == "__main__":
-    baud = 115200
+    baud = 921600
     ip = "127.0.0.1"
     port = 47269
-    temp = input("Quelle baudrate ? (115200 par défaut): ")
-    if temp != "":
-        baud = int(temp)
-    temp = input("Quelle IP ? (127.0.0.1 par défaut): ")
-    if temp != "":
-        ip = temp
-    temp = input("Quel port ? (47269 par défaut): ")
-    if temp != "":
-        port = int(temp)
+    #temp = input("Quelle baudrate ? (115200 par défaut): ")
+    #if temp != "":
+       # baud = int(temp)
+    #te#mp = input("Quelle IP ? (127.0.0.1 par défaut): ")
+    #if# temp != "":
+       # ip = temp
+    #te#mp = input("Quel port ? (47269 par défaut): ")
+    #if# temp != "":
+       # port = int(temp)
     main(baud, ip, port)

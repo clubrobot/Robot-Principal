@@ -79,6 +79,7 @@ namespace HazelnutGripper
     {
         this->_wire->beginTransmission(_addr);
         this->_wire->write(cmd);
+        this->_wire->write(0);
         this->_wire->endTransmission(false); // Restart condition
 
         this->_wire->requestFrom(_addr, (uint8_t)1);

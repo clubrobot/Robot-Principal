@@ -9,7 +9,7 @@
 #include <stdio.h>
 
 #define PRINTF_SERIAL Serial
-#define PRINTF_BAUD 115200
+#define PRINTF_BAUD 921600
 
 namespace PrintfSupport {
     void begin(uint baud);
