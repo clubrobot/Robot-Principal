@@ -19,7 +19,7 @@ BasicMoveStrategy basicMove;
 void Wheeledbase::GOTO_DELTA(float dx, float dy, bool bloquant) {
     positionControl.disable();
     positionControl.setPosThresholds(1, 0.05);
-    positionControl.setVelTunings(1.9, 1.2);
+    positionControl.setVelTunings(.8, 1);
     positionControl.setVelLimits(300, PI/2);
 
     Position initial_pos = *odometry.getPosition();
@@ -29,11 +29,12 @@ void Wheeledbase::GOTO_DELTA(float dx, float dy, bool bloquant) {
     target_pos.y = initial_pos.y + dy ; //* sin(initial_pos.theta) + dy * cos(initial_pos.theta);
     basicMove.theta_init = initial_pos.theta;
 
-    target_pos.theta = atan2(target_pos.y - initial_pos.y, target_pos.x - initial_pos.x);
+    //TODO fix the angle calculation
+    //target_pos.theta = atan2(target_pos.y - initial_pos.y, target_pos.x - initial_pos.x);
 
     printf("initial_pos: %f %f %f\n", initial_pos.x, initial_pos.y, initial_pos.theta);
     printf("target_pos: %f %f %f\n", target_pos.x, target_pos.y, target_pos.theta);
-    
+
     initial_pos.theta = inrange(initial_pos.theta, -M_PI,M_PI);
 
     positionControl.setMoveStrategy(basicMove);
@@ -51,8 +52,8 @@ void Wheeledbase::GOTO_DELTA(float dx, float dy, bool bloquant) {
 BasicTurnStrategy basicTurn;
 void Wheeledbase::TURNTO_DELTA(float dtheta, bool bloquant){
     velocityControl.disable();
-    positionControl.setPosThresholds(3, 5e-3); //environ 1°
-    basicTurn.ang_pid.setTunings(.85, 0.01, 1e-3);
+    positionControl.setPosThresholds(3, 1e-3); //> 1°
+    basicTurn.ang_pid.setTunings(.45, 0.0, 0.2); // 0.45 0 0.5
     basicTurn.lin_pid.setTunings(.0, 0, 0);
     positionControl.setVelLimits(40, PI/2);
 
