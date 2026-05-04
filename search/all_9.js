@@ -1,7 +1,7 @@
 var searchData=
 [
   ['elements_0',['Supported elements',['../d7/d8e/classMyLibrary_1_1Example.html#autotoc_md24',1,'']]],
-  ['elevator_1',['Elevator',['../d9/de9/namespaceElevator.html',1,'']]],
+  ['elevator_1',['Elevator',['../d2/df0/classHazelnutGripper_1_1Elevator.html',1,'HazelnutGripper::Elevator'],['../d2/df0/classHazelnutGripper_1_1Elevator.html#aa2bfb029c9be0683dc648cd34660753c',1,'HazelnutGripper::Elevator::Elevator()']]],
   ['ellipse_2',['Ellipse',['../d2/d1d/classgeogebra_1_1Geogebra_1_1Ellipse.html',1,'geogebra::Geogebra']]],
   ['enable_3',['enable',['../d2/dfa/classPeriodicProcess.html#ae49aad8572f5b60fede0a13f0cd95d36',1,'PeriodicProcess']]],
   ['enableactionled_4',['enableActionLed',['../d6/d59/classHazelnutGripper_1_1GripperFinger.html#a53f7c2b86794b88ea94aad77cc1c097f',1,'HazelnutGripper::GripperFinger']]],

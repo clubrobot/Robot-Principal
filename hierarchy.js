@@ -37,6 +37,7 @@ var hierarchy =
     [ "Decisions", "d9/da9/classDecisions.html", null ],
     [ "ObjectDetector::Detector", "d1/d34/structObjectDetector_1_1Detector.html", null ],
     [ "DynamixelClass", "df/dc5/classDynamixelClass.html", null ],
+    [ "HazelnutGripper::Elevator", "d2/df0/classHazelnutGripper_1_1Elevator.html", null ],
     [ "EndStop", "df/d5b/classEndStop.html", null ],
     [ "EventGroupDef_t", "d7/d15/structEventGroupDef__t.html", null ],
     [ "MyLibrary::Example", "d7/d8e/classMyLibrary_1_1Example.html", [
@@ -94,7 +95,8 @@ var hierarchy =
       ] ],
       [ "FullSpeedServo", "d9/df7/classFullSpeedServo.html", null ],
       [ "Odometry", "d6/dc3/classOdometry.html", null ],
-      [ "PositionController", "d2/d64/classPositionController.html", null ]
+      [ "PositionController", "d2/d64/classPositionController.html", null ],
+      [ "VelocityControllerLogs", "d2/d94/classVelocityControllerLogs.html", null ]
     ] ],
     [ "PID", "d8/da9/classPID.html", null ],
     [ "Point", "d8/d43/structPoint.html", null ],

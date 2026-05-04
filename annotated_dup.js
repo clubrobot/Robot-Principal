@@ -9,6 +9,7 @@ var annotated_dup =
       [ "AbstractAbsoluteEncoder", "d1/de1/classHazelnutGripper_1_1AbstractAbsoluteEncoder.html", "d1/de1/classHazelnutGripper_1_1AbstractAbsoluteEncoder" ],
       [ "BournsACEncoder", "d8/d86/classHazelnutGripper_1_1BournsACEncoder.html", "d8/d86/classHazelnutGripper_1_1BournsACEncoder" ],
       [ "ColorData", "d6/d6e/structHazelnutGripper_1_1ColorData.html", "d6/d6e/structHazelnutGripper_1_1ColorData" ],
+      [ "Elevator", "d2/df0/classHazelnutGripper_1_1Elevator.html", "d2/df0/classHazelnutGripper_1_1Elevator" ],
       [ "Gripper", "d4/dcb/classHazelnutGripper_1_1Gripper.html", null ],
       [ "GripperFinger", "d6/d59/classHazelnutGripper_1_1GripperFinger.html", "d6/d59/classHazelnutGripper_1_1GripperFinger" ]
     ] ],
@@ -114,6 +115,7 @@ var annotated_dup =
     [ "tskTaskControlBlock", "d3/d7e/structtskTaskControlBlock.html", null ],
     [ "TurnOnTheSpot", "d9/dee/classTurnOnTheSpot.html", "d9/dee/classTurnOnTheSpot" ],
     [ "VelocityController", "de/d33/classVelocityController.html", "de/d33/classVelocityController" ],
+    [ "VelocityControllerLogs", "d2/d94/classVelocityControllerLogs.html", "d2/d94/classVelocityControllerLogs" ],
     [ "VL53L5CX", "d9/d0e/classVL53L5CX.html", "d9/d0e/classVL53L5CX" ],
     [ "VL53L5CX_Configuration", "da/dce/structVL53L5CX__Configuration.html", null ],
     [ "VL53L5CX_Platform", "de/d5c/structVL53L5CX__Platform.html", null ],

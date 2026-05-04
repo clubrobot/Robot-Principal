@@ -1,0 +1,12 @@
+<map id="HazelnutGripper::Elevator" name="HazelnutGripper::Elevator">
+<area shape="rect" id="Node000001" title="Classe statique gérant l&#39;asservissement en position de l&#39;ascenseur." alt="" coords="188,109,356,135"/>
+<area shape="rect" id="Node000002" href="$d2/d61/classAbstractMotor.html" title=" " alt="" coords="51,13,154,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,44,252,106,249,111,137,49"/>
+<area shape="rect" id="Node000003" href="$d4/de2/classAbstractDriver.html" title=" " alt="" coords="5,109,110,135"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="39,47,23,58,11,71,9,81,13,90,34,106,30,111,8,93,3,81,6,69,19,54,36,43"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="68,94,95,38,99,40,72,96"/>
+<area shape="rect" id="Node000004" href="$d1/de1/classHazelnutGripper_1_1AbstractAbsoluteEncoder.html" title="Interface pour un encodeur de position absolue." alt="" coords="188,5,357,46"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="275,61,275,109,270,109,270,61"/>
+<area shape="rect" id="Node000005" href="$d8/da9/classPID.html" title="Classe d&#39;asservissement." alt="" coords="381,13,424,38"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="385,52,346,87,303,111,301,106,343,83,381,48"/>
+</map>

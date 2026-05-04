@@ -1,0 +1,17 @@
+<map id="VelocityControllerLogs" name="VelocityControllerLogs">
+<area shape="rect" id="Node000001" title="Classe d&#39;enregistrement de vitesse." alt="" coords="8,273,159,298"/>
+<area shape="rect" id="Node000002" href="$d2/dfa/classPeriodicProcess.html" title="Classe à implémenter pour gérer les appels dans la loop." alt="" coords="5,5,122,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,46,85,272,80,272,63,47"/>
+<area shape="rect" id="Node000004" href="$d5/d9e/classDifferentialController.html" title="Controle les moteurs." alt="" coords="100,109,238,135"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="89,40,158,107,155,110,85,44"/>
+<area shape="rect" id="Node000003" href="$de/d33/classVelocityController.html" title="Objet de controle de la vitesse." alt="" coords="104,184,226,210"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="145,223,97,274,93,270,141,219"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="170,150,168,184,163,184,165,150"/>
+<area shape="rect" id="Node000005" href="$d2/d61/classAbstractMotor.html" title=" " alt="" coords="320,5,423,31"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="321,39,279,57,256,72,234,87,193,111,190,106,231,83,254,67,277,53,319,34"/>
+<area shape="rect" id="Node000006" href="$d4/de2/classAbstractDriver.html" title=" " alt="" coords="365,109,469,135"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="367,46,366,65,370,84,380,96,393,106,390,111,376,100,365,86,360,66,361,46"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="430,95,435,75,432,56,421,43,406,34,409,29,424,39,437,54,441,75,435,96"/>
+<area shape="rect" id="Node000007" href="$d8/da9/classPID.html" title="Classe d&#39;asservissement." alt="" coords="146,5,189,31"/>
+<area shape="poly" id="edge8_Node000004_Node000007" title=" " alt="" coords="171,47,171,108,166,109,165,47"/>
+</map>
