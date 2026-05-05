@@ -21,6 +21,8 @@ public:
 protected:
     void computeVelSetpoints(float timestep) override;
     bool getPositionReached() override;
+private:
+    float distanceInit = 0;
 };
 
 
