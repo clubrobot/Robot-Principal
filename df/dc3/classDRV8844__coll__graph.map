@@ -1,8 +1,0 @@
-<map id="DRV8844" name="DRV8844">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,94,82,120"/>
-<area shape="rect" id="Node000002" href="$d4/de2/classAbstractDriver.html" title=" " alt="" coords="35,5,140,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,45,65,56,49,94,44,93,60,54,67,42"/>
-<area shape="rect" id="Node000003" href="$d2/d61/classAbstractMotor.html" title=" " alt="" coords="112,94,215,120"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="82,46,82,58,86,69,98,82,115,91,112,96,95,86,82,71,77,59,77,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="154,81,140,57,111,34,114,30,144,53,158,78"/>
-</map>

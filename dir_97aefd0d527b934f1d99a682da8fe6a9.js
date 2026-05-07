@@ -14,7 +14,6 @@ var dir_97aefd0d527b934f1d99a682da8fe6a9 =
     [ "Include", "dir_74d560fdf54edb5780c2bca28a30fbc1.html", "dir_74d560fdf54edb5780c2bca28a30fbc1" ],
     [ "Logger", "dir_28c8d4bb7e5b9ae107e898197e1321ea.html", "dir_28c8d4bb7e5b9ae107e898197e1321ea" ],
     [ "mathutils", "dir_c7e7500ea1335729dbc3bd302bcc14b0.html", "dir_c7e7500ea1335729dbc3bd302bcc14b0" ],
-    [ "motors", "dir_31347930a9db39eb68b78fb3141a6385.html", "dir_31347930a9db39eb68b78fb3141a6385" ],
     [ "Musique", "dir_97435ac2b370511e9f7a65b6298f3857.html", "dir_97435ac2b370511e9f7a65b6298f3857" ],
     [ "Odometry", "dir_50731e8e6461eb9436ae02dcb97adf79.html", "dir_50731e8e6461eb9436ae02dcb97adf79" ],
     [ "PeriodicProcess", "dir_559fd7f853ead02cdee3bdd09875e979.html", "dir_559fd7f853ead02cdee3bdd09875e979" ],

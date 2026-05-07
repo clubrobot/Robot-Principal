@@ -26,56 +26,9 @@ var NAVTREE =
 [
   [ "CRINSA-team2025", "index.html", [
     [ "Doc CRINSA 2025", "index.html", "index" ],
-    [ "Customization", "d1/d47/md_doc_2doxygen-awesome-css_2docs_2customization.html", [
-      [ "CSS-Variables", "d1/d47/md_doc_2doxygen-awesome-css_2docs_2customization.html#autotoc_md1", [
-        [ "Setup", "d1/d47/md_doc_2doxygen-awesome-css_2docs_2customization.html#autotoc_md2", null ],
-        [ "Available variables", "d1/d47/md_doc_2doxygen-awesome-css_2docs_2customization.html#autotoc_md3", null ]
-      ] ],
-      [ "Doxygen generator", "d1/d47/md_doc_2doxygen-awesome-css_2docs_2customization.html#autotoc_md4", null ],
-      [ "Share your customizations", "d1/d47/md_doc_2doxygen-awesome-css_2docs_2customization.html#autotoc_md5", null ]
-    ] ],
-    [ "Extensions", "d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html", [
-      [ "Dark Mode Toggle", "d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#extension-dark-mode-toggle", [
-        [ "Installation", "d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#autotoc_md7", null ],
-        [ "Customizing", "d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#autotoc_md8", null ]
-      ] ],
-      [ "Fragment Copy Button", "d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#extension-copy-button", [
-        [ "Installation", "d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#autotoc_md9", null ],
-        [ "Customizing", "d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#autotoc_md10", null ]
-      ] ],
-      [ "Paragraph Linking", "d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#extension-para", [
-        [ "Installation", "d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#autotoc_md11", null ],
-        [ "Customizing", "d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#autotoc_md12", null ]
-      ] ],
-      [ "Interactive TOC", "d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#extension-toc", [
-        [ "Installation", "d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#autotoc_md13", null ],
-        [ "Customizing", "d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#autotoc_md14", null ]
-      ] ],
-      [ "Tabs", "d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#extension-tabs", [
-        [ "Installation", "d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#autotoc_md15", null ],
-        [ "Usage", "d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#autotoc_md16", null ]
-      ] ],
-      [ "Page Navigation", "d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#extension-page-navigation", [
-        [ "Installation", "d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#autotoc_md17", null ],
-        [ "Usage", "d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#autotoc_md18", null ]
-      ] ]
-    ] ],
-    [ "Tips & Tricks", "dc/d95/md_doc_2doxygen-awesome-css_2docs_2tricks.html", [
-      [ "Diagrams with Graphviz", "dc/d95/md_doc_2doxygen-awesome-css_2docs_2tricks.html#tricks-graphviz", null ],
-      [ "Disable Dark Mode", "dc/d95/md_doc_2doxygen-awesome-css_2docs_2tricks.html#tricks-darkmode", null ],
-      [ "Choosing Sidebar Width", "dc/d95/md_doc_2doxygen-awesome-css_2docs_2tricks.html#tricks-sidebar", null ],
-      [ "Formatting Tables", "dc/d95/md_doc_2doxygen-awesome-css_2docs_2tricks.html#tricks-tables", [
-        [ "Centering", "dc/d95/md_doc_2doxygen-awesome-css_2docs_2tricks.html#autotoc_md20", null ],
-        [ "Full Width", "dc/d95/md_doc_2doxygen-awesome-css_2docs_2tricks.html#autotoc_md21", null ],
-        [ "Buttons", "dc/d95/md_doc_2doxygen-awesome-css_2docs_2tricks.html#autotoc_md22", null ],
-        [ "Bordered Images", "dc/d95/md_doc_2doxygen-awesome-css_2docs_2tricks.html#autotoc_md23", null ]
-      ] ]
-    ] ],
     [ "Header File Template: cmsis_os.h", "d8/dd7/cmsis_os_h.html", null ],
     [ "team2026", "d0/d30/md_README.html", null ],
-    [ "Liste des bogues", "de/da5/bug.html", null ],
     [ "Liste des éléments obsolètes", "da/d58/deprecated.html", null ],
-    [ "Liste des choses à faire", "dd/da0/todo.html", null ],
     [ "Topics", "topics.html", "topics" ],
     [ "Espaces de nommage", "namespaces.html", [
       [ "Liste des espaces de nommage", "namespaces.html", "namespaces_dup" ],
@@ -111,10 +64,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d4/de2/classAbstractDriver.html#a12c43e48dfcab872fe5c531ea192fb0e",
-"d8/d4b/classTeleplot.html#a9500a721bb72bc44e565bf9b1ab35f74",
-"dc/d37/group__xTaskGetTickCount.html",
-"df/d87/structos__mailQ__def.html#a09357977d1cc71ddcb2496c2e3e58a98"
+"d5/d9e/classDifferentialController.html",
+"d8/da9/classPID.html#a30b4a12f5ad34b7c540365051f79e57c",
+"de/d0f/FreeRTOS_2Source_2include_2mpu__prototypes_8h_source.html",
+"dir_bac35ba42bbe03d850f5668c4042821b.html"
 ];
 
 var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';

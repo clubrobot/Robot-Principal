@@ -1,7 +1,5 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,31,51,56"/>
-<area shape="rect" id="Node000001" href="$d7/ddc/classgeogebra_1_1Geogebra_1_1Angle.html" title=" " alt="" coords="107,5,276,31"/>
-<area shape="poly" id="edge14_Node000000_Node000001" title=" " alt="" coords="66,35,106,29,107,34,67,40"/>
-<area shape="rect" id="Node000002" href="$de/d09/classgeogebra_1_1Geogebra_1_1Numeric.html" title=" " alt="" coords="99,55,284,80"/>
-<area shape="poly" id="edge15_Node000000_Node000002" title=" " alt="" coords="66,46,100,51,99,57,65,52"/>
+<area shape="rect" id="Node000000" href="$d1/de1/classHazelnutGripper_1_1AbstractAbsoluteEncoder.html" title="Interface pour un encodeur de position absolue." alt="" coords="5,5,175,46"/>
+<area shape="rect" id="Node000001" href="$d8/d86/classHazelnutGripper_1_1BournsACEncoder.html" title=" " alt="" coords="223,13,449,38"/>
+<area shape="poly" id="edge11_Node000000_Node000001" title=" " alt="" coords="190,23,222,23,222,28,190,28"/>
 </map>

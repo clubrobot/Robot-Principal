@@ -20,12 +20,6 @@
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript" src="darkmode_toggle.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
-<link href="custom.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
-<link href="theme-round.css" rel="stylesheet" type="text/css"/>
-<link href="theme-robot.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -115,8 +109,8 @@ Graphe des dépendances de répertoires pour STM32duino FreeRTOS:</div>
 <area shape="rect" href="dir_13246bedb9ad21c244e55e17de4a2717.html" title="examples" alt="" coords="220,63,297,89"/>
 <area shape="rect" href="dir_408878516cb5d38862f122862fa3a520.html" title="portable" alt="" coords="293,137,360,162"/>
 <area shape="rect" href="dir_d380e3a7b6f7219b856d01e4a28cff0e.html" title="src" alt="" coords="320,63,360,89"/>
-<area shape="poly" href="dir_000083_000064.html" alt="" coords="340,89,334,122,329,121,335,88"/>
-<area shape="rect" href="dir_000083_000064.html" title="1" alt="" coords="337,112,344,127"/>
+<area shape="poly" href="dir_000074_000057.html" alt="" coords="340,89,334,122,329,121,335,88"/>
+<area shape="rect" href="dir_000074_000057.html" title="1" alt="" coords="337,112,344,127"/>
 <area shape="rect" href="dir_e63db30fdf8cb3590da7d143a9c688c6.html" alt="" coords="27,52,371,173"/>
 <area shape="rect" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html" title="lib" alt="" coords="16,16,381,184"/>
 </map>
@@ -141,7 +135,7 @@ Répertoires</h2></td></tr>
 </ul>
 <p>Each have been modified by ST (See st_readme.txt in FreeRTOS Source).</p>
 <p>These are the same provided with the <a href="http://www.st.com/en/embedded-software/stm32cube-mcu-packages.html">STM32Cube MCU Packages</a>. Or thanks to <a href="https://github.com/STMicroelectronics">STMicroelectronics GitHub organization</a>: <a href="https://github.com/STMicroelectronics/stm32_mw_freertos">stm32_mw_freertos</a>.</p>
-<h1><a class="anchor" id="autotoc_md46"></a>
+<h1><a class="anchor" id="autotoc_md2"></a>
 Configuration</h1>
 <p>FreeRTOS has several configuration options, which can be specified from within the <a class="el" href="db/dc7/FreeRTOSConfig_8h_source.html">FreeRTOSConfig.h</a> file.</p>
 <p>This library provides a default FreeRTOS configuration file named <code><a class="el" href="de/dca/FreeRTOSConfig__Default_8h_source.html">FreeRTOSConfig_Default.h</a></code>.</p>
@@ -156,14 +150,14 @@ Configuration</h1>
 <div class="line"> */</div>
 </div><!-- fragment --><p>Since v10.0.1, CMSIS-RTOSv2 can be used instead of default CMSIS-RTOS.</p>
 <p><code>configUSE_CMSIS_RTOS_V2</code> has to be defined and set to <code>1</code> to use CMSIS-RTOSv2.</p>
-<h1><a class="anchor" id="autotoc_md47"></a>
+<h1><a class="anchor" id="autotoc_md3"></a>
 Limitations</h1>
 <ul>
 <li>MPU: not supported.</li>
 <li>No CMSIS-RTOSv2 support provided. It is provided as example.</li>
 <li>On Cortex-M0 and Cortex-M0+, all IT are disabled between xTaskCreate() and vTaskStartScheduler(). So it is not possible to use IT inbetween, like Serial.print() ... This is the reason why, in example "frLiyLayland", between xTaskCreate() and vTaskStartScheduler(), we use direct printf(), which will access directly USART without interrupt</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md48"></a>
+<h1><a class="anchor" id="autotoc_md4"></a>
 Files &amp; Configuration</h1>
 <ul>
 <li><a class="el" href="df/d62/STM32FreeRTOS_8h_source.html">STM32FreeRTOS.h</a> : Must always be #include first. It references required include files.</li>
@@ -171,9 +165,9 @@ Files &amp; Configuration</h1>
 <li>STM32FreeRTOSConfig_extra.h : If exist at sketch level, it contains extra FreeRTOS configurations.</li>
 <li><a class="el" href="de/dca/FreeRTOSConfig__Default_8h_source.html">FreeRTOSConfig_Default.h</a> : Contains the default FreeRTOS configurations for this STM32 port if <code>STM32FreeRTOSConfig.h</code> doesn't exist.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md49"></a>
+<h1><a class="anchor" id="autotoc_md5"></a>
 Test results (using <a href="https://github.com/stm32duino/Arduino_Core_STM32">Arduino_Core_STM32</a>)</h1>
-<h2><a class="anchor" id="autotoc_md50"></a>
+<h2><a class="anchor" id="autotoc_md6"></a>
 STM32FreeRTOS v9.0.x</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -195,7 +189,7 @@ STM32FreeRTOS v9.0.x</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><a href="http://www.st.com/en/evaluation-tools/b-l475e-iot01a.html">B-L475E-IOT01A</a>   </td><td class="markdownTableBodyCenter">PASSED   </td><td class="markdownTableBodyCenter">PASSED   </td><td class="markdownTableBodyCenter">PASSED   </td><td class="markdownTableBodyCenter">PASSED   </td><td class="markdownTableBodyCenter">PASSED   </td><td class="markdownTableBodyCenter">PASSED   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md51"></a>
+<h2><a class="anchor" id="autotoc_md7"></a>
 STM32FreeRTOS v10.0.x</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -226,7 +220,7 @@ STM32FreeRTOS v10.0.x</h2>
 <ul>
 <li>PASSED with <code>configUSE_NEWLIB_REENTRANT</code> set to 0 due to small RAM.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md52"></a>
+<h2><a class="anchor" id="autotoc_md8"></a>
 STM32FreeRTOS v10.2.x</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -259,7 +253,7 @@ STM32FreeRTOS v10.2.x</h2>
 <ul>
 <li>PASSED with <code>configUSE_NEWLIB_REENTRANT</code> set to 0 due to small RAM.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md53"></a>
+<h2><a class="anchor" id="autotoc_md9"></a>
 STM32FreeRTOS v10.3.1</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">

@@ -13,23 +13,22 @@
 <area shape="rect" id="node13" href="dir_74d560fdf54edb5780c2bca28a30fbc1.html" title="Include" alt="" coords="1430,27,1493,52"/>
 <area shape="rect" id="node14" href="dir_28c8d4bb7e5b9ae107e898197e1321ea.html" title="Logger" alt="" coords="1517,27,1579,52"/>
 <area shape="rect" id="node15" href="dir_c7e7500ea1335729dbc3bd302bcc14b0.html" title="mathutils" alt="" coords="1603,27,1677,52"/>
-<area shape="rect" id="node16" href="dir_31347930a9db39eb68b78fb3141a6385.html" title="motors" alt="" coords="1701,27,1763,52"/>
-<area shape="rect" id="node17" href="dir_97435ac2b370511e9f7a65b6298f3857.html" title="Musique" alt="" coords="1786,27,1856,52"/>
-<area shape="rect" id="node18" href="dir_50731e8e6461eb9436ae02dcb97adf79.html" title="Odometry" alt="" coords="1880,27,1957,52"/>
-<area shape="rect" id="node19" href="dir_559fd7f853ead02cdee3bdd09875e979.html" title="PeriodicProcess" alt="" coords="1982,27,2098,52"/>
-<area shape="rect" id="node20" href="dir_1ea7e2220d3792a9ee38cf153a582c69.html" title="PID" alt="" coords="2122,27,2166,52"/>
-<area shape="rect" id="node21" href="dir_527e7e0e1db04d9edf3b7003c66bfc89.html" title="PositionController" alt="" coords="2190,27,2314,52"/>
-<area shape="rect" id="node22" href="dir_6689636e9dde45a06acf8742d57dc008.html" title="PurePursuit" alt="" coords="2338,27,2427,52"/>
-<area shape="rect" id="node23" href="dir_ea9b4db6eb8c4e010e445c4c3ea32db4.html" title="SensorArray" alt="" coords="2451,27,2544,52"/>
-<area shape="rect" id="node24" href="dir_61a1dba28269a8c8f4d0f1b160b371a4.html" title="ServosPCA9685" alt="" coords="2568,27,2685,52"/>
-<area shape="rect" id="node25" href="dir_e4b407f2d2a0aae366ca5909d7096897.html" title="ShiftRegister" alt="" coords="2709,27,2806,52"/>
-<area shape="rect" id="node26" href="dir_62756cf3385797f1f0292ab4650276f4.html" title="SpeedPowerProfiling" alt="" coords="2829,27,2971,52"/>
-<area shape="rect" id="node27" href="dir_a4d559ad0ac4ee650a73f6ad65608c77.html" title="StepByStepMotor" alt="" coords="2994,27,3118,52"/>
-<area shape="rect" id="node28" href="dir_e63db30fdf8cb3590da7d143a9c688c6.html" title="STM32duino FreeRTOS" alt="" coords="3142,27,3301,52"/>
-<area shape="rect" id="node29" href="dir_4136405d84fc7ff658638f03b4ac248a.html" title="Teleplot" alt="" coords="3325,27,3392,52"/>
-<area shape="rect" id="node30" href="dir_364068cac840ea2f55acd2e21b2efa5a.html" title="TraceRecorder" alt="" coords="3416,27,3522,52"/>
-<area shape="rect" id="node31" href="dir_782ce0eb56afffab93ccdf5291c272c9.html" title="TurnOnTheSpot" alt="" coords="3546,27,3659,52"/>
-<area shape="rect" id="node32" href="dir_b0d67969ad9c4f1f7b6a734a349f1bb3.html" title="VelocityController" alt="" coords="3683,27,3805,52"/>
-<area shape="rect" id="node33" href="dir_d5c75ca7dbd2fef93c2f2d67c31ab7ba.html" title="Wheeledbase" alt="" coords="3829,27,3928,52"/>
-<area shape="rect" id="clust1" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html" alt="" coords="16,16,3939,63"/>
+<area shape="rect" id="node16" href="dir_97435ac2b370511e9f7a65b6298f3857.html" title="Musique" alt="" coords="1701,27,1771,52"/>
+<area shape="rect" id="node17" href="dir_50731e8e6461eb9436ae02dcb97adf79.html" title="Odometry" alt="" coords="1795,27,1872,52"/>
+<area shape="rect" id="node18" href="dir_559fd7f853ead02cdee3bdd09875e979.html" title="PeriodicProcess" alt="" coords="1896,27,2013,52"/>
+<area shape="rect" id="node19" href="dir_1ea7e2220d3792a9ee38cf153a582c69.html" title="PID" alt="" coords="2037,27,2080,52"/>
+<area shape="rect" id="node20" href="dir_527e7e0e1db04d9edf3b7003c66bfc89.html" title="PositionController" alt="" coords="2105,27,2228,52"/>
+<area shape="rect" id="node21" href="dir_6689636e9dde45a06acf8742d57dc008.html" title="PurePursuit" alt="" coords="2253,27,2342,52"/>
+<area shape="rect" id="node22" href="dir_ea9b4db6eb8c4e010e445c4c3ea32db4.html" title="SensorArray" alt="" coords="2366,27,2458,52"/>
+<area shape="rect" id="node23" href="dir_61a1dba28269a8c8f4d0f1b160b371a4.html" title="ServosPCA9685" alt="" coords="2483,27,2600,52"/>
+<area shape="rect" id="node24" href="dir_e4b407f2d2a0aae366ca5909d7096897.html" title="ShiftRegister" alt="" coords="2624,27,2720,52"/>
+<area shape="rect" id="node25" href="dir_62756cf3385797f1f0292ab4650276f4.html" title="SpeedPowerProfiling" alt="" coords="2744,27,2885,52"/>
+<area shape="rect" id="node26" href="dir_a4d559ad0ac4ee650a73f6ad65608c77.html" title="StepByStepMotor" alt="" coords="2909,27,3032,52"/>
+<area shape="rect" id="node27" href="dir_e63db30fdf8cb3590da7d143a9c688c6.html" title="STM32duino FreeRTOS" alt="" coords="3056,27,3216,52"/>
+<area shape="rect" id="node28" href="dir_4136405d84fc7ff658638f03b4ac248a.html" title="Teleplot" alt="" coords="3240,27,3307,52"/>
+<area shape="rect" id="node29" href="dir_364068cac840ea2f55acd2e21b2efa5a.html" title="TraceRecorder" alt="" coords="3331,27,3437,52"/>
+<area shape="rect" id="node30" href="dir_782ce0eb56afffab93ccdf5291c272c9.html" title="TurnOnTheSpot" alt="" coords="3461,27,3574,52"/>
+<area shape="rect" id="node31" href="dir_b0d67969ad9c4f1f7b6a734a349f1bb3.html" title="VelocityController" alt="" coords="3598,27,3720,52"/>
+<area shape="rect" id="node32" href="dir_d5c75ca7dbd2fef93c2f2d67c31ab7ba.html" title="Wheeledbase" alt="" coords="3744,27,3843,52"/>
+<area shape="rect" id="clust1" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html" alt="" coords="16,16,3853,63"/>
 </map>

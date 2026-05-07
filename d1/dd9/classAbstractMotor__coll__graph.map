@@ -1,6 +1,0 @@
-<map id="AbstractMotor" name="AbstractMotor">
-<area shape="rect" id="Node000001" title=" " alt="" coords="6,5,109,31"/>
-<area shape="rect" id="Node000002" href="$d4/de2/classAbstractDriver.html" title=" " alt="" coords="5,94,110,120"/>
-<area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="22,42,11,56,9,66,14,75,34,92,31,96,9,78,4,67,6,54,18,39"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,79,73,67,72,56,63,32,68,30,77,54,78,68,75,81"/>
-</map>

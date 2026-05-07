@@ -7,15 +7,6 @@ var hierarchy =
     [ "AbstractCodewheel", "d1/d6f/classAbstractCodewheel.html", [
       [ "Codewheel", "dd/df3/classCodewheel.html", null ]
     ] ],
-    [ "AbstractDriver", "d4/de2/classAbstractDriver.html", [
-      [ "DRV8844", "d9/de4/classDRV8844.html", null ],
-      [ "DRV8876", "d1/d5b/classDRV8876.html", null ],
-      [ "I2CDCDriver", "d5/dd0/classI2CDCDriver.html", null ]
-    ] ],
-    [ "AbstractMotor", "d2/d61/classAbstractMotor.html", [
-      [ "DCMotor", "dd/d4c/classDCMotor.html", null ],
-      [ "WheelMotor", "db/dab/classWheelMotor.html", null ]
-    ] ],
     [ "AbstractMoveStrategy", "de/dc0/classAbstractMoveStrategy.html", [
       [ "BasicMoveStrategy", "de/d22/classBasicMoveStrategy.html", null ],
       [ "BasicTurnStrategy", "db/d2b/classBasicTurnStrategy.html", null ],
@@ -40,9 +31,6 @@ var hierarchy =
     [ "HazelnutGripper::Elevator", "d2/df0/classHazelnutGripper_1_1Elevator.html", null ],
     [ "EndStop", "df/d5b/classEndStop.html", null ],
     [ "EventGroupDef_t", "d7/d15/structEventGroupDef__t.html", null ],
-    [ "MyLibrary::Example", "d7/d8e/classMyLibrary_1_1Example.html", [
-      [ "MyLibrary::SubclassExample< TemplatedClass >", "db/d5b/classMyLibrary_1_1SubclassExample.html", null ]
-    ] ],
     [ "Exception", null, [
       [ "geogebra.AlreadyExistsError", "d9/d19/classgeogebra_1_1AlreadyExistsError.html", null ]
     ] ],
@@ -103,7 +91,6 @@ var hierarchy =
     [ "Position", "d0/df4/structPosition.html", null ],
     [ "QueueDefinition", "de/d95/structQueueDefinition.html", null ],
     [ "QueuePointers", "d4/dac/structQueuePointers.html", null ],
-    [ "MyLibrary::SecondExample", "dd/dc4/classMyLibrary_1_1SecondExample.html", null ],
     [ "SecureContext", "d2/d52/structSecureContext.html", null ],
     [ "SemaphoreData", "de/ddd/structSemaphoreData.html", null ],
     [ "SensorArray", "de/d4b/classSensorArray.html", null ],

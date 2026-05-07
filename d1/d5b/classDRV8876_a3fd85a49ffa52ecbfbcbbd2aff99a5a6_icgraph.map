@@ -1,5 +1,0 @@
-<map id="DRV8876::setSleep" name="DRV8876::setSleep">
-<area shape="rect" id="Node000001" title="Contrôle le mode basse consommation." alt="" coords="153,5,286,31"/>
-<area shape="rect" id="Node000002" href="$d1/d5b/classDRV8876.html#a556bf39ddef3efd44bc2f7cb6265d416" title="Initialise les broches matérielles. Configure les entrées/sorties et réveille le driver si sleepPin e..." alt="" coords="5,5,105,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,21,105,21,105,16,137,16"/>
-</map>

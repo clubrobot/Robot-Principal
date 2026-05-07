@@ -1,5 +1,0 @@
-<map id="WheelMotor" name="WheelMotor">
-<area shape="rect" id="Node000001" title="Implémentation concrète d&#39;un moteur DC standard." alt="" coords="12,79,102,105"/>
-<area shape="rect" id="Node000002" href="$d2/d61/classAbstractMotor.html" title=" " alt="" coords="5,5,109,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,46,60,79,54,79,54,46"/>
-</map>
