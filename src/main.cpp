@@ -37,7 +37,7 @@ Logger main_logs = Logger("MAIN");
 using namespace ihm;
 void procedure_demarrage(){
 
-    Automate::init(my_team);
+    Automate::init(Automate::BLEU);
     main_logs.log(WARNING_LEVEL,"Le robot est armé!\n");
 
     //Detect tirette
