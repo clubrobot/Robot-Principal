@@ -4,3 +4,4 @@
 [submodule "lib/motors"]
 	path = lib/motors
 	url = git@github.com:clubrobot/motors.git
+
