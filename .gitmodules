@@ -1,6 +1,6 @@
 [submodule "doc/doxygen-awesome-css"]
 	path = doc/doxygen-awesome-css
-	url = https://github.com:jothepro/doxygen-awesome-css.git
+	url = https://github.com/jothepro/doxygen-awesome-css.git
 [submodule "lib/motors"]
 	path = lib/motors
-	url = https://github.com:clubrobot/motors.git
+	url = https://github.com/clubrobot/motors.git
