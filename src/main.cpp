@@ -15,9 +15,8 @@
 #include "ihm/ihm.h"
 #include "wheeledbase/wb_thread.h"
 #include "sensors/SensorsThread.h"
-#include "decisions/Automate.h"
+#include "cerveau/Automate.h"
 
-#include "team2025/ListeActionneurs.h"
 
 #define DEBUG 1
 
@@ -301,7 +300,7 @@ void setup(){
     TaskHandle_t  hl_robot = nullptr;
 
     BaseType_t ret_robot = xTaskCreate(
-                Automate::play_match,
+                Automate::playMatch,
                 "Robot loop",
                 10000,
                 (void *) procedure_demarrage,
