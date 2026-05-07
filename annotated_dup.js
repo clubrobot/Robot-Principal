@@ -13,6 +13,11 @@ var annotated_dup =
       [ "Gripper", "d4/dcb/classHazelnutGripper_1_1Gripper.html", null ],
       [ "GripperFinger", "d6/d59/classHazelnutGripper_1_1GripperFinger.html", "d6/d59/classHazelnutGripper_1_1GripperFinger" ]
     ] ],
+    [ "MyLibrary", null, [
+      [ "Example", "d7/d8e/classMyLibrary_1_1Example.html", "d7/d8e/classMyLibrary_1_1Example" ],
+      [ "SecondExample", "dd/dc4/classMyLibrary_1_1SecondExample.html", null ],
+      [ "SubclassExample", "db/d5b/classMyLibrary_1_1SubclassExample.html", "db/d5b/classMyLibrary_1_1SubclassExample" ]
+    ] ],
     [ "A_BLOCK_LINK", "d1/d67/structA__BLOCK__LINK.html", "d1/d67/structA__BLOCK__LINK" ],
     [ "AbstractCodewheel", "d1/d6f/classAbstractCodewheel.html", "d1/d6f/classAbstractCodewheel" ],
     [ "AbstractMoveStrategy", "de/dc0/classAbstractMoveStrategy.html", "de/dc0/classAbstractMoveStrategy" ],

@@ -31,6 +31,9 @@ var hierarchy =
     [ "HazelnutGripper::Elevator", "d2/df0/classHazelnutGripper_1_1Elevator.html", null ],
     [ "EndStop", "df/d5b/classEndStop.html", null ],
     [ "EventGroupDef_t", "d7/d15/structEventGroupDef__t.html", null ],
+    [ "MyLibrary::Example", "d7/d8e/classMyLibrary_1_1Example.html", [
+      [ "MyLibrary::SubclassExample< TemplatedClass >", "db/d5b/classMyLibrary_1_1SubclassExample.html", null ]
+    ] ],
     [ "Exception", null, [
       [ "geogebra.AlreadyExistsError", "d9/d19/classgeogebra_1_1AlreadyExistsError.html", null ]
     ] ],
@@ -91,6 +94,7 @@ var hierarchy =
     [ "Position", "d0/df4/structPosition.html", null ],
     [ "QueueDefinition", "de/d95/structQueueDefinition.html", null ],
     [ "QueuePointers", "d4/dac/structQueuePointers.html", null ],
+    [ "MyLibrary::SecondExample", "dd/dc4/classMyLibrary_1_1SecondExample.html", null ],
     [ "SecureContext", "d2/d52/structSecureContext.html", null ],
     [ "SemaphoreData", "de/ddd/structSemaphoreData.html", null ],
     [ "SensorArray", "de/d4b/classSensorArray.html", null ],
