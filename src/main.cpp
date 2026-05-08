@@ -12,12 +12,16 @@
 #include "DRV8876.h"
 #include "Elevator.h"
 #include "HazelnutGripper.h"
+#include "LiquidCrystal.h"
 #include "ihm/ihm.h"
 #include "wheeledbase/wb_thread.h"
 #include "sensors/SensorsThread.h"
 #include "decisions/Automate.h"
 
 #include "team2025/ListeActionneurs.h"
+
+
+LiquidCrystal lcd(PG15, PB4, PB8, PB5, PB9, PF3);
 
 #define DEBUG 1
 
@@ -151,6 +155,8 @@ static DRV8876 drv8876(PA9,PC8);
 static DCMotor motor;
 static PID pid;
 
+
+
 void setup(){
 
 
@@ -175,6 +181,9 @@ void setup(){
     main_logs.log(WARNING_LEVEL,"Not using FreeRTOS\n");
     return;
 #endif
+
+  lcd.begin(20, 4);
+  lcd.print("Hello Club Robot !");
 
 
   drv8876.init();
