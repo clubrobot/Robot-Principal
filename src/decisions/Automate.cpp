@@ -60,38 +60,62 @@ Position test2 = Position(1300,300,-1.57);
 
 void Automate::play_match(void *pvParameters){
 
-    Wheeledbase::TURNTO_DELTA(PI, true);
+    //Wheeledbase::TURNTO_DELTA(10*PI, true);
     //Wheeledbase::TURNTO_DELTA(PI, true);
 
+    //Wheeledbase::START_TURNONTHESPOT(TurnOnTheSpot::TRIG,PI);
 
-   // Wheeledbase::GOTO_DELTA(300,true);
+
+
+    Position p ={1800,1895,-PI/2};
+    Wheeledbase::SET_POSITION(&p);
+
+
+    Position test = Position(1400,400 ,3*PI/4);
+    Wheeledbase::GOTO(&test,true,PurePursuit::NONE,3*PI/4);
+
+//    Position test2 = Position(1500,1100 ,-PI/2);
+
+//    Wheeledbase::GOTO(&p,true,PurePursuit::NONE,PI/2);
+
+/*
+    Wheeledbase::ADD_PUREPURSUIT_WAYPOINT(1100,1600);
+    Wheeledbase::ADD_PUREPURSUIT_WAYPOINT(1500,1400);
+    Wheeledbase::ADD_PUREPURSUIT_WAYPOINT(1500,1100);
+
+    Wheeledbase::START_PUREPURSUIT(PurePursuit::FORWARD, -PI/2);
+*/
+    //vTaskDelay(pdMS_TO_TICKS(2000));
+    /*
+
+    positionControl.disable();*/
+    velocityControl.setSetpoints(0,PI/2);
+    velocityControl.enable();
 
     //Wheeledbase::TURNTO_DELTA(PI,true);
+
+    /*
     velocityControl.enable();
-    positionControl.enable();
-    //Wheeledbase::SET_VELOCITIES(0,0);
+
+    Wheeledbase::SET_VELOCITIES(0,PI/2);
+    velocityControl.enable();
+
+    vTaskDelay(pdMS_TO_TICKS(2000));
+    Wheeledbase::SET_VELOCITIES(0,PI/2);
+    vTaskDelay(pdMS_TO_TICKS(2000));
+    Wheeledbase::SET_VELOCITIES(0,-PI/2);
+    */
+
     while(true)
     {
-
 
         //Wheeledbase::SET_OPENLOOP_VELOCITIES(100,100);
 
 
         //Wheeledbase::GOTO_DELTA(-300, 0, false);
 
-        /*
-        long t = millis() % 10000;
 
 
-        if (t < 5000)
-        {
-
-            velocityControl.setSetpoints(100,0);
-        }else
-        {
-            velocityControl.setSetpoints(-100,0);
-        }
-*/
 
         vTaskDelay(pdMS_TO_TICKS(1));
 
