@@ -3,6 +3,7 @@
 #include "PurePursuit.h"
 
 #include "mathutils.h"
+#include "Teleplot_client.h"
 
 
 void PurePursuit::setDirection(Direction direction)
@@ -218,6 +219,10 @@ void PurePursuit::computeVelSetpoints(float timestep)
 	
 	// Then we do a simple proportional control for both linear and angular velocities.
 	float linPosSetpoint = (chord + getDistAfterGoal()) * m_direction;
+
+	float brakingVelMax = sqrt(2 * 75 * fabs(linPosSetpoint));
+	newLinVelMax = min(newLinVelMax, brakingVelMax);
+
 	float linVelSetpoint = saturate(linVelKp * linPosSetpoint, -newLinVelMax, newLinVelMax);
 
 	float angPosSetpoint = inrange(delta, -M_PI, M_PI);
