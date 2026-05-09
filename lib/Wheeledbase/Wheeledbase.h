@@ -63,7 +63,6 @@
 #define SLOWDOWN_DISTANCE               0
 #define ALIGN_DISTANCE                  130
 
-
 struct WBConstants
 {
     const float LEFTWHEEL_RADIUS;

@@ -166,7 +166,7 @@ void setup(){
     main_logs.log(WARNING_LEVEL, "Debug enabled at %d baud\n", PRINTF_BAUD);
 
     main_logs.log(INFO_LEVEL, "Printing WheeledBase Params\n");
-    Wheeledbase::PRINT_PARAMS();
+    //Wheeledbase::PRINT_PARAMS();
 #endif
     match_started= true;
     wb_setup();
@@ -215,8 +215,6 @@ void setup(){
 
   TaskHandle_t  gripper_handle = nullptr;
 
-  /*
-
   BaseType_t ret_gripper = xTaskCreate(
               &HazelnutGripper::Elevator::task,
               "Elevator",
@@ -224,7 +222,7 @@ void setup(){
               nullptr,
               5,//Prio max
               &gripper_handle );
-  if(ret_gripper!=pdPASS) {Error_Handler()}*/
+  if(ret_gripper!=pdPASS) {Error_Handler()}
 
 
 /*
