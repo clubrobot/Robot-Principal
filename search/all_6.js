@@ -10,7 +10,7 @@ var searchData=
   ['bogues_7',['Liste des bogues',['../de/da5/bug.html',1,'']]],
   ['bonjour_8',['Bonjour',['../index.html#autotoc_md44',1,'']]],
   ['bordered_20images_9',['Bordered Images',['../dc/d95/md_doc_2doxygen-awesome-css_2docs_2tricks.html#autotoc_md23',1,'']]],
-  ['bournsacencoder_10',['BournsACEncoder',['../d8/d86/classHazelnutGripper_1_1BournsACEncoder.html',1,'HazelnutGripper']]],
+  ['bournsacencoder_10',['BournsACEncoder',['../d0/d04/classBournsACEncoder.html',1,'BournsACEncoder'],['../d8/d86/classHazelnutGripper_1_1BournsACEncoder.html',1,'HazelnutGripper::BournsACEncoder']]],
   ['browser_20support_11',['Browser support',['..//github/workspace/doc/doxygen-awesome-css/README.md#autotoc_md42',1,'']]],
   ['brushlessmotor_12',['BrushlessMotor',['../d7/d82/classBrushlessMotor.html',1,'']]],
   ['bus_5ffault_5fisr_13',['bus_fault_isr',['../db/df1/STM32FreeRTOS_8c.html#ae2d60774bb61a4f46e670ea245570f95',1,'STM32FreeRTOS.c']]],

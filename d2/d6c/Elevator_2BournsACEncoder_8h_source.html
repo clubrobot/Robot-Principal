@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CRINSA-team2025:  Fichier source de lib/Elevator/BournsACEncoder.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript" src="../../darkmode_toggle.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../custom.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="../../theme-round.css" rel="stylesheet" type="text/css"/>
+<link href="../../theme-robot.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">CRINSA-team2025<span id="projectnumber">&#160;V1</span>
+   </div>
+   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2025</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('d2/d6c/Elevator_2BournsACEncoder_8h_source.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">BournsACEncoder.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by Romain Pouvreau on 08/03/2026.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef BOURNSACENCODER_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define BOURNSACENCODER_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;Elevator.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../d0/d04/classBournsACEncoder.html">    9</a></span><span class="keyword">class </span>BournsACEncoder : <span class="keyword">public</span> <a class="code hl_class" href="../../d4/ddc/classAbstractAbsoluteEncoder.html">AbstractAbsoluteEncoder</a></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    BournsACEncoder(uint8_t pin1, uint8_t pin2, uint8_t pin3, uint8_t pin4, uint8_t pin5, uint8_t pin6, uint8_t pin7, uint8_t pin8);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d04/classBournsACEncoder.html#a464841b53af6acf04fced4486a9bd1a6">init</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="../../d0/d04/classBournsACEncoder.html#a3ea5ddac7aedc0bf0b87f09d85f99864">getAngle</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> total_steps = 128;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d0/d04/classBournsACEncoder.html#a899f37716a3a6a9b5fa880c38fcc3359">   25</a></span>    <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="../../d0/d04/classBournsACEncoder.html#a899f37716a3a6a9b5fa880c38fcc3359">step_angle</a> = 360 / total_steps; </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../d0/d04/classBournsACEncoder.html#af63ae4a975748f4095a6e00a2cac4e46">   30</a></span>    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d0/d04/classBournsACEncoder.html#af63ae4a975748f4095a6e00a2cac4e46">conversion_table</a>[255] = {-1,56,40,55,24,-1,39,52,8,57,-1,-1,23,-1,36,13,120,-1,41,54,-1,-1,-1,53,7,-1,-1,-1,20,19,125,18,104,105,-1,-1,25,106,38,-1,-1,58,-1,-1,-1,-1,37,14,119,118,-1,-1,-1,107,-1,-1,4,-1,3,-1,109,108,2,1,88,-1,89,-1,-1,-1,-1,51,9,10,90,-1,22,11,-1,12,-1,-1,42,43,-1,-1,-1,-1,-1,-1,-1,-1,21,-1,126,127,103,-1,102,-1,-1,-1,-1,-1,-1,-1,91,-1,-1,-1,-1,-1,116,117,-1,-1,115,-1,-1,-1,93,94,92,-1,114,95,113,0,72,71,-1,68,73,-1,-1,29,-1,70,-1,69,-1,-1,35,34,121,-1,122,-1,74,-1,-1,30,6,-1,123,-1,-1,-1,124,17,-1,-1,-1,67,26,-1,27,28,-1,59,-1,-1,-1,-1,-1,15,-1,-1,-1,-1,-1,-1,-1,-1,5,-1,-1,-1,110,-1,111,16,87,84,-1,45,86,85,-1,50,-1,-1,-1,46,-1,-1,-1,33,-1,83,-1,44,75,-1,-1,31,-1,-1,-1,-1,-1,-1,-1,32,100,61,101,66,-1,62,-1,49,99,60,-1,47,-1,-1,-1,48,77,82,78,65,76,63,-1,64,98,81,79,80,97,96,112};</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    uint8_t m_pins[8]{};</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">static</span> uint8_t binToDec(uint8_t bits[8]);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>};</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#endif </span><span class="comment">//BOURNSACENCODER_H</span></div>
+<div class="ttc" id="aclassAbstractAbsoluteEncoder_html"><div class="ttname"><a href="../../d4/ddc/classAbstractAbsoluteEncoder.html">AbstractAbsoluteEncoder</a></div><div class="ttdef"><b>Definition</b> Elevator.h:11</div></div>
+<div class="ttc" id="aclassBournsACEncoder_html_a3ea5ddac7aedc0bf0b87f09d85f99864"><div class="ttname"><a href="../../d0/d04/classBournsACEncoder.html#a3ea5ddac7aedc0bf0b87f09d85f99864">BournsACEncoder::getAngle</a></div><div class="ttdeci">float getAngle() override</div><div class="ttdoc">Donne la valeur de la position anglulaire.</div><div class="ttdef"><b>Definition</b> BournsACEncoder.cpp:38</div></div>
+<div class="ttc" id="aclassBournsACEncoder_html_a464841b53af6acf04fced4486a9bd1a6"><div class="ttname"><a href="../../d0/d04/classBournsACEncoder.html#a464841b53af6acf04fced4486a9bd1a6">BournsACEncoder::init</a></div><div class="ttdeci">void init() override</div><div class="ttdoc">Initialisation de l&#39;encodeur.</div><div class="ttdef"><b>Definition</b> BournsACEncoder.cpp:19</div></div>
+<div class="ttc" id="aclassBournsACEncoder_html_a899f37716a3a6a9b5fa880c38fcc3359"><div class="ttname"><a href="../../d0/d04/classBournsACEncoder.html#a899f37716a3a6a9b5fa880c38fcc3359">BournsACEncoder::step_angle</a></div><div class="ttdeci">const float step_angle</div><div class="ttdef"><b>Definition</b> BournsACEncoder.h:25</div></div>
+<div class="ttc" id="aclassBournsACEncoder_html_af63ae4a975748f4095a6e00a2cac4e46"><div class="ttname"><a href="../../d0/d04/classBournsACEncoder.html#af63ae4a975748f4095a6e00a2cac4e46">BournsACEncoder::conversion_table</a></div><div class="ttdeci">const int conversion_table[255]</div><div class="ttdef"><b>Definition</b> BournsACEncoder.h:30</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_44f791abd8750d3d2178fbe35c2b1799.html">Elevator</a></li><li class="navelem"><b>BournsACEncoder.h</b></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

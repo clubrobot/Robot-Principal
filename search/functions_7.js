@@ -2,7 +2,7 @@ var searchData=
 [
   ['genrampsetpoint_0',['genRampSetpoint',['../de/d33/classVelocityController.html#a0b601849cb1f8b70478f530c0d198a60',1,'VelocityController']]],
   ['get_5ftemps_1',['get_temps',['../d8/d4b/classTeleplot.html#a96a82071ae6056a4634917892b663956',1,'Teleplot']]],
-  ['getangle_2',['getAngle',['../d8/d86/classHazelnutGripper_1_1BournsACEncoder.html#aea062b87704801d601f04e912848966e',1,'HazelnutGripper::BournsACEncoder::getAngle()'],['../d1/de1/classHazelnutGripper_1_1AbstractAbsoluteEncoder.html#ab421d53e7835e7689aacdf3338f0b75f',1,'HazelnutGripper::AbstractAbsoluteEncoder::getAngle()']]],
+  ['getangle_2',['getAngle',['../d0/d04/classBournsACEncoder.html#a3ea5ddac7aedc0bf0b87f09d85f99864',1,'BournsACEncoder::getAngle()'],['../d4/ddc/classAbstractAbsoluteEncoder.html#a854857b625fa76e9e25cbdf9651dc705',1,'AbstractAbsoluteEncoder::getAngle()'],['../d8/d86/classHazelnutGripper_1_1BournsACEncoder.html#a3ea5ddac7aedc0bf0b87f09d85f99864',1,'HazelnutGripper::BournsACEncoder::getAngle()'],['../d1/de1/classHazelnutGripper_1_1AbstractAbsoluteEncoder.html#ab421d53e7835e7689aacdf3338f0b75f',1,'HazelnutGripper::AbstractAbsoluteEncoder::getAngle()']]],
   ['getangoutput_3',['getAngOutput',['../d5/d9e/classDifferentialController.html#a084d7ad75a545ef4fdf79fc1a2ae6317',1,'DifferentialController']]],
   ['getangposthreshold_4',['getAngPosThreshold',['../d2/d64/classPositionController.html#a3f89060bb173f7937ed7f39861c8a959',1,'PositionController::getAngPosThreshold()'],['../de/dc0/classAbstractMoveStrategy.html#aeb5f02ec6bc18993066712b728d901c5',1,'AbstractMoveStrategy::getAngPosThreshold()']]],
   ['getangsetpoint_5',['getAngSetpoint',['../d5/d9e/classDifferentialController.html#a7ed62aafaed9cd64fde0ac0dfaabe497',1,'DifferentialController']]],

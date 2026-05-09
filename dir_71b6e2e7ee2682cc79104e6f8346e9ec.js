@@ -27,7 +27,7 @@ var dir_71b6e2e7ee2682cc79104e6f8346e9ec =
     [ "trcStackMonitor.h", "da/db3/trcStackMonitor_8h.html", "da/db3/trcStackMonitor_8h" ],
     [ "trcStateMachine.h", "d5/d30/trcStateMachine_8h.html", null ],
     [ "trcStaticBuffer.h", "dc/dd0/trcStaticBuffer_8h.html", null ],
-    [ "trcStreamPort.h", "d6/d96/include_2trcStreamPort_8h_source.html", null ],
+    [ "trcStreamPort.h", "d8/dec/trcStreamPort_8h_source.html", null ],
     [ "trcStreamPortConfig.h", "dc/d91/include_2trcStreamPortConfig_8h_source.html", null ],
     [ "trcString.h", "d4/dec/trcString_8h.html", null ],
     [ "trcTask.h", "d1/d88/trcTask_8h.html", null ],

@@ -8,6 +8,7 @@ var dir_97aefd0d527b934f1d99a682da8fe6a9 =
     [ "Codewheel", "dir_939910cb0df0093f82d9ec40e421e25c.html", "dir_939910cb0df0093f82d9ec40e421e25c" ],
     [ "CRC16", "dir_21c80b25f428fe9de0c127977b2f9ac3.html", "dir_21c80b25f428fe9de0c127977b2f9ac3" ],
     [ "DifferentialController", "dir_c34709f6ae14823921f822125ef0c59b.html", "dir_c34709f6ae14823921f822125ef0c59b" ],
+    [ "Elevator", "dir_44f791abd8750d3d2178fbe35c2b1799.html", "dir_44f791abd8750d3d2178fbe35c2b1799" ],
     [ "EndStop", "dir_487596bae2a4e614c62c7e040d5dbba2.html", "dir_487596bae2a4e614c62c7e040d5dbba2" ],
     [ "FullSpeedServo", "dir_bb01cc38f3d9c897eba641c1bf4b69a4.html", "dir_bb01cc38f3d9c897eba641c1bf4b69a4" ],
     [ "HazelnutGripper", "dir_353660119c3c8fd768f291ec246d4d5e.html", "dir_353660119c3c8fd768f291ec246d4d5e" ],
