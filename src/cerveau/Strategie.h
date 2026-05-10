@@ -14,6 +14,10 @@ namespace cerveau::strategie {
 
     void generateBlueStrat();
     void generateYellowStrat();
+
+    //checkers
+
+    bool elevatorInPos();
 }
 
 
