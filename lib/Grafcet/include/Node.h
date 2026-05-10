@@ -5,6 +5,9 @@
 #ifndef TEAM2026_NODE_H
 #define TEAM2026_NODE_H
 
+#include <vector>
+#include <memory_resource>
+
 class StateMachine;
 
 class Node {

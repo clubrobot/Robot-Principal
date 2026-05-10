@@ -10,7 +10,6 @@
 #include "include/SensorArray.h"
 #include "Constant.h"
 #include "Wire.h"
-#include "decisions/Tache.h"
 #include "variables_globales.h"
 Logger sensors_logs = Logger("SENSORS");
 
@@ -22,14 +21,14 @@ void SensorsThread::Init(){
 
     poly_delay(1000);
 
-    sensors.addSensor({.addr = 0x55, 8});
-    sensors.addSensor({.addr = 0x60, 7});
-    sensors.addSensor({.addr = 0x45, 6});
-    sensors.addSensor({.addr = 0x40, 5});
-    sensors.addSensor({.addr = 0x35, 4});
-    sensors.addSensor({.addr = 0x30, 3});
-    sensors.addSensor({.addr = 0x25, 2});
-    sensors.addSensor({.addr = 0x20, 1});
+    sensors.addSensor({.addr = 0x55, .pin = 8});
+    sensors.addSensor({.addr = 0x60, .pin = 7});
+    sensors.addSensor({.addr = 0x45, .pin = 6});
+    sensors.addSensor({.addr = 0x40, .pin = 5});
+    sensors.addSensor({.addr = 0x35, .pin = 4});
+    sensors.addSensor({.addr = 0x30, .pin = 3});
+    sensors.addSensor({.addr = 0x25, .pin = 2});
+    sensors.addSensor({.addr = 0x20, .pin = 1});
 
     sensors.Init();
 }
@@ -63,13 +62,6 @@ void SensorsThread::Thread(void *pvParameters){
             }
             sensors_logs.log(GOOD_LEVEL, "REPRISE\n");
             velocityControl.set_stop(false);
-        }
-        printf("TEmps: %d\n",millis()-start_millis);
-        if(millis()-start_millis>100*1000 && match_started){
-            printf("FINI\n");
-            for(;;){
-                velocityControl.set_stop(true);
-            }
         }
     }
 }

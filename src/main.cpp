@@ -16,9 +16,7 @@
 #include "ihm/ihm.h"
 #include "wheeledbase/wb_thread.h"
 #include "sensors/SensorsThread.h"
-#include "decisions/Automate.h"
 
-#include "team2025/ListeActionneurs.h"
 
 
 LiquidCrystal lcd(PG15, PB4, PB8, PB5, PB9, PF3);
@@ -42,7 +40,7 @@ Logger main_logs = Logger("MAIN");
 using namespace ihm;
 void procedure_demarrage(){
 
-    Automate::init(my_team);
+    cerveau::automate::init(cerveau::automate::BLEU);
     main_logs.log(WARNING_LEVEL,"Le robot est armé!\n");
 
     //Detect tirette
@@ -224,8 +222,6 @@ void setup(){
 
   TaskHandle_t  gripper_handle = nullptr;
 
-  /*
-
   BaseType_t ret_gripper = xTaskCreate(
               &HazelnutGripper::Elevator::task,
               "Elevator",
@@ -233,7 +229,7 @@ void setup(){
               nullptr,
               5,//Prio max
               &gripper_handle );
-  if(ret_gripper!=pdPASS) {Error_Handler()}*/
+  if(ret_gripper!=pdPASS) {Error_Handler()}
 
 
 /*
@@ -310,7 +306,7 @@ void setup(){
     TaskHandle_t  hl_robot = nullptr;
 
     BaseType_t ret_robot = xTaskCreate(
-                Automate::play_match,
+                cerveau::automate::play_match,
                 "Robot loop",
                 10000,
                 (void *) procedure_demarrage,
