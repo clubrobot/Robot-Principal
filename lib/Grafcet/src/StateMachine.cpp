@@ -35,6 +35,21 @@ void StateMachine::execute() {
         }
         if (transition) {
             currentNode->active = false;
+            // when the child a syncing transition, its parent need to be deactivated and purge from the queue
+            if (currentNode->children.front() != nullptr && currentNode->children.front()->synchronize) {
+                for (const auto n : currentNode->children.front()->parent) {
+                    n->active = false;
+                    //then we need to remove it from the queue if it there
+                    const int queueSize = activeNodes.size();
+                    for (int i = 0; i < queueSize; i++) {
+                        auto node = activeNodes.front();
+                        activeNodes.pop();
+                        if (node != n) {
+                            activeNodes.push(node);
+                        }
+                    }
+                }
+            }
             for (const auto child : currentNode->children) {
                 activeNodes.push(child);
             }

@@ -19,7 +19,7 @@ public:
             else parentReady |= node->enabled();
         }
         if (condition == nullptr) return false;
-        return condition() && (parentReady || synchronize);
+        return condition() && parentReady;
     }
     bool (*condition)() = nullptr;
 };
