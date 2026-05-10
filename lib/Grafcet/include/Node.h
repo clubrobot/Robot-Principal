@@ -5,17 +5,26 @@
 #ifndef TEAM2026_NODE_H
 #define TEAM2026_NODE_H
 
+class StateMachine;
+
 class Node {
 public:
-    explicit Node(Node** parent = nullptr, Node** child = nullptr) : parent(parent), child(child) {}
+    explicit Node(const std::pmr::vector<Node*> &parent = {}, const std::pmr::vector<Node*> &child = {}) : parent(parent), children(child) {}
     virtual ~Node() = default;
     virtual bool enabled() = 0;
     virtual void action() = 0;
-    Node** parent = nullptr;
-    Node** children = nullptr;
+    void addChild(Node *child) {
+        this->children.push_back(child);
+        child->parent.push_back(this);
+    }
     bool isTransition = false;
     bool synchronize = false;
     bool active = false;
+protected:
+    std::pmr::vector<Node*> parent = {};
+    std::pmr::vector<Node*> children = {};
+
+    friend StateMachine;
 };
 
 #endif //TEAM2026_NODE_H

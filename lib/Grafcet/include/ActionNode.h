@@ -6,7 +6,7 @@
 #define TEAM2026_ACTIONNODE_H
 #include "Node.h"
 
-class ActionNode : Node {
+class ActionNode : public Node {
 public:
     bool enabled() override {return active;}
     void action() override {

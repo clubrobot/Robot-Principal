@@ -6,18 +6,21 @@
 #define TEAM2026_TRANSITION_H
 #include "Node.h"
 
-class Transition : Node {
+class Transition : public Node {
 public:
+    Transition() {
+        isTransition = true;
+    }
     void action() override {}
     bool enabled() override {
-        bool parentReady = true;
-        for (Node **node = parent; node != nullptr; node++) {
-            parentReady &= (*node)->enabled();
+        bool parentReady = synchronize;
+        for (const auto node : this->parent) {
+            if (synchronize) parentReady &= node->enabled();
+            else parentReady |= node->enabled();
         }
         if (condition == nullptr) return false;
-        return condition() & (parentReady | synchronize);
+        return condition() && (parentReady || synchronize);
     }
-    bool transition = true;
     bool (*condition)() = nullptr;
 };
 

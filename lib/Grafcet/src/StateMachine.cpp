@@ -3,35 +3,44 @@
 //
 #include "StateMachine.h"
 
+#include <iostream>
+
 /**
  * @Brief Execute the grafcet
  * Uses a queue (activeNodes) to keep track of which node are enabled, if they are action nodes do their
  * action and then transition if needed.
  */
 void StateMachine::execute() {
+    if (startingNode == nullptr) {
+        std::cout << "NO STARTING STATE" << std::endl;
+        return;
+    }
     activeNodes.push(startingNode);
     do {
-        Node* currentNode = activeNodes.back();
+        Node* currentNode = activeNodes.front();
         activeNodes.pop();
+        bool transition = currentNode->synchronize;
         if (!currentNode->isTransition) {
             currentNode->action();
-        }
-        bool transition = currentNode->synchronize;
-        if (currentNode->children == nullptr) continue;
-        for (Node **child = currentNode->children; *child != nullptr; child++) {
-            if (currentNode->synchronize) {
-                transition &= (*child)->enabled();
-            } else {
-                transition |= (*child)->enabled();
+            if (currentNode->children.empty()) continue;
+            for (const auto child : currentNode->children) {
+                if (currentNode->synchronize) {
+                    transition &= child->enabled();
+                } else {
+                    transition |= child->enabled();
+                }
             }
+        } else {
+            transition = true;
         }
         if (transition) {
             currentNode->active = false;
-            for (Node **child = currentNode->children; *child != nullptr; child++) {
-                activeNodes.push(*child);
+            for (const auto child : currentNode->children) {
+                activeNodes.push(child);
             }
         } else {
             activeNodes.push(currentNode);
         }
     } while (!activeNodes.empty());
+    std::cout << "state machine empty" << std::endl;
 }
