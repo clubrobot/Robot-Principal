@@ -33,16 +33,19 @@ namespace HazelnutGripper
     };
 
     /**
-     * @class Elevator
-     * @brief Classe statique gérant l'asservissement en position de l'ascenseur.
+     * @namespace Elevator
+     * @brief Namespace gérant l'asservissement en position de l'ascenseur.
      * * L'Elevator coordonne un moteur et un encodeur via un correcteur PID
      * pour atteindre et maintenir une position angulaire précise.
      */
-    class Elevator
+    namespace Elevator
     {
-    public:
-        /** @brief Classe statique : l'instanciation est interdite. */
-        Elevator() = delete;
+        inline AbstractMotor* m_motor = nullptr;            ///< Pointeur vers le moteur asservi.
+        inline AbstractAbsoluteEncoder* m_encoder = nullptr; ///< Pointeur vers l'encodeur de retour.
+        inline float m_currentAngle = 0.0f;
+        inline float m_angle = 0.0f; ///< Consigne de position angulaire (Setpoint) en degrés.
+        inline PID* m_pid = nullptr;    ///< Correcteur PID utilisé pour le calcul de la vitesse.
+
 
         /**
          * @brief Initialise les périphériques de l'ascenseur.
@@ -51,13 +54,13 @@ namespace HazelnutGripper
          * * @param motor Référence vers le driver du moteur.
          * @param encoder Référence vers le capteur de position.
          */
-        static void init(AbstractMotor* motor, AbstractAbsoluteEncoder* encoder);
+        void init(AbstractMotor* motor, AbstractAbsoluteEncoder* encoder);
 
         /**
          * @brief Définit la position cible à atteindre.
          * @param angle Position souhaitée en degrés (deg).
          */
-        static void setAngle(float angle) { m_angle = angle; }
+        inline void setAngle(float angle) { m_angle = angle; }
 
         /**
          * @brief Tâche de calcul de l'asservissement (Boucle de contrôle).
@@ -65,25 +68,14 @@ namespace HazelnutGripper
          * Cette méthode est conçue pour être lancée comme une tâche FreeRTOS.
          * * @param pvParameters Paramètres de tâche (non utilisés, typiquement NULL).
          */
-        static void task(void *pvParameters);
+        [[noreturn]] void task(void *pvParameters);
 
         /**
          * @brief Configure le correcteur PID à utiliser pour l'asservissement.
          * @param pid Référence vers l'objet PID configuré.
          */
-        static void setPID(PID& pid) { m_pid = &pid; }
+        inline void setPID(PID& pid) { m_pid = &pid; }
 
-        static float getAngle() {
-            return m_encoder->getAngle();
-        }
-
-    protected:
-        static AbstractMotor* m_motor;            ///< Pointeur vers le moteur asservi.
-        static AbstractAbsoluteEncoder* m_encoder; ///< Pointeur vers l'encodeur de retour.
-
-        static float m_angle; ///< Consigne de position angulaire (Setpoint) en degrés.
-
-        static PID* m_pid;    ///< Correcteur PID utilisé pour le calcul de la vitesse.
     };
 }
 

@@ -38,13 +38,13 @@ namespace HazelnutGripper
             }
 
             // Lecture de la position actuelle via l'encodeur
-            float currentAngle = m_encoder->getAngle();
+             m_currentAngle = m_encoder->getAngle();
 
             // Calcul de la commande via le PID
             float command = 0.0f;
             if (m_pid != nullptr)
             {
-                command = m_pid->compute(m_angle, currentAngle, timestep);
+                command = m_pid->compute(m_angle, m_currentAngle, timestep);
             }
 
             m_motor->setVelocity(command);
