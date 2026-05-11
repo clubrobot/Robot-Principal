@@ -15,10 +15,10 @@ void StateMachine::execute() {
     printf("NO STARTING STATE\n");
     return;
   }
-  activeNodes.push(startingNode);
+  activeNodes.push_back(startingNode);
   do {
     Node *currentNode = activeNodes.front();
-    activeNodes.pop();
+    activeNodes.pop_front();
     bool transition = currentNode->synchronize;
     if (!currentNode->isTransition) {
       currentNode->action();
@@ -35,33 +35,29 @@ void StateMachine::execute() {
       transition = true;
     }
     if (transition) {
-      currentNode->active = false;
-      // when the child a syncing transition, its parent need to be deactivated
-      // and purge from the queue
-      if (currentNode->children.front() != nullptr &&
+      // Si le premier enfant est une transition synchronisante, on désactive
+      // ses parents et on les retire de la file, comme dans l'implémentation
+      // originale. On vérifie d'abord qu'il y a bien un enfant.
+      if (!currentNode->children.empty() &&
+          currentNode->children.front() != nullptr &&
           currentNode->children.front()->synchronize) {
-        for (const auto n : currentNode->children.front()->parent) {
+        for (const auto n : currentNode->children.front()->parent) { //FIXME: Currently can't have multiple transition child if one is synchronized
           n->active = false;
           // then we need to remove it from the queue if it there
-          const int queueSize = activeNodes.size();
-          for (int i = 0; i < queueSize; i++) {
-            auto node = activeNodes.front();
-            activeNodes.pop();
-            if (node != n) {
-              activeNodes.push(node);
-            }
-          }
+          std::erase(activeNodes, n);
         }
       }
       for (const auto child : currentNode->children) {
         if (!child->isTransition) {
-          activeNodes.push(child);
-        } else if (child->enabled()) {
-          activeNodes.push(child);
+          activeNodes.push_back(child);
+        }
+        if (child->isTransition && child->enabled()) { //FIXME: Weirdly fail to add active transition
+          activeNodes.push_back(child);
         }
       }
+      currentNode->active = false;
     } else {
-      activeNodes.push(currentNode);
+      activeNodes.push_back(currentNode);
     }
   } while (!activeNodes.empty());
   printf("state machine empty\n");

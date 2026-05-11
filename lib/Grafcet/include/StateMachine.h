@@ -4,7 +4,7 @@
 
 #ifndef TEAM2026_STATEMACHINE_H
 #define TEAM2026_STATEMACHINE_H
-#include <queue>
+#include <deque>
 #include <memory_resource>
 
 #include "Node.h"
@@ -21,7 +21,7 @@ public:
     void execute();
 protected:
     Node* startingNode = nullptr;
-    std::queue<Node*> activeNodes = {};
+    std::deque<Node*> activeNodes = {};
 };
 
 #endif //TEAM2026_STATEMACHINE_H

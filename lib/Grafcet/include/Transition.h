@@ -22,6 +22,7 @@ public:
             else parentReady |= node->enabled();
         }
         if (condition == nullptr) return false;
+        volatile const auto t = condition();
         return condition() && parentReady;
     }
     std::function<bool()> condition = {};

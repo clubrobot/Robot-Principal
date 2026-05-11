@@ -11,7 +11,7 @@
 void procedure_demarrage(){
 
     cerveau::automate::init(cerveau::automate::BLEU);
-    cerveau::automate::automateLogger.log(WARNING_LEVEL,"Le robot est armé!\n");
+    cerveau::automate::automateLogger.log(INFO_LEVEL,"Le robot est armé!\n");
 
     //Detect tirette
     /**while(etat_tirette()==1){}
