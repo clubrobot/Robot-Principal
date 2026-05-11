@@ -9,6 +9,10 @@
 #include "SimpleQueue.h"
 #include "Node.h"
 
+/* The prototype shows it is a naked function - in effect this is just an
+   assembly function. */
+static void HardFault_Handler( void ) __attribute__( ( naked ) );
+
 class StateMachine {
 public:
     StateMachine() : startingNode(nullptr) {

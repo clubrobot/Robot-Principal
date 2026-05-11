@@ -39,18 +39,7 @@ LiquidCrystal lcd(PG15, PB4, PB8, PB5, PB9, PF3);
 
 Logger main_logs = Logger("MAIN");
 using namespace ihm;
-void procedure_demarrage(){
 
-    cerveau::automate::init(cerveau::automate::BLEU);
-    main_logs.log(WARNING_LEVEL,"Le robot est armé!\n");
-
-    //Detect tirette
-    while(etat_tirette()==1){}
-    main_logs.log(WARNING_LEVEL,"tirette mise !\n");
-    while (etat_tirette()==0){}
-    main_logs.log(WARNING_LEVEL,"tirette enlevée !\n");
-
-}
 
 
 /**
@@ -67,6 +56,8 @@ TaskHandle_t hl_wb = nullptr;
 TaskHandle_t hl_sens = nullptr;
 extern TaskHandle_t hl_robot;
 //Setup de base
+
+
 
 // Fonction d'initialisation des horloges
 void SystemClock_Config(void)
@@ -153,8 +144,6 @@ static HazelnutGripper::BournsACEncoder encoder(PA4, PB13, PB12, PE12, PC4, PA7,
 static DRV8876 drv8876(PA9,PC8);
 static DCMotor motor;
 static PID pid;
-
-
 
 void setup(){
 

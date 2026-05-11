@@ -1,0 +1,29 @@
+{
+  "name": "Grafcet",
+  "version": "0.1.0",
+  "description": "Grafcet state machine library",
+  "keywords": [
+    "grafcet",
+    "state machine",
+    "fsm"
+  ],
+  "authors": [
+    {
+      "name": "awing"
+    }
+  ],
+  "license": "UNLICENSED",
+  "frameworks": "*",
+  "platforms": "*",
+  "headers": [
+    "Grafcet.h"
+  ],
+  "build": {
+    "srcDir": "src",
+    "includeDir": "include",
+    "flags": [
+      "-std=gnu++23"
+    ]
+  }
+}
+
