@@ -17,7 +17,9 @@ namespace cerveau::strategie {
         strat->setStartingNode(blueStartingNode);
 
         auto* transition1 = new Transition();
-        transition1->condition = elevatorInPos;
+        transition1->condition = [] {
+            return ELEVATOR_IN_POS();
+        };
         blueStartingNode->addChild(transition1);
 
         auto* gotoNode1 = new ActionNode();
@@ -42,7 +44,9 @@ namespace cerveau::strategie {
         transition2->addChild(elevatorNode2);
 
         auto* transition3 = new Transition();
-        transition3->condition = elevatorInPos;
+        transition3->condition = [] {
+            return ELEVATOR_IN_POS();
+        };
         elevatorNode2->addChild(transition3);
 
         auto* gotoNode2 = new ActionNode();
@@ -62,7 +66,7 @@ namespace cerveau::strategie {
         auto* transition4 = new Transition();
         transition4->condition = [] {
             stratLogger.log(INFO_LEVEL, "transition 4 evaluated");
-            return static_cast<bool>(Wheeledbase::POSITION_REACHED() & 0b11) && elevatorInPos();
+            return static_cast<bool>(Wheeledbase::POSITION_REACHED() & 0b11) && ELEVATOR_IN_POS();
         };
         transition4->synchronize = true;
         gotoNode2->addChild(transition4);
@@ -96,8 +100,4 @@ namespace cerveau::strategie {
         };
         strat->setStartingNode(yellowStartingNode);
     }
-
-    bool elevatorInPos(){
-        return fabs(HazelnutGripper::Elevator::m_encoder->getAngle() - HazelnutGripper::Elevator::m_angle) < 1;
-    };
 }

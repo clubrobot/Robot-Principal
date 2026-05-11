@@ -4,14 +4,10 @@
 
 #ifndef TEAM2026_STATEMACHINE_H
 #define TEAM2026_STATEMACHINE_H
+#include <queue>
+#include <memory_resource>
 
-#include "GrafcetConfig.h"
-#include "SimpleQueue.h"
 #include "Node.h"
-
-/* The prototype shows it is a naked function - in effect this is just an
-   assembly function. */
-static void HardFault_Handler( void ) __attribute__( ( naked ) );
 
 class StateMachine {
 public:
@@ -25,8 +21,7 @@ public:
     void execute();
 protected:
     Node* startingNode = nullptr;
-    SimpleQueue<Node*, GRAFCET_MAX_QUEUE_SIZE> activeNodes = {};
-
+    std::queue<Node*> activeNodes = {};
 };
 
 #endif //TEAM2026_STATEMACHINE_H
