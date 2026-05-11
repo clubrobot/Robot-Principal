@@ -4,7 +4,6 @@
 
 #include <My_Clock.h>
 #include <PrintfSupport.h>
-#include <variables_globales.h>
 #include <Logger.h>
 
 #include "BournsACEncoder.h"
@@ -12,7 +11,9 @@
 #include "DRV8876.h"
 #include "Elevator.h"
 #include "HazelnutGripper.h"
+#include "variables_globales.h"
 #include "LiquidCrystal.h"
+#include "cerveau/Automate.h"
 #include "ihm/ihm.h"
 #include "wheeledbase/wb_thread.h"
 #include "sensors/SensorsThread.h"
@@ -64,7 +65,7 @@ check reset if vl53 are flshed !!!!!!!!!!!!!!
 
 TaskHandle_t hl_wb = nullptr;
 TaskHandle_t hl_sens = nullptr;
-TaskHandle_t  hl_robot = nullptr;
+extern TaskHandle_t hl_robot;
 //Setup de base
 
 // Fonction d'initialisation des horloges
@@ -156,7 +157,6 @@ static PID pid;
 
 
 void setup(){
-
 
     SystemClock_Config();  // Configuration de l'horloge
 
@@ -303,19 +303,20 @@ void setup(){
     //
     // if(ret_sens!=pdPASS) {Error_Handler()}
 
-    TaskHandle_t  hl_robot = nullptr;
 
     BaseType_t ret_robot = xTaskCreate(
                 cerveau::automate::play_match,
                 "Robot loop",
                 10000,
-                (void *) procedure_demarrage,
+                nullptr,
                 5,
                 &hl_robot);
 
     if(ret_robot!=pdPASS) {Error_Handler()}
 
     main_logs.log(GOOD_LEVEL,"Starting tasks\n");
+    TaskStatus_t q;
+    vTaskGetInfo(hl_robot, &q, pdTRUE, eInvalid);
     vTaskStartScheduler();//On commence FreeRTOS
     //On devrait pas être là; Uh oh
     main_logs.log(ERROR_LEVEL,"FreeRTOS crashed\n");

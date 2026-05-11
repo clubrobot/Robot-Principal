@@ -3,8 +3,6 @@
 //
 #include "StateMachine.h"
 
-#include <iostream>
-
 /**
  * @Brief Execute the grafcet
  * Uses a queue (activeNodes) to keep track of which node are enabled, if they
@@ -12,7 +10,7 @@
  */
 void StateMachine::execute() {
   if (startingNode == nullptr) {
-    std::cout << "NO STARTING STATE" << std::endl;
+    printf("NO STARTING STATE\n");
     return;
   }
   activeNodes.push(startingNode);
@@ -24,7 +22,8 @@ void StateMachine::execute() {
       currentNode->action();
       if (currentNode->children.empty())
         continue;
-      for (const auto child : currentNode->children) {
+      for (int i = 0; i < currentNode->children.size(); ++i) {
+        Node* child = currentNode->children[i];
         if (currentNode->synchronize) {
           transition &= child->enabled();
         } else {
@@ -38,14 +37,16 @@ void StateMachine::execute() {
       currentNode->active = false;
       // when the child a syncing transition, its parent need to be deactivated
       // and purge from the queue
-      if (currentNode->children.front() != nullptr &&
-          currentNode->children.front()->synchronize) {
-        for (const auto n : currentNode->children.front()->parent) {
+      if (!currentNode->children.empty() &&
+          currentNode->children[0] != nullptr &&
+          currentNode->children[0]->synchronize) {
+        for (int i = 0; i < currentNode->children[0]->parent.size(); ++i) {
+          Node* n = currentNode->children[0]->parent[i];
           n->active = false;
           // then we need to remove it from the queue if it there
           const int queueSize = activeNodes.size();
-          for (int i = 0; i < queueSize; i++) {
-            auto node = activeNodes.front();
+          for (int q = 0; q < queueSize; q++) {
+            Node* node = activeNodes.front();
             activeNodes.pop();
             if (node != n) {
               activeNodes.push(node);
@@ -53,7 +54,8 @@ void StateMachine::execute() {
           }
         }
       }
-      for (const auto child : currentNode->children) {
+      for (int i = 0; i < currentNode->children.size(); ++i) {
+        Node* child = currentNode->children[i];
         if (!child->isTransition) {
           activeNodes.push(child);
         } else if (child->enabled()) {
@@ -64,5 +66,5 @@ void StateMachine::execute() {
       activeNodes.push(currentNode);
     }
   } while (!activeNodes.empty());
-  std::cout << "state machine empty" << std::endl;
+  printf("state machine empty\n");
 }

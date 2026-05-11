@@ -4,8 +4,9 @@
 
 #ifndef TEAM2026_STATEMACHINE_H
 #define TEAM2026_STATEMACHINE_H
-#include <queue>
 
+#include "GrafcetConfig.h"
+#include "SimpleQueue.h"
 #include "Node.h"
 
 class StateMachine {
@@ -19,8 +20,8 @@ public:
     void setStartingNode(Node *startingNode) {this->startingNode = startingNode;}
     void execute();
 protected:
-    Node* startingNode;
-    std::queue<Node*> activeNodes = {};
+    Node* startingNode = nullptr;
+    SimpleQueue<Node*, GRAFCET_MAX_QUEUE_SIZE> activeNodes = {};
 
 };
 

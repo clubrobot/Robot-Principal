@@ -22,12 +22,14 @@ namespace cerveau::strategie {
 
         auto* gotoNode1 = new ActionNode();
         gotoNode1->actionFunction = [] {
-            Wheeledbase::GOTO(new Position(800, 400, 0), true, PurePursuit::FORWARD, 0, false);
+            Wheeledbase::GOTO(new Position(1250, 1600, 90), true, PurePursuit::FORWARD, 0, false);
+            stratLogger.log(INFO_LEVEL, "Goto 1 lancé\n");
         };
         transition1->addChild(gotoNode1);
 
         auto* transition2 = new Transition();
         transition2->condition = [] {
+            stratLogger.log(INFO_LEVEL, "transition evaluated");
             return static_cast<bool>(Wheeledbase::POSITION_REACHED() & 0b01);
         };
         gotoNode1->addChild(transition2);
@@ -35,6 +37,7 @@ namespace cerveau::strategie {
         auto* elevatorNode2 = new ActionNode();
         elevatorNode2->actionFunction = [] {
             HazelnutGripper::Elevator::setAngle(130);
+            stratLogger.log(INFO_LEVEL, "Elevator set angle \n");
         };
         transition2->addChild(elevatorNode2);
 
@@ -44,29 +47,47 @@ namespace cerveau::strategie {
 
         auto* gotoNode2 = new ActionNode();
         gotoNode2->actionFunction = [] {
-            Wheeledbase::GOTO(new Position(800, 200, 0), true, PurePursuit::BACKWARD, 0, false);
+            stratLogger.log(INFO_LEVEL, "Goto 2 lancé\n");
+            Wheeledbase::GOTO(new Position(1250, 1400, 0), true, PurePursuit::BACKWARD, 0, false);
         };
         transition3->addChild(gotoNode2);
 
         auto* elevatorNode3 = new ActionNode();
-        elevatorNode2->actionFunction = [] {
+        elevatorNode3->actionFunction = [] {
+            stratLogger.log(INFO_LEVEL, "Elevator set angle \n");
             HazelnutGripper::Elevator::setAngle(62);
         };
         transition3->addChild(elevatorNode3);
 
         auto* transition4 = new Transition();
         transition4->condition = [] {
+            stratLogger.log(INFO_LEVEL, "transition 4 evaluated");
             return static_cast<bool>(Wheeledbase::POSITION_REACHED() & 0b11) && elevatorInPos();
         };
         transition4->synchronize = true;
         gotoNode2->addChild(transition4);
         elevatorNode3->addChild(transition4);
 
+        auto* returnNode = new ActionNode();
+        returnNode->actionFunction = [] {
+            stratLogger.log(INFO_LEVEL, "Goto return lancé\n");
+            Wheeledbase::GOTO(&start, true, PurePursuit::FORWARD, 0, false);
+        };
+        transition4->addChild(returnNode);
+
+        auto* transition5 = new Transition();
+        transition5->condition = [] {
+            stratLogger.log(INFO_LEVEL, "transition 5 evaluated");
+            return static_cast<bool>(Wheeledbase::POSITION_REACHED() & 0b11);
+        };
+        returnNode->addChild(transition5);
+
         auto* endNode = new ActionNode();
         endNode->actionFunction = [] {
+            stratLogger.log(INFO_LEVEL, "Stratégie terminée\n");
             printf("Stratégie terminée !\n");
         };
-        transition4->addChild(endNode);
+        transition5->addChild(endNode);
     }
 
     void generateYellowStrat() {

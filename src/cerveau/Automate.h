@@ -8,7 +8,7 @@
 #include "Strategie.h"
 
 namespace cerveau::automate {
-
+    inline auto automateLogger = Logger("AUTOMATE");
     enum s_Team {
         BLEU,
         JAUNE,

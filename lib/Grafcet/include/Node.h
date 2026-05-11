@@ -5,27 +5,32 @@
 #ifndef TEAM2026_NODE_H
 #define TEAM2026_NODE_H
 
-#include <vector>
-#include <memory_resource>
+#include "GrafcetConfig.h"
+#include "SimpleArray.h"
 
 class StateMachine;
 
 class Node {
 public:
-    explicit Node(const std::pmr::vector<Node*> &parent = {}, const std::pmr::vector<Node*> &child = {}) : parent(parent), children(child) {}
+    Node() = default;
     virtual ~Node() = default;
     virtual bool enabled() = 0;
     virtual void action() = 0;
+
     void addChild(Node *child) {
-        this->children.push_back(child);
+        if (!children.push_back(child)) {
+            return;
+        }
         child->parent.push_back(this);
     }
+
     bool isTransition = false;
     bool synchronize = false;
     bool active = false;
+
 protected:
-    std::pmr::vector<Node*> parent = {};
-    std::pmr::vector<Node*> children = {};
+    SimpleArray<Node*, GRAFCET_MAX_NODE_PARENTS> parent;
+    SimpleArray<Node*, GRAFCET_MAX_NODE_CHILDREN> children;
 
     friend StateMachine;
 };

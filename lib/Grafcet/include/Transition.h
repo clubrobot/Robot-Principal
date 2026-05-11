@@ -4,6 +4,8 @@
 
 #ifndef TEAM2026_TRANSITION_H
 #define TEAM2026_TRANSITION_H
+#include <functional>
+
 #include "Node.h"
 
 class Transition : public Node {
@@ -14,14 +16,15 @@ public:
     void action() override {}
     bool enabled() override {
         bool parentReady = synchronize;
-        for (const auto node : this->parent) {
+        for (int i = 0; i < parent.size(); ++i) {
+            Node* node = parent[i];
             if (synchronize) parentReady &= node->enabled();
             else parentReady |= node->enabled();
         }
         if (condition == nullptr) return false;
         return condition() && parentReady;
     }
-    bool (*condition)() = nullptr;
+    std::function<bool()> condition = {};
 };
 
 #endif //TEAM2026_TRANSITION_H

@@ -4,6 +4,8 @@
 
 #ifndef TEAM2026_ACTIONNODE_H
 #define TEAM2026_ACTIONNODE_H
+#include <functional>
+
 #include "Node.h"
 
 class ActionNode : public Node {
@@ -15,7 +17,7 @@ public:
             active = true;
         }
     }
-    void (*actionFunction)() = nullptr;
+    std::function<void()> actionFunction = nullptr;
 };
 
 #endif //TEAM2026_ACTIONNODE_H
