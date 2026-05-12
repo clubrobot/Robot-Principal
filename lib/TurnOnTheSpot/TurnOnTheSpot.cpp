@@ -25,10 +25,10 @@ void TurnOnTheSpot::computeVelSetpoints(float timestep)
 	const float angVelSetpoint = saturate(angVelKp * angPosSetpoint, -angVelMax, angVelMax);
 	setVelSetpoints(linVelSetpoint, angVelSetpoint);
 	//setVelSetpoints(0, angVelSetpoint);
-	printf("________________");
-	printf("%f\n", angPosSetpoint);
-	printf(" %f\n", angVelSetpoint);
-	printf("%f\n", linVelSetpoint);
+//	printf("________________");
+//	printf("%f\n", angPosSetpoint);
+//	printf(" %f\n", angVelSetpoint);
+//	printf("%f\n", linVelSetpoint);
 }
 
 bool TurnOnTheSpot::getPositionReached()

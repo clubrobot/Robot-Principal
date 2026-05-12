@@ -52,7 +52,7 @@ namespace cerveau::strategie {
         auto* gotoNode2 = new ActionNode();
         gotoNode2->actionFunction = [] {
             stratLogger.log(INFO_LEVEL, "Goto 2 lancé\n");
-            Wheeledbase::GOTO(new Position(1250, 1400, 0), true, PurePursuit::BACKWARD, 0, false);
+            Wheeledbase::GOTO(new Position(1250, 1400, PI/2), true, PurePursuit::BACKWARD, PI/2, false);
         };
         transition3->addChild(gotoNode2);
 
@@ -75,7 +75,7 @@ namespace cerveau::strategie {
         auto* returnNode = new ActionNode();
         returnNode->actionFunction = [] {
             stratLogger.log(INFO_LEVEL, "Goto return lancé\n");
-            Wheeledbase::GOTO(&start, true, PurePursuit::FORWARD, 0, false);
+            Wheeledbase::GOTO(&start, true, PurePursuit::FORWARD, PI/2, false);
         };
         transition4->addChild(returnNode);
 
