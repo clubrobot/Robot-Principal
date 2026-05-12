@@ -7,6 +7,11 @@
 namespace HazelnutGripper
 {
 
+    AbstractMotor* Elevator::m_motor = nullptr;
+    AbstractAbsoluteEncoder* Elevator::m_encoder = nullptr;
+    float Elevator::m_angle = 0.0f;
+    PID* Elevator::m_pid = nullptr;
+
     void Elevator::init(AbstractMotor* motor, AbstractAbsoluteEncoder* encoder)
     {
         m_motor = motor;
@@ -18,7 +23,7 @@ namespace HazelnutGripper
     }
 
 
-    [[noreturn]] void Elevator::task(void *pvParameters)
+    void Elevator::task(void *pvParameters)
     {
         // Initialisation du temps pour le calcul du timestep
         uint32_t lastTime = millis();
@@ -47,7 +52,7 @@ namespace HazelnutGripper
             // Mise à jour du temps pour la prochaine itération
             lastTime = currentTime;
 
-            vTaskDelay(pdMS_TO_TICKS(40));
+            vTaskDelay(pdMS_TO_TICKS(10));
         }
     }
 }

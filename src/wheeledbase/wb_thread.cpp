@@ -194,6 +194,8 @@ void wb_setup()
     velocityControl.setPID(linVelPID, angVelPID);
     velocityControl.disable();
 
+    velocityControl.setTimestep(10e-3);
+
     // const float maxLinVel = min(leftWheel.getMaxVelocity(), rightWheel.getMaxVelocity());
     //const float maxAngVel = min(leftWheel.getMaxVelocity(), rightWheel.getMaxVelocity()) * 2 / VELOCITYCONTROL_AXLETRACK_VALUE;
 
@@ -213,12 +215,21 @@ void wb_setup()
     //purePursuit.load(PUREPURSUIT_ADDRESS);
 }
 
+#define SMOOTHING_FACTOR 0.2
+
+float smoothLinVel = 0;
+float smoothAngVel = 0;
+
 void wb_loop(void *pvParameters){
 for(;;) {
     // Update odometry
     if (odometry.update()){
+
+        smoothLinVel = SMOOTHING_FACTOR * odometry.getLinVel() + (1 - SMOOTHING_FACTOR) * smoothLinVel;
+        smoothAngVel = SMOOTHING_FACTOR * odometry.getAngVel() + (1 - SMOOTHING_FACTOR) * smoothAngVel;
+
         positionControl.setPosInput(*odometry.getPosition());
-        velocityControl.setInputs(odometry.getLinVel(), odometry.getAngVel());
+        velocityControl.setInputs(smoothLinVel, smoothAngVel);
     }
     // Compute trajectory
     if (positionControl.update())
@@ -234,5 +245,9 @@ for(;;) {
 #else
         velocityControl.update();
 #endif // ENABLE_VELOCITYCONTROLLER_LOGS
+
+    vTaskDelay(pdMS_TO_TICKS(1));
+
+    //printf("%s:%lu:%d\n", "nom_variable", millis(), millis()%10000);
 }
 }
