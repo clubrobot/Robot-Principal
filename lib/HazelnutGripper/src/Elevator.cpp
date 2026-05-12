@@ -7,11 +7,6 @@
 namespace HazelnutGripper
 {
 
-    AbstractMotor* Elevator::m_motor = nullptr;
-    AbstractAbsoluteEncoder* Elevator::m_encoder = nullptr;
-    float Elevator::m_angle = 0.0f;
-    PID* Elevator::m_pid = nullptr;
-
     void Elevator::init(AbstractMotor* motor, AbstractAbsoluteEncoder* encoder)
     {
         m_motor = motor;
