@@ -1,0 +1,7 @@
+<map id="HazelnutGripper::Elevator" name="HazelnutGripper::Elevator">
+<area shape="rect" id="Node000001" title="Classe statique gérant l&#39;asservissement en position de l&#39;ascenseur." alt="" coords="72,109,239,135"/>
+<area shape="rect" id="Node000002" href="$d1/de1/classHazelnutGripper_1_1AbstractAbsoluteEncoder.html" title="Interface pour un encodeur de position absolue." alt="" coords="5,5,175,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,58,126,83,146,107,142,110,122,87,105,61"/>
+<area shape="rect" id="Node000003" href="$d8/da9/classPID.html" title="Classe d&#39;asservissement." alt="" coords="199,13,242,38"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="212,54,193,87,171,110,167,107,189,83,208,51"/>
+</map>

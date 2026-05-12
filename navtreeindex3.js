@@ -1,5 +1,8 @@
 var NAVTREEINDEX3 =
 {
+"dd/d07/Automate_8h_source.html":[12,0,3,0,0],
+"dd/d08/group__xEventGroupSetBits.html":[9,8,5],
+"dd/d30/structos__mutex__def.html":[11,0,43],
 "dd/d30/structos__mutex__def.html#a6364fe3b28142d23aaa03343c627957f":[11,0,43,0],
 "dd/d3a/portable_2GCC_2ARM__CM7__MPU_2r0p1_2portmacro_8h_source.html":[12,0,2,26,1,2,10,0,0],
 "dd/d3c/group__xTaskCreate.html":[9,68],
@@ -50,12 +53,12 @@ var NAVTREEINDEX3 =
 "dd/df9/trcPrint_8h.html":[12,0,2,28,1,20],
 "dd/df9/trcPrint_8h_source.html":[12,0,2,28,1,20],
 "de/d03/platform_8h_source.html":[12,0,2,21,0,1,0,0],
-"de/d09/classgeogebra_1_1Geogebra_1_1Numeric.html":[10,0,1,1,4],
+"de/d09/classgeogebra_1_1Geogebra_1_1Numeric.html":[10,0,0,1,4],
 "de/d09/classgeogebra_1_1Geogebra_1_1Numeric.html":[11,0,0,1,4],
 "de/d0a/trcUtility_8h_source.html":[12,0,2,28,1,35],
 "de/d0f/FreeRTOS_2Source_2include_2mpu__prototypes_8h_source.html":[12,0,2,26,2,0,0,0,8],
 "de/d22/classBasicMoveStrategy.html":[11,0,8],
-"de/d22/classBasicMoveStrategy.html#a0b2e2a5c1b9f91bc52cdb581a71e650a":[11,0,8,2],
+"de/d22/classBasicMoveStrategy.html#a03d973056940db2d5408ed7a91c52d90":[11,0,8,2],
 "de/d22/classBasicMoveStrategy.html#a52b466ba4ef08735d59c2c2eb8203d5e":[11,0,8,1],
 "de/d22/classBasicMoveStrategy.html#abcc7f77b6fa786fa202352c4efa3b960":[11,0,8,0],
 "de/d2a/group__ulTaskNotifyValueClear.html":[9,99],
@@ -246,8 +249,5 @@ var NAVTREEINDEX3 =
 "dir_03d39abec2c705d93919193d4cf4fbff.html":[12,0,2,28,0],
 "dir_054e16dd1ba5af0c5071a7d31c929cc2.html":[12,0,3,5],
 "dir_103998d7f9c5d14615117f41e630626c.html":[12,0,2,0],
-"dir_13246bedb9ad21c244e55e17de4a2717.html":[12,0,2,26,0],
-"dir_1ea7e2220d3792a9ee38cf153a582c69.html":[12,0,2,18],
-"dir_1ec249a785169281c40abd7505ba3ad6.html":[12,0,2,26,0,0],
-"dir_21c80b25f428fe9de0c127977b2f9ac3.html":[12,0,2,6]
+"dir_13246bedb9ad21c244e55e17de4a2717.html":[12,0,2,26,0]
 };

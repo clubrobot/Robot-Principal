@@ -32,6 +32,7 @@ var hierarchy =
     [ "ObjectDetector::Detector", "d1/d34/structObjectDetector_1_1Detector.html", null ],
     [ "DynamixelClass", "df/dc5/classDynamixelClass.html", null ],
     [ "Elevator", "d9/db0/classElevator.html", null ],
+    [ "HazelnutGripper::Elevator", "d2/df0/classHazelnutGripper_1_1Elevator.html", null ],
     [ "EndStop", "df/d5b/classEndStop.html", null ],
     [ "EventGroupDef_t", "d7/d15/structEventGroupDef__t.html", null ],
     [ "MyLibrary::Example", "d7/d8e/classMyLibrary_1_1Example.html", [
