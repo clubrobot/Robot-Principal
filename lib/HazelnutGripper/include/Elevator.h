@@ -47,6 +47,7 @@ namespace HazelnutGripper
         inline PID* m_pid = nullptr;    ///< Correcteur PID utilisé pour le calcul de la vitesse.
         constexpr float m_maxAngle = 50.625;
         constexpr float m_minAngle = 120.9375;
+        constexpr float m_maxRange = m_minAngle - m_maxAngle;
 
 
         /**

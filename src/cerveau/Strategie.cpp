@@ -12,7 +12,8 @@ namespace cerveau::strategie {
         blueStartingNode = new ActionNode();
 
         blueStartingNode->actionFunction = [] {
-          HazelnutGripper::Elevator::setAngle(62);
+            HazelnutGripper::Elevator::setAngle(HazelnutGripper::Elevator::m_maxRange);
+            stratLogger.log(INFO_LEVEL, "Stratégie bleue démarrée\n");
         };
         strat->setStartingNode(blueStartingNode);
 
@@ -24,7 +25,7 @@ namespace cerveau::strategie {
 
         auto* gotoNode1 = new ActionNode();
         gotoNode1->actionFunction = [] {
-            Wheeledbase::GOTO(new Position(1250, 1600, 90), true, PurePursuit::FORWARD, 0, false);
+            Wheeledbase::GOTO(new Position(1250, 1600, PI/2), true, PurePursuit::FORWARD, PI/2, false);
             stratLogger.log(INFO_LEVEL, "Goto 1 lancé\n");
         };
         transition1->addChild(gotoNode1);
@@ -38,7 +39,7 @@ namespace cerveau::strategie {
 
         auto* elevatorNode2 = new ActionNode();
         elevatorNode2->actionFunction = [] {
-            HazelnutGripper::Elevator::setAngle(130);
+            HazelnutGripper::Elevator::setAngle(0);
             stratLogger.log(INFO_LEVEL, "Elevator set angle \n");
         };
         transition2->addChild(elevatorNode2);
@@ -59,7 +60,7 @@ namespace cerveau::strategie {
         auto* elevatorNode3 = new ActionNode();
         elevatorNode3->actionFunction = [] {
             stratLogger.log(INFO_LEVEL, "Elevator set angle \n");
-            HazelnutGripper::Elevator::setAngle(62);
+            HazelnutGripper::Elevator::setAngle(HazelnutGripper::Elevator::m_maxRange);
         };
         transition3->addChild(elevatorNode3);
 
@@ -88,7 +89,7 @@ namespace cerveau::strategie {
 
         auto* endNode = new ActionNode();
         endNode->actionFunction = [] {
-            stratLogger.log(INFO_LEVEL, "Stratégie terminée\n");
+            stratLogger.log(WARNING_LEVEL, "Stratégie terminée\n");
             printf("Stratégie terminée !\n");
         };
         transition5->addChild(endNode);

@@ -12,7 +12,7 @@
 #include "Odometry.h"
 
 #ifndef ELEVATOR_IN_POS
-#define ELEVATOR_IN_POS() (HazelnutGripper::Elevator::m_currentAngle - HazelnutGripper::Elevator::m_angle < 1)
+#define ELEVATOR_IN_POS() (HazelnutGripper::Elevator::m_currentAngle - HazelnutGripper::Elevator::m_angle < 5)
 #endif
 
 namespace cerveau {

@@ -43,7 +43,7 @@ namespace HazelnutGripper
                 command = m_pid->compute(m_angle, m_currentAngle, timestep);
             }
 
-            //m_motor->setVelocity(command);
+            m_motor->setVelocity(command);
 
             // Mise à jour du temps pour la prochaine itération
             lastTime = currentTime;
