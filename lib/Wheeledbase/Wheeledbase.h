@@ -180,13 +180,13 @@ namespace  Wheeledbase {
 
     void PUREPURSUIT(const Position** waypoints, uint16_t nb_waypoints, char dir, float finalAngle);
 
-    void GOTO(Position* pos, bool alignFirst=true, char dir=PurePursuit::NONE, float finalAngle=MAXFLOAT,bool bloquant=true);
+    void GOTO(Position* pos, bool alignFirst=true, int8_t dir=PurePursuit::NONE, float finalAngle=MAXFLOAT,bool bloquant=true);
 
-    void GOTO_WAYPOINTS(bool alignFirst=true, char dir=PurePursuit::NONE, int nb_waypoints=1, ...);
+    void GOTO_WAYPOINTS(bool alignFirst=true, int8_t dir=PurePursuit::NONE, int nb_waypoints=1, ...);
 
-    void GOTO_WAYPOINTS_ARRAY(Position* positions[], bool alignFirst=true, char dir=PurePursuit::NONE, int nb_waypoints=1);
+    void GOTO_WAYPOINTS_ARRAY(Position* positions[], bool alignFirst=true, int8_t dir=PurePursuit::NONE, int nb_waypoints=1);
 
-    void GOTO_FUNCT(Position* pos, void* duringMovingFunct, void* approachFunct, bool alignFirst=true, char dir=PurePursuit::NONE, float finalAngle=MAXFLOAT);
+    void GOTO_FUNCT(Position* pos, void* duringMovingFunct, void* approachFunct, bool alignFirst=true, int8_t dir=PurePursuit::NONE, float finalAngle=MAXFLOAT);
 
     uint8_t POSITION_REACHED();
 

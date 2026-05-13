@@ -150,7 +150,7 @@ namespace cerveau::strategie {
         auto* n5 = new ActionNode();
         n5->actionFunction = [] {
             stratLogger.log(INFO_LEVEL, "Return to base\n");
-            Wheeledbase::GOTO(&start, false, PurePursuit::BACKWARD, 0, false);
+            Wheeledbase::GOTO(&start, false, PurePursuit::BACKWARD, MAXFLOAT, false);
         };
         t4->addChild(n5);
 

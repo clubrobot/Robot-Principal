@@ -233,7 +233,7 @@ void Wheeledbase::PUREPURSUIT(const Position** waypoints, uint16_t nb_waypoints,
     Wheeledbase::START_PUREPURSUIT(dir, finalAngle);
 }
 
-void Wheeledbase::GOTO(Position* pos, bool alignFirst, char dir, float finalAngle,bool bloquant) {
+void Wheeledbase::GOTO(Position* pos, bool alignFirst, int8_t dir, float finalAngle,bool bloquant) {
     float defaultMaxSpeed = Wheeledbase::GET_PARAMETER_VALUE(POSITIONCONTROL_LINVELMAX_ID);
     positionControl.setMoveStrategy(purePursuit);
 
@@ -307,7 +307,7 @@ void Wheeledbase::GOTO(Position* pos, bool alignFirst, char dir, float finalAngl
     }
 }
 
-void Wheeledbase::GOTO_WAYPOINTS(bool alignFirst, char dir, int nb_waypoints, ...){
+void Wheeledbase::GOTO_WAYPOINTS(bool alignFirst, int8_t dir, int nb_waypoints, ...){
     /////INIT VALEURS
 
     const Position **posTab = (const Position**) malloc(sizeof(Position*) * nb_waypoints);
@@ -379,7 +379,7 @@ void Wheeledbase::GOTO_WAYPOINTS(bool alignFirst, char dir, int nb_waypoints, ..
     free(posTab);
 }
 
-void Wheeledbase::GOTO_WAYPOINTS_ARRAY(Position* positions[], bool alignFirst, char dir, int nb_waypoints){
+void Wheeledbase::GOTO_WAYPOINTS_ARRAY(Position* positions[], bool alignFirst, int8_t dir, int nb_waypoints){
     /////INIT VALEURS
 
     const Position **posTab = (const Position**) malloc(sizeof(Position*) * nb_waypoints);
@@ -449,7 +449,7 @@ void Wheeledbase::GOTO_WAYPOINTS_ARRAY(Position* positions[], bool alignFirst, c
     free(posTab);
 }
 
-void Wheeledbase::GOTO_FUNCT(Position* pos, void* duringMovingFunct, void* approachFunct, bool alignFirst, char dir, float finalAngle){
+void Wheeledbase::GOTO_FUNCT(Position* pos, void* duringMovingFunct, void* approachFunct, bool alignFirst, int8_t dir, float finalAngle){
     auto *first_funct = (void (*)()) duringMovingFunct;
     auto *second_funct = (void (*)()) approachFunct;
     
