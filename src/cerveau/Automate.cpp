@@ -10,7 +10,7 @@
 
 void procedure_demarrage(){
 
-    cerveau::automate::init(cerveau::automate::BLEU);
+    cerveau::automate::init(cerveau::automate::JAUNE);
     cerveau::automate::automateLogger.log(INFO_LEVEL,"Le robot est armé!\n");
 
     //Detect tirette

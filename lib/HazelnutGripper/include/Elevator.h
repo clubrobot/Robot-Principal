@@ -45,7 +45,7 @@ namespace HazelnutGripper
         inline float m_currentAngle = 0.0f;
         inline float m_angle = 0.0f; ///< Consigne de position angulaire (Setpoint) en degrés.
         inline PID* m_pid = nullptr;    ///< Correcteur PID utilisé pour le calcul de la vitesse.
-        constexpr float m_maxAngle = 50.625;
+        constexpr float m_maxAngle = 53.4375;
         constexpr float m_minAngle = 120.9375;
         constexpr float m_maxRange = m_minAngle - m_maxAngle;
 
@@ -64,6 +64,8 @@ namespace HazelnutGripper
          * @param angle Position souhaitée en degrés (deg).
          */
         inline void setAngle(float angle) { m_angle = m_minAngle - angle; }
+
+        inline float getAngle() {return m_minAngle - m_angle;}
 
         /**
          * @brief Tâche de calcul de l'asservissement (Boucle de contrôle).

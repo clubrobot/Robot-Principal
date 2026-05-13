@@ -235,6 +235,7 @@ void Wheeledbase::PUREPURSUIT(const Position** waypoints, uint16_t nb_waypoints,
 
 void Wheeledbase::GOTO(Position* pos, bool alignFirst, char dir, float finalAngle,bool bloquant) {
     float defaultMaxSpeed = Wheeledbase::GET_PARAMETER_VALUE(POSITIONCONTROL_LINVELMAX_ID);
+    positionControl.setMoveStrategy(purePursuit);
 
     const Position *myPos = Wheeledbase::GET_POSITION();
     if (dir==PurePursuit::NONE) {
@@ -299,7 +300,7 @@ void Wheeledbase::GOTO(Position* pos, bool alignFirst, char dir, float finalAngl
 
     if(finalAngle!=MAXFLOAT) {
 
-        Wheeledbase::START_TURNONTHESPOT(0, finalAngle);
+        Wheeledbase::START_TURNONTHESPOT(1, finalAngle);
         while(!(Wheeledbase::POSITION_REACHED() & 0b01)) {
             //Todo: TimeOUT
         }

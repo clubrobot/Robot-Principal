@@ -34,7 +34,6 @@ namespace HazelnutGripper
 
             // Lecture de la position actuelle via l'encodeur
              m_currentAngle = m_encoder->getAngle();
-            printf("Current Angle: %f\n", m_currentAngle);
 
             // Calcul de la commande via le PID
             float command = 0.0f;

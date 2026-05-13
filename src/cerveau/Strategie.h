@@ -12,7 +12,7 @@
 #include "Odometry.h"
 
 #ifndef ELEVATOR_IN_POS
-#define ELEVATOR_IN_POS() (HazelnutGripper::Elevator::m_currentAngle - HazelnutGripper::Elevator::m_angle < 5)
+#define ELEVATOR_IN_POS() (fabs(HazelnutGripper::Elevator::m_currentAngle - HazelnutGripper::Elevator::m_angle) < 5)
 #endif
 
 namespace cerveau {
@@ -29,8 +29,9 @@ namespace cerveau::strategie {
 
     //checkers
 
+
     inline Position start = {};
-    inline const Position blueStart = {1500, 300, PI/2};
+    inline const Position blueStart = {1500, 1200, PI/2};
     inline const Position yellowStart = {0, 0, 0};
 }
 
