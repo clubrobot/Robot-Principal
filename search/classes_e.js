@@ -9,7 +9,8 @@ var searchData=
   ['sensorhandle_6',['SensorHandle',['../de/d73/structSensorArray_1_1SensorHandle.html',1,'SensorArray']]],
   ['shiftregister_7',['ShiftRegister',['../de/ded/classShiftRegister.html',1,'']]],
   ['sphere_8',['Sphere',['../de/d9d/classSphere.html',1,'']]],
-  ['stepbystepmotor_9',['StepByStepMotor',['../d9/dd4/classStepByStepMotor.html',1,'']]],
-  ['streambufferdef_5ft_10',['StreamBufferDef_t',['../d4/d2e/structStreamBufferDef__t.html',1,'']]],
-  ['subclassexample_11',['SubclassExample',['../db/d5b/classMyLibrary_1_1SubclassExample.html',1,'MyLibrary']]]
+  ['statemachine_9',['StateMachine',['../d0/dc5/classStateMachine.html',1,'']]],
+  ['stepbystepmotor_10',['StepByStepMotor',['../d9/dd4/classStepByStepMotor.html',1,'']]],
+  ['streambufferdef_5ft_11',['StreamBufferDef_t',['../d4/d2e/structStreamBufferDef__t.html',1,'']]],
+  ['subclassexample_12',['SubclassExample',['../db/d5b/classMyLibrary_1_1SubclassExample.html',1,'MyLibrary']]]
 ];

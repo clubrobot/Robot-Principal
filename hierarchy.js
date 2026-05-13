@@ -28,11 +28,9 @@ var hierarchy =
     [ "corCoRoutineControlBlock", "da/d35/structcorCoRoutineControlBlock.html", null ],
     [ "CRC16", "db/d6d/classCRC16.html", null ],
     [ "Cube", "df/dd5/classCube.html", null ],
-    [ "Decisions", "d9/da9/classDecisions.html", null ],
     [ "ObjectDetector::Detector", "d1/d34/structObjectDetector_1_1Detector.html", null ],
     [ "DynamixelClass", "df/dc5/classDynamixelClass.html", null ],
     [ "Elevator", "d9/db0/classElevator.html", null ],
-    [ "HazelnutGripper::Elevator", "d2/df0/classHazelnutGripper_1_1Elevator.html", null ],
     [ "EndStop", "df/d5b/classEndStop.html", null ],
     [ "EventGroupDef_t", "d7/d15/structEventGroupDef__t.html", null ],
     [ "MyLibrary::Example", "d7/d8e/classMyLibrary_1_1Example.html", [
@@ -49,7 +47,6 @@ var hierarchy =
     [ "HazelnutGripper::Gripper", "d4/dcb/classHazelnutGripper_1_1Gripper.html", null ],
     [ "HazelnutGripper::GripperFinger", "d6/d59/classHazelnutGripper_1_1GripperFinger.html", null ],
     [ "HeapRegion", "d1/dfa/structHeapRegion.html", null ],
-    [ "limites_actionneurs", "de/d35/structlimites__actionneurs.html", null ],
     [ "list", null, [
       [ "geogebra.Geogebra.PolyLine", "d3/dca/classgeogebra_1_1Geogebra_1_1PolyLine.html", null ],
       [ "geogebra.Geogebra.Polygon", "dc/d3f/classgeogebra_1_1Geogebra_1_1Polygon.html", null ]
@@ -61,6 +58,10 @@ var hierarchy =
     [ "MPU_SETTINGS", "d3/dd3/structMPU__SETTINGS.html", null ],
     [ "MPURegionSettings", "da/d6a/structMPURegionSettings.html", null ],
     [ "Musique", "d6/da1/classMusique.html", null ],
+    [ "Node", "df/dd0/classNode.html", [
+      [ "ActionNode", "d0/dfd/classActionNode.html", null ],
+      [ "Transition", "de/dfc/classTransition.html", null ]
+    ] ],
     [ "NonCopyable", "dc/d3c/classNonCopyable.html", [
       [ "Codewheel", "dd/df3/classCodewheel.html", null ]
     ] ],
@@ -90,8 +91,7 @@ var hierarchy =
       ] ],
       [ "FullSpeedServo", "d9/df7/classFullSpeedServo.html", null ],
       [ "Odometry", "d6/dc3/classOdometry.html", null ],
-      [ "PositionController", "d2/d64/classPositionController.html", null ],
-      [ "VelocityControllerLogs", "d2/d94/classVelocityControllerLogs.html", null ]
+      [ "PositionController", "d2/d64/classPositionController.html", null ]
     ] ],
     [ "PID", "d8/da9/classPID.html", null ],
     [ "Point", "d8/d43/structPoint.html", null ],
@@ -106,24 +106,9 @@ var hierarchy =
     [ "SensorArray::SensorHandle", "de/d73/structSensorArray_1_1SensorHandle.html", null ],
     [ "ShiftRegister", "de/ded/classShiftRegister.html", null ],
     [ "Sphere", "de/d9d/classSphere.html", null ],
+    [ "StateMachine", "d0/dc5/classStateMachine.html", null ],
     [ "StepByStepMotor", "d9/dd4/classStepByStepMotor.html", null ],
     [ "StreamBufferDef_t", "d4/d2e/structStreamBufferDef__t.html", null ],
-    [ "Tache", "d0/d85/classTache.html", [
-      [ "TacheBanderole", "dd/ddc/classTacheBanderole.html", null ],
-      [ "TacheDescendreReculer", "d9/d1e/classTacheDescendreReculer.html", null ],
-      [ "TacheEmpiler", "d0/dda/classTacheEmpiler.html", null ],
-      [ "TacheExe", "de/d8f/classTacheExe.html", null ],
-      [ "TacheGoto", "dd/d5e/classTacheGoto.html", [
-        [ "TacheGotoWithFunct", "db/dc7/classTacheGotoWithFunct.html", null ]
-      ] ],
-      [ "TacheGotoWaypoints", "dc/dd3/classTacheGotoWaypoints.html", null ],
-      [ "TacheMoveDelta", "d3/de7/classTacheMoveDelta.html", null ],
-      [ "TacheSTOP", "d1/d5c/classTacheSTOP.html", null ],
-      [ "TacheSwitch", "d0/db3/classTacheSwitch.html", null ],
-      [ "TacheTransport", "d8/d9f/classTacheTransport.html", null ],
-      [ "TacheTurnOnTheSpot", "d8/d8a/classTacheTurnOnTheSpot.html", null ],
-      [ "TacheWait", "d3/d62/classTacheWait.html", null ]
-    ] ],
     [ "Teleplot", "d8/d4b/classTeleplot.html", null ],
     [ "TimerCallback_t", "d4/d4a/structTimerCallback__t.html", null ],
     [ "TraceHeaderBuffer", "d5/dd5/structTraceHeaderBuffer.html", null ],

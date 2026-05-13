@@ -4,7 +4,8 @@ var searchData=
   ['navigation_1',['Page Navigation',['../d9/dd4/md_doc_2doxygen-awesome-css_2docs_2extensions.html#extension-page-navigation',1,'']]],
   ['nextmove_2',['Nextmove',['../d8/d27/classAX12.html#ab390ad86381f9dc2cbc944354ba11bdf',1,'AX12']]],
   ['nextmovespeed_3',['NextmoveSpeed',['../d8/d27/classAX12.html#ad9f6efa05581f7e30f9f090a502c94fb',1,'AX12']]],
-  ['noncopyable_4',['NonCopyable',['../dc/d3c/classNonCopyable.html',1,'']]],
-  ['npm_20xpm_20dependency_5',['npm/xpm dependency',['..//github/workspace/doc/doxygen-awesome-css/README.md#autotoc_md38',1,'']]],
-  ['numeric_6',['Numeric',['../de/d09/classgeogebra_1_1Geogebra_1_1Numeric.html',1,'geogebra::Geogebra']]]
+  ['node_4',['Node',['../df/dd0/classNode.html',1,'']]],
+  ['noncopyable_5',['NonCopyable',['../dc/d3c/classNonCopyable.html',1,'']]],
+  ['npm_20xpm_20dependency_6',['npm/xpm dependency',['..//github/workspace/doc/doxygen-awesome-css/README.md#autotoc_md38',1,'']]],
+  ['numeric_7',['Numeric',['../de/d09/classgeogebra_1_1Geogebra_1_1Numeric.html',1,'geogebra::Geogebra']]]
 ];
