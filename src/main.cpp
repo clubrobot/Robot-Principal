@@ -4,7 +4,6 @@
 
 #include <My_Clock.h>
 #include <PrintfSupport.h>
-#include <variables_globales.h>
 #include <Logger.h>
 
 #include "BournsACEncoder.h"
@@ -12,13 +11,13 @@
 #include "DRV8876.h"
 #include "Elevator.h"
 #include "HazelnutGripper.h"
+#include "variables_globales.h"
 #include "LiquidCrystal.h"
+#include "cerveau/Automate.h"
 #include "ihm/ihm.h"
 #include "wheeledbase/wb_thread.h"
 #include "sensors/SensorsThread.h"
-#include "decisions/Automate.h"
 
-#include "team2025/ListeActionneurs.h"
 
 
 LiquidCrystal lcd(PG15, PB4, PB8, PB5, PB9, PF3);
@@ -40,18 +39,7 @@ LiquidCrystal lcd(PG15, PB4, PB8, PB5, PB9, PF3);
 
 Logger main_logs = Logger("MAIN");
 using namespace ihm;
-void procedure_demarrage(){
 
-    Automate::init(my_team);
-    main_logs.log(WARNING_LEVEL,"Le robot est armé!\n");
-
-    //Detect tirette
-    while(etat_tirette()==1){}
-    main_logs.log(WARNING_LEVEL,"tirette mise !\n");
-    while (etat_tirette()==0){}
-    main_logs.log(WARNING_LEVEL,"tirette enlevée !\n");
-
-}
 
 
 /**
@@ -66,8 +54,10 @@ check reset if vl53 are flshed !!!!!!!!!!!!!!
 
 TaskHandle_t hl_wb = nullptr;
 TaskHandle_t hl_sens = nullptr;
-TaskHandle_t  hl_robot = nullptr;
+extern TaskHandle_t hl_robot;
 //Setup de base
+
+
 
 // Fonction d'initialisation des horloges
 void SystemClock_Config(void)
@@ -155,10 +145,7 @@ static DRV8876 drv8876(PA9,PC8);
 static DCMotor motor;
 static PID pid;
 
-
-
 void setup(){
-
 
     SystemClock_Config();  // Configuration de l'horloge
 
@@ -224,8 +211,6 @@ void setup(){
 
   TaskHandle_t  gripper_handle = nullptr;
 
-  /*
-
   BaseType_t ret_gripper = xTaskCreate(
               &HazelnutGripper::Elevator::task,
               "Elevator",
@@ -233,7 +218,7 @@ void setup(){
               nullptr,
               5,//Prio max
               &gripper_handle );
-  if(ret_gripper!=pdPASS) {Error_Handler()}*/
+  if(ret_gripper!=pdPASS) {Error_Handler()}
 
 
 /*
@@ -307,19 +292,20 @@ void setup(){
     //
     // if(ret_sens!=pdPASS) {Error_Handler()}
 
-    TaskHandle_t  hl_robot = nullptr;
 
     BaseType_t ret_robot = xTaskCreate(
-                Automate::play_match,
+                cerveau::automate::play_match,
                 "Robot loop",
                 10000,
-                (void *) procedure_demarrage,
+                nullptr,
                 5,
                 &hl_robot);
 
     if(ret_robot!=pdPASS) {Error_Handler()}
 
     main_logs.log(GOOD_LEVEL,"Starting tasks\n");
+    TaskStatus_t q;
+    vTaskGetInfo(hl_robot, &q, pdTRUE, eInvalid);
     vTaskStartScheduler();//On commence FreeRTOS
     //On devrait pas être là; Uh oh
     main_logs.log(ERROR_LEVEL,"FreeRTOS crashed\n");

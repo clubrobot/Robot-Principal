@@ -20,6 +20,7 @@
 #define INCLUDE_xTaskGetHandle 1
 #define configUSE_TRACE_FACILITY 1
 #define configUSE_TASK_NOTIFICATIONS 1
+#define INCLUDE_vTaskDelete 1
 
 #if configUSE_TRACE_FACILITY
 #include "trcConfig.h"

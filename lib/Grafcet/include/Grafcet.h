@@ -1,0 +1,13 @@
+//
+// Created by awing on 10/05/2026.
+//
+
+#ifndef GRAFCET_TEST_GRAFCET_H
+#define GRAFCET_TEST_GRAFCET_H
+
+#include "StateMachine.h"
+#include "Node.h"
+#include "Transition.h"
+#include "ActionNode.h"
+
+#endif //GRAFCET_TEST_GRAFCET_H
