@@ -169,6 +169,8 @@ void setup(){
     return;
 #endif
 
+  SensorsThread::Init();
+
   lcd.begin(20, 4);
   lcd.print("Hello Club Robot !");
 
@@ -205,20 +207,20 @@ void setup(){
 
   HazelnutGripper::Elevator::init(&motor,&encoder);
 
-  HazelnutGripper::Elevator::setAngle(HazelnutGripper::Elevator::m_maxAngle);
+  //HazelnutGripper::Elevator::setAngle(55.437500);
 
 
 
   TaskHandle_t  gripper_handle = nullptr;
 
-  //BaseType_t ret_gripper = xTaskCreate(
-  //            &HazelnutGripper::Elevator::task,
-  //            "Elevator",
-  //            10000,
-  //            nullptr,
-  //            5,//Prio max
-  //            &gripper_handle );
-  //if(ret_gripper!=pdPASS) {Error_Handler()}
+  BaseType_t ret_gripper = xTaskCreate(
+              &HazelnutGripper::Elevator::task,
+              "Elevator",
+              10000,
+              nullptr,
+              5,//Prio max
+              &gripper_handle );
+  if(ret_gripper!=pdPASS) {Error_Handler()}
 
 
 /*
@@ -272,14 +274,14 @@ void setup(){
 
     TaskHandle_t  hl_wb = nullptr;
 
-    //BaseType_t ret_wb = xTaskCreate(
-    //            wb_loop,
-    //            "Wheeledbase loop",
-    //            10000,
-    //            nullptr,
-    //            5,//Prio max
-    //            &hl_wb );
-    //if(ret_wb!=pdPASS) {Error_Handler()}
+    BaseType_t ret_wb = xTaskCreate(
+                wb_loop,
+                "Wheeledbase loop",
+                10000,
+                nullptr,
+                5,//Prio max
+                &hl_wb );
+    if(ret_wb!=pdPASS) {Error_Handler()}
 
     TaskHandle_t  hl_sens = nullptr;
     BaseType_t ret_sens= xTaskCreate(
@@ -293,15 +295,15 @@ void setup(){
      if(ret_sens!=pdPASS) {Error_Handler()}
 
 
-    //BaseType_t ret_robot = xTaskCreate(
-    //            cerveau::automate::play_match,
-    //            "Robot loop",
-    //            10000,
-    //            nullptr,
-    //            5,
-    //            &hl_robot);
+    BaseType_t ret_robot = xTaskCreate(
+                cerveau::automate::play_match,
+                "Robot loop",
+                10000,
+                nullptr,
+                5,
+                &hl_robot);
 
-    //if(ret_robot!=pdPASS) {Error_Handler()}
+    if(ret_robot!=pdPASS) {Error_Handler()}
 
     main_logs.log(GOOD_LEVEL,"Starting tasks\n");
     TaskStatus_t q;

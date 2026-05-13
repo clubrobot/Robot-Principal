@@ -7,6 +7,7 @@
 #include "FreeRTOS.h"
 #include "Wheeledbase.h"
 #include "FreeRTOS/Source/include/task.h"
+#include "ihm/ihm.h"
 
 void procedure_demarrage(){
 
@@ -14,10 +15,13 @@ void procedure_demarrage(){
     cerveau::automate::automateLogger.log(INFO_LEVEL,"Le robot est armé!\n");
 
     //Detect tirette
-    /**while(etat_tirette()==1){}
-    main_logs.log(WARNING_LEVEL,"tirette mise !\n");
-    while (etat_tirette()==0){}
-    main_logs.log(WARNING_LEVEL,"tirette enlevée !\n");*/
+    pinMode(PD11,OUTPUT);
+
+    digitalWrite(PD11,1);
+    while(ihm::etat_tirette()==1){}
+    printf("tirette mise !\n");
+    while (ihm::etat_tirette()==0){}
+    printf("tirette enlevée !\n");
 
 }
 
@@ -33,7 +37,103 @@ void cerveau::automate::init(const Team team) {
 }
 
 void cerveau::automate::play_match(void *pvParameters) {
-    procedure_demarrage();
-    strategie::strat->execute();
+    procedure_demarrage();   velocityControl.enable();
+
+
+    Wheeledbase::GOTO_DELTA(810, 0, true);
+    Wheeledbase::GOTO_DELTA(-810, 0, true);
+
+    /*
+
+    HazelnutGripper::Gripper::closeAll();
+
+    HazelnutGripper::Gripper::setRotationAll(0);
+
+    while (!HazelnutGripper::Gripper::getFinger(0).isTargetReached())
+    {
+        printf("%d %d %d %d\n",HazelnutGripper::Gripper::getFinger(0).isTargetReached(), HazelnutGripper::Gripper::getFinger(1).isTargetReached(), HazelnutGripper::Gripper::getFinger(2).isTargetReached(), HazelnutGripper::Gripper::getFinger(3).isTargetReached());
+        vTaskDelay(pdMS_TO_TICKS(1));
+    }
+
+    Wheeledbase::GOTO_DELTA(400, 0, true);
+    HazelnutGripper::Elevator::setAngle(10);
+    while (abs(HazelnutGripper::Elevator::getAngle() - 10) > 3)
+    {
+        vTaskDelay(pdMS_TO_TICKS(1));
+    }
+    printf("Reading colors\n");
+    vTaskDelay(pdMS_TO_TICKS(2000));
+
+    printf("Reading color ends\n");
+    HazelnutGripper::Elevator::setAngle(20);
+    HazelnutGripper::Gripper::openAll();
+    Wheeledbase::GOTO_DELTA(50, 0, true);
+
+    printf("Waiting for fingers\n");
+    while (!HazelnutGripper::Gripper::getFinger(0).isTargetReached() || abs(HazelnutGripper::Elevator::getAngle() - 20) > 3)
+    {
+        printf("%d %d %d %d\n",HazelnutGripper::Gripper::getFinger(0).isTargetReached(), HazelnutGripper::Gripper::getFinger(1).isTargetReached(), HazelnutGripper::Gripper::getFinger(2).isTargetReached(), HazelnutGripper::Gripper::getFinger(3).isTargetReached());
+        vTaskDelay(pdMS_TO_TICKS(1));
+    }
+
+
+    printf("New angle\n");
+    HazelnutGripper::Elevator::setAngle(0);
+    while (abs(HazelnutGripper::Elevator::getAngle()) > 3)
+    {
+        vTaskDelay(pdMS_TO_TICKS(1));
+    }
+    vTaskDelay(pdMS_TO_TICKS(1000));
+    HazelnutGripper::Gripper::closeAll();
+
+    vTaskDelay(pdMS_TO_TICKS(1000));
+    while (!HazelnutGripper::Gripper::getFinger(0).isTargetReached())
+    {
+        vTaskDelay(pdMS_TO_TICKS(1));
+    }
+    HazelnutGripper::Elevator::setAngle(60);
+
+    while (abs(HazelnutGripper::Elevator::getAngle() - 60) > 3)
+    {
+        vTaskDelay(pdMS_TO_TICKS(1));
+    }
+
+    Wheeledbase::TURNTO_DELTA(PI/2);
+
+    HazelnutGripper::Gripper::spreadFingers(180);
+
+    vTaskDelay(pdMS_TO_TICKS(1000));
+
+    HazelnutGripper::Gripper::getFinger(1).setAngle(1,180);
+    HazelnutGripper::Gripper::getFinger(3).setAngle(1,180);
+
+
+    vTaskDelay(pdMS_TO_TICKS(2000));
+
+
+    HazelnutGripper::Gripper::spreadFingers(0);
+
+    HazelnutGripper::Elevator::setAngle(0);
+    while (abs(HazelnutGripper::Elevator::getAngle() - 0) > 3)
+    {
+        vTaskDelay(pdMS_TO_TICKS(1));
+    }
+    vTaskDelay(pdMS_TO_TICKS(1000));
+    HazelnutGripper::Gripper::openAll();
+
+    while (!HazelnutGripper::Gripper::getFinger(0).isTargetReached())
+    {
+        printf("%d %d %d %d\n",HazelnutGripper::Gripper::getFinger(0).isTargetReached(), HazelnutGripper::Gripper::getFinger(1).isTargetReached(), HazelnutGripper::Gripper::getFinger(2).isTargetReached(), HazelnutGripper::Gripper::getFinger(3).isTargetReached());
+        vTaskDelay(pdMS_TO_TICKS(1));
+    }
+
+    HazelnutGripper::Elevator::setAngle(60);
+
+    while (abs(HazelnutGripper::Elevator::getAngle() - 53) > 3)
+    {
+        vTaskDelay(pdMS_TO_TICKS(1));
+    }
+
+    HazelnutGripper::Gripper::closeAll();*/
     vTaskDelete(nullptr);
 }

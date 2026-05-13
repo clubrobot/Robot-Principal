@@ -46,27 +46,21 @@ void VelocityController::process(float timestep){
 
 	// Do the engineering control
 
-	if (m_sensors_stop){
-		if (m_sensors_stoped){
-			m_last_linSetpoint = m_rampLinVelSetpoint;
-			m_last_angSetpoint = m_rampAngVelSetpoint;
-			m_sensors_stoped=false;
-		}
-
-		m_leftWheel->setVelocity(0);
+	if (m_sensors_stop)
+	{
+		m_rampLinVelSetpoint = 0;
+		m_rampAngVelSetpoint = 0;
+		m_linSetpoint = 0;
+		m_angSetpoint = 0;
+		m_leftWheel ->setVelocity(0);
 		m_rightWheel->setVelocity(0);
 	}else{
-		if (m_sensors_restart){
-			//We restart
-			m_linSetpoint = m_last_linSetpoint;
-			m_angSetpoint = m_last_angSetpoint;
-			m_sensors_restart = false;
-		}else{
-			m_linSetpoint = m_rampLinVelSetpoint;
-			m_angSetpoint = m_rampAngVelSetpoint;
-		}
+		m_linSetpoint = m_rampLinVelSetpoint;
+		m_angSetpoint = m_rampAngVelSetpoint;
 		DifferentialController::process(timestep);
 	}
+
+
 
 	// Check for wheels abnormal spin and stop the controller accordingly
 	bool linVelSpin = (m_linVelOutput <= m_linPID->getMinOutput()) || (m_linVelOutput >= m_linPID->getMaxOutput());

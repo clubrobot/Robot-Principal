@@ -20,7 +20,7 @@
 
 #define END_STOP_BAS_PIN PE5
 #define END_STOP_HAUT_PIN PD6
-#define TIRETTE_PIN PA5
+#define TIRETTE_PIN PD13
 
 
 namespace ihm {

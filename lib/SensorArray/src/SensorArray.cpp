@@ -4,6 +4,8 @@
 
 #include "include/SensorArray.h"
 
+#include "Sphere.h"
+#include "Teleplot_client.h"
 #include "../../Include/My_Clock.h"
 #include "../../Odometry/Odometry.h"
 #include "../../Wheeledbase/Wheeledbase.h"
@@ -200,7 +202,7 @@ uint8_t SensorArray::AquireRawData()
 
         if (handle->is_alive != 1)
         {
-            memset(&this->raw_data[handle->cfg.pin - 1][0], -1, SENSORARRAY_RESOLUTION);
+            memset(&this->raw_data[handle->cfg.pin - 1], -1, SENSORARRAY_RESOLUTION);
             continue;
         }
 
@@ -224,22 +226,14 @@ uint8_t SensorArray::AquireRawData()
         if (r_status != 0)
             continue;
 
+        this->raw_data[handle->cfg.pin - 1] = data;
 
-        for (int j = 0; j < SENSORARRAY_RESOLUTION; ++j)
-        {
-            //According to uld's guide, um2884 5, 9 and 10 status code doesn't impact mesurments
-            if (data.target_status[j] == 5 || data.target_status[j] == 9 || data.target_status[j] == 10)
-            {
-                *(this->raw_data[handle->cfg.pin - 1][0] + j) = data.distance_mm[j];
-                continue;
-            }
 
-            //When the mesure is not valid
-            *(this->raw_data[handle->cfg.pin - 1][0] + j) = -1;
-        }
+
 
         //memcpy(this->raw_data[handle->cfg.pin - 1], data.distance_mm, sizeof data.distance_mm);
     }
+
     return status;
 }
 
@@ -278,16 +272,19 @@ uint8_t SensorArray::getNormalisedData()
             continue;
         }
 
-        for (X_Y_FOR_LOOP)
+        for (int j = 0; j < SENSORARRAY_RESOLUTION; ++j)
         {
 
-            if (this->raw_data[handle->cfg.pin - 1][x][y] == -1)
+            uint8_t status = this->raw_data[handle->cfg.pin - 1].target_status[j];
+
+            //According to uld's guide, um2884 5, 9 and 10 status code doesn't impact mesurments
+            if (status != 5 && status != 9 && status != 10)
             {
                 continue;
             }
 
             Point tmp_p{}, p{};
-            Mesurement_to_Point(this->raw_data[handle->cfg.pin - 1][x][y],x,y,&tmp_p);
+            Mesurement_to_Point(this->raw_data[handle->cfg.pin - 1].distance_mm[j],X_FROM_1D(j),Y_FROM_1D(j),&tmp_p);
 
             //Origin
             tmp_p.x += SENSORARRAY_FRAME_RADIUS;
@@ -313,49 +310,7 @@ float angles_forward[3]={0,PI/4,-PI/4};
 float angles_backward[3]={3*PI/4,PI,5*PI/4};
 
 //The data must be acquired
-bool SensorArray::isThereAnObstacle(float velocity)
-{
-    uint8_t* pin_array = velocity >= -0.1 ? data_pin_forward : data_pin_backward;
-    const int stop_distance = velocity >= -0.1 ? SENSORARRAY_STOP_DISTANCE_FORWARD : SENSORARRAY_STOP_DISTANCE_BACKWARD;
-    for (int j = 0; j < 3; ++j){
-        for (int i = 0; i < 8; ++i){
 
-            if (this->raw_data[pin_array[j]][3][i] < stop_distance && this->raw_data[pin_array[j]][3][i] > 0){
-                return true;
-               }
-        }
-    }
-    return false;
-}
-
-//
-bool SensorArray::isThereAnObstacleTerrain(bool interrupt,float velocity,float current_angle,float current_x,float current_y,float max_x,float max_y)
-{
-    uint8_t* pin_array = velocity >= -0.1 ? data_pin_forward : data_pin_backward;
-    float* angles_array = velocity >= -0.1 ? angles_forward : angles_backward;
-    float stop_distance = velocity >= -0.1 ? SENSORARRAY_STOP_DISTANCE_FORWARD : SENSORARRAY_STOP_DISTANCE_BACKWARD;
-    //dont check for interruption when stopped (not a stop induced by an interruption)
-    if(!interrupt && fabs(velocity)<2)return false;
-
-    stop_distance=fmax(stop_distance*0.3,fmin(1.5* fabs(velocity),stop_distance));
-
-    for (int j = 0; j < 3; ++j){
-        for (int i = 0; i < 8; ++i){
-            float dist=this->raw_data[pin_array[j]][3][i];
-            if (dist < stop_distance && dist > 0){
-                //check that the point is inside the terrain
-                float angle=angles_array[j]+current_angle;
-                float x=current_x+ cos(angle)*dist;
-                float y=current_y+ sin(angle)*dist;
-
-                if(x>=-50 && y>=-50 && x<=max_x+50 && max_y+50>=y)
-                    return true;
-                else printf("DENY %d %f %f %f %f %f\n",pin_array[j],x,y,current_x,current_y,current_angle);
-            }
-        }
-    }
-    return false;
-}
 
 void SensorArray::Stop()
 {
@@ -366,3 +321,60 @@ void SensorArray::Stop()
     }
 }
 
+double normalizeAngle(double angle) {
+    return angle - TWO_PI * std::floor(angle / TWO_PI);
+}
+
+bool isBetweenAngles(double angle, double start, double end) {
+    angle = normalizeAngle(angle);
+    start = normalizeAngle(start);
+    end   = normalizeAngle(end);
+
+    if (start <= end) {
+        return angle >= start && angle <= end;
+    } else {
+        return angle >= start || angle <= end;
+    }
+}
+
+bool SensorArray::isThereAnObstacle(float start, float end, float distance)
+{
+
+    for (int i = 0; i < this->nb_sensors; ++i)
+    {
+
+        SensorHandle *handle = &sensors[i];
+
+        if (handle->is_alive != 1)
+        {
+            continue;
+        }
+
+        for (int j = 0; j < SENSORARRAY_RESOLUTION; ++j)
+        {
+
+            uint8_t status = this->raw_data[handle->cfg.pin - 1].target_status[j];
+
+            //According to uld's guide, um2884 5, 9 and 10 status code doesn't impact mesurments
+            if (status != 5 && status != 9 && status != 10)
+            {
+                continue;
+            }
+
+            // Tag
+            if (this->raw_data[handle->cfg.pin - 1].reflectance[j] != 127)
+            {
+                continue;
+            }
+
+            float angle =  (uint8_t) floor(j / 8.00) * PI/32 + PI/8 * (handle->cfg.pin - 1);
+
+
+            if (isBetweenAngles(angle, start, end) && this->raw_data[handle->cfg.pin - 1].distance_mm[j] < distance)
+            {
+                return true;
+            }
+        }
+    }
+    return false;
+}
