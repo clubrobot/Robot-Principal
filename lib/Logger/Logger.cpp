@@ -28,7 +28,7 @@ int Logger::log_static(uint8_t level,char* name, const char* format, va_list arg
         printf(COLOR_YELLOW);
         break;
     case INFO_LEVEL:
-        printf(COLOR_NORMAL);
+        printf(COLOR_CYAN);
         break;
     case GOOD_LEVEL:
         printf(COLOR_GREEN);

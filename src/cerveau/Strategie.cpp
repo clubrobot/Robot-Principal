@@ -25,7 +25,7 @@ namespace cerveau::strategie {
 
         auto* gotoNode1 = new ActionNode();
         gotoNode1->actionFunction = [] {
-            Wheeledbase::GOTO(new Position(1250, 1600, PI/2), true, PurePursuit::FORWARD, PI/2, false);
+            Wheeledbase::GOTO(new Position(1250, 1600, PI/2), true, PurePursuit::FORWARD, false);
             stratLogger.log(INFO_LEVEL, "Goto 1 lancé\n");
         };
         transition1->addChild(gotoNode1);
@@ -53,7 +53,7 @@ namespace cerveau::strategie {
         auto* gotoNode2 = new ActionNode();
         gotoNode2->actionFunction = [] {
             stratLogger.log(INFO_LEVEL, "Goto 2 lancé\n");
-            Wheeledbase::GOTO(new Position(1250, 1400, PI/2), false, PurePursuit::BACKWARD, PI/2, false);
+            Wheeledbase::GOTO(new Position(1250, 1400, PI/2), false, PurePursuit::BACKWARD, false);
         };
         transition3->addChild(gotoNode2);
 
@@ -76,7 +76,7 @@ namespace cerveau::strategie {
         auto* returnNode = new ActionNode();
         returnNode->actionFunction = [] {
             stratLogger.log(INFO_LEVEL, "Goto return lancé\n");
-            Wheeledbase::GOTO(&start, false, PurePursuit::FORWARD, PI/2, false);
+            Wheeledbase::GOTO(&start, false, PurePursuit::FORWARD, false);
         };
         transition4->addChild(returnNode);
 
@@ -98,7 +98,7 @@ namespace cerveau::strategie {
     void generateYellowStrat() {
         yellowStartingNode = new ActionNode();
         yellowStartingNode->actionFunction = [] {
-            HazelnutGripper::Elevator::setAngle(HazelnutGripper::Elevator::m_maxRange);
+            HazelnutGripper::Elevator::setAngle(HazelnutGripper::Elevator::HAUT);
         };
         strat->setStartingNode(yellowStartingNode);
 
@@ -112,7 +112,8 @@ namespace cerveau::strategie {
 
         auto* n2 = new ActionNode();
         n2->actionFunction = [] {
-            Wheeledbase::GOTO(new Position(300, 0, 0), true, PurePursuit::FORWARD, 0, false);
+            stratLogger.log(INFO_LEVEL, "Goto 1 lancé\n");
+            Wheeledbase::GOTO(new Position(200, 0, 0), false, PurePursuit::FORWARD, false);
         };
         t1->addChild(n2);
 
@@ -124,7 +125,8 @@ namespace cerveau::strategie {
 
         auto* n3 = new ActionNode();
         n3->actionFunction = [] {
-            HazelnutGripper::Elevator::setAngle(0);
+           stratLogger.log(INFO_LEVEL, "Elevator set angle) \n");
+            HazelnutGripper::Elevator::setAngle(HazelnutGripper::Elevator::BAS);
         };
         t2->addChild(n3);
 
@@ -137,7 +139,8 @@ namespace cerveau::strategie {
 
         auto* n4 = new ActionNode();
         n4->actionFunction = [] {
-            HazelnutGripper::Elevator::setAngle(HazelnutGripper::Elevator::m_maxRange);
+            stratLogger.log(INFO_LEVEL, "Elevator set angle \n");
+            HazelnutGripper::Elevator::setAngle(HazelnutGripper::Elevator::HAUT);
         };
         t3->addChild(n4);
 
@@ -150,7 +153,7 @@ namespace cerveau::strategie {
         auto* n5 = new ActionNode();
         n5->actionFunction = [] {
             stratLogger.log(INFO_LEVEL, "Return to base\n");
-            Wheeledbase::GOTO(&start, false, PurePursuit::BACKWARD, MAXFLOAT, false);
+            Wheeledbase::GOTO(&start, false, PurePursuit::BACKWARD, false);
         };
         t4->addChild(n5);
 

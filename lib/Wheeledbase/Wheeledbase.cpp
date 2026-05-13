@@ -23,7 +23,7 @@ void Wheeledbase::GOTO_DELTA(float dx, float dy,bool bloquant) {
     Position initial_pos = *odometry.getPosition();
 
     Position target_pos;
-    target_pos.x = initial_pos.x + dx * cos(initial_pos.theta) + dy * -1 * sin(initial_pos.theta);
+    target_pos.x = initial_pos.x + dx * cos(initial_pos.theta) + dy * sin(initial_pos.theta);
     target_pos.y = initial_pos.y + dx * sin(initial_pos.theta) + dy * cos(initial_pos.theta);
 
     target_pos.theta = atan2(target_pos.y - initial_pos.y, target_pos.x - initial_pos.x);
@@ -233,9 +233,9 @@ void Wheeledbase::PUREPURSUIT(const Position** waypoints, uint16_t nb_waypoints,
     Wheeledbase::START_PUREPURSUIT(dir, finalAngle);
 }
 
-void Wheeledbase::GOTO(Position* pos, bool alignFirst, int8_t dir, float finalAngle,bool bloquant) {
-    float defaultMaxSpeed = Wheeledbase::GET_PARAMETER_VALUE(POSITIONCONTROL_LINVELMAX_ID);
-    positionControl.setMoveStrategy(purePursuit);
+void Wheeledbase::GOTO(Position* pos, const bool alignFirst, int8_t dir, const bool bloquant) {
+    const float defaultMaxSpeed = Wheeledbase::GET_PARAMETER_VALUE(POSITIONCONTROL_LINVELMAX_ID);
+    wb_logger.log(INFO_LEVEL, "GOTO called with pos: %f %f %f, alignFirst: %d, dir: %d\n", pos->x, pos->y, pos->theta, alignFirst, dir);
 
     const Position *myPos = Wheeledbase::GET_POSITION();
     if (dir==PurePursuit::NONE) {
@@ -252,12 +252,12 @@ void Wheeledbase::GOTO(Position* pos, bool alignFirst, int8_t dir, float finalAn
 
     if (alignFirst){
         //On avance vers un point avant le point d'arrivé pour s'aligner et après on avance tout droit
-        float theta = PI-pos->theta;
-        float radius = ALIGN_DISTANCE;
+        const float theta = pos->theta;
+        const float radius = ALIGN_DISTANCE;
 
-        float x = pos->x + radius*cos(theta);
-        float y = pos->y - radius*sin(theta);
-        Position appr_pos = Position(x,y,pos->theta);
+        const float x = pos->x + radius*cos(theta);
+        const float y = pos->y - radius*sin(theta);
+        const Position appr_pos = Position(x,y,pos->theta);
         const Position *posApprTab[2]={myPos, &appr_pos};
 
         Wheeledbase::PUREPURSUIT(posApprTab, 2, dir, pos->theta);
@@ -297,14 +297,6 @@ void Wheeledbase::GOTO(Position* pos, bool alignFirst, int8_t dir, float finalAn
         Wheeledbase::SET_PARAMETER_VALUE(POSITIONCONTROL_LINVELMAX_ID, defaultMaxSpeed);
     }
 
-
-    if(finalAngle!=MAXFLOAT) {
-
-        Wheeledbase::START_TURNONTHESPOT(1, finalAngle);
-        while(!(Wheeledbase::POSITION_REACHED() & 0b01)) {
-            //Todo: TimeOUT
-        }
-    }
 }
 
 void Wheeledbase::GOTO_WAYPOINTS(bool alignFirst, int8_t dir, int nb_waypoints, ...){

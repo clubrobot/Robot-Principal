@@ -283,16 +283,16 @@ void setup(){
                 &hl_wb );
     if(ret_wb!=pdPASS) {Error_Handler()}
 
-    TaskHandle_t  hl_sens = nullptr;
-    BaseType_t ret_sens= xTaskCreate(
-                 SensorsThread::Thread,
-                "Sensors loop",
-                 10000,
-                 nullptr,
-                 5,
-                 &hl_sens );
+    //TaskHandle_t  hl_sens = nullptr;
+    //BaseType_t ret_sens= xTaskCreate(
+    //             SensorsThread::Thread,
+    //            "Sensors loop",
+    //             10000,
+    //             nullptr,
+    //             5,
+    //             &hl_sens );
 
-     if(ret_sens!=pdPASS) {Error_Handler()}
+    // if(ret_sens!=pdPASS) {Error_Handler()}
 
 
     BaseType_t ret_robot = xTaskCreate(

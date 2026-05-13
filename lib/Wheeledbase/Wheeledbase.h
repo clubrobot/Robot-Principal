@@ -180,7 +180,7 @@ namespace  Wheeledbase {
 
     void PUREPURSUIT(const Position** waypoints, uint16_t nb_waypoints, char dir, float finalAngle);
 
-    void GOTO(Position* pos, bool alignFirst=true, int8_t dir=PurePursuit::NONE, float finalAngle=MAXFLOAT,bool bloquant=true);
+    void GOTO(Position* pos, bool alignFirst=true, int8_t dir=PurePursuit::NONE,bool bloquant=true);
 
     void GOTO_WAYPOINTS(bool alignFirst=true, int8_t dir=PurePursuit::NONE, int nb_waypoints=1, ...);
 
