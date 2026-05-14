@@ -10,8 +10,8 @@ import re
 #   All: pour les points d'intéret commun aux deux équipes.
 #Pour chaque variable avec Bleu il en faut une autre avec Jaune à la place.
 
-CHEMIN_POINT_H="D:/Technique/Code/CLUB_ROBOT/team2026_SAUV_V2/include/Geogebra.h"
-CHEMIN_GEOGEBRA="D:/Technique/Code/CLUB_ROBOT/team2026_SAUV_V2/maps/StrategieRobotMap.ggb"
+CHEMIN_POINT_H="../include/Geogebra.h"
+CHEMIN_GEOGEBRA="../maps/StrategieRobotMap.ggb"
 
 #on lit les angles pour pouvoir les sauvegarder et ne pas les ecraser
 f = open(CHEMIN_POINT_H, "r")
