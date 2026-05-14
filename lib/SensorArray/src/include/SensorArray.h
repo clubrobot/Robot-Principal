@@ -40,6 +40,7 @@
 #define SENSORARRAY_FUTURE_ORIGIN 1
 #define SENSORARRAY_CURRENT_ORIGIN 0
 
+static Logger logs = Logger("SensorArray");
 class SensorArray
 {
 public:
@@ -87,7 +88,6 @@ private:
 
     i2c_t* i2c_bus;
 
-    Logger logs = Logger("Sensor Array");
 
     void ApplyPowerConfig() const;
     uint8_t AquireRawData();

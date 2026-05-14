@@ -109,6 +109,7 @@ uint8_t SensorArray::Init()
             handle->is_alive = 0;
             this->power_config = this->power_config & ~(1 << (handle->cfg.pin - 1));
             logs.log(ERROR_LEVEL, "Failed to initialize VL53L5CX %d, status : %d\n", handle->cfg.pin, status);
+            logs.log(SCREEN_LEVEL, "TOF %d failed to init\n", handle->cfg.pin);
             continue;
         }
 
@@ -132,6 +133,7 @@ uint8_t SensorArray::Init()
     this->ApplyPowerConfig();
 
     logs.log(started_sensors != this->nb_sensors ? ERROR_LEVEL : GOOD_LEVEL, "Started %d/%d sensors\n", started_sensors, this->nb_sensors);
+    if (started_sensors != this->nb_sensors) logs.log(SCREEN_LEVEL, "Started %d/%d sensors\n", started_sensors, this->nb_sensors);
 
     return started_sensors != this->nb_sensors;
 }

@@ -89,8 +89,6 @@ namespace cerveau::strategie {
 
         auto* endNode = new ActionNode();
         endNode->actionFunction = [] {
-            stratLogger.log(WARNING_LEVEL, "Stratégie terminée\n");
-            printf("Stratégie terminée !\n");
         };
         transition5->addChild(endNode);
     }
@@ -104,15 +102,12 @@ namespace cerveau::strategie {
 
         auto* t1 = new Transition();
         t1->condition = [] {
-            stratLogger.log(INFO_LEVEL, "Transition 1 evaluated");
-            stratLogger.log(INFO_LEVEL, "Elevator angle: %f, Target angle: %f\n", HazelnutGripper::Elevator::m_currentAngle, HazelnutGripper::Elevator::m_angle);
             return ELEVATOR_IN_POS();
         };
         yellowStartingNode->addChild(t1);
 
         auto* n2 = new ActionNode();
         n2->actionFunction = [] {
-            stratLogger.log(INFO_LEVEL, "Goto 1 lancé\n");
             Wheeledbase::GOTO(new Position(200, 0, 0), false, PurePursuit::FORWARD, false);
         };
         t1->addChild(n2);
@@ -125,21 +120,18 @@ namespace cerveau::strategie {
 
         auto* n3 = new ActionNode();
         n3->actionFunction = [] {
-           stratLogger.log(INFO_LEVEL, "Elevator set angle) \n");
             HazelnutGripper::Elevator::setAngle(HazelnutGripper::Elevator::BAS);
         };
         t2->addChild(n3);
 
         auto* t3 = new Transition();
         t3->condition = [] {
-            stratLogger.log(INFO_LEVEL, "Elevator pos : %f, target pos : %f\n", HazelnutGripper::Elevator::m_currentAngle, HazelnutGripper::Elevator::m_angle);
             return ELEVATOR_IN_POS();
         };
         n3->addChild(t3);
 
         auto* n4 = new ActionNode();
         n4->actionFunction = [] {
-            stratLogger.log(INFO_LEVEL, "Elevator set angle \n");
             HazelnutGripper::Elevator::setAngle(HazelnutGripper::Elevator::HAUT);
         };
         t3->addChild(n4);
@@ -152,14 +144,12 @@ namespace cerveau::strategie {
 
         auto* n5 = new ActionNode();
         n5->actionFunction = [] {
-            stratLogger.log(INFO_LEVEL, "Return to base\n");
             Wheeledbase::GOTO(&start, false, PurePursuit::BACKWARD, false);
         };
         t4->addChild(n5);
 
         auto* t6 = new Transition();
         t6->condition = [] {
-            stratLogger.log(INFO_LEVEL, "position reach : %d\n", Wheeledbase::POSITION_REACHED());
             return Wheeledbase::POSITION_REACHED() & 0b01;
         };
         n5->addChild(t6);

@@ -8,8 +8,10 @@
 #include <Arduino.h>
 #include <Buttons.h>
 
-#define BLEU_BTN_PIN PC12
-#define JAUNE_BTN_PIN PC8
+#include "Logger.h"
+
+#define BLEU_BTN_PIN PF7
+#define JAUNE_BTN_PIN PF5
 #define VERT_BTN_PIN PD2
 #define ROUGE_BTN_PIN PD4
 
@@ -24,6 +26,9 @@
 
 
 namespace ihm {
+
+    inline Logger ihmLogger = Logger("IHM");
+
     void init();
 
     /** @brief blue button state

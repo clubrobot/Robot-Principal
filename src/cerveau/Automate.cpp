@@ -11,18 +11,32 @@
 
 void procedure_demarrage(){
 
-    cerveau::automate::init(cerveau::automate::JAUNE);
+    cerveau::automate::Team team;
     cerveau::automate::automateLogger.log(INFO_LEVEL,"Le robot est armé!\n");
 
     //Detect tirette
     pinMode(PD11,OUTPUT);
 
     digitalWrite(PD11,1);
+#if LCD_OUTPUT
+    ihm::ihmLogger.log(SCREEN_LEVEL, "Team ?");
+#endif
+    while (!ihm::etat_bleu() && !ihm::etat_jaune()) {}
+    if (ihm::etat_bleu()) {
+        digitalWrite(PD11, 0);
+        cerveau::automate::automateLogger.log(INFO_LEVEL,"Equipe bleue détectée\n");
+        team = cerveau::automate::BLEU;
+        ihm::ihmLogger.sameLine(" Bleu");
+    } else {
+        digitalWrite(PD11, 0);
+        cerveau::automate::automateLogger.log(INFO_LEVEL,"Equipe jaune détectée\n");
+        team = cerveau::automate::JAUNE;
+        ihm::ihmLogger.sameLine(" Jaune");
+    }
+    cerveau::automate::init(team);
     while(ihm::etat_tirette()==1){}
-    printf("tirette mise !\n");
     while (ihm::etat_tirette()==0){}
-    printf("tirette enlevée !\n");
-
+    ihm::ihmLogger.log(SCREEN_LEVEL, "Lets go !");
 }
 
 void cerveau::automate::init(const Team team) {
@@ -40,6 +54,7 @@ void cerveau::automate::play_match(void *pvParameters) {
     procedure_demarrage();   velocityControl.enable();
 
 
+    while (true) {}
     Wheeledbase::GOTO_DELTA(810, 0, true);
     Wheeledbase::GOTO_DELTA(-810, 0, true);
 

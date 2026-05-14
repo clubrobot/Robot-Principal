@@ -20,7 +20,7 @@
 
 
 
-LiquidCrystal lcd(PG15, PB4, PB8, PB5, PB9, PF3);
+static LiquidCrystal lcd(PG15, PB4, PB8, PB5, PB9, PF3);
 
 #define DEBUG 1
 
@@ -168,11 +168,13 @@ void setup(){
     main_logs.log(WARNING_LEVEL,"Not using FreeRTOS\n");
     return;
 #endif
-
-  SensorsThread::Init();
-
   lcd.begin(20, 4);
   lcd.print("Hello Club Robot !");
+  ihmLogger.setLcdOutput(lcd);
+  logs.setLcdOutput(lcd);
+  lcd.clear();
+
+  SensorsThread::Init();
 
 
   drv8876.init();
@@ -283,16 +285,16 @@ void setup(){
                 &hl_wb );
     if(ret_wb!=pdPASS) {Error_Handler()}
 
-    //TaskHandle_t  hl_sens = nullptr;
-    //BaseType_t ret_sens= xTaskCreate(
-    //             SensorsThread::Thread,
-    //            "Sensors loop",
-    //             10000,
-    //             nullptr,
-    //             5,
-    //             &hl_sens );
+    TaskHandle_t  hl_sens = nullptr;
+    BaseType_t ret_sens= xTaskCreate(
+                 SensorsThread::Thread,
+                "Sensors loop",
+                 10000,
+                 nullptr,
+                 5,
+                 &hl_sens );
 
-    // if(ret_sens!=pdPASS) {Error_Handler()}
+     if(ret_sens!=pdPASS) {Error_Handler()}
 
 
     BaseType_t ret_robot = xTaskCreate(

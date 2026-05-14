@@ -7,12 +7,17 @@
 
 #include <Arduino.h>
 #include "coloring.h"
+#if LCD_OUTPUT
+#include "LiquidCrystal.h"
+#include <string>
+#endif
 
 #define MAX_NAME 50
 #define ERROR_LEVEL 3
 #define WARNING_LEVEL 2
 #define GOOD_LEVEL 1
 #define INFO_LEVEL 0
+#define SCREEN_LEVEL 10
 
 #undef Error_Handler
 #define Error_Handler() \
@@ -28,9 +33,16 @@ class Logger {
 public:
     Logger(const char* name);
     int log(uint8_t level, const char* format, ...);
+    static void setLcdOutput(LiquidCrystal &lcd) {
+        _lcdOutput = &lcd;
+    }
+    static void sameLine(const char* str);
 private:
     char _name[50];
     static int log_static(uint8_t level,char* name, const char* format, va_list args);
+    static LiquidCrystal* _lcdOutput;
+    static char _lcdBuffer[4][21];
+    static uint8_t _lcdCursor;
 }; // Logger
 
 #endif //LOGGER_H
