@@ -1,6 +1,6 @@
 #ifndef TEAM2026_GEOGEBRA_H_CERTIF
 #define TEAM2026_GEOGEBRA_H_CERTIF
-#include "Odometry.h" 
+#include "Odometry.h"
 #define Depart_J 0
 #define R1L_J 1
 #define R2L_J 2
@@ -26,7 +26,7 @@
 #define R0L_B 22
 
 //position geogebra de la team jaune
-struct Position positions_jaune[] = {
+inline Position positions_jaune[] = {
    Position(30.0f, 164.60000000000002f,3 * PI/2), //Depart_J_jaune
    Position(44.0f, 40.0f,PI), //R1L_J_jaune
    Position(109.91151713267399f, 43.852527975099996f,3 * PI / 2), //R2L_J_jaune
@@ -43,7 +43,7 @@ struct Position positions_jaune[] = {
 };
 
 //position geogebra de la team bleu
-struct Position positions_bleu[] = {
+inline Position positions_bleu[] = {
    Position(204.8948387545501f, 35.104960558119856f,0+3.14), //R2D_B_bleu
    Position(289.9710072272275f, 56.01534813867162f,0+3.14), //R1D_B_bleu
    Position(189.96643874376957f, 43.928988429000924f,0+3.14), //R2L_B_bleu
@@ -56,5 +56,5 @@ struct Position positions_bleu[] = {
    Position(255.7541844120446f, 120.0694424128976f,0+3.14), //R0L_B_bleu
 };
 
-struct Position* positions_match;//ce pointeur vaut soit positions_bleus soit positions_bleu en fonction de la couleur.
+inline Position* positions_match;//ce pointeur vaut soit positions_bleus soit positions_bleu en fonction de la couleur.
 #endif //TEAM2026_GEOGEBRA_H_CERTIF
