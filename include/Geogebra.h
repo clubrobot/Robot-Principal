@@ -1,71 +1,62 @@
-#ifndef TEAM2025_GEOGEBRA_H
-#define TEAM2025_GEOGEBRA_H
+#ifndef TEAM2026_GEOGEBRA_H_CERTIF
+#define TEAM2026_GEOGEBRA_H_CERTIF
 #include "Odometry.h" 
-#define chgsta 0
-#define garage1 1
-#define garage2all 2
-#define garage3all 3
-#define garage4all 4
-#define garage5all 5
-#define garage6all 6
-#define garage7all 7
-#define garage8all 8
-#define garage9all 9
-#define start1 10
-#define start2 11
-#define depot1 12
-#define depot2 13
-#define check1 14
-#define chgsta1 15
-#define depot3 16
-#define check2 17
-#define check3 18
+#define Depart_J 0
+#define R1L_J 4
+#define R2L_J 7
+#define R3L_J 10
+#define R1P_J 5
+#define R2P_J 8
+#define R3P_J 11
+#define R1D_J 6
+#define R0D_J 3
+#define R2D_J 9
+#define R3D_J 12
+#define R0P_J 2
+#define R0L_J 1
+#define R2D_B 0
+#define R1D_B 0
+#define R2L_B 0
+#define R3L_B 0
+#define R2P_B 0
+#define R1P_B 0
+#define R0D_B 0
+#define R3D_B 0
+#define R0P_B 0
+#define R0L_B 0
 
 //position geogebra de la team jaune
 struct Position positions_jaune[] = {
-   Position(375.0f, 1945.0f,MAXFLOAT), //chgsta_jaune
-   Position(825.0f, 1725.0f,1.570796327), //garage1_jaune
-   Position(75.0f, 1325.0f,1.570796327), //garage2all_jaune
-   Position(2925.0f, 1325.0f,1.570796327), //garage3all_jaune
-   Position(1100.0f, 920.0f,1.570796327), //garage4all_jaune
-   Position(1900.0f, 950.0f,1.570796327), //garage5all_jaune
-   Position(75.0f, 400.0f,1.570796327), //garage6all_jaune
-   Position(2925.0f, 400.0f,1.570796327), //garage7all_jaune
-   Position(775.0f, 270.0f,-1.570796327), //garage8all_jaune
-   Position(2225.0f, 270.0f,-1.570796327), //garage9all_jaune
-   Position(2775.0f, 875.0f,1.570796327), //start1_jaune
-   Position(1157.25f, 161.5f,1.570796327), //start2_jaune
-   Position(2775.0f, 75.0f,-1.570796327), //depot1_jaune
-   Position(775.0f, 180.0f,-1.570796327), //depot2_jaune
-   Position(775.0f, 500.0f,-1.570796327), //check1_jaune
-   Position(375.0f, 1750.0f,MAXFLOAT), //chgsta1_jaune
-   Position(1275.0f, 350.0f,-1.570796327), //depot3_jaune
-   Position(700.0f, 930.0f,1.570796327), //check2_jaune
-   Position(490.0f, 1375.0f,MAXFLOAT), //check3_jaune
-};
-
-//position geogebra de la team bleu
-struct Position positions_bleu[] = {
-   Position(2625.0f, 1945.0f,MAXFLOAT), //chgsta_bleu
-   Position(2175.0f, 1725.0f,1.570796327), //garage1_bleu
-   Position(75.0f, 1325.0f,1.570796327), //garage2all_bleu
-   Position(2925.0f, 1325.0f,1.570796327), //garage3all_bleu
-   Position(1100.0f, 920.0f,1.570796327), //garage4all_bleu
-   Position(1900.0f, 950.0f,1.570796327), //garage5all_bleu
-   Position(75.0f, 400.0f,1.570796327), //garage6all_bleu
-   Position(2925.0f, 400.0f,1.570796327), //garage7all_bleu
-   Position(775.0f, 270.0f,-1.570796327), //garage8all_bleu
-   Position(2225.0f, 270.0f,-1.570796327), //garage9all_bleu
-   Position(225.0f, 875.0f,1.570796327), //start1_bleu
-   Position(1842.75f, 161.5f,1.570796327), //start2_bleu
-   Position(225.0f, 75.0f,1.570796327), //depot1_bleu
-   Position(2225.0f, 180.0f,-1.570796327), //depot2_bleu
-   Position(2225.0f, 420.0f,-1.570796327), //check1_bleu
-   Position(2625.0f, 1750.0f,MAXFLOAT), //chgsta1_bleu
-   Position(1725.0f, 350.0f,-1.570796327), //depot3_bleu
-   Position(2300.0f, 930.0f,1.570796327), //check2_bleu
-   Position(2510.0f, 1375.0f,MAXFLOAT), //check3_bleu
+   Position(30.0f, 177.5f, 3 * PI/2), //Depart_J_jaune
+   Position(44.0f, 40.0f,PI), //R1L_J_jaune
+   Position(109.91151713267399f, 43.852527975099996f,TBD), //R2L_J_jaune
+   Position(114.7951679161948f, 53.52824981187007f,TBD), //R3L_J_jaune
+   Position(40.0f, 40.0f,PI), //R1P_J_jaune
+   Position(109.91151713267399f, 39.852527975099996f,TBD), //R2P_J_jaune
+   Position(114.7951679161948f, 57.528249811870076f,TBD), //R3P_J_jaune
+   Position(9.88404375784381f, 55.74783708591414f,TBD), //R1D_J_jaune
+   Position(55.9756444679994f, 103.08366002410847f,7 * PI / 4), //R0D_J_jaune
+   Position(95.0f, 35.0f,TBD), //R2D_J_jaune
+   Position(125.407903173633f, 120.35880269343f,TBD), //R3D_J_jaune
+   Position(39.978448130320004f, 119.86717541175099f,PI), //R0P_J_jaune
+   Position(43.978448130320004f, 119.86717541175099f,PI), //R0L_J_jaune
 };
 
 struct Position* positions_match;//ce pointeur vaut soit positions_jaunes soit positions_bleu en fonction de la couleur.
-#endif //TEAM2025_GEOGEBRA_H
+#endif //TEAM2026_GEOGEBRA_H_CERTIF
+//position geogebra de la team bleu
+struct Position positions_bleu[] = {
+   Position(204.8948387545501f, 35.104960558119856f,TBD+3.14), //R2D_B_bleu
+   Position(289.9710072272275f, 56.01534813867162f,TBD+3.14), //R1D_B_bleu
+   Position(189.96643874376957f, 43.928988429000924f,TBD+3.14), //R2L_B_bleu
+   Position(185.06431432355473f, 53.595363872085365f,TBD+3.14), //R3L_B_bleu
+   Position(185.05667353069765f, 57.595356574364274f,TBD+3.14), //R2P_B_bleu
+   Position(259.88518741981375f, 40.210012337753376f,TBD+3.14), //R1P_B_bleu
+   Position(243.78906980353605f, 103.26304062258815f,TBD+3.14), //R0D_B_bleu
+   Position(174.32393882553896f, 120.40552239802415f,TBD+3.14), //R3D_B_bleu
+   Position(259.7541771143235f, 120.07708320575469f,TBD+3.14), //R0P_B_bleu
+   Position(255.7541844120446f, 120.0694424128976f,TBD+3.14), //R0L_B_bleu
+};
+
+struct Position* positions_match;//ce pointeur vaut soit positions_bleus soit positions_bleu en fonction de la couleur.
+#endif //TEAM2026_GEOGEBRA_H_CERTIF

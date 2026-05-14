@@ -36,6 +36,7 @@ void procedure_demarrage(){
         ihm::ihmLogger.sameLine(" Jaune");
     }
     cerveau::automate::init(team);
+    cerveau::automate::ourTeam = team;
     while(ihm::etat_tirette()==1){}
     while (ihm::etat_tirette()==0){}
     ihm::ihmLogger.log(SCREEN_LEVEL, "Lets go !");
