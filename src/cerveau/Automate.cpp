@@ -10,6 +10,7 @@
 #include "Wheeledbase.h"
 #include "FreeRTOS/Source/include/task.h"
 #include "ihm/ihm.h"
+#include "Geogebra.h"
 
 void procedure_demarrage(){
 
@@ -23,22 +24,26 @@ void procedure_demarrage(){
 #if LCD_OUTPUT
     ihm::ihmLogger.log(SCREEN_LEVEL, "Team ?");
 #endif
-    while (!ihm::etat_bleu() && !ihm::etat_jaune()) {}
+    bool etat=false;
+    while (!ihm::etat_bleu() && !ihm::etat_jaune()) {
+        ihm::led_rouge(etat);
+        vTaskDelay(pdMS_TO_TICKS(100));
+    }
     if (ihm::etat_bleu()) {
         digitalWrite(PD11, 0);
         cerveau::automate::automateLogger.log(INFO_LEVEL,"Equipe bleue détectée\n");
         team = cerveau::automate::BLEU;
-        ihm::ihmLogger.sameLine(" Bleu");
+        Logger::sameLine(" Bleu");
     } else {
         digitalWrite(PD11, 0);
         cerveau::automate::automateLogger.log(INFO_LEVEL,"Equipe jaune détectée\n");
         team = cerveau::automate::JAUNE;
-        ihm::ihmLogger.sameLine(" Jaune");
+        Logger::sameLine(" Jaune");
     }
     cerveau::automate::init(team);
     cerveau::automate::ourTeam = team;
-    while(ihm::etat_tirette()==1){}
-    while (ihm::etat_tirette()==0){}
+    while(ihm::etat_tirette()==1){vTaskDelay(pdMS_TO_TICKS(100));}
+    while (ihm::etat_tirette()==0){vTaskDelay(pdMS_TO_TICKS(100));}
     ihm::ihmLogger.log(SCREEN_LEVEL, "Lets go !");
 
     BaseType_t ret_gripper = xTaskCreate(
@@ -53,10 +58,10 @@ void procedure_demarrage(){
 
 void cerveau::automate::init(const Team team) {
     if (team == BLEU) {
-        strategie::start = strategie::blueStart;
+        strategie::start = positions_bleu[Depart_J];
         strategie::generateBlueStrat();
     } else {
-        strategie::start = strategie::yellowStart;
+        strategie::start = positions_jaune[Depart_J];
         strategie::generateYellowStrat();
     }
     Wheeledbase::SET_POSITION(&strategie::start);
