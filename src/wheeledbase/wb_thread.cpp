@@ -246,7 +246,7 @@ for(;;) {
         velocityControl.update();
 #endif // ENABLE_VELOCITYCONTROLLER_LOGS
 
-    vTaskDelay(pdMS_TO_TICKS(1));
+    vTaskDelay(pdMS_TO_TICKS(10));
 
     //printf("%s:%lu:%d\n", "nom_variable", millis(), millis()%10000);
 }

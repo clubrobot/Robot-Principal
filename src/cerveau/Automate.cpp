@@ -5,6 +5,8 @@
 #include "Automate.h"
 
 #include "FreeRTOS.h"
+#include "Killer.h"
+#include "variables_globales.h"
 #include "Wheeledbase.h"
 #include "FreeRTOS/Source/include/task.h"
 #include "ihm/ihm.h"
@@ -37,6 +39,15 @@ void procedure_demarrage(){
     while(ihm::etat_tirette()==1){}
     while (ihm::etat_tirette()==0){}
     ihm::ihmLogger.log(SCREEN_LEVEL, "Lets go !");
+
+    BaseType_t ret_gripper = xTaskCreate(
+            &killer::killer_loop,
+            "Elevator",
+            10000,
+            nullptr,
+            5,//Prio max
+            &killer_handle );
+    if(ret_gripper!=pdPASS) {Error_Handler()}
 }
 
 void cerveau::automate::init(const Team team) {
@@ -52,6 +63,8 @@ void cerveau::automate::init(const Team team) {
 
 void cerveau::automate::play_match(void *pvParameters) {
     procedure_demarrage();   velocityControl.enable();
+
+    Wheeledbase::SET_OPENLOOP_VELOCITIES(100,0);
 
 
     while (true) {}

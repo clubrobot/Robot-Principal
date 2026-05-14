@@ -52,9 +52,7 @@ Tache banderole OK
 check reset if vl53 are flshed !!!!!!!!!!!!!!
 */
 
-TaskHandle_t hl_wb = nullptr;
-TaskHandle_t hl_sens = nullptr;
-extern TaskHandle_t hl_robot;
+
 //Setup de base
 
 
@@ -209,11 +207,9 @@ void setup(){
 
   HazelnutGripper::Elevator::init(&motor,&encoder);
 
-  //HazelnutGripper::Elevator::setAngle(55.437500);
+  HazelnutGripper::Elevator::setAngle(HazelnutGripper::Elevator::CAPTEURS);
 
 
-
-  TaskHandle_t  gripper_handle = nullptr;
 
   BaseType_t ret_gripper = xTaskCreate(
               &HazelnutGripper::Elevator::task,
@@ -274,8 +270,6 @@ void setup(){
     main_logs.log(GOOD_LEVEL,"Using FreeRTOS\n");
     //Setup FreeRTOS
 
-    TaskHandle_t  hl_wb = nullptr;
-
     BaseType_t ret_wb = xTaskCreate(
                 wb_loop,
                 "Wheeledbase loop",
@@ -285,7 +279,6 @@ void setup(){
                 &hl_wb );
     if(ret_wb!=pdPASS) {Error_Handler()}
 
-    TaskHandle_t  hl_sens = nullptr;
     BaseType_t ret_sens= xTaskCreate(
                  SensorsThread::Thread,
                 "Sensors loop",
@@ -312,6 +305,9 @@ void setup(){
     vTaskGetInfo(hl_robot, &q, pdTRUE, eInvalid);
     vTaskStartScheduler();//On commence FreeRTOS
     //On devrait pas être là; Uh oh
+    leftWheel.setVelocity(0);
+    rightWheel.setVelocity(0);
+    motor.setVelocity(0);
     main_logs.log(ERROR_LEVEL,"FreeRTOS crashed\n");
     Error_Handler();
 }

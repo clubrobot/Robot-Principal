@@ -12,4 +12,8 @@
 extern bool my_team;
 extern bool match_started;
 inline TaskHandle_t hl_robot;
+inline TaskHandle_t hl_wb;
+inline TaskHandle_t hl_sens;
+inline TaskHandle_t  gripper_handle;
+inline TaskHandle_t  killer_handle;
 #endif //TEAM2025_VARIABLES_GLOBALES_H
