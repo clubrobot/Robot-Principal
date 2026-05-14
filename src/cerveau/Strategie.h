@@ -13,7 +13,7 @@
 #include "Geogebra.h"
 
 #ifndef ELEVATOR_IN_POS
-#define ELEVATOR_IN_POS() (fabs(HazelnutGripper::Elevator::m_currentAngle - HazelnutGripper::Elevator::m_angle) < 5)
+#define ELEVATOR_IN_POS() (fabs(HazelnutGripper::Elevator::m_currentAngle - HazelnutGripper::Elevator::m_angleSetpoint) < 5)
 #endif
 
 namespace cerveau {
