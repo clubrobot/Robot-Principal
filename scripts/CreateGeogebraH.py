@@ -10,8 +10,8 @@ import re
 #   All: pour les points d'intéret commun aux deux équipes.
 #Pour chaque variable avec Bleu il en faut une autre avec Jaune à la place.
 
-CHEMIN_POINT_H="../include/Geogebra.h"
-CHEMIN_GEOGEBRA="../maps/StrategieRobotMap.ggb"
+CHEMIN_POINT_H="D:/Technique/Code/CLUB_ROBOT/team2026/include/Geogebra.h"
+CHEMIN_GEOGEBRA="D:/Technique/Code/CLUB_ROBOT/team2026/maps/StrategieRobotMap.ggb"
 
 #on lit les angles pour pouvoir les sauvegarder et ne pas les ecraser
 f = open(CHEMIN_POINT_H, "r")
@@ -68,6 +68,7 @@ for e_j in liste_jaune:
     if name in thetas_jaune:    
         theta = thetas_jaune[name]
     var_jaunes+="   Position("+str(point[0]*10)+"f, "+str(point[1]*10)+"f,"+theta+"), //"+name+"_jaune"+"\n"
+    id+=1
     found=True
 
 """Sauvegarde pour les angles:
@@ -93,7 +94,15 @@ for e_b in liste_bleu:
     theta = "TBD"
     if name in thetas_bleu:
         theta = thetas_bleu[name]
-    var_bleus+="   Position("+str(point[0]*10)+"f, "+str(point[1]*10)+"f,"+theta+"+"+str(3.14)+"), //"+name+"_bleu"+"\n"
+    if theta=="2*PI/3" or theta=="PI/2":
+        var_bleus+="   Position("+str(point[0]*10)+"f, "+str(point[1]*10)+"f,"+theta+"), //"+name+"_bleu"+"\n"
+    elif theta=="5*PI/4":
+        var_bleus+="   Position("+str(point[0]*10)+"f, "+str(point[1]*10)+"f,"+theta+"+"+str(1.57)+"), //"+name+"_bleu"+"\n"
+    elif theta=="7*PI/4":
+        var_bleus+="   Position("+str(point[0]*10)+"f, "+str(point[1]*10)+"f,"+theta+"+"+str(-1.57)+"), //"+name+"_bleu"+"\n"    
+    else:
+        var_bleus+="   Position("+str(point[0]*10)+"f, "+str(point[1]*10)+"f,"+theta+"+"+str(3.14)+"), //"+name+"_bleu"+"\n"
+    id+=1
     found=True
 
 #on crée le fichier
