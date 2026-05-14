@@ -14,7 +14,7 @@ namespace HazelnutGripper
         m_encoder->init();
 
         // Sécurité : on initialise la cible sur la position actuelle
-        m_angle = m_encoder->getAngle();
+        m_angleSetpoint = m_encoder->getAngle();
     }
 
 
@@ -39,7 +39,7 @@ namespace HazelnutGripper
             float command = 0.0f;
             if (m_pid != nullptr)
             {
-                command = m_pid->compute(m_angle, m_currentAngle, timestep);
+                command = m_pid->compute(m_angleSetpoint, m_currentAngle, timestep);
             }
 
             m_motor->setVelocity(command);
