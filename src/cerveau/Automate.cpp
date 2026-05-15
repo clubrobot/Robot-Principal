@@ -58,7 +58,7 @@ void procedure_demarrage(){
 
 void cerveau::automate::init(const Team team) {
     if (team == BLEU) {
-        strategie::start = positions_bleu[Depart_J];
+        strategie::start = positions_bleu[Depart_B];
         strategie::generateBlueStrat();
     } else {
         strategie::start = positions_jaune[Depart_J];
@@ -68,9 +68,11 @@ void cerveau::automate::init(const Team team) {
 }
 
 void cerveau::automate::play_match(void *pvParameters) {
-    procedure_demarrage();   velocityControl.enable();
+    procedure_demarrage();
+    strategie::strat->execute();
+    vTaskDelete(nullptr);
 
-    Wheeledbase::SET_OPENLOOP_VELOCITIES(100,0);
+    //Wheeledbase::SET_OPENLOOP_VELOCITIES(100,0);
 
 
     while (true) {}

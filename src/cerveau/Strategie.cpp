@@ -86,7 +86,7 @@ namespace cerveau::strategie {
 
         auto* n7 = new ActionNode();
         n7->actionFunction = [] {
-            Wheeledbase::GOTO(&positions_jaune[R0P_B], false, PurePursuit::FORWARD, false);
+            Wheeledbase::GOTO(&positions_bleu[R0P_B], false, PurePursuit::FORWARD, false);
         };
         t7->addChild(n7);
 
@@ -167,7 +167,7 @@ namespace cerveau::strategie {
         auto* n10 = new ActionNode();
         n10->actionFunction = [] {
             HazelnutGripper::Gripper::spreadFingers(0);
-            Wheeledbase::GOTO(&positions_jaune[R0D_B], true, PurePursuit::FORWARD, false);
+            Wheeledbase::GOTO(&positions_bleu[R0D_B], true, PurePursuit::FORWARD, false);
         };
         t13->addChild(n10);
 
@@ -260,7 +260,7 @@ namespace cerveau::strategie {
 
         auto* n2 = new ActionNode();
         n2->actionFunction = [] {
-            Wheeledbase::GOTO(&positions_jaune[R0L_J], true, PurePursuit::FORWARD, false);
+            Wheeledbase::GOTO(&positions_bleu[R0L_J], true, PurePursuit::FORWARD, false);
         };
         t1->addChild(n2);
 

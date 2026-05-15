@@ -255,8 +255,11 @@ void Wheeledbase::GOTO(Position* pos, const bool alignFirst, int8_t dir, const b
         const float theta = pos->theta;
         const float radius = ALIGN_DISTANCE;
 
-        const float x = pos->x + radius*cos(theta);
+        const float x = pos->x - radius*cos(theta);
         const float y = pos->y - radius*sin(theta);
+
+        printf("align point : %f %f\n", x, y);
+
         const Position appr_pos = Position(x,y,pos->theta);
         const Position *posApprTab[2]={myPos, &appr_pos};
 
