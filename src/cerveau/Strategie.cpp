@@ -11,6 +11,8 @@
 #include "Geogebra.h"
 #include "ihm/ihm.h"
 
+inline HazelnutGripper::ColorData colors[4];
+
 namespace cerveau::strategie {
     void generateBlueStrat() {
         bleuStartingNode = new ActionNode();
@@ -26,11 +28,26 @@ namespace cerveau::strategie {
         };
         bleuStartingNode->addChild(t1);
 
+
+        auto* startN = new ActionNode();
+        startN->actionFunction = []
+        {
+            Wheeledbase::GOTO(&positions_jaune[R0T_B], false, PurePursuit::FORWARD, false);
+        };
+        t1->addChild(startN);
+
+        auto *tn = new Transition();
+        tn->condition = [] {
+            return Wheeledbase::POSITION_REACHED() & 0b01;
+        };
+        startN->addChild(tn);
+
+
         auto *n2 = new ActionNode();
         n2->actionFunction = [] {
-            Wheeledbase::GOTO(&positions_bleu[R0L_B], true, PurePursuit::FORWARD, false);
+            Wheeledbase::GOTO(&positions_bleu[R2L_B], true, PurePursuit::FORWARD, false);
         };
-        t1->addChild(n2);
+        tn->addChild(n2);
 
         auto *t2 = new Transition();
         t2->condition = [] {
@@ -40,7 +57,7 @@ namespace cerveau::strategie {
 
         auto* tos1 = new ActionNode();
         tos1->actionFunction = [] {
-            Wheeledbase::START_TURNONTHESPOT(TurnOnTheSpot::TRIG, positions_bleu[R0L_B].theta);
+            Wheeledbase::START_TURNONTHESPOT(TurnOnTheSpot::TRIG, positions_bleu[R2L_B].theta);
         };
         t2->addChild(tos1);
 
@@ -104,7 +121,7 @@ namespace cerveau::strategie {
 
         auto *n7 = new ActionNode();
         n7->actionFunction = [] {
-            Wheeledbase::GOTO(&positions_bleu[R0P_B], false, PurePursuit::FORWARD, false);
+            Wheeledbase::GOTO(&positions_bleu[R2P_B], false, PurePursuit::FORWARD, false);
         };
         t7->addChild(n7);
 
@@ -187,7 +204,7 @@ namespace cerveau::strategie {
         auto *n10 = new ActionNode();
         n10->actionFunction = [] {
             HazelnutGripper::Gripper::spreadFingers(0);
-            Wheeledbase::GOTO(&positions_bleu[R0D_B], true, PurePursuit::FORWARD, false);
+            Wheeledbase::GOTO(&positions_bleu[R2D_B], true, PurePursuit::FORWARD, false);
         };
         t13->addChild(n10);
 
@@ -227,7 +244,7 @@ namespace cerveau::strategie {
 
         auto *n17 = new ActionNode();
         n17->actionFunction = [] {
-            HazelnutGripper::Elevator::setAngle(HazelnutGripper::Elevator::BAS);
+            HazelnutGripper::Elevator::setAngle(HazelnutGripper::Elevator::HAUT);
             vTaskDelay(pdMS_TO_TICKS(201));
             Wheeledbase::GOTO_DELTA(-399, 0, false);
         };
@@ -278,11 +295,24 @@ namespace cerveau::strategie {
         };
         yellowStartingNode->addChild(t1);
 
+        auto* startN = new ActionNode();
+        startN->actionFunction = []
+        {
+            Wheeledbase::GOTO(&positions_jaune[R0T_J], true, PurePursuit::FORWARD, false);
+        };
+        t1->addChild(startN);
+
+        auto *tn = new Transition();
+        tn->condition = [] {
+            return Wheeledbase::POSITION_REACHED() & 0b01;
+        };
+        startN->addChild(tn);
+
         auto *n2 = new ActionNode();
         n2->actionFunction = [] {
-            Wheeledbase::GOTO(&positions_bleu[R0L_J], true, PurePursuit::FORWARD, false);
+            Wheeledbase::GOTO(&positions_jaune[R2L_J], true, PurePursuit::FORWARD, false);
         };
-        t1->addChild(n2);
+        tn->addChild(n2);
 
         auto *t2 = new Transition();
         t2->condition = [] {
@@ -302,15 +332,17 @@ namespace cerveau::strategie {
         };
         n3->addChild(t3);
 
-        HazelnutGripper::ColorData colors[4];
         auto *n4 = new ActionNode();
-        n4->actionFunction = [&colors] {
+        n4->actionFunction = [] {
+            vTaskDelay(pdMS_TO_TICKS(200));
             for (int i = 0; i < 4; i++) {
                 HazelnutGripper::GripperFinger *finger = &HazelnutGripper::Gripper::getFinger(i);
-                finger->setSensingMode(HazelnutGripper::OperationMode::SingleRead);
+                finger->setSensingMode(HazelnutGripper::OperationMode::Continuous);
                 while (!finger->hasNewColorData()) {
+                    vTaskDelay(pdMS_TO_TICKS(20));
                 }
                 colors[i] = finger->getColor();
+                printf("color : %d, %d %d %d\n", i, colors[i].red, colors[i].green, colors[i].blue);
             }
         };
         t3->addChild(n4);
@@ -332,7 +364,7 @@ namespace cerveau::strategie {
         t7->condition = [] {
             bool t = true;
             for (int i = 0; i < 4; i++) {
-                t &= !HazelnutGripper::Gripper::getFinger(i).isTargetReached();
+                t &= HazelnutGripper::Gripper::getFinger(i).isTargetReached();
             }
             return ELEVATOR_IN_POS() && t;
         };
@@ -340,7 +372,7 @@ namespace cerveau::strategie {
 
         auto *n7 = new ActionNode();
         n7->actionFunction = [] {
-            Wheeledbase::GOTO(&positions_jaune[R0P_J], false, PurePursuit::FORWARD, false);
+            Wheeledbase::GOTO(&positions_jaune[R2P_J], false, PurePursuit::FORWARD, false);
         };
         t7->addChild(n7);
 
@@ -372,7 +404,7 @@ namespace cerveau::strategie {
         t9->condition = [] {
             bool t = true;
             for (int i = 0; i < 4; i++) {
-                t |= HazelnutGripper::Gripper::getFinger(i).isTargetReached();
+                t &= HazelnutGripper::Gripper::getFinger(i).isTargetReached();
             }
             return t;
         };
@@ -392,7 +424,7 @@ namespace cerveau::strategie {
         n12->addChild(t12);
 
         auto *n13 = new ActionNode();
-        n13->actionFunction = [&colors] {
+        n13->actionFunction = [] {
             for (int i = 0; i < 4; i++) {
                 const auto color = colors[i];
                 automate::Team t;
@@ -401,6 +433,12 @@ namespace cerveau::strategie {
                 } else {
                     t = automate::Team::BLEU;
                 }
+                if (color.red == color.blue || color.clear == 0)
+                {
+                    HazelnutGripper::Gripper::getFinger(i).setAngle(1, 90);
+                }
+
+                printf("color : %d, %d %d %d\n", i, color.red, color.green, color.blue);
                 if (t != automate::ourTeam) {
                     HazelnutGripper::Gripper::getFinger(i).setAngle(1, 180);
                 }
@@ -410,18 +448,15 @@ namespace cerveau::strategie {
 
         auto *t13 = new Transition();
         t13->condition = [] {
-            bool t = true;
-            for (int i = 0; i < 4; i++) {
-                t |= HazelnutGripper::Gripper::getFinger(i).isTargetReached();
-            }
-            return t;
+            vTaskDelay(pdMS_TO_TICKS(2000));
+            return true;
         };
         n13->addChild(t13);
 
         auto *n10 = new ActionNode();
         n10->actionFunction = [] {
             HazelnutGripper::Gripper::spreadFingers(0);
-            Wheeledbase::GOTO(&positions_jaune[R0D_J], true, PurePursuit::FORWARD, false);
+            Wheeledbase::GOTO(&positions_jaune[R2D_J], true, PurePursuit::FORWARD, false);
         };
         t13->addChild(n10);
 
@@ -453,7 +488,7 @@ namespace cerveau::strategie {
         t15->condition = [] {
             bool t = true;
             for (int i = 0; i < 4; i++) {
-                HazelnutGripper::Gripper::getFinger(i).isTargetReached();
+                t &= HazelnutGripper::Gripper::getFinger(i).isTargetReached();
             }
             return t;
         };
@@ -461,7 +496,7 @@ namespace cerveau::strategie {
 
         auto *n16 = new ActionNode();
         n16->actionFunction = [] {
-            HazelnutGripper::Elevator::setAngle(HazelnutGripper::Elevator::BAS);
+            HazelnutGripper::Elevator::setAngle(HazelnutGripper::Elevator::HAUT);
             vTaskDelay(pdMS_TO_TICKS(200));
             Wheeledbase::GOTO_DELTA(-400, 0, false);
         };
@@ -485,11 +520,25 @@ namespace cerveau::strategie {
         };
         n17->addChild(t17);
 
+        auto *n27 = new ActionNode();
+        n27->actionFunction = []
+        {
+            Wheeledbase::GOTO(&positions_jaune[R0T_J], true, PurePursuit::FORWARD, false);
+        };
+        t17->addChild(n27);
+
+        auto * t27 = new Transition();
+        t27->condition = []
+        {
+            return Wheeledbase::POSITION_REACHED() & 0b01;
+        };
+        n27->addChild(t27);
+
         auto *n18 = new ActionNode();
         n18->actionFunction = [] {
-            Wheeledbase::GOTO(&start, true, PurePursuit::FORWARD, false);
+            Wheeledbase::GOTO(&start, false, PurePursuit::BACKWARD, false);
         };
-        t17->addChild(n18);
+        t27->addChild(n18);
 
         auto *t19 = new Transition();
         t19->condition = [] {
@@ -513,7 +562,7 @@ namespace cerveau::strategie {
 
         auto* n2 = new ActionNode();
         n2->actionFunction = [] {
-          Wheeledbase::GOTO_DELTA(-400, -100, false);
+          Wheeledbase::GOTO_DELTA(-400, 100, false);
         };
         t1->addChild(n2);
 
@@ -525,7 +574,7 @@ namespace cerveau::strategie {
 
         auto* n3 = new ActionNode();
         n3->actionFunction = [] {
-            Wheeledbase::GOTO(new Position(2200, 600, PI), true, PurePursuit::FORWARD, false);
+            Wheeledbase::GOTO(new Position(2200, 600, PI), false, PurePursuit::FORWARD, false);
         };
         t2->addChild(n3);
 
@@ -571,11 +620,27 @@ namespace cerveau::strategie {
         };
         n5->addChild(t5);
 
+        auto* n12 = new ActionNode();
+        n12->actionFunction = []
+        {
+            Position p = Position(2600, 1200, PI/2);
+            Wheeledbase::GOTO(&p, true, PurePursuit::NONE, false);
+        };
+        t5->addChild(n12);
+
+        auto* t12 = new Transition();
+        t12->condition = []
+        {
+            return Wheeledbase::POSITION_REACHED() & 0b01;
+        };
+        n12->addChild(t12);
+
         auto* n6 = new ActionNode();
         n6->actionFunction = [] {
-            Wheeledbase::GOTO(&start, true, PurePursuit::NONE, false);
+            Position p = Position(start.x, start.y, PI/2);
+            Wheeledbase::GOTO(&p, true, PurePursuit::NONE, false);
         };
-        t5->addChild(n6);
+        t12->addChild(n6);
 
         auto* t6 = new Transition();
         t6->condition = [] {
@@ -657,9 +722,25 @@ namespace cerveau::strategie {
         };
         n5->addChild(t5);
 
+        auto* n12 = new ActionNode();
+        n12->actionFunction = []
+        {
+            Position p = Position(200, 1200, PI/2);
+            Wheeledbase::GOTO(&p, true, PurePursuit::NONE, false);
+        };
+        t5->addChild(n12);
+
+        auto* t12 = new Transition();
+        t12->condition = []
+        {
+            return Wheeledbase::POSITION_REACHED() & 0b01;
+        };
+        n12->addChild(t12);
+
         auto* n6 = new ActionNode();
         n6->actionFunction = [] {
-            Wheeledbase::GOTO(&start, true, PurePursuit::NONE, false);
+            Position p = Position(start.x, start.y, PI/2);
+            Wheeledbase::GOTO(&p, true, PurePursuit::NONE, false);
         };
         t5->addChild(n6);
 

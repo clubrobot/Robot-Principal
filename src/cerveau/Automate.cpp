@@ -22,12 +22,17 @@ void procedure_demarrage(){
     pinMode(PD11,OUTPUT);
 
     digitalWrite(PD11,1);
+    HazelnutGripper::Gripper::spreadFingers(0);
+    HazelnutGripper::Gripper::setRotationAll(0);
 #if LCD_OUTPUT
     ihm::ihmLogger.log(SCREEN_LEVEL, "Team ?");
 #endif
     bool etat=false;
+    bool t = false;
     while (!ihm::etat_bleu() && !ihm::etat_jaune()) {
         ihm::led_rouge(etat);
+        digitalWrite(PD11,t);
+        t = !t;
         vTaskDelay(pdMS_TO_TICKS(100));
     }
     if (ihm::etat_bleu()) {
@@ -64,8 +69,8 @@ void cerveau::automate::init(const Team team) {
         strategie::stratDeSecoursBleu();
     } else {
         strategie::start = positions_jaune[Depart_J];
-        //strategie::generateYellowStrat();
-        strategie::stratDeSecoursJaune();
+        strategie::generateYellowStrat();
+        //strategie::stratDeSecoursJaune();
     }
     Wheeledbase::SET_POSITION(&strategie::start);
 }

@@ -38,44 +38,44 @@
 
 //position geogebra de la team jaune
 inline Position positions_jaune[] = {
-   Position(30.0f, 164.60000000000002f,-PI/2), //Depart_{J}_jaune
-   Position(44.0f, 40.0f,PI), //R1L_{J}_jaune
-   Position(109.91151713267399f, 43.852527975099996f,-PI/2), //R2L_{J}_jaune
-   Position(114.7951679161948f, 53.52824981187007f,PI/2), //R3L_{J}_jaune
-   Position(40.0f, 40.0f,-PI/2), //R1P_{J}_jaune
-   Position(109.91151713267399f, 39.852527975099996f,-PI/2), //R2P_{J}_jaune
-   Position(114.7951679161948f, 57.528249811870076f,PI/2), //R3P_{J}_jaune
-   Position(9.88404375784381f, 55.74783708591414f,PI/2), //R1D_{J}_jaune
-   Position(55.9756444679994f, 103.08366002410847f,-PI/4), //R0D_{J}_jaune
-   Position(95.0f, 35.0f,- 3 * PI / 4), //R2D_{J}_jaune
-   Position(125.407903173633f, 120.35880269343f,PI / 2), //R3D_{J}_jaune
-   Position(39.978448130320004f, 119.86717541175099f,PI), //R0P_{J}_jaune
-   Position(43.978448130320004f, 119.86717541175099f,PI), //R0L_{J}_jaune
-   Position(60.622858328237f, 134.74414154568f,- PI / 4), //R0T_{J}_jaune
-   Position(40.167436202942f, 108.620349433857f, - PI / 2), //R0bisT_{J}_jaune
-   Position(47.807413141305005f, 85.94686948774701f,- PI / 2), //R1T_J_jaune
-   Position(14.782996698057001f, 43.557320023281f,3 * PI /4), //R1bisT_J_jaune
+   Position(300.0f, 1741.0f,-PI/2), //Depart_{J}_jaune
+   Position(440.00000000000006f, 400.0f,PI), //R1L_{J}_jaune
+   Position(1099.11517132674f, 438.52527975099997f,-PI/2), //R2L_{J}_jaune
+   Position(1147.951679161948f, 535.2824981187007f,PI/2), //R3L_{J}_jaune
+   Position(400.0f, 400.0f,-PI/2), //R1P_{J}_jaune
+   Position(1099.11517132674f, 398.52527975099997f,-PI/2), //R2P_{J}_jaune
+   Position(1147.951679161948f, 575.2824981187008f,PI/2), //R3P_{J}_jaune
+   Position(98.8404375784381f, 557.4783708591414f,PI/2), //R1D_{J}_jaune
+   Position(559.756444679994f, 1030.8366002410846f,-PI/4), //R0D_{J}_jaune
+   Position(940.0f, 340.0f,- 2.8 * PI / 4), //R2D_{J}_jaune
+   Position(1254.0790317363299f, 1203.5880269343f,PI / 2), //R3D_{J}_jaune
+   Position(399.78448130320004f, 1198.67175411751f,PI), //R0P_{J}_jaune
+   Position(439.7844813032f, 1198.67175411751f,PI), //R0L_{J}_jaune
+   Position(300, 1447.4414154568f,- PI / 2), //R0T_{J}_jaune
+   Position(401.67436202941997f, 1086.20349433857f,- PI / 2), //R0bisT_{J}_jaune
+   Position(478.07413141305f, 859.46869487747f,- PI / 2), //R1T_J_jaune
+   Position(147.82996698057f, 435.57320023281f,3 * PI /4), //R1bisT_J_jaune
 };
 
 //position geogebra de la team bleu
 inline Position positions_bleu[] = {
-   Position(204.89483875455016f, 35.104960558119856f,- 3 * PI / 4), //R2D_{B}_bleu
-   Position(255.88519471753486f, 40.20237154489629f,0), //R1L_{B}_bleu
-   Position(289.9710072272276f, 56.01534813867162f,PI / 2), //R1D_{B}_bleu
-   Position(189.9740795366267f, 39.928995726722015f,- PI /3), //R2P_{B}_bleu
-   Position(189.96643874376963f, 43.928988429000924f,-PI/2), //R2L_{B}_bleu
-   Position(185.06431432355475f, 53.595363872085365f,PI/2), //R3L_{B}_bleu
-   Position(185.05667353069768f, 57.595356574364274f,PI/2), //R3P_{B}_bleu
-   Position(259.8851874198138f, 40.210012337753376f,0), //R1P_{B}_bleu
-   Position(243.78906980353605f, 103.26304062258815f,- 3 * PI / 4), //R0D_{B}_bleu
-   Position(174.323938825539f, 120.40552239802415f,PI / 2), //R3D_{B}_bleu
-   Position(259.7541771143235f, 120.07708320575469f,0), //R0P_{B}_bleu
-   Position(255.75418441204462f, 120.0694424128976f,0), //R0L_{B}_bleu
-   Position(269.64715847801295f, 164.82888699588403f,- PI / 2), //Depart_B_bleu
-   Position(239.08138662655068f, 134.91458728220158f,- 3 * PI / 4), //R0T_B_bleu
-   Position(259.5866730533963f, 108.82991674223165f,- PI / 2), //R0bisT_B_bleu
-   Position(251.99002089454285f, 86.14188429200013f,PI / 4), //R1T_B_bleu
-   Position(285.0953495287365f, 43.815495345628655f,0), //R1bisT_{B}_bleu
+   Position(2048.9483875455016f, 351.0496055811986f,- 3 * PI / 4+3.14), //R2D_{B}_bleu
+   Position(2558.8519471753484f, 402.0237154489629f,PI+3.14), //R1L_{B}_bleu
+   Position(2899.7100722722757f, 560.1534813867162f,PI/2), //R1D_{B}_bleu
+   Position(1899.7407953662669f, 399.2899572672202f,-PI/2+3.14), //R2P_{B}_bleu
+   Position(1899.6643874376964f, 439.28988429000924f,-PI/2+3.14), //R2L_{B}_bleu
+   Position(1850.6431432355478f, 535.9536387208536f,PI/2), //R3L_{B}_bleu
+   Position(1850.5667353069769f, 575.9535657436428f,PI/2), //R3P_{B}_bleu
+   Position(2598.851874198138f, 402.1001233775338f,-PI/2+3.14), //R1P_{B}_bleu
+   Position(2437.8906980353604f, 1032.6304062258816f,-PI/4+3.14), //R0D_{B}_bleu
+   Position(1743.23938825539f, 1204.0552239802414f,PI / 2+3.14), //R3D_{B}_bleu
+   Position(2597.541771143235f, 1200.7708320575468f,PI+3.14), //R0P_{B}_bleu
+   Position(2557.541844120446f, 1200.6944241289762f,PI+3.14), //R0L_{B}_bleu
+   Position(2696.4715847801294f, 1741.2888699588405f,-PI/2), //Depart_B_bleu
+   Position(2390.813866265507f, 1349.145872822016f,0+3.14), //R0T_B_bleu
+   Position(2595.8667305339627f, 1088.2991674223165f,0+3.14), //R0bisT_B_bleu
+   Position(2519.9002089454284f, 861.4188429200012f,0+3.14), //R1T_B_bleu
+   Position(2850.953495287365f, 438.1549534562866f,0+3.14), //R1bisT_{B}_bleu
 };
 
 inline Position* positions_match;//ce pointeur vaut soit positions_bleus soit positions_bleu en fonction de la couleur.

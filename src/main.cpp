@@ -172,7 +172,7 @@ void setup(){
   logs.setLcdOutput(lcd);
   lcd.clear();
 
-  //SensorsThread::Init();
+  SensorsThread::Init();
 
 
   drv8876.init();
@@ -279,7 +279,7 @@ void setup(){
                 &hl_wb );
     if(ret_wb!=pdPASS) {Error_Handler()}
 
-  /*
+
     BaseType_t ret_sens= xTaskCreate(
                  SensorsThread::Thread,
                 "Sensors loop",
@@ -288,7 +288,7 @@ void setup(){
                  5,
                  &hl_sens );
 
-     if(ret_sens!=pdPASS) {Error_Handler()}*/
+     if(ret_sens!=pdPASS) {Error_Handler()}
 
 
     BaseType_t ret_robot = xTaskCreate(

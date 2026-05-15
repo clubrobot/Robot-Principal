@@ -45,13 +45,13 @@ namespace HazelnutGripper
         inline float m_currentAngle = 0.0f;
         inline float m_angleSetpoint = 0.0f; ///< Consigne de position angulaire (Setpoint) en degrés.
         inline PID* m_pid = nullptr;    ///< Correcteur PID utilisé pour le calcul de la vitesse.
-        constexpr float m_maxAngle = 90;
+        constexpr float m_maxAngle = 83;
         constexpr float m_minAngle = 160.312500;
         constexpr float m_maxRange = m_minAngle - m_maxAngle;
 
         enum elevatorHeight {
             BAS = 0,
-            CAPTEURS = 13,
+            CAPTEURS = 10,
             HAUT = static_cast<int>(m_maxRange),
         };
 
