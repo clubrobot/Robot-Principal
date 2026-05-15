@@ -50,9 +50,9 @@ element_names = [elem.get("label") for elem in elements if elem.get("label") is 
 liste_jaune=[]
 liste_bleu=[]
 for e in element_names:
-    if(e.__contains__("_{J}")):
+    if e.__contains__("_{J}") or e.__contains__("_J"):
         liste_jaune.append(e)
-    elif(e.__contains__("_{B}")):
+    elif e.__contains__("_{B}") or e.__contains__("_B"):
         liste_bleu.append(e)
 
 noms=""
@@ -112,19 +112,17 @@ f.write(noms)
 f.write("\n")
 
 f.write("//position geogebra de la team jaune\n")
-f.write("struct Position positions_jaune[] = {\n")
+f.write("inline Position positions_jaune[] = {\n")
 f.write(var_jaunes)
 f.write("};\n")
 f.write("\n")
-f.write("struct Position* positions_match;//ce pointeur vaut soit positions_jaunes soit positions_bleu en fonction de la couleur.\n")
-f.write("#endif //TEAM2026_GEOGEBRA_H_CERTIF\n")
 
 f.write("//position geogebra de la team bleu\n")
-f.write("struct Position positions_bleu[] = {\n")
+f.write("inline Position positions_bleu[] = {\n")
 f.write(var_bleus)
 f.write("};\n")
 f.write("\n")
-f.write("struct Position* positions_match;//ce pointeur vaut soit positions_bleus soit positions_bleu en fonction de la couleur.\n")
+f.write("inline Position* positions_match;//ce pointeur vaut soit positions_bleus soit positions_bleu en fonction de la couleur.\n")
 f.write("#endif //TEAM2026_GEOGEBRA_H_CERTIF\n")
 
 f.close()

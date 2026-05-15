@@ -12,7 +12,7 @@
 #include "ihm/ihm.h"
 
 namespace cerveau::strategie {
-    /*void generateBlueStrat() {
+    void generateBlueStrat() {
         bleuStartingNode = new ActionNode();
         bleuStartingNode->actionFunction = [] {
             HazelnutGripper::Elevator::setAngle(HazelnutGripper::Elevator::HAUT);
@@ -497,13 +497,13 @@ namespace cerveau::strategie {
         };
         n18->addChild(t19);
     }
-*/
+
     void stratDeSecoursBleu() {
         bleuStartingNode = new ActionNode();
         bleuStartingNode->actionFunction = [] {
             Wheeledbase::GOTO_DELTA(860, 0, false);
         };
-        bleuStartingNode->addChild(bleuStartingNode);
+        strat->setStartingNode(bleuStartingNode);
 
         auto* t1 = new Transition();
         t1->condition = [] {
@@ -525,7 +525,7 @@ namespace cerveau::strategie {
 
         auto* n3 = new ActionNode();
         n3->actionFunction = [] {
-            Wheeledbase::GOTO(new Position(2200, 800, PI), true, PurePursuit::FORWARD, false);
+            Wheeledbase::GOTO(new Position(2200, 600, PI), true, PurePursuit::FORWARD, false);
         };
         t2->addChild(n3);
 
@@ -549,7 +549,7 @@ namespace cerveau::strategie {
 
         auto* n4 = new ActionNode();
         n4->actionFunction = [] {
-            Wheeledbase::GOTO_DELTA(500, 0, false);
+            Wheeledbase::GOTO_DELTA(600, 0, false);
         };
         ttos->addChild(n4);
 
@@ -561,7 +561,7 @@ namespace cerveau::strategie {
 
         auto* n5 = new ActionNode();
         n5->actionFunction = [] {
-            Wheeledbase::GOTO_DELTA(-500, 0, false);
+            Wheeledbase::GOTO_DELTA(-700, 0, false);
         };
         t4->addChild(n5);
 
@@ -573,7 +573,7 @@ namespace cerveau::strategie {
 
         auto* n6 = new ActionNode();
         n6->actionFunction = [] {
-            Wheeledbase::GOTO(&start, false, PurePursuit::NONE, false);
+            Wheeledbase::GOTO(&start, true, PurePursuit::NONE, false);
         };
         t5->addChild(n6);
 
@@ -589,7 +589,7 @@ namespace cerveau::strategie {
         yellowStartingNode->actionFunction = [] {
             Wheeledbase::GOTO_DELTA(860, 0, false);
         };
-        ihm::ihmLogger.log(SCREEN_LEVEL, "Tout droit");
+        strat->setStartingNode(yellowStartingNode);
 
         auto* t1 = new Transition();
         t1->condition = [] {
@@ -599,10 +599,9 @@ namespace cerveau::strategie {
 
         auto* n2 = new ActionNode();
         n2->actionFunction = [] {
-          Wheeledbase::GOTO_DELTA(-400, 100, false);
+          Wheeledbase::GOTO_DELTA(-400, -100, false);
         };
         t1->addChild(n2);
-        ihm::ihmLogger.log(SCREEN_LEVEL, "Reculer un peu");
 
         auto* t2 = new Transition();
         t2->condition = [] {
@@ -612,9 +611,8 @@ namespace cerveau::strategie {
 
         auto* n3 = new ActionNode();
         n3->actionFunction = [] {
-            Wheeledbase::GOTO(new Position(800, 800, PI), true, PurePursuit::FORWARD, false);
+            Wheeledbase::GOTO(new Position(800, 600, 0), true, PurePursuit::FORWARD, false);
         };
-        ihm::ihmLogger.log(SCREEN_LEVEL, "Direction droite (ou gauche)");
         t2->addChild(n3);
 
         auto* t3 = new Transition();
@@ -637,9 +635,8 @@ namespace cerveau::strategie {
 
         auto* n4 = new ActionNode();
         n4->actionFunction = [] {
-            Wheeledbase::GOTO_DELTA(500, 0, false);
+            Wheeledbase::GOTO_DELTA(600, 0, false);
         };
-        ihm::ihmLogger.log(SCREEN_LEVEL, "Retour en direction de la base part 1")
         ttos->addChild(n4);
 
         auto* t4= new Transition();
@@ -650,9 +647,8 @@ namespace cerveau::strategie {
 
         auto* n5 = new ActionNode();
         n5->actionFunction = [] {
-            Wheeledbase::GOTO_DELTA(-500, 0, false);
+            Wheeledbase::GOTO_DELTA(-700, 0, false);
         };
-        ihm::ihmLogger.log(SCREEN_LEVEL, "Retour base part 2");
         t4->addChild(n5);
 
         auto* t5 = new Transition();
@@ -663,13 +659,13 @@ namespace cerveau::strategie {
 
         auto* n6 = new ActionNode();
         n6->actionFunction = [] {
-            Wheeledbase::GOTO(&start, false, PurePursuit::NONE, false);
+            Wheeledbase::GOTO(&start, true, PurePursuit::NONE, false);
         };
         t5->addChild(n6);
 
         auto* t6 = new Transition();
         t6->condition = [] {
-            return Wheeledbase::POSITION_REACHED() & 0b01;
+            return static_cast<bool>(Wheeledbase::POSITION_REACHED());
         };
         n6->addChild(t6);
 

@@ -25,8 +25,8 @@ namespace cerveau::strategie {
     inline ActionNode* bleuStartingNode = {};
     inline auto* strat = new StateMachine();
 
-    //void generateBlueStrat();
-    //void generateYellowStrat();
+    void generateBlueStrat();
+    void generateYellowStrat();
 
     void stratDeSecoursBleu();
     void stratDeSecoursJaune();

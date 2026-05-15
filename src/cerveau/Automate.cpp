@@ -71,6 +71,8 @@ void cerveau::automate::init(const Team team) {
 
 void cerveau::automate::play_match(void *pvParameters) {
     procedure_demarrage();
+    //HazelnutGripper::Elevator::setAngle(HazelnutGripper::Elevator::BAS);
+    //while (true){}
     strategie::strat->execute();
     vTaskDelete(nullptr);
 

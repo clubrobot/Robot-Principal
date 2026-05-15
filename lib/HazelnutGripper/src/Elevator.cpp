@@ -4,6 +4,8 @@
 
 #include "Elevator.h"
 
+#include "../../../src/ihm/ihm.h"
+
 namespace HazelnutGripper
 {
 
@@ -42,6 +44,7 @@ namespace HazelnutGripper
                 command = m_pid->compute(m_angleSetpoint, m_currentAngle, timestep);
             }
 
+            //ihm::ihmLogger.log(SCREEN_LEVEL, "%f\n", m_currentAngle);
             m_motor->setVelocity(command);
 
             // Mise à jour du temps pour la prochaine itération
