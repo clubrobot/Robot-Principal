@@ -36,17 +36,17 @@ inline Position positions_jaune[] = {
    Position(114.7951679161948f, 57.528249811870076f,PI/2), //R3P_J_jaune
    Position(9.88404375784381f, 55.74783708591414f,PI/2), //R1D_J_jaune
    Position(55.9756444679994f, 103.08366002410847f,7 * PI / 4), //R0D_J_jaune
-   Position(95.0f, 35.0f,0), //R2D_J_jaune
-   Position(125.407903173633f, 120.35880269343f,0), //R3D_J_jaune
-   Position(39.978448130320004f, 119.86717541175099f,0), //R0P_J_jaune
-   Position(43.978448130320004f, 119.86717541175099f,0), //R0L_J_jaune
+   Position(95.0f, 35.0f,5 * PI / 4), //R2D_J_jaune
+   Position(125.407903173633f, 120.35880269343f, PI / 2), //R3D_J_jaune
+   Position(39.978448130320004f, 119.86717541175099f,PI), //R0P_J_jaune
+   Position(43.978448130320004f, 119.86717541175099f,PI), //R0L_J_jaune
 };
 
 //position geogebra de la team bleu
 inline Position positions_bleu[] = {
-   Position(204.8948387545501f, 35.104960558119856f,0+3.14), //R2D_B_bleu
-   Position(289.9710072272275f, 56.01534813867162f,0+3.14), //R1D_B_bleu
-   Position(189.96643874376957f, 43.928988429000924f,0+3.14), //R2L_B_bleu
+   Position(204.8948387545501f, 35.104960558119856f,05 * PI / 4), //R2D_B_bleu
+   Position(289.9710072272275f, 56.01534813867162f,PI / 2), //R1D_B_bleu
+   Position(189.96643874376957f, 43.928988429000924f, 3 * PI / 2), //R2L_B_bleu
    Position(185.06431432355473f, 53.595363872085365f,0+3.14), //R3L_B_bleu
    Position(185.05667353069765f, 57.595356574364274f,0+3.14), //R2P_B_bleu
    Position(259.88518741981375f, 40.210012337753376f,0+3.14), //R1P_B_bleu
