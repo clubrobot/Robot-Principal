@@ -35,7 +35,7 @@ inline Position positions_jaune[] = {
    Position(109.91151713267399f, 39.852527975099996f,3*PI/2), //R2P_J_jaune
    Position(114.7951679161948f, 57.528249811870076f,PI/2), //R3P_J_jaune
    Position(9.88404375784381f, 55.74783708591414f,PI/2), //R1D_J_jaune
-   Position(55.9756444679994f, 103.08366002410847f,7), //R0D_J_jaune
+   Position(55.9756444679994f, 103.08366002410847f,7 * PI / 4), //R0D_J_jaune
    Position(95.0f, 35.0f,0), //R2D_J_jaune
    Position(125.407903173633f, 120.35880269343f,0), //R3D_J_jaune
    Position(39.978448130320004f, 119.86717541175099f,0), //R0P_J_jaune
