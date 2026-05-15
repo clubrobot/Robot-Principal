@@ -51,7 +51,7 @@ namespace HazelnutGripper
 
         enum elevatorHeight {
             BAS = 0,
-            CAPTEURS = 10,
+            CAPTEURS = 13,
             HAUT = static_cast<int>(m_maxRange),
         };
 

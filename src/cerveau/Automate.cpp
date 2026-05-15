@@ -11,6 +11,7 @@
 #include "FreeRTOS/Source/include/task.h"
 #include "ihm/ihm.h"
 #include "Geogebra.h"
+#include "include/Types.h"
 
 void procedure_demarrage(){
 
