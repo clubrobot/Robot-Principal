@@ -60,9 +60,11 @@ void cerveau::automate::init(const Team team) {
     if (team == BLEU) {
         strategie::start = positions_bleu[Depart_B];
         strategie::generateBlueStrat();
+        //strategie::stratDeSecoursBleu();
     } else {
         strategie::start = positions_jaune[Depart_J];
         strategie::generateYellowStrat();
+        //strategie::stratDeSecoursJaune();
     }
     Wheeledbase::SET_POSITION(&strategie::start);
 }

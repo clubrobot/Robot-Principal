@@ -95,13 +95,13 @@ for e_b in liste_bleu:
     if name in thetas_bleu:
         theta = thetas_bleu[name]
     if theta=="2*PI/3" or theta=="PI/2":
-        var_bleus+="   Position("+str(point[0]*100)+"f, "+str(point[1]*100)+"f,"+theta+"), //"+name+"_bleu"+"\n"
+        var_bleus+="   Position("+str(point[0]*10)+"f, "+str(point[1]*10)+"f,"+theta+"), //"+name+"_bleu"+"\n"
     elif theta=="5*PI/4":
-        var_bleus+="   Position("+str(point[0]*100)+"f, "+str(point[1]*100)+"f,"+theta+"+"+str(1.57)+"), //"+name+"_bleu"+"\n"
+        var_bleus+="   Position("+str(point[0]*10)+"f, "+str(point[1]*10)+"f,"+theta+"+"+str(1.57)+"), //"+name+"_bleu"+"\n"
     elif theta=="7*PI/4":
-        var_bleus+="   Position("+str(point[0]*100)+"f, "+str(point[1]*100)+"f,"+theta+"+"+str(-1.57)+"), //"+name+"_bleu"+"\n"
+        var_bleus+="   Position("+str(point[0]*10)+"f, "+str(point[1]*10)+"f,"+theta+"+"+str(-1.57)+"), //"+name+"_bleu"+"\n"    
     else:
-        var_bleus+="   Position("+str(point[0]*100)+"f, "+str(point[1]*100)+"f,"+theta+"+"+str(3.14)+"), //"+name+"_bleu"+"\n"
+        var_bleus+="   Position("+str(point[0]*10)+"f, "+str(point[1]*10)+"f,"+theta+"+"+str(3.14)+"), //"+name+"_bleu"+"\n"
     id+=1
     found=True
 

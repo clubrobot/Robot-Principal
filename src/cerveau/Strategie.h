@@ -28,6 +28,9 @@ namespace cerveau::strategie {
     void generateBlueStrat();
     void generateYellowStrat();
 
+    void stratDeSecoursBleu();
+    void stratDeSecoursJaune();
+
     //checkers
 
 
