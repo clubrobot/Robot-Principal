@@ -19,6 +19,7 @@ namespace cerveau::strategie {
         bleuStartingNode->actionFunction = [] {
             HazelnutGripper::Elevator::setAngle(HazelnutGripper::Elevator::HAUT);
             HazelnutGripper::Gripper::closeAll();
+            HazelnutGripper::Gripper::setRotationAll(0);
         };
         strat->setStartingNode(bleuStartingNode);
 
@@ -32,7 +33,7 @@ namespace cerveau::strategie {
         auto* startN = new ActionNode();
         startN->actionFunction = []
         {
-            Wheeledbase::GOTO(&positions_jaune[R0T_B], false, PurePursuit::FORWARD, false);
+            Wheeledbase::GOTO(&positions_bleu[R0T_B], false, PurePursuit::FORWARD, false);
         };
         t1->addChild(startN);
 
@@ -55,7 +56,7 @@ namespace cerveau::strategie {
         };
         n2->addChild(t2);
 
-        auto* tos1 = new ActionNode();
+        /*auto* tos1 = new ActionNode();
         tos1->actionFunction = [] {
             Wheeledbase::START_TURNONTHESPOT(TurnOnTheSpot::TRIG, positions_bleu[R2L_B].theta);
         };
@@ -65,13 +66,13 @@ namespace cerveau::strategie {
         tost1->condition = [] {
             return Wheeledbase::POSITION_REACHED() & 0b01;
         };
-        tos1->addChild(tost1);
+        tos1->addChild(tost1);*/
 
         auto *n3 = new ActionNode();
         n3->actionFunction = [] {
             HazelnutGripper::Elevator::setAngle(HazelnutGripper::Elevator::CAPTEURS);
         };
-        tost1->addChild(n3);
+        t2->addChild(n3);
 
         auto *t3 = new Transition();
         t3->condition = [] {
@@ -79,26 +80,26 @@ namespace cerveau::strategie {
         };
         n3->addChild(t3);
 
-        HazelnutGripper::ColorData colors[4];
         auto *n4 = new ActionNode();
-        bool q = false;
-        n4->actionFunction = [&colors, &q] {
+        n4->actionFunction = [] {
+            vTaskDelay(pdMS_TO_TICKS(200));
             for (int i = 0; i < 4; i++) {
                 HazelnutGripper::GripperFinger *finger = &HazelnutGripper::Gripper::getFinger(i);
-                finger->setSensingMode(HazelnutGripper::OperationMode::SingleRead);
-                vTaskDelay(pdMS_TO_TICKS(1300));
+                finger->setSensingMode(HazelnutGripper::OperationMode::Continuous);
                 while (!finger->hasNewColorData()) {
+                    vTaskDelay(pdMS_TO_TICKS(20));
                 }
                 colors[i] = finger->getColor();
-                ihm::ihmLogger.log(INFO_LEVEL, "%f, %f, %f", colors[i].red, colors[i].green, colors[i].blue);
+                printf("color : %d, %d %d %d\n", i, colors[i].red, colors[i].green, colors[i].blue);
+                printf("status : %d\n", finger->isFaulty());
+                vTaskDelay(pdMS_TO_TICKS(50));
             }
-            q = true;
         };
         t3->addChild(n4);
 
         auto *t4 = new Transition();
-        t4->condition = [&q] {
-            return q;
+        t4->condition = [] {
+            return true;
         };
         n4->addChild(t4);
 
@@ -146,7 +147,6 @@ namespace cerveau::strategie {
         auto *n9 = new ActionNode();
         n9->actionFunction = [] {
             HazelnutGripper::Gripper::closeAll();
-            vTaskDelay(pdMS_TO_TICKS(1000));
         };
         t8->addChild(n9);
 
@@ -156,7 +156,6 @@ namespace cerveau::strategie {
             for (int i = 0; i < 4; i++) {
                 t &= HazelnutGripper::Gripper::getFinger(i).isTargetReached();
             }
-            ihm::ihmLogger.log(INFO_LEVEL, "%d", t);
             return t;
         };
         n9->addChild(t9);
@@ -175,17 +174,16 @@ namespace cerveau::strategie {
         n12->addChild(t12);
 
         auto *n13 = new ActionNode();
-        n13->actionFunction = [&colors] {
+        n13->actionFunction = [] {
             for (int i = 0; i < 4; i++) {
-                const auto color = colors[i];
-                automate::Team t;
-                if (color.red > color.blue) {
+                const auto [clear, red, green, blue] = colors[i];
+                automate::Team t = automate::BLEU;
+                if (red > blue) {
                     t = automate::Team::JAUNE; //what red ?
-                } else {
-                    t = automate::Team::BLEU;
                 }
                 if (t != automate::ourTeam) {
                     HazelnutGripper::Gripper::getFinger(i).setAngle(1, 180);
+                    ihm::ihmLogger.log(WARNING_LEVEL, "Rotating 180°, Finger %d : clear=%d, red=%d, green=%d, blue=%d -> ENEMY", i, clear, red, green, blue);
                 }
             }
         };
@@ -193,11 +191,8 @@ namespace cerveau::strategie {
 
         auto *t13 = new Transition();
         t13->condition = [] {
-            bool t = true;
-            for (int i = 0; i < 4; i++) {
-                t |= HazelnutGripper::Gripper::getFinger(i).isTargetReached();
-            }
-            return t;
+            vTaskDelay(pdMS_TO_TICKS(1000));
+            return true;
         };
         n13->addChild(t13);
 
@@ -236,7 +231,7 @@ namespace cerveau::strategie {
         t15->condition = [] {
             bool t = true;
             for (int i = 0; i < 4; i++) {
-                HazelnutGripper::Gripper::getFinger(i).isTargetReached();
+                t &= HazelnutGripper::Gripper::getFinger(i).isTargetReached();
             }
             return t;
         };
@@ -268,11 +263,23 @@ namespace cerveau::strategie {
         };
         n17->addChild(t17);
 
+        auto *n37 = new ActionNode();
+        n37->actionFunction = [] {
+            Wheeledbase::GOTO(new Position(positions_bleu[R0T_B].x + 100, positions_bleu[R0T_B].y, PI/2), false, PurePursuit::FORWARD, false);
+        };
+        t17->addChild(n37);
+
+        auto *t37 = new Transition();
+        t37->condition = [] {
+            return Wheeledbase::POSITION_REACHED() & 0b01;
+        };
+        n37->addChild(t37);
+
         auto *n18 = new ActionNode();
         n18->actionFunction = [] {
-            Wheeledbase::GOTO(&start, true, PurePursuit::FORWARD, false);
+            Wheeledbase::GOTO(new Position(start.x + 100, start.y, PI/2), false, PurePursuit::FORWARD, false);
         };
-        t17->addChild(n18);
+        t37->addChild(n18);
 
         auto *t19 = new Transition();
         t19->condition = [] {
@@ -286,6 +293,7 @@ namespace cerveau::strategie {
         yellowStartingNode->actionFunction = [] {
             HazelnutGripper::Elevator::setAngle(HazelnutGripper::Elevator::HAUT);
             HazelnutGripper::Gripper::closeAll();
+            HazelnutGripper::Gripper::setRotationAll(0);
         };
         strat->setStartingNode(yellowStartingNode);
 
@@ -298,7 +306,7 @@ namespace cerveau::strategie {
         auto* startN = new ActionNode();
         startN->actionFunction = []
         {
-            Wheeledbase::GOTO(&positions_jaune[R0T_J], true, PurePursuit::FORWARD, false);
+            Wheeledbase::GOTO(&positions_jaune[R0T_J], false, PurePursuit::FORWARD, false);
         };
         t1->addChild(startN);
 
@@ -343,6 +351,7 @@ namespace cerveau::strategie {
                 }
                 colors[i] = finger->getColor();
                 printf("color : %d, %d %d %d\n", i, colors[i].red, colors[i].green, colors[i].blue);
+                vTaskDelay(pdMS_TO_TICKS(20));
             }
         };
         t3->addChild(n4);
@@ -426,20 +435,17 @@ namespace cerveau::strategie {
         auto *n13 = new ActionNode();
         n13->actionFunction = [] {
             for (int i = 0; i < 4; i++) {
-                const auto color = colors[i];
+                const auto [clear, red, green, blue] = colors[i];
                 automate::Team t;
-                if (color.red > color.blue) {
+                if (red > blue) {
                     t = automate::Team::JAUNE;
                 } else {
                     t = automate::Team::BLEU;
                 }
-                if (color.red == color.blue || color.clear == 0)
+                if (red == blue || clear == 0)
                 {
                     HazelnutGripper::Gripper::getFinger(i).setAngle(1, 90);
-                }
-
-                printf("color : %d, %d %d %d\n", i, color.red, color.green, color.blue);
-                if (t != automate::ourTeam) {
+                } else if (t != automate::ourTeam) {
                     HazelnutGripper::Gripper::getFinger(i).setAngle(1, 180);
                 }
             }
@@ -448,7 +454,7 @@ namespace cerveau::strategie {
 
         auto *t13 = new Transition();
         t13->condition = [] {
-            vTaskDelay(pdMS_TO_TICKS(2000));
+            vTaskDelay(pdMS_TO_TICKS(1000));
             return true;
         };
         n13->addChild(t13);

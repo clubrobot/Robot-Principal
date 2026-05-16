@@ -65,8 +65,8 @@ void procedure_demarrage(){
 void cerveau::automate::init(const Team team) {
     if (team == BLEU) {
         strategie::start = positions_bleu[Depart_B];
-        //strategie::generateBlueStrat();
-        strategie::stratDeSecoursBleu();
+        strategie::generateBlueStrat();
+        //strategie::stratDeSecoursBleu();
     } else {
         strategie::start = positions_jaune[Depart_J];
         strategie::generateYellowStrat();
@@ -77,8 +77,19 @@ void cerveau::automate::init(const Team team) {
 
 void cerveau::automate::play_match(void *pvParameters) {
     procedure_demarrage();
-    //HazelnutGripper::Elevator::setAngle(HazelnutGripper::Elevator::BAS);
-    //while (true){}
+    //while (true) {
+    //    for (int i = 0; i < 4; ++i) {
+    //        HazelnutGripper::GripperFinger *finger = &HazelnutGripper::Gripper::getFinger(i);
+    //        finger->setSensingMode(HazelnutGripper::OperationMode::Continuous);
+    //        while (!finger->hasNewColorData()) {
+    //            vTaskDelay(pdMS_TO_TICKS(20));
+    //        }
+    //        auto [clear, red, green, blue] = finger->getColor();
+    //        printf("Finger %d - Clear: %d, Red: %d, Green: %d, Blue: %d\n", i, clear, red, green, blue);
+    //        vTaskDelay(pdMS_TO_TICKS(50));
+    //    }
+    //    vTaskDelay(pdMS_TO_TICKS(100));
+    //}
     strategie::strat->execute();
     vTaskDelete(nullptr);
 

@@ -59,23 +59,23 @@ inline Position positions_jaune[] = {
 
 //position geogebra de la team bleu
 inline Position positions_bleu[] = {
-   Position(2048.9483875455016f, 351.0496055811986f,- 3 * PI / 4+3.14), //R2D_{B}_bleu
-   Position(2558.8519471753484f, 402.0237154489629f,PI+3.14), //R1L_{B}_bleu
+   Position(2078.9483875455016f, 351.0496055811986f,- PI / 4), //R2D_{B}_bleu
+   Position(2558.8519471753484f, 402.0237154489629f,PI), //R1L_{B}_bleu
    Position(2899.7100722722757f, 560.1534813867162f,PI/2), //R1D_{B}_bleu
-   Position(1899.7407953662669f, 399.2899572672202f,-PI/2+3.14), //R2P_{B}_bleu
-   Position(1899.6643874376964f, 439.28988429000924f,-PI/2+3.14), //R2L_{B}_bleu
+   Position(1899.7407953662669f, 390.2899572672202f,-1.01 * PI/2), //R2P_{B}_bleu
+   Position(1899.6643874376964f, 439.28988429000924f,-PI/2), //R2L_{B}_bleu
    Position(1850.6431432355478f, 535.9536387208536f,PI/2), //R3L_{B}_bleu
    Position(1850.5667353069769f, 575.9535657436428f,PI/2), //R3P_{B}_bleu
-   Position(2598.851874198138f, 402.1001233775338f,-PI/2+3.14), //R1P_{B}_bleu
-   Position(2437.8906980353604f, 1032.6304062258816f,-PI/4+3.14), //R0D_{B}_bleu
-   Position(1743.23938825539f, 1204.0552239802414f,PI / 2+3.14), //R3D_{B}_bleu
-   Position(2597.541771143235f, 1200.7708320575468f,PI+3.14), //R0P_{B}_bleu
-   Position(2557.541844120446f, 1200.6944241289762f,PI+3.14), //R0L_{B}_bleu
+   Position(2598.851874198138f, 402.1001233775338f,-PI/2), //R1P_{B}_bleu
+   Position(2437.8906980353604f, 1032.6304062258816f,-PI/4), //R0D_{B}_bleu
+   Position(1743.23938825539f, 1204.0552239802414f,PI / 2), //R3D_{B}_bleu
+   Position(2597.541771143235f, 1200.7708320575468f,PI), //R0P_{B}_bleu
+   Position(2557.541844120446f, 1200.6944241289762f,PI), //R0L_{B}_bleu
    Position(2696.4715847801294f, 1741.2888699588405f,-PI/2), //Depart_B_bleu
-   Position(2390.813866265507f, 1349.145872822016f,0+3.14), //R0T_B_bleu
-   Position(2595.8667305339627f, 1088.2991674223165f,0+3.14), //R0bisT_B_bleu
-   Position(2519.9002089454284f, 861.4188429200012f,0+3.14), //R1T_B_bleu
-   Position(2850.953495287365f, 438.1549534562866f,0+3.14), //R1bisT_{B}_bleu
+   Position(2696.f, 1541.f,-PI/2), //R0T_B_bleu
+   Position(2595.8667305339627f, 1088.2991674223165f,0), //R0bisT_B_bleu
+   Position(2519.9002089454284f, 861.4188429200012f,0), //R1T_B_bleu
+   Position(2850.953495287365f, 438.1549534562866f,0), //R1bisT_{B}_bleu
 };
 
 inline Position* positions_match;//ce pointeur vaut soit positions_bleus soit positions_bleu en fonction de la couleur.

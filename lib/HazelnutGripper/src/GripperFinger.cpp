@@ -44,7 +44,7 @@ namespace HazelnutGripper
 
     bool GripperFinger::isFaulty()
     {
-        return (_read8(REG_MOTOR_STATUS) & 0x80); // Bit 7
+        return (_read8(REG_COLOR_STATUS)); // Bit 7
     }
 
     void GripperFinger::setSensingMode(OperationMode mode)
