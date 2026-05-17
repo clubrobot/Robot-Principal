@@ -24,7 +24,7 @@ var NAVTREEINDEX0 =
 "d1/d6f/classAbstractCodewheel.html":[3,0,3],
 "d1/d6f/classAbstractCodewheel.html#a12ac9400c8af2b0dcfb041ad114b1831":[3,0,3,0],
 "d1/d6f/classAbstractCodewheel.html#a6298fa396bc11c0d073426ff1469f180":[3,0,3,1],
-"d1/dd7/Strategie_8h_source.html":[4,0,3,0,1],
+"d1/dd7/Strategie_8h_source.html":[4,0,3,0,2],
 "d1/de1/classHazelnutGripper_1_1AbstractAbsoluteEncoder.html":[2,0,2,0],
 "d1/de1/classHazelnutGripper_1_1AbstractAbsoluteEncoder.html":[3,0,1,0],
 "d1/de1/classHazelnutGripper_1_1AbstractAbsoluteEncoder.html#ab421d53e7835e7689aacdf3338f0b75f":[2,0,2,0,0],
@@ -161,6 +161,7 @@ var NAVTREEINDEX0 =
 "d6/d59/classHazelnutGripper_1_1GripperFinger.html#afaac0255b80ee21f3fade726dad42de1":[2,0,2,4,12],
 "d6/d59/classHazelnutGripper_1_1GripperFinger.html#afaac0255b80ee21f3fade726dad42de1":[3,0,1,4,12],
 "d6/d5e/FullSpeedServo_8h_source.html":[4,0,2,10,0],
+"d6/d64/Killer_8h_source.html":[4,0,3,0,1],
 "d6/d6e/structHazelnutGripper_1_1ColorData.html":[2,0,2,2],
 "d6/d6e/structHazelnutGripper_1_1ColorData.html":[3,0,1,2],
 "d6/d6e/structHazelnutGripper_1_1ColorData.html#a2e21beec53ecf65c14658947d69f705a":[2,0,2,2,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "d8/d4b/classTeleplot.html#ac97d0e116514c256a2903587d9469160":[3,0,41,3],
 "d8/d4b/classTeleplot.html#afa0b6c909165c8013f8555ecdfcfd65a":[3,0,41,6],
 "d8/d86/classHazelnutGripper_1_1BournsACEncoder.html":[2,0,2,1],
-"d8/d86/classHazelnutGripper_1_1BournsACEncoder.html":[3,0,1,1],
-"d8/d86/classHazelnutGripper_1_1BournsACEncoder.html#a3ea5ddac7aedc0bf0b87f09d85f99864":[2,0,2,1,0]
+"d8/d86/classHazelnutGripper_1_1BournsACEncoder.html":[3,0,1,1]
 };

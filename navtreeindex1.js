@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"d8/d86/classHazelnutGripper_1_1BournsACEncoder.html#a3ea5ddac7aedc0bf0b87f09d85f99864":[2,0,2,1,0],
 "d8/d86/classHazelnutGripper_1_1BournsACEncoder.html#a3ea5ddac7aedc0bf0b87f09d85f99864":[3,0,1,1,0],
 "d8/d86/classHazelnutGripper_1_1BournsACEncoder.html#a464841b53af6acf04fced4486a9bd1a6":[2,0,2,1,1],
 "d8/d86/classHazelnutGripper_1_1BournsACEncoder.html#a464841b53af6acf04fced4486a9bd1a6":[3,0,1,1,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "df/dd5/classCube.html#a218d1132b5833cd2971f63e1672536fe":[3,0,17,9],
 "df/dd5/classCube.html#a4cc803f1152e2f3262d5e5080df1c39b":[3,0,17,4],
 "df/dd5/classCube.html#a4eef1cce98cc773e8a70d618fc5ac146":[3,0,17,2],
-"df/dd5/classCube.html#a7e090573bfe568d67a43981b0b5bc22a":[3,0,17,5],
-"df/dd5/classCube.html#a86ba8a98729329216bc476c15bbc5fbc":[3,0,17,0]
+"df/dd5/classCube.html#a7e090573bfe568d67a43981b0b5bc22a":[3,0,17,5]
 };

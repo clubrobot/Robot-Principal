@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"df/dd5/classCube.html#a86ba8a98729329216bc476c15bbc5fbc":[3,0,17,0],
 "df/dd5/classCube.html#a8c654d6b8ee60fffcf9fe4e02d028698":[3,0,17,7],
 "df/dd5/classCube.html#a97e2615839039bba649b75dfe357eaef":[3,0,17,15],
 "df/dd5/classCube.html#a990f85c7aab6a76bf45c144efcea1529":[3,0,17,16],
