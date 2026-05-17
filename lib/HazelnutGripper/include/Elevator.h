@@ -43,11 +43,17 @@ namespace HazelnutGripper
         inline AbstractMotor* m_motor = nullptr;            ///< Pointeur vers le moteur asservi.
         inline AbstractAbsoluteEncoder* m_encoder = nullptr; ///< Pointeur vers l'encodeur de retour.
         inline float m_currentAngle = 0.0f;
-        inline float m_angle = 0.0f; ///< Consigne de position angulaire (Setpoint) en degrés.
+        inline float m_angleSetpoint = 0.0f; ///< Consigne de position angulaire (Setpoint) en degrés.
         inline PID* m_pid = nullptr;    ///< Correcteur PID utilisé pour le calcul de la vitesse.
-        constexpr float m_maxAngle = 50.625;
-        constexpr float m_minAngle = 120.9375;
+        constexpr float m_maxAngle = 83;
+        constexpr float m_minAngle = 160.312500;
         constexpr float m_maxRange = m_minAngle - m_maxAngle;
+
+        enum elevatorHeight {
+            BAS = 0,
+            CAPTEURS = 10,
+            HAUT = static_cast<int>(m_maxRange),
+        };
 
 
         /**
@@ -63,7 +69,9 @@ namespace HazelnutGripper
          * @brief Définit la position cible à atteindre.
          * @param angle Position souhaitée en degrés (deg).
          */
-        inline void setAngle(float angle) { m_angle = m_minAngle - angle; }
+        inline void setAngle(float angle) { m_angleSetpoint = m_minAngle - angle; }
+
+        inline float getAngle() {return m_minAngle - m_angleSetpoint;}
 
         /**
          * @brief Tâche de calcul de l'asservissement (Boucle de contrôle).

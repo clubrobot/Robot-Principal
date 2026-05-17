@@ -40,28 +40,10 @@ void SensorsThread::Thread(void *pvParameters){
     for (;;){
         //getNormalisedData is REQUIRED to later work with sensors
         sensors.getNormalisedData();
+        bool obstacle = false;
+        obstacle = sensors.isThereAnObstacle(-PI/4, PI/4, 400);
+        obstacle |= sensors.isThereAnObstacle(PI/4, -PI/4, 300);
 
-        float lin, ang = 0;
-        Wheeledbase::GET_VELOCITIES(&lin,&ang);
-        auto position=Wheeledbase::GET_POSITION();
-        velocityControl.set_stop(false);
-        //if (sensors.isThereAnObstacle(lin))
-
-
-
-        //if (sensors.isThereAnObstacle(lin))
-        if (sensors.isThereAnObstacleTerrain(false,lin,position->theta,position->x,position->y,TERRAIN_SIZE_X_MM,TERRAIN_SIZE_Y_MM))
-        {
-            sensors_logs.log(ERROR_LEVEL, "STOPPPP\n");
-            velocityControl.set_stop(true);
-            //Wait until no obstacle
-            while(sensors.isThereAnObstacleTerrain(true,lin,position->theta,position->x,position->y,TERRAIN_SIZE_X_MM,TERRAIN_SIZE_Y_MM))
-            //while (sensors.isThereAnObstacle(lin))
-            {
-                sensors.getNormalisedData();
-            }
-            sensors_logs.log(GOOD_LEVEL, "REPRISE\n");
-            velocityControl.set_stop(false);
-        }
+        velocityControl.set_stop(obstacle);
     }
 }

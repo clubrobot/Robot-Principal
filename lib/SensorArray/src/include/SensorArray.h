@@ -20,6 +20,9 @@
 #define SENSORARRAY_SENSOR_TIMEOUT (1/10*1000)c
 #define SENSORARRAY_RESOLUTION VL53L5CX_RESOLUTION_8X8
 
+#define X_FROM_1D(i) (uint8_t) floor(i / 8.00)
+#define Y_FROM_1D(i) (uint8_t) (i % 8)
+
 #define X_Y_FOR_LOOP uint8_t x = 0, y = 0; x < 8 && y < 8; y = (y + 1) % 8, x += y ? 0 : 1
 
 //Sensors positions in the frame
@@ -37,6 +40,7 @@
 #define SENSORARRAY_FUTURE_ORIGIN 1
 #define SENSORARRAY_CURRENT_ORIGIN 0
 
+static Logger logs = Logger("SensorArray");
 class SensorArray
 {
 public:
@@ -63,7 +67,7 @@ public:
     //Get new data
     uint8_t getNormalisedData();
     void Print();
-    bool isThereAnObstacle(float velocity);
+    bool isThereAnObstacle(float start, float end, float distance);
 
     std::vector<Point> points;
     bool isThereAnObstacleTerrain(bool interrupt, float velocity, float current_angle, float current_x, float current_y,
@@ -73,7 +77,7 @@ private:
     uint8_t nb_sensors;
     std::array<SensorHandle, 8> sensors;
 
-    int16_t raw_data[8][8][8] = {};
+    VL53L5CX_ResultsData raw_data[8] = {};
     Position origin_mesure[2][8];
 
     uint8_t power_config;
@@ -84,7 +88,6 @@ private:
 
     i2c_t* i2c_bus;
 
-    Logger logs = Logger("Sensor Array");
 
     void ApplyPowerConfig() const;
     uint8_t AquireRawData();

@@ -14,6 +14,7 @@ namespace cerveau::automate {
         JAUNE,
     };
     typedef s_Team Team;
+    inline Team ourTeam;
 
     void init(Team team);
     void play_match(void *pvParameters);

@@ -4,6 +4,8 @@
 
 #include "Elevator.h"
 
+#include "../../../src/ihm/ihm.h"
+
 namespace HazelnutGripper
 {
 
@@ -14,7 +16,7 @@ namespace HazelnutGripper
         m_encoder->init();
 
         // Sécurité : on initialise la cible sur la position actuelle
-        m_angle = m_encoder->getAngle();
+        m_angleSetpoint = m_encoder->getAngle();
     }
 
 
@@ -34,15 +36,15 @@ namespace HazelnutGripper
 
             // Lecture de la position actuelle via l'encodeur
              m_currentAngle = m_encoder->getAngle();
-            printf("Current Angle: %f\n", m_currentAngle);
 
             // Calcul de la commande via le PID
             float command = 0.0f;
             if (m_pid != nullptr)
             {
-                command = m_pid->compute(m_angle, m_currentAngle, timestep);
+                command = m_pid->compute(m_angleSetpoint, m_currentAngle, timestep);
             }
 
+            //ihm::ihmLogger.log(SCREEN_LEVEL, "%f\n", m_currentAngle);
             m_motor->setVelocity(command);
 
             // Mise à jour du temps pour la prochaine itération

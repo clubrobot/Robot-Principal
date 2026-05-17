@@ -20,7 +20,7 @@
 
 
 
-LiquidCrystal lcd(PG15, PB4, PB8, PB5, PB9, PF3);
+static LiquidCrystal lcd(PG15, PB4, PB8, PB5, PB9, PF3);
 
 #define DEBUG 1
 
@@ -52,9 +52,7 @@ Tache banderole OK
 check reset if vl53 are flshed !!!!!!!!!!!!!!
 */
 
-TaskHandle_t hl_wb = nullptr;
-TaskHandle_t hl_sens = nullptr;
-extern TaskHandle_t hl_robot;
+
 //Setup de base
 
 
@@ -168,9 +166,13 @@ void setup(){
     main_logs.log(WARNING_LEVEL,"Not using FreeRTOS\n");
     return;
 #endif
-
   lcd.begin(20, 4);
   lcd.print("Hello Club Robot !");
+  ihmLogger.setLcdOutput(lcd);
+  logs.setLcdOutput(lcd);
+  lcd.clear();
+
+  SensorsThread::Init();
 
 
   drv8876.init();
@@ -205,11 +207,9 @@ void setup(){
 
   HazelnutGripper::Elevator::init(&motor,&encoder);
 
-  HazelnutGripper::Elevator::setAngle(55.437500);
+  HazelnutGripper::Elevator::setAngle(HazelnutGripper::Elevator::HAUT);
 
 
-
-  TaskHandle_t  gripper_handle = nullptr;
 
   BaseType_t ret_gripper = xTaskCreate(
               &HazelnutGripper::Elevator::task,
@@ -270,8 +270,6 @@ void setup(){
     main_logs.log(GOOD_LEVEL,"Using FreeRTOS\n");
     //Setup FreeRTOS
 
-    TaskHandle_t  hl_wb = nullptr;
-
     BaseType_t ret_wb = xTaskCreate(
                 wb_loop,
                 "Wheeledbase loop",
@@ -281,16 +279,16 @@ void setup(){
                 &hl_wb );
     if(ret_wb!=pdPASS) {Error_Handler()}
 
-    //TaskHandle_t  hl_sens = nullptr;
-    //BaseType_t ret_sens= xTaskCreate(
-    //             SensorsThread::Thread,
-    //            "Sensors loop",
-    //             10000,
-    //             nullptr,
-    //             5,
-    //             &hl_sens );
-    //
-    // if(ret_sens!=pdPASS) {Error_Handler()}
+
+    BaseType_t ret_sens= xTaskCreate(
+                 SensorsThread::Thread,
+                "Sensors loop",
+                 10000,
+                 nullptr,
+                 5,
+                 &hl_sens );
+
+     if(ret_sens!=pdPASS) {Error_Handler()}
 
 
     BaseType_t ret_robot = xTaskCreate(
@@ -308,6 +306,9 @@ void setup(){
     vTaskGetInfo(hl_robot, &q, pdTRUE, eInvalid);
     vTaskStartScheduler();//On commence FreeRTOS
     //On devrait pas être là; Uh oh
+    leftWheel.setVelocity(0);
+    rightWheel.setVelocity(0);
+    motor.setVelocity(0);
     main_logs.log(ERROR_LEVEL,"FreeRTOS crashed\n");
     Error_Handler();
 }

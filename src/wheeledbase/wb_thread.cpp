@@ -58,6 +58,7 @@ void write_default_params()
     angVelPID.setTunings(wb_consts.ANGVELPID_KP, wb_consts.ANGVELPID_KI, wb_consts.ANGVELPID_KD);
     angVelPID.setOutputLimits(wb_consts.ANGVELPID_MINOUTPUT, wb_consts.ANGVELPID_MAXOUTPUT);
 
+    positionControl.setVelTunings(wb_consts.POSITIONCONTROL_LINVELKP, wb_consts.POSITIONCONTROL_ANGVELKP);
     positionControl.setVelLimits(wb_consts.POSITIONCONTROL_LINVELMAX, wb_consts.POSITIONCONTROL_ANGVELMAX);
     positionControl.setPosThresholds(wb_consts.POSITIONCONTROL_LINPOSTHRESHOLD,
                                      wb_consts.POSITIONCONTROL_ANGPOSTHRESHOLD);
@@ -246,7 +247,7 @@ for(;;) {
         velocityControl.update();
 #endif // ENABLE_VELOCITYCONTROLLER_LOGS
 
-    vTaskDelay(pdMS_TO_TICKS(1));
+    vTaskDelay(pdMS_TO_TICKS(10));
 
     //printf("%s:%lu:%d\n", "nom_variable", millis(), millis()%10000);
 }

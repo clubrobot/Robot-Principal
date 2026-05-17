@@ -10,9 +10,10 @@
 #include "HazelnutGripper.h"
 #include "Logger.h"
 #include "Odometry.h"
+#include "Geogebra.h"
 
 #ifndef ELEVATOR_IN_POS
-#define ELEVATOR_IN_POS() (HazelnutGripper::Elevator::m_currentAngle - HazelnutGripper::Elevator::m_angle < 5)
+#define ELEVATOR_IN_POS() (fabs(HazelnutGripper::Elevator::m_currentAngle - HazelnutGripper::Elevator::m_angleSetpoint) < 5)
 #endif
 
 namespace cerveau {
@@ -21,17 +22,21 @@ namespace cerveau {
 
 namespace cerveau::strategie {
     inline ActionNode* yellowStartingNode = {};
-    inline ActionNode* blueStartingNode = {};
+    inline ActionNode* bleuStartingNode = {};
     inline auto* strat = new StateMachine();
 
     void generateBlueStrat();
     void generateYellowStrat();
 
+    void stratDeSecoursBleu();
+    void stratDeSecoursJaune();
+
     //checkers
 
+
     inline Position start = {};
-    inline const Position blueStart = {1500, 300, PI/2};
-    inline const Position yellowStart = {0, 0, 0};
+    inline const Position blueStart;
+    inline const Position yellowStart;
 }
 
 

@@ -11,7 +11,7 @@ void TurnOnTheSpot::computeVelSetpoints(float timestep)
 	const float theta = getPosInput().theta;
 	const float linVelKp  = getLinVelKp();
 	const float linVelMax = getLinVelMax();
-	const float angVelKp  = getAngVelKp();
+	const float angVelKp  = getAngVelKp() * 3;
 	const float angVelMax = getAngVelMax();
 
 	float linPosSetpoint = cos(theta) * dx + sin(theta) * dy;
