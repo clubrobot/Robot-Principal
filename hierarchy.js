@@ -30,9 +30,6 @@ var hierarchy =
     [ "DynamixelClass", "df/dc5/classDynamixelClass.html", null ],
     [ "Elevator", "d9/db0/classElevator.html", null ],
     [ "EndStop", "df/d5b/classEndStop.html", null ],
-    [ "MyLibrary::Example", "d7/d8e/classMyLibrary_1_1Example.html", [
-      [ "MyLibrary::SubclassExample< TemplatedClass >", "db/d5b/classMyLibrary_1_1SubclassExample.html", null ]
-    ] ],
     [ "Exception", null, [
       [ "geogebra.AlreadyExistsError", "d9/d19/classgeogebra_1_1AlreadyExistsError.html", null ]
     ] ],
@@ -69,7 +66,6 @@ var hierarchy =
     [ "PID", "d8/da9/classPID.html", null ],
     [ "Point", "d8/d43/structPoint.html", null ],
     [ "Position", "d0/df4/structPosition.html", null ],
-    [ "MyLibrary::SecondExample", "dd/dc4/classMyLibrary_1_1SecondExample.html", null ],
     [ "SensorArray", "de/d4b/classSensorArray.html", null ],
     [ "SensorArray::SensorConfig", "d8/de7/structSensorArray_1_1SensorConfig.html", null ],
     [ "SensorArray::SensorHandle", "de/d73/structSensorArray_1_1SensorHandle.html", null ],
@@ -78,11 +74,6 @@ var hierarchy =
     [ "StateMachine", "d0/dc5/classStateMachine.html", null ],
     [ "StepByStepMotor", "d9/dd4/classStepByStepMotor.html", null ],
     [ "Teleplot", "d8/d4b/classTeleplot.html", null ],
-    [ "TraceHeaderBuffer", "d5/dd5/structTraceHeaderBuffer.html", null ],
-    [ "TracePrintData", "d2/def/structTracePrintData.html", null ],
-    [ "TraceStackMonitorData", "df/d5e/structTraceStackMonitorData.html", null ],
-    [ "TraceTaskMonitorCallbackData", "d4/db7/structTraceTaskMonitorCallbackData.html", null ],
-    [ "TraceTaskMonitorData", "d2/d2b/structTraceTaskMonitorData.html", null ],
     [ "tuple", null, [
       [ "geogebra.Geogebra.Circle", "db/d05/classgeogebra_1_1Geogebra_1_1Circle.html", null ],
       [ "geogebra.Geogebra.Ellipse", "d2/d1d/classgeogebra_1_1Geogebra_1_1Ellipse.html", null ],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['a_20layout_0',['Choosing a layout',['..//github/workspace/doc/doxygen-awesome-css/README.md#autotoc_md40',1,'']]],
+  ['a_20layout_0',['Choosing a layout',['..//github/workspace/doc/doxygen-awesome-css/README.md#autotoc_md9',1,'']]],
   ['abstractabsoluteencoder_1',['AbstractAbsoluteEncoder',['../d4/ddc/classAbstractAbsoluteEncoder.html',1,'AbstractAbsoluteEncoder'],['../d1/de1/classHazelnutGripper_1_1AbstractAbsoluteEncoder.html',1,'HazelnutGripper::AbstractAbsoluteEncoder']]],
   ['abstractcodewheel_2',['AbstractCodewheel',['../d1/d6f/classAbstractCodewheel.html',1,'']]],
   ['abstractmovestrategy_3',['AbstractMoveStrategy',['../de/dc0/classAbstractMoveStrategy.html',1,'']]],
@@ -16,9 +16,7 @@ var searchData=
   ['alreadyexistserror_13',['AlreadyExistsError',['../d9/d19/classgeogebra_1_1AlreadyExistsError.html',1,'geogebra']]],
   ['anchorbox_14',['AnchorBox',['../d1/d34/structObjectDetector_1_1AnchorBox.html',1,'ObjectDetector']]],
   ['angle_15',['Angle',['../d7/ddc/classgeogebra_1_1Geogebra_1_1Angle.html',1,'geogebra::Geogebra']]],
-  ['apis_16',['Trace Recorder APIs',['../da/db6/group__trace__recorder__apis.html',1,'']]],
-  ['attach_17',['attach',['../d8/d27/classAX12.html#a9e8ecee54bf85d3f07b5af9a727b805c',1,'AX12::attach()'],['../df/d5b/classEndStop.html#a5c5e28db13554902d7d5d13c7a10a6dc',1,'EndStop::attach()'],['../d9/df7/classFullSpeedServo.html#ab5af708a2e612228faa6bed800d79ea2',1,'FullSpeedServo::attach(int pin)']]],
-  ['attached_18',['attached',['../d9/df7/classFullSpeedServo.html#abd9583b7b5f6e918f295918eeb79a777',1,'FullSpeedServo']]],
-  ['available_20variables_19',['Available variables',['../d1/d47/md_doc_2doxygen-awesome-css_2docs_2customization.html#autotoc_md3',1,'']]],
-  ['ax12_20',['AX12',['../d8/d27/classAX12.html',1,'']]]
+  ['attach_16',['attach',['../d8/d27/classAX12.html#a9e8ecee54bf85d3f07b5af9a727b805c',1,'AX12::attach()'],['../df/d5b/classEndStop.html#a5c5e28db13554902d7d5d13c7a10a6dc',1,'EndStop::attach()'],['../d9/df7/classFullSpeedServo.html#ab5af708a2e612228faa6bed800d79ea2',1,'FullSpeedServo::attach(int pin)']]],
+  ['attached_17',['attached',['../d9/df7/classFullSpeedServo.html#abd9583b7b5f6e918f295918eeb79a777',1,'FullSpeedServo']]],
+  ['ax12_18',['AX12',['../d8/d27/classAX12.html',1,'']]]
 ];

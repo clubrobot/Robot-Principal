@@ -25,7 +25,6 @@
 var menudata={children:[
 {text:"Page principale",url:"index.html"},
 {text:"Pages associées",url:"pages.html"},
-{text:"Topics",url:"topics.html"},
 {text:"Espaces de nommage",url:"namespaces.html",children:[
 {text:"Liste des espaces de nommage",url:"namespaces.html"},
 {text:"Membres de l'espace de nommage",url:"namespacemembers.html",children:[
@@ -97,7 +96,4 @@ var menudata={children:[
 {text:"Énumérations",url:"functions_enum.html"},
 {text:"Valeurs énumérées",url:"functions_eval.html"}]}]},
 {text:"Fichiers",url:"files.html",children:[
-{text:"Liste des fichiers",url:"files.html"},
-{text:"Membres de fichier",url:"globals.html",children:[
-{text:"Tout",url:"globals.html"},
-{text:"Macros",url:"globals_defs.html"}]}]}]}
+{text:"Liste des fichiers",url:"files.html"}]}]}

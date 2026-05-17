@@ -12,11 +12,6 @@ var annotated_dup =
       [ "Gripper", "d4/dcb/classHazelnutGripper_1_1Gripper.html", null ],
       [ "GripperFinger", "d6/d59/classHazelnutGripper_1_1GripperFinger.html", "d6/d59/classHazelnutGripper_1_1GripperFinger" ]
     ] ],
-    [ "MyLibrary", null, [
-      [ "Example", "d7/d8e/classMyLibrary_1_1Example.html", "d7/d8e/classMyLibrary_1_1Example" ],
-      [ "SecondExample", "dd/dc4/classMyLibrary_1_1SecondExample.html", null ],
-      [ "SubclassExample", "db/d5b/classMyLibrary_1_1SubclassExample.html", "db/d5b/classMyLibrary_1_1SubclassExample" ]
-    ] ],
     [ "AbstractAbsoluteEncoder", "d4/ddc/classAbstractAbsoluteEncoder.html", "d4/ddc/classAbstractAbsoluteEncoder" ],
     [ "AbstractCodewheel", "d1/d6f/classAbstractCodewheel.html", "d1/d6f/classAbstractCodewheel" ],
     [ "AbstractMoveStrategy", "de/dc0/classAbstractMoveStrategy.html", "de/dc0/classAbstractMoveStrategy" ],
@@ -57,11 +52,6 @@ var annotated_dup =
     [ "StateMachine", "d0/dc5/classStateMachine.html", "d0/dc5/classStateMachine" ],
     [ "StepByStepMotor", "d9/dd4/classStepByStepMotor.html", null ],
     [ "Teleplot", "d8/d4b/classTeleplot.html", "d8/d4b/classTeleplot" ],
-    [ "TraceHeaderBuffer", "d5/dd5/structTraceHeaderBuffer.html", null ],
-    [ "TracePrintData", "d2/def/structTracePrintData.html", null ],
-    [ "TraceStackMonitorData", "df/d5e/structTraceStackMonitorData.html", null ],
-    [ "TraceTaskMonitorCallbackData", "d4/db7/structTraceTaskMonitorCallbackData.html", null ],
-    [ "TraceTaskMonitorData", "d2/d2b/structTraceTaskMonitorData.html", null ],
     [ "Transition", "de/dfc/classTransition.html", null ],
     [ "TurnOnTheSpot", "d9/dee/classTurnOnTheSpot.html", "d9/dee/classTurnOnTheSpot" ],
     [ "VelocityController", "de/d33/classVelocityController.html", "de/d33/classVelocityController" ],
