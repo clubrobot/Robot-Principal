@@ -1,5 +1,0 @@
-<map id="os_thread_def" name="os_thread_def">
-<area shape="rect" id="Node000001" title="Thread Definition structure contains startup information of a thread." alt="" coords="7,94,111,120"/>
-<area shape="rect" id="Node000002" href="$d8/d7d/structosThreadAttr__t.html" title="Attributes structure for thread." alt="" coords="5,5,113,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,47,62,94,56,94,56,47"/>
-</map>

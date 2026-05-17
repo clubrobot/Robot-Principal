@@ -1,7 +1,0 @@
-<map id="MPU_SETTINGS" name="MPU_SETTINGS">
-<area shape="rect" id="Node000001" title="MPU settings as stored in the TCB." alt="" coords="108,94,232,120"/>
-<area shape="rect" id="Node000002" href="$da/d6a/structMPURegionSettings.html" title="Settings to define an MPU region." alt="" coords="5,5,145,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,39,158,92,155,96,97,43"/>
-<area shape="rect" id="Node000003" href="$d8/d3e/structMPU__REGION__REGISTERS.html" title=" " alt="" coords="169,5,360,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="255,47,237,72,201,96,198,91,233,68,251,43"/>
-</map>

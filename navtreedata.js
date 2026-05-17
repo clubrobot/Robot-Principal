@@ -71,7 +71,6 @@ var NAVTREE =
         [ "Bordered Images", "dc/d95/md_doc_2doxygen-awesome-css_2docs_2tricks.html#autotoc_md23", null ]
       ] ]
     ] ],
-    [ "Header File Template: cmsis_os.h", "d8/dd7/cmsis_os_h.html", null ],
     [ "team2026", "d0/d30/md_README.html", null ],
     [ "Liste des bogues", "de/da5/bug.html", null ],
     [ "Liste des éléments obsolètes", "da/d58/deprecated.html", null ],
@@ -100,8 +99,6 @@ var NAVTREE =
       [ "Liste des fichiers", "files.html", "files_dup" ],
       [ "Membres de fichier", "globals.html", [
         [ "Tout", "globals.html", null ],
-        [ "Fonctions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -111,10 +108,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d5/d78/PeriodicProcess_8h_source.html",
-"d8/da9/classPID.html#a11d8c4753029f8cc187d2751cb00c4e9",
-"dd/d9e/structxTASK__PARAMETERS.html",
-"dir_41af2339333c1cd5a59ed81a66d0897a.html"
+"d8/d27/classAX12.html",
+"de/d33/classVelocityController.html",
+"namespacemembers.html"
 ];
 
 var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';

@@ -26,8 +26,5 @@ var searchData=
   ['vl53l5cx_5fset_5fsharpener_5fpercent_23',['vl53l5cx_set_sharpener_percent',['../d9/d0e/classVL53L5CX.html#a4c787e6f7ba9c1d33c08091ec8bf3cb5',1,'VL53L5CX']]],
   ['vl53l5cx_5fset_5ftarget_5forder_24',['vl53l5cx_set_target_order',['../d9/d0e/classVL53L5CX.html#a9b0fcda068a014b239c53a42639fc506',1,'VL53L5CX']]],
   ['vl53l5cx_5fstart_5franging_25',['vl53l5cx_start_ranging',['../d9/d0e/classVL53L5CX.html#afe1a31661c55b72124ddec9552d208d6',1,'VL53L5CX']]],
-  ['vl53l5cx_5fstop_5franging_26',['vl53l5cx_stop_ranging',['../d9/d0e/classVL53L5CX.html#a63bfc62532c023bc56cec467d201c69c',1,'VL53L5CX']]],
-  ['vmainconfiguretimerforruntimestats_27',['vMainConfigureTimerForRunTimeStats',['../db/df1/STM32FreeRTOS_8c.html#ab042bd469054b754e2710fa560fd3ff7',1,'STM32FreeRTOS.c']]],
-  ['vportfree_28',['vPortFree',['../d6/dd2/heap__useNewlib__ST_8c.html#a735cd3085bb7ba06ff8e47565bfd7016',1,'heap_useNewlib_ST.c']]],
-  ['vportinitialiseblocks_29',['vPortInitialiseBlocks',['../d6/dd2/heap__useNewlib__ST_8c.html#a8bf103ce32ce8473574e9920af8b4eec',1,'heap_useNewlib_ST.c']]]
+  ['vl53l5cx_5fstop_5franging_26',['vl53l5cx_stop_ranging',['../d9/d0e/classVL53L5CX.html#a63bfc62532c023bc56cec467d201c69c',1,'VL53L5CX']]]
 ];
