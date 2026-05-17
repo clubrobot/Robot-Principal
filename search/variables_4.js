@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['red_0',['red',['../d6/d6e/structHazelnutGripper_1_1ColorData.html#ad68365274ff5316d7bae1cf3e21cebb7',1,'HazelnutGripper::ColorData']]]
+  ['istransition_0',['isTransition',['../dc/d19/classGrafcet_1_1Node.html#a74971d03f54e9d30a0f0deb3cfc49278',1,'Grafcet::Node']]]
 ];

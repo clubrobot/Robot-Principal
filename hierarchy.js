@@ -46,9 +46,9 @@ var hierarchy =
     ] ],
     [ "Logger", "db/d67/classLogger.html", null ],
     [ "Musique", "d6/da1/classMusique.html", null ],
-    [ "Node", "df/dd0/classNode.html", [
-      [ "ActionNode", "d0/dfd/classActionNode.html", null ],
-      [ "Transition", "de/dfc/classTransition.html", null ]
+    [ "Grafcet::Node", "dc/d19/classGrafcet_1_1Node.html", [
+      [ "Grafcet::ActionNode", "d6/d86/classGrafcet_1_1ActionNode.html", null ],
+      [ "Grafcet::Transition", "da/d58/classGrafcet_1_1Transition.html", null ]
     ] ],
     [ "NonCopyable", "dc/d3c/classNonCopyable.html", [
       [ "Codewheel", "dd/df3/classCodewheel.html", null ]
@@ -71,7 +71,7 @@ var hierarchy =
     [ "SensorArray::SensorHandle", "de/d73/structSensorArray_1_1SensorHandle.html", null ],
     [ "ShiftRegister", "de/ded/classShiftRegister.html", null ],
     [ "Sphere", "de/d9d/classSphere.html", null ],
-    [ "StateMachine", "d0/dc5/classStateMachine.html", null ],
+    [ "Grafcet::StateMachine", "da/d23/classGrafcet_1_1StateMachine.html", null ],
     [ "StepByStepMotor", "d9/dd4/classStepByStepMotor.html", null ],
     [ "Teleplot", "d8/d4b/classTeleplot.html", null ],
     [ "tuple", null, [

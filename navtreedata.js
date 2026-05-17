@@ -55,8 +55,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d8/d86/classHazelnutGripper_1_1BournsACEncoder.html#a3ea5ddac7aedc0bf0b87f09d85f99864",
-"df/dd5/classCube.html#a86ba8a98729329216bc476c15bbc5fbc"
+"d8/d86/classHazelnutGripper_1_1BournsACEncoder.html",
+"df/d5b/classEndStop.html#a859767b5221d1549710309fd865dfc12"
 ];
 
 var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';

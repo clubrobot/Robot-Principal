@@ -5,6 +5,12 @@ var annotated_dup =
       [ "Geogebra", "dc/df0/classgeogebra_1_1Geogebra.html", "dc/df0/classgeogebra_1_1Geogebra" ],
       [ "LabelAlreadyUse", "d3/de3/classgeogebra_1_1LabelAlreadyUse.html", null ]
     ] ],
+    [ "Grafcet", null, [
+      [ "ActionNode", "d6/d86/classGrafcet_1_1ActionNode.html", "d6/d86/classGrafcet_1_1ActionNode" ],
+      [ "Node", "dc/d19/classGrafcet_1_1Node.html", "dc/d19/classGrafcet_1_1Node" ],
+      [ "StateMachine", "da/d23/classGrafcet_1_1StateMachine.html", "da/d23/classGrafcet_1_1StateMachine" ],
+      [ "Transition", "da/d58/classGrafcet_1_1Transition.html", "da/d58/classGrafcet_1_1Transition" ]
+    ] ],
     [ "HazelnutGripper", "d2/d51/namespaceHazelnutGripper.html", [
       [ "AbstractAbsoluteEncoder", "d1/de1/classHazelnutGripper_1_1AbstractAbsoluteEncoder.html", "d1/de1/classHazelnutGripper_1_1AbstractAbsoluteEncoder" ],
       [ "BournsACEncoder", "d8/d86/classHazelnutGripper_1_1BournsACEncoder.html", "d8/d86/classHazelnutGripper_1_1BournsACEncoder" ],
@@ -15,7 +21,6 @@ var annotated_dup =
     [ "AbstractAbsoluteEncoder", "d4/ddc/classAbstractAbsoluteEncoder.html", "d4/ddc/classAbstractAbsoluteEncoder" ],
     [ "AbstractCodewheel", "d1/d6f/classAbstractCodewheel.html", "d1/d6f/classAbstractCodewheel" ],
     [ "AbstractMoveStrategy", "de/dc0/classAbstractMoveStrategy.html", "de/dc0/classAbstractMoveStrategy" ],
-    [ "ActionNode", "d0/dfd/classActionNode.html", null ],
     [ "AX12", "d8/d27/classAX12.html", "d8/d27/classAX12" ],
     [ "BasicMoveStrategy", "de/d22/classBasicMoveStrategy.html", "de/d22/classBasicMoveStrategy" ],
     [ "BasicTurnStrategy", "db/d2b/classBasicTurnStrategy.html", "db/d2b/classBasicTurnStrategy" ],
@@ -36,7 +41,6 @@ var annotated_dup =
     [ "LedButton", "d8/d45/classLedButton.html", null ],
     [ "Logger", "db/d67/classLogger.html", null ],
     [ "Musique", "d6/da1/classMusique.html", "d6/da1/classMusique" ],
-    [ "Node", "df/dd0/classNode.html", null ],
     [ "NonCopyable", "dc/d3c/classNonCopyable.html", null ],
     [ "ObjectDetector", "d6/dd4/classObjectDetector.html", "d6/dd4/classObjectDetector" ],
     [ "Odometry", "d6/dc3/classOdometry.html", "d6/dc3/classOdometry" ],
@@ -49,10 +53,8 @@ var annotated_dup =
     [ "SensorArray", "de/d4b/classSensorArray.html", "de/d4b/classSensorArray" ],
     [ "ShiftRegister", "de/ded/classShiftRegister.html", null ],
     [ "Sphere", "de/d9d/classSphere.html", "de/d9d/classSphere" ],
-    [ "StateMachine", "d0/dc5/classStateMachine.html", "d0/dc5/classStateMachine" ],
     [ "StepByStepMotor", "d9/dd4/classStepByStepMotor.html", null ],
     [ "Teleplot", "d8/d4b/classTeleplot.html", "d8/d4b/classTeleplot" ],
-    [ "Transition", "de/dfc/classTransition.html", null ],
     [ "TurnOnTheSpot", "d9/dee/classTurnOnTheSpot.html", "d9/dee/classTurnOnTheSpot" ],
     [ "VelocityController", "de/d33/classVelocityController.html", "de/d33/classVelocityController" ],
     [ "VL53L5CX", "d9/d0e/classVL53L5CX.html", "d9/d0e/classVL53L5CX" ],

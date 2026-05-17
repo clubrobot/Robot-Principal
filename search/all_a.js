@@ -8,5 +8,6 @@ var searchData=
   ['isenabled_5',['isEnabled',['../d2/dfa/classPeriodicProcess.html#a4ba917a9760e4df62a8e763cc43ee4c5',1,'PeriodicProcess']]],
   ['isfaulty_6',['isFaulty',['../d6/d59/classHazelnutGripper_1_1GripperFinger.html#adcae8d39956361c64df1a7ebe908e635',1,'HazelnutGripper::GripperFinger']]],
   ['ismoving_7',['isMoving',['../d6/d59/classHazelnutGripper_1_1GripperFinger.html#aada279e33cf5dc1497f004bca3902903',1,'HazelnutGripper::GripperFinger']]],
-  ['istargetreached_8',['isTargetReached',['../d6/d59/classHazelnutGripper_1_1GripperFinger.html#ac6ed4d92ed739a851dc702f9c2b4c28a',1,'HazelnutGripper::GripperFinger']]]
+  ['istargetreached_8',['isTargetReached',['../d6/d59/classHazelnutGripper_1_1GripperFinger.html#ac6ed4d92ed739a851dc702f9c2b4c28a',1,'HazelnutGripper::GripperFinger']]],
+  ['istransition_9',['isTransition',['../dc/d19/classGrafcet_1_1Node.html#a74971d03f54e9d30a0f0deb3cfc49278',1,'Grafcet::Node']]]
 ];
