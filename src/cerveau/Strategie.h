@@ -21,9 +21,9 @@ namespace cerveau {
 }
 
 namespace cerveau::strategie {
-    inline ActionNode* yellowStartingNode = {};
-    inline ActionNode* bleuStartingNode = {};
-    inline auto* strat = new StateMachine();
+    inline Grafcet::ActionNode* yellowStartingNode = {};
+    inline Grafcet::ActionNode* bleuStartingNode = {};
+    inline auto* strat = new Grafcet::StateMachine();
 
     void generateBlueStrat();
     void generateYellowStrat();
