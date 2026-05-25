@@ -1,0 +1,14 @@
+Checks: >
+  clang-analyzer-*,
+  bugprone-*,
+  modernize-*,
+  performance-*,
+  readability-*,
+  -modernize-use-trailing-return-type
+
+WarningsAsErrors: 'clang-analyzer-*,bugprone-*'
+HeaderFilterRegex: ''
+FormatStyle:    file
+CheckOptions:
+  - key:             modernize-use-auto.MinTypeNameLength
+    value:           '5'
