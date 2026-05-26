@@ -1,5 +1,8 @@
 Checks: >
+  -*
+  llvm-*,
   clang-analyzer-*,
+  clang-analyzer-cplusplus*,
   bugprone-*,
   modernize-*,
   performance-*,
