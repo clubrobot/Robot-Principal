@@ -1,3 +1,10 @@
+/**
+ * @file wb_thread.h
+ * @ingroup wheeledbase
+ * @ingroup core
+ * @brief Contient les fonctions et variables nécessaires pour gérer le thread de base roulante
+ */
+
 #ifndef WB_THREAD_H
 #define WB_THREAD_H
 

@@ -1,6 +1,12 @@
 //
 // Created by boris on 30/10/2024.
 //
+/**
+ * @file SensorsThread.h
+ * @ingroup sensors
+ * @ingroup core
+ * @brief Contient les fonctions et variables nécessaires pour gérer le thread des capteurs.
+ */
 
 #ifndef SENSORS_THREAD_H
 #define SENSORS_THREAD_H

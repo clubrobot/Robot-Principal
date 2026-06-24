@@ -2,6 +2,13 @@
 // Created by awing on 10/05/2026.
 //
 
+/**
+ * @file Automate.h
+ * @ingroup strategy
+ * @ingroup core
+ * @brief Contient le code nécessaire pour jouer un match.
+ */
+
 #ifndef TEAM2026_AUTOMATE_H
 #define TEAM2026_AUTOMATE_H
 

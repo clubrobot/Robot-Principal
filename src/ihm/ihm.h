@@ -2,6 +2,13 @@
 // Created by boris on 5/1/25.
 //
 
+/**
+ * @file ihm.h
+ * @ingroup ihm
+ * @ingroup core
+ * @brief Contient diverses fonctions permettant d'intéragir avec l'utilisateur via les boutons et les leds.
+ */
+
 #ifndef IHM_H
 #define IHM_H
 

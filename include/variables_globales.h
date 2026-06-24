@@ -2,6 +2,11 @@
 // Created by bapti on 04/11/2024.
 //
 
+/**
+ *  @file variables_globales.h
+ *  @ingroup core
+ */
+
 #ifndef TEAM2025_VARIABLES_GLOBALES_H
 #define TEAM2025_VARIABLES_GLOBALES_H
 #include "FreeRTOS.h"

@@ -2,6 +2,13 @@
 // Created by awing on 10/05/2026.
 //
 
+/**
+ * @file Strategie.h
+ * @ingroup strategy
+ * @ingroup core
+ * @brief Contient les diverses stratégies que le robot peut executer
+ */
+
 #ifndef TEAM2026_STRATEGIE_H
 #define TEAM2026_STRATEGIE_H
 

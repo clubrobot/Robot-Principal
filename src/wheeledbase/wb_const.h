@@ -1,3 +1,10 @@
+/**
+ *  @file wb_const.h
+ *  @ingroup wheeledbase
+ *  @ingroup core
+ *  @brief Diverses constantes concernant la base roulante
+ */
+
 #ifndef __WB_CONST_H__
 #define __WB_CONST_H__
 
