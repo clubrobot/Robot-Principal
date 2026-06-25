@@ -1,4 +1,5 @@
 <!--! \page base_roulante Base Roulante -->
+<!--! \ingroup wheeledbase -->
 # PC, DC, VC, kézako ?
 Dans cette section, nous allons aborder le schéma compliqué qu'entretiennent les différents composants de la base roulante du robot.
 * **\ref PositionController (PC)** : Ce composant gère l'asservissement en position du robot.
