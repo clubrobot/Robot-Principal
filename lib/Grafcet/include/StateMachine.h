@@ -1,6 +1,11 @@
 //
 // Created by awing on 09/05/2026.
 //
+/**
+ * @file StateMachine.h
+ * @ingroup grafcet
+ * @brief La machine a état permettant de parcourir le grafcet
+ */
 
 #ifndef TEAM2026_STATEMACHINE_H
 #define TEAM2026_STATEMACHINE_H

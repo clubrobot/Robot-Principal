@@ -1,6 +1,11 @@
 //
 // Created by awing on 09/05/2026.
 //
+/**
+ * @file ActionNode.h
+ * @ingroup grafcet
+ * @brief Un noeud d'action du grafcet, permettant de réaliser des actions de front montant
+ */
 
 #ifndef TEAM2026_ACTIONNODE_H
 #define TEAM2026_ACTIONNODE_H

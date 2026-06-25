@@ -1,6 +1,11 @@
 //
 // Created by awing on 10/05/2026.
 //
+/**
+ * @file Grafcet.h
+ * @ingroup grafcet
+ * @brief Header wrapper pour faciliter les import
+ */
 
 #ifndef GRAFCET_TEST_GRAFCET_H
 #define GRAFCET_TEST_GRAFCET_H

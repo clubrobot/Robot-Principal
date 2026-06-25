@@ -1,6 +1,11 @@
 //
 // Created by awing on 09/05/2026.
 //
+/**
+ * @file Transition.h
+ * @ingroup grafcet
+ * @brief Un noeud de transition du grafcet permettant d'évaluer la condition de passage d'un noeud d'action à un autre
+ */
 
 #ifndef TEAM2026_TRANSITION_H
 #define TEAM2026_TRANSITION_H

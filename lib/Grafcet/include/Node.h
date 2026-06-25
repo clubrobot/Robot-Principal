@@ -1,7 +1,11 @@
 //
 // Created by awing on 09/05/2026.
 //
-
+/**
+ * @file Node.h
+ * @ingroup grafcet
+ * @brief Représentation d'un noeud du grafcet
+ */
 #ifndef TEAM2026_NODE_H
 #define TEAM2026_NODE_H
 
