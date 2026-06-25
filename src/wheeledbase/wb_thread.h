@@ -22,7 +22,12 @@
 #include "mathutils.h"
 
 // Load the different modules
-
+/**
+ * @defgroup wb-componants Composants de la base roulante
+ * @ingroup globals
+ * @brief Les divers constituants (moteurs, pid...) de la base roulante
+ * @{
+ */
 extern DRV8844 driver;
 extern WheelMotor leftWheel;
 extern WheelMotor rightWheel;
@@ -47,6 +52,7 @@ extern PositionController positionControl;
 
 extern PurePursuit purePursuit;
 extern TurnOnTheSpot turnOnTheSpot;
+/// @}
 
 void wb_setup();
 void wb_loop(void *pvParameters);

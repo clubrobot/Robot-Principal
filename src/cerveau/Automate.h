@@ -14,7 +14,12 @@
 
 #include "Strategie.h"
 
+/**
+ * @namespace cerveau::automate
+ * @brief Contient le code nécessaire pour jouer un match.
+ */
 namespace cerveau::automate {
+    //TODO: (2026-06-25) Dedup le logger avec celui du NS cerveau
     inline auto automateLogger = Logger("AUTOMATE");
     enum s_Team {
         BLEU,
