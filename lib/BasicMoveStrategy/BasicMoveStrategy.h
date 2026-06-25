@@ -7,12 +7,16 @@
 #include "PositionController.h"
 #include "PID.h"
 
+/**
+ * @class BasicMoveStrategy
+ * @ingroup wheeledbase
+ * @ingroup libs
+ * @brief Stratégie de mouvement basique.
+ *
+ * Stratégie développée afin de déplacer le robot en ligne droite selon l'axe x pour régler le PID.
+ */
 class BasicMoveStrategy : public AbstractMoveStrategy {
-    /**
-     * @brief Stratégie de mouvement basique.
-     *
-     * Stratégie développée afin de déplacer le robot en ligne droite selon l'axe x pour régler le PID.
-     */
+
 public:
     float theta_init = 0;
     PID ang_pid = {};

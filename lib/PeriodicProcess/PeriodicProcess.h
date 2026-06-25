@@ -3,7 +3,8 @@
 
 #include "My_Clock.h"
 
-/** class PeriodicProcess
+/** \class PeriodicProcess
+ * \ingroup libs
  *  \brief Classe à implémenter pour gérer les appels dans la loop.
  *
  *  est un outil permettant à l'Arduino de pouvoir appeler l'objet PeriodicProcess tout les X s. 

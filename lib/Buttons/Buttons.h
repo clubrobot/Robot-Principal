@@ -6,7 +6,12 @@
 #define BUTTONS_H
 #include <Arduino.h>
 
-
+/**
+ * @class Buttons
+ * @ingroup libs
+ * @ingroup ihm
+ * @brief Représente un bouton
+ */
 class Buttons {
     public:
         Buttons(uint32_t pin, uint32_t inMode);
@@ -18,7 +23,12 @@ class Buttons {
         bool isIT;
 };
 
-
+/**
+ * @class LedButton
+ * @ingroup ihm
+ * @ingroup libs
+ * @brief Représente un bouton avec une LED intégrée
+ */
 class LedButton: public Buttons {
     public:
         LedButton(uint32_t Btnpin, uint32_t inMode, uint32_t Ledpin);

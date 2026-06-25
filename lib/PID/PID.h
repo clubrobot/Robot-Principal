@@ -4,6 +4,9 @@
 #include <math.h>
 
 /**
+ * @class PID
+ * @ingroup wheeledbase
+ * @ingroup libs
  * @brief Classe d'asservissement 
  * \author Ulysse Darmet
  * PID est une classe d'asservissement composée des 3 types d'asservissements. Elle permet à partir de l'erreur et de la constante désiré de retourner une commande asservie.

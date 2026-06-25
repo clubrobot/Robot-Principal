@@ -6,7 +6,9 @@
 
 #include <math.h>
 
-/** class Codewheel
+/** \class Codewheel
+ *  \ingroup libs
+ *  \ingroup wheeledbase
  *  \brief Fait la passerelle entre les roues codeuses et le stm32
  *  \author Boris HILKENS
  *	Cette classe permet de récupérer les tics des roues codeuses à travers le timer du STM32.

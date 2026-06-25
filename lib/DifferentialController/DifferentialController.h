@@ -8,6 +8,9 @@
 
 
 /**
+ * @class DifferentialController
+ * @ingroup wheeledbase
+ * @ingroup libs
  * @brief Controle les moteurs.
  * 
  * DifferentialController permet de controler les deux moteurs du robot à partir de l'odométrie et d'un PID.
