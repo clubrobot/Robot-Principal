@@ -33,3 +33,6 @@ puis passer le contrôle à FreeRTOS. Une fois lancé, FreeRTOS va exécuter les
 
 Il existe une dernière tâche, le killer (`src/cerveau/killer.cpp`), qui est responsable de l'arrêt du robot à la fin du temps imparti pour le match.
 Cette tâche est lancée par un timer FreeRTOS une fois que le match se fini.
+
+<!--! \see \subpage base_roulante -->
+<!--! \see \subpage libgrafcet -->
