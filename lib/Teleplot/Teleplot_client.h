@@ -1,6 +1,10 @@
 // Teleplot
 // Source: https://github.com/nesnes/teleplot
-
+/**
+ * @file Teleplot_client.h
+ * @ingroup teleplot
+ * @brief Implémentation d'un client Teleplot pour envoyer des données à un serveur Teleplot.
+ */
 #ifndef TELEPLOT_H
 #define TELEPLOT_H
 
@@ -14,7 +18,11 @@
 #define BEACON_MSG_LEN_MAX 2556
 #define INTERNAL_BUFFER_SIZE 200
 
-
+/**
+ * @class Teleplot
+ * @ingroup teleplot
+ * @brief Classe statique qui permet d'envoyer des données à un serveur Teleplot
+ */
 class Teleplot {
 private:
     char tampon[BEACON_MSG_LEN_MAX]="";

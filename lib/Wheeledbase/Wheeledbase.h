@@ -1,7 +1,12 @@
 //
 // Created by boris on 28/10/2024.
 //
-
+/**
+ * @file Wheeledbase.h
+ * @ingroup wheeledbase
+ * @ingroup lib
+ * @brief Fonctions de convénience pour faire les déplacements facilement
+ */
 #ifndef WHEELEDBASE_H
 #define WHEELEDBASE_H
 
@@ -20,7 +25,14 @@
 #include "Logger.h"
 
 // Parameters identifiers
-
+/**
+ * @defgroup wb_global_define Des identifiants
+ * @ingroup wheeledbase
+ * @ingroup globals
+ * @brief Les valeurs des identifiants des constantes
+ * @{
+ */
+//TODO: (2026-06-25) Changer ce système de con
 #define LEFTWHEEL_RADIUS_ID             0x10
 #define LEFTWHEEL_CONSTANT_ID           0x11
 #define LEFTWHEEL_MAXPWM_ID             0x12
@@ -57,12 +69,18 @@
 #define POSITIONCONTROL_ANGPOSTHRESHOLD_ID  0xD5
 #define PUREPURSUIT_LOOKAHED_ID         0xE0
 #define PUREPURSUIT_LOOKAHEADBIS_ID     0xE2
-
-//define the distance and the deceleration at the end of goto
+///@}
+/**
+ * @defgroup wb_slowdown_define Paramètres de ralentissement du robot
+ * @ingroup wheeledbase
+ * @ingroup globals
+ * @brief Les paramètres de ralentissement du robot à la fin de goto
+ * @{
+ */
 #define SLOWDOWN_FACTOR                 0.5
 #define SLOWDOWN_DISTANCE               0
 #define ALIGN_DISTANCE                  130
-
+///@}
 
 struct WBConstants
 {
@@ -150,8 +168,20 @@ extern PositionController positionControl;
 extern PurePursuit   purePursuit;
 extern TurnOnTheSpot turnOnTheSpot;
 
+/**
+ * @ingroup libs
+ * @ingroup globals
+ * @ingroup wheeledbase
+ * @brief Le logger pour la base roulante
+ */
 inline Logger wb_logger = Logger("WHEELEDBASE");
 
+/**
+ * @namespace Wheeledbase
+ * @ingroup wheeledbase
+ * @ingroup libs
+ * @brief Fonctions de convénience pour faire les déplacements facilement
+ */
 namespace  Wheeledbase {
     // Instructions prototypes
     void DISABLE();

@@ -1,3 +1,9 @@
+/**
+ * @file TurnOnTheSpot.h
+ * @ingroup libs
+ * @ingroup wheeledbase
+ * @brief Implémentation d'AbstractMoveStrategy qui fait tourner le robot sur lui-même
+ */
 #ifndef __TURNONTHESPOT_H__
 #define __TURNONTHESPOT_H__
 
@@ -6,9 +12,8 @@
 
 #include <cmath>
 
-/** Class TurOnTheSpot
- *  
- *  \brief Rotation du robot sans translations.
+/** @class TurnOnTheSpot
+ *  @brief Rotation du robot sans translations.
  */
 class TurnOnTheSpot : public AbstractMoveStrategy
 {

@@ -1,12 +1,21 @@
 //
 // Created by awing on 25/05/25.
 //
+/**
+ * @file Sphere.h
+ * @ingroup teleplot
+ * @brief Définition de la classe Sphere pour le téléplot permettant d'envoyer des sphères 3D à un serveur Teleplot.
+ */
 #include "Teleplot_client.h"
 
 #ifndef TEAM2025_SPHERE_H
 #define TEAM2025_SPHERE_H
 
-
+/**
+ * @class Sphere
+ * @ingroup teleplot
+ * @brief représente une sphère 3D pour le téléplot.
+ */
 class Sphere {
 public:
     /**

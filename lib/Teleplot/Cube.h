@@ -1,13 +1,21 @@
 //
 // Created by awing on 25/05/25.
 //
-
+/**
+ * @file Cube.h
+ * @ingroup teleplot
+ * @brief Définition de la classe Cube pour le téléplot permettant d'envoyer des cubes 3D à un serveur Teleplot.
+ */
 #include "Teleplot_client.h"
 
 #ifndef TEAM2025_CUBE_H
 #define TEAM2025_CUBE_H
 
-
+/**
+ * @class Cube
+ * @ingroup teleplot
+ * @brief Représente un cube 3D pour le téléplot.
+ */
 class Cube {
 public:
     /**
