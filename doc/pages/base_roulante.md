@@ -8,7 +8,7 @@ des roues à partir de la sortie du **\ref PID**.
 * **\ref AbstractMoveStrategy MoveStrategy** : Ce composant est responsable de la stratégie de mouvement du robot : à partir de la position actuelle, il va calculer la consigne en vitesse du robot.
 * **\ref Odometry** : L'odométrie permet de déterminer la position du robot à partir de la vitesse des codeuses.
 * Le VC et le PC sont tous deux des **\ref PeriodicProcess** : ils ont une fonction `PeriodicProcess::update()` qui est appelée tous les `PeriodicProcess::m_timestep` ms.
-
+* **\ref Wheeledbase.h** : Ce fichier contient un certain nombre de fonctions auxiliaires se reposant sur les composants précédemment cités pour permettre de piloter le robot plus facilement.
 
 # Et comment tout ça est relié ?
 À chaque itération de la boucle de la base roulante, gardez en tête que ça ne se produit que s'il est possible de le faire, c'est-à-dire que le timestep du PeriodicProcess est écoulé.
