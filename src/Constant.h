@@ -1,6 +1,10 @@
 //
 // Created by bapti on 28/05/2025.
 //
+/**
+ *  @file Constant.h
+ *  @ingroup core
+ */
 
 #ifndef TEAM2025_CONSTANT_H
 #define TEAM2025_CONSTANT_H

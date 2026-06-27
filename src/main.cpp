@@ -1,3 +1,12 @@
+/**
+ *  @file main.cpp
+ *  @ingroup core
+ *  @brief Contient le code principal du robot.
+ *
+ *  %Point d'entrée du programme, contient notamment les fonctions d'initialisation (hal, freeRTOS). Une fois que tout est
+ *  initialisé, lance les différents threads et passe le contrôle à FreeRTOS.
+ */
+
 #include <Arduino.h>
 #include <STM32FreeRTOS.h>
 #include <Wheeledbase.h>
@@ -42,8 +51,7 @@ using namespace ihm;
 
 
 
-/**
-TODO:
+/* TODO:
 Valeurs servo limites  OK
 Régler PID/Accel => Logger OK
 Procédure démarrage Preque OK
@@ -64,17 +72,16 @@ void SystemClock_Config(void)
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {};
   RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {};
 
-  /** Supply configuration update enable
-  */
+  // Supply configuration update enable
   HAL_PWREx_ConfigSupply(PWR_LDO_SUPPLY);
-  /** Configure the main internal regulator output voltage
-  */
+  // Configure the main internal regulator output voltage
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE0);
 
   while (!__HAL_PWR_GET_FLAG(PWR_FLAG_VOSRDY)) {}
-  /** Initializes the RCC Oscillators according to the specified parameters
-  * in the RCC_OscInitTypeDef structure.
-  */
+  /*
+   * Initializes the RCC Oscillators according to the specified parameters
+   * in the RCC_OscInitTypeDef structure.
+   */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI48 | RCC_OSCILLATORTYPE_HSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_DIV1;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
@@ -92,8 +99,7 @@ void SystemClock_Config(void)
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK) {
     Error_Handler();
   }
-  /** Initializes the CPU, AHB and APB buses clocks
-  */
+  // Initializes the CPU, AHB and APB buses clocks
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
                                 | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2
                                 | RCC_CLOCKTYPE_D3PCLK1 | RCC_CLOCKTYPE_D1PCLK1;
@@ -108,8 +114,7 @@ void SystemClock_Config(void)
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK) {
     Error_Handler();
   }
-  /** Initializes the peripherals clock
-  */
+  // Initializes the peripherals clock
   PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_USB | RCC_PERIPHCLK_SDMMC | RCC_PERIPHCLK_ADC
                                              | RCC_PERIPHCLK_LPUART1 | RCC_PERIPHCLK_USART16
                                              | RCC_PERIPHCLK_USART234578 | RCC_PERIPHCLK_I2C123
@@ -168,8 +173,7 @@ void setup(){
 #endif
   lcd.begin(20, 4);
   lcd.print("Hello Club Robot !");
-  ihmLogger.setLcdOutput(lcd);
-  logs.setLcdOutput(lcd);
+  Logger::setLcdOutput(lcd);
   lcd.clear();
 
   SensorsThread::Init();

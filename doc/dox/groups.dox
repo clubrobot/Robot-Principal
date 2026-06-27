@@ -1,0 +1,35 @@
+/**
+ * @defgroup libs Librairies du projet
+ * @brief Toutes les librairies
+ */
+
+/**
+ * @defgroup core Core
+ * @brief Tout le code lié directement au fonctionnement du robot
+ */
+
+/**
+ * @defgroup ihm IHM
+ * @brief Tout le code permettant de communiquer avec l'utilisateur
+ */
+
+/**
+ * @defgroup sensors Sensors
+ * @brief Tout le code lié aux capteurs du robot
+ */
+
+/**
+ * @defgroup wheeledbase Wheeled base
+ * @brief Tout le code lié au déplacement du robot
+ */
+
+/**
+  * @defgroup strategy Strategy
+  * @brief Tout le code lié à la stratégie du robot
+  */
+
+/**
+  * @defgroup globals Variables globales
+  * @brief Toutes les variables exposées dans le namespace globale
+  */
+

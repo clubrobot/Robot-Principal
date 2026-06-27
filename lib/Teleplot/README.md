@@ -1,5 +1,7 @@
+<!--! @page libteleplot -->
+<!--! @ingroup teleplot -->
 # Teleplot
-La librairie Teleplot sert à envoyer des messages interprétables par le (programme éponyme)[https://github.com/clubrobot/teleplot].
+La librairie Teleplot sert à envoyer des messages interprétables par le [programme éponyme](https://github.com/clubrobot/teleplot).
 
 # Utilisation
 Dans votre code, importez la librairie :

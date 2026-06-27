@@ -2,6 +2,13 @@
 // Created by boris on 5/1/25.
 //
 
+/**
+ * @file ihm.h
+ * @ingroup ihm
+ * @ingroup core
+ * @brief Contient diverses fonctions permettant d'intéragir avec l'utilisateur via les boutons et les leds.
+ */
+
 #ifndef IHM_H
 #define IHM_H
 
@@ -10,6 +17,12 @@
 
 #include "Logger.h"
 
+/**
+ *  @defgroup ihm-pins Pins IHM
+  * @ingroup globals
+  * @brief Les pins des différents composants (led, boutons, tirette...) de l'IHM
+  * @{
+  */
 #define BLEU_BTN_PIN PF7
 #define JAUNE_BTN_PIN PF5
 #define VERT_BTN_PIN PD2
@@ -24,6 +37,7 @@
 #define END_STOP_HAUT_PIN PD6
 #define TIRETTE_PIN PD13
 
+/// @}
 
 namespace ihm {
 

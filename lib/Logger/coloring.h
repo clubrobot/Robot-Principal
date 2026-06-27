@@ -1,6 +1,18 @@
+/**
+ * @file coloring.h
+ * @ingroup libs
+ * @ingroup ihm
+ * @brief Définitions des codes ANSI pour colorer le shell
+ */
+
 #ifndef COLOR_H
 #define COLOR_H
-
+/**
+ *  @defgroup colors Couleurs loggers
+ *  @ingroup globals
+ *  @brief les couleurs que le logger peut utiliser
+ *  @{
+ */
 #define NOBOLD 0
 #define BOLD 1
 
@@ -29,5 +41,7 @@
 #define COLOR_BG_MAGENTA "\e[45m"
 #define COLOR_BG_CYAN "\e[46m"
 #define COLOR_BG_WHITE "\e[47m"
+
+///@}
 
 #endif

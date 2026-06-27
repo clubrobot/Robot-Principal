@@ -1,3 +1,10 @@
+/**
+ * @file VelocityController.h
+ * @ingroup wheeledbase
+ * @ingroup lib
+ * @brief Contrôleur de vitesse pour un robot à base différentielle.
+ */
+
 #ifndef __VELOCITYCONTROLLER_H__
 #define __VELOCITYCONTROLLER_H__
 
@@ -12,6 +19,7 @@
 #endif
 
 /**
+ * @class VelocityController
  * @brief Objet de controle de la vitesse.
  *
  * VelocityController est une version améliorée de DifferentialController car il rajoute la gestion de Spin et les accélérations capées.

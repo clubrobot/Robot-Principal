@@ -7,13 +7,15 @@
 
 class AbstractMoveStrategy;
 /**
+ * @class PositionController
+ * @ingroup wheeledbase
+ * @ingroup libs
  * @brief Classe support des objets AbstractMoveStrategy.
  *
  * PositionController est le support des AbstractMoveStrategy. C'est à dire qu'il permet de charger ou supprimer une stratégie.
  * Quand PositionController execute une stratégie de mouvement, il va l'executé tous les time_steps pour y obtenir de nouvelles vitesses à suivre.
  * PositionConstroller va égalemenr renseigné la position du robot à AbstractMoveStrategy chargée.
- * 
- * @return class PositionController : public PeriodicProcess { public: 
+ *
  */
 class PositionController : public PeriodicProcess
 {
@@ -182,6 +184,9 @@ private:
 };
 
 /**
+ * @class AbstractMoveStrategy
+ * @ingroup wheeledbase
+ * @ingroup libs
  * @brief Interface de Stratégie de mouvement.
  * 
  * Interface à implémenter pour réaliser une classe de strategie de mouvement. 

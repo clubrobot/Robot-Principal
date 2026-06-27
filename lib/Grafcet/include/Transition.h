@@ -1,6 +1,11 @@
 //
 // Created by awing on 09/05/2026.
 //
+/**
+ * @file Transition.h
+ * @ingroup grafcet
+ * @brief Un noeud de transition du grafcet permettant d'évaluer la condition de passage d'un noeud d'action à un autre
+ */
 
 #ifndef TEAM2026_TRANSITION_H
 #define TEAM2026_TRANSITION_H
@@ -8,6 +13,16 @@
 
 #include "Node.h"
 namespace Grafcet {
+    /**
+     * @class Transition
+     * @brief Représente une transition dans le grafcet
+     * Les noeuds de transition présente une fonction personnalisée `condition` qui est définie
+     * par l'utilisateur. Une transition est activé si celle-ci est vrai et si au moins un de
+     * ses parents est activé.
+     *
+     * Si synchronize == true, la transition attend que tout ses parents soit activés avant de
+     * valider sa condition.
+     */
     class Transition : public Node {
     public:
         Transition() {
@@ -15,14 +30,15 @@ namespace Grafcet {
         }
 
         /**
-         * @brief transition does nothing
+         * @brief Les transitions n'ont pas d'actions
          */
         void action() override {}
 
         /**
-         * @brief evaluate if the transition is enabled using the condition function, and the state of its parent
-         * will wait for all of its parent to be enabled if synchronize is true
-         * @return true if the transition is enabled
+         * @brief Vérifie si la transition est activé
+         * Vérifie si la transition est activé en vérifiant l'état de ses parents
+         * et en évaluant la fonction personnalisée passée
+         * @return true si la transition est activé, false sinon
          */
         bool enabled() override {
             bool parentReady = synchronize;
@@ -35,7 +51,7 @@ namespace Grafcet {
             volatile const auto t = condition();
             return condition() && parentReady;
         }
-        /// std::function pointing toward a function returning true if the condition for the transition to be enabled is realized
+        /// std::function pointant vers la fonction à évaluer pour vérifier la condition de la transition
         std::function<bool()> condition = {};
     };
 }

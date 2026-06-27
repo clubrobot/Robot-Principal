@@ -15,13 +15,16 @@ extern DCMotor leftWheel;
 extern DCMotor rightWheel;
 extern VelocityController velocityControl;
 extern PositionController positionControl;*/
-
+/**
+ * @class BasicTurnStrategy
+ * @ingroup wheeledbase
+ * @ingroup libs
+ * @brief Stratégie de mouvement basique.
+ *
+ * Stratégie développée afin de faire tourner le robot pour régler le PID.
+ */
 class BasicTurnStrategy : public AbstractMoveStrategy {
-    /**
-     * @brief Stratégie de mouvement basique.
-     *
-     * Stratégie développée afin de faire tourner le robot pour régler le PID.
-     */
+
 public:
     virtual ~BasicTurnStrategy() = default;
     PID ang_pid = {};
