@@ -6,4 +6,4 @@
 	url = git@github.com:clubrobot/motors.git
 [submodule "lib/Wheeledbase"]
 	path = lib/Wheeledbase
-	url = https://localhost
+	url = git@github.com:clubrobot/Wheeledbase.git
