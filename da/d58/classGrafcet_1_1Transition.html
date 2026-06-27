@@ -5,7 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CRINSA-team2025: Référence de la classe Grafcet::Transition</title>
+<title>Robot Principal: Référence de la classe Grafcet::Transition</title>
+<link rel="icon" href="../../icon.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -33,10 +34,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">CRINSA-team2025<span id="projectnumber">&#160;V1</span>
+   <div id="projectname">Robot Principal<span id="projectnumber">&#160;26</span>
    </div>
-   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2025</div>
+   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2026</div>
   </td>
  </tr>
  </tbody>
@@ -111,13 +113,18 @@ $(function(){initNavTree('da/d58/classGrafcet_1_1Transition.html','../../'); ini
   <div class="headertitle"><div class="title">Référence de la classe Grafcet::Transition</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Représente une transition dans le grafcet Les noeuds de transition présente une fonction personnalisée <code>condition</code> qui est définie par l'utilisateur. Une transition est activé si celle-ci est vrai et si au moins un de ses parents est activé.  
+ <a href="#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../dc/dc1/Transition_8h_source.html">Transition.h</a>&gt;</code></p>
 <div class="dynheader">
 Graphe d'héritage de Grafcet::Transition:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/d86/classGrafcet_1_1Transition__inherit__graph.png" border="0" usemap="#aGrafcet_1_1Transition_inherit__map" alt="Inheritance graph"/></div>
 <map name="aGrafcet_1_1Transition_inherit__map" id="aGrafcet_1_1Transition_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,79,133,105"/>
-<area shape="rect" href="../../dc/d19/classGrafcet_1_1Node.html" title=" " alt="" coords="18,5,120,31"/>
+<area shape="rect" title="Représente une transition dans le grafcet Les noeuds de transition présente une fonction personnalisé..." alt="" coords="5,79,133,105"/>
+<area shape="rect" href="../../dc/d19/classGrafcet_1_1Node.html" title="Représente un noeud dans le graphcet Un noeud peut être un noeud d&#39;action ou un noeud de transition...." alt="" coords="18,5,120,31"/>
 <area shape="poly" title=" " alt="" coords="72,46,72,79,66,79,66,46"/>
 </map>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">légende</a>]</span></center></div>
@@ -126,8 +133,8 @@ Graphe de collaboration de Grafcet::Transition:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d8/d88/classGrafcet_1_1Transition__coll__graph.png" border="0" usemap="#aGrafcet_1_1Transition_coll__map" alt="Collaboration graph"/></div>
 <map name="aGrafcet_1_1Transition_coll__map" id="aGrafcet_1_1Transition_coll__map">
-<area shape="rect" title=" " alt="" coords="5,79,133,105"/>
-<area shape="rect" href="../../dc/d19/classGrafcet_1_1Node.html" title=" " alt="" coords="18,5,120,31"/>
+<area shape="rect" title="Représente une transition dans le grafcet Les noeuds de transition présente une fonction personnalisé..." alt="" coords="5,79,133,105"/>
+<area shape="rect" href="../../dc/d19/classGrafcet_1_1Node.html" title="Représente un noeud dans le graphcet Un noeud peut être un noeud d&#39;action ou un noeud de transition...." alt="" coords="18,5,120,31"/>
 <area shape="poly" title=" " alt="" coords="72,46,72,79,66,79,66,46"/>
 </map>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">légende</a>]</span></center></div>
@@ -135,37 +142,36 @@ Graphe de collaboration de Grafcet::Transition:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a3f1484e50896a8e025c85b54bec8d051" id="r_a3f1484e50896a8e025c85b54bec8d051"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f1484e50896a8e025c85b54bec8d051">action</a> () override</td></tr>
-<tr class="memdesc:a3f1484e50896a8e025c85b54bec8d051"><td class="mdescLeft">&#160;</td><td class="mdescRight">transition does nothing  <br /></td></tr>
+<tr class="memdesc:a3f1484e50896a8e025c85b54bec8d051"><td class="mdescLeft">&#160;</td><td class="mdescRight">Les transitions n'ont pas d'actions.  <br /></td></tr>
 <tr class="separator:a3f1484e50896a8e025c85b54bec8d051"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ca97401fe473bfce6f1538633da59df" id="r_a5ca97401fe473bfce6f1538633da59df"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ca97401fe473bfce6f1538633da59df">enabled</a> () override</td></tr>
-<tr class="memdesc:a5ca97401fe473bfce6f1538633da59df"><td class="mdescLeft">&#160;</td><td class="mdescRight">evaluate if the transition is enabled using the condition function, and the state of its parent will wait for all of its parent to be enabled if synchronize is true  <br /></td></tr>
+<tr class="memdesc:a5ca97401fe473bfce6f1538633da59df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie si la transition est activé Vérifie si la transition est activé en vérifiant l'état de ses parents et en évaluant la fonction personnalisée passée.  <br /></td></tr>
 <tr class="separator:a5ca97401fe473bfce6f1538633da59df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classGrafcet_1_1Node"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classGrafcet_1_1Node')"><img src="../../closed.png" alt="-"/>&#160;Fonctions membres publiques hérités de <a class="el" href="../../dc/d19/classGrafcet_1_1Node.html">Grafcet::Node</a></td></tr>
-<tr class="memitem:a8a746d371946b549f5a6e95768dc3eb6 inherit pub_methods_classGrafcet_1_1Node" id="r_a8a746d371946b549f5a6e95768dc3eb6"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>Node</b> (const std::pmr::vector&lt; <a class="el" href="../../dc/d19/classGrafcet_1_1Node.html">Node</a> * &gt; &amp;<a class="el" href="../../dc/d19/classGrafcet_1_1Node.html#a6297f450a819465af7f7b9dd2cb40e49">parent</a>={}, const std::pmr::vector&lt; <a class="el" href="../../dc/d19/classGrafcet_1_1Node.html">Node</a> * &gt; &amp;child={})</td></tr>
+<tr class="memitem:a8a746d371946b549f5a6e95768dc3eb6 inherit pub_methods_classGrafcet_1_1Node" id="r_a8a746d371946b549f5a6e95768dc3eb6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d19/classGrafcet_1_1Node.html#a8a746d371946b549f5a6e95768dc3eb6">Node</a> (const std::pmr::vector&lt; <a class="el" href="../../dc/d19/classGrafcet_1_1Node.html">Node</a> * &gt; &amp;<a class="el" href="../../dc/d19/classGrafcet_1_1Node.html#a6297f450a819465af7f7b9dd2cb40e49">parent</a>={}, const std::pmr::vector&lt; <a class="el" href="../../dc/d19/classGrafcet_1_1Node.html">Node</a> * &gt; &amp;child={})</td></tr>
 <tr class="separator:a8a746d371946b549f5a6e95768dc3eb6 inherit pub_methods_classGrafcet_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18b858889d61a5463e2b1bd79b23fcce inherit pub_methods_classGrafcet_1_1Node" id="r_a18b858889d61a5463e2b1bd79b23fcce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d19/classGrafcet_1_1Node.html#a18b858889d61a5463e2b1bd79b23fcce">addChild</a> (<a class="el" href="../../dc/d19/classGrafcet_1_1Node.html">Node</a> *child)</td></tr>
-<tr class="memdesc:a18b858889d61a5463e2b1bd79b23fcce inherit pub_methods_classGrafcet_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">attach a child node to the current node  <br /></td></tr>
+<tr class="memdesc:a18b858889d61a5463e2b1bd79b23fcce inherit pub_methods_classGrafcet_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">attache un enfant au noeud  <br /></td></tr>
 <tr class="separator:a18b858889d61a5463e2b1bd79b23fcce inherit pub_methods_classGrafcet_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Attributs publics</h2></td></tr>
 <tr class="memitem:ad870654ad6f3afd1ff9ba4526b1c8daf" id="r_ad870654ad6f3afd1ff9ba4526b1c8daf"><td class="memItemLeft" align="right" valign="top"><a id="ad870654ad6f3afd1ff9ba4526b1c8daf" name="ad870654ad6f3afd1ff9ba4526b1c8daf"></a>
 std::function&lt; bool()&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>condition</b> = {}</td></tr>
-<tr class="memdesc:ad870654ad6f3afd1ff9ba4526b1c8daf"><td class="mdescLeft">&#160;</td><td class="mdescRight">std::function pointing toward a function returning true if the condition for the transition to be enabled is realized <br /></td></tr>
+<tr class="memdesc:ad870654ad6f3afd1ff9ba4526b1c8daf"><td class="mdescLeft">&#160;</td><td class="mdescRight">std::function pointant vers la fonction à évaluer pour vérifier la condition de la transition <br /></td></tr>
 <tr class="separator:ad870654ad6f3afd1ff9ba4526b1c8daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classGrafcet_1_1Node"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_classGrafcet_1_1Node')"><img src="../../closed.png" alt="-"/>&#160;Attributs publics hérités de <a class="el" href="../../dc/d19/classGrafcet_1_1Node.html">Grafcet::Node</a></td></tr>
 <tr class="memitem:a74971d03f54e9d30a0f0deb3cfc49278 inherit pub_attribs_classGrafcet_1_1Node" id="r_a74971d03f54e9d30a0f0deb3cfc49278"><td class="memItemLeft" align="right" valign="top">
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isTransition</b> = false</td></tr>
-<tr class="memdesc:a74971d03f54e9d30a0f0deb3cfc49278 inherit pub_attribs_classGrafcet_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if the current node is a transition <br /></td></tr>
+<tr class="memdesc:a74971d03f54e9d30a0f0deb3cfc49278 inherit pub_attribs_classGrafcet_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">true si le noeud est une transition, false sinon <br /></td></tr>
 <tr class="separator:a74971d03f54e9d30a0f0deb3cfc49278 inherit pub_attribs_classGrafcet_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5e873dc9688171e524f410fc4f02d5e inherit pub_attribs_classGrafcet_1_1Node" id="r_ac5e873dc9688171e524f410fc4f02d5e"><td class="memItemLeft" align="right" valign="top">
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>synchronize</b> = false</td></tr>
-<tr class="memdesc:ac5e873dc9688171e524f410fc4f02d5e inherit pub_attribs_classGrafcet_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if the current node needs to wait for all its parent to be enabled before executing <br /></td></tr>
+<tr class="memdesc:ac5e873dc9688171e524f410fc4f02d5e inherit pub_attribs_classGrafcet_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">true si le noeud est synchronisant <br /></td></tr>
 <tr class="separator:ac5e873dc9688171e524f410fc4f02d5e inherit pub_attribs_classGrafcet_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed20b21dcb599116ffb0efc35a2cb7c4 inherit pub_attribs_classGrafcet_1_1Node" id="r_aed20b21dcb599116ffb0efc35a2cb7c4"><td class="memItemLeft" align="right" valign="top">
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b> = false</td></tr>
-<tr class="memdesc:aed20b21dcb599116ffb0efc35a2cb7c4 inherit pub_attribs_classGrafcet_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if the node is currently active <br /></td></tr>
+<tr class="memdesc:aed20b21dcb599116ffb0efc35a2cb7c4 inherit pub_attribs_classGrafcet_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">true si le noeud est actif <br /></td></tr>
 <tr class="separator:aed20b21dcb599116ffb0efc35a2cb7c4 inherit pub_attribs_classGrafcet_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
@@ -173,17 +179,20 @@ Membres hérités additionnels</h2></td></tr>
 <tr class="inherit_header pro_attribs_classGrafcet_1_1Node"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classGrafcet_1_1Node')"><img src="../../closed.png" alt="-"/>&#160;Attributs protégés hérités de <a class="el" href="../../dc/d19/classGrafcet_1_1Node.html">Grafcet::Node</a></td></tr>
 <tr class="memitem:a6297f450a819465af7f7b9dd2cb40e49 inherit pro_attribs_classGrafcet_1_1Node" id="r_a6297f450a819465af7f7b9dd2cb40e49"><td class="memItemLeft" align="right" valign="top">
 std::pmr::vector&lt; <a class="el" href="../../dc/d19/classGrafcet_1_1Node.html">Node</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>parent</b> = {}</td></tr>
-<tr class="memdesc:a6297f450a819465af7f7b9dd2cb40e49 inherit pro_attribs_classGrafcet_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of parents node of the current node. <br /></td></tr>
+<tr class="memdesc:a6297f450a819465af7f7b9dd2cb40e49 inherit pro_attribs_classGrafcet_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liste des noeuds parents. <br /></td></tr>
 <tr class="separator:a6297f450a819465af7f7b9dd2cb40e49 inherit pro_attribs_classGrafcet_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc1a3fdff7377f7ed33338c40aa50d93 inherit pro_attribs_classGrafcet_1_1Node" id="r_afc1a3fdff7377f7ed33338c40aa50d93"><td class="memItemLeft" align="right" valign="top">
 std::pmr::vector&lt; <a class="el" href="../../dc/d19/classGrafcet_1_1Node.html">Node</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>children</b> = {}</td></tr>
-<tr class="memdesc:afc1a3fdff7377f7ed33338c40aa50d93 inherit pro_attribs_classGrafcet_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of children node of the current node. <br /></td></tr>
+<tr class="memdesc:afc1a3fdff7377f7ed33338c40aa50d93 inherit pro_attribs_classGrafcet_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liste des noeuds enfants. <br /></td></tr>
 <tr class="separator:afc1a3fdff7377f7ed33338c40aa50d93 inherit pro_attribs_classGrafcet_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab18f2b05c1b0e2fbf5eb8c88c5cd7cca inherit pro_attribs_classGrafcet_1_1Node" id="r_ab18f2b05c1b0e2fbf5eb8c88c5cd7cca"><td class="memItemLeft" align="right" valign="top">
 friend&#160;</td><td class="memItemRight" valign="bottom"><b>StateMachine</b></td></tr>
 <tr class="separator:ab18f2b05c1b0e2fbf5eb8c88c5cd7cca inherit pro_attribs_classGrafcet_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Représente une transition dans le grafcet Les noeuds de transition présente une fonction personnalisée <code>condition</code> qui est définie par l'utilisateur. Une transition est activé si celle-ci est vrai et si au moins un de ses parents est activé. </p>
+<p>Si synchronize == true, la transition attend que tout ses parents soit activés avant de valider sa condition. </p>
+</div><h2 class="groupheader">Documentation des fonctions membres</h2>
 <a id="a3f1484e50896a8e025c85b54bec8d051" name="a3f1484e50896a8e025c85b54bec8d051"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3f1484e50896a8e025c85b54bec8d051">&#9670;&#160;</a></span>action()</h2>
 
@@ -207,9 +216,9 @@ friend&#160;</td><td class="memItemRight" valign="bottom"><b>StateMachine</b></t
 </table>
 </div><div class="memdoc">
 
-<p>transition does nothing </p>
+<p>Les transitions n'ont pas d'actions. </p>
 
-<p>Implémente <a class="el" href="../../dc/d19/classGrafcet_1_1Node.html">Grafcet::Node</a>.</p>
+<p>Implémente <a class="el" href="../../dc/d19/classGrafcet_1_1Node.html#aa344a5e1f24bfc8cd0cd7229b5547680">Grafcet::Node</a>.</p>
 
 </div>
 </div>
@@ -236,22 +245,34 @@ friend&#160;</td><td class="memItemRight" valign="bottom"><b>StateMachine</b></t
 </table>
 </div><div class="memdoc">
 
-<p>evaluate if the transition is enabled using the condition function, and the state of its parent will wait for all of its parent to be enabled if synchronize is true </p>
-<dl class="section return"><dt>Renvoie</dt><dd>true if the transition is enabled </dd></dl>
+<p>Vérifie si la transition est activé Vérifie si la transition est activé en vérifiant l'état de ses parents et en évaluant la fonction personnalisée passée. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>true si la transition est activé, false sinon </dd></dl>
 
-<p>Implémente <a class="el" href="../../dc/d19/classGrafcet_1_1Node.html">Grafcet::Node</a>.</p>
+<p>Implémente <a class="el" href="../../dc/d19/classGrafcet_1_1Node.html#a1c9c6b4b192c190e790215b27bcad9cc">Grafcet::Node</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d58/classGrafcet_1_1Transition_a5ca97401fe473bfce6f1538633da59df_cgraph.png" border="0" usemap="#ada/d58/classGrafcet_1_1Transition_a5ca97401fe473bfce6f1538633da59df_cgraph" alt=""/></div>
+<map name="ada/d58/classGrafcet_1_1Transition_a5ca97401fe473bfce6f1538633da59df_cgraph" id="ada/d58/classGrafcet_1_1Transition_a5ca97401fe473bfce6f1538633da59df_cgraph">
+<area shape="rect" title="Vérifie si la transition est activé Vérifie si la transition est activé en vérifiant l&#39;état de ses pa..." alt="" coords="5,23,133,64"/>
+<area shape="rect" href="../../dc/d19/classGrafcet_1_1Node.html#a1c9c6b4b192c190e790215b27bcad9cc" title="vérifie si le noeud est activé" alt="" coords="181,5,333,31"/>
+<area shape="poly" title=" " alt="" coords="133,32,165,28,165,33,133,38"/>
+<area shape="rect" href="../../dc/d19/classGrafcet_1_1Node.html#a8a746d371946b549f5a6e95768dc3eb6" title=" " alt="" coords="188,55,326,80"/>
+<area shape="poly" title=" " alt="" coords="133,49,172,54,172,59,133,54"/>
+</map>
+</div>
 
 </div>
 </div>
 <hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
-<li>lib/Grafcet/include/<a class="el" href="../../dc/dc1/Transition_8h_source.html">Transition.h</a></li>
+<li><a class="el" href="../../dc/dc1/Transition_8h_source.html">Transition.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Grafcet</b></li><li class="navelem"><a class="el" href="../../da/d58/classGrafcet_1_1Transition.html">Transition</a></li>
+    <li class="navelem"><a class="el" href="../../d9/d57/namespaceGrafcet.html">Grafcet</a></li><li class="navelem"><a class="el" href="../../da/d58/classGrafcet_1_1Transition.html">Transition</a></li>
     <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

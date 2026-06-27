@@ -1,0 +1,5 @@
+<map id="Automate.h" name="Automate.h">
+<area shape="rect" id="Node000001" title="Contient le code nécessaire pour jouer un match." alt="" coords="5,5,93,31"/>
+<area shape="rect" id="Node000002" href="$df/d0a/main_8cpp.html" title="Contient le code principal du robot." alt="" coords="12,79,86,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="52,46,52,79,46,79,46,46"/>
+</map>

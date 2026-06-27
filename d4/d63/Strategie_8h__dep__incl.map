@@ -1,0 +1,7 @@
+<map id="Strategie.h" name="Strategie.h">
+<area shape="rect" id="Node000001" title="Contient les diverses stratégies que le robot peut executer." alt="" coords="7,5,91,31"/>
+<area shape="rect" id="Node000002" href="$dd/d07/Automate_8h.html" title="Contient le code nécessaire pour jouer un match." alt="" coords="5,79,93,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="52,46,52,79,46,79,46,46"/>
+<area shape="rect" id="Node000003" href="$df/d0a/main_8cpp.html" title="Contient le code principal du robot." alt="" coords="12,153,86,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="52,120,52,152,46,152,46,120"/>
+</map>

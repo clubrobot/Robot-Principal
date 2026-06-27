@@ -5,7 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CRINSA-team2025:  Fichier source de lib/PID/PID.h</title>
+<title>Robot Principal:  Fichier source de PID.h</title>
+<link rel="icon" href="../../icon.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -33,10 +34,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">CRINSA-team2025<span id="projectnumber">&#160;V1</span>
+   <div id="projectname">Robot Principal<span id="projectnumber">&#160;26</span>
    </div>
-   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2025</div>
+   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2026</div>
   </td>
  </tr>
  </tbody>
@@ -112,44 +114,44 @@ $(function(){initNavTree('d3/d17/PID_8h_source.html','../../'); initResizable(tr
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;math.h&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span></div>
-<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../d8/da9/classPID.html">   12</a></span><span class="keyword">class </span><a class="code hl_function" href="../../d8/da9/classPID.html#a0311b6f7de348499ce24e53ba353514a">PID</a></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../d8/da9/classPID.html#a0311b6f7de348499ce24e53ba353514a">   19</a></span>    <a class="code hl_function" href="../../d8/da9/classPID.html#a0311b6f7de348499ce24e53ba353514a">PID</a>() : m_Kp(1), m_Ki(0), m_Kd(0), m_minOutput(-INFINITY), m_maxOutput(INFINITY){}</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="../../d8/da9/classPID.html#a9982ecaf693e2b3b3873f749983814dd">compute</a>(<span class="keywordtype">float</span> setpoint, <span class="keywordtype">float</span> input, <span class="keywordtype">float</span> timestep);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/da9/classPID.html#af9677e76cb1beffbcf3f54cbc627c530">reset</a>();</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/da9/classPID.html#a11d8c4753029f8cc187d2751cb00c4e9">setTunings</a>(<span class="keywordtype">float</span> Kp, <span class="keywordtype">float</span> Ki, <span class="keywordtype">float</span> Kd);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/da9/classPID.html#aa83c2d7eb95c55f375f85a319f8037b3">setOutputLimits</a>(<span class="keywordtype">float</span> minOutput, <span class="keywordtype">float</span> maxOutput);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../d8/da9/classPID.html#a83ed5fcf6da6d340d1d527114445a949">   57</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="../../d8/da9/classPID.html#a83ed5fcf6da6d340d1d527114445a949">getKp</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> m_Kp;}</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../d8/da9/classPID.html#a30b4a12f5ad34b7c540365051f79e57c">   62</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="../../d8/da9/classPID.html#a30b4a12f5ad34b7c540365051f79e57c">getKi</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> m_Ki;}</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="../../d8/da9/classPID.html#ac71200e7079fdd7cf3dee5f7e93c7582">   67</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="../../d8/da9/classPID.html#ac71200e7079fdd7cf3dee5f7e93c7582">getKd</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> m_Kd;}</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="../../d8/da9/classPID.html#a19e0b4481b71f304ee21ed1edb1ba331">   72</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="../../d8/da9/classPID.html#a19e0b4481b71f304ee21ed1edb1ba331">getMinOutput</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> m_minOutput;}</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="../../d8/da9/classPID.html#a310f5f2da22b3b492cfe60ebad1f7939">   77</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="../../d8/da9/classPID.html#a310f5f2da22b3b492cfe60ebad1f7939">getMaxOutput</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> m_maxOutput;}</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">float</span> m_errorIntegral; </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">float</span> m_previousError; </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d8/da9/classPID.html">   15</a></span><span class="keyword">class </span><a class="code hl_function" href="../../d8/da9/classPID.html#a0311b6f7de348499ce24e53ba353514a">PID</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../d8/da9/classPID.html#a0311b6f7de348499ce24e53ba353514a">   22</a></span>    <a class="code hl_function" href="../../d8/da9/classPID.html#a0311b6f7de348499ce24e53ba353514a">PID</a>() : m_Kp(1), m_Ki(0), m_Kd(0), m_minOutput(-INFINITY), m_maxOutput(INFINITY){}</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="../../d8/da9/classPID.html#a9982ecaf693e2b3b3873f749983814dd">compute</a>(<span class="keywordtype">float</span> setpoint, <span class="keywordtype">float</span> input, <span class="keywordtype">float</span> timestep);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/da9/classPID.html#af9677e76cb1beffbcf3f54cbc627c530">reset</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/da9/classPID.html#a11d8c4753029f8cc187d2751cb00c4e9">setTunings</a>(<span class="keywordtype">float</span> Kp, <span class="keywordtype">float</span> Ki, <span class="keywordtype">float</span> Kd);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/da9/classPID.html#aa83c2d7eb95c55f375f85a319f8037b3">setOutputLimits</a>(<span class="keywordtype">float</span> minOutput, <span class="keywordtype">float</span> maxOutput);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="../../d8/da9/classPID.html#a83ed5fcf6da6d340d1d527114445a949">   60</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="../../d8/da9/classPID.html#a83ed5fcf6da6d340d1d527114445a949">getKp</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> m_Kp;}</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="../../d8/da9/classPID.html#a30b4a12f5ad34b7c540365051f79e57c">   65</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="../../d8/da9/classPID.html#a30b4a12f5ad34b7c540365051f79e57c">getKi</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> m_Ki;}</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="../../d8/da9/classPID.html#ac71200e7079fdd7cf3dee5f7e93c7582">   70</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="../../d8/da9/classPID.html#ac71200e7079fdd7cf3dee5f7e93c7582">getKd</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> m_Kd;}</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="../../d8/da9/classPID.html#a19e0b4481b71f304ee21ed1edb1ba331">   75</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="../../d8/da9/classPID.html#a19e0b4481b71f304ee21ed1edb1ba331">getMinOutput</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> m_minOutput;}</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="../../d8/da9/classPID.html#a310f5f2da22b3b492cfe60ebad1f7939">   80</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="../../d8/da9/classPID.html#a310f5f2da22b3b492cfe60ebad1f7939">getMaxOutput</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> m_maxOutput;}</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">float</span> m_Kp;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">float</span> m_Ki;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">float</span> m_Kd;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">float</span> m_minOutput; </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">float</span> m_maxOutput;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>};</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">float</span> m_errorIntegral; </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">float</span> m_previousError; </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">float</span> m_Kp;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">float</span> m_Ki;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordtype">float</span> m_Kd;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">float</span> m_minOutput; </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">float</span> m_maxOutput;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>};</div>
 </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#endif </span><span class="comment">// __PID_H__</span></div>
-<div class="ttc" id="aclassPID_html_a0311b6f7de348499ce24e53ba353514a"><div class="ttname"><a href="../../d8/da9/classPID.html#a0311b6f7de348499ce24e53ba353514a">PID::PID</a></div><div class="ttdeci">PID()</div><div class="ttdoc">Constructeur de PID Constructeur de PID qui initialise toutes les valeurs à des valeurs neutres (Kp=1...</div><div class="ttdef"><b>Definition</b> PID.h:19</div></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">#endif </span><span class="comment">// __PID_H__</span></div>
+<div class="ttc" id="aclassPID_html_a0311b6f7de348499ce24e53ba353514a"><div class="ttname"><a href="../../d8/da9/classPID.html#a0311b6f7de348499ce24e53ba353514a">PID::PID</a></div><div class="ttdeci">PID()</div><div class="ttdoc">Constructeur de PID Constructeur de PID qui initialise toutes les valeurs à des valeurs neutres (Kp=1...</div><div class="ttdef"><b>Definition</b> PID.h:22</div></div>
 <div class="ttc" id="aclassPID_html_a11d8c4753029f8cc187d2751cb00c4e9"><div class="ttname"><a href="../../d8/da9/classPID.html#a11d8c4753029f8cc187d2751cb00c4e9">PID::setTunings</a></div><div class="ttdeci">void setTunings(float Kp, float Ki, float Kd)</div><div class="ttdoc">Charge de nouvelles constantes d&#39;asservissements.</div><div class="ttdef"><b>Definition</b> PID.cpp:31</div></div>
-<div class="ttc" id="aclassPID_html_a19e0b4481b71f304ee21ed1edb1ba331"><div class="ttname"><a href="../../d8/da9/classPID.html#a19e0b4481b71f304ee21ed1edb1ba331">PID::getMinOutput</a></div><div class="ttdeci">float getMinOutput() const</div><div class="ttdoc">Retourne la sortie minimal.</div><div class="ttdef"><b>Definition</b> PID.h:72</div></div>
-<div class="ttc" id="aclassPID_html_a30b4a12f5ad34b7c540365051f79e57c"><div class="ttname"><a href="../../d8/da9/classPID.html#a30b4a12f5ad34b7c540365051f79e57c">PID::getKi</a></div><div class="ttdeci">float getKi() const</div><div class="ttdoc">Retourne le coefficient intégrateur.</div><div class="ttdef"><b>Definition</b> PID.h:62</div></div>
-<div class="ttc" id="aclassPID_html_a310f5f2da22b3b492cfe60ebad1f7939"><div class="ttname"><a href="../../d8/da9/classPID.html#a310f5f2da22b3b492cfe60ebad1f7939">PID::getMaxOutput</a></div><div class="ttdeci">float getMaxOutput() const</div><div class="ttdoc">Retourne la sortie maximal.</div><div class="ttdef"><b>Definition</b> PID.h:77</div></div>
-<div class="ttc" id="aclassPID_html_a83ed5fcf6da6d340d1d527114445a949"><div class="ttname"><a href="../../d8/da9/classPID.html#a83ed5fcf6da6d340d1d527114445a949">PID::getKp</a></div><div class="ttdeci">float getKp() const</div><div class="ttdoc">Retourne le coefficient proportionnel.</div><div class="ttdef"><b>Definition</b> PID.h:57</div></div>
+<div class="ttc" id="aclassPID_html_a19e0b4481b71f304ee21ed1edb1ba331"><div class="ttname"><a href="../../d8/da9/classPID.html#a19e0b4481b71f304ee21ed1edb1ba331">PID::getMinOutput</a></div><div class="ttdeci">float getMinOutput() const</div><div class="ttdoc">Retourne la sortie minimal.</div><div class="ttdef"><b>Definition</b> PID.h:75</div></div>
+<div class="ttc" id="aclassPID_html_a30b4a12f5ad34b7c540365051f79e57c"><div class="ttname"><a href="../../d8/da9/classPID.html#a30b4a12f5ad34b7c540365051f79e57c">PID::getKi</a></div><div class="ttdeci">float getKi() const</div><div class="ttdoc">Retourne le coefficient intégrateur.</div><div class="ttdef"><b>Definition</b> PID.h:65</div></div>
+<div class="ttc" id="aclassPID_html_a310f5f2da22b3b492cfe60ebad1f7939"><div class="ttname"><a href="../../d8/da9/classPID.html#a310f5f2da22b3b492cfe60ebad1f7939">PID::getMaxOutput</a></div><div class="ttdeci">float getMaxOutput() const</div><div class="ttdoc">Retourne la sortie maximal.</div><div class="ttdef"><b>Definition</b> PID.h:80</div></div>
+<div class="ttc" id="aclassPID_html_a83ed5fcf6da6d340d1d527114445a949"><div class="ttname"><a href="../../d8/da9/classPID.html#a83ed5fcf6da6d340d1d527114445a949">PID::getKp</a></div><div class="ttdeci">float getKp() const</div><div class="ttdoc">Retourne le coefficient proportionnel.</div><div class="ttdef"><b>Definition</b> PID.h:60</div></div>
 <div class="ttc" id="aclassPID_html_a9982ecaf693e2b3b3873f749983814dd"><div class="ttname"><a href="../../d8/da9/classPID.html#a9982ecaf693e2b3b3873f749983814dd">PID::compute</a></div><div class="ttdeci">float compute(float setpoint, float input, float timestep)</div><div class="ttdoc">Calcul l&#39;asservissement.</div><div class="ttdef"><b>Definition</b> PID.cpp:7</div></div>
 <div class="ttc" id="aclassPID_html_aa83c2d7eb95c55f375f85a319f8037b3"><div class="ttname"><a href="../../d8/da9/classPID.html#aa83c2d7eb95c55f375f85a319f8037b3">PID::setOutputLimits</a></div><div class="ttdeci">void setOutputLimits(float minOutput, float maxOutput)</div><div class="ttdoc">Charge les limites de sorties.</div><div class="ttdef"><b>Definition</b> PID.cpp:37</div></div>
-<div class="ttc" id="aclassPID_html_ac71200e7079fdd7cf3dee5f7e93c7582"><div class="ttname"><a href="../../d8/da9/classPID.html#ac71200e7079fdd7cf3dee5f7e93c7582">PID::getKd</a></div><div class="ttdeci">float getKd() const</div><div class="ttdoc">Retourne le coefficient dérivateur.</div><div class="ttdef"><b>Definition</b> PID.h:67</div></div>
+<div class="ttc" id="aclassPID_html_ac71200e7079fdd7cf3dee5f7e93c7582"><div class="ttname"><a href="../../d8/da9/classPID.html#ac71200e7079fdd7cf3dee5f7e93c7582">PID::getKd</a></div><div class="ttdeci">float getKd() const</div><div class="ttdoc">Retourne le coefficient dérivateur.</div><div class="ttdef"><b>Definition</b> PID.h:70</div></div>
 <div class="ttc" id="aclassPID_html_af9677e76cb1beffbcf3f54cbc627c530"><div class="ttname"><a href="../../d8/da9/classPID.html#af9677e76cb1beffbcf3f54cbc627c530">PID::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Réinitialise les accumulateurs.</div><div class="ttdef"><b>Definition</b> PID.cpp:25</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

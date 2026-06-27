@@ -5,7 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CRINSA-team2025: Référence de la classe Logger</title>
+<title>Robot Principal: Référence de la classe Logger</title>
+<link rel="icon" href="../../icon.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -33,10 +34,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">CRINSA-team2025<span id="projectnumber">&#160;V1</span>
+   <div id="projectname">Robot Principal<span id="projectnumber">&#160;26</span>
    </div>
-   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2025</div>
+   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2026</div>
   </td>
  </tr>
  </tbody>
@@ -111,28 +113,165 @@ $(function(){initNavTree('db/d67/classLogger.html','../../'); initResizable(true
   <div class="headertitle"><div class="title">Référence de la classe Logger</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Log pour la sortie console avec des couleurs et éventuellement la sortie LCD.  
+ <a href="#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../dd/da4/Logger_8h_source.html">Logger.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:ac482b5527b6c16944ab148217cd98db6" id="r_ac482b5527b6c16944ab148217cd98db6"><td class="memItemLeft" align="right" valign="top"><a id="ac482b5527b6c16944ab148217cd98db6" name="ac482b5527b6c16944ab148217cd98db6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Logger</b> (const char *name)</td></tr>
+<tr class="memitem:ac482b5527b6c16944ab148217cd98db6" id="r_ac482b5527b6c16944ab148217cd98db6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac482b5527b6c16944ab148217cd98db6">Logger</a> (const char *name)</td></tr>
+<tr class="memdesc:ac482b5527b6c16944ab148217cd98db6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur du logger.  <br /></td></tr>
 <tr class="separator:ac482b5527b6c16944ab148217cd98db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae703ed138b1caf40c87babf51a699bfc" id="r_ae703ed138b1caf40c87babf51a699bfc"><td class="memItemLeft" align="right" valign="top"><a id="ae703ed138b1caf40c87babf51a699bfc" name="ae703ed138b1caf40c87babf51a699bfc"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>log</b> (uint8_t level, const char *format,...)</td></tr>
+<tr class="memitem:ae703ed138b1caf40c87babf51a699bfc" id="r_ae703ed138b1caf40c87babf51a699bfc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae703ed138b1caf40c87babf51a699bfc">log</a> (uint8_t level, const char *format,...)</td></tr>
+<tr class="memdesc:ae703ed138b1caf40c87babf51a699bfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">affiche un message sur la sortie  <br /></td></tr>
 <tr class="separator:ae703ed138b1caf40c87babf51a699bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Fonctions membres publiques statiques</h2></td></tr>
-<tr class="memitem:a676185cde67294a17e390c90fc179299" id="r_a676185cde67294a17e390c90fc179299"><td class="memItemLeft" align="right" valign="top"><a id="a676185cde67294a17e390c90fc179299" name="a676185cde67294a17e390c90fc179299"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>setLcdOutput</b> (LiquidCrystal &amp;lcd)</td></tr>
+<tr class="memitem:a676185cde67294a17e390c90fc179299" id="r_a676185cde67294a17e390c90fc179299"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a676185cde67294a17e390c90fc179299">setLcdOutput</a> (LiquidCrystal &amp;lcd)</td></tr>
+<tr class="memdesc:a676185cde67294a17e390c90fc179299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attache un écran LCD.  <br /></td></tr>
 <tr class="separator:a676185cde67294a17e390c90fc179299"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a804b8aae11fb8af02ef68f66e2e4f8" id="r_a7a804b8aae11fb8af02ef68f66e2e4f8"><td class="memItemLeft" align="right" valign="top"><a id="a7a804b8aae11fb8af02ef68f66e2e4f8" name="a7a804b8aae11fb8af02ef68f66e2e4f8"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>sameLine</b> (const char *str)</td></tr>
+<tr class="memitem:a7a804b8aae11fb8af02ef68f66e2e4f8" id="r_a7a804b8aae11fb8af02ef68f66e2e4f8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a804b8aae11fb8af02ef68f66e2e4f8">sameLine</a> (const char *str)</td></tr>
+<tr class="memdesc:a7a804b8aae11fb8af02ef68f66e2e4f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute du texte sur la même ligne.  <br /></td></tr>
 <tr class="separator:a7a804b8aae11fb8af02ef68f66e2e4f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Log pour la sortie console avec des couleurs et éventuellement la sortie LCD. </p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a id="ac482b5527b6c16944ab148217cd98db6" name="ac482b5527b6c16944ab148217cd98db6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac482b5527b6c16944ab148217cd98db6">&#9670;&#160;</a></span>Logger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Logger::Logger </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructeur du logger. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Nom du logger (sera affiché dans les logs). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="ae703ed138b1caf40c87babf51a699bfc" name="ae703ed138b1caf40c87babf51a699bfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae703ed138b1caf40c87babf51a699bfc">&#9670;&#160;</a></span>log()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Logger::log </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>level</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>affiche un message sur la sortie </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td>Niveau de log (INFO, WARNING...) </td></tr>
+    <tr><td class="paramname">format</td><td>Le message avec les specifiers de format au format printf </td></tr>
+    <tr><td class="paramname">...</td><td>Les valeurs à passer à printf </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le nombre de caractères imprimés </dd></dl>
+
+</div>
+</div>
+<a id="a7a804b8aae11fb8af02ef68f66e2e4f8" name="a7a804b8aae11fb8af02ef68f66e2e4f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a804b8aae11fb8af02ef68f66e2e4f8">&#9670;&#160;</a></span>sameLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::sameLine </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ajoute du texte sur la même ligne. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>Le texte à ajouter </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a676185cde67294a17e390c90fc179299" name="a676185cde67294a17e390c90fc179299"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a676185cde67294a17e390c90fc179299">&#9670;&#160;</a></span>setLcdOutput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Logger::setLcdOutput </td>
+          <td>(</td>
+          <td class="paramtype">LiquidCrystal &amp;</td>          <td class="paramname"><span class="paramname"><em>lcd</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Attache un écran LCD. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lcd</td><td>L'écran à attacher </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
-<li>lib/Logger/<a class="el" href="../../dd/da4/Logger_8h_source.html">Logger.h</a></li>
-<li>lib/Logger/<b>Logger.cpp</b></li>
+<li><a class="el" href="../../dd/da4/Logger_8h_source.html">Logger.h</a></li>
+<li><b>Logger.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,0 +1,4 @@
+<map id="Sensors" name="Sensors">
+<area shape="rect" id="Node000002" href="$d0/de1/group__core.html" title="Tout le code lié directement au fonctionnement du robot." alt="" coords="221,8,269,33"/>
+<area shape="rect" id="Node000001" title="Tout le code lié aux capteurs du robot." alt="" coords="5,8,75,33"/>
+</map>

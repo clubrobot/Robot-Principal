@@ -5,7 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CRINSA-team2025: Référence de la classe Grafcet::StateMachine</title>
+<title>Robot Principal: Référence de la classe Grafcet::StateMachine</title>
+<link rel="icon" href="../../icon.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -33,10 +34,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">CRINSA-team2025<span id="projectnumber">&#160;V1</span>
+   <div id="projectname">Robot Principal<span id="projectnumber">&#160;26</span>
    </div>
-   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2025</div>
+   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2026</div>
   </td>
  </tr>
  </tbody>
@@ -111,40 +113,53 @@ $(function(){initNavTree('da/d23/classGrafcet_1_1StateMachine.html','../../'); i
   <div class="headertitle"><div class="title">Référence de la classe Grafcet::StateMachine</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>La machine à état permettant de parcourir le grafcet.  
+ <a href="#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../da/d78/StateMachine_8h_source.html">StateMachine.h</a>&gt;</code></p>
 <div class="dynheader">
 Graphe de collaboration de Grafcet::StateMachine:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d04/classGrafcet_1_1StateMachine__coll__graph.png" border="0" usemap="#aGrafcet_1_1StateMachine_coll__map" alt="Collaboration graph"/></div>
 <map name="aGrafcet_1_1StateMachine_coll__map" id="aGrafcet_1_1StateMachine_coll__map">
-<area shape="rect" title=" " alt="" coords="5,94,156,120"/>
-<area shape="rect" href="../../dc/d19/classGrafcet_1_1Node.html" title=" " alt="" coords="30,5,131,31"/>
+<area shape="rect" title="La machine à état permettant de parcourir le grafcet." alt="" coords="5,94,156,120"/>
+<area shape="rect" href="../../dc/d19/classGrafcet_1_1Node.html" title="Représente un noeud dans le graphcet Un noeud peut être un noeud d&#39;action ou un noeud de transition...." alt="" coords="30,5,131,31"/>
 <area shape="poly" title=" " alt="" coords="83,47,83,94,78,94,78,47"/>
 </map>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a47931fe18653968ebcf323166c25e752" id="r_a47931fe18653968ebcf323166c25e752"><td class="memItemLeft" align="right" valign="top"><a id="a47931fe18653968ebcf323166c25e752" name="a47931fe18653968ebcf323166c25e752"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>StateMachine</b> ()=default</td></tr>
+<tr class="memdesc:a47931fe18653968ebcf323166c25e752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par défaut de la machine à état. <br /></td></tr>
+<tr class="separator:a47931fe18653968ebcf323166c25e752"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a941cffa69d63c3cca66715a1519f87ab" id="r_a941cffa69d63c3cca66715a1519f87ab"><td class="memItemLeft" align="right" valign="top"><a id="a941cffa69d63c3cca66715a1519f87ab" name="a941cffa69d63c3cca66715a1519f87ab"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>StateMachine</b> (<a class="el" href="../../dc/d19/classGrafcet_1_1Node.html">Node</a> *startingNode)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>StateMachine</b> (<a class="el" href="../../dc/d19/classGrafcet_1_1Node.html">Node</a> *<a class="el" href="#afbb4909df50ed3ddfeb010dbb1f121d3">startingNode</a>)</td></tr>
+<tr class="memdesc:a941cffa69d63c3cca66715a1519f87ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de la machine à état avec un noeud de départ. <br /></td></tr>
 <tr class="separator:a941cffa69d63c3cca66715a1519f87ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a581d2dbff2bf8125b39d0456e955b43b" id="r_a581d2dbff2bf8125b39d0456e955b43b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a581d2dbff2bf8125b39d0456e955b43b">setStartingNode</a> (<a class="el" href="../../dc/d19/classGrafcet_1_1Node.html">Node</a> *startingNode)</td></tr>
-<tr class="memdesc:a581d2dbff2bf8125b39d0456e955b43b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the starting node of the grafcet.  <br /></td></tr>
+<tr class="memitem:a581d2dbff2bf8125b39d0456e955b43b" id="r_a581d2dbff2bf8125b39d0456e955b43b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a581d2dbff2bf8125b39d0456e955b43b">setStartingNode</a> (<a class="el" href="../../dc/d19/classGrafcet_1_1Node.html">Node</a> *<a class="el" href="#afbb4909df50ed3ddfeb010dbb1f121d3">startingNode</a>)</td></tr>
+<tr class="memdesc:a581d2dbff2bf8125b39d0456e955b43b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigne le noeud de départ du grafcet.  <br /></td></tr>
 <tr class="separator:a581d2dbff2bf8125b39d0456e955b43b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cd1bf2b44333f78964cb723438d4457" id="r_a3cd1bf2b44333f78964cb723438d4457"><td class="memItemLeft" align="right" valign="top"><a id="a3cd1bf2b44333f78964cb723438d4457" name="a3cd1bf2b44333f78964cb723438d4457"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>execute</b> ()</td></tr>
-<tr class="memdesc:a3cd1bf2b44333f78964cb723438d4457"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the grafcet Uses a queue (activeNodes) to keep track of which node are enabled, if they are action nodes do their action and then transition if needed. <br /></td></tr>
+<tr class="memdesc:a3cd1bf2b44333f78964cb723438d4457"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parcours le grafcet en executant les actions Utilise une queue pour garder en mémoire les noeuds actifs. Si ces noeuds sont des actions ; la réaliser sinon évaluer la transition. <br /></td></tr>
 <tr class="separator:a3cd1bf2b44333f78964cb723438d4457"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Attributs protégés</h2></td></tr>
 <tr class="memitem:afbb4909df50ed3ddfeb010dbb1f121d3" id="r_afbb4909df50ed3ddfeb010dbb1f121d3"><td class="memItemLeft" align="right" valign="top"><a id="afbb4909df50ed3ddfeb010dbb1f121d3" name="afbb4909df50ed3ddfeb010dbb1f121d3"></a>
 <a class="el" href="../../dc/d19/classGrafcet_1_1Node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>startingNode</b> = nullptr</td></tr>
+<tr class="memdesc:afbb4909df50ed3ddfeb010dbb1f121d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le noeud de départ. <br /></td></tr>
 <tr class="separator:afbb4909df50ed3ddfeb010dbb1f121d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a493c5aa79ebcea55301bfb6807c1df4b" id="r_a493c5aa79ebcea55301bfb6807c1df4b"><td class="memItemLeft" align="right" valign="top"><a id="a493c5aa79ebcea55301bfb6807c1df4b" name="a493c5aa79ebcea55301bfb6807c1df4b"></a>
 std::deque&lt; <a class="el" href="../../dc/d19/classGrafcet_1_1Node.html">Node</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>activeNodes</b> = {}</td></tr>
 <tr class="separator:a493c5aa79ebcea55301bfb6807c1df4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>La machine à état permettant de parcourir le grafcet. </p>
+</div><h2 class="groupheader">Documentation des fonctions membres</h2>
 <a id="a581d2dbff2bf8125b39d0456e955b43b" name="a581d2dbff2bf8125b39d0456e955b43b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a581d2dbff2bf8125b39d0456e955b43b">&#9670;&#160;</a></span>setStartingNode()</h2>
 
@@ -168,7 +183,7 @@ std::deque&lt; <a class="el" href="../../dc/d19/classGrafcet_1_1Node.html">Node<
 </table>
 </div><div class="memdoc">
 
-<p>Set the starting node of the grafcet. </p>
+<p>Assigne le noeud de départ du grafcet. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">startingNode</td><td></td></tr>
@@ -179,15 +194,15 @@ std::deque&lt; <a class="el" href="../../dc/d19/classGrafcet_1_1Node.html">Node<
 </div>
 </div>
 <hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
-<li>lib/Grafcet/include/<a class="el" href="../../da/d78/StateMachine_8h_source.html">StateMachine.h</a></li>
-<li>lib/Grafcet/src/<b>StateMachine.cpp</b></li>
+<li><a class="el" href="../../da/d78/StateMachine_8h_source.html">StateMachine.h</a></li>
+<li><b>StateMachine.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Grafcet</b></li><li class="navelem"><a class="el" href="../../da/d23/classGrafcet_1_1StateMachine.html">StateMachine</a></li>
+    <li class="navelem"><a class="el" href="../../d9/d57/namespaceGrafcet.html">Grafcet</a></li><li class="navelem"><a class="el" href="../../da/d23/classGrafcet_1_1StateMachine.html">StateMachine</a></li>
     <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

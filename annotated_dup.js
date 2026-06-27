@@ -1,11 +1,6 @@
 var annotated_dup =
 [
-    [ "geogebra", "d6/d4a/namespacegeogebra.html", [
-      [ "AlreadyExistsError", "d9/d19/classgeogebra_1_1AlreadyExistsError.html", null ],
-      [ "Geogebra", "dc/df0/classgeogebra_1_1Geogebra.html", "dc/df0/classgeogebra_1_1Geogebra" ],
-      [ "LabelAlreadyUse", "d3/de3/classgeogebra_1_1LabelAlreadyUse.html", null ]
-    ] ],
-    [ "Grafcet", null, [
+    [ "Grafcet", "d9/d57/namespaceGrafcet.html", [
       [ "ActionNode", "d6/d86/classGrafcet_1_1ActionNode.html", "d6/d86/classGrafcet_1_1ActionNode" ],
       [ "Node", "dc/d19/classGrafcet_1_1Node.html", "dc/d19/classGrafcet_1_1Node" ],
       [ "StateMachine", "da/d23/classGrafcet_1_1StateMachine.html", "da/d23/classGrafcet_1_1StateMachine" ],
@@ -39,7 +34,7 @@ var annotated_dup =
     [ "EndStop", "df/d5b/classEndStop.html", "df/d5b/classEndStop" ],
     [ "FullSpeedServo", "d9/df7/classFullSpeedServo.html", "d9/df7/classFullSpeedServo" ],
     [ "LedButton", "d8/d45/classLedButton.html", null ],
-    [ "Logger", "db/d67/classLogger.html", null ],
+    [ "Logger", "db/d67/classLogger.html", "db/d67/classLogger" ],
     [ "Musique", "d6/da1/classMusique.html", "d6/da1/classMusique" ],
     [ "NonCopyable", "dc/d3c/classNonCopyable.html", null ],
     [ "ObjectDetector", "d6/dd4/classObjectDetector.html", "d6/dd4/classObjectDetector" ],

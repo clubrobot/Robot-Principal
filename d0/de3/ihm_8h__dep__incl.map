@@ -1,0 +1,5 @@
+<map id="ihm.h" name="ihm.h">
+<area shape="rect" id="Node000001" title="Contient diverses fonctions permettant d&#39;intéragir avec l&#39;utilisateur via les boutons et les leds." alt="" coords="16,5,68,31"/>
+<area shape="rect" id="Node000002" href="$df/d0a/main_8cpp.html" title="Contient le code principal du robot." alt="" coords="5,79,79,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="45,46,45,79,39,79,39,46"/>
+</map>

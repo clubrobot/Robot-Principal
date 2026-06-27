@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Robot Principal: Référence du fichier Automate.h</title>
+<link rel="icon" href="../../icon.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript" src="../../darkmode_toggle.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../custom.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="../../theme-round.css" rel="stylesheet" type="text/css"/>
+<link href="../../theme-robot.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Robot Principal<span id="projectnumber">&#160;26</span>
+   </div>
+   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2026</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('dd/d07/Automate_8h.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Espaces de nommage</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#enum-members">Énumérations</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier Automate.h<div class="ingroups"><a class="el" href="../../db/da1/group__strategy.html">Strategy</a> &#124; <a class="el" href="../../d0/de1/group__core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Contient le code nécessaire pour jouer un match.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d1/dd7/Strategie_8h_source.html">Strategie.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de Automate.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d2/d76/Automate_8h__incl.png" border="0" usemap="#aAutomate_8h" alt=""/></div>
+<map name="aAutomate_8h" id="aAutomate_8h">
+<area shape="rect" title="Contient le code nécessaire pour jouer un match." alt="" coords="512,5,599,31"/>
+<area shape="rect" href="../../d1/dd7/Strategie_8h.html" title="Contient les diverses stratégies que le robot peut executer." alt="" coords="514,79,597,105"/>
+<area shape="poly" title=" " alt="" coords="558,31,558,63,553,63,553,31"/>
+<area shape="rect" title=" " alt="" coords="172,153,251,178"/>
+<area shape="poly" title=" " alt="" coords="514,104,267,155,265,149,513,99"/>
+<area shape="rect" href="../../db/d05/Grafcet_8h.html" title="Header wrapper pour faciliter les import." alt="" coords="274,153,349,178"/>
+<area shape="poly" title=" " alt="" coords="515,108,364,152,363,146,513,103"/>
+<area shape="rect" href="../../d3/d04/HazelnutGripper_8h_source.html" title=" " alt="" coords="433,153,558,178"/>
+<area shape="poly" title=" " alt="" coords="548,107,517,142,513,139,544,103"/>
+<area shape="rect" href="../../dd/da4/Logger_8h.html" title="Un logger qui permet d&#39;avoir une belle sortie console." alt="" coords="581,153,652,178"/>
+<area shape="poly" title=" " alt="" coords="568,103,599,139,595,142,564,107"/>
+<area shape="rect" href="../../d3/d12/Odometry_8h_source.html" title=" " alt="" coords="728,226,815,252"/>
+<area shape="poly" title=" " alt="" coords="582,103,666,150,749,214,746,219,663,155,579,108"/>
+<area shape="rect" href="../../d1/dfc/Geogebra_8h_source.html" title=" " alt="" coords="728,153,815,178"/>
+<area shape="poly" title=" " alt="" coords="593,103,721,145,719,150,591,108"/>
+<area shape="rect" href="../../da/d78/StateMachine_8h.html" title="La machine a état permettant de parcourir le grafcet." alt="" coords="22,226,134,252"/>
+<area shape="poly" title=" " alt="" coords="275,181,133,224,132,219,273,176"/>
+<area shape="rect" href="../../db/d92/Node_8h.html" title="Représentation d&#39;un noeud du grafcet." alt="" coords="168,300,231,326"/>
+<area shape="poly" title=" " alt="" coords="275,178,233,196,214,210,199,228,194,241,191,256,194,285,189,285,186,255,188,240,195,225,210,206,230,191,273,173"/>
+<area shape="rect" href="../../dc/dc1/Transition_8h.html" title="Un noeud de transition du grafcet permettant d&#39;évaluer la condition de passage d&#39;un noeud d&#39;action à ..." alt="" coords="209,226,297,252"/>
+<area shape="poly" title=" " alt="" coords="304,180,274,216,270,213,300,177"/>
+<area shape="rect" href="../../db/dc0/ActionNode_8h.html" title="Un noeud d&#39;action du grafcet, permettant de réaliser des actions de front montant." alt="" coords="320,226,420,252"/>
+<area shape="poly" title=" " alt="" coords="323,177,353,213,349,216,319,180"/>
+<area shape="rect" title=" " alt="" coords="87,300,144,326"/>
+<area shape="poly" title=" " alt="" coords="87,251,105,285,100,287,82,253"/>
+<area shape="rect" title=" " alt="" coords="5,374,130,399"/>
+<area shape="poly" title=" " alt="" coords="80,253,72,358,67,358,75,252"/>
+<area shape="poly" title=" " alt="" coords="100,250,167,289,164,294,97,255"/>
+<area shape="poly" title=" " alt="" coords="178,329,104,368,102,364,176,324"/>
+<area shape="rect" title=" " alt="" coords="171,374,228,399"/>
+<area shape="poly" title=" " alt="" coords="202,326,202,358,197,358,197,326"/>
+<area shape="poly" title=" " alt="" coords="246,254,220,289,216,286,242,251"/>
+<area shape="rect" title=" " alt="" coords="293,300,370,326"/>
+<area shape="poly" title=" " alt="" coords="268,251,309,287,305,291,264,255"/>
+<area shape="poly" title=" " alt="" coords="342,255,243,296,241,291,340,250"/>
+<area shape="poly" title=" " alt="" coords="366,253,348,287,343,285,361,251"/>
+<area shape="rect" href="../../d5/d92/GripperFinger_8h_source.html" title=" " alt="" coords="444,226,553,252"/>
+<area shape="poly" title=" " alt="" coords="499,178,500,211,494,211,493,179"/>
+<area shape="rect" title=" " alt="" coords="470,300,527,326"/>
+<area shape="poly" title=" " alt="" coords="501,252,501,284,496,284,496,252"/>
+<area shape="rect" title=" " alt="" coords="568,455,644,480"/>
+<area shape="poly" title=" " alt="" coords="619,179,610,439,604,439,614,179"/>
+<area shape="rect" href="../../d4/d36/coloring_8h.html" title="Définitions des codes ANSI pour colorer le shell." alt="" coords="628,226,704,252"/>
+<area shape="poly" title=" " alt="" coords="627,177,652,212,647,215,623,180"/>
+<area shape="rect" href="../../d5/d78/PeriodicProcess_8h_source.html" title=" " alt="" coords="704,300,831,326"/>
+<area shape="poly" title=" " alt="" coords="774,252,772,285,766,284,768,252"/>
+<area shape="rect" href="../../da/dc4/My__Clock_8h_source.html" title=" " alt="" coords="721,374,809,399"/>
+<area shape="poly" title=" " alt="" coords="770,326,769,358,763,358,764,326"/>
+<area shape="poly" title=" " alt="" coords="742,402,645,450,643,445,739,398"/>
+<area shape="rect" title=" " alt="" coords="873,455,966,480"/>
+<area shape="poly" title=" " alt="" coords="790,398,884,445,881,450,787,402"/>
+<area shape="rect" title=" " alt="" coords="676,447,849,488"/>
+<area shape="poly" title=" " alt="" coords="767,400,766,432,761,432,762,400"/>
+<area shape="poly" title=" " alt="" coords="774,179,774,211,769,211,769,179"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d70/Automate_8h__dep__incl.png" border="0" usemap="#aAutomate_8hdep" alt=""/></div>
+<map name="aAutomate_8hdep" id="aAutomate_8hdep">
+<area shape="rect" title="Contient le code nécessaire pour jouer un match." alt="" coords="5,5,93,31"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html" title="Contient le code principal du robot." alt="" coords="12,79,86,105"/>
+<area shape="poly" title=" " alt="" coords="52,46,52,79,46,79,46,46"/>
+</map>
+</div>
+</div>
+<p><a href="../../dd/d07/Automate_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Espaces de nommage</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d75/namespacecerveau_1_1automate.html">cerveau::automate</a></td></tr>
+<tr class="memdesc:d7/d75/namespacecerveau_1_1automate"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contient le code nécessaire pour jouer un match. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d2e/namespacecerveau.html">cerveau</a></td></tr>
+<tr class="memdesc:d6/d2e/namespacecerveau"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contient les fonctions et variables nécessaires pour gérer la stratégie du robot. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:a98b0a72ffaa9c4f24196bf727877012b" id="r_a98b0a72ffaa9c4f24196bf727877012b"><td class="memItemLeft" align="right" valign="top"><a id="a98b0a72ffaa9c4f24196bf727877012b" name="a98b0a72ffaa9c4f24196bf727877012b"></a>
+typedef s_Team&#160;</td><td class="memItemRight" valign="bottom"><b>cerveau::automate::Team</b></td></tr>
+<tr class="separator:a98b0a72ffaa9c4f24196bf727877012b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:a36f7bfb468ca0fea8c929b412dcdc078" id="r_a36f7bfb468ca0fea8c929b412dcdc078"><td class="memItemLeft" align="right" valign="top"><a id="a36f7bfb468ca0fea8c929b412dcdc078" name="a36f7bfb468ca0fea8c929b412dcdc078"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>s_Team</b> { <b>BLEU</b>
+, <b>JAUNE</b>
+ }</td></tr>
+<tr class="separator:a36f7bfb468ca0fea8c929b412dcdc078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a1d642fa052efc9a2c291037e928152c0" id="r_a1d642fa052efc9a2c291037e928152c0"><td class="memItemLeft" align="right" valign="top"><a id="a1d642fa052efc9a2c291037e928152c0" name="a1d642fa052efc9a2c291037e928152c0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>cerveau::automate::init</b> (Team team)</td></tr>
+<tr class="separator:a1d642fa052efc9a2c291037e928152c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c3d1bbb12f4ef090857661241c5990a" id="r_a6c3d1bbb12f4ef090857661241c5990a"><td class="memItemLeft" align="right" valign="top"><a id="a6c3d1bbb12f4ef090857661241c5990a" name="a6c3d1bbb12f4ef090857661241c5990a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>cerveau::automate::play_match</b> (void *pvParameters)</td></tr>
+<tr class="separator:a6c3d1bbb12f4ef090857661241c5990a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a45967bacf73a9474881bfd1f69b6dbce" id="r_a45967bacf73a9474881bfd1f69b6dbce"><td class="memItemLeft" align="right" valign="top"><a id="a45967bacf73a9474881bfd1f69b6dbce" name="a45967bacf73a9474881bfd1f69b6dbce"></a>
+auto&#160;</td><td class="memItemRight" valign="bottom"><b>cerveau::automate::automateLogger</b> = <a class="el" href="../../db/d67/classLogger.html">Logger</a>(&quot;AUTOMATE&quot;)</td></tr>
+<tr class="separator:a45967bacf73a9474881bfd1f69b6dbce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7acf573dd44d7418aa639c2877bc4fa0" id="r_a7acf573dd44d7418aa639c2877bc4fa0"><td class="memItemLeft" align="right" valign="top"><a id="a7acf573dd44d7418aa639c2877bc4fa0" name="a7acf573dd44d7418aa639c2877bc4fa0"></a>
+Team&#160;</td><td class="memItemRight" valign="bottom"><b>cerveau::automate::ourTeam</b></td></tr>
+<tr class="separator:a7acf573dd44d7418aa639c2877bc4fa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Contient le code nécessaire pour jouer un match. </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_5e878e2af70310e8ad6472368609696f.html">cerveau</a></li><li class="navelem"><a class="el" href="../../dd/d07/Automate_8h.html">Automate.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

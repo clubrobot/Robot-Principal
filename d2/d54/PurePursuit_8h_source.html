@@ -5,7 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CRINSA-team2025:  Fichier source de lib/PurePursuit/PurePursuit.h</title>
+<title>Robot Principal:  Fichier source de PurePursuit.h</title>
+<link rel="icon" href="../../icon.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -33,10 +34,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">CRINSA-team2025<span id="projectnumber">&#160;V1</span>
+   <div id="projectname">Robot Principal<span id="projectnumber">&#160;26</span>
    </div>
-   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2025</div>
+   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2026</div>
   </td>
  </tr>
  </tbody>
@@ -185,7 +187,7 @@ $(function(){initNavTree('d2/d54/PurePursuit_8h_source.html','../../'); initResi
 </div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="preprocessor">#endif </span><span class="comment">// __PUREPURSUIT_H__</span></div>
-<div class="ttc" id="aclassAbstractMoveStrategy_html"><div class="ttname"><a href="../../de/dc0/classAbstractMoveStrategy.html">AbstractMoveStrategy</a></div><div class="ttdoc">Interface de Stratégie de mouvement.</div><div class="ttdef"><b>Definition</b> PositionController.h:190</div></div>
+<div class="ttc" id="aclassAbstractMoveStrategy_html"><div class="ttname"><a href="../../de/dc0/classAbstractMoveStrategy.html">AbstractMoveStrategy</a></div><div class="ttdoc">Interface de Stratégie de mouvement.</div><div class="ttdef"><b>Definition</b> PositionController.h:195</div></div>
 <div class="ttc" id="aclassPurePursuit_html"><div class="ttname"><a href="../../de/d96/classPurePursuit.html">PurePursuit</a></div><div class="ttdoc">Trajectoire courbe le long d&#39;une ligne brisée.</div><div class="ttdef"><b>Definition</b> PurePursuit.h:20</div></div>
 <div class="ttc" id="aclassPurePursuit_html_a0d9fdb1befa08614df6822988a85ec2a"><div class="ttname"><a href="../../de/d96/classPurePursuit.html#a0d9fdb1befa08614df6822988a85ec2a">PurePursuit::getDirection</a></div><div class="ttdeci">Direction getDirection() const</div><div class="ttdoc">Getter de la direction courant.</div><div class="ttdef"><b>Definition</b> PurePursuit.h:88</div></div>
 <div class="ttc" id="aclassPurePursuit_html_a10ddd92e112e6fc7ab5e7d817ffd9fa9"><div class="ttname"><a href="../../de/d96/classPurePursuit.html#a10ddd92e112e6fc7ab5e7d817ffd9fa9">PurePursuit::checkProjectionGoal</a></div><div class="ttdeci">void checkProjectionGoal(const float x, const float y)</div><div class="ttdoc">Calcule le point intermediaire sur la ligne brisée.</div><div class="ttdef"><b>Definition</b> PurePursuit.cpp:99</div></div>
@@ -216,9 +218,9 @@ $(function(){initNavTree('d2/d54/PurePursuit_8h_source.html','../../'); initResi
 <div class="ttc" id="aclassPurePursuit_html_acea4a27e9a15b22c035df1bfd3fbea6d"><div class="ttname"><a href="../../de/d96/classPurePursuit.html#acea4a27e9a15b22c035df1bfd3fbea6d">PurePursuit::setLookAheadBis</a></div><div class="ttdeci">void setLookAheadBis(float lookAheadBis)</div><div class="ttdoc">Setter du lookAheadBis.</div><div class="ttdef"><b>Definition</b> PurePursuit.cpp:248</div></div>
 <div class="ttc" id="aclassPurePursuit_html_ad650949b0a832f48159c712542a3378f"><div class="ttname"><a href="../../de/d96/classPurePursuit.html#ad650949b0a832f48159c712542a3378f">PurePursuit::getWaypoint</a></div><div class="ttdeci">const Waypoint &amp; getWaypoint(int index) const</div><div class="ttdoc">Getter d&#39;un point de passage.</div><div class="ttdef"><b>Definition</b> PurePursuit.h:106</div></div>
 <div class="ttc" id="aclassPurePursuit_html_ae777318b78fb671d7c4a7bfdb7a8bb6c"><div class="ttname"><a href="../../de/d96/classPurePursuit.html#ae777318b78fb671d7c4a7bfdb7a8bb6c">PurePursuit::getDistAfterGoal</a></div><div class="ttdeci">float getDistAfterGoal()</div><div class="ttdoc">Retourne la distance restante à parcourir.</div><div class="ttdef"><b>Definition</b> PurePursuit.cpp:147</div></div>
-<div class="ttc" id="astructPosition_html"><div class="ttname"><a href="../../d0/df4/structPosition.html">Position</a></div><div class="ttdoc">Structure de position.</div><div class="ttdef"><b>Definition</b> Odometry.h:14</div></div>
-<div class="ttc" id="astructPosition_html_a54a6182b5f7539295b32255808897d3f"><div class="ttname"><a href="../../d0/df4/structPosition.html#a54a6182b5f7539295b32255808897d3f">Position::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition</b> Odometry.h:32</div></div>
-<div class="ttc" id="astructPosition_html_af684446cbf0f6d53386686283da6dcc6"><div class="ttname"><a href="../../d0/df4/structPosition.html#af684446cbf0f6d53386686283da6dcc6">Position::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition</b> Odometry.h:31</div></div>
+<div class="ttc" id="astructPosition_html"><div class="ttname"><a href="../../d0/df4/structPosition.html">Position</a></div><div class="ttdoc">Structure de position.</div><div class="ttdef"><b>Definition</b> Odometry.h:16</div></div>
+<div class="ttc" id="astructPosition_html_a54a6182b5f7539295b32255808897d3f"><div class="ttname"><a href="../../d0/df4/structPosition.html#a54a6182b5f7539295b32255808897d3f">Position::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition</b> Odometry.h:34</div></div>
+<div class="ttc" id="astructPosition_html_af684446cbf0f6d53386686283da6dcc6"><div class="ttname"><a href="../../d0/df4/structPosition.html#af684446cbf0f6d53386686283da6dcc6">Position::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition</b> Odometry.h:33</div></div>
 <div class="ttc" id="astructPurePursuit_1_1Waypoint_html"><div class="ttname"><a href="../../d4/d9e/structPurePursuit_1_1Waypoint.html">PurePursuit::Waypoint</a></div><div class="ttdoc">Structure d&#39;un point de passage de Purpursuit.</div><div class="ttdef"><b>Definition</b> PurePursuit.h:27</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

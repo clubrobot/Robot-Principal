@@ -49,5 +49,7 @@ var searchData=
   ['gettraveleddistance_46',['getTraveledDistance',['../dd/df3/classCodewheel.html#aeebb10d23afc0761c434475d5940d1bc',1,'Codewheel::getTraveledDistance()'],['../d1/d6f/classAbstractCodewheel.html#a12ac9400c8af2b0dcfb041ad114b1831',1,'AbstractCodewheel::getTraveledDistance()']]],
   ['getwaypoint_47',['getWaypoint',['../de/d96/classPurePursuit.html#ad650949b0a832f48159c712542a3378f',1,'PurePursuit']]],
   ['getwheelradius_48',['getWheelRadius',['../dd/df3/classCodewheel.html#a9093477d573ca15ef537a6521ecdc68f',1,'Codewheel']]],
-  ['gripperfinger_49',['GripperFinger',['../d6/d59/classHazelnutGripper_1_1GripperFinger.html#a10e4617305feaa5e9ab719abd76ef0db',1,'HazelnutGripper::GripperFinger']]]
+  ['goto_5fwaypoints_49',['GOTO_WAYPOINTS',['../d1/dc5/namespaceWheeledbase.html#a003aaed4fd96ccc8b405cc5fad3f7f11',1,'Wheeledbase']]],
+  ['goto_5fwaypoints_5farray_50',['GOTO_WAYPOINTS_ARRAY',['../d1/dc5/namespaceWheeledbase.html#ac8110783ac7c2d4605090d1950e6d78c',1,'Wheeledbase']]],
+  ['gripperfinger_51',['GripperFinger',['../d6/d59/classHazelnutGripper_1_1GripperFinger.html#a10e4617305feaa5e9ab719abd76ef0db',1,'HazelnutGripper::GripperFinger']]]
 ];

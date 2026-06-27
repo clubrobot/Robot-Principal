@@ -5,7 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CRINSA-team2025:  Fichier source de include/variables_globales.h</title>
+<title>Robot Principal:  Fichier source de variables_globales.h</title>
+<link rel="icon" href="../../icon.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -33,10 +34,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">CRINSA-team2025<span id="projectnumber">&#160;V1</span>
+   <div id="projectname">Robot Principal<span id="projectnumber">&#160;26</span>
    </div>
-   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2025</div>
+   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2026</div>
   </td>
  </tr>
  </tbody>
@@ -107,31 +109,41 @@ $(function(){initNavTree('d7/d34/variables__globales_8h_source.html','../../'); 
   <div class="headertitle"><div class="title">variables_globales.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<a href="../../d7/d34/variables__globales_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by bapti on 04/11/2024.</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef TEAM2025_VARIABLES_GLOBALES_H</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define TEAM2025_VARIABLES_GLOBALES_H</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;FreeRTOS.h&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;FreeRTOS/Source/include/task.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define TEAM_BLEU 0</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define TEAM_JAUNE 1</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">extern</span> <span class="keywordtype">bool</span> my_team;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">extern</span> <span class="keywordtype">bool</span> match_started;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">inline</span> TaskHandle_t hl_robot;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">inline</span> TaskHandle_t hl_wb;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">inline</span> TaskHandle_t hl_sens;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">inline</span> TaskHandle_t  gripper_handle;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">inline</span> TaskHandle_t  killer_handle;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#endif </span><span class="comment">//TEAM2025_VARIABLES_GLOBALES_H</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef TEAM2025_VARIABLES_GLOBALES_H</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define TEAM2025_VARIABLES_GLOBALES_H</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;FreeRTOS.h&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;FreeRTOS/Source/include/task.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//TODO: (2026-06-25) utiliser un enum au lieu de bool</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#define TEAM_BLEU 0</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define TEAM_JAUNE 1</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">extern</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="../../d0/da2/group__globals.html#gaf334f1cc30dc197a71560bb83617478b">my_team</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">extern</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="../../d0/da2/group__globals.html#gaadde643e28b989f94107d8675db4956a">match_started</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../d7/d04/group__taskhandles.html#ga9a6c1630a4473afcc672c646ecf623b4">   32</a></span><span class="keyword">inline</span> TaskHandle_t <a class="code hl_variable" href="../../d7/d04/group__taskhandles.html#ga9a6c1630a4473afcc672c646ecf623b4">hl_robot</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d7/d04/group__taskhandles.html#ga13af55878423373e25eef8fb0aa3baaf">   34</a></span><span class="keyword">inline</span> TaskHandle_t <a class="code hl_variable" href="../../d7/d04/group__taskhandles.html#ga13af55878423373e25eef8fb0aa3baaf">hl_wb</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../d7/d04/group__taskhandles.html#ga102e048790f2bf5af596b464420e3f09">   36</a></span><span class="keyword">inline</span> TaskHandle_t <a class="code hl_variable" href="../../d7/d04/group__taskhandles.html#ga102e048790f2bf5af596b464420e3f09">hl_sens</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../d7/d04/group__taskhandles.html#ga1b0bff13fc9a29190ca855cb19622ff8">   38</a></span><span class="keyword">inline</span> TaskHandle_t  <a class="code hl_variable" href="../../d7/d04/group__taskhandles.html#ga1b0bff13fc9a29190ca855cb19622ff8">gripper_handle</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d7/d04/group__taskhandles.html#ga6aa0293ab45d4d6d48710e449bf92e95">   40</a></span><span class="keyword">inline</span> TaskHandle_t  <a class="code hl_variable" href="../../d7/d04/group__taskhandles.html#ga6aa0293ab45d4d6d48710e449bf92e95">killer_handle</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#endif </span><span class="comment">//TEAM2025_VARIABLES_GLOBALES_H</span></div>
+<div class="ttc" id="agroup__globals_html_gaadde643e28b989f94107d8675db4956a"><div class="ttname"><a href="../../d0/da2/group__globals.html#gaadde643e28b989f94107d8675db4956a">match_started</a></div><div class="ttdeci">bool match_started</div><div class="ttdoc">Est-ce que le match a débuté</div><div class="ttdef"><b>Definition</b> variables_globales.cpp:6</div></div>
+<div class="ttc" id="agroup__globals_html_gaf334f1cc30dc197a71560bb83617478b"><div class="ttname"><a href="../../d0/da2/group__globals.html#gaf334f1cc30dc197a71560bb83617478b">my_team</a></div><div class="ttdeci">bool my_team</div><div class="ttdoc">Quel team sommes-nous.</div><div class="ttdef"><b>Definition</b> variables_globales.cpp:5</div></div>
+<div class="ttc" id="agroup__taskhandles_html_ga102e048790f2bf5af596b464420e3f09"><div class="ttname"><a href="../../d7/d04/group__taskhandles.html#ga102e048790f2bf5af596b464420e3f09">hl_sens</a></div><div class="ttdeci">TaskHandle_t hl_sens</div><div class="ttdoc">Handle de la tâche des sensors.</div><div class="ttdef"><b>Definition</b> variables_globales.h:36</div></div>
+<div class="ttc" id="agroup__taskhandles_html_ga13af55878423373e25eef8fb0aa3baaf"><div class="ttname"><a href="../../d7/d04/group__taskhandles.html#ga13af55878423373e25eef8fb0aa3baaf">hl_wb</a></div><div class="ttdeci">TaskHandle_t hl_wb</div><div class="ttdoc">Handle de la tâche de base roulante.</div><div class="ttdef"><b>Definition</b> variables_globales.h:34</div></div>
+<div class="ttc" id="agroup__taskhandles_html_ga1b0bff13fc9a29190ca855cb19622ff8"><div class="ttname"><a href="../../d7/d04/group__taskhandles.html#ga1b0bff13fc9a29190ca855cb19622ff8">gripper_handle</a></div><div class="ttdeci">TaskHandle_t gripper_handle</div><div class="ttdoc">Handle de la tâche du préhenseur.</div><div class="ttdef"><b>Definition</b> variables_globales.h:38</div></div>
+<div class="ttc" id="agroup__taskhandles_html_ga6aa0293ab45d4d6d48710e449bf92e95"><div class="ttname"><a href="../../d7/d04/group__taskhandles.html#ga6aa0293ab45d4d6d48710e449bf92e95">killer_handle</a></div><div class="ttdeci">TaskHandle_t killer_handle</div><div class="ttdoc">Handle de lt tâche du killer.</div><div class="ttdef"><b>Definition</b> variables_globales.h:40</div></div>
+<div class="ttc" id="agroup__taskhandles_html_ga9a6c1630a4473afcc672c646ecf623b4"><div class="ttname"><a href="../../d7/d04/group__taskhandles.html#ga9a6c1630a4473afcc672c646ecf623b4">hl_robot</a></div><div class="ttdeci">TaskHandle_t hl_robot</div><div class="ttdoc">Handle de la tâche de stratégie.</div><div class="ttdef"><b>Definition</b> variables_globales.h:32</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>variables_globales.h</b></li>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../d7/d34/variables__globales_8h.html">variables_globales.h</a></li>
     <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

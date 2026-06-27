@@ -1,0 +1,38 @@
+<map id="SensorsThread.h" name="SensorsThread.h">
+<area shape="rect" id="Node000001" title="Contient les fonctions et variables nécessaires pour gérer le thread des capteurs." alt="" coords="156,5,276,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,381,99,407"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,34,144,53,102,82,84,99,69,119,60,140,56,164,56,241,55,366,50,366,51,240,51,164,54,139,65,116,80,95,99,77,141,49,182,29"/>
+<area shape="rect" id="Node000003" href="$df/dd9/SensorArray_8h_source.html" title=" " alt="" coords="333,79,480,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="249,29,361,71,359,76,247,34"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="320,381,395,407"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="395,107,376,128,361,154,348,211,345,270,349,323,355,365,349,366,343,324,340,270,343,210,356,152,372,124,391,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="582,381,639,407"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="419,104,457,151,538,271,598,367,594,369,534,274,453,154,415,107"/>
+<area shape="rect" id="Node000006" href="$dd/da4/Logger_8h.html" title="Un logger qui permet d&#39;avoir une belle sortie console." alt="" coords="371,153,442,178"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="409,105,409,137,404,137,404,105"/>
+<area shape="rect" id="Node000008" href="$d7/df8/Types_8h_source.html" title=" " alt="" coords="766,153,832,178"/>
+<area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="481,101,604,121,751,149,750,155,603,126,480,107"/>
+<area shape="rect" id="Node000009" href="$d3/d12/Odometry_8h_source.html" title=" " alt="" coords="91,153,269,178"/>
+<area shape="poly" id="edge9_Node000003_Node000009" title=" " alt="" coords="369,108,234,150,232,145,367,103"/>
+<area shape="rect" id="Node000013" href="$db/d5e/VL53L5CX_8h_source.html" title=" " alt="" coords="581,153,742,178"/>
+<area shape="poly" id="edge15_Node000003_Node000013" title=" " alt="" coords="451,103,604,145,603,151,449,108"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="403,180,385,227,370,302,362,366,357,366,365,301,380,226,398,178"/>
+<area shape="rect" id="Node000007" href="$d4/d36/coloring_8h.html" title="Définitions des codes ANSI pour colorer le shell." alt="" coords="395,226,472,252"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="414,178,426,211,421,213,409,179"/>
+<area shape="rect" id="Node000010" href="$d5/d78/PeriodicProcess_8h_source.html" title=" " alt="" coords="124,226,250,252"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="184,178,187,211,181,211,178,179"/>
+<area shape="rect" id="Node000011" href="$da/dc4/My__Clock_8h_source.html" title=" " alt="" coords="157,300,246,326"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="192,252,198,284,193,285,186,253"/>
+<area shape="poly" id="edge13_Node000011_Node000002" title=" " alt="" coords="180,328,89,376,87,371,177,324"/>
+<area shape="poly" id="edge12_Node000011_Node000004" title=" " alt="" coords="227,324,321,372,319,376,224,329"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="123,374,296,414"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="205,326,208,358,203,359,200,326"/>
+<area shape="poly" id="edge17_Node000013_Node000004" title=" " alt="" coords="647,181,387,374,384,369,643,177"/>
+<area shape="poly" id="edge16_Node000013_Node000005" title=" " alt="" coords="661,180,619,367,614,366,656,178"/>
+<area shape="rect" id="Node000014" href="$de/d03/platform_8h_source.html" title=" " alt="" coords="648,300,726,326"/>
+<area shape="poly" id="edge18_Node000013_Node000014" title=" " alt="" coords="666,178,685,284,679,285,661,179"/>
+<area shape="rect" id="Node000015" href="$df/dce/vl53l5cx__api_8h_source.html" title=" " alt="" coords="698,226,800,252"/>
+<area shape="poly" id="edge20_Node000013_Node000015" title=" " alt="" coords="678,177,724,214,721,219,675,181"/>
+<area shape="poly" id="edge19_Node000014_Node000005" title=" " alt="" coords="677,328,635,372,631,368,673,324"/>
+<area shape="poly" id="edge21_Node000015_Node000014" title=" " alt="" coords="741,254,709,290,705,286,737,250"/>
+</map>

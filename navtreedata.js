@@ -24,13 +24,24 @@
 */
 var NAVTREE =
 [
-  [ "CRINSA-team2025", "index.html", [
-    [ "Doc CRINSA 2025", "index.html", "index" ],
-    [ "team2026", "d0/d30/md_README.html", null ],
+  [ "Robot Principal", "index.html", [
+    [ "Introduction", "index.html#autotoc_md8", null ],
+    [ "Compilation", "index.html#autotoc_md9", null ],
+    [ "Fonctionnement du code", "index.html#autotoc_md10", [
+      [ "PC, DC, VC, kézako ?", "d5/dc1/group__wheeledbase.html#autotoc_md5", null ],
+      [ "Et comment tout ça est relié ?", "d5/dc1/group__wheeledbase.html#autotoc_md6", null ],
+      [ "Comment régler ces constantes alors ?", "d5/dc1/group__wheeledbase.html#autotoc_md7", null ],
+      [ "Introduction", "db/de0/group__grafcet.html#autotoc_md0", null ],
+      [ "Compilation", "db/de0/group__grafcet.html#autotoc_md1", null ],
+      [ "Utilisation", "db/de0/group__grafcet.html#autotoc_md2", null ]
+    ] ],
+    [ "Topics", "topics.html", "topics" ],
     [ "Espaces de nommage", "namespaces.html", [
       [ "Liste des espaces de nommage", "namespaces.html", "namespaces_dup" ],
       [ "Membres de l'espace de nommage", "namespacemembers.html", [
         [ "Tout", "namespacemembers.html", null ],
+        [ "Fonctions", "namespacemembers_func.html", null ],
+        [ "Variables", "namespacemembers_vars.html", null ],
         [ "Énumérations", "namespacemembers_enum.html", null ]
       ] ]
     ] ],
@@ -47,7 +58,11 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Fichiers", "files.html", [
-      [ "Liste des fichiers", "files.html", "files_dup" ]
+      [ "Liste des fichiers", "files.html", "files_dup" ],
+      [ "Membres de fichier", "globals.html", [
+        [ "Tout", "globals.html", null ],
+        [ "Variables", "globals_vars.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
@@ -55,8 +70,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d8/d86/classHazelnutGripper_1_1BournsACEncoder.html",
-"df/d5b/classEndStop.html#a859767b5221d1549710309fd865dfc12"
+"d6/d6e/structHazelnutGripper_1_1ColorData.html",
+"db/de0/group__grafcet.html#autotoc_md0",
+"df/dd5/classCube.html#ae26b05950fd5224da30863a75c825162"
 ];
 
 var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';

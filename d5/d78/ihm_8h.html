@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Robot Principal: Référence du fichier ihm.h</title>
+<link rel="icon" href="../../icon.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript" src="../../darkmode_toggle.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../custom.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="../../theme-round.css" rel="stylesheet" type="text/css"/>
+<link href="../../theme-robot.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Robot Principal<span id="projectnumber">&#160;26</span>
+   </div>
+   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2026</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('d5/d78/ihm_8h.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier ihm.h<div class="ingroups"><a class="el" href="../../dd/d76/group__ihm.html">IHM</a> &#124; <a class="el" href="../../d0/de1/group__core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Contient diverses fonctions permettant d'intéragir avec l'utilisateur via les boutons et les leds.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &lt;Buttons.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../dd/da4/Logger_8h_source.html">Logger.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de ihm.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d45/ihm_8h__incl.png" border="0" usemap="#aihm_8h" alt=""/></div>
+<map name="aihm_8h" id="aihm_8h">
+<area shape="rect" title="Contient diverses fonctions permettant d&#39;intéragir avec l&#39;utilisateur via les boutons et les leds." alt="" coords="32,5,85,31"/>
+<area shape="rect" title=" " alt="" coords="20,153,95,178"/>
+<area shape="poly" title=" " alt="" coords="46,33,26,54,11,80,9,96,13,112,34,140,29,143,8,114,3,96,5,78,22,50,42,30"/>
+<area shape="rect" href="../../d3/d70/Buttons_8h_source.html" title=" " alt="" coords="20,79,97,105"/>
+<area shape="poly" title=" " alt="" coords="61,31,61,63,56,63,56,31"/>
+<area shape="rect" href="../../dd/da4/Logger_8h.html" title="Un logger qui permet d&#39;avoir une belle sortie console." alt="" coords="120,79,192,105"/>
+<area shape="poly" title=" " alt="" coords="77,29,129,68,126,72,74,34"/>
+<area shape="poly" title=" " alt="" coords="61,105,61,137,55,137,56,105"/>
+<area shape="poly" title=" " alt="" coords="141,107,88,146,84,141,138,103"/>
+<area shape="rect" href="../../d4/d36/coloring_8h.html" title="Définitions des codes ANSI pour colorer le shell." alt="" coords="119,153,195,178"/>
+<area shape="poly" title=" " alt="" coords="159,105,159,137,154,137,154,105"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/de3/ihm_8h__dep__incl.png" border="0" usemap="#aihm_8hdep" alt=""/></div>
+<map name="aihm_8hdep" id="aihm_8hdep">
+<area shape="rect" title="Contient diverses fonctions permettant d&#39;intéragir avec l&#39;utilisateur via les boutons et les leds." alt="" coords="16,5,68,31"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html" title="Contient le code principal du robot." alt="" coords="5,79,79,105"/>
+<area shape="poly" title=" " alt="" coords="45,46,45,79,39,79,39,46"/>
+</map>
+</div>
+</div>
+<p><a href="../../d5/d78/ihm_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga5f401820668e54eb31d4e55468c8f4ea" id="r_ga5f401820668e54eb31d4e55468c8f4ea"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BLEU_BTN_PIN</b>&#160;&#160;&#160;PF7</td></tr>
+<tr class="separator:ga5f401820668e54eb31d4e55468c8f4ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga72db95847fddc545a12f4407db03e24a" id="r_ga72db95847fddc545a12f4407db03e24a"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>JAUNE_BTN_PIN</b>&#160;&#160;&#160;PF5</td></tr>
+<tr class="separator:ga72db95847fddc545a12f4407db03e24a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga412f0c9e6f5e2d33df3cf133f8a65b79" id="r_ga412f0c9e6f5e2d33df3cf133f8a65b79"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VERT_BTN_PIN</b>&#160;&#160;&#160;PD2</td></tr>
+<tr class="separator:ga412f0c9e6f5e2d33df3cf133f8a65b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac51ed2b8cab066858fc167de510e104b" id="r_gac51ed2b8cab066858fc167de510e104b"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ROUGE_BTN_PIN</b>&#160;&#160;&#160;PD4</td></tr>
+<tr class="separator:gac51ed2b8cab066858fc167de510e104b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadbfaf97c7d2e7e3f4a24b4627ee28765" id="r_gadbfaf97c7d2e7e3f4a24b4627ee28765"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BLEU_LED_PIN</b>&#160;&#160;&#160;PG3</td></tr>
+<tr class="separator:gadbfaf97c7d2e7e3f4a24b4627ee28765"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8adbffb673d8ce5a30a3a4ba7326eb9b" id="r_ga8adbffb673d8ce5a30a3a4ba7326eb9b"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>JAUNE_LED_PIN</b>&#160;&#160;&#160;PG2</td></tr>
+<tr class="separator:ga8adbffb673d8ce5a30a3a4ba7326eb9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ae0956eb4589ab305722d0663eef203" id="r_ga5ae0956eb4589ab305722d0663eef203"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VERT_LED_PIN</b>&#160;&#160;&#160;PD5</td></tr>
+<tr class="separator:ga5ae0956eb4589ab305722d0663eef203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0b74c353796d340bb0d399cd232f02a6" id="r_ga0b74c353796d340bb0d399cd232f02a6"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ROUGE_LED_PIN</b>&#160;&#160;&#160;PC9</td></tr>
+<tr class="separator:ga0b74c353796d340bb0d399cd232f02a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8590693bafbc21bd1b9d7fd655d4647a" id="r_ga8590693bafbc21bd1b9d7fd655d4647a"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>END_STOP_BAS_PIN</b>&#160;&#160;&#160;PE5</td></tr>
+<tr class="separator:ga8590693bafbc21bd1b9d7fd655d4647a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac93d8d549d1e39c9d821d311767f1cda" id="r_gac93d8d549d1e39c9d821d311767f1cda"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>END_STOP_HAUT_PIN</b>&#160;&#160;&#160;PD6</td></tr>
+<tr class="separator:gac93d8d549d1e39c9d821d311767f1cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga87d1b0865bc8bed2f14f338102a750d6" id="r_ga87d1b0865bc8bed2f14f338102a750d6"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TIRETTE_PIN</b>&#160;&#160;&#160;PD13</td></tr>
+<tr class="separator:ga87d1b0865bc8bed2f14f338102a750d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:af7e1f3b01d8b11d3319ebfe7023e1712" id="r_af7e1f3b01d8b11d3319ebfe7023e1712"><td class="memItemLeft" align="right" valign="top"><a id="af7e1f3b01d8b11d3319ebfe7023e1712" name="af7e1f3b01d8b11d3319ebfe7023e1712"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ihm::init</b> ()</td></tr>
+<tr class="separator:af7e1f3b01d8b11d3319ebfe7023e1712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbcaf1ae5054deed3d51895524322e8d" id="r_acbcaf1ae5054deed3d51895524322e8d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/ihm_8cpp.html#acbcaf1ae5054deed3d51895524322e8d">ihm::etat_bleu</a> ()</td></tr>
+<tr class="memdesc:acbcaf1ae5054deed3d51895524322e8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">blue button state  <br /></td></tr>
+<tr class="separator:acbcaf1ae5054deed3d51895524322e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a358356b583a729480299e603a5e40053" id="r_a358356b583a729480299e603a5e40053"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/ihm_8cpp.html#a358356b583a729480299e603a5e40053">ihm::etat_jaune</a> ()</td></tr>
+<tr class="memdesc:a358356b583a729480299e603a5e40053"><td class="mdescLeft">&#160;</td><td class="mdescRight">yellow button state  <br /></td></tr>
+<tr class="separator:a358356b583a729480299e603a5e40053"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf33d3591efbd446511d9e805ebd66ab" id="r_acf33d3591efbd446511d9e805ebd66ab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/ihm_8cpp.html#acf33d3591efbd446511d9e805ebd66ab">ihm::etat_vert</a> ()</td></tr>
+<tr class="memdesc:acf33d3591efbd446511d9e805ebd66ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">green button state  <br /></td></tr>
+<tr class="separator:acf33d3591efbd446511d9e805ebd66ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92fa54b8d3d9cb4f6831dd9cff99b0e8" id="r_a92fa54b8d3d9cb4f6831dd9cff99b0e8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/ihm_8cpp.html#a92fa54b8d3d9cb4f6831dd9cff99b0e8">ihm::etat_rouge</a> ()</td></tr>
+<tr class="memdesc:a92fa54b8d3d9cb4f6831dd9cff99b0e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">red button state  <br /></td></tr>
+<tr class="separator:a92fa54b8d3d9cb4f6831dd9cff99b0e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10de23b03aa3613b97cd164efbe7dd70" id="r_a10de23b03aa3613b97cd164efbe7dd70"><td class="memItemLeft" align="right" valign="top"><a id="a10de23b03aa3613b97cd164efbe7dd70" name="a10de23b03aa3613b97cd164efbe7dd70"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ihm::etat_lim_haut</b> ()</td></tr>
+<tr class="separator:a10de23b03aa3613b97cd164efbe7dd70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e3b19bf3a7a6a633528343669608175" id="r_a0e3b19bf3a7a6a633528343669608175"><td class="memItemLeft" align="right" valign="top"><a id="a0e3b19bf3a7a6a633528343669608175" name="a0e3b19bf3a7a6a633528343669608175"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ihm::etat_lim_bas</b> ()</td></tr>
+<tr class="separator:a0e3b19bf3a7a6a633528343669608175"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3294e30ddbebc3c13e3f5dbcd80a6562" id="r_a3294e30ddbebc3c13e3f5dbcd80a6562"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/ihm_8cpp.html#a3294e30ddbebc3c13e3f5dbcd80a6562">ihm::etat_tirette</a> ()</td></tr>
+<tr class="memdesc:a3294e30ddbebc3c13e3f5dbcd80a6562"><td class="mdescLeft">&#160;</td><td class="mdescRight">tirette state  <br /></td></tr>
+<tr class="separator:a3294e30ddbebc3c13e3f5dbcd80a6562"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68090f8728ecbe02c416383e521fd9a5" id="r_a68090f8728ecbe02c416383e521fd9a5"><td class="memItemLeft" align="right" valign="top"><a id="a68090f8728ecbe02c416383e521fd9a5" name="a68090f8728ecbe02c416383e521fd9a5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ihm::led_bleu</b> (bool etat)</td></tr>
+<tr class="memdesc:a68090f8728ecbe02c416383e521fd9a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">set blue led state <br /></td></tr>
+<tr class="separator:a68090f8728ecbe02c416383e521fd9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93af1393980c7887479019c99a58f6e2" id="r_a93af1393980c7887479019c99a58f6e2"><td class="memItemLeft" align="right" valign="top"><a id="a93af1393980c7887479019c99a58f6e2" name="a93af1393980c7887479019c99a58f6e2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ihm::led_jaune</b> (bool etat)</td></tr>
+<tr class="memdesc:a93af1393980c7887479019c99a58f6e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">set yellow led state <br /></td></tr>
+<tr class="separator:a93af1393980c7887479019c99a58f6e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75ceec7e02815f9de9da293793ca979b" id="r_a75ceec7e02815f9de9da293793ca979b"><td class="memItemLeft" align="right" valign="top"><a id="a75ceec7e02815f9de9da293793ca979b" name="a75ceec7e02815f9de9da293793ca979b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ihm::led_vert</b> (bool etat)</td></tr>
+<tr class="memdesc:a75ceec7e02815f9de9da293793ca979b"><td class="mdescLeft">&#160;</td><td class="mdescRight">set green led state <br /></td></tr>
+<tr class="separator:a75ceec7e02815f9de9da293793ca979b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add6119ffd89715658285890e6024de2a" id="r_add6119ffd89715658285890e6024de2a"><td class="memItemLeft" align="right" valign="top"><a id="add6119ffd89715658285890e6024de2a" name="add6119ffd89715658285890e6024de2a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ihm::led_rouge</b> (bool etat)</td></tr>
+<tr class="memdesc:add6119ffd89715658285890e6024de2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">set blue led state <br /></td></tr>
+<tr class="separator:add6119ffd89715658285890e6024de2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88ed5324bc33721bb4ecb15e52a235b5" id="r_a88ed5324bc33721bb4ecb15e52a235b5"><td class="memItemLeft" align="right" valign="top"><a id="a88ed5324bc33721bb4ecb15e52a235b5" name="a88ed5324bc33721bb4ecb15e52a235b5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ihm::led_bleu</b> ()</td></tr>
+<tr class="memdesc:a88ed5324bc33721bb4ecb15e52a235b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">toggle blue led <br /></td></tr>
+<tr class="separator:a88ed5324bc33721bb4ecb15e52a235b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2efb040917b4d3050758309fc2d9444d" id="r_a2efb040917b4d3050758309fc2d9444d"><td class="memItemLeft" align="right" valign="top"><a id="a2efb040917b4d3050758309fc2d9444d" name="a2efb040917b4d3050758309fc2d9444d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ihm::led_jaune</b> ()</td></tr>
+<tr class="memdesc:a2efb040917b4d3050758309fc2d9444d"><td class="mdescLeft">&#160;</td><td class="mdescRight">toggle yellow led <br /></td></tr>
+<tr class="separator:a2efb040917b4d3050758309fc2d9444d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad773c00e44e59db2536fe46fe48e8c19" id="r_ad773c00e44e59db2536fe46fe48e8c19"><td class="memItemLeft" align="right" valign="top"><a id="ad773c00e44e59db2536fe46fe48e8c19" name="ad773c00e44e59db2536fe46fe48e8c19"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ihm::led_vert</b> ()</td></tr>
+<tr class="memdesc:ad773c00e44e59db2536fe46fe48e8c19"><td class="mdescLeft">&#160;</td><td class="mdescRight">toggle green led <br /></td></tr>
+<tr class="separator:ad773c00e44e59db2536fe46fe48e8c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73d420c9391a89477eed245b2cabd153" id="r_a73d420c9391a89477eed245b2cabd153"><td class="memItemLeft" align="right" valign="top"><a id="a73d420c9391a89477eed245b2cabd153" name="a73d420c9391a89477eed245b2cabd153"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ihm::led_rouge</b> ()</td></tr>
+<tr class="memdesc:a73d420c9391a89477eed245b2cabd153"><td class="mdescLeft">&#160;</td><td class="mdescRight">toggle red led <br /></td></tr>
+<tr class="separator:a73d420c9391a89477eed245b2cabd153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a521d638f1c97eb1c59d04e01c71aba90" id="r_a521d638f1c97eb1c59d04e01c71aba90"><td class="memItemLeft" align="right" valign="top"><a id="a521d638f1c97eb1c59d04e01c71aba90" name="a521d638f1c97eb1c59d04e01c71aba90"></a>
+<a class="el" href="../../db/d67/classLogger.html">Logger</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ihm::ihmLogger</b> = <a class="el" href="../../db/d67/classLogger.html">Logger</a>(&quot;IHM&quot;)</td></tr>
+<tr class="separator:a521d638f1c97eb1c59d04e01c71aba90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Contient diverses fonctions permettant d'intéragir avec l'utilisateur via les boutons et les leds. </p>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="acbcaf1ae5054deed3d51895524322e8d" name="acbcaf1ae5054deed3d51895524322e8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbcaf1ae5054deed3d51895524322e8d">&#9670;&#160;</a></span>etat_bleu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ihm::etat_bleu </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>blue button state </p>
+<dl class="section return"><dt>Renvoie</dt><dd>true if blue button is pressed, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a358356b583a729480299e603a5e40053" name="a358356b583a729480299e603a5e40053"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a358356b583a729480299e603a5e40053">&#9670;&#160;</a></span>etat_jaune()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ihm::etat_jaune </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>yellow button state </p>
+<dl class="section return"><dt>Renvoie</dt><dd>true if yellow button is pressed, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a92fa54b8d3d9cb4f6831dd9cff99b0e8" name="a92fa54b8d3d9cb4f6831dd9cff99b0e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92fa54b8d3d9cb4f6831dd9cff99b0e8">&#9670;&#160;</a></span>etat_rouge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ihm::etat_rouge </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>red button state </p>
+<dl class="section return"><dt>Renvoie</dt><dd>true if red button is pressed, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a3294e30ddbebc3c13e3f5dbcd80a6562" name="a3294e30ddbebc3c13e3f5dbcd80a6562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3294e30ddbebc3c13e3f5dbcd80a6562">&#9670;&#160;</a></span>etat_tirette()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ihm::etat_tirette </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>tirette state </p>
+<dl class="section return"><dt>Renvoie</dt><dd>true if tirette is pulled, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="acf33d3591efbd446511d9e805ebd66ab" name="acf33d3591efbd446511d9e805ebd66ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf33d3591efbd446511d9e805ebd66ab">&#9670;&#160;</a></span>etat_vert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ihm::etat_vert </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>green button state </p>
+<dl class="section return"><dt>Renvoie</dt><dd>true if green button is pressed, false otherwise </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_593807af7826fd1d0221c5a9ec2a2a29.html">ihm</a></li><li class="navelem"><a class="el" href="../../d5/d78/ihm_8h.html">ihm.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

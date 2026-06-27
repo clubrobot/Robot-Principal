@@ -1,0 +1,4 @@
+<map id="Pins IHM" name="Pins IHM">
+<area shape="rect" id="Node000002" href="$d0/da2/group__globals.html" title="Toutes les variables exposées dans le namespace globale." alt="" coords="5,5,132,31"/>
+<area shape="rect" id="Node000001" title="Les pins des différents composants (led, boutons, tirette...) de l&#39;IHM." alt="" coords="180,5,255,31"/>
+</map>

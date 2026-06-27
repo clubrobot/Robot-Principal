@@ -1,0 +1,38 @@
+<map id="Logger.h" name="Logger.h">
+<area shape="rect" id="Node000001" title="Un logger qui permet d&#39;avoir une belle sortie console." alt="" coords="357,5,428,31"/>
+<area shape="rect" id="Node000002" href="$df/dd9/SensorArray_8h_source.html" title=" " alt="" coords="109,79,212,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="343,38,201,81,199,76,341,32"/>
+<area shape="rect" id="Node000005" href="$df/d0a/main_8cpp.html" title="Contient le code principal du robot." alt="" coords="422,300,496,326"/>
+<area shape="poly" id="edge21_Node000001_Node000005" title=" " alt="" coords="343,35,308,53,292,65,280,80,257,126,249,167,250,187,256,207,280,250,294,266,310,278,347,295,386,305,422,309,422,314,386,310,345,300,307,282,290,269,276,254,251,209,245,188,243,167,252,124,276,78,289,61,305,48,341,30"/>
+<area shape="rect" id="Node000006" href="$d1/dd7/Strategie_8h.html" title="Contient les diverses stratégies que le robot peut executer." alt="" coords="290,79,373,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="375,44,344,80,339,77,370,41"/>
+<area shape="rect" id="Node000008" href="$d2/dfd/Teleplot__client_8h.html" title="Implémentation d&#39;un client Teleplot pour envoyer des données à un serveur Teleplot." alt="" coords="398,79,513,105"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="415,41,447,77,443,80,411,44"/>
+<area shape="rect" id="Node000012" href="$df/dbb/Wheeledbase_8h.html" title="Fonctions de convénience pour faire les déplacements facilement." alt="" coords="536,79,646,105"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="441,34,558,76,556,81,439,39"/>
+<area shape="rect" id="Node000015" href="$d5/d78/ihm_8h.html" title="Contient diverses fonctions permettant d&#39;intéragir avec l&#39;utilisateur via les boutons et les leds." alt="" coords="737,226,789,252"/>
+<area shape="poly" id="edge19_Node000001_Node000015" title=" " alt="" coords="444,19,492,24,547,35,605,51,659,77,680,92,699,111,729,153,750,194,762,225,757,227,745,196,724,155,695,114,677,96,656,81,603,56,546,40,491,30,443,24"/>
+<area shape="rect" id="Node000003" href="$d7/da3/ObjectDetector_8h_source.html" title=" " alt="" coords="5,153,124,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="134,116,82,154,79,150,131,112"/>
+<area shape="rect" id="Node000004" href="$d7/db8/SensorsThread_8h.html" title="Contient les fonctions et variables nécessaires pour gérer le thread des capteurs." alt="" coords="96,226,215,252"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="162,120,158,226,153,226,157,120"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="222,253,422,300,421,305,221,259"/>
+<area shape="rect" id="Node000007" href="$dd/d07/Automate_8h.html" title="Contient le code nécessaire pour jouer un match." alt="" coords="290,226,378,252"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="332,121,331,178,335,226,330,226,326,178,327,121"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="369,258,439,297,436,302,367,262"/>
+<area shape="rect" id="Node000009" href="$df/d81/Cube_8h.html" title="Définition de la classe Cube pour le téléplot permettant d&#39;envoyer des cubes 3D à un serveur Teleplot..." alt="" coords="340,153,402,178"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="431,117,387,154,383,150,428,113"/>
+<area shape="rect" id="Node000010" href="$d3/d64/Teleplot_8h.html" title="Wrapper header pour importer la librairie." alt="" coords="402,226,479,252"/>
+<area shape="poly" id="edge13_Node000008_Node000010" title=" " alt="" coords="455,120,444,226,439,226,450,120"/>
+<area shape="rect" id="Node000011" href="$d3/dca/Sphere_8h.html" title="Définition de la classe Sphere pour le téléplot permettant d&#39;envoyer des sphères 3D à un serveur Tele..." alt="" coords="476,153,549,178"/>
+<area shape="poly" id="edge11_Node000008_Node000011" title=" " alt="" coords="476,115,505,151,501,154,472,118"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="395,187,431,224,427,228,391,191"/>
+<area shape="poly" id="edge12_Node000011_Node000010" title=" " alt="" coords="492,191,455,228,451,224,488,187"/>
+<area shape="poly" id="edge15_Node000012_Node000005" title=" " alt="" coords="586,121,563,180,515,250,472,301,468,298,511,247,558,177,581,119"/>
+<area shape="rect" id="Node000013" href="$d3/d78/wb__const_8h.html" title="Diverses constantes concernant la base roulante." alt="" coords="624,153,711,178"/>
+<area shape="poly" id="edge16_Node000012_Node000013" title=" " alt="" coords="617,114,656,150,653,154,613,117"/>
+<area shape="rect" id="Node000014" href="$d0/d42/wb__thread_8h.html" title="Contient les fonctions et variables nécessaires pour gérer le thread de base roulante." alt="" coords="622,226,713,252"/>
+<area shape="poly" id="edge17_Node000013_Node000014" title=" " alt="" coords="670,194,670,226,664,226,664,194"/>
+<area shape="poly" id="edge18_Node000014_Node000005" title=" " alt="" coords="618,260,495,302,494,297,617,255"/>
+<area shape="poly" id="edge20_Node000015_Node000005" title=" " alt="" coords="722,255,497,307,496,301,721,250"/>
+</map>

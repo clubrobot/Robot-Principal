@@ -5,7 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CRINSA-team2025: Référence de la classe BasicMoveStrategy</title>
+<title>Robot Principal: Référence de la classe BasicMoveStrategy</title>
+<link rel="icon" href="../../icon.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -33,10 +34,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">CRINSA-team2025<span id="projectnumber">&#160;V1</span>
+   <div id="projectname">Robot Principal<span id="projectnumber">&#160;26</span>
    </div>
-   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2025</div>
+   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2026</div>
   </td>
  </tr>
  </tbody>
@@ -108,15 +110,20 @@ $(function(){initNavTree('de/d22/classBasicMoveStrategy.html','../../'); initRes
 <a href="#pub-attribs">Attributs publics</a> &#124;
 <a href="#pro-methods">Fonctions membres protégées</a> &#124;
 <a href="../../d2/d5b/classBasicMoveStrategy-members.html">Liste de tous les membres</a>  </div>
-  <div class="headertitle"><div class="title">Référence de la classe BasicMoveStrategy</div></div>
+  <div class="headertitle"><div class="title">Référence de la classe BasicMoveStrategy<div class="ingroups"><a class="el" href="../../d5/dc1/group__wheeledbase.html">Wheeled base</a> &#124; <a class="el" href="../../d0/dd5/group__libs.html">Librairies du projet</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Stratégie de mouvement basique.  
+ <a href="#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../df/dcf/BasicMoveStrategy_8h_source.html">BasicMoveStrategy.h</a>&gt;</code></p>
 <div class="dynheader">
 Graphe d'héritage de BasicMoveStrategy:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d3/d28/classBasicMoveStrategy__inherit__graph.png" border="0" usemap="#aBasicMoveStrategy_inherit__map" alt="Inheritance graph"/></div>
 <map name="aBasicMoveStrategy_inherit__map" id="aBasicMoveStrategy_inherit__map">
-<area shape="rect" title=" " alt="" coords="13,79,148,105"/>
+<area shape="rect" title="Stratégie de mouvement basique." alt="" coords="13,79,148,105"/>
 <area shape="rect" href="../../de/dc0/classAbstractMoveStrategy.html" title="Interface de Stratégie de mouvement." alt="" coords="5,5,156,31"/>
 <area shape="poly" title=" " alt="" coords="83,46,83,79,78,79,78,46"/>
 </map>
@@ -126,7 +133,7 @@ Graphe de collaboration de BasicMoveStrategy:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/d66/classBasicMoveStrategy__coll__graph.png" border="0" usemap="#aBasicMoveStrategy_coll__map" alt="Collaboration graph"/></div>
 <map name="aBasicMoveStrategy_coll__map" id="aBasicMoveStrategy_coll__map">
-<area shape="rect" title=" " alt="" coords="73,273,208,298"/>
+<area shape="rect" title="Stratégie de mouvement basique." alt="" coords="73,273,208,298"/>
 <area shape="rect" href="../../de/dc0/classAbstractMoveStrategy.html" title="Interface de Stratégie de mouvement." alt="" coords="5,169,156,195"/>
 <area shape="poly" title=" " alt="" coords="97,206,136,271,131,274,93,209"/>
 <area shape="rect" href="../../d2/d64/classPositionController.html" title="Classe support des objets AbstractMoveStrategy." alt="" coords="19,80,142,106"/>
@@ -140,8 +147,8 @@ Graphe de collaboration de BasicMoveStrategy:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Attributs publics</h2></td></tr>
-<tr class="memitem:a03d973056940db2d5408ed7a91c52d90" id="r_a03d973056940db2d5408ed7a91c52d90"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03d973056940db2d5408ed7a91c52d90">theta_init</a> = 0</td></tr>
-<tr class="memdesc:a03d973056940db2d5408ed7a91c52d90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stratégie de mouvement basique.  <br /></td></tr>
+<tr class="memitem:a03d973056940db2d5408ed7a91c52d90" id="r_a03d973056940db2d5408ed7a91c52d90"><td class="memItemLeft" align="right" valign="top"><a id="a03d973056940db2d5408ed7a91c52d90" name="a03d973056940db2d5408ed7a91c52d90"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>theta_init</b> = 0</td></tr>
 <tr class="separator:a03d973056940db2d5408ed7a91c52d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade32baf894ea5226738195fd6b738c7d" id="r_ade32baf894ea5226738195fd6b738c7d"><td class="memItemLeft" align="right" valign="top"><a id="ade32baf894ea5226738195fd6b738c7d" name="ade32baf894ea5226738195fd6b738c7d"></a>
 <a class="el" href="../../d8/da9/classPID.html">PID</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ang_pid</b> = {}</td></tr>
@@ -193,7 +200,10 @@ Membres hérités additionnels</h2></td></tr>
 <tr class="memitem:a0a0cc07cae1127a7d7dc454d240d48ba inherit pro_attribs_classAbstractMoveStrategy" id="r_a0a0cc07cae1127a7d7dc454d240d48ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d64/classPositionController.html">PositionController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dc0/classAbstractMoveStrategy.html#a0a0cc07cae1127a7d7dc454d240d48ba">m_context</a></td></tr>
 <tr class="separator:a0a0cc07cae1127a7d7dc454d240d48ba inherit pro_attribs_classAbstractMoveStrategy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Stratégie de mouvement basique. </p>
+<p>Stratégie développée afin de déplacer le robot en ligne droite selon l'axe x pour régler le <a class="el" href="../../d8/da9/classPID.html" title="Classe d&#39;asservissement.">PID</a>. </p>
+</div><h2 class="groupheader">Documentation des fonctions membres</h2>
 <a id="abcc7f77b6fa786fa202352c4efa3b960" name="abcc7f77b6fa786fa202352c4efa3b960"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abcc7f77b6fa786fa202352c4efa3b960">&#9670;&#160;</a></span>computeVelSetpoints()</h2>
 
@@ -305,27 +315,9 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 </div>
 </div>
-<h2 class="groupheader">Documentation des données membres</h2>
-<a id="a03d973056940db2d5408ed7a91c52d90" name="a03d973056940db2d5408ed7a91c52d90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03d973056940db2d5408ed7a91c52d90">&#9670;&#160;</a></span>theta_init</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float BasicMoveStrategy::theta_init = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Stratégie de mouvement basique. </p>
-<p>Stratégie développée afin de déplacer le robot en ligne droite selon l'axe x pour régler le <a class="el" href="../../d8/da9/classPID.html" title="Classe d&#39;asservissement.">PID</a>. </p>
-
-</div>
-</div>
 <hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
-<li>lib/BasicMoveStrategy/<a class="el" href="../../df/dcf/BasicMoveStrategy_8h_source.html">BasicMoveStrategy.h</a></li>
-<li>lib/BasicMoveStrategy/<b>BasicMoveStrategy.cpp</b></li>
+<li><a class="el" href="../../df/dcf/BasicMoveStrategy_8h_source.html">BasicMoveStrategy.h</a></li>
+<li><b>BasicMoveStrategy.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
