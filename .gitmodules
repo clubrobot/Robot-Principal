@@ -4,3 +4,12 @@
 [submodule "lib/motors"]
 	path = lib/motors
 	url = git@github.com:clubrobot/motors.git
+[submodule "lib/Wheeledbase"]
+	path = lib/Wheeledbase
+	url = git@github.com:clubrobot/Wheeledbase.git
+[submodule "lib/Teleplot"]
+	path = lib/Teleplot
+	url = git@github.com:clubrobot/teleplot-client.git
+[submodule "lib/Grafcet"]
+	path = lib/Grafcet
+	url = git@github.com:clubrobot/libgrafcet.git
