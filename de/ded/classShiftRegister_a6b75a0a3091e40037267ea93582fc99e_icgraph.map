@@ -1,0 +1,5 @@
+<map id="ShiftRegister::SetHigh" name="ShiftRegister::SetHigh">
+<area shape="rect" id="Node000001" title="Positionne une sortie à l&#39;état haut." alt="" coords="184,5,333,31"/>
+<area shape="rect" id="Node000002" href="$de/ded/classShiftRegister.html#a0e668f57320bde3267cc407edffbe69c" title="Écrit un état sur une sortie." alt="" coords="5,5,136,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,21,136,21,136,16,168,16"/>
+</map>

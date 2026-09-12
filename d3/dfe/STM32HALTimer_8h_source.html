@@ -116,16 +116,18 @@ $(function(){initNavTree('d3/dfe/STM32HALTimer_8h_source.html','../../'); initRe
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef TEAM2026_STM32HALTIMER_H</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define TEAM2026_STM32HALTIMER_H</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;Components/AbstractTimer.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="../../d9/db6/AbstractTimer_8h.html">Components/AbstractTimer.h</a>&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../d8/dd9/classSTM32HALTimer.html">   10</a></span><span class="keyword">class </span>STM32HALTimer : <span class="keyword">public</span> AbstractTimer {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../d8/dd9/classSTM32HALTimer.html">   10</a></span><span class="keyword">class </span>STM32HALTimer : <span class="keyword">public</span> <a class="code hl_class" href="../../d0/da2/classAbstractTimer.html">AbstractTimer</a> {</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">explicit</span> STM32HALTimer(TIM_HandleTypeDef* htim) : htim(htim) {}</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    [[nodiscard]] <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> getCounter()<span class="keyword"> const override </span>{</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../d8/dd9/classSTM32HALTimer.html#a5da7c5810d2078080f4abd5e7964c5a1">   14</a></span>    [[nodiscard]] <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code hl_function" href="../../d8/dd9/classSTM32HALTimer.html#a5da7c5810d2078080f4abd5e7964c5a1">getCounter</a>()<span class="keyword"> const override </span>{</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordflow">return</span> __HAL_TIM_GET_COUNTER(htim);</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
+</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    TIM_HandleTypeDef* htim;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
@@ -133,6 +135,9 @@ $(function(){initNavTree('d3/dfe/STM32HALTimer_8h_source.html','../../'); initRe
 </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#endif </span><span class="comment">// TEAM2026_STM32HALTIMER_H</span></div>
+<div class="ttc" id="aAbstractTimer_8h_html"><div class="ttname"><a href="../../d9/db6/AbstractTimer_8h.html">AbstractTimer.h</a></div><div class="ttdoc">Un timer abstrait pour que Codewheel ne dépende pas directement du hardware.</div></div>
+<div class="ttc" id="aclassAbstractTimer_html"><div class="ttname"><a href="../../d0/da2/classAbstractTimer.html">AbstractTimer</a></div><div class="ttdoc">Classe abstraite pour représenter un timer.</div><div class="ttdef"><b>Definition</b> AbstractTimer.h:18</div></div>
+<div class="ttc" id="aclassSTM32HALTimer_html_a5da7c5810d2078080f4abd5e7964c5a1"><div class="ttname"><a href="../../d8/dd9/classSTM32HALTimer.html#a5da7c5810d2078080f4abd5e7964c5a1">STM32HALTimer::getCounter</a></div><div class="ttdeci">unsigned long getCounter() const override</div><div class="ttdoc">Retourne la valeur actuelle du timer.</div><div class="ttdef"><b>Definition</b> STM32HALTimer.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,0 +1,9 @@
+<map id="Node.h" name="Node.h">
+<area shape="rect" id="Node000001" title="Représentation d&#39;un noeud du grafcet." alt="" coords="87,5,149,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,55,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,34,58,71,55,67,101,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="79,79,157,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="121,31,121,63,115,63,115,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="181,79,234,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="135,29,182,67,179,71,131,34"/>
+</map>

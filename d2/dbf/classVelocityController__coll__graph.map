@@ -1,0 +1,16 @@
+<map id="VelocityController" name="VelocityController">
+<area shape="rect" id="Node000001" title="Objet de controle de la vitesse." alt="" coords="133,273,255,298"/>
+<area shape="rect" id="Node000002" href="$d5/d9e/classDifferentialController.html" title="Controle les moteurs." alt="" coords="126,198,263,223"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,239,197,272,192,272,192,239"/>
+<area shape="rect" id="Node000003" href="$d2/dfa/classPeriodicProcess.html" title="Classe à implémenter pour gérer les appels dans la loop." alt="" coords="5,94,122,120"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="93,127,180,195,177,199,89,131"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="146,94,296,120"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="203,134,198,144,194,172,195,197,190,197,188,172,193,143,198,132"/>
+<area shape="rect" id="Node000005" href="$d8/da9/classPID.html" title="Classe d&#39;asservissement." alt="" coords="199,5,242,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="224,47,224,94,218,94,218,47"/>
+<area shape="rect" id="Node000006" href="$d2/d61/classAbstractMotor.html" title=" " alt="" coords="346,94,450,120"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="347,128,306,146,283,160,261,176,219,200,216,195,258,171,280,156,303,141,345,123"/>
+<area shape="rect" id="Node000007" href="$d4/de2/classAbstractDriver.html" title="Représente un driver moteur abstrait." alt="" coords="391,198,496,223"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="393,135,392,154,397,173,407,185,420,195,416,199,403,189,392,175,387,155,388,135"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="456,183,462,164,458,145,447,132,432,123,435,118,451,128,463,143,467,164,461,185"/>
+</map>

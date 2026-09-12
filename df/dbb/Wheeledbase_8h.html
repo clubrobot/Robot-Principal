@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Robot Principal: Référence du fichier Wheeledbase.h</title>
+<link rel="icon" href="../../icon.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript" src="../../darkmode_toggle.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../custom.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="../../theme-round.css" rel="stylesheet" type="text/css"/>
+<link href="../../theme-robot.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Robot Principal<span id="projectnumber">&#160;26</span>
+   </div>
+   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2026</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('df/dbb/Wheeledbase_8h.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Espaces de nommage</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Énumérations</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier Wheeledbase.h<div class="ingroups"><a class="el" href="../../d5/dc1/group__wheeledbase.html">Wheeled base</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Fonctions de convénience pour faire les déplacements facilement.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;functional&gt;</code><br />
+<code>#include &quot;WheelMotor.h&quot;</code><br />
+<code>#include &quot;Components/Codewheel.h&quot;</code><br />
+<code>#include &quot;Components/Odometry.h&quot;</code><br />
+<code>#include &quot;Controller/PID.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d06/VelocityController_8h_source.html">Controller/VelocityController.h</a>&quot;</code><br />
+<code>#include &quot;Controller/PositionController.h&quot;</code><br />
+<code>#include &quot;MoveStrategy/PurePursuit.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dd/d63/TurnOnTheSpot_8h_source.html">MoveStrategy/TurnOnTheSpot.h</a>&quot;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &quot;DRV8844.h&quot;</code><br />
+<code>#include &quot;Logger.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de Wheeledbase.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d3/dfc/Wheeledbase_8h__incl.png" border="0" usemap="#aWheeledbase_8h" alt=""/></div>
+<map name="aWheeledbase_8h" id="aWheeledbase_8h">
+<area shape="rect" title="Fonctions de convénience pour faire les déplacements facilement." alt="" coords="707,5,816,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,83,105"/>
+<area shape="poly" title=" " alt="" coords="706,25,448,42,276,58,98,81,98,76,275,53,447,36,706,19"/>
+<area shape="rect" title=" " alt="" coords="107,79,208,105"/>
+<area shape="poly" title=" " alt="" coords="706,27,496,49,227,82,223,82,222,77,226,76,495,44,706,22"/>
+<area shape="rect" href="../../db/df9/Codewheel_8h_source.html" title=" " alt="" coords="672,153,845,178"/>
+<area shape="poly" title=" " alt="" coords="764,31,762,137,756,137,758,31"/>
+<area shape="rect" href="../../d3/d12/Odometry_8h_source.html" title=" " alt="" coords="542,226,629,252"/>
+<area shape="poly" title=" " alt="" coords="758,32,740,67,713,106,688,131,662,155,607,216,603,213,658,151,684,127,709,103,735,64,753,30"/>
+<area shape="rect" title=" " alt="" coords="792,226,859,252"/>
+<area shape="poly" title=" " alt="" coords="776,30,820,79,843,114,860,152,862,169,860,185,846,214,841,212,854,184,857,168,855,153,838,116,816,83,772,33"/>
+<area shape="rect" href="../../d3/d17/PID_8h_source.html" title=" " alt="" coords="1077,226,1190,252"/>
+<area shape="poly" title=" " alt="" coords="817,19,892,25,977,35,1053,52,1082,63,1103,77,1124,108,1136,144,1139,180,1139,211,1134,211,1134,180,1130,145,1120,110,1099,81,1080,68,1051,57,976,40,891,30,816,24"/>
+<area shape="rect" href="../../dc/d06/VelocityController_8h.html" title="Contrôleur de vitesse pour un robot à base différentielle." alt="" coords="898,79,1089,105"/>
+<area shape="poly" title=" " alt="" coords="801,29,940,71,939,77,800,34"/>
+<area shape="rect" href="../../d3/d3a/PositionController_8h_source.html" title=" " alt="" coords="354,153,547,178"/>
+<area shape="poly" title=" " alt="" coords="706,25,591,32,454,44,334,60,294,70,272,81,265,92,264,103,269,112,278,120,310,135,350,146,349,152,308,140,276,125,265,115,259,104,260,91,269,77,292,65,333,55,453,38,590,27,706,19"/>
+<area shape="rect" href="../../d2/d54/PurePursuit_8h_source.html" title=" " alt="" coords="515,79,698,105"/>
+<area shape="poly" title=" " alt="" coords="736,34,648,75,646,70,734,29"/>
+<area shape="rect" href="../../dd/d63/TurnOnTheSpot_8h.html" title="Implémentation d&#39;AbstractMoveStrategy qui fait tourner le robot sur lui&#45;même." alt="" coords="283,79,490,105"/>
+<area shape="poly" title=" " alt="" coords="707,33,466,78,465,73,706,27"/>
+<area shape="rect" title=" " alt="" coords="1164,79,1250,105"/>
+<area shape="poly" title=" " alt="" coords="817,25,1146,76,1149,77,1148,82,1145,82,816,30"/>
+<area shape="rect" title=" " alt="" coords="1274,79,1345,105"/>
+<area shape="poly" title=" " alt="" coords="817,21,1008,41,1131,56,1259,76,1258,81,1131,61,1008,46,816,27"/>
+<area shape="rect" href="../../d9/db6/AbstractTimer_8h.html" title="Un timer abstrait pour que Codewheel ne dépende pas directement du hardware." alt="" coords="654,226,767,252"/>
+<area shape="poly" title=" " alt="" coords="753,180,730,215,725,212,749,177"/>
+<area shape="poly" title=" " alt="" coords="730,181,630,222,628,218,728,176"/>
+<area shape="poly" title=" " alt="" coords="772,177,806,213,802,217,768,180"/>
+<area shape="rect" title=" " alt="" coords="514,300,657,341"/>
+<area shape="poly" title=" " alt="" coords="588,252,588,285,583,285,583,252"/>
+<area shape="rect" title=" " alt="" coords="1105,308,1162,333"/>
+<area shape="poly" title=" " alt="" coords="1136,252,1136,292,1131,292,1131,252"/>
+<area shape="rect" href="../../d9/d02/DifferentialController_8h_source.html" title=" " alt="" coords="920,153,1067,178"/>
+<area shape="poly" title=" " alt="" coords="996,105,996,137,991,137,991,105"/>
+<area shape="poly" title=" " alt="" coords="981,181,935,217,872,254,822,274,770,289,673,310,672,305,769,284,820,269,870,250,932,213,978,177"/>
+<area shape="poly" title=" " alt="" coords="966,181,869,222,867,217,964,176"/>
+<area shape="poly" title=" " alt="" coords="1018,176,1097,217,1095,221,1016,181"/>
+<area shape="rect" title=" " alt="" coords="933,226,1054,252"/>
+<area shape="poly" title=" " alt="" coords="996,179,996,211,991,211,991,179"/>
+<area shape="poly" title=" " alt="" coords="475,177,550,216,548,221,472,181"/>
+<area shape="poly" title=" " alt="" coords="463,177,560,286,556,290,459,181"/>
+<area shape="poly" title=" " alt="" coords="608,105,592,211,587,211,602,105"/>
+<area shape="poly" title=" " alt="" coords="581,108,492,148,490,143,579,103"/>
+<area shape="poly" title=" " alt="" coords="399,103,432,139,428,143,395,107"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/dad/Wheeledbase_8h__dep__incl.png" border="0" usemap="#aWheeledbase_8hdep" alt=""/></div>
+<map name="aWheeledbase_8hdep" id="aWheeledbase_8hdep">
+<area shape="rect" title="Fonctions de convénience pour faire les déplacements facilement." alt="" coords="208,5,317,31"/>
+<area shape="rect" href="../../dd/d07/Automate_8h.html" title="Contient le code nécessaire pour jouer un match." alt="" coords="5,79,93,105"/>
+<area shape="poly" title=" " alt="" coords="213,39,86,81,85,76,211,34"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html" title="Contient le code principal du robot." alt="" coords="212,226,286,252"/>
+<area shape="poly" title=" " alt="" coords="237,43,192,90,172,120,158,153,155,166,158,177,169,192,183,205,216,223,213,228,180,209,165,196,153,179,150,166,153,152,167,118,188,87,234,39"/>
+<area shape="rect" href="../../df/dd9/SensorArray_8h_source.html" title=" " alt="" coords="211,79,314,105"/>
+<area shape="poly" title=" " alt="" coords="265,46,265,79,260,79,260,46"/>
+<area shape="rect" href="../../d3/d78/wb__const_8h.html" title="Diverses constantes concernant la base roulante." alt="" coords="355,79,442,105"/>
+<area shape="poly" title=" " alt="" coords="300,36,376,76,374,81,298,41"/>
+<area shape="rect" href="../../d0/d42/wb__thread_8h.html" title="Contient les fonctions et variables nécessaires pour gérer le thread de base roulante." alt="" coords="453,153,544,178"/>
+<area shape="poly" title=" " alt="" coords="333,25,396,43,428,58,456,77,472,95,484,115,498,151,493,153,479,117,468,98,453,81,425,62,394,48,331,30"/>
+<area shape="poly" title=" " alt="" coords="65,117,86,148,113,176,163,206,213,225,211,230,161,211,110,180,82,151,61,120"/>
+<area shape="rect" href="../../d7/da3/ObjectDetector_8h_source.html" title=" " alt="" coords="167,153,286,178"/>
+<area shape="poly" title=" " alt="" coords="252,119,235,153,230,151,247,117"/>
+<area shape="rect" href="../../d7/db8/SensorsThread_8h.html" title="Contient les fonctions et variables nécessaires pour gérer le thread des capteurs." alt="" coords="309,153,429,178"/>
+<area shape="poly" title=" " alt="" coords="295,111,352,150,349,154,292,116"/>
+<area shape="poly" title=" " alt="" coords="337,189,271,228,268,223,334,184"/>
+<area shape="poly" title=" " alt="" coords="429,112,483,150,480,154,426,116"/>
+<area shape="poly" title=" " alt="" coords="442,186,287,230,285,225,441,181"/>
+</map>
+</div>
+</div>
+<p><a href="../../df/dbb/Wheeledbase_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d98/structWheeledbase_1_1WBConstants.html">Wheeledbase::WBConstants</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Défini un certain nombre de constantes et paramètres pour la wheeledbase.  <a href="../../d4/d98/structWheeledbase_1_1WBConstants.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">Wheeledbase::WheeledBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représente les divers composants de la base roulante.  <a href="../../db/d67/structWheeledbase_1_1WheeledBase.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Espaces de nommage</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc5/namespaceWheeledbase.html">Wheeledbase</a></td></tr>
+<tr class="memdesc:d1/dc5/namespaceWheeledbase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonctions de convénience pour faire les déplacements facilement. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:gaebf92ee2945b9aeda36bfa47d6bf05ec" id="r_gaebf92ee2945b9aeda36bfa47d6bf05ec"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SLOWDOWN_FACTOR</b>&#160;&#160;&#160;0.5</td></tr>
+<tr class="separator:gaebf92ee2945b9aeda36bfa47d6bf05ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaac745b76c19e4518718674961bdea820" id="r_gaac745b76c19e4518718674961bdea820"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SLOWDOWN_DISTANCE</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:gaac745b76c19e4518718674961bdea820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga19318a0d0a984ea485057dc87ce47123" id="r_ga19318a0d0a984ea485057dc87ce47123"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ALIGN_DISTANCE</b>&#160;&#160;&#160;130</td></tr>
+<tr class="separator:ga19318a0d0a984ea485057dc87ce47123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:a18696c722ee30da3d9cd60389b0e8e15" id="r_a18696c722ee30da3d9cd60389b0e8e15"><td class="memItemLeft" align="right" valign="top"><a id="a18696c722ee30da3d9cd60389b0e8e15" name="a18696c722ee30da3d9cd60389b0e8e15"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc5/namespaceWheeledbase.html#a18696c722ee30da3d9cd60389b0e8e15">Wheeledbase::WBParameterID</a> : uint8_t { <br />
+&#160;&#160;<b>WBPID_LEFTWHEEL_RADIUS_ID</b>
+, <b>WBPID_LEFTWHEEL_CONSTANT_ID</b>
+, <b>WBPID_LEFTWHEEL_MAXPWM_ID</b>
+, <b>WBPID_RIGHTWHEEL_RADIUS_ID</b>
+, <br />
+&#160;&#160;<b>WBPID_RIGHTWHEEL_CONSTANT_ID</b>
+, <b>WBPID_RIGHTWHEEL_MAXPWM_ID</b>
+, <b>WBPID_LEFTCODEWHEEL_RADIUS_ID</b>
+, <b>WBPID_LEFTCODEWHEEL_COUNTSPERREV_ID</b>
+, <br />
+&#160;&#160;<b>WBPID_RIGHTCODEWHEEL_RADIUS_ID</b>
+, <b>WBPID_RIGHTCODEWHEEL_COUNTSPERREV_ID</b>
+, <b>WBPID_ODOMETRY_AXLETRACK_ID</b>
+, <b>WBPID_ODOMETRY_SLIPPAGE_ID</b>
+, <br />
+&#160;&#160;<b>WBPID_VELOCITYCONTROL_AXLETRACK_ID</b>
+, <b>WBPID_VELOCITYCONTROL_MAXLINACC_ID</b>
+, <b>WBPID_VELOCITYCONTROL_MAXLINDEC_ID</b>
+, <b>WBPID_VELOCITYCONTROL_MAXANGACC_ID</b>
+, <br />
+&#160;&#160;<b>WBPID_VELOCITYCONTROL_MAXANGDEC_ID</b>
+, <b>WBPID_VELOCITYCONTROL_SPINSHUTDOWN_ID</b>
+, <b>WBPID_LINVELPID_KP_ID</b>
+, <b>WBPID_LINVELPID_KI_ID</b>
+, <br />
+&#160;&#160;<b>WBPID_LINVELPID_KD_ID</b>
+, <b>WBPID_LINVELPID_MINOUTPUT_ID</b>
+, <b>WBPID_LINVELPID_MAXOUTPUT_ID</b>
+, <b>WBPID_ANGVELPID_KP_ID</b>
+, <br />
+&#160;&#160;<b>WBPID_ANGVELPID_KI_ID</b>
+, <b>WBPID_ANGVELPID_KD_ID</b>
+, <b>WBPID_ANGVELPID_MINOUTPUT_ID</b>
+, <b>WBPID_ANGVELPID_MAXOUTPUT_ID</b>
+, <br />
+&#160;&#160;<b>WBPID_POSITIONCONTROL_LINVELKP_ID</b>
+, <b>WBPID_POSITIONCONTROL_ANGVELKP_ID</b>
+, <b>WBPID_POSITIONCONTROL_LINVELMAX_ID</b>
+, <b>WBPID_POSITIONCONTROL_ANGVELMAX_ID</b>
+, <br />
+&#160;&#160;<b>WBPID_POSITIONCONTROL_LINPOSTHRESHOLD_ID</b>
+, <b>WBPID_POSITIONCONTROL_ANGPOSTHRESHOLD_ID</b>
+, <b>WBPID_PUREPURSUIT_LOOKAHED_ID</b>
+, <b>WBPID_PUREPURSUIT_LOOKAHEADBIS_ID</b>
+<br />
+ }</td></tr>
+<tr class="memdesc:a18696c722ee30da3d9cd60389b0e8e15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Des identifiants permettant d'accéder à la plupart des paramètres de la base roulante. <br /></td></tr>
+<tr class="separator:a18696c722ee30da3d9cd60389b0e8e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a005db57775d7a3425b6411b2634f7222" id="r_a005db57775d7a3425b6411b2634f7222"><td class="memItemLeft" align="right" valign="top"><a id="a005db57775d7a3425b6411b2634f7222" name="a005db57775d7a3425b6411b2634f7222"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Wheeledbase::run</b> (<a class="el" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a> *wheeledBase, const std::function&lt; void()&gt; &amp;delayFunc)</td></tr>
+<tr class="separator:a005db57775d7a3425b6411b2634f7222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bad65c499d6e577dd0c33088d033384" id="r_a0bad65c499d6e577dd0c33088d033384"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc5/namespaceWheeledbase.html#a0bad65c499d6e577dd0c33088d033384">Wheeledbase::disable</a> (const <a class="el" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a> *wheeledBase)</td></tr>
+<tr class="memdesc:a0bad65c499d6e577dd0c33088d033384"><td class="mdescLeft">&#160;</td><td class="mdescRight">Désactive la base roulante.  <br /></td></tr>
+<tr class="separator:a0bad65c499d6e577dd0c33088d033384"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a7eb1fc4364b105eb8eceaf9467ccf7" id="r_a2a7eb1fc4364b105eb8eceaf9467ccf7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc5/namespaceWheeledbase.html#a2a7eb1fc4364b105eb8eceaf9467ccf7">Wheeledbase::gotoDelta</a> (<a class="el" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a> *wheeledBase, <a class="el" href="../../de/d96/classPurePursuit.html">PurePursuit</a> *purePursuit, float dx, float dy, bool bloquant=true)</td></tr>
+<tr class="memdesc:a2a7eb1fc4364b105eb8eceaf9467ccf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Déplace la base roulante d'une certaine distance dans le référentiel du robot.  <br /></td></tr>
+<tr class="separator:a2a7eb1fc4364b105eb8eceaf9467ccf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa654986f8a6669f64e03250febc45506" id="r_aa654986f8a6669f64e03250febc45506"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc5/namespaceWheeledbase.html#aa654986f8a6669f64e03250febc45506">Wheeledbase::setOpenloopVelocities</a> (<a class="el" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a> *wheeledBase, float leftWheelVel, float rightWheelVel)</td></tr>
+<tr class="memdesc:aa654986f8a6669f64e03250febc45506"><td class="mdescLeft">&#160;</td><td class="mdescRight">Définit les vitesses en boucle ouverte pour les roues.  <br /></td></tr>
+<tr class="separator:aa654986f8a6669f64e03250febc45506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d6c9bd7f2932b468454bd58d449f26d" id="r_a7d6c9bd7f2932b468454bd58d449f26d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc5/namespaceWheeledbase.html#a7d6c9bd7f2932b468454bd58d449f26d">Wheeledbase::getCodewheelsCounters</a> (<a class="el" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a> *wheeledBase, float *leftCodewheelCounter, float *rightCodewheelCounter)</td></tr>
+<tr class="memdesc:a7d6c9bd7f2932b468454bd58d449f26d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Récupère les compteurs des roues codeuses.  <br /></td></tr>
+<tr class="separator:a7d6c9bd7f2932b468454bd58d449f26d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89ffe54e8ddf10a0fdec54653570b61f" id="r_a89ffe54e8ddf10a0fdec54653570b61f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc5/namespaceWheeledbase.html#a89ffe54e8ddf10a0fdec54653570b61f">Wheeledbase::setVelocities</a> (<a class="el" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a> *wheeledBase, float linVelSetpoint, float angVelSetpoint)</td></tr>
+<tr class="memdesc:a89ffe54e8ddf10a0fdec54653570b61f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fixe une vitesse linéaire et angulaire pour la base roulante.  <br /></td></tr>
+<tr class="separator:a89ffe54e8ddf10a0fdec54653570b61f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22253592773d11c3b858cf06bca9b7b4" id="r_a22253592773d11c3b858cf06bca9b7b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc5/namespaceWheeledbase.html#a22253592773d11c3b858cf06bca9b7b4">Wheeledbase::resetPurepursuit</a> (<a class="el" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a> *wheeledBase, <a class="el" href="../../de/d96/classPurePursuit.html">PurePursuit</a> *purePursuit)</td></tr>
+<tr class="memdesc:a22253592773d11c3b858cf06bca9b7b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Réinitialise le purepursuit.  <br /></td></tr>
+<tr class="separator:a22253592773d11c3b858cf06bca9b7b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af95eff03593f9262964c7b28e5748d7c" id="r_af95eff03593f9262964c7b28e5748d7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc5/namespaceWheeledbase.html#af95eff03593f9262964c7b28e5748d7c">Wheeledbase::addPurepursuitWaypoint</a> (<a class="el" href="../../de/d96/classPurePursuit.html">PurePursuit</a> *purePursuit, float x, float y)</td></tr>
+<tr class="memdesc:af95eff03593f9262964c7b28e5748d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute un waypoint au purepursuit.  <br /></td></tr>
+<tr class="separator:af95eff03593f9262964c7b28e5748d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3513ee361359e21de0c140a93877bc0" id="r_ac3513ee361359e21de0c140a93877bc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc5/namespaceWheeledbase.html#ac3513ee361359e21de0c140a93877bc0">Wheeledbase::startPurepursuit</a> (<a class="el" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a> *wheeledBase, <a class="el" href="../../de/d96/classPurePursuit.html">PurePursuit</a> *purePursuit, <a class="el" href="../../de/d96/classPurePursuit.html#a584048cfe1c7e025425011986b410019">PurePursuit::Direction</a> direction, float finalAngle)</td></tr>
+<tr class="memdesc:ac3513ee361359e21de0c140a93877bc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Démarre le purepursuit.  <br /></td></tr>
+<tr class="separator:ac3513ee361359e21de0c140a93877bc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9503cce512e702417b7679ce62747aa7" id="r_a9503cce512e702417b7679ce62747aa7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc5/namespaceWheeledbase.html#a9503cce512e702417b7679ce62747aa7">Wheeledbase::startTurnonthespot</a> (<a class="el" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a> *wheeledBase, <a class="el" href="../../d9/dee/classTurnOnTheSpot.html">TurnOnTheSpot</a> *turnOnTheSpot, bool dir, float theta)</td></tr>
+<tr class="memdesc:a9503cce512e702417b7679ce62747aa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">démarre turn on the spot  <br /></td></tr>
+<tr class="separator:a9503cce512e702417b7679ce62747aa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d8ad1dbb6ee976b8a00256455544be1" id="r_a7d8ad1dbb6ee976b8a00256455544be1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc5/namespaceWheeledbase.html#a7d8ad1dbb6ee976b8a00256455544be1">Wheeledbase::startTurnonthespotDir</a> (const <a class="el" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a> *wheeledBase, <a class="el" href="../../d9/dee/classTurnOnTheSpot.html">TurnOnTheSpot</a> *turnOnTheSpot, TurnOnTheSpot::Direction dir, float theta)</td></tr>
+<tr class="memdesc:a7d8ad1dbb6ee976b8a00256455544be1"><td class="mdescLeft">&#160;</td><td class="mdescRight">démarre turn on the spot mais avec moins de magie dans la direction de rotation  <br /></td></tr>
+<tr class="separator:a7d8ad1dbb6ee976b8a00256455544be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb2a521a07f95f69d652a5bbada66332" id="r_acb2a521a07f95f69d652a5bbada66332"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc5/namespaceWheeledbase.html#acb2a521a07f95f69d652a5bbada66332">Wheeledbase::purepursuit</a> (<a class="el" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a> *wheeledBase, <a class="el" href="../../de/d96/classPurePursuit.html">PurePursuit</a> *purePursuit, const <a class="el" href="../../d0/df4/structPosition.html">Position</a> **waypoints, uint16_t nb_waypoints, <a class="el" href="../../de/d96/classPurePursuit.html#a584048cfe1c7e025425011986b410019">PurePursuit::Direction</a> dir, float finalAngle)</td></tr>
+<tr class="memdesc:acb2a521a07f95f69d652a5bbada66332"><td class="mdescLeft">&#160;</td><td class="mdescRight">Démarre purepursuit ? honnêtement jsp trop.  <br /></td></tr>
+<tr class="separator:acb2a521a07f95f69d652a5bbada66332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a10b06182fb0a197a8e4093af55a198" id="r_a6a10b06182fb0a197a8e4093af55a198"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc5/namespaceWheeledbase.html#a6a10b06182fb0a197a8e4093af55a198">Wheeledbase::wbGoto</a> (<a class="el" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a> *wheeledBase, <a class="el" href="../../de/d96/classPurePursuit.html">PurePursuit</a> *purePursuit, <a class="el" href="../../d0/df4/structPosition.html">Position</a> *pos, bool alignFirst=true, <a class="el" href="../../de/d96/classPurePursuit.html#a584048cfe1c7e025425011986b410019">PurePursuit::Direction</a> dir=PurePursuit::NONE, bool bloquant=true)</td></tr>
+<tr class="memdesc:a6a10b06182fb0a197a8e4093af55a198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Va à un point en utilisant purepursuit.  <br /></td></tr>
+<tr class="separator:a6a10b06182fb0a197a8e4093af55a198"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67e8ddf0666538675a1641e4287ff331" id="r_a67e8ddf0666538675a1641e4287ff331"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc5/namespaceWheeledbase.html#a67e8ddf0666538675a1641e4287ff331">Wheeledbase::gotoWaypoints</a> (<a class="el" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a> *wheeledBase, <a class="el" href="../../de/d96/classPurePursuit.html">PurePursuit</a> *purePursuit, bool alignFirst=true, <a class="el" href="../../de/d96/classPurePursuit.html#a584048cfe1c7e025425011986b410019">PurePursuit::Direction</a> dir=PurePursuit::NONE, int nb_waypoints=1,...)</td></tr>
+<tr class="memdesc:a67e8ddf0666538675a1641e4287ff331"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suit une liste de waypoint en utilisant purepursuit.  <br /></td></tr>
+<tr class="separator:a67e8ddf0666538675a1641e4287ff331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a456c83bebed6115a2040b90c6a8cdf6c" id="r_a456c83bebed6115a2040b90c6a8cdf6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc5/namespaceWheeledbase.html#a456c83bebed6115a2040b90c6a8cdf6c">Wheeledbase::gotoWaypointsArray</a> (<a class="el" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a> *wheeledBase, <a class="el" href="../../de/d96/classPurePursuit.html">PurePursuit</a> *purePursuit, <a class="el" href="../../d0/df4/structPosition.html">Position</a> *positions[], bool alignFirst=true, <a class="el" href="../../de/d96/classPurePursuit.html#a584048cfe1c7e025425011986b410019">PurePursuit::Direction</a> dir=PurePursuit::NONE, int nb_waypoints=1)</td></tr>
+<tr class="memdesc:a456c83bebed6115a2040b90c6a8cdf6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suit une liste de waypoint en utilisant purepursuit mais sans les varargs.  <br /></td></tr>
+<tr class="separator:a456c83bebed6115a2040b90c6a8cdf6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6680480eb7648cfbdb7b8209a6aa3d43" id="r_a6680480eb7648cfbdb7b8209a6aa3d43"><td class="memItemLeft" align="right" valign="top"><a id="a6680480eb7648cfbdb7b8209a6aa3d43" name="a6680480eb7648cfbdb7b8209a6aa3d43"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Wheeledbase::gotoFunct</b> (<a class="el" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a> *wheeledBase, <a class="el" href="../../de/d96/classPurePursuit.html">PurePursuit</a> *purePursuit, <a class="el" href="../../d9/dee/classTurnOnTheSpot.html">TurnOnTheSpot</a> *turnOnTheSpot, <a class="el" href="../../d0/df4/structPosition.html">Position</a> *pos, void *duringMovingFunct, void *approachFunct, bool alignFirst=true, <a class="el" href="../../de/d96/classPurePursuit.html#a584048cfe1c7e025425011986b410019">PurePursuit::Direction</a> dir=PurePursuit::NONE, float finalAngle=MAXFLOAT)</td></tr>
+<tr class="memdesc:a6680480eb7648cfbdb7b8209a6aa3d43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Honnêtement aucune idée de ce que fait cette fonction. <br /></td></tr>
+<tr class="separator:a6680480eb7648cfbdb7b8209a6aa3d43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adff48202425edbc5114edfa6d5904740" id="r_adff48202425edbc5114edfa6d5904740"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc5/namespaceWheeledbase.html#adff48202425edbc5114edfa6d5904740">Wheeledbase::positionReached</a> (const <a class="el" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a> *wheeledBase)</td></tr>
+<tr class="memdesc:adff48202425edbc5114edfa6d5904740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Est-ce que la position est atteinte ?  <br /></td></tr>
+<tr class="separator:adff48202425edbc5114edfa6d5904740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27e61bb510fac01d9c6058592c2a4e27" id="r_a27e61bb510fac01d9c6058592c2a4e27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc5/namespaceWheeledbase.html#a27e61bb510fac01d9c6058592c2a4e27">Wheeledbase::getVelocitiesWanted</a> (const <a class="el" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a> *wheeledBase, float *linOutput, float *angOutput, bool spin=true)</td></tr>
+<tr class="memdesc:a27e61bb510fac01d9c6058592c2a4e27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Récupère les vitesses linéaire et angulaire souhaitées.  <br /></td></tr>
+<tr class="separator:a27e61bb510fac01d9c6058592c2a4e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6971a80d78a12e8687d42d7bfddbc2b" id="r_ac6971a80d78a12e8687d42d7bfddbc2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc5/namespaceWheeledbase.html#ac6971a80d78a12e8687d42d7bfddbc2b">Wheeledbase::setPosition</a> (<a class="el" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a> *wheeledBase, const <a class="el" href="../../d0/df4/structPosition.html">Position</a> *pos)</td></tr>
+<tr class="memdesc:ac6971a80d78a12e8687d42d7bfddbc2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Met à jour la position de l'odométrie.  <br /></td></tr>
+<tr class="separator:ac6971a80d78a12e8687d42d7bfddbc2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae01e28daf111f6e6c5f5410fb5166a1e" id="r_ae01e28daf111f6e6c5f5410fb5166a1e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d0/df4/structPosition.html">Position</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc5/namespaceWheeledbase.html#ae01e28daf111f6e6c5f5410fb5166a1e">Wheeledbase::getPosition</a> (const <a class="el" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a> *wheeledBase)</td></tr>
+<tr class="memdesc:ae01e28daf111f6e6c5f5410fb5166a1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Récupère la position de l'odométrie.  <br /></td></tr>
+<tr class="separator:ae01e28daf111f6e6c5f5410fb5166a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ec33285139f6591d0223f5b9eeb8b2d" id="r_a9ec33285139f6591d0223f5b9eeb8b2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc5/namespaceWheeledbase.html#a9ec33285139f6591d0223f5b9eeb8b2d">Wheeledbase::getVelocities</a> (const <a class="el" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a> *wheeledBase, float *linVel, float *angVel)</td></tr>
+<tr class="memdesc:a9ec33285139f6591d0223f5b9eeb8b2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Récupère les vitesses linéaire et angulaire actuelles.  <br /></td></tr>
+<tr class="separator:a9ec33285139f6591d0223f5b9eeb8b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93917aa7393e8d67cdb861be9f3ac8e6" id="r_a93917aa7393e8d67cdb861be9f3ac8e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc5/namespaceWheeledbase.html#a93917aa7393e8d67cdb861be9f3ac8e6">Wheeledbase::setParameterValue</a> (<a class="el" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a> *wheeledBase, <a class="el" href="../../de/d96/classPurePursuit.html">PurePursuit</a> *purePursuit, <a class="el" href="../../d1/dc5/namespaceWheeledbase.html#a18696c722ee30da3d9cd60389b0e8e15">WBParameterID</a> paramID, float value)</td></tr>
+<tr class="memdesc:a93917aa7393e8d67cdb861be9f3ac8e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Met un paramètre de la base roulante à jour.  <br /></td></tr>
+<tr class="separator:a93917aa7393e8d67cdb861be9f3ac8e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b90ac909e4d3394d53f339951c29b71" id="r_a7b90ac909e4d3394d53f339951c29b71"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc5/namespaceWheeledbase.html#a7b90ac909e4d3394d53f339951c29b71">Wheeledbase::getParameterValue</a> (const <a class="el" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a> *wheeledBase, const <a class="el" href="../../de/d96/classPurePursuit.html">PurePursuit</a> *purePursuit, <a class="el" href="../../d1/dc5/namespaceWheeledbase.html#a18696c722ee30da3d9cd60389b0e8e15">WBParameterID</a> paramID)</td></tr>
+<tr class="memdesc:a7b90ac909e4d3394d53f339951c29b71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Récupère la valeur d'un paramètre de la base roulante.  <br /></td></tr>
+<tr class="separator:a7b90ac909e4d3394d53f339951c29b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39c3f87a5d200ad1e41fab813bffc7bb" id="r_a39c3f87a5d200ad1e41fab813bffc7bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc5/namespaceWheeledbase.html#a39c3f87a5d200ad1e41fab813bffc7bb">Wheeledbase::printParams</a> (const <a class="el" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a> *wheeledBase, const <a class="el" href="../../de/d96/classPurePursuit.html">PurePursuit</a> *purePursuit)</td></tr>
+<tr class="memdesc:a39c3f87a5d200ad1e41fab813bffc7bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche les paramètres de la base roulante.  <br /></td></tr>
+<tr class="separator:a39c3f87a5d200ad1e41fab813bffc7bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a9ac1deea9b70ad26fa1840291632f439" id="r_a9ac1deea9b70ad26fa1840291632f439"><td class="memItemLeft" align="right" valign="top"><a id="a9ac1deea9b70ad26fa1840291632f439" name="a9ac1deea9b70ad26fa1840291632f439"></a>
+auto&#160;</td><td class="memItemRight" valign="bottom"><b>Wheeledbase::wb_logger</b> = <a class="el" href="../../db/d67/classLogger.html">Logger</a>(&quot;WHEELEDBASE&quot;)</td></tr>
+<tr class="memdesc:a9ac1deea9b70ad26fa1840291632f439"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le logger pour la base roulante. <br /></td></tr>
+<tr class="separator:a9ac1deea9b70ad26fa1840291632f439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Fonctions de convénience pour faire les déplacements facilement. </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_d5c75ca7dbd2fef93c2f2d67c31ab7ba.html">Wheeledbase</a></li><li class="navelem"><a class="el" href="../../dir_4881e9255e1186884e769a7ea69581b4.html">include</a></li><li class="navelem"><a class="el" href="../../df/dbb/Wheeledbase_8h.html">Wheeledbase.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

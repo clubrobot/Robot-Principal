@@ -1,0 +1,9 @@
+<map id="Wheeledbase::setOpenloopVelocities" name="Wheeledbase::setOpenloopVelocities">
+<area shape="rect" id="Node000001" title="Définit les vitesses en boucle ouverte pour les roues." alt="" coords="5,31,184,71"/>
+<area shape="rect" id="Node000002" href="$d2/dfa/classPeriodicProcess.html#a4147798b8ad01690f590d934bdd83c28" title="Désactive le PeriodicProcess." alt="" coords="232,13,395,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,38,216,34,216,40,184,43"/>
+<area shape="rect" id="Node000004" href="$db/dab/classWheelMotor.html#a2116b35ba209918957a2926a67f1897f" title="Envoie une commande de vitesse au moteur." alt="" coords="233,62,394,88"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="184,58,218,62,217,67,183,63"/>
+<area shape="rect" id="Node000003" href="$d2/dfa/classPeriodicProcess.html#a6e325cb38e20cac3164a01d89e161d90" title="Méthode exécutée à la désactivation du PeriodicProcess." alt="" coords="443,5,627,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="396,23,427,23,427,28,396,28"/>
+</map>

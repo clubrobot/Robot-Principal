@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['variables_20globales_0',['Variables globales',['../d0/da2/group__globals.html',1,'']]]
+  ['sensors_0',['Sensors',['../df/df6/group__sensors.html',1,'']]],
+  ['strategy_1',['Strategy',['../db/da1/group__strategy.html',1,'']]]
 ];

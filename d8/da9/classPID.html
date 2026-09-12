@@ -1,0 +1,584 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Robot Principal: Référence de la classe PID</title>
+<link rel="icon" href="../../icon.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript" src="../../darkmode_toggle.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../custom.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="../../theme-round.css" rel="stylesheet" type="text/css"/>
+<link href="../../theme-robot.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Robot Principal<span id="projectnumber">&#160;26</span>
+   </div>
+   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2026</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('d8/da9/classPID.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="../../d9/dea/classPID-members.html">Liste de tous les membres</a>  </div>
+  <div class="headertitle"><div class="title">Référence de la classe PID<div class="ingroups"><a class="el" href="../../d5/dc1/group__wheeledbase.html">Wheeled base</a> &#124; <a class="el" href="../../d0/dd5/group__libs.html">Librairies du projet</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Classe d'asservissement.  
+ <a href="#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d3/d17/PID_8h_source.html">PID.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a0311b6f7de348499ce24e53ba353514a" id="r_a0311b6f7de348499ce24e53ba353514a"><td class="memItemLeft" align="right" valign="top"><a id="a0311b6f7de348499ce24e53ba353514a" name="a0311b6f7de348499ce24e53ba353514a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>PID</b> ()</td></tr>
+<tr class="memdesc:a0311b6f7de348499ce24e53ba353514a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de <a class="el" href="../../d8/da9/classPID.html" title="Classe d&#39;asservissement.">PID</a> Constructeur de <a class="el" href="../../d8/da9/classPID.html" title="Classe d&#39;asservissement.">PID</a> qui initialise toutes les valeurs à des valeurs neutres (Kp=1,Ki=0,Kd=0). <br /></td></tr>
+<tr class="separator:a0311b6f7de348499ce24e53ba353514a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9982ecaf693e2b3b3873f749983814dd" id="r_a9982ecaf693e2b3b3873f749983814dd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9982ecaf693e2b3b3873f749983814dd">compute</a> (float setpoint, float input, float timestep)</td></tr>
+<tr class="memdesc:a9982ecaf693e2b3b3873f749983814dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcul l'asservissement.  <br /></td></tr>
+<tr class="separator:a9982ecaf693e2b3b3873f749983814dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9677e76cb1beffbcf3f54cbc627c530" id="r_af9677e76cb1beffbcf3f54cbc627c530"><td class="memItemLeft" align="right" valign="top"><a id="af9677e76cb1beffbcf3f54cbc627c530" name="af9677e76cb1beffbcf3f54cbc627c530"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
+<tr class="memdesc:af9677e76cb1beffbcf3f54cbc627c530"><td class="mdescLeft">&#160;</td><td class="mdescRight">Réinitialise les accumulateurs. <br /></td></tr>
+<tr class="separator:af9677e76cb1beffbcf3f54cbc627c530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11d8c4753029f8cc187d2751cb00c4e9" id="r_a11d8c4753029f8cc187d2751cb00c4e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11d8c4753029f8cc187d2751cb00c4e9">setTunings</a> (float Kp, float Ki, float Kd)</td></tr>
+<tr class="memdesc:a11d8c4753029f8cc187d2751cb00c4e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Charge de nouvelles constantes d'asservissements.  <br /></td></tr>
+<tr class="separator:a11d8c4753029f8cc187d2751cb00c4e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa83c2d7eb95c55f375f85a319f8037b3" id="r_aa83c2d7eb95c55f375f85a319f8037b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa83c2d7eb95c55f375f85a319f8037b3">setOutputLimits</a> (float minOutput, float maxOutput)</td></tr>
+<tr class="memdesc:aa83c2d7eb95c55f375f85a319f8037b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Charge les limites de sorties.  <br /></td></tr>
+<tr class="separator:aa83c2d7eb95c55f375f85a319f8037b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83ed5fcf6da6d340d1d527114445a949" id="r_a83ed5fcf6da6d340d1d527114445a949"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83ed5fcf6da6d340d1d527114445a949">getKp</a> () const</td></tr>
+<tr class="memdesc:a83ed5fcf6da6d340d1d527114445a949"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne le coefficient proportionnel.  <br /></td></tr>
+<tr class="separator:a83ed5fcf6da6d340d1d527114445a949"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30b4a12f5ad34b7c540365051f79e57c" id="r_a30b4a12f5ad34b7c540365051f79e57c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30b4a12f5ad34b7c540365051f79e57c">getKi</a> () const</td></tr>
+<tr class="memdesc:a30b4a12f5ad34b7c540365051f79e57c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne le coefficient intégrateur.  <br /></td></tr>
+<tr class="separator:a30b4a12f5ad34b7c540365051f79e57c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac71200e7079fdd7cf3dee5f7e93c7582" id="r_ac71200e7079fdd7cf3dee5f7e93c7582"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac71200e7079fdd7cf3dee5f7e93c7582">getKd</a> () const</td></tr>
+<tr class="memdesc:ac71200e7079fdd7cf3dee5f7e93c7582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne le coefficient dérivateur.  <br /></td></tr>
+<tr class="separator:ac71200e7079fdd7cf3dee5f7e93c7582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19e0b4481b71f304ee21ed1edb1ba331" id="r_a19e0b4481b71f304ee21ed1edb1ba331"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19e0b4481b71f304ee21ed1edb1ba331">getMinOutput</a> () const</td></tr>
+<tr class="memdesc:a19e0b4481b71f304ee21ed1edb1ba331"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne la sortie minimal.  <br /></td></tr>
+<tr class="separator:a19e0b4481b71f304ee21ed1edb1ba331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a310f5f2da22b3b492cfe60ebad1f7939" id="r_a310f5f2da22b3b492cfe60ebad1f7939"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a310f5f2da22b3b492cfe60ebad1f7939">getMaxOutput</a> () const</td></tr>
+<tr class="memdesc:a310f5f2da22b3b492cfe60ebad1f7939"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne la sortie maximal.  <br /></td></tr>
+<tr class="separator:a310f5f2da22b3b492cfe60ebad1f7939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Classe d'asservissement. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Ulysse Darmet <a class="el" href="../../d8/da9/classPID.html" title="Classe d&#39;asservissement.">PID</a> est une classe d'asservissement composée des 3 types d'asservissements. Elle permet à partir de l'erreur et de la constante désiré de retourner une commande asservie. </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="a9982ecaf693e2b3b3873f749983814dd" name="a9982ecaf693e2b3b3873f749983814dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9982ecaf693e2b3b3873f749983814dd">&#9670;&#160;</a></span>compute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::compute </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>setpoint</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>timestep</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcul l'asservissement. </p>
+<p>A partir de l'erreur et du temps depuis le dernier appel et de la constante demandé, rend une consigne asservie.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">setpoint</td><td>Constante désiré. </td></tr>
+    <tr><td class="paramname">input</td><td>Constante actuel. </td></tr>
+    <tr><td class="paramname">timestep</td><td>Temps depuis le dernier appel en secondes.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>float La valeur asservie. </dd></dl>
+
+</div>
+</div>
+<a id="ac71200e7079fdd7cf3dee5f7e93c7582" name="ac71200e7079fdd7cf3dee5f7e93c7582"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac71200e7079fdd7cf3dee5f7e93c7582">&#9670;&#160;</a></span>getKd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::getKd </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retourne le coefficient dérivateur. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Coefficient dérivateur. </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/da9/classPID_ac71200e7079fdd7cf3dee5f7e93c7582_icgraph.png" border="0" usemap="#ad8/da9/classPID_ac71200e7079fdd7cf3dee5f7e93c7582_icgraph" alt=""/></div>
+<map name="ad8/da9/classPID_ac71200e7079fdd7cf3dee5f7e93c7582_icgraph" id="ad8/da9/classPID_ac71200e7079fdd7cf3dee5f7e93c7582_icgraph">
+<area shape="rect" title="Retourne le coefficient dérivateur." alt="" coords="475,128,558,153"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a7b90ac909e4d3394d53f339951c29b71" title="Récupère la valeur d&#39;un paramètre de la base roulante." alt="" coords="244,120,427,161"/>
+<area shape="poly" title=" " alt="" coords="459,143,427,143,427,138,459,138"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a39c3f87a5d200ad1e41fab813bffc7bb" title="Affiche les paramètres de la base roulante." alt="" coords="248,185,423,210"/>
+<area shape="poly" title=" " alt="" coords="467,161,428,175,388,187,386,182,426,170,465,156"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a93917aa7393e8d67cdb861be9f3ac8e6" title="Met un paramètre de la base roulante à jour." alt="" coords="244,55,427,95"/>
+<area shape="poly" title=" " alt="" coords="464,124,393,98,395,93,466,119"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a6680480eb7648cfbdb7b8209a6aa3d43" title="Honnêtement aucune idée de ce que fait cette fonction." alt="" coords="19,120,182,145"/>
+<area shape="poly" title=" " alt="" coords="228,139,182,138,183,132,228,134"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a67e8ddf0666538675a1641e4287ff331" title="Suit une liste de waypoint en utilisant purepursuit." alt="" coords="5,169,196,194"/>
+<area shape="poly" title=" " alt="" coords="229,162,178,171,177,166,228,156"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a456c83bebed6115a2040b90c6a8cdf6c" title="Suit une liste de waypoint en utilisant purepursuit mais sans les varargs." alt="" coords="5,5,196,46"/>
+<area shape="poly" title=" " alt="" coords="252,115,242,109,227,96,218,84,209,72,194,60,173,49,176,44,197,55,212,68,222,81,231,93,245,105,254,110"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a6a10b06182fb0a197a8e4093af55a198" title="Va à un point en utilisant purepursuit." alt="" coords="25,70,176,96"/>
+<area shape="poly" title=" " alt="" coords="234,118,156,99,157,94,235,113"/>
+<area shape="poly" title=" " alt="" coords="235,102,157,121,156,116,234,97"/>
+<area shape="poly" title=" " alt="" coords="254,105,245,110,231,123,222,135,213,148,197,160,173,171,171,166,194,155,209,144,218,132,227,119,242,106,252,100"/>
+<area shape="poly" title=" " alt="" coords="228,55,196,48,197,43,229,50"/>
+<area shape="poly" title=" " alt="" coords="228,81,176,83,176,78,228,76"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a30b4a12f5ad34b7c540365051f79e57c" name="a30b4a12f5ad34b7c540365051f79e57c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30b4a12f5ad34b7c540365051f79e57c">&#9670;&#160;</a></span>getKi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::getKi </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retourne le coefficient intégrateur. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Coefficient intégrateur. </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/da9/classPID_a30b4a12f5ad34b7c540365051f79e57c_icgraph.png" border="0" usemap="#ad8/da9/classPID_a30b4a12f5ad34b7c540365051f79e57c_icgraph" alt=""/></div>
+<map name="ad8/da9/classPID_a30b4a12f5ad34b7c540365051f79e57c_icgraph" id="ad8/da9/classPID_a30b4a12f5ad34b7c540365051f79e57c_icgraph">
+<area shape="rect" title="Retourne le coefficient intégrateur." alt="" coords="475,128,554,153"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a7b90ac909e4d3394d53f339951c29b71" title="Récupère la valeur d&#39;un paramètre de la base roulante." alt="" coords="244,120,427,161"/>
+<area shape="poly" title=" " alt="" coords="459,143,427,143,427,138,459,138"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a39c3f87a5d200ad1e41fab813bffc7bb" title="Affiche les paramètres de la base roulante." alt="" coords="248,185,423,210"/>
+<area shape="poly" title=" " alt="" coords="466,162,428,175,388,187,387,182,426,170,464,157"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a93917aa7393e8d67cdb861be9f3ac8e6" title="Met un paramètre de la base roulante à jour." alt="" coords="244,55,427,95"/>
+<area shape="poly" title=" " alt="" coords="462,124,426,111,393,98,394,93,428,106,464,119"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a6680480eb7648cfbdb7b8209a6aa3d43" title="Honnêtement aucune idée de ce que fait cette fonction." alt="" coords="19,120,182,145"/>
+<area shape="poly" title=" " alt="" coords="228,139,182,138,183,132,228,134"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a67e8ddf0666538675a1641e4287ff331" title="Suit une liste de waypoint en utilisant purepursuit." alt="" coords="5,169,196,194"/>
+<area shape="poly" title=" " alt="" coords="229,162,178,171,177,166,228,156"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a456c83bebed6115a2040b90c6a8cdf6c" title="Suit une liste de waypoint en utilisant purepursuit mais sans les varargs." alt="" coords="5,5,196,46"/>
+<area shape="poly" title=" " alt="" coords="252,115,242,109,227,96,218,84,209,72,194,60,173,49,176,44,197,55,212,68,222,81,231,93,245,105,254,110"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a6a10b06182fb0a197a8e4093af55a198" title="Va à un point en utilisant purepursuit." alt="" coords="25,70,176,96"/>
+<area shape="poly" title=" " alt="" coords="234,118,156,99,157,94,235,113"/>
+<area shape="poly" title=" " alt="" coords="235,102,157,121,156,116,234,97"/>
+<area shape="poly" title=" " alt="" coords="254,105,245,110,231,123,222,135,213,148,197,160,173,171,171,166,194,155,209,144,218,132,227,119,242,106,252,100"/>
+<area shape="poly" title=" " alt="" coords="228,55,196,48,197,43,229,50"/>
+<area shape="poly" title=" " alt="" coords="228,81,176,83,176,78,228,76"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a83ed5fcf6da6d340d1d527114445a949" name="a83ed5fcf6da6d340d1d527114445a949"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83ed5fcf6da6d340d1d527114445a949">&#9670;&#160;</a></span>getKp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::getKp </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retourne le coefficient proportionnel. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Coefficient proportionnel. </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/da9/classPID_a83ed5fcf6da6d340d1d527114445a949_icgraph.png" border="0" usemap="#ad8/da9/classPID_a83ed5fcf6da6d340d1d527114445a949_icgraph" alt=""/></div>
+<map name="ad8/da9/classPID_a83ed5fcf6da6d340d1d527114445a949_icgraph" id="ad8/da9/classPID_a83ed5fcf6da6d340d1d527114445a949_icgraph">
+<area shape="rect" title="Retourne le coefficient proportionnel." alt="" coords="475,128,558,153"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a7b90ac909e4d3394d53f339951c29b71" title="Récupère la valeur d&#39;un paramètre de la base roulante." alt="" coords="244,120,427,161"/>
+<area shape="poly" title=" " alt="" coords="459,143,427,143,427,138,459,138"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a39c3f87a5d200ad1e41fab813bffc7bb" title="Affiche les paramètres de la base roulante." alt="" coords="248,185,423,210"/>
+<area shape="poly" title=" " alt="" coords="467,161,428,175,388,187,386,182,426,170,465,156"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a93917aa7393e8d67cdb861be9f3ac8e6" title="Met un paramètre de la base roulante à jour." alt="" coords="244,55,427,95"/>
+<area shape="poly" title=" " alt="" coords="464,124,393,98,395,93,466,119"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a6680480eb7648cfbdb7b8209a6aa3d43" title="Honnêtement aucune idée de ce que fait cette fonction." alt="" coords="19,120,182,145"/>
+<area shape="poly" title=" " alt="" coords="228,139,182,138,183,132,228,134"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a67e8ddf0666538675a1641e4287ff331" title="Suit une liste de waypoint en utilisant purepursuit." alt="" coords="5,169,196,194"/>
+<area shape="poly" title=" " alt="" coords="229,162,178,171,177,166,228,156"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a456c83bebed6115a2040b90c6a8cdf6c" title="Suit une liste de waypoint en utilisant purepursuit mais sans les varargs." alt="" coords="5,5,196,46"/>
+<area shape="poly" title=" " alt="" coords="252,115,242,109,227,96,218,84,209,72,194,60,173,49,176,44,197,55,212,68,222,81,231,93,245,105,254,110"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a6a10b06182fb0a197a8e4093af55a198" title="Va à un point en utilisant purepursuit." alt="" coords="25,70,176,96"/>
+<area shape="poly" title=" " alt="" coords="234,118,156,99,157,94,235,113"/>
+<area shape="poly" title=" " alt="" coords="235,102,157,121,156,116,234,97"/>
+<area shape="poly" title=" " alt="" coords="254,105,245,110,231,123,222,135,213,148,197,160,173,171,171,166,194,155,209,144,218,132,227,119,242,106,252,100"/>
+<area shape="poly" title=" " alt="" coords="228,55,196,48,197,43,229,50"/>
+<area shape="poly" title=" " alt="" coords="228,81,176,83,176,78,228,76"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a310f5f2da22b3b492cfe60ebad1f7939" name="a310f5f2da22b3b492cfe60ebad1f7939"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a310f5f2da22b3b492cfe60ebad1f7939">&#9670;&#160;</a></span>getMaxOutput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::getMaxOutput </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retourne la sortie maximal. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Sortie maximal. </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/da9/classPID_a310f5f2da22b3b492cfe60ebad1f7939_icgraph.png" border="0" usemap="#ad8/da9/classPID_a310f5f2da22b3b492cfe60ebad1f7939_icgraph" alt=""/></div>
+<map name="ad8/da9/classPID_a310f5f2da22b3b492cfe60ebad1f7939_icgraph" id="ad8/da9/classPID_a310f5f2da22b3b492cfe60ebad1f7939_icgraph">
+<area shape="rect" title="Retourne la sortie maximal." alt="" coords="475,128,605,153"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a7b90ac909e4d3394d53f339951c29b71" title="Récupère la valeur d&#39;un paramètre de la base roulante." alt="" coords="244,120,427,161"/>
+<area shape="poly" title=" " alt="" coords="460,143,428,143,428,138,460,138"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a39c3f87a5d200ad1e41fab813bffc7bb" title="Affiche les paramètres de la base roulante." alt="" coords="248,185,423,210"/>
+<area shape="poly" title=" " alt="" coords="478,161,428,175,386,187,384,182,426,170,477,155"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a93917aa7393e8d67cdb861be9f3ac8e6" title="Met un paramètre de la base roulante à jour." alt="" coords="244,55,427,95"/>
+<area shape="poly" title=" " alt="" coords="482,125,401,98,402,93,484,120"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a6680480eb7648cfbdb7b8209a6aa3d43" title="Honnêtement aucune idée de ce que fait cette fonction." alt="" coords="19,120,182,145"/>
+<area shape="poly" title=" " alt="" coords="228,139,182,138,183,132,228,134"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a67e8ddf0666538675a1641e4287ff331" title="Suit une liste de waypoint en utilisant purepursuit." alt="" coords="5,169,196,194"/>
+<area shape="poly" title=" " alt="" coords="229,162,178,171,177,166,228,156"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a456c83bebed6115a2040b90c6a8cdf6c" title="Suit une liste de waypoint en utilisant purepursuit mais sans les varargs." alt="" coords="5,5,196,46"/>
+<area shape="poly" title=" " alt="" coords="252,115,242,109,227,96,218,84,209,72,194,60,173,49,176,44,197,55,212,68,222,81,231,93,245,105,254,110"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a6a10b06182fb0a197a8e4093af55a198" title="Va à un point en utilisant purepursuit." alt="" coords="25,70,176,96"/>
+<area shape="poly" title=" " alt="" coords="234,118,156,99,157,94,235,113"/>
+<area shape="poly" title=" " alt="" coords="235,102,157,121,156,116,234,97"/>
+<area shape="poly" title=" " alt="" coords="254,105,245,110,231,123,222,135,213,148,197,160,173,171,171,166,194,155,209,144,218,132,227,119,242,106,252,100"/>
+<area shape="poly" title=" " alt="" coords="228,55,196,48,197,43,229,50"/>
+<area shape="poly" title=" " alt="" coords="228,81,176,83,176,78,228,76"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a19e0b4481b71f304ee21ed1edb1ba331" name="a19e0b4481b71f304ee21ed1edb1ba331"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19e0b4481b71f304ee21ed1edb1ba331">&#9670;&#160;</a></span>getMinOutput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::getMinOutput </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retourne la sortie minimal. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Sortie minimal. </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/da9/classPID_a19e0b4481b71f304ee21ed1edb1ba331_icgraph.png" border="0" usemap="#ad8/da9/classPID_a19e0b4481b71f304ee21ed1edb1ba331_icgraph" alt=""/></div>
+<map name="ad8/da9/classPID_a19e0b4481b71f304ee21ed1edb1ba331_icgraph" id="ad8/da9/classPID_a19e0b4481b71f304ee21ed1edb1ba331_icgraph">
+<area shape="rect" title="Retourne la sortie minimal." alt="" coords="475,128,602,153"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a7b90ac909e4d3394d53f339951c29b71" title="Récupère la valeur d&#39;un paramètre de la base roulante." alt="" coords="244,120,427,161"/>
+<area shape="poly" title=" " alt="" coords="459,143,427,143,427,138,459,138"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a39c3f87a5d200ad1e41fab813bffc7bb" title="Affiche les paramètres de la base roulante." alt="" coords="248,185,423,210"/>
+<area shape="poly" title=" " alt="" coords="478,161,428,175,386,187,384,182,426,170,476,155"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a93917aa7393e8d67cdb861be9f3ac8e6" title="Met un paramètre de la base roulante à jour." alt="" coords="244,55,427,95"/>
+<area shape="poly" title=" " alt="" coords="481,125,400,98,402,93,483,120"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a6680480eb7648cfbdb7b8209a6aa3d43" title="Honnêtement aucune idée de ce que fait cette fonction." alt="" coords="19,120,182,145"/>
+<area shape="poly" title=" " alt="" coords="228,139,182,138,183,132,228,134"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a67e8ddf0666538675a1641e4287ff331" title="Suit une liste de waypoint en utilisant purepursuit." alt="" coords="5,169,196,194"/>
+<area shape="poly" title=" " alt="" coords="229,162,178,171,177,166,228,156"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a456c83bebed6115a2040b90c6a8cdf6c" title="Suit une liste de waypoint en utilisant purepursuit mais sans les varargs." alt="" coords="5,5,196,46"/>
+<area shape="poly" title=" " alt="" coords="252,115,242,109,227,96,218,84,209,72,194,60,173,49,176,44,197,55,212,68,222,81,231,93,245,105,254,110"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a6a10b06182fb0a197a8e4093af55a198" title="Va à un point en utilisant purepursuit." alt="" coords="25,70,176,96"/>
+<area shape="poly" title=" " alt="" coords="234,118,156,99,157,94,235,113"/>
+<area shape="poly" title=" " alt="" coords="235,102,157,121,156,116,234,97"/>
+<area shape="poly" title=" " alt="" coords="254,105,245,110,231,123,222,135,213,148,197,160,173,171,171,166,194,155,209,144,218,132,227,119,242,106,252,100"/>
+<area shape="poly" title=" " alt="" coords="228,55,196,48,197,43,229,50"/>
+<area shape="poly" title=" " alt="" coords="228,81,176,83,176,78,228,76"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa83c2d7eb95c55f375f85a319f8037b3" name="aa83c2d7eb95c55f375f85a319f8037b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa83c2d7eb95c55f375f85a319f8037b3">&#9670;&#160;</a></span>setOutputLimits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PID::setOutputLimits </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>minOutput</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>maxOutput</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Charge les limites de sorties. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">minOutput</td><td>Minimun de sortie (peux être négatif). </td></tr>
+    <tr><td class="paramname">maxOutput</td><td>Maximum de sortie (peux être). </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/da9/classPID_aa83c2d7eb95c55f375f85a319f8037b3_icgraph.png" border="0" usemap="#ad8/da9/classPID_aa83c2d7eb95c55f375f85a319f8037b3_icgraph" alt=""/></div>
+<map name="ad8/da9/classPID_aa83c2d7eb95c55f375f85a319f8037b3_icgraph" id="ad8/da9/classPID_aa83c2d7eb95c55f375f85a319f8037b3_icgraph">
+<area shape="rect" title="Charge les limites de sorties." alt="" coords="475,84,617,110"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a93917aa7393e8d67cdb861be9f3ac8e6" title="Met un paramètre de la base roulante à jour." alt="" coords="244,76,427,117"/>
+<area shape="poly" title=" " alt="" coords="459,100,427,100,427,94,459,94"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a6680480eb7648cfbdb7b8209a6aa3d43" title="Honnêtement aucune idée de ce que fait cette fonction." alt="" coords="19,5,182,31"/>
+<area shape="poly" title=" " alt="" coords="271,73,195,45,158,34,160,29,197,40,273,68"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a67e8ddf0666538675a1641e4287ff331" title="Suit une liste de waypoint en utilisant purepursuit." alt="" coords="5,55,196,80"/>
+<area shape="poly" title=" " alt="" coords="228,86,196,82,197,77,229,81"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a456c83bebed6115a2040b90c6a8cdf6c" title="Suit une liste de waypoint en utilisant purepursuit mais sans les varargs." alt="" coords="5,104,196,145"/>
+<area shape="poly" title=" " alt="" coords="229,112,197,116,196,111,228,107"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a6a10b06182fb0a197a8e4093af55a198" title="Va à un point en utilisant purepursuit." alt="" coords="25,169,176,195"/>
+<area shape="poly" title=" " alt="" coords="278,126,197,159,158,171,156,166,195,154,276,122"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a11d8c4753029f8cc187d2751cb00c4e9" name="a11d8c4753029f8cc187d2751cb00c4e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11d8c4753029f8cc187d2751cb00c4e9">&#9670;&#160;</a></span>setTunings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PID::setTunings </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>Kp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>Ki</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>Kd</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Charge de nouvelles constantes d'asservissements. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Kp</td><td>Coefficient proportionnel. </td></tr>
+    <tr><td class="paramname">Ki</td><td>Coefficient intégrateur. </td></tr>
+    <tr><td class="paramname">Kd</td><td>Coefficient dérivateur. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/da9/classPID_a11d8c4753029f8cc187d2751cb00c4e9_icgraph.png" border="0" usemap="#ad8/da9/classPID_a11d8c4753029f8cc187d2751cb00c4e9_icgraph" alt=""/></div>
+<map name="ad8/da9/classPID_a11d8c4753029f8cc187d2751cb00c4e9_icgraph" id="ad8/da9/classPID_a11d8c4753029f8cc187d2751cb00c4e9_icgraph">
+<area shape="rect" title="Charge de nouvelles constantes d&#39;asservissements." alt="" coords="475,84,588,110"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a93917aa7393e8d67cdb861be9f3ac8e6" title="Met un paramètre de la base roulante à jour." alt="" coords="244,76,427,117"/>
+<area shape="poly" title=" " alt="" coords="460,100,428,100,428,94,460,94"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a6680480eb7648cfbdb7b8209a6aa3d43" title="Honnêtement aucune idée de ce que fait cette fonction." alt="" coords="19,5,182,31"/>
+<area shape="poly" title=" " alt="" coords="271,73,195,45,158,34,160,29,197,40,273,68"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a67e8ddf0666538675a1641e4287ff331" title="Suit une liste de waypoint en utilisant purepursuit." alt="" coords="5,55,196,80"/>
+<area shape="poly" title=" " alt="" coords="228,86,196,82,197,77,229,81"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a456c83bebed6115a2040b90c6a8cdf6c" title="Suit une liste de waypoint en utilisant purepursuit mais sans les varargs." alt="" coords="5,104,196,145"/>
+<area shape="poly" title=" " alt="" coords="229,112,197,116,196,111,228,107"/>
+<area shape="rect" href="../../d1/dc5/namespaceWheeledbase.html#a6a10b06182fb0a197a8e4093af55a198" title="Va à un point en utilisant purepursuit." alt="" coords="25,169,176,195"/>
+<area shape="poly" title=" " alt="" coords="278,126,197,159,158,171,156,166,195,154,276,122"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
+<li><a class="el" href="../../d3/d17/PID_8h_source.html">PID.h</a></li>
+<li><b>PID.cpp</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d8/da9/classPID.html">PID</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

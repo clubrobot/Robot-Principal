@@ -1,5 +1,8 @@
 <map id="Wheeled base" name="Wheeled base">
-<area shape="rect" id="Node000002" href="$d0/dc3/group__codewheel__hardware__timers.html" title=" " alt="" coords="226,5,371,46"/>
-<area shape="rect" id="Node000003" href="$d0/de1/group__core.html" title="Tout le code lié directement au fonctionnement du robot." alt="" coords="274,70,322,96"/>
-<area shape="rect" id="Node000001" title="Tout le code lié au déplacement du robot." alt="" coords="5,42,108,68"/>
+<area shape="rect" id="Node000004" href="$d0/dc3/group__codewheel__hardware__timers.html" title=" " alt="" coords="309,5,454,46"/>
+<area shape="rect" id="Node000006" href="$d0/de1/group__core.html" title="Tout le code lié directement au fonctionnement du robot." alt="" coords="357,70,406,96"/>
+<area shape="rect" id="Node000005" href="$d0/dd5/group__libs.html" title="Toutes les librairies." alt="" coords="318,266,444,292"/>
+<area shape="rect" id="Node000002" href="$dd/daa/group__motors.html" title="Différentes interface permettant de manipuler des moteurs." alt="" coords="347,356,416,381"/>
+<area shape="rect" id="Node000003" href="$d0/df9/group__wb__slowdown__define.html" title="Les paramètres de ralentissement du robot à la fin de goto." alt="" coords="285,405,478,446"/>
+<area shape="rect" id="Node000001" title="Tout le code lié au déplacement du robot." alt="" coords="5,266,108,292"/>
 </map>

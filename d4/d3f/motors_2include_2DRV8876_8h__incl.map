@@ -1,0 +1,9 @@
+<map id="DRV8876.h" name="DRV8876.h">
+<area shape="rect" id="Node000001" title="Driver pour le composant DRV8876." alt="" coords="46,5,132,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,63,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,33,54,68,50,65,78,30"/>
+<area shape="rect" id="Node000003" href="$db/d16/motors_2include_2AbstractDriver_8h.html" title="Interface abstraite des drivers moteurs." alt="" coords="86,79,200,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="100,30,127,65,123,68,96,33"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="113,153,174,178"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="146,105,146,137,141,137,141,105"/>
+</map>

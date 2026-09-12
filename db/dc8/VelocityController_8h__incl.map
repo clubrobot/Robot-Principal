@@ -1,0 +1,15 @@
+<map id="VelocityController.h" name="VelocityController.h">
+<area shape="rect" id="Node000001" title="Contrôleur de vitesse pour un robot à base différentielle." alt="" coords="180,5,312,31"/>
+<area shape="rect" id="Node000002" href="$d9/d02/DifferentialController_8h_source.html" title=" " alt="" coords="172,79,319,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="248,31,248,63,243,63,243,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,160,73,186"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="212,108,85,155,82,156,80,151,83,150,211,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="97,153,240,193"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="236,107,200,143,196,140,232,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="264,160,384,186"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="259,103,304,147,300,151,256,107"/>
+<area shape="rect" id="Node000006" href="$d3/d17/PID_8h_source.html" title=" " alt="" coords="408,160,462,186"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="279,103,397,150,398,151,396,156,395,155,277,108"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="406,241,464,267"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="438,186,438,225,432,225,432,186"/>
+</map>

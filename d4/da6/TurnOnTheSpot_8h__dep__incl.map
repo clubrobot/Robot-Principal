@@ -1,0 +1,23 @@
+<map id="TurnOnTheSpot.h" name="TurnOnTheSpot.h">
+<area shape="rect" id="Node000001" title="Implémentation d&#39;AbstractMoveStrategy qui fait tourner le robot sur lui&#45;même." alt="" coords="201,5,324,31"/>
+<area shape="rect" id="Node000002" href="$df/dbb/Wheeledbase_8h.html" title="Fonctions de convénience pour faire les déplacements facilement." alt="" coords="208,79,317,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="265,46,265,79,260,79,260,46"/>
+<area shape="rect" id="Node000003" href="$dd/d07/Automate_8h.html" title="Contient le code nécessaire pour jouer un match." alt="" coords="5,153,93,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="213,112,86,155,85,150,211,107"/>
+<area shape="rect" id="Node000004" href="$df/d0a/main_8cpp.html" title="Contient le code principal du robot." alt="" coords="212,300,286,326"/>
+<area shape="poly" id="edge8_Node000002_Node000004" title=" " alt="" coords="237,117,192,164,172,194,158,227,155,240,158,251,169,266,183,279,216,297,213,302,180,283,165,269,153,253,150,240,153,226,167,191,188,160,234,113"/>
+<area shape="rect" id="Node000005" href="$df/dd9/SensorArray_8h_source.html" title=" " alt="" coords="211,153,314,178"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="265,120,265,152,260,152,260,120"/>
+<area shape="rect" id="Node000008" href="$d3/d78/wb__const_8h.html" title="Diverses constantes concernant la base roulante." alt="" coords="355,153,442,178"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="300,110,376,150,374,154,298,115"/>
+<area shape="rect" id="Node000009" href="$d0/d42/wb__thread_8h.html" title="Contient les fonctions et variables nécessaires pour gérer le thread de base roulante." alt="" coords="453,226,544,252"/>
+<area shape="poly" id="edge12_Node000002_Node000009" title=" " alt="" coords="333,99,396,117,428,131,456,151,472,168,484,189,498,225,493,227,479,191,468,171,453,155,425,136,394,122,331,104"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="65,191,86,221,113,250,163,280,213,299,211,304,161,284,110,254,82,225,61,194"/>
+<area shape="rect" id="Node000006" href="$d7/da3/ObjectDetector_8h_source.html" title=" " alt="" coords="167,226,286,252"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="252,193,235,227,230,225,247,191"/>
+<area shape="rect" id="Node000007" href="$d7/db8/SensorsThread_8h.html" title="Contient les fonctions et variables nécessaires pour gérer le thread des capteurs." alt="" coords="309,226,429,252"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="295,185,352,224,349,228,292,190"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="337,263,271,302,268,297,334,258"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="429,185,483,224,480,228,426,190"/>
+<area shape="poly" id="edge11_Node000009_Node000004" title=" " alt="" coords="442,259,287,303,285,298,441,254"/>
+</map>

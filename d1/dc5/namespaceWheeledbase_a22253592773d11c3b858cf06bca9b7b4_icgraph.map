@@ -1,0 +1,13 @@
+<map id="Wheeledbase::resetPurepursuit" name="Wheeledbase::resetPurepursuit">
+<area shape="rect" id="Node000001" title="Réinitialise le purepursuit." alt="" coords="461,84,661,110"/>
+<area shape="rect" id="Node000002" href="$d1/dc5/namespaceWheeledbase.html#acb2a521a07f95f69d652a5bbada66332" title="Démarre purepursuit ? honnêtement jsp trop." alt="" coords="244,84,413,110"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="445,100,413,100,413,94,445,94"/>
+<area shape="rect" id="Node000003" href="$d1/dc5/namespaceWheeledbase.html#a6680480eb7648cfbdb7b8209a6aa3d43" title="Honnêtement aucune idée de ce que fait cette fonction." alt="" coords="19,5,182,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="283,80,195,45,159,34,161,29,197,40,285,75"/>
+<area shape="rect" id="Node000004" href="$d1/dc5/namespaceWheeledbase.html#a67e8ddf0666538675a1641e4287ff331" title="Suit une liste de waypoint en utilisant purepursuit." alt="" coords="5,55,196,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="228,87,196,82,196,77,229,81"/>
+<area shape="rect" id="Node000005" href="$d1/dc5/namespaceWheeledbase.html#a456c83bebed6115a2040b90c6a8cdf6c" title="Suit une liste de waypoint en utilisant purepursuit mais sans les varargs." alt="" coords="5,104,196,145"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="229,112,196,116,196,110,228,106"/>
+<area shape="rect" id="Node000006" href="$d1/dc5/namespaceWheeledbase.html#a6a10b06182fb0a197a8e4093af55a198" title="Va à un point en utilisant purepursuit." alt="" coords="25,169,176,195"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="288,120,197,159,158,171,157,166,195,154,286,115"/>
+</map>

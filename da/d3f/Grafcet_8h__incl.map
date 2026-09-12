@@ -1,0 +1,27 @@
+<map id="Grafcet.h" name="Grafcet.h">
+<area shape="rect" id="Node000001" title="Header wrapper pour faciliter les import." alt="" coords="230,5,304,31"/>
+<area shape="rect" id="Node000002" href="$da/d78/StateMachine_8h.html" title="La machine a état permettant de parcourir le grafcet." alt="" coords="78,79,189,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="245,34,171,74,168,69,243,29"/>
+<area shape="rect" id="Node000005" href="$db/d92/Node_8h.html" title="Représentation d&#39;un noeud du grafcet." alt="" coords="262,153,325,178"/>
+<area shape="poly" id="edge8_Node000001_Node000005" title=" " alt="" coords="264,32,254,65,252,85,255,104,263,122,274,139,270,142,258,125,250,105,247,85,249,64,259,31"/>
+<area shape="rect" id="Node000009" href="$dc/dc1/Transition_8h.html" title="Un noeud de transition du grafcet permettant d&#39;évaluer la condition de passage d&#39;un noeud d&#39;action à ..." alt="" coords="264,79,352,105"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="276,30,296,64,291,67,271,33"/>
+<area shape="rect" id="Node000011" href="$db/dc0/ActionNode_8h.html" title="Un noeud d&#39;action du grafcet, permettant de réaliser des actions de front montant." alt="" coords="376,79,475,105"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="295,29,386,70,384,75,293,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,62,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="118,107,64,145,61,141,115,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="86,153,210,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="139,104,145,137,140,138,133,105"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="162,103,254,144,251,148,160,108"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="181,226,230,252"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="280,181,234,219,230,214,277,177"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="255,226,332,252"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="296,179,296,211,291,211,291,179"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="356,226,410,252"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="310,177,358,214,354,219,307,181"/>
+<area shape="poly" id="edge11_Node000009_Node000005" title=" " alt="" coords="308,105,302,138,296,137,303,104"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="375,153,452,178"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="328,103,385,141,382,146,325,107"/>
+<area shape="poly" id="edge14_Node000011_Node000005" title=" " alt="" coords="404,108,330,147,328,143,402,103"/>
+<area shape="poly" id="edge13_Node000011_Node000010" title=" " alt="" coords="426,105,421,138,415,137,421,104"/>
+</map>

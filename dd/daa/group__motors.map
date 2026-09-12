@@ -1,0 +1,5 @@
+<map id="Moteurs" name="Moteurs">
+<area shape="rect" id="Node000002" href="$d0/dd5/group__libs.html" title="Toutes les librairies." alt="" coords="5,5,132,31"/>
+<area shape="rect" id="Node000001" title="Différentes interface permettant de manipuler des moteurs." alt="" coords="180,31,248,56"/>
+<area shape="rect" id="Node000003" href="$d5/dc1/group__wheeledbase.html" title="Tout le code lié au déplacement du robot." alt="" coords="17,55,120,80"/>
+</map>

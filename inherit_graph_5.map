@@ -1,3 +1,5 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="Node000000" href="$df/d45/classClock.html" title=" " alt="" coords="5,5,60,31"/>
+<area shape="rect" id="Node000000" href="$d0/da2/classAbstractTimer.html" title="Classe abstraite pour représenter un timer." alt="" coords="5,5,109,31"/>
+<area shape="rect" id="Node000001" href="$d8/dd9/classSTM32HALTimer.html" title=" " alt="" coords="157,5,280,31"/>
+<area shape="poly" id="edge12_Node000000_Node000001" title=" " alt="" coords="124,16,156,16,156,21,124,21"/>
 </map>

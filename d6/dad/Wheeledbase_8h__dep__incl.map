@@ -1,0 +1,21 @@
+<map id="Wheeledbase.h" name="Wheeledbase.h">
+<area shape="rect" id="Node000001" title="Fonctions de convénience pour faire les déplacements facilement." alt="" coords="208,5,317,31"/>
+<area shape="rect" id="Node000002" href="$dd/d07/Automate_8h.html" title="Contient le code nécessaire pour jouer un match." alt="" coords="5,79,93,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,39,86,81,85,76,211,34"/>
+<area shape="rect" id="Node000003" href="$df/d0a/main_8cpp.html" title="Contient le code principal du robot." alt="" coords="212,226,286,252"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="237,43,192,90,172,120,158,153,155,166,158,177,169,192,183,205,216,223,213,228,180,209,165,196,153,179,150,166,153,152,167,118,188,87,234,39"/>
+<area shape="rect" id="Node000004" href="$df/dd9/SensorArray_8h_source.html" title=" " alt="" coords="211,79,314,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="265,46,265,79,260,79,260,46"/>
+<area shape="rect" id="Node000007" href="$d3/d78/wb__const_8h.html" title="Diverses constantes concernant la base roulante." alt="" coords="355,79,442,105"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="300,36,376,76,374,81,298,41"/>
+<area shape="rect" id="Node000008" href="$d0/d42/wb__thread_8h.html" title="Contient les fonctions et variables nécessaires pour gérer le thread de base roulante." alt="" coords="453,153,544,178"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="333,25,396,43,428,58,456,77,472,95,484,115,498,151,493,153,479,117,468,98,453,81,425,62,394,48,331,30"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="65,117,86,148,113,176,163,206,213,225,211,230,161,211,110,180,82,151,61,120"/>
+<area shape="rect" id="Node000005" href="$d7/da3/ObjectDetector_8h_source.html" title=" " alt="" coords="167,153,286,178"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="252,119,235,153,230,151,247,117"/>
+<area shape="rect" id="Node000006" href="$d7/db8/SensorsThread_8h.html" title="Contient les fonctions et variables nécessaires pour gérer le thread des capteurs." alt="" coords="309,153,429,178"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="295,111,352,150,349,154,292,116"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="337,189,271,228,268,223,334,184"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="429,112,483,150,480,154,426,116"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="442,186,287,230,285,225,441,181"/>
+</map>

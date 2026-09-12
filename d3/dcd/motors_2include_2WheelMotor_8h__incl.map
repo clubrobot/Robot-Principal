@@ -1,0 +1,10 @@
+<map id="WheelMotor.h" name="WheelMotor.h">
+<area shape="rect" id="Node000001" title="Implémentation d&#39;un moteur de roue." alt="" coords="15,5,116,31"/>
+<area shape="rect" id="Node000002" href="$da/dcc/motors_2include_2AbstractMotors_8h.html" title="Interface abstraite des moteurs." alt="" coords="5,79,126,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,31,68,63,63,63,63,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="35,226,96,252"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="62,106,50,139,46,158,47,178,57,211,51,213,42,179,41,158,44,137,57,104"/>
+<area shape="rect" id="Node000004" href="$db/d16/motors_2include_2AbstractDriver_8h.html" title="Interface abstraite des drivers moteurs." alt="" coords="56,153,171,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="76,103,99,138,95,141,71,106"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="108,180,84,215,80,212,103,177"/>
+</map>

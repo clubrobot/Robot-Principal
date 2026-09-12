@@ -118,10 +118,10 @@ $(function(){initNavTree('df/d0a/main_8cpp.html','../../'); initResizable(true);
 <a href="#details">Plus de détails...</a></p>
 <div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
 <code>#include &lt;STM32FreeRTOS.h&gt;</code><br />
-<code>#include &quot;Wheeledbase.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/dbb/Wheeledbase_8h_source.html">Wheeledbase.h</a>&quot;</code><br />
 <code>#include &lt;My_Clock.h&gt;</code><br />
 <code>#include &lt;PrintfSupport.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../dd/da4/Logger_8h_source.html">Logger.h</a>&gt;</code><br />
+<code>#include &lt;Logger.h&gt;</code><br />
 <code>#include &quot;BournsACEncoder.h&quot;</code><br />
 <code>#include &quot;DCMotor.h&quot;</code><br />
 <code>#include &quot;DRV8876.h&quot;</code><br />
@@ -138,106 +138,140 @@ Graphe des dépendances par inclusion de main.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/dce/main_8cpp__incl.png" border="0" usemap="#amain_8cpp" alt=""/></div>
 <map name="amain_8cpp" id="amain_8cpp">
-<area shape="rect" title="Contient le code principal du robot." alt="" coords="1286,5,1360,31"/>
-<area shape="rect" title=" " alt="" coords="240,330,315,356"/>
-<area shape="poly" title=" " alt="" coords="1286,22,1119,25,879,33,638,51,538,65,464,82,398,106,372,120,350,136,331,156,315,179,287,242,279,279,278,314,273,314,274,279,282,241,310,176,327,152,347,132,369,116,396,102,462,76,537,59,637,46,879,28,1119,20,1286,17"/>
-<area shape="rect" title=" " alt="" coords="1625,79,1760,105"/>
-<area shape="poly" title=" " alt="" coords="1361,24,1615,73,1614,78,1360,29"/>
-<area shape="rect" title=" " alt="" coords="1244,249,1354,274"/>
-<area shape="poly" title=" " alt="" coords="1324,31,1304,234,1299,233,1319,31"/>
-<area shape="rect" href="../../da/dc4/My__Clock_8h_source.html" title=" " alt="" coords="475,79,563,105"/>
-<area shape="poly" title=" " alt="" coords="1286,24,995,42,792,59,585,82,579,82,578,77,584,76,792,54,995,37,1286,19"/>
-<area shape="rect" href="../../d3/d59/PrintfSupport_8h_source.html" title=" " alt="" coords="5,79,113,105"/>
-<area shape="poly" title=" " alt="" coords="1286,23,829,38,492,56,146,82,128,83,128,78,145,76,492,50,829,33,1286,18"/>
-<area shape="rect" href="../../dd/da4/Logger_8h.html" title="Un logger qui permet d&#39;avoir une belle sortie console." alt="" coords="1149,249,1220,274"/>
-<area shape="poly" title=" " alt="" coords="1286,27,1182,46,1134,62,1116,71,1105,81,1095,100,1093,120,1097,141,1106,163,1133,203,1162,236,1158,240,1128,207,1101,165,1092,143,1088,120,1090,98,1101,77,1113,66,1132,57,1181,41,1285,21"/>
-<area shape="rect" title=" " alt="" coords="1784,79,1921,105"/>
-<area shape="poly" title=" " alt="" coords="1361,22,1769,76,1768,81,1360,27"/>
-<area shape="rect" title=" " alt="" coords="1944,79,2027,105"/>
-<area shape="poly" title=" " alt="" coords="1360,19,1596,36,1760,53,1930,76,1929,81,1759,58,1596,42,1360,24"/>
-<area shape="rect" title=" " alt="" coords="2050,79,2137,105"/>
-<area shape="poly" title=" " alt="" coords="1360,18,1637,35,1832,52,2035,76,2035,81,1832,57,1637,40,1360,24"/>
-<area shape="rect" title=" " alt="" coords="1638,249,1717,274"/>
-<area shape="poly" title=" " alt="" coords="1360,20,1395,26,1436,36,1476,53,1513,77,1526,91,1535,105,1544,134,1552,162,1570,192,1602,219,1637,239,1635,244,1599,223,1566,195,1547,164,1539,135,1530,108,1522,94,1509,81,1474,58,1434,41,1394,31,1360,25"/>
-<area shape="rect" href="../../d3/d04/HazelnutGripper_8h_source.html" title=" " alt="" coords="1741,249,1865,274"/>
-<area shape="poly" title=" " alt="" coords="1361,23,1445,42,1494,58,1541,77,1613,115,1680,159,1780,237,1776,241,1677,164,1610,120,1539,81,1492,63,1444,48,1359,28"/>
-<area shape="rect" href="../../d7/d34/variables__globales_8h.html" title=" " alt="" coords="596,79,735,105"/>
-<area shape="poly" title=" " alt="" coords="1286,26,751,84,750,79,1285,21"/>
-<area shape="rect" title=" " alt="" coords="2160,79,2267,105"/>
-<area shape="poly" title=" " alt="" coords="1360,18,1679,35,1908,52,2145,76,2145,81,1907,57,1679,40,1360,23"/>
-<area shape="rect" href="../../dd/d07/Automate_8h.html" title="Contient le code nécessaire pour jouer un match." alt="" coords="1361,79,1498,105"/>
-<area shape="poly" title=" " alt="" coords="1343,29,1400,68,1397,72,1340,34"/>
-<area shape="rect" href="../../d5/d78/ihm_8h.html" title="Contient diverses fonctions permettant d&#39;intéragir avec l&#39;utilisateur via les boutons et les leds." alt="" coords="112,160,190,186"/>
-<area shape="poly" title=" " alt="" coords="1286,22,1053,24,714,31,543,38,391,49,275,63,235,72,210,81,193,94,180,111,162,147,157,145,175,108,189,91,207,77,233,67,274,58,391,43,542,33,714,26,1053,18,1286,17"/>
-<area shape="rect" href="../../d0/d42/wb__thread_8h.html" title="Contient les fonctions et variables nécessaires pour gérer le thread de base roulante." alt="" coords="1115,79,1286,105"/>
-<area shape="poly" title=" " alt="" coords="1304,34,1235,73,1233,69,1301,29"/>
-<area shape="rect" href="../../d7/db8/SensorsThread_8h.html" title="Contient les fonctions et variables nécessaires pour gérer le thread des capteurs." alt="" coords="870,79,1040,105"/>
-<area shape="poly" title=" " alt="" coords="1286,29,1033,78,1032,73,1285,24"/>
-<area shape="poly" title=" " alt="" coords="490,108,448,128,398,157,349,196,328,218,309,243,293,279,284,315,279,314,288,278,305,240,324,215,346,192,395,153,446,123,488,103"/>
-<area shape="rect" title=" " alt="" coords="619,160,712,186"/>
-<area shape="poly" title=" " alt="" coords="543,103,631,150,628,155,540,107"/>
-<area shape="rect" title=" " alt="" coords="422,153,595,193"/>
-<area shape="poly" title=" " alt="" coords="520,105,516,138,510,137,515,105"/>
-<area shape="poly" title=" " alt="" coords="49,107,33,128,20,154,12,191,13,223,26,251,51,280,91,307,137,324,183,334,225,339,224,344,182,339,135,329,89,312,48,284,21,254,8,224,6,191,15,152,29,125,45,104"/>
-<area shape="rect" title=" " alt="" coords="29,160,89,186"/>
-<area shape="poly" title=" " alt="" coords="62,105,62,144,56,144,56,105"/>
-<area shape="poly" title=" " alt="" coords="1149,274,1086,285,867,309,651,326,331,342,331,337,650,320,866,304,1085,279,1148,268"/>
-<area shape="rect" href="../../d4/d36/coloring_8h.html" title="Définitions des codes ANSI pour colorer le shell." alt="" coords="1149,330,1225,356"/>
-<area shape="poly" title=" " alt="" coords="1187,275,1189,314,1183,315,1182,275"/>
-<area shape="rect" href="../../d5/d92/GripperFinger_8h_source.html" title=" " alt="" coords="1383,404,1492,429"/>
-<area shape="poly" title=" " alt="" coords="1775,277,1482,400,1480,395,1773,272"/>
-<area shape="rect" title=" " alt="" coords="1038,477,1096,503"/>
-<area shape="poly" title=" " alt="" coords="1383,431,1112,483,1111,478,1382,426"/>
-<area shape="poly" title=" " alt="" coords="668,105,668,144,663,144,663,105"/>
-<area shape="poly" title=" " alt="" coords="643,108,562,148,560,143,640,103"/>
-<area shape="poly" title=" " alt="" coords="1422,107,1320,238,1315,235,1418,104"/>
-<area shape="rect" href="../../d1/dd7/Strategie_8h.html" title="Contient les diverses stratégies que le robot peut executer." alt="" coords="1416,160,1499,186"/>
-<area shape="poly" title=" " alt="" coords="1436,104,1451,144,1446,146,1431,106"/>
-<area shape="poly" title=" " alt="" coords="1416,188,1233,244,1229,245,1227,240,1232,239,1415,183"/>
-<area shape="poly" title=" " alt="" coords="1490,184,1633,240,1632,245,1488,189"/>
-<area shape="poly" title=" " alt="" coords="1501,182,1729,239,1742,242,1740,247,1728,244,1499,187"/>
-<area shape="rect" title=" " alt="" coords="1540,249,1615,274"/>
-<area shape="poly" title=" " alt="" coords="1476,184,1550,237,1547,242,1473,188"/>
-<area shape="rect" title=" " alt="" coords="1380,330,1544,356"/>
-<area shape="poly" title=" " alt="" coords="1465,186,1480,241,1480,282,1473,316,1468,314,1475,282,1475,242,1460,187"/>
-<area shape="rect" href="../../d1/dfc/Geogebra_8h_source.html" title=" " alt="" coords="1378,249,1465,274"/>
-<area shape="poly" title=" " alt="" coords="1455,187,1435,236,1430,234,1450,185"/>
-<area shape="poly" title=" " alt="" coords="1430,274,1451,315,1446,317,1425,276"/>
-<area shape="poly" title=" " alt="" coords="158,185,178,229,210,280,250,318,246,322,206,284,173,231,153,187"/>
-<area shape="poly" title=" " alt="" coords="190,175,410,191,600,202,748,208,897,218,1086,239,1134,247,1133,252,1085,244,896,223,748,213,600,207,409,196,190,180"/>
-<area shape="rect" href="../../d3/d70/Buttons_8h_source.html" title=" " alt="" coords="62,249,138,274"/>
-<area shape="poly" title=" " alt="" coords="146,188,117,237,113,234,142,185"/>
-<area shape="poly" title=" " alt="" coords="129,273,238,321,236,326,127,278"/>
-<area shape="poly" title=" " alt="" coords="1197,106,1183,147,1181,170,1188,192,1199,207,1213,220,1247,240,1244,245,1210,225,1195,211,1183,195,1176,171,1178,146,1191,104"/>
-<area shape="rect" href="../../d3/d78/wb__const_8h.html" title="Diverses constantes concernant la base roulante." alt="" coords="1198,160,1285,186"/>
-<area shape="poly" title=" " alt="" coords="1209,104,1231,145,1226,147,1204,106"/>
-<area shape="rect" href="../../d3/dfe/STM32HALTimer_8h_source.html" title=" " alt="" coords="736,160,870,186"/>
-<area shape="poly" title=" " alt="" coords="1130,108,882,155,867,159,866,153,881,150,1129,103"/>
-<area shape="poly" title=" " alt="" coords="1252,185,1285,235,1281,238,1247,188"/>
-<area shape="poly" title=" " alt="" coords="757,189,725,196,668,203,618,205,532,200,491,200,450,206,405,219,355,244,335,259,317,278,292,317,288,314,313,274,331,255,352,239,403,214,449,200,491,195,532,195,618,199,667,198,724,191,756,184"/>
-<area shape="rect" title=" " alt="" coords="365,249,556,274"/>
-<area shape="poly" title=" " alt="" coords="755,189,524,247,523,242,754,184"/>
-<area shape="poly" title=" " alt="" coords="905,108,725,155,717,158,715,153,724,150,904,103"/>
-<area shape="rect" href="../../df/dd9/SensorArray_8h_source.html" title=" " alt="" coords="893,160,1041,186"/>
-<area shape="poly" title=" " alt="" coords="959,105,966,144,960,145,954,105"/>
-<area shape="poly" title=" " alt="" coords="915,189,882,196,807,206,747,210,689,219,619,244,604,253,594,263,584,274,568,284,507,308,443,324,331,341,331,335,442,319,505,303,566,280,581,270,590,260,601,249,617,239,688,214,746,205,806,201,881,191,914,184"/>
-<area shape="poly" title=" " alt="" coords="1018,184,1233,239,1243,241,1242,247,1232,244,1016,189"/>
-<area shape="poly" title=" " alt="" coords="999,184,1141,240,1139,245,997,189"/>
-<area shape="poly" title=" " alt="" coords="1011,184,1053,205,1073,221,1088,240,1101,269,1107,299,1109,330,1107,361,1095,419,1080,464,1075,462,1090,418,1102,361,1104,330,1102,300,1095,270,1083,243,1069,224,1050,209,1009,189"/>
-<area shape="rect" title=" " alt="" coords="630,241,798,282"/>
-<area shape="poly" title=" " alt="" coords="932,189,786,238,785,233,930,184"/>
-<area shape="rect" href="../../d7/df8/Types_8h_source.html" title=" " alt="" coords="822,249,888,274"/>
-<area shape="poly" title=" " alt="" coords="953,188,884,241,881,237,950,184"/>
-<area shape="rect" href="../../db/d5e/VL53L5CX_8h_source.html" title=" " alt="" coords="912,249,1073,274"/>
-<area shape="poly" title=" " alt="" coords="973,186,987,233,982,235,968,187"/>
-<area shape="poly" title=" " alt="" coords="939,278,901,285,738,306,578,322,331,341,331,336,577,317,738,301,900,279,938,273"/>
-<area shape="poly" title=" " alt="" coords="984,276,967,301,954,331,948,359,949,382,958,403,974,428,998,451,1026,468,1023,473,995,455,970,431,953,406,944,383,943,359,948,329,963,298,980,273"/>
-<area shape="rect" href="../../de/d03/platform_8h_source.html" title=" " alt="" coords="984,404,1062,429"/>
-<area shape="poly" title=" " alt="" coords="985,276,964,312,959,334,963,355,976,375,994,392,990,396,972,379,958,357,954,333,959,310,980,273"/>
-<area shape="rect" href="../../df/dce/vl53l5cx__api_8h_source.html" title=" " alt="" coords="972,330,1074,356"/>
-<area shape="poly" title=" " alt="" coords="999,274,1015,314,1010,316,995,276"/>
-<area shape="poly" title=" " alt="" coords="1033,428,1054,462,1049,465,1028,431"/>
-<area shape="poly" title=" " alt="" coords="1026,356,1026,388,1020,388,1020,356"/>
+<area shape="rect" title="Contient le code principal du robot." alt="" coords="1271,5,1344,31"/>
+<area shape="rect" title=" " alt="" coords="247,330,323,356"/>
+<area shape="poly" title=" " alt="" coords="1271,23,1011,27,631,37,280,55,163,67,127,74,110,81,102,86,91,88,65,85,38,81,17,82,11,86,8,94,10,107,16,126,49,187,112,280,137,304,167,321,200,331,233,336,232,342,199,336,165,326,134,309,108,284,44,189,11,129,4,108,3,93,7,83,15,77,38,76,65,80,91,82,100,81,108,77,126,69,162,62,280,49,631,32,1011,21,1270,17"/>
+<area shape="rect" title=" " alt="" coords="1681,79,1817,105"/>
+<area shape="poly" title=" " alt="" coords="1345,23,1666,74,1665,80,1344,28"/>
+<area shape="rect" href="../../df/dbb/Wheeledbase_8h.html" title="Fonctions de convénience pour faire les déplacements facilement." alt="" coords="1428,249,1537,274"/>
+<area shape="poly" title=" " alt="" coords="1338,29,1374,49,1407,77,1434,116,1455,159,1479,233,1474,235,1450,161,1429,119,1403,81,1370,53,1336,34"/>
+<area shape="rect" title=" " alt="" coords="680,330,751,356"/>
+<area shape="poly" title=" " alt="" coords="1284,34,1246,55,1204,81,1167,110,1139,137,1093,189,1046,237,1015,261,974,284,921,307,875,317,827,322,767,332,766,327,826,317,874,311,919,302,972,280,1012,256,1043,233,1090,185,1135,133,1164,106,1201,77,1243,50,1282,29"/>
+<area shape="rect" href="../../da/dc4/My__Clock_8h_source.html" title=" " alt="" coords="551,79,640,105"/>
+<area shape="poly" title=" " alt="" coords="1271,24,1017,42,840,58,656,81,655,76,839,53,1017,36,1270,19"/>
+<area shape="rect" href="../../d3/d59/PrintfSupport_8h_source.html" title=" " alt="" coords="121,79,228,105"/>
+<area shape="poly" title=" " alt="" coords="1271,24,244,89,244,83,1270,19"/>
+<area shape="rect" title=" " alt="" coords="1840,79,1978,105"/>
+<area shape="poly" title=" " alt="" coords="1345,21,1826,76,1825,81,1344,26"/>
+<area shape="rect" title=" " alt="" coords="2001,79,2083,105"/>
+<area shape="poly" title=" " alt="" coords="1345,18,1609,35,1794,52,1986,76,1986,81,1793,57,1609,40,1345,24"/>
+<area shape="rect" title=" " alt="" coords="2107,79,2193,105"/>
+<area shape="poly" title=" " alt="" coords="1345,18,1650,33,1867,50,2092,76,2092,81,1866,55,1649,38,1345,23"/>
+<area shape="rect" title=" " alt="" coords="2550,249,2628,274"/>
+<area shape="poly" title=" " alt="" coords="1345,21,1468,39,1544,55,1619,77,1645,90,1670,102,1798,138,1909,160,2008,172,2102,178,2195,183,2296,192,2408,209,2539,239,2546,241,2545,246,2538,244,2407,214,2295,198,2195,189,2101,183,2008,177,1908,165,1797,144,1668,107,1642,94,1617,81,1543,60,1467,44,1344,26"/>
+<area shape="rect" href="../../d3/d04/HazelnutGripper_8h_source.html" title=" " alt="" coords="1279,249,1403,274"/>
+<area shape="poly" title=" " alt="" coords="1272,34,1239,52,1224,65,1213,80,1210,91,1213,104,1222,151,1230,170,1244,192,1272,218,1303,239,1300,243,1268,223,1240,195,1225,173,1217,153,1208,105,1205,91,1208,78,1220,61,1236,48,1269,29"/>
+<area shape="rect" href="../../d7/d34/variables__globales_8h.html" title=" " alt="" coords="664,79,802,105"/>
+<area shape="poly" title=" " alt="" coords="1271,26,818,81,817,76,1270,21"/>
+<area shape="rect" title=" " alt="" coords="2217,79,2323,105"/>
+<area shape="poly" title=" " alt="" coords="1345,18,1691,33,1941,51,2202,76,2201,81,1941,56,1691,39,1345,23"/>
+<area shape="rect" href="../../dd/d07/Automate_8h.html" title="Contient le code nécessaire pour jouer un match." alt="" coords="1468,79,1606,105"/>
+<area shape="poly" title=" " alt="" coords="1345,28,1484,71,1483,77,1344,33"/>
+<area shape="rect" href="../../d5/d78/ihm_8h.html" title="Contient diverses fonctions permettant d&#39;intéragir avec l&#39;utilisateur via les boutons et les leds." alt="" coords="228,160,305,186"/>
+<area shape="poly" title=" " alt="" coords="1270,22,1148,23,967,30,755,48,646,63,540,82,476,97,413,117,309,156,308,151,411,112,475,92,539,76,645,58,754,43,967,25,1148,18,1270,16"/>
+<area shape="rect" href="../../d0/d42/wb__thread_8h.html" title="Contient les fonctions et variables nécessaires pour gérer le thread de base roulante." alt="" coords="1222,79,1393,105"/>
+<area shape="poly" title=" " alt="" coords="1310,31,1310,63,1305,63,1305,31"/>
+<area shape="rect" href="../../d7/db8/SensorsThread_8h.html" title="Contient les fonctions et variables nécessaires pour gérer le thread des capteurs." alt="" coords="826,79,995,105"/>
+<area shape="poly" title=" " alt="" coords="1271,29,994,78,993,73,1270,23"/>
+<area shape="rect" title=" " alt="" coords="1277,330,1354,356"/>
+<area shape="poly" title=" " alt="" coords="1458,278,1356,326,1353,321,1455,273"/>
+<area shape="rect" title=" " alt="" coords="1379,330,1479,356"/>
+<area shape="poly" title=" " alt="" coords="1476,276,1448,318,1444,315,1472,273"/>
+<area shape="rect" href="../../db/df9/Codewheel_8h_source.html" title=" " alt="" coords="1503,330,1675,356"/>
+<area shape="poly" title=" " alt="" coords="1500,273,1562,318,1559,323,1497,277"/>
+<area shape="rect" href="../../d3/d12/Odometry_8h_source.html" title=" " alt="" coords="1917,477,2005,503"/>
+<area shape="poly" title=" " alt="" coords="1537,263,1594,269,1661,280,1731,299,1798,328,1845,358,1886,395,1946,463,1942,467,1882,399,1841,363,1796,332,1729,304,1660,286,1593,274,1537,268"/>
+<area shape="rect" title=" " alt="" coords="1250,477,1317,503"/>
+<area shape="poly" title=" " alt="" coords="1442,278,1331,311,1267,332,1262,354,1264,389,1279,462,1274,463,1258,389,1256,353,1263,328,1330,305,1440,272"/>
+<area shape="rect" href="../../d3/d17/PID_8h_source.html" title=" " alt="" coords="866,477,978,503"/>
+<area shape="poly" title=" " alt="" coords="1445,278,1416,285,1369,289,1310,290,1172,289,1102,291,1039,298,986,311,966,320,950,332,930,361,920,396,918,431,920,462,915,462,913,431,915,395,925,359,946,328,963,316,984,306,1038,292,1102,286,1172,284,1310,285,1369,284,1415,279,1444,273"/>
+<area shape="rect" href="../../dc/d06/VelocityController_8h.html" title="Contrôleur de vitesse pour un robot à base différentielle." alt="" coords="960,330,1151,356"/>
+<area shape="poly" title=" " alt="" coords="1443,278,1416,285,1284,310,1162,330,1161,325,1284,305,1415,279,1442,273"/>
+<area shape="rect" href="../../d3/d3a/PositionController_8h_source.html" title=" " alt="" coords="1985,404,2177,429"/>
+<area shape="poly" title=" " alt="" coords="1537,259,1661,260,1816,268,1892,277,1961,289,2017,306,2057,328,2069,341,2076,356,2083,387,2078,389,2071,358,2064,344,2054,332,2015,311,1959,294,1891,282,1815,274,1661,266,1537,265"/>
+<area shape="rect" href="../../d2/d54/PurePursuit_8h_source.html" title=" " alt="" coords="1860,330,2043,356"/>
+<area shape="poly" title=" " alt="" coords="1538,270,1865,324,1864,329,1537,275"/>
+<area shape="rect" href="../../dd/d63/TurnOnTheSpot_8h.html" title="Implémentation d&#39;AbstractMoveStrategy qui fait tourner le robot sur lui&#45;même." alt="" coords="2119,330,2326,356"/>
+<area shape="poly" title=" " alt="" coords="1538,266,2104,326,2103,332,1537,271"/>
+<area shape="rect" title=" " alt="" coords="1699,330,1785,356"/>
+<area shape="poly" title=" " alt="" coords="1523,273,1688,322,1687,328,1522,278"/>
+<area shape="poly" title=" " alt="" coords="1446,278,1416,285,1319,299,1236,307,1093,311,950,314,866,320,767,333,767,327,865,315,949,309,1093,306,1236,302,1318,294,1415,279,1444,273"/>
+<area shape="rect" href="../../d9/db6/AbstractTimer_8h.html" title="Un timer abstrait pour que Codewheel ne dépende pas directement du hardware." alt="" coords="1132,404,1246,429"/>
+<area shape="poly" title=" " alt="" coords="1521,359,1262,405,1261,400,1520,354"/>
+<area shape="poly" title=" " alt="" coords="1620,354,1805,427,1915,469,1913,474,1803,432,1618,359"/>
+<area shape="poly" title=" " alt="" coords="1565,359,1324,473,1322,468,1562,354"/>
+<area shape="rect" title=" " alt="" coords="1889,551,2033,592"/>
+<area shape="poly" title=" " alt="" coords="1964,503,1964,536,1958,536,1958,503"/>
+<area shape="rect" title=" " alt="" coords="894,558,951,584"/>
+<area shape="poly" title=" " alt="" coords="925,503,925,543,920,543,920,503"/>
+<area shape="rect" href="../../d9/d02/DifferentialController_8h_source.html" title=" " alt="" coords="961,404,1108,429"/>
+<area shape="poly" title=" " alt="" coords="1055,357,1045,389,1040,388,1050,355"/>
+<area shape="poly" title=" " alt="" coords="1058,427,1137,465,1187,485,1239,500,1325,519,1413,534,1589,554,1748,564,1874,568,1874,573,1748,570,1588,560,1413,540,1324,524,1238,506,1185,490,1134,470,1056,432"/>
+<area shape="poly" title=" " alt="" coords="1077,427,1236,472,1234,478,1076,432"/>
+<area shape="poly" title=" " alt="" coords="1017,432,956,471,953,466,1014,428"/>
+<area shape="rect" title=" " alt="" coords="1002,477,1122,503"/>
+<area shape="poly" title=" " alt="" coords="1041,429,1054,462,1050,464,1036,431"/>
+<area shape="poly" title=" " alt="" coords="2062,432,1996,471,1993,467,2059,428"/>
+<area shape="poly" title=" " alt="" coords="2075,431,2019,505,1989,541,1985,538,2015,501,2070,428"/>
+<area shape="poly" title=" " alt="" coords="1955,356,1962,462,1957,462,1950,356"/>
+<area shape="poly" title=" " alt="" coords="1975,354,2047,393,2044,398,1972,359"/>
+<area shape="poly" title=" " alt="" coords="2200,359,2120,399,2117,394,2197,354"/>
+<area shape="poly" title=" " alt="" coords="559,108,508,127,448,156,386,195,357,218,331,243,308,279,294,316,289,314,303,277,327,240,353,214,383,191,445,152,506,122,557,103"/>
+<area shape="rect" title=" " alt="" coords="706,160,800,186"/>
+<area shape="poly" title=" " alt="" coords="621,103,717,151,714,155,619,108"/>
+<area shape="rect" title=" " alt="" coords="509,153,682,193"/>
+<area shape="poly" title=" " alt="" coords="598,105,598,137,593,137,593,105"/>
+<area shape="poly" title=" " alt="" coords="165,107,148,128,135,154,124,190,117,220,119,249,135,280,155,301,179,316,206,327,233,333,231,338,204,332,177,321,151,305,131,284,114,250,112,220,119,189,131,152,144,125,161,104"/>
+<area shape="rect" title=" " alt="" coords="145,160,204,186"/>
+<area shape="poly" title=" " alt="" coords="177,105,177,144,172,144,172,105"/>
+<area shape="rect" href="../../d5/d92/GripperFinger_8h_source.html" title=" " alt="" coords="776,330,885,356"/>
+<area shape="poly" title=" " alt="" coords="1293,278,1260,285,1160,301,1082,311,904,333,901,333,900,328,903,327,1082,306,1160,296,1259,279,1292,273"/>
+<area shape="rect" title=" " alt="" coords="614,404,671,429"/>
+<area shape="poly" title=" " alt="" coords="799,359,687,401,685,396,797,354"/>
+<area shape="poly" title=" " alt="" coords="739,104,749,145,744,146,733,106"/>
+<area shape="poly" title=" " alt="" coords="713,107,644,147,641,143,711,103"/>
+<area shape="poly" title=" " alt="" coords="1534,106,1514,154,1491,234,1486,233,1509,152,1529,104"/>
+<area shape="rect" href="../../d1/dd7/Strategie_8h.html" title="Contient les diverses stratégies que le robot peut executer." alt="" coords="1523,160,1607,186"/>
+<area shape="poly" title=" " alt="" coords="1544,104,1558,144,1553,146,1539,106"/>
+<area shape="poly" title=" " alt="" coords="1607,173,1771,184,1879,195,1993,210,2105,230,2206,256,2287,288,2318,307,2340,328,2353,349,2358,368,2356,385,2347,401,2332,415,2312,427,2262,448,2201,463,2137,475,2021,488,2020,482,2136,469,2200,458,2260,442,2310,422,2328,411,2342,398,2351,383,2353,368,2349,351,2336,332,2315,312,2285,293,2204,261,2104,235,1993,215,1878,200,1770,190,1607,179"/>
+<area shape="poly" title=" " alt="" coords="1523,180,1470,187,1405,199,1335,217,1268,244,1253,253,1243,264,1233,275,1217,284,1153,307,1097,319,1046,325,997,325,895,322,836,325,767,333,766,327,835,319,895,317,997,320,1046,319,1096,314,1151,302,1215,280,1230,271,1239,260,1249,249,1265,239,1333,212,1404,194,1469,182,1523,175"/>
+<area shape="poly" title=" " alt="" coords="1598,184,1625,191,1763,210,1881,217,1985,216,2082,211,2180,206,2284,206,2402,216,2539,239,2548,241,2546,246,2538,244,2401,221,2284,212,2180,211,2083,216,1985,221,1880,222,1762,215,1624,196,1597,189"/>
+<area shape="poly" title=" " alt="" coords="1534,189,1387,245,1385,240,1532,184"/>
+<area shape="rect" href="../../db/d05/Grafcet_8h.html" title="Header wrapper pour faciliter les import." alt="" coords="2452,249,2526,274"/>
+<area shape="poly" title=" " alt="" coords="1599,184,1626,191,1747,209,1851,216,1943,216,2029,213,2115,210,2208,211,2312,219,2433,239,2444,241,2443,246,2432,244,2311,225,2207,217,2115,216,2029,219,1943,222,1851,221,1746,214,1624,196,1598,189"/>
+<area shape="rect" href="../../d1/dfc/Geogebra_8h_source.html" title=" " alt="" coords="2401,404,2489,429"/>
+<area shape="poly" title=" " alt="" coords="1599,184,1625,191,1679,195,1769,198,2010,201,2135,205,2247,212,2334,223,2364,230,2384,239,2402,265,2418,304,2442,388,2437,389,2413,306,2398,267,2381,243,2363,235,2333,228,2247,217,2135,211,2009,207,1769,203,1678,200,1625,196,1598,189"/>
+<area shape="rect" href="../../da/d78/StateMachine_8h.html" title="La machine a état permettant de parcourir le grafcet." alt="" coords="2452,330,2563,356"/>
+<area shape="poly" title=" " alt="" coords="2494,274,2504,314,2499,315,2489,276"/>
+<area shape="poly" title=" " alt="" coords="2401,429,2383,432,2020,484,2019,479,2382,427,2400,424"/>
+<area shape="poly" title=" " alt="" coords="270,186,285,314,279,315,265,187"/>
+<area shape="poly" title=" " alt="" coords="306,174,360,181,429,193,503,211,574,239,601,258,625,280,685,319,682,324,622,284,598,262,572,244,501,217,428,198,360,186,305,180"/>
+<area shape="rect" href="../../d3/d70/Buttons_8h_source.html" title=" " alt="" coords="145,249,222,274"/>
+<area shape="poly" title=" " alt="" coords="257,188,207,239,204,236,253,184"/>
+<area shape="poly" title=" " alt="" coords="201,273,259,318,256,322,197,277"/>
+<area shape="poly" title=" " alt="" coords="1322,103,1413,191,1461,236,1457,240,1410,195,1318,107"/>
+<area shape="rect" href="../../d3/d78/wb__const_8h.html" title="Diverses constantes concernant la base roulante." alt="" coords="1255,160,1342,186"/>
+<area shape="poly" title=" " alt="" coords="1309,105,1304,145,1299,144,1304,105"/>
+<area shape="rect" href="../../d3/dfe/STM32HALTimer_8h_source.html" title=" " alt="" coords="1070,249,1204,274"/>
+<area shape="poly" title=" " alt="" coords="1296,107,1244,155,1160,240,1156,236,1240,151,1292,103"/>
+<area shape="poly" title=" " alt="" coords="1325,184,1444,239,1442,244,1323,189"/>
+<area shape="poly" title=" " alt="" coords="1070,272,338,339,338,334,1070,267"/>
+<area shape="poly" title=" " alt="" coords="1145,274,1166,329,1184,388,1179,390,1161,331,1140,276"/>
+<area shape="poly" title=" " alt="" coords="887,108,792,155,789,151,885,103"/>
+<area shape="rect" href="../../df/dd9/SensorArray_8h_source.html" title=" " alt="" coords="830,160,977,186"/>
+<area shape="poly" title=" " alt="" coords="912,105,909,145,903,145,907,105"/>
+<area shape="poly" title=" " alt="" coords="850,189,812,196,747,203,690,205,594,201,548,201,500,206,448,220,389,244,363,259,340,279,304,319,300,315,336,275,360,255,386,239,447,215,499,201,548,196,594,195,691,199,747,198,811,191,849,184"/>
+<area shape="poly" title=" " alt="" coords="978,178,1177,200,1297,217,1416,239,1429,242,1428,247,1415,244,1296,222,1176,205,977,183"/>
+<area shape="poly" title=" " alt="" coords="918,185,936,204,952,230,961,257,959,271,952,284,767,332,766,326,949,280,954,269,955,257,948,232,932,208,914,188"/>
+<area shape="poly" title=" " alt="" coords="911,186,921,232,920,259,908,284,881,307,852,317,822,317,791,313,760,307,729,306,699,313,669,332,660,344,653,359,646,389,641,388,648,357,655,341,666,328,697,308,729,301,760,302,792,307,822,312,851,312,878,303,904,280,915,258,916,232,906,187"/>
+<area shape="rect" title=" " alt="" coords="635,241,804,282"/>
+<area shape="poly" title=" " alt="" coords="879,189,776,237,774,232,877,184"/>
+<area shape="rect" href="../../d7/df8/Types_8h_source.html" title=" " alt="" coords="828,249,894,274"/>
+<area shape="poly" title=" " alt="" coords="900,187,876,236,871,234,895,185"/>
+<area shape="rect" href="../../db/d5e/VL53L5CX_8h_source.html" title=" " alt="" coords="399,249,560,274"/>
+<area shape="poly" title=" " alt="" coords="846,189,812,196,555,248,554,243,811,191,845,184"/>
+<area shape="poly" title=" " alt="" coords="451,278,329,326,327,321,449,273"/>
+<area shape="poly" title=" " alt="" coords="494,273,620,391,617,395,491,277"/>
 </map>
 </div>
 </div><table class="memberdecls">

@@ -1,0 +1,7 @@
+<map id="Wheeledbase::getVelocities" name="Wheeledbase::getVelocities">
+<area shape="rect" id="Node000001" title="Récupère les vitesses linéaire et angulaire actuelles." alt="" coords="5,31,186,56"/>
+<area shape="rect" id="Node000002" href="$d6/dc3/classOdometry.html#a695e64e109028ec2e47c687e23d0a18e" title="Retourne la vitesse angulaire." alt="" coords="234,5,377,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,30,218,26,219,31,186,35"/>
+<area shape="rect" id="Node000003" href="$d6/dc3/classOdometry.html#acd52113fbd9d32543be57843a571fa1d" title="Retourne la vitesse linéaire." alt="" coords="236,55,374,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="186,51,221,55,220,60,186,56"/>
+</map>

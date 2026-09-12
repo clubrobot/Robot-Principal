@@ -2,6 +2,7 @@ var group__globals =
 [
     [ "Couleurs loggers", "da/dbd/group__colors.html", null ],
     [ "Niveau de logs", "d8/d1e/group__log__levels.html", null ],
+    [ "Paramètres de ralentissement du robot", "d0/df9/group__wb__slowdown__define.html", null ],
     [ "Taskhandles", "d7/d04/group__taskhandles.html", "d7/d04/group__taskhandles" ],
     [ "Pins IHM", "d5/d7e/group__ihm-pins.html", null ],
     [ "Codewheel_hardware_timers", "d0/dc3/group__codewheel__hardware__timers.html", null ],

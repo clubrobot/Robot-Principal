@@ -1,0 +1,5 @@
+<map id="Odometry::getAngVel" name="Odometry::getAngVel">
+<area shape="rect" id="Node000001" title="Retourne la vitesse angulaire." alt="" coords="234,5,377,31"/>
+<area shape="rect" id="Node000002" href="$d1/dc5/namespaceWheeledbase.html#a9ec33285139f6591d0223f5b9eeb8b2d" title="Récupère les vitesses linéaire et angulaire actuelles." alt="" coords="5,5,186,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,21,186,21,186,16,218,16"/>
+</map>

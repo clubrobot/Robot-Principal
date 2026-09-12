@@ -1,0 +1,13 @@
+<map id="ActionNode.h" name="ActionNode.h">
+<area shape="rect" id="Node000001" title="Un noeud d&#39;action du grafcet, permettant de réaliser des actions de front montant." alt="" coords="38,5,137,31"/>
+<area shape="rect" id="Node000002" href="$db/d05/Grafcet_8h.html" title="Header wrapper pour faciliter les import." alt="" coords="50,79,124,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,46,90,79,85,79,85,46"/>
+<area shape="rect" id="Node000003" href="$d2/db9/Static_8h_source.html" title=" " alt="" coords="5,153,71,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="73,119,49,154,44,151,68,116"/>
+<area shape="rect" id="Node000004" href="$d1/dd7/Strategie_8h.html" title="Contient les diverses stratégies que le robot peut executer." alt="" coords="95,153,178,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="106,116,131,151,126,154,102,119"/>
+<area shape="rect" id="Node000005" href="$dd/d07/Automate_8h.html" title="Contient le code nécessaire pour jouer un match." alt="" coords="93,226,180,252"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="139,194,139,226,134,226,134,194"/>
+<area shape="rect" id="Node000006" href="$df/d0a/main_8cpp.html" title="Contient le code principal du robot." alt="" coords="100,300,173,326"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="139,267,139,300,134,300,134,267"/>
+</map>

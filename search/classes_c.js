@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['sensorarray_0',['SensorArray',['../de/d4b/classSensorArray.html',1,'']]],
-  ['sensorconfig_1',['SensorConfig',['../d8/de7/structSensorArray_1_1SensorConfig.html',1,'SensorArray']]],
-  ['sensorhandle_2',['SensorHandle',['../de/d73/structSensorArray_1_1SensorHandle.html',1,'SensorArray']]],
-  ['shiftregister_3',['ShiftRegister',['../de/ded/classShiftRegister.html',1,'']]],
-  ['stepbystepmotor_4',['StepByStepMotor',['../d9/dd4/classStepByStepMotor.html',1,'']]],
-  ['stm32haltimer_5',['STM32HALTimer',['../d8/dd9/classSTM32HALTimer.html',1,'']]]
+  ['periodicprocess_0',['PeriodicProcess',['../d2/dfa/classPeriodicProcess.html',1,'']]],
+  ['pid_1',['PID',['../d8/da9/classPID.html',1,'']]],
+  ['point_2',['Point',['../d8/d43/structPoint.html',1,'']]],
+  ['position_3',['Position',['../d0/df4/structPosition.html',1,'']]],
+  ['positioncontroller_4',['PositionController',['../d2/d64/classPositionController.html',1,'']]],
+  ['purepursuit_5',['PurePursuit',['../de/d96/classPurePursuit.html',1,'']]]
 ];

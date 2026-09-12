@@ -25,14 +25,22 @@
 var NAVTREE =
 [
   [ "Robot Principal", "index.html", [
-    [ "Introduction", "index.html#autotoc_md0", null ],
-    [ "Compilation", "index.html#autotoc_md1", null ],
-    [ "Fonctionnement du code", "index.html#autotoc_md2", null ],
+    [ "Introduction", "index.html#autotoc_md8", null ],
+    [ "Compilation", "index.html#autotoc_md9", null ],
+    [ "Fonctionnement du code", "index.html#autotoc_md10", [
+      [ "PC, DC, VC, kézako ?", "d5/dc1/group__wheeledbase.html#autotoc_md5", null ],
+      [ "Et comment tout ça est relié ?", "d5/dc1/group__wheeledbase.html#autotoc_md6", null ],
+      [ "Comment régler ces constantes alors ?", "d5/dc1/group__wheeledbase.html#autotoc_md7", null ],
+      [ "Introduction", "db/de0/group__grafcet.html#autotoc_md0", null ],
+      [ "Compilation", "db/de0/group__grafcet.html#autotoc_md1", null ],
+      [ "Utilisation", "db/de0/group__grafcet.html#autotoc_md2", null ]
+    ] ],
     [ "Topics", "topics.html", "topics" ],
     [ "Espaces de nommage", "namespaces.html", [
       [ "Liste des espaces de nommage", "namespaces.html", "namespaces_dup" ],
       [ "Membres de l'espace de nommage", "namespacemembers.html", [
         [ "Tout", "namespacemembers.html", null ],
+        [ "Fonctions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ],
         [ "Énumérations", "namespacemembers_enum.html", null ]
       ] ]
@@ -42,9 +50,11 @@ var NAVTREE =
       [ "Index des classes", "classes.html", null ],
       [ "Hiérarchie des classes", "hierarchy.html", "hierarchy" ],
       [ "Membres de classe", "functions.html", [
-        [ "Tout", "functions.html", null ],
-        [ "Fonctions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ]
+        [ "Tout", "functions.html", "functions_dup" ],
+        [ "Fonctions", "functions_func.html", "functions_func" ],
+        [ "Variables", "functions_vars.html", null ],
+        [ "Énumérations", "functions_enum.html", null ],
+        [ "Valeurs énumérées", "functions_eval.html", null ]
       ] ]
     ] ],
     [ "Fichiers", "files.html", [
@@ -61,7 +71,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"dc/d9e/ShiftRegister_8h_source.html"
+"d4/dac/group__teleplot.html#md_lib_2Teleplot_2README",
+"d8/d4b/classTeleplot.html#ab679c1945656e6f901490d580a42c46a",
+"dc/d5c/Logger_2coloring_8h.html",
+"dir_4136405d84fc7ff658638f03b4ac248a.html"
 ];
 
 var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';

@@ -1,0 +1,11 @@
+<map id="Grafcet.h" name="Grafcet.h">
+<area shape="rect" id="Node000001" title="Header wrapper pour faciliter les import." alt="" coords="50,5,124,31"/>
+<area shape="rect" id="Node000002" href="$d2/db9/Static_8h_source.html" title=" " alt="" coords="5,79,71,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,45,49,80,44,77,68,42"/>
+<area shape="rect" id="Node000003" href="$d1/dd7/Strategie_8h.html" title="Contient les diverses stratégies que le robot peut executer." alt="" coords="95,79,178,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="106,42,131,77,126,80,102,45"/>
+<area shape="rect" id="Node000004" href="$dd/d07/Automate_8h.html" title="Contient le code nécessaire pour jouer un match." alt="" coords="93,153,180,178"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="139,120,139,152,134,152,134,120"/>
+<area shape="rect" id="Node000005" href="$df/d0a/main_8cpp.html" title="Contient le code principal du robot." alt="" coords="100,226,173,252"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="139,194,139,226,134,226,134,194"/>
+</map>

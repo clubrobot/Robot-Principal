@@ -1,0 +1,9 @@
+<map id="DCMotor" name="DCMotor">
+<area shape="rect" id="Node000001" title="Implémentation concrète d&#39;un moteur DC standard." alt="" coords="5,94,78,120"/>
+<area shape="rect" id="Node000002" href="$d2/d61/classAbstractMotor.html" title=" " alt="" coords="18,5,121,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,46,41,94,36,93,50,45"/>
+<area shape="poly" id="edge4_Node000001_Node000002" title=" " alt="" coords="72,47,54,95,49,93,67,45"/>
+<area shape="rect" id="Node000003" href="$d4/de2/classAbstractDriver.html" title="Représente un driver moteur abstrait." alt="" coords="119,94,223,120"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="80,44,96,68,113,81,132,91,130,96,110,86,92,72,76,47"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="168,80,158,57,141,42,120,33,123,28,144,38,162,53,173,78"/>
+</map>

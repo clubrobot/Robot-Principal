@@ -1,0 +1,12 @@
+<map id="Grafcet::ActionNode" name="Grafcet::ActionNode">
+<area shape="rect" id="Node000001" title="Représente un noeud d&#39;action dans le grafcet Les noeuds d&#39;action n&#39;exécute qu&#39;une seule fois leur opé..." alt="" coords="5,303,144,328"/>
+<area shape="rect" id="Node000002" href="$dc/d19/classGrafcet_1_1Node.html" title="Représente un noeud dans le graphcet Un noeud peut être un noeud d&#39;action ou un noeud de transition...." alt="" coords="125,184,226,210"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,223,87,304,83,300,153,220"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="167,288,358,343"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="170,225,169,244,174,262,196,285,192,289,170,265,164,245,165,225"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="137,95,214,121"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="178,137,178,184,173,184,173,137"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="114,5,238,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="178,61,178,95,173,95,173,61"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="251,274,243,254,231,235,217,223,202,212,205,208,221,218,235,232,247,251,256,272"/>
+</map>

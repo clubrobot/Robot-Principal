@@ -1,0 +1,15 @@
+<map id="StateMachine.h" name="StateMachine.h">
+<area shape="rect" id="Node000001" title="La machine a état permettant de parcourir le grafcet." alt="" coords="92,5,204,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,62,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,34,67,73,65,68,127,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="86,79,210,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="151,31,151,63,146,63,146,31"/>
+<area shape="rect" id="Node000004" href="$db/d92/Node_8h.html" title="Représentation d&#39;un noeud du grafcet." alt="" coords="234,79,297,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="169,29,234,68,231,73,167,34"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="153,153,202,178"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="252,107,206,145,202,141,249,103"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="227,153,304,178"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="268,105,268,137,263,137,263,105"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="328,153,382,178"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="282,103,330,141,326,145,279,107"/>
+</map>

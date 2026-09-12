@@ -1,0 +1,33 @@
+<map id="Wheeledbase::purepursuit" name="Wheeledbase::purepursuit">
+<area shape="rect" id="Node000001" title="Démarre purepursuit ? honnêtement jsp trop." alt="" coords="5,93,175,119"/>
+<area shape="rect" id="Node000002" href="$d1/dc5/namespaceWheeledbase.html#af95eff03593f9262964c7b28e5748d7c" title="Ajoute un waypoint au purepursuit." alt="" coords="227,8,419,49"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,90,244,52,246,57,132,95"/>
+<area shape="rect" id="Node000004" href="$d1/dc5/namespaceWheeledbase.html#a22253592773d11c3b858cf06bca9b7b4" title="Réinitialise le purepursuit." alt="" coords="223,93,423,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="175,104,207,104,207,109,175,109"/>
+<area shape="rect" id="Node000008" href="$d1/dc5/namespaceWheeledbase.html#ac3513ee361359e21de0c140a93877bc0" title="Démarre le purepursuit." alt="" coords="224,276,422,302"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="110,118,294,264,291,268,107,122"/>
+<area shape="rect" id="Node000003" href="$de/d96/classPurePursuit.html#a8672a8ae53efe3e706f5e00e94f2554b" title="Ajout un point en fin de ligne brisée." alt="" coords="487,5,656,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="419,22,472,20,472,25,419,27"/>
+<area shape="rect" id="Node000005" href="$d2/dfa/classPeriodicProcess.html#a4147798b8ad01690f590d934bdd83c28" title="Désactive le PeriodicProcess." alt="" coords="490,55,653,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="410,90,474,80,475,85,410,95"/>
+<area shape="rect" id="Node000007" href="$de/d96/classPurePursuit.html#a7fbc8b6d8116a373a438f3795f255559" title="Initialise le Purpuisuit. Supprime les current_points de la ligne brisée et les paramètres temporaire..." alt="" coords="510,104,634,130"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="424,108,494,111,494,116,423,113"/>
+<area shape="rect" id="Node000006" href="$d2/dfa/classPeriodicProcess.html#a6e325cb38e20cac3164a01d89e161d90" title="Méthode exécutée à la désactivation du PeriodicProcess." alt="" coords="720,47,905,88"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="654,65,705,65,705,70,654,70"/>
+<area shape="rect" id="Node000009" href="$d2/dfa/classPeriodicProcess.html#ae49aad8572f5b60fede0a13f0cd95d36" title="Active le PeriodicProcess." alt="" coords="492,153,652,179"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="338,273,394,231,431,208,470,188,486,182,488,187,472,193,433,212,397,236,341,278"/>
+<area shape="rect" id="Node000011" href="$de/d96/classPurePursuit.html#a190eec1c08b1b44777b2125de448057c" title="Getter du nombre de point de passage." alt="" coords="471,203,672,228"/>
+<area shape="poly" id="edge10_Node000008_Node000011" title=" " alt="" coords="360,273,470,237,496,230,497,235,472,242,362,278"/>
+<area shape="rect" id="Node000012" href="$de/d96/classPurePursuit.html#ad650949b0a832f48159c712542a3378f" title="Getter d&#39;un point de passage." alt="" coords="488,252,655,278"/>
+<area shape="poly" id="edge11_Node000008_Node000012" title=" " alt="" coords="422,277,473,272,473,277,422,282"/>
+<area shape="rect" id="Node000013" href="$de/d96/classPurePursuit.html#a5f44936749173662c63f1ce60bcf5e68" title="Setter du sens de marche du robot." alt="" coords="490,301,654,327"/>
+<area shape="poly" id="edge12_Node000008_Node000013" title=" " alt="" coords="422,296,474,302,474,307,422,302"/>
+<area shape="rect" id="Node000014" href="$de/d96/classPurePursuit.html#a133b1a688e0f753d791ef8d605f0510b" title="Setter de l&#39;angle à atteindre en fin de trajectoire." alt="" coords="484,351,659,376"/>
+<area shape="poly" id="edge13_Node000008_Node000014" title=" " alt="" coords="361,300,472,337,497,344,496,349,470,342,359,305"/>
+<area shape="rect" id="Node000015" href="$d2/d64/classPositionController.html#aa2409e437ff4122f60ab91ab35e23fe9" title="Charge une stratégie de mouvement." alt="" coords="509,400,634,441"/>
+<area shape="poly" id="edge14_Node000008_Node000015" title=" " alt="" coords="342,300,398,342,472,386,496,397,494,402,470,391,395,346,339,304"/>
+<area shape="rect" id="Node000016" href="$d2/d64/classPositionController.html#a5b0a91b65ea3793cc22be0ede70ba9db" title="Charge la position à atteindre." alt="" coords="510,466,633,506"/>
+<area shape="poly" id="edge15_Node000008_Node000016" title=" " alt="" coords="335,300,387,371,427,414,472,451,497,464,495,468,470,455,423,418,383,375,330,304"/>
+<area shape="rect" id="Node000010" href="$d2/dfa/classPeriodicProcess.html#a9b1f1149e394348a7fd0eaac94987356" title="Méthode exécutée à l&#39;activation du PeriodicProcess." alt="" coords="720,146,905,186"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="652,164,705,164,705,169,652,169"/>
+</map>

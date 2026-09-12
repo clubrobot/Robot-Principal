@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['ledbutton_0',['LedButton',['../d8/d45/classLedButton.html',1,'']]],
-  ['logger_1',['Logger',['../db/d67/classLogger.html',1,'']]]
+  ['i2cdcdriver_0',['I2CDCDriver',['../d5/dd0/classI2CDCDriver.html',1,'']]]
 ];

@@ -1,0 +1,10 @@
+<map id="ShiftRegister::write" name="ShiftRegister::write">
+<area shape="rect" id="Node000001" title="Écrit un état sur une sortie." alt="" coords="5,31,136,56"/>
+<area shape="rect" id="Node000002" href="$de/ded/classShiftRegister.html#a6b75a0a3091e40037267ea93582fc99e" title="Positionne une sortie à l&#39;état haut." alt="" coords="184,5,333,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,32,168,28,169,33,136,37"/>
+<area shape="rect" id="Node000004" href="$de/ded/classShiftRegister.html#a723aca9137893d8daed0318a8504f9ed" title="Positionne une sortie à l&#39;état bas." alt="" coords="185,55,332,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="136,49,170,54,169,59,136,54"/>
+<area shape="rect" id="Node000003" href="$de/ded/classShiftRegister.html#ac1d3077abbd0966215109880fb8d6be1" title="Décale le contenu du registre vers les sorties." alt="" coords="381,31,508,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="334,26,366,30,366,35,333,31"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="332,55,365,51,366,56,333,61"/>
+</map>

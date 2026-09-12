@@ -1,0 +1,5 @@
+<map id="ShiftRegister::SetLow" name="ShiftRegister::SetLow">
+<area shape="rect" id="Node000001" title="Positionne une sortie à l&#39;état bas." alt="" coords="5,5,153,31"/>
+<area shape="rect" id="Node000002" href="$de/ded/classShiftRegister.html#ac1d3077abbd0966215109880fb8d6be1" title="Décale le contenu du registre vers les sorties." alt="" coords="201,5,328,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,16,186,16,186,21,153,21"/>
+</map>

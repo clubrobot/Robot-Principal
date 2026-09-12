@@ -1,0 +1,13 @@
+<map id="Wheeledbase::startTurnonthespotDir" name="Wheeledbase::startTurnonthespotDir">
+<area shape="rect" id="Node000001" title="démarre turn on the spot mais avec moins de magie dans la direction de rotation" alt="" coords="5,92,236,117"/>
+<area shape="rect" id="Node000002" href="$d2/dfa/classPeriodicProcess.html#ae49aad8572f5b60fede0a13f0cd95d36" title="Active le PeriodicProcess." alt="" coords="284,13,444,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,88,283,47,302,41,304,46,284,52,161,93"/>
+<area shape="rect" id="Node000004" href="$d6/dc3/classOdometry.html#adde66da69bc34f94aa754f93cbeeb69a" title="Retourne la position." alt="" coords="290,62,438,88"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="232,88,274,83,274,88,233,94"/>
+<area shape="rect" id="Node000005" href="$d2/d64/classPositionController.html#aa2409e437ff4122f60ab91ab35e23fe9" title="Charge une stratégie de mouvement." alt="" coords="301,112,426,153"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="236,115,286,121,286,126,236,120"/>
+<area shape="rect" id="Node000006" href="$d2/d64/classPositionController.html#a5b0a91b65ea3793cc22be0ede70ba9db" title="Charge la position à atteindre." alt="" coords="302,177,426,218"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="157,115,295,169,293,174,155,120"/>
+<area shape="rect" id="Node000003" href="$d2/dfa/classPeriodicProcess.html#a9b1f1149e394348a7fd0eaac94987356" title="Méthode exécutée à l&#39;activation du PeriodicProcess." alt="" coords="492,5,676,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="444,23,476,23,476,28,444,28"/>
+</map>

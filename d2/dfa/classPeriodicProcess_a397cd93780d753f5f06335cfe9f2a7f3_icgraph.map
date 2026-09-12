@@ -1,5 +1,32 @@
 <map id="PeriodicProcess::process" name="PeriodicProcess::process">
-<area shape="rect" id="Node000001" title="Méthode à implémenter obligatoirement pour hériter de PeriodicProcess." alt="" coords="215,5,383,31"/>
-<area shape="rect" id="Node000002" href="$d2/dfa/classPeriodicProcess.html#a910daacfe12010947ec541d3ac565867" title="Execute la méthode process." alt="" coords="5,5,167,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,21,167,21,167,16,199,16"/>
+<area shape="rect" id="Node000001" title="Méthode à implémenter obligatoirement pour hériter de PeriodicProcess." alt="" coords="892,161,1060,186"/>
+<area shape="rect" id="Node000002" href="$d2/dfa/classPeriodicProcess.html#a910daacfe12010947ec541d3ac565867" title="Execute la méthode process." alt="" coords="682,161,844,186"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="876,176,844,176,844,171,876,171"/>
+<area shape="rect" id="Node000003" href="$d5/d9e/classDifferentialController.html#aecf1d9bcec79e50b87349d93acce8629" title="Charge l&#39;entraxe." alt="" coords="486,5,623,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="738,151,692,105,633,60,613,49,615,44,636,55,695,101,741,147"/>
+<area shape="rect" id="Node000009" href="$d6/dc3/classOdometry.html#ae4c55db07acd9dcf1ab2197afb9623b3" title="Defini une nouvelle entraxe pour les roues codeuses." alt="" coords="475,70,634,96"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="724,155,633,111,601,99,603,94,635,106,726,150"/>
+<area shape="rect" id="Node000010" href="$de/d33/classVelocityController.html#a7b1ccf3d8e7b268301a35b0577f51f31" title="Paramètre les accélérations max." alt="" coords="494,120,616,161"/>
+<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="667,161,616,153,617,147,667,156"/>
+<area shape="rect" id="Node000011" href="$de/d33/classVelocityController.html#aa00bd41d5064587f3324c7b4309fd483" title="Paramètre les décéleration max." alt="" coords="494,185,616,226"/>
+<area shape="poly" id="edge12_Node000002_Node000011" title=" " alt="" coords="667,191,617,199,616,194,667,186"/>
+<area shape="rect" id="Node000012" href="$d6/dc3/classOdometry.html#a0e4a3346ceae934ac0ec45c9fb8a6b22" title="Defini la nouvelle dérive orthogonal." alt="" coords="479,250,630,276"/>
+<area shape="poly" id="edge14_Node000002_Node000012" title=" " alt="" coords="726,197,635,240,602,252,601,247,633,235,723,192"/>
+<area shape="rect" id="Node000013" href="$de/d33/classVelocityController.html#a428043fcd8b930c254cf1cbd3615191d" title="Change l&#39;état de l&#39;arret d&#39;urgence." alt="" coords="490,300,619,341"/>
+<area shape="poly" id="edge16_Node000002_Node000013" title=" " alt="" coords="741,200,695,245,636,291,615,302,612,297,633,286,692,241,738,196"/>
+<area shape="rect" id="Node000004" href="$d1/dc5/namespaceWheeledbase.html#a93917aa7393e8d67cdb861be9f3ac8e6" title="Met un paramètre de la base roulante à jour." alt="" coords="244,153,427,194"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="484,56,476,60,410,108,359,155,355,151,407,104,474,55,481,51"/>
+<area shape="rect" id="Node000005" href="$d1/dc5/namespaceWheeledbase.html#a6680480eb7648cfbdb7b8209a6aa3d43" title="Honnêtement aucune idée de ce que fait cette fonction." alt="" coords="19,82,182,108"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="271,150,195,122,158,111,160,106,197,116,273,145"/>
+<area shape="rect" id="Node000006" href="$d1/dc5/namespaceWheeledbase.html#a67e8ddf0666538675a1641e4287ff331" title="Suit une liste de waypoint en utilisant purepursuit." alt="" coords="5,132,196,157"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="228,163,196,159,197,154,229,158"/>
+<area shape="rect" id="Node000007" href="$d1/dc5/namespaceWheeledbase.html#a456c83bebed6115a2040b90c6a8cdf6c" title="Suit une liste de waypoint en utilisant purepursuit mais sans les varargs." alt="" coords="5,181,196,222"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="229,189,197,193,196,188,228,184"/>
+<area shape="rect" id="Node000008" href="$d1/dc5/namespaceWheeledbase.html#a6a10b06182fb0a197a8e4093af55a198" title="Va à un point en utilisant purepursuit." alt="" coords="25,246,176,272"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="278,203,197,236,158,248,156,243,195,231,276,198"/>
+<area shape="poly" id="edge9_Node000009_Node000004" title=" " alt="" coords="495,104,476,111,378,155,376,150,474,106,493,99"/>
+<area shape="poly" id="edge11_Node000010_Node000004" title=" " alt="" coords="479,155,428,162,427,157,478,149"/>
+<area shape="poly" id="edge13_Node000011_Node000004" title=" " alt="" coords="477,197,427,190,428,184,478,192"/>
+<area shape="poly" id="edge15_Node000012_Node000004" title=" " alt="" coords="493,247,474,240,377,197,380,192,476,235,495,242"/>
+<area shape="poly" id="edge17_Node000013_Node000004" title=" " alt="" coords="481,295,474,291,407,243,356,197,359,193,411,238,476,286,484,290"/>
 </map>

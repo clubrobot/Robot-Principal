@@ -1,0 +1,7 @@
+<map id="WheelMotor::setVelocity" name="WheelMotor::setVelocity">
+<area shape="rect" id="Node000001" title="Envoie une commande de vitesse au moteur." alt="" coords="232,35,392,60"/>
+<area shape="rect" id="Node000002" href="$d1/dc5/namespaceWheeledbase.html#a0bad65c499d6e577dd0c33088d033384" title="Désactive la base roulante." alt="" coords="21,5,168,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,37,168,31,168,25,217,32"/>
+<area shape="rect" id="Node000003" href="$d1/dc5/namespaceWheeledbase.html#aa654986f8a6669f64e03250febc45506" title="Définit les vitesses en boucle ouverte pour les roues." alt="" coords="5,55,184,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="217,62,185,67,184,61,216,57"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="Wheeledbase::setVelocities" name="Wheeledbase::setVelocities">
+<area shape="rect" id="Node000001" title="Fixe une vitesse linéaire et angulaire pour la base roulante." alt="" coords="5,74,186,100"/>
+<area shape="rect" id="Node000002" href="$d2/dfa/classPeriodicProcess.html#a4147798b8ad01690f590d934bdd83c28" title="Désactive le PeriodicProcess." alt="" coords="234,17,397,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,71,248,44,249,50,148,76"/>
+<area shape="rect" id="Node000004" href="$d2/dfa/classPeriodicProcess.html#ae49aad8572f5b60fede0a13f0cd95d36" title="Active le PeriodicProcess." alt="" coords="235,74,396,100"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="186,84,219,84,219,90,186,90"/>
+<area shape="rect" id="Node000006" href="$d5/d9e/classDifferentialController.html#a7768d8a091a8f49f4b85c526d89a16b6" title="Charge les vitesses désirées." alt="" coords="247,124,384,165"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="148,98,232,120,231,125,147,103"/>
+<area shape="rect" id="Node000003" href="$d2/dfa/classPeriodicProcess.html#a6e325cb38e20cac3164a01d89e161d90" title="Méthode exécutée à la désactivation du PeriodicProcess." alt="" coords="445,5,629,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="398,26,429,25,429,30,398,31"/>
+<area shape="rect" id="Node000005" href="$d2/dfa/classPeriodicProcess.html#a9b1f1149e394348a7fd0eaac94987356" title="Méthode exécutée à l&#39;activation du PeriodicProcess." alt="" coords="445,71,629,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="396,86,429,86,429,92,396,91"/>
+</map>

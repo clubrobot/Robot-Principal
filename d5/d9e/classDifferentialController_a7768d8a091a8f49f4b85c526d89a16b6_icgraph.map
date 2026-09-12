@@ -1,0 +1,5 @@
+<map id="DifferentialController::setSetpoints" name="DifferentialController::setSetpoints">
+<area shape="rect" id="Node000001" title="Charge les vitesses désirées." alt="" coords="234,5,371,46"/>
+<area shape="rect" id="Node000002" href="$d1/dc5/namespaceWheeledbase.html#a89ffe54e8ddf10a0fdec54653570b61f" title="Fixe une vitesse linéaire et angulaire pour la base roulante." alt="" coords="5,13,186,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,28,186,28,186,23,218,23"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="DifferentialController::getAxleTrack" name="DifferentialController::getAxleTrack">
+<area shape="rect" id="Node000001" title="Retourne l&#39;entraxe." alt="" coords="475,106,612,146"/>
+<area shape="rect" id="Node000002" href="$d1/dc5/namespaceWheeledbase.html#a7b90ac909e4d3394d53f339951c29b71" title="Récupère la valeur d&#39;un paramètre de la base roulante." alt="" coords="244,76,427,117"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="459,117,427,112,428,107,460,112"/>
+<area shape="rect" id="Node000007" href="$d1/dc5/namespaceWheeledbase.html#a39c3f87a5d200ad1e41fab813bffc7bb" title="Affiche les paramètres de la base roulante." alt="" coords="248,141,423,167"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="460,140,424,145,423,140,459,135"/>
+<area shape="rect" id="Node000003" href="$d1/dc5/namespaceWheeledbase.html#a6680480eb7648cfbdb7b8209a6aa3d43" title="Honnêtement aucune idée de ce que fait cette fonction." alt="" coords="19,5,182,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="271,73,195,45,158,34,160,29,197,40,273,68"/>
+<area shape="rect" id="Node000004" href="$d1/dc5/namespaceWheeledbase.html#a67e8ddf0666538675a1641e4287ff331" title="Suit une liste de waypoint en utilisant purepursuit." alt="" coords="5,55,196,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="228,86,196,82,197,77,229,81"/>
+<area shape="rect" id="Node000005" href="$d1/dc5/namespaceWheeledbase.html#a456c83bebed6115a2040b90c6a8cdf6c" title="Suit une liste de waypoint en utilisant purepursuit mais sans les varargs." alt="" coords="5,104,196,145"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="229,112,197,116,196,111,228,107"/>
+<area shape="rect" id="Node000006" href="$d1/dc5/namespaceWheeledbase.html#a6a10b06182fb0a197a8e4093af55a198" title="Va à un point en utilisant purepursuit." alt="" coords="25,169,176,195"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="257,126,245,131,221,145,197,159,162,171,160,166,195,154,218,141,242,126,255,121"/>
+</map>

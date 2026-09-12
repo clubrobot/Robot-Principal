@@ -1,5 +1,25 @@
 <map id="PeriodicProcess::onProcessDisabling" name="PeriodicProcess::onProcessDisabling">
-<area shape="rect" id="Node000001" title="Méthode exécutée à la désactivation du PeriodicProcess." alt="" coords="217,5,401,46"/>
-<area shape="rect" id="Node000002" href="$d2/dfa/classPeriodicProcess.html#a4147798b8ad01690f590d934bdd83c28" title="Désactive le PeriodicProcess." alt="" coords="5,13,169,38"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,28,169,28,169,23,201,23"/>
+<area shape="rect" id="Node000001" title="Méthode exécutée à la désactivation du PeriodicProcess." alt="" coords="921,112,1105,153"/>
+<area shape="rect" id="Node000002" href="$d2/dfa/classPeriodicProcess.html#a4147798b8ad01690f590d934bdd83c28" title="Désactive le PeriodicProcess." alt="" coords="709,120,873,146"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="905,136,873,136,873,130,905,130"/>
+<area shape="rect" id="Node000003" href="$d1/dc5/namespaceWheeledbase.html#a0bad65c499d6e577dd0c33088d033384" title="Désactive la base roulante." alt="" coords="488,5,634,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="761,112,716,78,660,46,628,34,629,29,662,41,719,73,765,108"/>
+<area shape="rect" id="Node000004" href="$de/d33/classVelocityController.html#ad9d7a68904dfe039957aea75e48a88a8" title="Calcul l&#39;asservissement." alt="" coords="500,55,622,96"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="721,118,622,93,623,88,723,113"/>
+<area shape="rect" id="Node000005" href="$d1/dc5/namespaceWheeledbase.html#a22253592773d11c3b858cf06bca9b7b4" title="Réinitialise le purepursuit." alt="" coords="461,120,661,146"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="694,136,662,136,662,130,694,130"/>
+<area shape="rect" id="Node000011" href="$d1/dc5/namespaceWheeledbase.html#aa654986f8a6669f64e03250febc45506" title="Définit les vitesses en boucle ouverte pour les roues." alt="" coords="472,170,650,210"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="722,153,646,172,645,167,721,147"/>
+<area shape="rect" id="Node000012" href="$d1/dc5/namespaceWheeledbase.html#a89ffe54e8ddf10a0fdec54653570b61f" title="Fixe une vitesse linéaire et angulaire pour la base roulante." alt="" coords="471,235,651,260"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="765,158,719,192,662,225,629,237,628,232,660,220,716,188,761,154"/>
+<area shape="rect" id="Node000006" href="$d1/dc5/namespaceWheeledbase.html#acb2a521a07f95f69d652a5bbada66332" title="Démarre purepursuit ? honnêtement jsp trop." alt="" coords="244,120,413,146"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="445,136,413,136,413,130,445,130"/>
+<area shape="rect" id="Node000007" href="$d1/dc5/namespaceWheeledbase.html#a6680480eb7648cfbdb7b8209a6aa3d43" title="Honnêtement aucune idée de ce que fait cette fonction." alt="" coords="19,41,182,67"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="283,116,195,81,159,70,161,65,197,76,285,111"/>
+<area shape="rect" id="Node000008" href="$d1/dc5/namespaceWheeledbase.html#a67e8ddf0666538675a1641e4287ff331" title="Suit une liste de waypoint en utilisant purepursuit." alt="" coords="5,91,196,116"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="228,123,196,118,196,113,229,117"/>
+<area shape="rect" id="Node000009" href="$d1/dc5/namespaceWheeledbase.html#a456c83bebed6115a2040b90c6a8cdf6c" title="Suit une liste de waypoint en utilisant purepursuit mais sans les varargs." alt="" coords="5,140,196,181"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="229,148,196,152,196,146,228,142"/>
+<area shape="rect" id="Node000010" href="$d1/dc5/namespaceWheeledbase.html#a6a10b06182fb0a197a8e4093af55a198" title="Va à un point en utilisant purepursuit." alt="" coords="25,205,176,231"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="288,156,197,195,158,207,157,202,195,190,286,151"/>
 </map>

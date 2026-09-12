@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['periodicprocess_0',['PeriodicProcess',['../d2/dfa/classPeriodicProcess.html',1,'']]],
-  ['point_1',['Point',['../d8/d43/structPoint.html',1,'']]]
+  ['objectdetector_0',['ObjectDetector',['../d6/dd4/classObjectDetector.html',1,'']]],
+  ['odometry_1',['Odometry',['../d6/dc3/classOdometry.html',1,'']]]
 ];

@@ -1,0 +1,22 @@
+<map id="PeriodicProcess::enable" name="PeriodicProcess::enable">
+<area shape="rect" id="Node000001" title="Active le PeriodicProcess." alt="" coords="784,81,945,107"/>
+<area shape="rect" id="Node000002" href="$d1/dc5/namespaceWheeledbase.html#a89ffe54e8ddf10a0fdec54653570b61f" title="Fixe une vitesse linéaire et angulaire pour la base roulante." alt="" coords="531,5,711,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="811,78,736,53,672,34,673,29,737,48,813,73"/>
+<area shape="rect" id="Node000003" href="$d1/dc5/namespaceWheeledbase.html#ac3513ee361359e21de0c140a93877bc0" title="Démarre le purepursuit." alt="" coords="522,107,720,132"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="769,107,721,112,720,107,768,101"/>
+<area shape="rect" id="Node000009" href="$d1/dc5/namespaceWheeledbase.html#a9503cce512e702417b7679ce62747aa7" title="démarre turn on the spot" alt="" coords="244,56,458,82"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="769,92,458,77,458,71,769,87"/>
+<area shape="rect" id="Node000010" href="$d1/dc5/namespaceWheeledbase.html#a7d8ad1dbb6ee976b8a00256455544be1" title="démarre turn on the spot mais avec moins de magie dans la direction de rotation" alt="" coords="506,156,736,182"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="821,116,737,147,696,158,695,153,736,142,819,111"/>
+<area shape="rect" id="Node000004" href="$d1/dc5/namespaceWheeledbase.html#acb2a521a07f95f69d652a5bbada66332" title="Démarre purepursuit ? honnêtement jsp trop." alt="" coords="266,107,436,132"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="507,122,436,122,436,117,507,117"/>
+<area shape="rect" id="Node000005" href="$d1/dc5/namespaceWheeledbase.html#a6680480eb7648cfbdb7b8209a6aa3d43" title="Honnêtement aucune idée de ce que fait cette fonction." alt="" coords="19,56,182,82"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="269,106,167,85,168,80,270,100"/>
+<area shape="rect" id="Node000006" href="$d1/dc5/namespaceWheeledbase.html#a67e8ddf0666538675a1641e4287ff331" title="Suit une liste de waypoint en utilisant purepursuit." alt="" coords="5,105,196,131"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="251,122,196,121,196,116,251,116"/>
+<area shape="rect" id="Node000007" href="$d1/dc5/namespaceWheeledbase.html#a456c83bebed6115a2040b90c6a8cdf6c" title="Suit une liste de waypoint en utilisant purepursuit mais sans les varargs." alt="" coords="5,155,196,196"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="276,139,195,157,194,152,275,134"/>
+<area shape="rect" id="Node000008" href="$d1/dc5/namespaceWheeledbase.html#a6a10b06182fb0a197a8e4093af55a198" title="Va à un point en utilisant purepursuit." alt="" coords="25,220,176,246"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="319,143,263,177,197,210,162,222,160,217,195,205,260,173,316,139"/>
+<area shape="poly" id="edge9_Node000009_Node000005" title=" " alt="" coords="228,72,183,72,183,66,228,66"/>
+</map>

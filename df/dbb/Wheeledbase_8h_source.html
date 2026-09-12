@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Robot Principal:  Fichier source de Wheeledbase.h</title>
+<link rel="icon" href="../../icon.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript" src="../../darkmode_toggle.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../custom.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="../../theme-round.css" rel="stylesheet" type="text/css"/>
+<link href="../../theme-robot.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Robot Principal<span id="projectnumber">&#160;26</span>
+   </div>
+   <div id="projectbrief">Documentation du Club Robot INSA Rennes 2026</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('df/dbb/Wheeledbase_8h_source.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Wheeledbase.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../df/dbb/Wheeledbase_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by boris on 28/10/2024.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef WHEELEDBASE_H</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define WHEELEDBASE_H</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;WheelMotor.h&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;Components/Codewheel.h&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;Components/Odometry.h&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;Controller/PID.h&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d06/VelocityController_8h.html">Controller/VelocityController.h</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;Controller/PositionController.h&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;MoveStrategy/PurePursuit.h&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="../../dd/d63/TurnOnTheSpot_8h.html">MoveStrategy/TurnOnTheSpot.h</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;DRV8844.h&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;Logger.h&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">// Parameters identifiers</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#define SLOWDOWN_FACTOR                 0.5</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#define SLOWDOWN_DISTANCE               0</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#define ALIGN_DISTANCE                  130</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">namespace  </span><a class="code hl_namespace" href="../../d1/dc5/namespaceWheeledbase.html">Wheeledbase</a> {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="};">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../d4/d98/structWheeledbase_1_1WBConstants.html">   54</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d4/d98/structWheeledbase_1_1WBConstants.html">WBConstants</a></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> LEFTWHEEL_RADIUS;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> LEFTWHEEL_CONSTANT;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> LEFTWHEEL_MAXPWM;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> RIGHTWHEEL_RADIUS;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> RIGHTWHEEL_CONSTANT;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> RIGHTWHEEL_MAXPWM;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">const</span> <span class="keywordtype">long</span> LEFTCODEWHEEL_COUNTSPERREV;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keyword">const</span> <span class="keywordtype">long</span> RIGHTCODEWHEEL_COUNTSPERREV;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> LEFTCODEWHEEL_RADIUS;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> RIGHTCODEWHEEL_RADIUS;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> ODOMETRY_AXLETRACK;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> ODOMETRY_SLIPPAGE;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> VELOCITYCONTROL_AXLETRACK;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> VELOCITYCONTROL_MAXLINACC;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> VELOCITYCONTROL_MAXLINDEC;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> VELOCITYCONTROL_MAXANGACC;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> VELOCITYCONTROL_MAXANGDEC;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keyword">const</span> <span class="keywordtype">bool</span> VELOCITYCONTROL_SPINSHUTDOWN;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="comment">/*---- LINEAR VELOCITIES PID  ----*/</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> LINVELPID_KP;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> LINVELPID_KI;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> LINVELPID_KD;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> LINVELPID_MINOUTPUT;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> LINVELPID_MAXOUTPUT;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="comment">/*---- ANGULAR VELOCITIES PID ----*/</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> ANGVELPID_KP;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> ANGVELPID_KI;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> ANGVELPID_KD;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> ANGVELPID_MINOUTPUT;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> ANGVELPID_MAXOUTPUT;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="comment">/*---- POSITION PID ----*/</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> POSITIONCONTROL_LINVELKP;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> POSITIONCONTROL_ANGVELKP;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> POSITIONCONTROL_LINVELMAX;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> POSITIONCONTROL_ANGVELMAX;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> POSITIONCONTROL_LINPOSTHRESHOLD;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> POSITIONCONTROL_ANGPOSTHRESHOLD;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> PUREPURSUIT_LOOKAHEAD;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> PUREPURSUIT_LOOKAHEADBIS;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="comment">// Timesteps</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> ODOMETRY_TIMESTEP;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> PID_CONTROLLERS_TIMESTEP;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> POSITIONCONTROL_TIMESTEP;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="comment">// DC motors driver</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> LEFT_MOTOR_EN;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> LEFT_MOTOR_PWM;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> LEFT_MOTOR_DIR;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> RIGHT_MOTOR_EN;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> RIGHT_MOTOR_PWM;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> RIGHT_MOTOR_DIR;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> DRIVER_RESET;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> DRIVER_FAULT;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    };</div>
+</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span></div>
+<div class="foldopen" id="foldopen00125" data-start="{" data-end="};">
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">  125</a></span>    <span class="keyword">struct </span><a class="code hl_function" href="../../db/d67/structWheeledbase_1_1WheeledBase.html#a5f128c10f038e0a1031a83159ad8c656">WheeledBase</a> {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        std::unique_ptr&lt;WheelMotor&gt; leftWheel;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        std::unique_ptr&lt;WheelMotor&gt; rightWheel;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        std::unique_ptr&lt;Codewheel&gt; leftCodewheel;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        std::unique_ptr&lt;Codewheel&gt; rightCodewheel;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        std::unique_ptr&lt;Odometry&gt; odometry;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        std::unique_ptr&lt;VelocityController&gt; velocityControl;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        std::unique_ptr&lt;PositionController&gt; positionControl;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <a class="code hl_function" href="../../db/d67/structWheeledbase_1_1WheeledBase.html#a5f128c10f038e0a1031a83159ad8c656">WheeledBase</a>(</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            std::unique_ptr&lt;DRV8844&gt; driver,</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            std::unique_ptr&lt;WheelMotor&gt; leftWheel,</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            std::unique_ptr&lt;WheelMotor&gt; rightWheel,</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            std::unique_ptr&lt;Codewheel&gt; leftCodewheel,</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            std::unique_ptr&lt;Codewheel&gt; rightCodewheel,</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            std::unique_ptr&lt;Odometry&gt; odometry,</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            std::unique_ptr&lt;VelocityController&gt; velocityControl,</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            std::unique_ptr&lt;PositionController&gt; positionControl,</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            std::unique_ptr&lt;PID&gt; linVelPID,</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            std::unique_ptr&lt;PID&gt; angVelPID,</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>            <a class="code hl_struct" href="../../d4/d98/structWheeledbase_1_1WBConstants.html">WBConstants</a>&amp; param,</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp; halSetup</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            );</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    };</div>
+</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    [[noreturn]] <span class="keywordtype">void</span> run(<a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a>* wheeledBase, <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp; delayFunc);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span></div>
+<div class="foldopen" id="foldopen00174" data-start="{" data-end="};">
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="../../d1/dc5/namespaceWheeledbase.html#a18696c722ee30da3d9cd60389b0e8e15">  174</a></span>    <span class="keyword">enum</span> <a class="code hl_enumeration" href="../../d1/dc5/namespaceWheeledbase.html#a18696c722ee30da3d9cd60389b0e8e15">WBParameterID</a> : uint8_t {</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        WBPID_LEFTWHEEL_RADIUS_ID,</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        WBPID_LEFTWHEEL_CONSTANT_ID,</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        WBPID_LEFTWHEEL_MAXPWM_ID,</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        WBPID_RIGHTWHEEL_RADIUS_ID,</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        WBPID_RIGHTWHEEL_CONSTANT_ID,</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        WBPID_RIGHTWHEEL_MAXPWM_ID,</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        WBPID_LEFTCODEWHEEL_RADIUS_ID,</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        WBPID_LEFTCODEWHEEL_COUNTSPERREV_ID,</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        WBPID_RIGHTCODEWHEEL_RADIUS_ID,</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        WBPID_RIGHTCODEWHEEL_COUNTSPERREV_ID,</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        WBPID_ODOMETRY_AXLETRACK_ID,</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        WBPID_ODOMETRY_SLIPPAGE_ID,</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        WBPID_VELOCITYCONTROL_AXLETRACK_ID,</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        WBPID_VELOCITYCONTROL_MAXLINACC_ID,</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        WBPID_VELOCITYCONTROL_MAXLINDEC_ID,</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        WBPID_VELOCITYCONTROL_MAXANGACC_ID,</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        WBPID_VELOCITYCONTROL_MAXANGDEC_ID,</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        WBPID_VELOCITYCONTROL_SPINSHUTDOWN_ID,</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        WBPID_LINVELPID_KP_ID,</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        WBPID_LINVELPID_KI_ID,</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        WBPID_LINVELPID_KD_ID,</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        WBPID_LINVELPID_MINOUTPUT_ID,</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        WBPID_LINVELPID_MAXOUTPUT_ID,</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        WBPID_ANGVELPID_KP_ID,</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        WBPID_ANGVELPID_KI_ID,</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        WBPID_ANGVELPID_KD_ID,</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        WBPID_ANGVELPID_MINOUTPUT_ID,</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        WBPID_ANGVELPID_MAXOUTPUT_ID,</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        WBPID_POSITIONCONTROL_LINVELKP_ID,</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        WBPID_POSITIONCONTROL_ANGVELKP_ID,</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        WBPID_POSITIONCONTROL_LINVELMAX_ID,</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        WBPID_POSITIONCONTROL_ANGVELMAX_ID,</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        WBPID_POSITIONCONTROL_LINPOSTHRESHOLD_ID,</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        WBPID_POSITIONCONTROL_ANGPOSTHRESHOLD_ID,</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        WBPID_PUREPURSUIT_LOOKAHED_ID,</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        WBPID_PUREPURSUIT_LOOKAHEADBIS_ID</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    };</div>
+</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="../../d1/dc5/namespaceWheeledbase.html#a9ac1deea9b70ad26fa1840291632f439">  213</a></span>    <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code hl_variable" href="../../d1/dc5/namespaceWheeledbase.html#a9ac1deea9b70ad26fa1840291632f439">wb_logger</a> = <a class="code hl_class" href="../../db/d67/classLogger.html">Logger</a>(<span class="stringliteral">&quot;WHEELEDBASE&quot;</span>);</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="comment">// Instructions prototypes</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/dc5/namespaceWheeledbase.html#a0bad65c499d6e577dd0c33088d033384">disable</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a>* wheeledBase);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno"><a class="line" href="../../d1/dc5/namespaceWheeledbase.html#a2a7eb1fc4364b105eb8eceaf9467ccf7">  230</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/dc5/namespaceWheeledbase.html#a2a7eb1fc4364b105eb8eceaf9467ccf7">gotoDelta</a>(<a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a>* wheeledBase, <a class="code hl_class" href="../../de/d96/classPurePursuit.html">PurePursuit</a>* purePursuit, <span class="keywordtype">float</span> dx, <span class="keywordtype">float</span> dy, <span class="keywordtype">bool</span> bloquant=<span class="keyword">true</span>); <span class="comment">//bloquant: do we pass at the next step after ?</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="comment">//void TURNTO_DELTA(WheeledBase* wheeledBase, float dtheta, bool bloquant=true);</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <span class="comment">//void TENTATIVE_POUR_PLUSTARD();</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span></div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/dc5/namespaceWheeledbase.html#aa654986f8a6669f64e03250febc45506">setOpenloopVelocities</a>(<a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a>* wheeledBase, <span class="keywordtype">float</span> leftWheelVel, <span class="keywordtype">float</span> rightWheelVel);</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span></div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/dc5/namespaceWheeledbase.html#a7d6c9bd7f2932b468454bd58d449f26d">getCodewheelsCounters</a>(<a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a>* wheeledBase, <span class="keywordtype">float</span> *leftCodewheelCounter, <span class="keywordtype">float</span> *rightCodewheelCounter);</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/dc5/namespaceWheeledbase.html#a89ffe54e8ddf10a0fdec54653570b61f">setVelocities</a>(<a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a>* wheeledBase, <span class="keywordtype">float</span> linVelSetpoint, <span class="keywordtype">float</span> angVelSetpoint);</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span></div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/dc5/namespaceWheeledbase.html#a22253592773d11c3b858cf06bca9b7b4">resetPurepursuit</a>(<a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a>* wheeledBase, <a class="code hl_class" href="../../de/d96/classPurePursuit.html">PurePursuit</a>* purePursuit);</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span></div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/dc5/namespaceWheeledbase.html#af95eff03593f9262964c7b28e5748d7c">addPurepursuitWaypoint</a>(<a class="code hl_class" href="../../de/d96/classPurePursuit.html">PurePursuit</a>* purePursuit, <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y);</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span></div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/dc5/namespaceWheeledbase.html#ac3513ee361359e21de0c140a93877bc0">startPurepursuit</a>(<a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a>* wheeledBase, <a class="code hl_class" href="../../de/d96/classPurePursuit.html">PurePursuit</a>* purePursuit, <a class="code hl_enumeration" href="../../de/d96/classPurePursuit.html#a584048cfe1c7e025425011986b410019">PurePursuit::Direction</a> direction, <span class="keywordtype">float</span> finalAngle);</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span></div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/dc5/namespaceWheeledbase.html#a9503cce512e702417b7679ce62747aa7">startTurnonthespot</a>(<a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a>* wheeledBase, <a class="code hl_class" href="../../d9/dee/classTurnOnTheSpot.html">TurnOnTheSpot</a>* turnOnTheSpot, <span class="keywordtype">bool</span> dir, <span class="keywordtype">float</span> theta);</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span></div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/dc5/namespaceWheeledbase.html#a7d8ad1dbb6ee976b8a00256455544be1">startTurnonthespotDir</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a>* wheeledBase, <a class="code hl_class" href="../../d9/dee/classTurnOnTheSpot.html">TurnOnTheSpot</a>* turnOnTheSpot, TurnOnTheSpot::Direction dir, <span class="keywordtype">float</span> theta);</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span></div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/dc5/namespaceWheeledbase.html#acb2a521a07f95f69d652a5bbada66332">purepursuit</a>(<a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a>* wheeledBase, <a class="code hl_class" href="../../de/d96/classPurePursuit.html">PurePursuit</a>* purePursuit, <span class="keyword">const</span> <a class="code hl_struct" href="../../d0/df4/structPosition.html">Position</a>** waypoints, uint16_t nb_waypoints, <a class="code hl_enumeration" href="../../de/d96/classPurePursuit.html#a584048cfe1c7e025425011986b410019">PurePursuit::Direction</a> dir, <span class="keywordtype">float</span> finalAngle);</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span></div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/dc5/namespaceWheeledbase.html#a6a10b06182fb0a197a8e4093af55a198">wbGoto</a>(<a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a>* wheeledBase, <a class="code hl_class" href="../../de/d96/classPurePursuit.html">PurePursuit</a>* purePursuit, <a class="code hl_struct" href="../../d0/df4/structPosition.html">Position</a>* pos, <span class="keywordtype">bool</span> alignFirst=<span class="keyword">true</span>, <a class="code hl_enumeration" href="../../de/d96/classPurePursuit.html#a584048cfe1c7e025425011986b410019">PurePursuit::Direction</a> dir=PurePursuit::NONE,<span class="keywordtype">bool</span> bloquant=<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span></div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/dc5/namespaceWheeledbase.html#a67e8ddf0666538675a1641e4287ff331">gotoWaypoints</a>(<a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a>* wheeledBase, <a class="code hl_class" href="../../de/d96/classPurePursuit.html">PurePursuit</a>* purePursuit, <span class="keywordtype">bool</span> alignFirst=<span class="keyword">true</span>, <a class="code hl_enumeration" href="../../de/d96/classPurePursuit.html#a584048cfe1c7e025425011986b410019">PurePursuit::Direction</a> dir=PurePursuit::NONE, <span class="keywordtype">int</span> nb_waypoints=1, ...);</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span></div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/dc5/namespaceWheeledbase.html#a456c83bebed6115a2040b90c6a8cdf6c">gotoWaypointsArray</a>(<a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a>* wheeledBase, <a class="code hl_class" href="../../de/d96/classPurePursuit.html">PurePursuit</a>* purePursuit, <a class="code hl_struct" href="../../d0/df4/structPosition.html">Position</a>* positions[], <span class="keywordtype">bool</span> alignFirst=<span class="keyword">true</span>, <a class="code hl_enumeration" href="../../de/d96/classPurePursuit.html#a584048cfe1c7e025425011986b410019">PurePursuit::Direction</a> dir=PurePursuit::NONE, <span class="keywordtype">int</span> nb_waypoints=1);</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span></div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/dc5/namespaceWheeledbase.html#a6680480eb7648cfbdb7b8209a6aa3d43">gotoFunct</a>(<a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a>* wheeledBase, <a class="code hl_class" href="../../de/d96/classPurePursuit.html">PurePursuit</a>* purePursuit, <a class="code hl_class" href="../../d9/dee/classTurnOnTheSpot.html">TurnOnTheSpot</a>* turnOnTheSpot, <a class="code hl_struct" href="../../d0/df4/structPosition.html">Position</a>* pos, <span class="keywordtype">void</span>* duringMovingFunct, <span class="keywordtype">void</span>* approachFunct, <span class="keywordtype">bool</span> alignFirst=<span class="keyword">true</span>, <a class="code hl_enumeration" href="../../de/d96/classPurePursuit.html#a584048cfe1c7e025425011986b410019">PurePursuit::Direction</a> dir=PurePursuit::NONE, <span class="keywordtype">float</span> finalAngle=MAXFLOAT);</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span></div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    uint8_t <a class="code hl_function" href="../../d1/dc5/namespaceWheeledbase.html#adff48202425edbc5114edfa6d5904740">positionReached</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a>* wheeledBase);</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span></div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/dc5/namespaceWheeledbase.html#a27e61bb510fac01d9c6058592c2a4e27">getVelocitiesWanted</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a>* wheeledBase, <span class="keywordtype">float</span> *linOutput, <span class="keywordtype">float</span> *angOutput, <span class="keywordtype">bool</span> spin=<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span></div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/dc5/namespaceWheeledbase.html#ac6971a80d78a12e8687d42d7bfddbc2b">setPosition</a>(<a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a>* wheeledBase, <span class="keyword">const</span> <a class="code hl_struct" href="../../d0/df4/structPosition.html">Position</a>* pos);</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span></div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>    <span class="keyword">const</span> <a class="code hl_struct" href="../../d0/df4/structPosition.html">Position</a>* <a class="code hl_function" href="../../d1/dc5/namespaceWheeledbase.html#ae01e28daf111f6e6c5f5410fb5166a1e">getPosition</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a>* wheeledBase);</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span></div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/dc5/namespaceWheeledbase.html#a9ec33285139f6591d0223f5b9eeb8b2d">getVelocities</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a>* wheeledBase, <span class="keywordtype">float</span> *linVel, <span class="keywordtype">float</span> *angVel);</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span></div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/dc5/namespaceWheeledbase.html#a93917aa7393e8d67cdb861be9f3ac8e6">setParameterValue</a>(<a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a>* wheeledBase, <a class="code hl_class" href="../../de/d96/classPurePursuit.html">PurePursuit</a>* purePursuit, <a class="code hl_enumeration" href="../../d1/dc5/namespaceWheeledbase.html#a18696c722ee30da3d9cd60389b0e8e15">WBParameterID</a> paramID, <span class="keywordtype">float</span> value);</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span></div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="../../d1/dc5/namespaceWheeledbase.html#a7b90ac909e4d3394d53f339951c29b71">getParameterValue</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a>* wheeledBase, <span class="keyword">const</span> <a class="code hl_class" href="../../de/d96/classPurePursuit.html">PurePursuit</a>* purePursuit, <a class="code hl_enumeration" href="../../d1/dc5/namespaceWheeledbase.html#a18696c722ee30da3d9cd60389b0e8e15">WBParameterID</a> paramID);</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span></div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/dc5/namespaceWheeledbase.html#a39c3f87a5d200ad1e41fab813bffc7bb">printParams</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">WheeledBase</a>* wheeledBase, <span class="keyword">const</span> <a class="code hl_class" href="../../de/d96/classPurePursuit.html">PurePursuit</a>* purePursuit);</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>};</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span> </div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span> </div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span> </div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span><span class="preprocessor">#endif </span><span class="comment">//WHEELEDBASE_H</span></div>
+<div class="ttc" id="aTurnOnTheSpot_8h_html"><div class="ttname"><a href="../../dd/d63/TurnOnTheSpot_8h.html">TurnOnTheSpot.h</a></div><div class="ttdoc">Implémentation d&#39;AbstractMoveStrategy qui fait tourner le robot sur lui-même.</div></div>
+<div class="ttc" id="aVelocityController_8h_html"><div class="ttname"><a href="../../dc/d06/VelocityController_8h.html">VelocityController.h</a></div><div class="ttdoc">Contrôleur de vitesse pour un robot à base différentielle.</div></div>
+<div class="ttc" id="aclassLogger_html"><div class="ttname"><a href="../../db/d67/classLogger.html">Logger</a></div><div class="ttdoc">Log pour la sortie console avec des couleurs et éventuellement la sortie LCD.</div><div class="ttdef"><b>Definition</b> Logger/Logger.h:49</div></div>
+<div class="ttc" id="aclassPurePursuit_html"><div class="ttname"><a href="../../de/d96/classPurePursuit.html">PurePursuit</a></div><div class="ttdoc">Trajectoire courbe le long d&#39;une ligne brisée.</div><div class="ttdef"><b>Definition</b> PurePursuit.h:18</div></div>
+<div class="ttc" id="aclassPurePursuit_html_a584048cfe1c7e025425011986b410019"><div class="ttname"><a href="../../de/d96/classPurePursuit.html#a584048cfe1c7e025425011986b410019">PurePursuit::Direction</a></div><div class="ttdeci">Direction</div><div class="ttdoc">Sens de déplacement pour le robot.</div><div class="ttdef"><b>Definition</b> PurePursuit.h:35</div></div>
+<div class="ttc" id="aclassTurnOnTheSpot_html"><div class="ttname"><a href="../../d9/dee/classTurnOnTheSpot.html">TurnOnTheSpot</a></div><div class="ttdoc">Rotation du robot sans translations.</div><div class="ttdef"><b>Definition</b> TurnOnTheSpot.h:16</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html">Wheeledbase</a></div><div class="ttdoc">Fonctions de convénience pour faire les déplacements facilement.</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_a0bad65c499d6e577dd0c33088d033384"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#a0bad65c499d6e577dd0c33088d033384">Wheeledbase::disable</a></div><div class="ttdeci">void disable(const WheeledBase *wheeledBase)</div><div class="ttdoc">Désactive la base roulante.</div><div class="ttdef"><b>Definition</b> Wheeledbase.cpp:107</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_a18696c722ee30da3d9cd60389b0e8e15"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#a18696c722ee30da3d9cd60389b0e8e15">Wheeledbase::WBParameterID</a></div><div class="ttdeci">WBParameterID</div><div class="ttdoc">Des identifiants permettant d&#39;accéder à la plupart des paramètres de la base roulante.</div><div class="ttdef"><b>Definition</b> Wheeledbase.h:174</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_a22253592773d11c3b858cf06bca9b7b4"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#a22253592773d11c3b858cf06bca9b7b4">Wheeledbase::resetPurepursuit</a></div><div class="ttdeci">void resetPurepursuit(WheeledBase *wheeledBase, PurePursuit *purePursuit)</div><div class="ttdoc">Réinitialise le purepursuit.</div><div class="ttdef"><b>Definition</b> Wheeledbase.cpp:233</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_a27e61bb510fac01d9c6058592c2a4e27"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#a27e61bb510fac01d9c6058592c2a4e27">Wheeledbase::getVelocitiesWanted</a></div><div class="ttdeci">void getVelocitiesWanted(const WheeledBase *wheeledBase, float *linOutput, float *angOutput, bool spin=true)</div><div class="ttdoc">Récupère les vitesses linéaire et angulaire souhaitées.</div><div class="ttdef"><b>Definition</b> Wheeledbase.cpp:607</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_a2a7eb1fc4364b105eb8eceaf9467ccf7"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#a2a7eb1fc4364b105eb8eceaf9467ccf7">Wheeledbase::gotoDelta</a></div><div class="ttdeci">void gotoDelta(WheeledBase *wheeledBase, PurePursuit *purePursuit, float dx, float dy, bool bloquant=true)</div><div class="ttdoc">Déplace la base roulante d&#39;une certaine distance dans le référentiel du robot.</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_a39c3f87a5d200ad1e41fab813bffc7bb"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#a39c3f87a5d200ad1e41fab813bffc7bb">Wheeledbase::printParams</a></div><div class="ttdeci">void printParams(const WheeledBase *wheeledBase, const PurePursuit *purePursuit)</div><div class="ttdoc">Affiche les paramètres de la base roulante.</div><div class="ttdef"><b>Definition</b> Wheeledbase.cpp:854</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_a456c83bebed6115a2040b90c6a8cdf6c"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#a456c83bebed6115a2040b90c6a8cdf6c">Wheeledbase::gotoWaypointsArray</a></div><div class="ttdeci">void gotoWaypointsArray(WheeledBase *wheeledBase, PurePursuit *purePursuit, Position *positions[], bool alignFirst=true, PurePursuit::Direction dir=PurePursuit::NONE, int nb_waypoints=1)</div><div class="ttdoc">Suit une liste de waypoint en utilisant purepursuit mais sans les varargs.</div><div class="ttdef"><b>Definition</b> Wheeledbase.cpp:460</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_a6680480eb7648cfbdb7b8209a6aa3d43"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#a6680480eb7648cfbdb7b8209a6aa3d43">Wheeledbase::gotoFunct</a></div><div class="ttdeci">void gotoFunct(WheeledBase *wheeledBase, PurePursuit *purePursuit, TurnOnTheSpot *turnOnTheSpot, Position *pos, void *duringMovingFunct, void *approachFunct, bool alignFirst=true, PurePursuit::Direction dir=PurePursuit::NONE, float finalAngle=MAXFLOAT)</div><div class="ttdoc">Honnêtement aucune idée de ce que fait cette fonction.</div><div class="ttdef"><b>Definition</b> Wheeledbase.cpp:530</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_a67e8ddf0666538675a1641e4287ff331"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#a67e8ddf0666538675a1641e4287ff331">Wheeledbase::gotoWaypoints</a></div><div class="ttdeci">void gotoWaypoints(WheeledBase *wheeledBase, PurePursuit *purePursuit, bool alignFirst=true, PurePursuit::Direction dir=PurePursuit::NONE, int nb_waypoints=1,...)</div><div class="ttdoc">Suit une liste de waypoint en utilisant purepursuit.</div><div class="ttdef"><b>Definition</b> Wheeledbase.cpp:388</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_a6a10b06182fb0a197a8e4093af55a198"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#a6a10b06182fb0a197a8e4093af55a198">Wheeledbase::wbGoto</a></div><div class="ttdeci">void wbGoto(WheeledBase *wheeledBase, PurePursuit *purePursuit, Position *pos, bool alignFirst=true, PurePursuit::Direction dir=PurePursuit::NONE, bool bloquant=true)</div><div class="ttdoc">Va à un point en utilisant purepursuit.</div><div class="ttdef"><b>Definition</b> Wheeledbase.cpp:319</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_a7b90ac909e4d3394d53f339951c29b71"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#a7b90ac909e4d3394d53f339951c29b71">Wheeledbase::getParameterValue</a></div><div class="ttdeci">float getParameterValue(const WheeledBase *wheeledBase, const PurePursuit *purePursuit, WBParameterID paramID)</div><div class="ttdoc">Récupère la valeur d&#39;un paramètre de la base roulante.</div><div class="ttdef"><b>Definition</b> Wheeledbase.cpp:742</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_a7d6c9bd7f2932b468454bd58d449f26d"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#a7d6c9bd7f2932b468454bd58d449f26d">Wheeledbase::getCodewheelsCounters</a></div><div class="ttdeci">void getCodewheelsCounters(WheeledBase *wheeledBase, float *leftCodewheelCounter, float *rightCodewheelCounter)</div><div class="ttdoc">Récupère les compteurs des roues codeuses.</div><div class="ttdef"><b>Definition</b> Wheeledbase.cpp:222</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_a7d8ad1dbb6ee976b8a00256455544be1"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#a7d8ad1dbb6ee976b8a00256455544be1">Wheeledbase::startTurnonthespotDir</a></div><div class="ttdeci">void startTurnonthespotDir(const WheeledBase *wheeledBase, TurnOnTheSpot *turnOnTheSpot, TurnOnTheSpot::Direction dir, float theta)</div><div class="ttdoc">démarre turn on the spot mais avec moins de magie dans la direction de rotation</div><div class="ttdef"><b>Definition</b> Wheeledbase.cpp:288</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_a89ffe54e8ddf10a0fdec54653570b61f"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#a89ffe54e8ddf10a0fdec54653570b61f">Wheeledbase::setVelocities</a></div><div class="ttdeci">void setVelocities(WheeledBase *wheeledBase, float linVelSetpoint, float angVelSetpoint)</div><div class="ttdoc">Fixe une vitesse linéaire et angulaire pour la base roulante.</div><div class="ttdef"><b>Definition</b> Wheeledbase.cpp:227</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_a93917aa7393e8d67cdb861be9f3ac8e6"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#a93917aa7393e8d67cdb861be9f3ac8e6">Wheeledbase::setParameterValue</a></div><div class="ttdeci">void setParameterValue(WheeledBase *wheeledBase, PurePursuit *purePursuit, WBParameterID paramID, float value)</div><div class="ttdoc">Met un paramètre de la base roulante à jour.</div><div class="ttdef"><b>Definition</b> Wheeledbase.cpp:633</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_a9503cce512e702417b7679ce62747aa7"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#a9503cce512e702417b7679ce62747aa7">Wheeledbase::startTurnonthespot</a></div><div class="ttdeci">void startTurnonthespot(WheeledBase *wheeledBase, TurnOnTheSpot *turnOnTheSpot, bool dir, float theta)</div><div class="ttdoc">démarre turn on the spot</div><div class="ttdef"><b>Definition</b> Wheeledbase.cpp:269</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_a9ac1deea9b70ad26fa1840291632f439"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#a9ac1deea9b70ad26fa1840291632f439">Wheeledbase::wb_logger</a></div><div class="ttdeci">auto wb_logger</div><div class="ttdoc">Le logger pour la base roulante.</div><div class="ttdef"><b>Definition</b> Wheeledbase.h:213</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_a9ec33285139f6591d0223f5b9eeb8b2d"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#a9ec33285139f6591d0223f5b9eeb8b2d">Wheeledbase::getVelocities</a></div><div class="ttdeci">void getVelocities(const WheeledBase *wheeledBase, float *linVel, float *angVel)</div><div class="ttdoc">Récupère les vitesses linéaire et angulaire actuelles.</div><div class="ttdef"><b>Definition</b> Wheeledbase.cpp:628</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_aa654986f8a6669f64e03250febc45506"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#aa654986f8a6669f64e03250febc45506">Wheeledbase::setOpenloopVelocities</a></div><div class="ttdeci">void setOpenloopVelocities(WheeledBase *wheeledBase, float leftWheelVel, float rightWheelVel)</div><div class="ttdoc">Définit les vitesses en boucle ouverte pour les roues.</div><div class="ttdef"><b>Definition</b> Wheeledbase.cpp:215</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_ac3513ee361359e21de0c140a93877bc0"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#ac3513ee361359e21de0c140a93877bc0">Wheeledbase::startPurepursuit</a></div><div class="ttdeci">void startPurepursuit(WheeledBase *wheeledBase, PurePursuit *purePursuit, PurePursuit::Direction direction, float finalAngle)</div><div class="ttdoc">Démarre le purepursuit.</div><div class="ttdef"><b>Definition</b> Wheeledbase.cpp:238</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_ac6971a80d78a12e8687d42d7bfddbc2b"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#ac6971a80d78a12e8687d42d7bfddbc2b">Wheeledbase::setPosition</a></div><div class="ttdeci">void setPosition(WheeledBase *wheeledBase, const Position *pos)</div><div class="ttdoc">Met à jour la position de l&#39;odométrie.</div><div class="ttdef"><b>Definition</b> Wheeledbase.cpp:619</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_acb2a521a07f95f69d652a5bbada66332"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#acb2a521a07f95f69d652a5bbada66332">Wheeledbase::purepursuit</a></div><div class="ttdeci">void purepursuit(WheeledBase *wheeledBase, PurePursuit *purePursuit, const Position **waypoints, uint16_t nb_waypoints, PurePursuit::Direction dir, float finalAngle)</div><div class="ttdoc">Démarre purepursuit ? honnêtement jsp trop.</div><div class="ttdef"><b>Definition</b> Wheeledbase.cpp:307</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_adff48202425edbc5114edfa6d5904740"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#adff48202425edbc5114edfa6d5904740">Wheeledbase::positionReached</a></div><div class="ttdeci">uint8_t positionReached(const WheeledBase *wheeledBase)</div><div class="ttdoc">Est-ce que la position est atteinte ?</div><div class="ttdef"><b>Definition</b> Wheeledbase.cpp:298</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_ae01e28daf111f6e6c5f5410fb5166a1e"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#ae01e28daf111f6e6c5f5410fb5166a1e">Wheeledbase::getPosition</a></div><div class="ttdeci">const Position * getPosition(const WheeledBase *wheeledBase)</div><div class="ttdoc">Récupère la position de l&#39;odométrie.</div><div class="ttdef"><b>Definition</b> Wheeledbase.cpp:623</div></div>
+<div class="ttc" id="anamespaceWheeledbase_html_af95eff03593f9262964c7b28e5748d7c"><div class="ttname"><a href="../../d1/dc5/namespaceWheeledbase.html#af95eff03593f9262964c7b28e5748d7c">Wheeledbase::addPurepursuitWaypoint</a></div><div class="ttdeci">void addPurepursuitWaypoint(PurePursuit *purePursuit, float x, float y)</div><div class="ttdoc">Ajoute un waypoint au purepursuit.</div><div class="ttdef"><b>Definition</b> Wheeledbase.cpp:264</div></div>
+<div class="ttc" id="astructPosition_html"><div class="ttname"><a href="../../d0/df4/structPosition.html">Position</a></div><div class="ttdoc">Structure de position.</div><div class="ttdef"><b>Definition</b> Odometry.h:17</div></div>
+<div class="ttc" id="astructWheeledbase_1_1WBConstants_html"><div class="ttname"><a href="../../d4/d98/structWheeledbase_1_1WBConstants.html">Wheeledbase::WBConstants</a></div><div class="ttdoc">Défini un certain nombre de constantes et paramètres pour la wheeledbase.</div><div class="ttdef"><b>Definition</b> Wheeledbase.h:55</div></div>
+<div class="ttc" id="astructWheeledbase_1_1WheeledBase_html"><div class="ttname"><a href="../../db/d67/structWheeledbase_1_1WheeledBase.html">Wheeledbase::WheeledBase</a></div><div class="ttdoc">Représente les divers composants de la base roulante.</div><div class="ttdef"><b>Definition</b> Wheeledbase.h:125</div></div>
+<div class="ttc" id="astructWheeledbase_1_1WheeledBase_html_a5f128c10f038e0a1031a83159ad8c656"><div class="ttname"><a href="../../db/d67/structWheeledbase_1_1WheeledBase.html#a5f128c10f038e0a1031a83159ad8c656">Wheeledbase::WheeledBase::WheeledBase</a></div><div class="ttdeci">WheeledBase(std::unique_ptr&lt; DRV8844 &gt; driver, std::unique_ptr&lt; WheelMotor &gt; leftWheel, std::unique_ptr&lt; WheelMotor &gt; rightWheel, std::unique_ptr&lt; Codewheel &gt; leftCodewheel, std::unique_ptr&lt; Codewheel &gt; rightCodewheel, std::unique_ptr&lt; Odometry &gt; odometry, std::unique_ptr&lt; VelocityController &gt; velocityControl, std::unique_ptr&lt; PositionController &gt; positionControl, std::unique_ptr&lt; PID &gt; linVelPID, std::unique_ptr&lt; PID &gt; angVelPID, WBConstants &amp;param, const std::function&lt; void()&gt; &amp;halSetup)</div><div class="ttdef"><b>Definition</b> Wheeledbase.cpp:12</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_d5c75ca7dbd2fef93c2f2d67c31ab7ba.html">Wheeledbase</a></li><li class="navelem"><a class="el" href="../../dir_4881e9255e1186884e769a7ea69581b4.html">include</a></li><li class="navelem"><a class="el" href="../../df/dbb/Wheeledbase_8h.html">Wheeledbase.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

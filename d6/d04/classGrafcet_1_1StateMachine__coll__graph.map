@@ -1,0 +1,15 @@
+<map id="Grafcet::StateMachine" name="Grafcet::StateMachine">
+<area shape="rect" id="Node000001" title="La machine à état permettant de parcourir le grafcet." alt="" coords="5,406,156,432"/>
+<area shape="rect" id="Node000002" href="$dc/d19/classGrafcet_1_1Node.html" title="Représente un noeud dans le graphcet Un noeud peut être un noeud d&#39;action ou un noeud de transition...." alt="" coords="187,184,288,210"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,218,146,229,118,245,93,265,74,289,64,319,64,352,70,382,78,405,73,407,65,383,59,352,59,318,69,286,90,261,115,240,144,224,172,213"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="160,288,350,343"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="204,221,194,235,189,249,194,262,212,285,208,289,189,265,184,249,189,232,200,218"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="375,295,509,336"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="279,215,311,231,413,292,410,297,309,236,276,219"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="199,95,276,121"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="240,137,240,184,235,184,235,137"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="176,5,300,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="240,61,240,95,235,95,235,61"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="254,272,250,234,242,211,247,209,255,233,259,272"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="371,343,363,346,131,408,129,403,361,341,369,338"/>
+</map>

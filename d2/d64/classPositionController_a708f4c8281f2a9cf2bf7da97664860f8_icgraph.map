@@ -1,0 +1,21 @@
+<map id="PositionController::getAngVelKp" name="PositionController::getAngVelKp">
+<area shape="rect" id="Node000001" title="Retourne le coef proportionnel de vitesse angulaire." alt="" coords="475,120,598,161"/>
+<area shape="rect" id="Node000002" href="$d1/dc5/namespaceWheeledbase.html#a7b90ac909e4d3394d53f339951c29b71" title="Récupère la valeur d&#39;un paramètre de la base roulante." alt="" coords="244,120,427,161"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="460,143,427,143,427,138,460,138"/>
+<area shape="rect" id="Node000007" href="$d1/dc5/namespaceWheeledbase.html#a39c3f87a5d200ad1e41fab813bffc7bb" title="Affiche les paramètres de la base roulante." alt="" coords="248,185,423,210"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="461,165,428,175,386,187,384,182,426,170,459,160"/>
+<area shape="rect" id="Node000008" href="$d1/dc5/namespaceWheeledbase.html#a93917aa7393e8d67cdb861be9f3ac8e6" title="Met un paramètre de la base roulante à jour." alt="" coords="244,55,427,95"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="460,118,400,98,401,93,461,113"/>
+<area shape="rect" id="Node000003" href="$d1/dc5/namespaceWheeledbase.html#a6680480eb7648cfbdb7b8209a6aa3d43" title="Honnêtement aucune idée de ce que fait cette fonction." alt="" coords="19,120,182,145"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="228,139,182,138,183,132,228,134"/>
+<area shape="rect" id="Node000004" href="$d1/dc5/namespaceWheeledbase.html#a67e8ddf0666538675a1641e4287ff331" title="Suit une liste de waypoint en utilisant purepursuit." alt="" coords="5,169,196,194"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="229,162,178,171,177,166,228,156"/>
+<area shape="rect" id="Node000005" href="$d1/dc5/namespaceWheeledbase.html#a456c83bebed6115a2040b90c6a8cdf6c" title="Suit une liste de waypoint en utilisant purepursuit mais sans les varargs." alt="" coords="5,5,196,46"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="252,115,242,109,227,96,218,84,209,72,194,60,173,49,176,44,197,55,212,68,222,81,231,93,245,105,254,110"/>
+<area shape="rect" id="Node000006" href="$d1/dc5/namespaceWheeledbase.html#a6a10b06182fb0a197a8e4093af55a198" title="Va à un point en utilisant purepursuit." alt="" coords="25,70,176,96"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="234,118,156,99,157,94,235,113"/>
+<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="235,102,157,121,156,116,234,97"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="254,105,245,110,231,123,222,135,213,148,197,160,173,171,171,166,194,155,209,144,218,132,227,119,242,106,252,100"/>
+<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="228,55,196,48,197,43,229,50"/>
+<area shape="poly" id="edge11_Node000008_Node000006" title=" " alt="" coords="228,81,176,83,176,78,228,76"/>
+</map>

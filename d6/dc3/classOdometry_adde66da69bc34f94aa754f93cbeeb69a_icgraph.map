@@ -1,0 +1,18 @@
+<map id="Odometry::getPosition" name="Odometry::getPosition">
+<area shape="rect" id="Node000001" title="Retourne la position." alt="" coords="522,55,670,80"/>
+<area shape="rect" id="Node000002" href="$d1/dc5/namespaceWheeledbase.html#ae01e28daf111f6e6c5f5410fb5166a1e" title="Récupère la position de l&#39;odométrie." alt="" coords="274,55,444,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="507,70,445,70,445,65,507,65"/>
+<area shape="rect" id="Node000007" href="$d1/dc5/namespaceWheeledbase.html#a9503cce512e702417b7679ce62747aa7" title="démarre turn on the spot" alt="" coords="252,5,466,31"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="515,54,424,34,425,29,516,48"/>
+<area shape="rect" id="Node000008" href="$d1/dc5/namespaceWheeledbase.html#a7d8ad1dbb6ee976b8a00256455544be1" title="démarre turn on the spot mais avec moins de magie dans la direction de rotation" alt="" coords="244,104,474,130"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="516,87,425,106,424,101,515,81"/>
+<area shape="rect" id="Node000003" href="$d1/dc5/namespaceWheeledbase.html#a6680480eb7648cfbdb7b8209a6aa3d43" title="Honnêtement aucune idée de ce que fait cette fonction." alt="" coords="19,5,182,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="272,54,171,34,172,29,273,49"/>
+<area shape="rect" id="Node000004" href="$d1/dc5/namespaceWheeledbase.html#a67e8ddf0666538675a1641e4287ff331" title="Suit une liste de waypoint en utilisant purepursuit." alt="" coords="5,55,196,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="258,70,196,70,196,65,258,65"/>
+<area shape="rect" id="Node000005" href="$d1/dc5/namespaceWheeledbase.html#a456c83bebed6115a2040b90c6a8cdf6c" title="Suit une liste de waypoint en utilisant purepursuit mais sans les varargs." alt="" coords="5,104,196,145"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="278,87,244,94,190,106,189,101,243,89,277,81"/>
+<area shape="rect" id="Node000006" href="$d1/dc5/namespaceWheeledbase.html#a6a10b06182fb0a197a8e4093af55a198" title="Va à un point en utilisant purepursuit." alt="" coords="25,169,176,195"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="261,86,245,94,230,109,222,125,214,142,197,159,174,171,171,166,194,155,209,139,217,123,225,106,242,89,258,81"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="236,21,183,21,183,16,236,16"/>
+</map>

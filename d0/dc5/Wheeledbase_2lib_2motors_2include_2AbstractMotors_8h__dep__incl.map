@@ -1,0 +1,7 @@
+<map id="AbstractMotors.h" name="AbstractMotors.h">
+<area shape="rect" id="Node000001" title="Interface abstraite des moteurs." alt="" coords="44,5,164,31"/>
+<area shape="rect" id="Node000002" href="$d0/d0f/Wheeledbase_2lib_2motors_2include_2DCMotor_8h.html" title="Implémentation d&#39;un moteur DC standard." alt="" coords="5,79,88,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,45,58,80,54,77,83,41"/>
+<area shape="rect" id="Node000003" href="$d9/d78/Wheeledbase_2lib_2motors_2include_2WheelMotor_8h.html" title="Implémentation d&#39;un moteur de roue." alt="" coords="112,79,213,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="125,41,155,77,151,80,121,45"/>
+</map>

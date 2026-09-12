@@ -120,9 +120,9 @@ $(function(){initNavTree('df/dd9/SensorArray_8h_source.html','../../'); initResi
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;Wire.h&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;../../Wheeledbase/include/Components/Odometry.h&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="../../dd/da4/Logger_8h.html">Logger.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;Logger.h&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;Types.h&quot;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;Wheeledbase.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="../../df/dbb/Wheeledbase_8h.html">Wheeledbase.h</a>&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;uld/include/VL53L5CX.h&quot;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#define MASTER_ADDRESS 0x01</span></div>
@@ -182,7 +182,7 @@ $(function(){initNavTree('df/dd9/SensorArray_8h_source.html','../../'); initResi
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> Stop();</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">//Get new data</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    uint8_t getNormalisedData(<span class="keyword">const</span> Wheeledbase::WheeledBase&amp; wheeledbase);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    uint8_t getNormalisedData(<span class="keyword">const</span> <a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">Wheeledbase::WheeledBase</a>&amp; wheeledbase);</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">void</span> Print();</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">bool</span> isThereAnObstacle(<span class="keywordtype">float</span> start, <span class="keywordtype">float</span> end, <span class="keywordtype">float</span> distance);</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
@@ -195,7 +195,7 @@ $(function(){initNavTree('df/dd9/SensorArray_8h_source.html','../../'); initResi
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    std::array&lt;SensorHandle, 8&gt; sensors;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_struct" href="../../d4/d7d/structVL53L5CX__ResultsData.html">VL53L5CX_ResultsData</a> raw_data[8] = {};</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    Position origin_mesure[2][8];</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <a class="code hl_struct" href="../../d0/df4/structPosition.html">Position</a> origin_mesure[2][8];</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    uint8_t power_config;</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
@@ -207,7 +207,7 @@ $(function(){initNavTree('df/dd9/SensorArray_8h_source.html','../../'); initResi
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">void</span> ApplyPowerConfig() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    uint8_t AquireRawData(<span class="keyword">const</span> Wheeledbase::WheeledBase&amp; wheeledbase);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    uint8_t AquireRawData(<span class="keyword">const</span> <a class="code hl_struct" href="../../db/d67/structWheeledbase_1_1WheeledBase.html">Wheeledbase::WheeledBase</a>&amp; wheeledbase);</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> Mesurement_to_Point(uint16_t measure, uint8_t x, uint8_t y, <a class="code hl_struct" href="../../d8/d43/structPoint.html">Point</a>* point);</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
@@ -216,13 +216,15 @@ $(function(){initNavTree('df/dd9/SensorArray_8h_source.html','../../'); initResi
 </div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#endif </span><span class="comment">//SENSORARRAY_H</span></div>
-<div class="ttc" id="aLogger_8h_html"><div class="ttname"><a href="../../dd/da4/Logger_8h.html">Logger.h</a></div><div class="ttdoc">Un logger qui permet d&#39;avoir une belle sortie console.</div></div>
-<div class="ttc" id="aclassLogger_html"><div class="ttname"><a href="../../db/d67/classLogger.html">Logger</a></div><div class="ttdoc">Log pour la sortie console avec des couleurs et éventuellement la sortie LCD.</div><div class="ttdef"><b>Definition</b> Logger.h:49</div></div>
+<div class="ttc" id="aWheeledbase_8h_html"><div class="ttname"><a href="../../df/dbb/Wheeledbase_8h.html">Wheeledbase.h</a></div><div class="ttdoc">Fonctions de convénience pour faire les déplacements facilement.</div></div>
+<div class="ttc" id="aclassLogger_html"><div class="ttname"><a href="../../db/d67/classLogger.html">Logger</a></div><div class="ttdoc">Log pour la sortie console avec des couleurs et éventuellement la sortie LCD.</div><div class="ttdef"><b>Definition</b> Logger/Logger.h:49</div></div>
 <div class="ttc" id="aclassVL53L5CX_html"><div class="ttname"><a href="../../d9/d0e/classVL53L5CX.html">VL53L5CX</a></div><div class="ttdef"><b>Definition</b> VL53L5CX.h:16</div></div>
 <div class="ttc" id="astructPoint_html"><div class="ttname"><a href="../../d8/d43/structPoint.html">Point</a></div><div class="ttdef"><b>Definition</b> Types.h:9</div></div>
+<div class="ttc" id="astructPosition_html"><div class="ttname"><a href="../../d0/df4/structPosition.html">Position</a></div><div class="ttdoc">Structure de position.</div><div class="ttdef"><b>Definition</b> Odometry.h:17</div></div>
 <div class="ttc" id="astructSensorArray_1_1SensorConfig_html"><div class="ttname"><a href="../../d8/de7/structSensorArray_1_1SensorConfig.html">SensorArray::SensorConfig</a></div><div class="ttdef"><b>Definition</b> SensorArray.h:50</div></div>
 <div class="ttc" id="astructSensorArray_1_1SensorHandle_html"><div class="ttname"><a href="../../de/d73/structSensorArray_1_1SensorHandle.html">SensorArray::SensorHandle</a></div><div class="ttdef"><b>Definition</b> SensorArray.h:56</div></div>
 <div class="ttc" id="astructVL53L5CX__ResultsData_html"><div class="ttname"><a href="../../d4/d7d/structVL53L5CX__ResultsData.html">VL53L5CX_ResultsData</a></div><div class="ttdoc">Structure VL53L5CX_ResultsData contains the ranging results of VL53L5CX. If user wants more than 1 ta...</div><div class="ttdef"><b>Definition</b> vl53l5cx_api.h:302</div></div>
+<div class="ttc" id="astructWheeledbase_1_1WheeledBase_html"><div class="ttname"><a href="../../db/d67/structWheeledbase_1_1WheeledBase.html">Wheeledbase::WheeledBase</a></div><div class="ttdoc">Représente les divers composants de la base roulante.</div><div class="ttdef"><b>Definition</b> Wheeledbase.h:125</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

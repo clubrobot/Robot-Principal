@@ -6,7 +6,30 @@ var hierarchy =
     [ "HazelnutGripper::AbstractAbsoluteEncoder", "d1/de1/classHazelnutGripper_1_1AbstractAbsoluteEncoder.html", [
       [ "HazelnutGripper::BournsACEncoder", "d8/d86/classHazelnutGripper_1_1BournsACEncoder.html", null ]
     ] ],
-    [ "AbstractTimer", null, [
+    [ "AbstractCodewheel", "d1/d6f/classAbstractCodewheel.html", [
+      [ "Codewheel", "dd/df3/classCodewheel.html", null ]
+    ] ],
+    [ "AbstractDriver", "d4/de2/classAbstractDriver.html", [
+      [ "DRV8844", "d9/de4/classDRV8844.html", null ],
+      [ "DRV8844", "d9/de4/classDRV8844.html", null ],
+      [ "DRV8876", "d1/d5b/classDRV8876.html", null ],
+      [ "DRV8876", "d1/d5b/classDRV8876.html", null ],
+      [ "I2CDCDriver", "d5/dd0/classI2CDCDriver.html", null ],
+      [ "I2CDCDriver", "d5/dd0/classI2CDCDriver.html", null ]
+    ] ],
+    [ "AbstractMotor", "d2/d61/classAbstractMotor.html", [
+      [ "DCMotor", "dd/d4c/classDCMotor.html", null ],
+      [ "DCMotor", "dd/d4c/classDCMotor.html", null ],
+      [ "WheelMotor", "db/dab/classWheelMotor.html", null ],
+      [ "WheelMotor", "db/dab/classWheelMotor.html", null ]
+    ] ],
+    [ "AbstractMoveStrategy", "de/dc0/classAbstractMoveStrategy.html", [
+      [ "BasicMoveStrategy", "de/d22/classBasicMoveStrategy.html", null ],
+      [ "BasicTurnStrategy", "db/d2b/classBasicTurnStrategy.html", null ],
+      [ "PurePursuit", "de/d96/classPurePursuit.html", null ],
+      [ "TurnOnTheSpot", "d9/dee/classTurnOnTheSpot.html", null ]
+    ] ],
+    [ "AbstractTimer", "d0/da2/classAbstractTimer.html", [
       [ "STM32HALTimer", "d8/dd9/classSTM32HALTimer.html", null ]
     ] ],
     [ "ObjectDetector::AnchorBox", "d1/d34/structObjectDetector_1_1AnchorBox.html", null ],
@@ -19,6 +42,7 @@ var hierarchy =
     [ "Color", "d0/da2/structColor.html", null ],
     [ "HazelnutGripper::ColorData", "d6/d6e/structHazelnutGripper_1_1ColorData.html", null ],
     [ "CRC16", "db/d6d/classCRC16.html", null ],
+    [ "Cube", "df/dd5/classCube.html", null ],
     [ "ObjectDetector::Detector", "d1/d34/structObjectDetector_1_1Detector.html", null ],
     [ "DynamixelClass", "df/dc5/classDynamixelClass.html", null ],
     [ "Elevator", "d9/db0/classElevator.html", null ],
@@ -27,20 +51,37 @@ var hierarchy =
     [ "HazelnutGripper::GripperFinger", "d6/d59/classHazelnutGripper_1_1GripperFinger.html", null ],
     [ "Logger", "db/d67/classLogger.html", null ],
     [ "Musique", "d6/da1/classMusique.html", null ],
+    [ "Grafcet::Node", "dc/d19/classGrafcet_1_1Node.html", [
+      [ "Grafcet::ActionNode", "d6/d86/classGrafcet_1_1ActionNode.html", null ],
+      [ "Grafcet::Transition", "da/d58/classGrafcet_1_1Transition.html", null ]
+    ] ],
     [ "NonCopyable", "dc/d3c/classNonCopyable.html", null ],
     [ "ObjectDetector", "d6/dd4/classObjectDetector.html", null ],
     [ "PeriodicProcess", "d2/dfa/classPeriodicProcess.html", [
       [ "BrushlessMotor", "d7/d82/classBrushlessMotor.html", null ],
-      [ "FullSpeedServo", "d9/df7/classFullSpeedServo.html", null ]
+      [ "DifferentialController", "d5/d9e/classDifferentialController.html", [
+        [ "VelocityController", "de/d33/classVelocityController.html", null ]
+      ] ],
+      [ "FullSpeedServo", "d9/df7/classFullSpeedServo.html", null ],
+      [ "Odometry", "d6/dc3/classOdometry.html", null ],
+      [ "PositionController", "d2/d64/classPositionController.html", null ]
     ] ],
+    [ "PID", "d8/da9/classPID.html", null ],
     [ "Point", "d8/d43/structPoint.html", null ],
+    [ "Position", "d0/df4/structPosition.html", null ],
     [ "SensorArray", "de/d4b/classSensorArray.html", null ],
     [ "SensorArray::SensorConfig", "d8/de7/structSensorArray_1_1SensorConfig.html", null ],
     [ "SensorArray::SensorHandle", "de/d73/structSensorArray_1_1SensorHandle.html", null ],
     [ "ShiftRegister", "de/ded/classShiftRegister.html", null ],
+    [ "Sphere", "de/d9d/classSphere.html", null ],
+    [ "Grafcet::StateMachine", "da/d23/classGrafcet_1_1StateMachine.html", null ],
     [ "StepByStepMotor", "d9/dd4/classStepByStepMotor.html", null ],
+    [ "Teleplot", "d8/d4b/classTeleplot.html", null ],
     [ "VL53L5CX", "d9/d0e/classVL53L5CX.html", null ],
     [ "VL53L5CX_Configuration", "da/dce/structVL53L5CX__Configuration.html", null ],
     [ "VL53L5CX_Platform", "de/d5c/structVL53L5CX__Platform.html", null ],
-    [ "VL53L5CX_ResultsData", "d4/d7d/structVL53L5CX__ResultsData.html", null ]
+    [ "VL53L5CX_ResultsData", "d4/d7d/structVL53L5CX__ResultsData.html", null ],
+    [ "PurePursuit::Waypoint", "d4/d9e/structPurePursuit_1_1Waypoint.html", null ],
+    [ "Wheeledbase::WBConstants", "d4/d98/structWheeledbase_1_1WBConstants.html", null ],
+    [ "Wheeledbase::WheeledBase", "db/d67/structWheeledbase_1_1WheeledBase.html", null ]
 ];

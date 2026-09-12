@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['ping_0',['ping',['../d8/d27/classAX12.html#abe51b9336e079929ce28ec72e72811fb',1,'AX12']]],
-  ['playsheetmusic_1',['playSheetMusic',['../d6/da1/classMusique.html#a7ef86a7455fabe702da26335b7624b84',1,'Musique']]],
-  ['process_2',['process',['../d7/d82/classBrushlessMotor.html#a98354b392f6cb937e2961df5e2a1f038',1,'BrushlessMotor::process()'],['../d9/df7/classFullSpeedServo.html#a219f6a6330241256242c6c77c5fa045e',1,'FullSpeedServo::process()'],['../d2/dfa/classPeriodicProcess.html#a397cd93780d753f5f06335cfe9f2a7f3',1,'PeriodicProcess::process()']]]
+  ['objectdetector_0',['ObjectDetector',['../d6/dd4/classObjectDetector.html#ae9127cd3682fc51377968b1d4c2af01d',1,'ObjectDetector']]],
+  ['onprocessdisabling_1',['onProcessDisabling',['../d2/dfa/classPeriodicProcess.html#a6e325cb38e20cac3164a01d89e161d90',1,'PeriodicProcess::onProcessDisabling()'],['../d5/d9e/classDifferentialController.html#a94c899211b2e3874b2fae8470aa21830',1,'DifferentialController::onProcessDisabling()'],['../d2/dfa/classPeriodicProcess.html#a6e325cb38e20cac3164a01d89e161d90',1,'PeriodicProcess::onProcessDisabling()']]],
+  ['onprocessenabling_2',['onProcessEnabling',['../d2/dfa/classPeriodicProcess.html#a9b1f1149e394348a7fd0eaac94987356',1,'PeriodicProcess::onProcessEnabling()'],['../d5/d9e/classDifferentialController.html#a5682f99aed806c4606103d7e3992245f',1,'DifferentialController::onProcessEnabling()'],['../de/d33/classVelocityController.html#aae42d27358ff64794f8300f68489e2ca',1,'VelocityController::onProcessEnabling()'],['../d2/dfa/classPeriodicProcess.html#a9b1f1149e394348a7fd0eaac94987356',1,'PeriodicProcess::onProcessEnabling()']]],
+  ['open_3',['open',['../d6/d59/classHazelnutGripper_1_1GripperFinger.html#a577d6b6b45cf192b995f783fd63006c7',1,'HazelnutGripper::GripperFinger']]],
+  ['openall_4',['openAll',['../d4/dcb/classHazelnutGripper_1_1Gripper.html#a083c0af7f404946ce0a6e127f9b94d22',1,'HazelnutGripper::Gripper']]]
 ];

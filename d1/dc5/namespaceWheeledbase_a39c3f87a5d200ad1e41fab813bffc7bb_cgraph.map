@@ -1,0 +1,53 @@
+<map id="Wheeledbase::printParams" name="Wheeledbase::printParams">
+<area shape="rect" id="Node000001" title="Affiche les paramètres de la base roulante." alt="" coords="5,701,181,726"/>
+<area shape="rect" id="Node000002" href="$d2/d64/classPositionController.html#a3f89060bb173f7937ed7f39861c8a959" title="Retourne la précision angulaire." alt="" coords="254,5,402,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,700,104,579,128,386,146,284,169,190,195,111,210,81,227,57,239,46,242,50,231,61,215,83,200,113,174,191,152,285,133,387,109,580,98,701"/>
+<area shape="rect" id="Node000003" href="$d2/d64/classPositionController.html#a708f4c8281f2a9cf2bf7da97664860f8" title="Retourne le coef proportionnel de vitesse angulaire." alt="" coords="266,71,390,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="93,700,106,590,132,416,150,325,172,240,198,171,212,143,227,122,250,105,253,109,231,126,216,146,202,173,177,242,156,326,137,417,111,590,98,701"/>
+<area shape="rect" id="Node000004" href="$d2/d64/classPositionController.html#a1af800daa95964056c8791842bd05054" title="Retourne la vitesse max angulaire." alt="" coords="266,136,390,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="93,700,108,600,136,447,154,366,176,292,200,230,227,188,250,171,253,175,231,191,205,233,181,293,160,367,141,448,113,601,99,701"/>
+<area shape="rect" id="Node000005" href="$d5/d9e/classDifferentialController.html#a9d8e60d438488e302a1314b3c38770c5" title="Retourne l&#39;entraxe." alt="" coords="259,201,396,242"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="91,700,94,623,100,567,110,504,126,437,150,370,183,307,227,252,243,239,247,243,231,256,188,310,155,372,131,439,115,505,105,568,99,624,97,700"/>
+<area shape="rect" id="Node000006" href="$d6/dc3/classOdometry.html#a960c1a744fb0370fbfeecd7223c68cbe" title="Retourne l&#39;entraxe utilisée." alt="" coords="248,266,408,292"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="92,700,96,630,102,579,113,522,130,463,154,404,186,349,227,301,233,296,236,300,231,305,190,352,159,406,135,464,119,523,108,580,101,630,97,700"/>
+<area shape="rect" id="Node000007" href="$db/dab/classWheelMotor.html#a6710ff0e38a914775e7b09ac410be544" title="Renvoie la constante du moteur paramétrée." alt="" coords="245,316,411,341"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="92,700,99,637,119,543,136,491,159,439,189,392,227,350,230,348,234,352,231,354,194,395,164,442,141,493,124,544,104,638,98,701"/>
+<area shape="rect" id="Node000008" href="$dd/df3/classCodewheel.html#a99b02d5d1cd967390db2dc0157931de6" title="Donne le nombre de tics par tour courant." alt="" coords="231,365,424,390"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="93,700,103,644,125,563,143,519,165,475,193,435,227,400,230,397,234,401,230,404,197,438,170,478,148,521,130,565,108,645,99,701"/>
+<area shape="rect" id="Node000009" href="$d8/da9/classPID.html#ac71200e7079fdd7cf3dee5f7e93c7582" title="Retourne le coefficient dérivateur." alt="" coords="286,414,370,440"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="94,700,107,652,132,584,149,547,171,511,197,478,227,449,248,437,270,430,272,435,250,442,230,453,201,481,175,514,154,550,137,586,112,653,100,701"/>
+<area shape="rect" id="Node000010" href="$d8/da9/classPID.html#a30b4a12f5ad34b7c540365051f79e57c" title="Retourne le coefficient intégrateur." alt="" coords="288,464,368,489"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="96,700,111,660,138,605,177,547,200,521,227,498,249,486,272,479,274,484,251,491,230,503,204,525,181,551,143,608,116,662,101,702"/>
+<area shape="rect" id="Node000011" href="$d8/da9/classPID.html#a83ed5fcf6da6d340d1d527114445a949" title="Retourne le coefficient proportionnel." alt="" coords="286,513,370,538"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="99,699,118,668,146,627,183,585,227,549,270,531,272,536,230,553,187,589,150,630,122,671,104,702"/>
+<area shape="rect" id="Node000012" href="$d2/d64/classPositionController.html#af16eedd8b937e2ca81e5b8999b100081" title="Retourne la précision cartésienne." alt="" coords="256,563,400,603"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="108,698,159,658,227,614,242,607,244,612,230,619,162,662,111,702"/>
+<area shape="rect" id="Node000013" href="$d2/d64/classPositionController.html#a9c15cf6e6a9a4d623aa9df488bfb715f" title="Retourne le coef proportionnel de vitesse linéaire." alt="" coords="266,628,390,669"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="141,698,251,667,252,672,143,703"/>
+<area shape="rect" id="Node000014" href="$d2/d64/classPositionController.html#a203ca6f8cd1717aa2f8b83577104c806" title="Retourne la vitesse max linéaire." alt="" coords="266,693,390,734"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="181,711,251,711,251,716,181,716"/>
+<area shape="rect" id="Node000015" href="$de/d96/classPurePursuit.html#a549f1a5d25d08e3bf2b697483bd76f51" title="Getter du lookahead." alt="" coords="238,758,418,784"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="149,725,258,751,256,756,148,730"/>
+<area shape="rect" id="Node000016" href="$de/d96/classPurePursuit.html#a662353150619ad27bf3d9c5969a541f6" title="Getter du LookAHead de fin de trajectoire." alt="" coords="229,808,427,833"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="114,725,164,759,230,794,246,800,245,805,228,799,162,764,111,729"/>
+<area shape="rect" id="Node000017" href="$de/d33/classVelocityController.html#ae2691871fd8b5a3522dfb671cfdb6716" title="Retourne l&#39;accélération max angulaire." alt="" coords="267,857,389,898"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="106,725,156,782,191,815,230,843,253,855,251,860,227,848,187,819,152,786,102,729"/>
+<area shape="rect" id="Node000018" href="$de/d33/classVelocityController.html#a73ca89c5696ecb306e12ace6013ff27c" title="Retourne la décélération max angulaire." alt="" coords="267,923,389,963"/>
+<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="102,726,119,762,147,811,184,862,230,908,253,921,251,926,227,912,180,866,142,813,114,764,97,728"/>
+<area shape="rect" id="Node000019" href="$de/d33/classVelocityController.html#a4a5d3013f75003fb282f68347498b51d" title="Retourne l&#39;accélération max linéaire." alt="" coords="267,988,389,1029"/>
+<area shape="poly" id="edge18_Node000001_Node000019" title=" " alt="" coords="100,726,113,772,138,839,177,911,202,944,230,973,254,988,251,992,227,977,198,947,172,913,133,841,108,774,95,727"/>
+<area shape="rect" id="Node000020" href="$de/d33/classVelocityController.html#ad04193630f5a9ec64ba0eb2e5ae97ccb" title="Retourne la décélération max linéaire." alt="" coords="267,1053,389,1094"/>
+<area shape="poly" id="edge19_Node000001_Node000020" title=" " alt="" coords="99,727,108,783,131,867,148,913,170,958,197,1001,230,1038,254,1054,251,1058,227,1042,193,1004,165,961,143,915,126,869,103,784,93,728"/>
+<area shape="rect" id="Node000021" href="$d8/da9/classPID.html#a310f5f2da22b3b492cfe60ebad1f7939" title="Retourne la sortie maximal." alt="" coords="263,1118,393,1144"/>
+<area shape="poly" id="edge20_Node000001_Node000021" title=" " alt="" coords="97,727,103,794,121,896,138,952,161,1007,192,1059,230,1104,250,1116,247,1121,227,1108,187,1062,156,1010,133,954,116,897,97,794,92,727"/>
+<area shape="rect" id="Node000022" href="$d8/da9/classPID.html#a19e0b4481b71f304ee21ed1edb1ba331" title="Retourne la sortie minimal." alt="" coords="264,1168,392,1193"/>
+<area shape="poly" id="edge21_Node000001_Node000022" title=" " alt="" coords="97,727,99,802,104,856,115,917,131,981,155,1044,188,1103,230,1154,251,1168,248,1172,227,1158,183,1106,150,1047,126,983,109,918,99,857,94,802,91,727"/>
+<area shape="rect" id="Node000023" href="$d6/dc3/classOdometry.html#adcb37f34e1b3081a6476dee73493fc38" title="Retourne la dérive utilisée." alt="" coords="252,1217,404,1242"/>
+<area shape="poly" id="edge22_Node000001_Node000023" title=" " alt="" coords="99,727,113,822,142,966,160,1041,181,1110,205,1166,231,1204,240,1211,237,1215,227,1207,200,1169,176,1112,155,1043,136,967,108,823,94,727"/>
+<area shape="rect" id="Node000024" href="$de/d33/classVelocityController.html#a17fdf40d9913bfd63524ab3aed8ce87a" title="Retourne l&#39;état de spinShutDown." alt="" coords="263,1267,392,1307"/>
+<area shape="poly" id="edge23_Node000001_Node000024" title=" " alt="" coords="99,726,112,829,140,988,158,1071,180,1148,204,1211,231,1253,250,1268,247,1272,227,1257,199,1213,175,1149,153,1072,135,989,107,830,93,727"/>
+<area shape="rect" id="Node000025" href="$dd/df3/classCodewheel.html#a9093477d573ca15ef537a6521ecdc68f" title="Donne le rayon de la roue en mm." alt="" coords="235,1332,420,1357"/>
+<area shape="poly" id="edge24_Node000001_Node000025" title=" " alt="" coords="98,727,110,840,135,1019,153,1113,175,1199,201,1270,215,1297,231,1317,234,1321,230,1324,227,1321,211,1300,196,1272,170,1201,148,1114,130,1020,104,841,93,727"/>
+<area shape="rect" id="Node000026" href="$db/dab/classWheelMotor.html#a967a6909d2fe4259a549b070c77eeca3" title="Renvoie le rayon de la roue du moteur." alt="" coords="233,1381,423,1406"/>
+<area shape="poly" id="edge25_Node000001_Node000026" title=" " alt="" coords="98,727,108,849,131,1043,149,1145,172,1239,199,1316,214,1346,231,1368,232,1369,228,1373,227,1371,210,1349,194,1319,166,1241,144,1146,126,1044,103,849,92,727"/>
+</map>

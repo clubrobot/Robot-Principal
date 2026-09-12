@@ -1,5 +1,5 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,5,109,31"/>
-<area shape="rect" id="Node000001" href="$d8/dd9/classSTM32HALTimer.html" title=" " alt="" coords="157,5,280,31"/>
-<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="124,16,156,16,156,21,124,21"/>
+<area shape="rect" id="Node000000" href="$d1/d6f/classAbstractCodewheel.html" title="Classe abstraite d&#39;une roue codeuse." alt="" coords="5,5,140,31"/>
+<area shape="rect" id="Node000001" href="$dd/df3/classCodewheel.html" title="Fait la passerelle entre les roues codeuses et le stm32." alt="" coords="188,5,273,31"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="155,16,187,16,187,21,155,21"/>
 </map>
