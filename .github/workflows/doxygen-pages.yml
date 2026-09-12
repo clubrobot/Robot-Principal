@@ -11,9 +11,25 @@ jobs:
     permissions:
       contents: write
     steps:
+        - name: Generate GitHub App Token
+          id: generate-token
+          uses: actions/create-github-app-token@v3
+          with:
+            client-id: ${{ vars.APP_CLIENT_ID }}
+            private-key: ${{ secrets.APP_PRIVATE_KEY }}
+  
+        - name: Setup SSH
+          env:
+            GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+          run: |
+            mkdir -p ~/.ssh
+            ssh-keyscan github.com >> ~/.ssh/known_hosts
+            git config --global url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf git@github.com:
+            
         - uses: actions/checkout@v6
           with:
             submodules: recursive
+            token: ${{ steps.generate-token.outputs.token }}
         # You may pin to the exact commit or the version.
         # uses: langroodi/doxygenize@7678ae6c3ab3dd9c039a1f814c9bb00ecc17cc17
         - uses: langroodi/doxygenize@v1.7.1
